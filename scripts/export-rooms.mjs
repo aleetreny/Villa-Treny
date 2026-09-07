@@ -13,7 +13,9 @@ const server = await createServer({ server: { host: '127.0.0.1', port: 0 }, logL
 let browser;
 try {
   await server.listen();
-  browser = await chromium.launch();
+  // Source-over shadow compositing must use the software renderer on both
+  // authoring Macs and Linux CI, rather than platform-specific GPU backends.
+  browser = await chromium.launch({ args: ['--disable-gpu'] });
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
@@ -64,6 +66,7 @@ try {
   const { encodeBitmapRow } = await server.ssrLoadModule('/src/lib/habitat/bitmap-codec.ts');
   const rooms = {};
   const hashes = {};
+  const mismatches = [];
   for (const [id, data] of Object.entries(exported)) {
     const { png, ...metadata } = data;
     if (!/^data:image\/png;base64,/.test(png)) throw new Error(`Invalid PNG: ${id}`);
@@ -72,7 +75,7 @@ try {
     if (verify) {
       // Compare decoded pixels. PNG encoder versions may change compression.
       const existing = await readFile(path);
-      const matches = await page.evaluate(async ([a, b]) => {
+      const comparison = await page.evaluate(async ([a, b]) => {
         const decode = async (base64) => {
           const img = new Image(); img.src = `data:image/png;base64,${base64}`; await img.decode();
           const c = document.createElement('canvas'); c.width = img.width; c.height = img.height;
@@ -80,9 +83,26 @@ try {
           return { w: c.width, h: c.height, px: g.getImageData(0, 0, c.width, c.height).data };
         };
         const [x, y] = await Promise.all([decode(a), decode(b)]);
-        return x.w === y.w && x.h === y.h && x.px.every((v, i) => v === y.px[i]);
+        if (x.w !== y.w || x.h !== y.h) return { matches: false, dimensions: [[x.w, x.h], [y.w, y.h]] };
+        const samples = [], deltas = {};
+        let pixels = 0, alphaChanges = 0, maxDelta = 0;
+        for (let i = 0; i < x.px.length; i += 4) {
+          if ([0, 1, 2, 3].every((channel) => x.px[i + channel] === y.px[i + channel])) continue;
+          pixels++;
+          if (x.px[i + 3] !== y.px[i + 3]) alphaChanges++;
+          const diff = [0, 1, 2, 3].map((channel) => x.px[i + channel] - y.px[i + channel]);
+          for (const delta of diff) { maxDelta = Math.max(maxDelta, Math.abs(delta)); deltas[delta] = (deltas[delta] ?? 0) + 1; }
+          if (samples.length < 25) samples.push({ x: (i / 4) % x.w, y: Math.floor(i / 4 / x.w), actual: [...x.px.slice(i, i + 4)], expected: [...y.px.slice(i, i + 4)] });
+        }
+        return { matches: pixels === 0, pixels, alphaChanges, maxDelta, deltas, samples };
       }, [bytes.toString('base64'), existing.toString('base64')]);
-      if (!matches) throw new Error(`Room pixels differ from their source export: ${id}`);
+      if (!comparison.matches) {
+        const evidence = resolve('test-results/room-export');
+        await mkdir(evidence, { recursive: true });
+        await writeFile(resolve(evidence, `${id}-actual.png`), bytes);
+        await writeFile(resolve(evidence, `${id}-expected.png`), existing);
+        mismatches.push({ id, ...comparison });
+      }
     } else {
       await mkdir(resolve('public/habitat/rooms'), { recursive: true });
       await writeFile(path, bytes);
@@ -99,6 +119,10 @@ try {
   const manifest = { version: 3, encoding: 'rle-v1', source: 'tools/roomlab/explorer-room-art.js', rooms };
   const manifestPath = resolve('src/lib/habitat/generated/rooms.json');
   if (verify) {
+    if (mismatches.length) {
+      await writeFile(resolve('test-results/room-export/mismatches.json'), `${JSON.stringify(mismatches, null, 2)}\n`);
+      throw new Error(`Room pixels differ from their source export: ${mismatches.map(({ id }) => id).join(', ')}. See test-results/room-export.`);
+    }
     const committed = JSON.parse(await readFile(manifestPath, 'utf8'));
     if (JSON.stringify(committed.rooms) !== JSON.stringify(rooms)) throw new Error('Navigation manifest is out of date. Run pnpm rooms:export.');
   } else {
