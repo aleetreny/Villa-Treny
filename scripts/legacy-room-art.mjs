@@ -1,10 +1,21 @@
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { LEGACY_ROOM_SOURCES } from '../tools/roomlab/legacy-room-sources.js';
+import { LEGACY_AUTHORING_DEPENDENCIES, LEGACY_ROOM_SOURCES } from '../tools/roomlab/legacy-room-sources.js';
 
 export const canonicalDirectory = 'tools/roomlab/canonical-legacy';
 export const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
+
+export function verifyLegacyDependencySet(files) {
+  const observed = new Set(files);
+  const declared = new Set(LEGACY_AUTHORING_DEPENDENCIES);
+  const missing = [...declared].filter((file) => !observed.has(file));
+  const unexpected = [...observed].filter((file) => !declared.has(file));
+  if (missing.length || unexpected.length) throw new Error([
+    missing.length ? `Missing required legacy authoring dependency: ${missing.join(', ')}` : '',
+    unexpected.length ? `Undeclared legacy authoring dependency: ${unexpected.join(', ')}` : '',
+  ].filter(Boolean).join('\n'));
+}
 
 /** Verify the approved raw canvases, not the final exported room fixtures.
  * A changed authoring page, imported kit, source sheet or capture algorithm
@@ -15,15 +26,14 @@ export async function verifyLegacySources(root = process.cwd()) {
   if (manifest.version !== 1 || manifest.stage !== 'original-authoring-canvas') throw new Error('Invalid legacy source manifest');
   const ids = LEGACY_ROOM_SOURCES.map(([id]) => id).sort();
   if (JSON.stringify(Object.keys(manifest.rooms).sort()) !== JSON.stringify(ids)) throw new Error('Legacy source room set changed');
+  verifyLegacyDependencySet(Object.keys(manifest.dependencies));
   for (const [file, expected] of Object.entries(manifest.dependencies)) {
     if (!/^(tools\/roomlab\/|public\/(assets|fonts)\/|scripts\/)/.test(file)
       || file.split('/').includes('..') || !/^[a-f0-9]{64}$/.test(expected)) throw new Error(`Invalid legacy source path or hash: ${file}`);
     if (sha256(await readFile(resolve(root, file))) !== expected) throw new Error(`Legacy authoring source changed: ${file}. Capture and review the original canvases before exporting.`);
   }
-  const required = ['tools/roomlab/legacy-room-sources.js', 'scripts/capture-legacy-room-art.mjs'];
   for (const [id, width, height, page, selector] of LEGACY_ROOM_SOURCES) {
     const room = manifest.rooms[id];
-    required.push(`tools/roomlab/${page}`);
     if (room.page !== page || room.selector !== selector || room.nativeWidth !== width || room.nativeHeight !== height
       || !Number.isInteger(room.width) || !Number.isInteger(room.height) || room.width < width || room.height < height
       || room.width / width !== room.height / height || !Number.isInteger(room.width / width)
@@ -33,6 +43,5 @@ export async function verifyLegacySources(root = process.cwd()) {
       || png.readUInt32BE(16) !== room.width || png.readUInt32BE(20) !== room.height
       || sha256(png) !== room.sha256) throw new Error(`Canonical source canvas changed: ${id}`);
   }
-  if (required.some((file) => !manifest.dependencies[file])) throw new Error('Missing required legacy authoring dependency');
   return { rooms: ids.length, dependencies: Object.keys(manifest.dependencies).length };
 }

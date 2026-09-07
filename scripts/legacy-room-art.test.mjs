@@ -41,6 +41,22 @@ test('the authoring page cannot be silently omitted from provenance', async () =
   await assert.rejects(verifyLegacySources(root), /Missing required legacy authoring dependency/);
 });
 
+test('omitting a spritesheet cannot conceal a changed original image', async () => {
+  const file = 'public/assets/props/workshop.png';
+  delete manifest.dependencies[file];
+  await writeFile(resolve(root, file), 'changed source image');
+  await writeFile(resolve(root, canonicalDirectory, 'manifest.json'), JSON.stringify(manifest));
+  await assert.rejects(verifyLegacySources(root), /Missing required legacy authoring dependency.*workshop\.png/);
+});
+
+test('omitting an imported kit cannot conceal changed drawing code', async () => {
+  const file = 'tools/roomlab/cabin-kit.js';
+  delete manifest.dependencies[file];
+  await writeFile(resolve(root, file), '// changed drawing code');
+  await writeFile(resolve(root, canonicalDirectory, 'manifest.json'), JSON.stringify(manifest));
+  await assert.rejects(verifyLegacySources(root), /Missing required legacy authoring dependency.*cabin-kit\.js/);
+});
+
 test('a different raw canvas selector is rejected even if its PNG hash is unchanged', async () => {
   manifest.rooms.dig1.selector = '#wrap figure:nth-child(2) canvas';
   await writeFile(resolve(root, canonicalDirectory, 'manifest.json'), JSON.stringify(manifest));
