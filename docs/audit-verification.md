@@ -48,17 +48,22 @@ An independent extraction review additionally found raw licensed spritesheets be
 
 The emergency mechanism spends actual stock instead of minting money. Lending produces durable repayment obligations and dated events. At very low power, manual production remains possible at reduced output. These are causal simulation rules; they do not guarantee that every future narrative will be interesting.
 
+An additional offline run starts from the actual preserved revision27 world, instead of genesis. Over120 watches (30days), with120 serialization round trips, all25 residents persist, physical conditions remain at least26.2, companionship at least21, and currency error stays below3.5×10⁻¹³. These inherited-world minima are distinct from the genesis-run figures above. No provider was called and nothing was written to the live world. See `current-world-validation.json`.
+
 ## Verification record
 
 - Frontend/domain unit suite: 716 tests passed in 24 files.
 - Browser suite: 11 tests passed, covering all45 rooms plus offline and failure paths, keyboard Matrix, follow camera, mobile/landscape and reduced motion.
 - Source export: all46 source PNGs and their metadata reproduced exactly. PNG equality compares decoded RGBA rather than encoder bytes.
+- Five source-provenance regressions reject changed authoring inputs, changed canonical raster bytes, missing required provenance and incorrect selectors, while accepting the original sources.
 - Production build: passed, including an additional `/Villa-Treny/` base-path smoke check. The compiled room image and self-hosted fonts loaded with no page or HTTP errors.
 - Source boundary scan: no symlinks, credential-shaped secrets, private environment files or Portfolio runtime imports in the extracted application.
 - Worker suite: 70 tests passed in 10 files, with generated binding types and TypeScript verification. The 60 engine tests are included in the 716 application/domain total, not an additional total.
 - `pnpm check:all`: passed on the stabilized code, including lint, typecheck, units, Worker, build/distribution checks and all11 browser flows.
 - Distribution contains59 files and46 finished rooms, with no raw spritesheets or runtime credentials. Vite retains a non-fatal advisory for the approximately900 kB uncompressed data-heavy main chunk; it is not hidden by increasing the warning threshold.
 - Portfolio `pnpm check`: passed, including repository validation, lint, types and265 tests. Its tracked contents are exactly `origin/main` at `df2f965fd71d3636a1cf279c243bf4d805834fa9`.
+
+The first Linux CI runs found a cross-platform export issue after all unit, Worker, build and browser tests passed: the eleven historical Canvas scenes differed by at most one RGB level, with no alpha changes. Disabling GPU rendering did not fix this. Their original raw authoring canvases are now retained as canonical source PNGs before any explorer clipping, openings or navigation. SHA-256 verifies every raster plus24 loaded authoring dependencies; changes require an explicit capture and visual review. Exact final-pixel comparison remains unchanged, and no final room image or metadata was replaced. See `tools/roomlab/canonical-legacy/README.md` for the source boundary and authoring procedure.
 
 ## Runtime continuity and repository handoff
 

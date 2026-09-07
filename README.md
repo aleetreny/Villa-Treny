@@ -43,7 +43,7 @@ Browser and Worker tests do not buy inference or change the live world. On Linux
 
 Room art comes from the existing licensed source packs. Keep source coordinates and source pixels when adjusting a composition. Floors, physical footprints, projected sprite bodies and foreground masks have different purposes. Movement tests must check both access from a real opening and independent positions on visible furniture; validating a collision mask against itself is insufficient.
 
-The renderer uses integer magnification and nearest-neighbour pixels. RoomLab is retained so the original corridors can be revisited; corridors are not extra RoomIds in the observer. Source exports can be regenerated with `pnpm rooms:export`. The verification mode checks decoded pixels rather than PNG compression bytes.
+The renderer uses integer magnification and nearest-neighbour pixels. RoomLab is retained so the original corridors can be revisited; corridors are not extra RoomIds in the observer. Source exports can be regenerated with `pnpm rooms:export`. The verification mode checks decoded pixels rather than PNG compression bytes. Eleven historical Canvas scenes use [approved original canvas rasters](tools/roomlab/canonical-legacy/README.md) with hashed authoring dependencies to preserve their exact colors across platforms; recapture is an explicit art-authoring operation, never part of CI.
 
 Production builds copy only final room PNGs and fonts. Raw licensed spritesheets remain available to local RoomLab in this private repository and are excluded from the deployable. Every build verifies this distribution boundary.
 

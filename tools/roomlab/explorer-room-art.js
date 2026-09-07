@@ -11,6 +11,7 @@ import { FACILITY, loadFacilitySources, drawFacility } from './facility-kit.js';
 import { FACE, loadFaceSource, drawFace } from './face-kit.js';
 import { REF as DIGGING_OUTLINES } from './digging-kit.js';
 import { ROOM_OBJECTS } from './room-objects.js';
+import { LEGACY_ROOM_SOURCES } from './legacy-room-sources.js';
 
 export const ROOM_CELL_SIZE = 1;
 const FAMILY = {
@@ -37,14 +38,8 @@ register('heritage', HERITAGE); register('facility', FACILITY);
 ROOM_ART.face = { ...FACE, family: 'face', key: 'face' };
 for (const [id, key] of Object.entries({dig3:'shelter',dig4:'christmas',dig5:'olive',dig6:'oliveB'}))
   ROOM_ART[id] = { ...BEDROOM[key], family: 'bedroom', key };
-for (const [id, W, H, page, selector] of [
-  ['workshops',250,228,'workshops.html','#one'], ['infirmary',154,218,'infirmary.html','#one'],
-  ['well',184,170,'well.html','#one'],
-  ...Array.from({length:5}, (_, i) => ['cabin'+(i+1),204,205,'cabins.html',`#strip .cab:nth-child(${i+1}) canvas`]),
-  ['dig1',245,181,'diggings.html','#wrap figure:nth-child(1) canvas'],
-  ['dig2',181,187,'diggings.html','#wrap figure:nth-child(2) canvas'],
-  ['games',179,217,'diggings.html','#wrap figure:nth-child(7) canvas'],
-]) ROOM_ART[id] = { W, H, label:id, legacy:{ page, selector } };
+for (const [id, W, H, page, selector] of LEGACY_ROOM_SOURCES)
+  ROOM_ART[id] = { W, H, label:id, legacy:{ page, selector, raster:`canonical-legacy/${id}.png` } };
 // These three source pages light the whole canvas, including its empty margin.
 // Reuse their exact shell geometry; a floor/collision mask would erase walls.
 for (const [id,key] of Object.entries({dig1:'twoRooms',dig2:'twoRoomsB',games:'bedsit'}))
@@ -213,35 +208,25 @@ async function sourceFor(family) {
   return families.get(family);
 }
 // These eleven older scenes predate the ZIP-only corridor rule and contain
-// their already-approved hand-drawn shells / light. Their original page is
-// rendered unchanged, copied, and immediately removed. No duplicate drawing
-// implementation or new painted prop is introduced by this adapter.
+// their already-approved hand-drawn shells / light. Preserve their original
+// raw canvases as source rasters: Canvas alpha/gradient rounding differs across
+// platforms. Export checks the raster AND authoring dependencies by SHA-256.
+// No new painted prop or alternative drawing implementation is introduced.
 // Digging light outside the source shell is omitted when copying (see below).
 async function legacyCanvas(spec) {
-  const frame=document.createElement('iframe');
-  frame.hidden=true;frame.setAttribute('aria-hidden','true');
-  frame.src=new URL(spec.legacy.page,import.meta.url).href;
-  document.body.append(frame);
-  try {
-    const rendered=await new Promise((resolve,reject)=>{
-      const started=performance.now();
-      const poll=setInterval(()=>{
-        const doc=frame.contentDocument, source=doc?.querySelector(spec.legacy.selector);
-        if (frame.contentWindow?.__ready && source?.width) {clearInterval(poll);resolve(source);}
-        else if(performance.now()-started>20000){clearInterval(poll);reject(new Error('Room art did not load: '+spec.legacy.page));}
-      },30);
-    });
-    const c=canvas(spec.W,spec.H),g=c.getContext('2d');
-    if (spec.legacy.outline) {
-      // Each retained pixel is copied once, directly from the original page.
-      // Integer source rectangles preserve every wall, object and lit pixel
-      // inside the outline; only the lamp's spill into empty space is absent.
-      const scaleX=rendered.width/spec.W,scaleY=rendered.height/spec.H;
-      for(const [x,y,w,h] of legacyOutlineCopies(spec.legacy.outline))
-        g.drawImage(rendered,x*scaleX,y*scaleY,w*scaleX,h*scaleY,x,y,w,h);
-    } else g.drawImage(rendered,0,0,spec.W,spec.H);
-    return c;
-  } finally { frame.remove(); }
+  const rendered=new Image();
+  rendered.src=new URL(spec.legacy.raster,import.meta.url).href;
+  await rendered.decode();
+  const c=canvas(spec.W,spec.H),g=c.getContext('2d');
+  if (spec.legacy.outline) {
+    // Each retained pixel is copied once, directly from the original canvas.
+    // Integer source rectangles preserve every wall, object and lit pixel
+    // inside the outline; only the lamp's spill into empty space is absent.
+    const scaleX=rendered.width/spec.W,scaleY=rendered.height/spec.H;
+    for(const [x,y,w,h] of legacyOutlineCopies(spec.legacy.outline))
+      g.drawImage(rendered,x*scaleX,y*scaleY,w*scaleX,h*scaleY,x,y,w,h);
+  } else g.drawImage(rendered,0,0,spec.W,spec.H);
+  return c;
 }
 
 /** Exact outer-shell rectangles, less its measured rectangular cuts. The

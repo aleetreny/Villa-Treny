@@ -1,0 +1,20 @@
+{
+  "sourceRevision": 27,
+  "sourceDay": 106,
+  "sourceWatch": 4,
+  "offlineWatches": 120,
+  "providerCalls": 0,
+  "remoteWrites": 0,
+  "minima": {
+    "fed": 37,
+    "rested": 26.2,
+    "well": 41.799999999999834,
+    "safe": 38,
+    "accompanied": 21
+  },
+  "maxMoneyError": 3.410605131648481e-13,
+  "roundTrips": 120,
+  "finalDay": 136,
+  "finalWatch": 4,
+  "finalResidents": 25
+}

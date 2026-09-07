@@ -7,15 +7,15 @@ import { createServer } from 'vite';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
+import { verifyLegacySources } from './legacy-room-art.mjs';
 
 const verify = process.argv.includes('--verify');
+const legacy = await verifyLegacySources();
 const server = await createServer({ server: { host: '127.0.0.1', port: 0 }, logLevel: 'error' });
 let browser;
 try {
   await server.listen();
-  // Source-over shadow compositing must use the software renderer on both
-  // authoring Macs and Linux CI, rather than platform-specific GPU backends.
-  browser = await chromium.launch({ args: ['--disable-gpu'] });
+  browser = await chromium.launch();
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
@@ -130,7 +130,7 @@ try {
     await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
     await writeFile(resolve('public/habitat/export-hashes.json'), `${JSON.stringify(hashes, null, 2)}\n`);
   }
-  console.log(`${verify ? 'Verified' : 'Exported'} ${Object.keys(rooms).length} source rooms and their navigation metadata.${verify ? ` ${alphaMasks} foreground masks match their original source alpha.` : ''}`);
+  console.log(`${verify ? 'Verified' : 'Exported'} ${Object.keys(rooms).length} source rooms and their navigation metadata.${verify ? ` ${alphaMasks} foreground masks match their original source alpha.` : ''} ${legacy.rooms} original canvas rasters have ${legacy.dependencies} verified authoring dependencies.`);
 } finally {
   await browser?.close();
   await server.close();

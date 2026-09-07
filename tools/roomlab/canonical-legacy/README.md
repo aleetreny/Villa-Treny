@@ -1,0 +1,15 @@
+# Approved original canvas sources
+
+These eleven PNGs preserve the **original authoring canvases**, before explorer opening patches, outside-light clipping, outlines, navigation or foreground metadata. They are not copies of the final `public/habitat/rooms` PNGs. The adapter still computes all those operations, and verification compares all 46 final exports and their metadata exactly.
+
+The historical rooms were already approved before the ZIP-only corridor rule. Their original HTML/kit code includes existing painted shells and light. Re-running that old Canvas composition on macOS ARM and Linux x64 produced RGB differences of at most one level in eleven rooms, with identical alpha and geometry. Software rendering did not remove the difference. Saving the approved original raster preserves every approved final pixel without adding new art, replacing source objects or introducing a color tolerance.
+
+`manifest.json` records the original page, exact canvas selector, native dimensions, captured dimensions, PNG SHA-256, Chromium/platform, and SHA-256 of all 24 loaded authoring dependencies. This includes source PNG/JPEG files, imported kits, the plan JSON and the capture algorithm. Digging One, Digging Two and Games preserve their original 2× presentation canvases; their existing integer reduction happens in the adapter.
+
+All 2×2 blocks in those three enlarged canvases are identical. Their only partially transparent pixels inside the retained shell are160 pixels in the old threshold; the existing opening patch replaces them with opaque source floor. Keep this ordering when changing the adapter. The final room images have binary alpha. For the five Cabins, raw and final image pixels already coincide: their verification now checks approved raster integrity and authoring provenance, rather than re-executing the old procedural renderer. The other six rooms still receive opening and/or outer-light clipping changes, and every room's navigation and foreground masks are verified separately.
+
+Normal `pnpm rooms:export`, including `--verify`, first validates these dependencies and rasters. A changed source or canonical PNG fails. Neither CI nor normal export regenerates the sources. Five integrity regressions check preservation, source mutation, raster mutation, missing provenance and selector changes.
+
+To intentionally edit an old room, change its original authoring files, then run `pnpm rooms:capture-legacy`. Inspect those canvases and run `pnpm rooms:export --verify` **before** replacing final exports. A deliberate visual change should fail exact comparison and produce old/new PNG diagnostics in `test-results/room-export`. Review them, then export and review the new final room and navigation. The initial capture in this directory reproduced all existing final PNGs with zero RGBA differences on the authoring Mac.
+
+These are local authoring resources. Production distribution includes only finished room PNGs and fonts, never this directory or raw asset packs.

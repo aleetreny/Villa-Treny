@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "stage": "original-authoring-canvas",
+  "environment": {
+    "platform": "darwin",
+    "architecture": "arm64",
+    "chromium": "151.0.7922.34"
+  },
+  "dependencies": {
+    "public/assets/props/bathroom.png": "251bdd46f95315916ce7bf77230ae2f12ec7d4785d1e12c9871daa61a1bf4eba",
+    "public/assets/props/bathroom_roomtiles.png": "87bafed072b97df9849c95f51ea0de3826ac91e1df3a5e7711627dfa56460d90",
+    "public/assets/props/makeshift.png": "7bf891e961f1aa65cdb87879f0723944e8c5421671702a0e6237a7ee9e610c5d",
+    "public/assets/props/makeshift_roomtiles.png": "c2cd7c9d5a8529720113b7883d5e8d9f4e7ed94707efd14af8353f63890ada0b",
+    "public/assets/props/shelter_furniture.png": "e24bf58dafa1d3d15583aa07a94f409901b3b0fbf5de4b7af2f856325cfcc555",
+    "public/assets/props/shelter_walls.png": "1c9fb6d49c5518ac1b3827d1d0c9e814ae42e69661dc6d4926b6c2490a1fecf6",
+    "public/assets/props/workshop.png": "5d8e013732ea5d058331cd49e41ecc66a0e1478698ebacc31d43d2be1ed30e31",
+    "public/assets/props/workshop_roomtiles.png": "de847edc046ea4d3c4f848fca9958a18baa373bb6abcd91903dd25e3b26eb126",
+    "scripts/capture-legacy-room-art.mjs": "2c3700a06633512489f3d7ace9e48d3319cea608746e64d9f1cd798290fa251c",
+    "tools/roomlab/bedroom-kit.js": "2a16ef4ca11ec99983685cd1d651456daa57a33d477244e6606488acbe894f51",
+    "tools/roomlab/cabin-kit.js": "eb8f8a390cbca8c6beaacb272cba1bdbfabba423956181e995b1ba737908dcb3",
+    "tools/roomlab/cabins.html": "c50dfe6f2ee535151dc288e2563cb8e88fc915cdb15bd4c38dbd953e71c1f14c",
+    "tools/roomlab/digging-kit.js": "743d1128b75dd8c02a9b6b42911024d2fb4e5cd610d30c31d37ad8ba2bba6179",
+    "tools/roomlab/diggings.html": "bc9aaf88b5efdeec25ad317b3ddc58aeb3db689dfba74843be40842734ca74bd",
+    "tools/roomlab/habitat-plan.json": "a558dc3399f360adbb5074cf04e05dc1513c7c26e31e8783cf07783940b06c00",
+    "tools/roomlab/infirmary.html": "21e37f23cf196180dba3115a6c405d8dab05cbc5a95c70311d5508253255a1b7",
+    "tools/roomlab/legacy-room-sources.js": "ac05869b467cc1342dcd16319ac2f7d957533cc00e90387ff0bec5a24a531d06",
+    "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png": "85ebd856dd18b8b62520d36e65baf75bd26c8dd2c011c9d69e95602313a95265",
+    "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Terrain_Tiles_32x32.png": "05ecfbfa9b1649d69422105faddb9c9a4acb42d1eed3415e7b31c83eb083b64e",
+    "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Walls_32x32.png": "1c9fb6d49c5518ac1b3827d1d0c9e814ae42e69661dc6d4926b6c2490a1fecf6",
+    "tools/roomlab/reference/shelter-bunk-and-stores.jpg": "e51ff0c0ef2af7a56183b72f6a55c1106a7959f63a7eab79daba299a16d447a7",
+    "tools/roomlab/reference/xmas-container-room.jpg": "0a52f62cde464996b110691e1e4b03e277f4fbb09d52696ac24f35b08b0e43fb",
+    "tools/roomlab/well.html": "0b9af0270f127fedfa6f1a1f9e529a81712ea83eda3d076572d4e12842d7d17f",
+    "tools/roomlab/workshops.html": "c9b074caf99d61d881fbb166ed5245633ac3f6c2cbb58818caa317d875f5dc1f"
+  },
+  "rooms": {
+    "workshops": {
+      "file": "tools/roomlab/canonical-legacy/workshops.png",
+      "page": "workshops.html",
+      "selector": "#one",
+      "nativeWidth": 250,
+      "nativeHeight": 228,
+      "width": 250,
+      "height": 228,
+      "sha256": "b6447df8be55be9419c13cf6b6a5cf39abd5ba991ad99cf8cfb02fc085b7b87b"
+    },
+    "infirmary": {
+      "file": "tools/roomlab/canonical-legacy/infirmary.png",
+      "page": "infirmary.html",
+      "selector": "#one",
+      "nativeWidth": 154,
+      "nativeHeight": 218,
+      "width": 154,
+      "height": 218,
+      "sha256": "afaf50e0522aef2b4e58f4504852c023a432e6575d4f99652f03c7842ed2fdd5"
+    },
+    "well": {
+      "file": "tools/roomlab/canonical-legacy/well.png",
+      "page": "well.html",
+      "selector": "#one",
+      "nativeWidth": 184,
+      "nativeHeight": 170,
+      "width": 184,
+      "height": 170,
+      "sha256": "d92d18fdc0180bad00058231d8ad39efc0707e2dcad819550302fa5bc389e432"
+    },
+    "cabin1": {
+      "file": "tools/roomlab/canonical-legacy/cabin1.png",
+      "page": "cabins.html",
+      "selector": "#strip .cab:nth-child(1) canvas",
+      "nativeWidth": 204,
+      "nativeHeight": 205,
+      "width": 204,
+      "height": 205,
+      "sha256": "5fb75cce0b7e01a00d65519f60a7f2332123d1db5066e0eda5c5c6d40672dea7"
+    },
+    "cabin2": {
+      "file": "tools/roomlab/canonical-legacy/cabin2.png",
+      "page": "cabins.html",
+      "selector": "#strip .cab:nth-child(2) canvas",
+      "nativeWidth": 204,
+      "nativeHeight": 205,
+      "width": 204,
+      "height": 205,
+      "sha256": "9351449f2904d6577a00a311da7d57de1679803da8af4a28420abdeee84ae19b"
+    },
+    "cabin3": {
+      "file": "tools/roomlab/canonical-legacy/cabin3.png",
+      "page": "cabins.html",
+      "selector": "#strip .cab:nth-child(3) canvas",
+      "nativeWidth": 204,
+      "nativeHeight": 205,
+      "width": 204,
+      "height": 205,
+      "sha256": "80ad0d03e45af483a0afdf26ca895cae4a9b61581a20ea3805c44c6fc71da3a7"
+    },
+    "cabin4": {
+      "file": "tools/roomlab/canonical-legacy/cabin4.png",
+      "page": "cabins.html",
+      "selector": "#strip .cab:nth-child(4) canvas",
+      "nativeWidth": 204,
+      "nativeHeight": 205,
+      "width": 204,
+      "height": 205,
+      "sha256": "b8c255b43aaa2a96c95de3eff6e240c9c3c1933a2392363809f2a1cf3cea3857"
+    },
+    "cabin5": {
+      "file": "tools/roomlab/canonical-legacy/cabin5.png",
+      "page": "cabins.html",
+      "selector": "#strip .cab:nth-child(5) canvas",
+      "nativeWidth": 204,
+      "nativeHeight": 205,
+      "width": 204,
+      "height": 205,
+      "sha256": "06b6e929cde31e2d456ab633ec763b1a3229e08c6de966eed2ccd5975b6536b5"
+    },
+    "dig1": {
+      "file": "tools/roomlab/canonical-legacy/dig1.png",
+      "page": "diggings.html",
+      "selector": "#wrap figure:nth-child(1) canvas",
+      "nativeWidth": 245,
+      "nativeHeight": 181,
+      "width": 490,
+      "height": 362,
+      "sha256": "27097bb289a7832ac2becd532294551df26d87ab0324b16542089a893f2bcbcb"
+    },
+    "dig2": {
+      "file": "tools/roomlab/canonical-legacy/dig2.png",
+      "page": "diggings.html",
+      "selector": "#wrap figure:nth-child(2) canvas",
+      "nativeWidth": 181,
+      "nativeHeight": 187,
+      "width": 362,
+      "height": 374,
+      "sha256": "43c9fe10e24d9576ccb8ad894c8fb20a10af866ff114ad04f58dc8b1d138894b"
+    },
+    "games": {
+      "file": "tools/roomlab/canonical-legacy/games.png",
+      "page": "diggings.html",
+      "selector": "#wrap figure:nth-child(7) canvas",
+      "nativeWidth": 179,
+      "nativeHeight": 217,
+      "width": 358,
+      "height": 434,
+      "sha256": "b377dfb4b2c5d59e938fbc02d28d9a51e7c862c2c58ba5b003ff50ad637997b4"
+    }
+  }
+}
