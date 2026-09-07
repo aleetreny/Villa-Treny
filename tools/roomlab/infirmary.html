@@ -1,0 +1,224 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0b0d11;font:12px/1.6 ui-monospace,monospace;color:#b9c2dd}
+ canvas{image-rendering:pixelated;display:block}
+ .row{display:flex;gap:20px;align-items:flex-start;padding:16px}
+ h1{font-size:13px;font-weight:400;color:#e9edff;margin:0;padding:14px 16px 0;letter-spacing:.5px}
+ .note{padding:2px 16px 0;color:#7b85ab;max-width:1000px}
+ #log{padding:8px 16px;white-space:pre;color:#5f6b8f}
+ #log.bad{color:#e0776a}
+</style>
+<h1>THE INFIRMARY</h1>
+<div class="note">
+  Traced 1:1 off <code>reference/shelter-bunker-room.png</code> (×3 phase (1,2) →
+  154 × 218 native). Same corrugated plate, same deck, same alcove, same objects,
+  same places. Positions marked <b>ANCHOR</b> are that sprite's own best normalised
+  cross-correlation position in the render — <code>measure/trace.py</code> prints them.
+</div>
+<div class="row"><canvas id="z"></canvas><canvas id="one"></canvas></div>
+<pre id="log"></pre>
+<script type="module">
+// ── THE INFIRMARY ─────────────────────────────────────────────────────────
+// The measurements, all read off the native render rather than estimated:
+//   room      x 7..146, y 7..210
+//   bands     6 px: 1 px ink, 4 px of #666666, 1 px ink
+//   wall      shelter_walls rows 10-11, one 32 x 64 grab per column, at y 13.
+//             Columns at x = 13 + 32k; the leftmost is the DARK panel (c 2) and
+//             the other three are the light one (c 3), which is what the render
+//             does and is visible as a darker corner behind the locker.
+//   FACE      the plate meets the deck at y 77
+//   deck      flat #959595 with a #8b8b8b line every 8 px, both measured; no
+//             sheet carries that floor, so it is drawn, as in the cabin
+//   alcove    partitioned off the bottom right: a 6 px band along y 104..109
+//             from x 109, and its own plate face from y 110 to its own deck at 159
+//   door      the south wall is open from x 45 to x 108
+
+const S = 3;
+const T = 32;
+const W = 154, H = 218;
+const LEFT = 7, RIGHT = 146, TOP = 7, BOT = 210;
+const BAND = 6;
+const FACE = 77;
+const ALC_X = 109, ALC_Y0 = 104, ALC_Y1 = 109, ALC_FACE = 159;
+const DOOR_X0 = 45, DOOR_X1 = 108;
+const INK = '#000000', WALLGREY = '#666666';
+const DECK = '#959595', DECK_LINE = '#8b8b8b';
+
+const P = '../../public/assets/props/';
+const NEED = { furn: P + 'shelter_furniture.png', walls: P + 'shelter_walls.png' };
+const SH = {};
+let left = Object.keys(NEED).length;
+for (const k in NEED) {
+  const im = new Image();
+  im.onload = () => { SH[k] = im; if (!--left) build(); };
+  im.src = NEED[k];
+}
+
+function build() {
+  const room = document.createElement('canvas');
+  room.width = W; room.height = H;
+  const g = room.getContext('2d');
+  g.imageSmoothingEnabled = false;
+
+  const PROPS = [], WALLPROPS = [], CLASH = [];
+  const cut = (sheet, sx, sy, sw, sh, dx, dy) =>
+    g.drawImage(SH[sheet], sx, sy, sw, sh, dx, dy, sw, sh);
+  function inside(r) {
+    const p = BAND - 1;
+    return r.x >= LEFT + p && r.x + r.w - 1 <= RIGHT - p
+      && r.y >= TOP + p && r.y + r.h - 1 <= BOT - p;
+  }
+  /** Every prop is a sub-rectangle read off a connected-component pass, because
+   *  half of this sheet's tiles hold two or three objects. */
+  function crop(name, sheet, sx, sy, sw, sh, dx, dy, layer) {
+    const rect = { x: dx, y: dy, w: sw, h: sh, name };
+    const list = layer === 'wall' ? WALLPROPS : layer === 'on' ? [] : PROPS;
+    for (const o of list) {
+      const ox = Math.max(0, Math.min(dx + sw, o.x + o.w) - Math.max(dx, o.x));
+      const oy = Math.max(0, Math.min(dy + sh, o.y + o.h) - Math.max(dy, o.y));
+      if (ox > 3 && oy > 3) CLASH.push('OVERLAP  ' + name + ' x ' + o.name + '  (' + ox + 'x' + oy + ')');
+    }
+    if (!inside(rect)) CLASH.push('OFF-FRAME  ' + name + '  [' + dx + ',' + dy + ' ' + sw + 'x' + sh + ']');
+    list.push(rect);
+    cut(sheet, sx, sy, sw, sh, dx, dy);
+  }
+  /** The deck. Drawn, not stamped: no sheet in the pack carries this floor. */
+  function deck(x0, y0, x1, y1) {
+    g.fillStyle = DECK; g.fillRect(x0, y0, x1 - x0, y1 - y0);
+    g.fillStyle = DECK_LINE;
+    for (let x = Math.ceil(x0 / 8) * 8; x < x1; x += 8) g.fillRect(x, y0, 1, y1 - y0);
+    for (let y = Math.ceil(y0 / 8) * 8; y < y1; y += 8) g.fillRect(x0, y, x1 - x0, 1);
+  }
+  /** Corrugated plate, one 32 px column at a time off the walls sheet's row 10.
+   *  The columns were found by brute force rather than by eye: for each 32 px
+   *  column of the render's wall, every column of the sheet was scored against
+   *  every source y, over the parts of that column the props do not cover.
+   *  Panel two came out at 0.00 mean error and panel one's left edge at 0.00.
+   *  The room's top half is the darker panel (c 2) and everything below is the
+   *  plain one (c 8) — which is the darker corner you can see behind the locker. */
+  const PANEL_TOP = [2, 8, 8, 3];
+  const PANEL_BOT = [8, 8, 8, 3];
+  function plate(x0, x1, y0, y1, top, bot) {
+    g.save(); g.beginPath(); g.rect(x0, y0, x1 - x0, y1 - y0); g.clip();
+    for (let i = 0; i < top.length; i++) {
+      const x = 13 + i * T;
+      for (let y = y1 - 64; y > y0 - 64; y -= 64) {
+        cut('walls', top[i] * T, 10 * T, T, T, x, y);
+        cut('walls', bot[i] * T, 11 * T, T, T, x, y + T);
+      }
+    }
+    g.restore();
+  }
+
+  // ── the shell ────────────────────────────────────────────────────────────
+  g.fillStyle = INK; g.fillRect(LEFT, TOP, RIGHT - LEFT + 1, BOT - TOP + 1);
+  g.fillStyle = WALLGREY;
+  g.fillRect(LEFT + 1, TOP + 1, RIGHT - LEFT - 1, BOT - TOP - 1);
+  g.fillStyle = INK;
+  g.fillRect(LEFT + BAND - 1, TOP + BAND - 1,
+    RIGHT - LEFT - 2 * BAND + 3, BOT - TOP - 2 * BAND + 3);
+
+  g.save();
+  g.beginPath();
+  g.rect(LEFT + BAND, TOP + BAND, RIGHT - LEFT - 2 * BAND + 1, BOT - TOP - 2 * BAND + 1);
+  g.clip();
+
+  deck(0, 0, W, H);
+  plate(LEFT, RIGHT, 13, FACE, PANEL_TOP, PANEL_BOT);
+  g.restore();
+  // The south wall is open from x 45 to x 108, with a 3 px threshold left in it.
+  g.clearRect(DOOR_X0, BOT - 1, DOOR_X1 - DOOR_X0 + 1, 2);
+  g.fillStyle = WALLGREY; g.fillRect(DOOR_X0, BOT - 5, DOOR_X1 - DOOR_X0 + 1, 3);
+  g.fillStyle = INK;
+  g.fillRect(DOOR_X0, BOT - 2, DOOR_X1 - DOOR_X0 + 1, 1);
+  g.fillRect(DOOR_X0 - 1, BOT - 5, 1, 5); g.fillRect(DOOR_X1 + 1, BOT - 5, 1, 5);
+  g.save();
+  g.beginPath();
+  g.rect(LEFT + BAND, TOP + BAND, RIGHT - LEFT - 2 * BAND + 1, BOT - TOP - 2 * BAND + 1);
+  g.clip();
+
+  // the alcove: its own band across, and its own plate face under it
+  g.fillStyle = INK; g.fillRect(ALC_X, ALC_Y0, RIGHT - ALC_X, ALC_Y1 - ALC_Y0 + 1);
+  g.fillStyle = WALLGREY; g.fillRect(ALC_X + 1, ALC_Y0 + 1, RIGHT - ALC_X, 4);
+  plate(ALC_X + 1, RIGHT, ALC_Y1 + 1, ALC_FACE, [8, 8, 8, 8], [8, 8, 8, 8]);
+  g.fillStyle = INK; g.fillRect(ALC_X, ALC_Y1 + 1, 1, ALC_FACE - ALC_Y1);
+
+  // ── the room ─────────────────────────────────────────────────────────────
+  // Every position below is that sprite's own best normalised cross-correlation
+  // position in the render. measure/trace.py finds them; every_position() finds
+  // the ones the render REUSES, which is most of the small ones here.
+  crop('locker', 'furn', 326, 101, 20, 56, 17, 36);          // ANCHOR 1.000
+  crop('calendar', 'furn', 422, 97, 20, 29, 47, 19, 'wall'); // ANCHOR 1.000
+  crop('rack', 'furn', 297, 20, 46, 68, 75, 20);             // ANCHOR 0.979
+  crop('crateR', 'furn', 266, 205, 12, 17, 78, 27, 'on');    // ANCHOR 1.000
+  crop('flaskA', 'furn', 268, 170, 8, 20, 97, 24, 'on');     // ANCHOR 1.000
+  crop('flaskB', 'furn', 268, 170, 8, 20, 108, 23, 'on');    // ANCHOR 1.000
+  // The back one first, so the front one's own outline cuts across it — drawn
+  // the other way round the pair merges into one cylinder with a bent neck.
+  crop('cylinder2', 'furn', 72, 192, 16, 31, 124, 52, 'on'); // 0.717: the render's
+                                                             // back bottle is a size
+                                                             // this pack does not have
+  crop('cylinder', 'furn', 72, 192, 16, 31, 115, 69, 'on');  // ANCHOR 1.000; it
+                                                             // stands over the rack
+  crop('shelfL', 'furn', 392, 1, 16, 87, 12, 119);           // ANCHOR 1.000
+  crop('flaskC', 'furn', 268, 170, 8, 20, 18, 141, 'on');    // ANCHOR 1.000
+  crop('table', 'furn', 225, 282, 30, 37, 42, 128);          // the owner's call: the
+  crop('chair', 'furn', 136, 282, 16, 31, 48, 158, 'on');    // ANCHOR 1.000,
+                                                             // tucked under the table
+
+  // the alcove
+  crop('firstaid', 'furn', 297, 233, 16, 13, 118, 128, 'wall'); // ANCHOR 1.000
+  crop('crateA', 'furn', 266, 205, 12, 17, 127, 156);        // ANCHOR 1.000
+  crop('jugA', 'furn', 297, 201, 14, 21, 97, 158);           // ANCHOR 0.881
+  crop('flaskD', 'furn', 268, 170, 8, 20, 117, 162, 'on');   // ANCHOR 1.000
+  crop('jugC', 'furn', 297, 201, 14, 21, 99, 141, 'on');     // 0.509: the render's
+                                                             // upper jug is a size
+                                                             // this pack does not have
+  crop('jugB', 'furn', 298, 167, 12, 23, 101, 174, 'on');    // ANCHOR 1.000; in
+                                                             // front of the other
+  crop('crateB', 'furn', 266, 205, 12, 17, 116, 184);        // ANCHOR 1.000
+  crop('crateC', 'furn', 266, 205, 12, 17, 130, 188);        // ANCHOR 1.000
+  crop('crateD', 'furn', 266, 205, 12, 17, 129, 170, 'on');  // the render stacks two
+  crop('flaskE', 'furn', 268, 170, 8, 20, 109, 152, 'on');   // BIG crates here, which
+                                                             // this pack does not have,
+                                                             // so it gets more of the
+                                                             // small one instead
+
+  // ── where this room stops being a pure trace ─────────────────────────────
+  // Four things in the render have no sprite in any of the nineteen sheets in
+  // public/assets/props/ — every component of every one of them was correlated
+  // against the render and none beat 0.72. The first version of this page named
+  // them and left them out, which is the rule. The owner has since ruled on this
+  // room specifically: fill them with the nearest sprite the pack does have, and
+  // take the bed out. So, deliberately and not as a trace:
+  //   · the bed at (40,52) is REMOVED. It was an ncc 1.000 anchor.
+  //   · the brown examination chair in the middle of the room, ~34 x 72 at
+  //     (42,118), is a brown TABLE (0.56 as a whole object) with the render's own
+  //     brown chair, which is an exact anchor, tucked under it.
+  //   · the second orange cylinder is the same sprite as the first, at 0.717.
+  //     The render's is a larger size that this pack does not carry.
+  //   · the alcove's upper white jug is the same sprite as its lower one, at
+  //     0.509, for the same reason.
+  // What is still not there: nothing. Every object in the render now has
+  // something in its place. The three at 0.51-0.72 are the nearest sprite and
+  // are marked as such rather than as anchors.
+
+  g.restore();
+
+  const z = document.getElementById('z');
+  z.width = W * S; z.height = H * S;
+  const c = z.getContext('2d'); c.imageSmoothingEnabled = false;
+  c.drawImage(room, 0, 0, W * S, H * S);
+  const o = document.getElementById('one');
+  o.width = W; o.height = H;
+  const oc = o.getContext('2d'); oc.imageSmoothingEnabled = false;
+  oc.drawImage(room, 0, 0);
+
+  const log = document.getElementById('log');
+  log.className = CLASH.length ? 'bad' : '';
+  log.textContent = (CLASH.length ? CLASH.join('\n')
+    : 'CLEAN — ' + PROPS.length + ' on the deck, ' + WALLPROPS.length + ' on the plate')
+    + '\nroom ' + W + 'x' + H + ' px';
+  window.__ready = 1;
+}
+</script>

@@ -1,0 +1,177 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0b0d11;font:12px/1.6 ui-monospace,monospace;color:#b9c2dd}
+ canvas{image-rendering:pixelated;display:block}
+ h1{font-size:13px;font-weight:400;color:#e9edff;margin:0;padding:14px 16px 0;letter-spacing:.5px}
+ .note{padding:2px 16px 10px;color:#7b85ab;max-width:1080px}
+ .wrap{display:flex;flex-wrap:wrap;gap:22px;padding:8px 16px 24px;align-items:flex-end}
+ figure{margin:0}
+ figcaption{color:#8d97bb;padding-top:6px;font-size:11px}
+ figcaption b{color:#e9edff;font-weight:400}
+ #log{padding:8px 16px 24px;white-space:pre;color:#5f6b8f}
+</style>
+<h1>THE DIGGINGS — six distinct bedrooms + the games room</h1>
+<div class="note">
+  Mara and Quim keep the two approved 1:1 makeshift traces. Pilar, Xan, Ulla
+  and Yara now have four different rooms built from the supplied references.
+  The old television-and-sofa bedsit is preserved intact as <b>The Games
+  Room</b> instead of being repeated as three homes.
+</div>
+<div class="wrap" id="wrap"></div>
+<pre id="log"></pre>
+<script type="module">
+import { REF, shell, mouth, lamp } from './digging-kit.js';
+import { BEDROOM, drawBedroom, loadBedroomSheets } from './bedroom-kit.js?v=yara-final-spacing';
+
+// Traced object lists: [sheetX, sheetY, w, h, destX, destY] in makeshift.png.
+// Produced by the residual solver described in digging-kit.js, then deduped.
+const TRACE = {
+  twoRooms: [
+    [194,290, 60, 59, 21,108],
+    [389,133, 22, 24,213,115],
+    [322, 13, 11, 18,173,119],
+    [ 98,290, 44, 44,189, 76],
+    [  1,224, 62, 32,  9, 68],
+    [  1, 22, 30, 42,164, 51],
+    [130,164, 28, 59,110, 57],
+    [  3,129, 26, 31,203, 61],
+    [321,262, 30, 26,153, 19],
+    [  6,161, 20, 31,194, 20],
+    [224, 40, 32, 24, 76, 93],
+    [ 68,198, 25, 22, 26, 57],
+    [ 67,224, 26, 16, 12, 70],
+    [263,200, 20, 20,141, 67],
+    [ 36,196, 24, 25, 16, 19],
+    [358, 16, 21, 15,212,112],
+    [288,227, 16, 26,123,145],
+    [230,144, 19, 14, 11, 97],
+    [196, 72, 10, 24, 84, 76],
+    [  4,196, 24, 25, 45, 28],
+    [ 18, 97, 12, 15,112,156],
+    [224,175, 16, 16,119, 52],
+    [258,322, 44, 30,162,109],
+    [ 18,113, 12, 15,125,144],
+    [321, 39, 30, 24,169, 98],
+    [257, 20, 15, 10,214,109],
+    [ 33, 89, 14,  6,149, 85],
+    [ 17, 81,  6, 14,144, 61],
+    [402,113, 13, 14, 57,154],
+    [224,175, 16, 16, 23,153],
+    [338, 91, 44, 37, 12,134],
+    [ 67, 84, 10, 12, 36,128],
+    [101,115,  7, 12, 29,145],
+    [101,115,  7, 12, 23,143],
+    [ 67, 84, 10, 12, 24,129],
+    [ 67, 84, 10, 12, 15,128],
+  ],
+  twoRoomsB: [
+    [290, 80, 44, 48,123, 36],
+    [192,226, 36, 62,  9, 66],
+    [ 32,165, 32, 27, 95, 16],
+    [289,261, 30, 48, 16, 16],
+    [389,229, 22, 24, 97, 63],
+    [263,200, 20, 20, 13,148],
+    [ 66, 97, 12, 21, 32,147],
+    [ 34, 97, 12, 15, 57, 95],
+    [  2, 97, 12, 15, 23,144],
+    [389,229, 22, 24, 76, 62],
+    [132, 76,  8, 19,109, 51],
+    [389,165, 22, 24, 47, 68],
+    [117,115,  7, 12, 44, 88],
+    [117,115,  7, 12, 49, 94],
+    [194,290, 60, 59, 95, 94],
+    [ 99,139, 26, 21,119,147],
+    [163,129, 26, 25, 81, 48],
+    [164, 21, 26, 43,140,100],
+    [224,175, 16, 16,148,138],
+    [117,115,  7, 12,150,133],
+    [262,134, 19, 24, 47, 55],
+    [199, 29, 18, 35,113, 99],
+    [149,108,  7, 20,120, 93],
+  ],
+  bedsit: [
+    [257,258, 31, 52,116, 31],
+    [162,164, 28, 59, 26, 48],
+    [353, 38, 30, 25, 70, 78],
+    [263,200, 20, 20,134, 86],
+    [322, 13, 11, 18, 57, 87],
+    [358, 16, 21, 15,101, 94],
+    [194,290, 60, 59, 57,110],
+    [257, 20, 15, 10, 85,113],
+    [389,133, 22, 24, 47,122],
+    [101,115,  7, 12, 60,117],
+    [290, 17, 10, 14, 49,120],
+    [ 33, 34, 30, 30, 71,126],
+    [352,195, 16, 26,104,130],
+    [ 83, 83, 10, 13,109,123],
+    [262,162, 20, 26, 24,164],
+    [224, 40, 32, 24,119,166],
+    [ 67, 84, 10, 12, 45,178],
+    [ 99, 84, 10, 12, 45,170],
+  ],
+};
+
+// Which reference each digging is, and how bright it is. The sizes are the
+// canon ones and they are already each reference's own native size.
+const ROOM = {
+  dig1: { ref: 'twoRooms',  lit: 1.00, warm: 'rgba(255,196,120,.06)' },
+  dig2: { ref: 'twoRoomsB', lit: 0.66, warm: 'rgba(255,178,104,.08)' },
+  dig3: { bedroom: 'shelter' },
+  dig4: { bedroom: 'christmas' },
+  dig5: { bedroom: 'olive' },
+  dig6: { bedroom: 'oliveB' },
+  games: { ref: 'bedsit', lit: 0.78, warm: 'rgba(248,190,128,.06)' },
+};
+
+const P = '../../public/assets/props/';
+const NEED = { mk: 'makeshift.png', rt: 'makeshift_roomtiles.png' };
+const SH = {};
+const LOG = [];
+const plan = await fetch('./habitat-plan.json').then((r) => r.json());
+await Promise.all([
+  ...Object.entries(NEED).map(([k, f]) => new Promise((ok, no) => {
+    const im = new Image(); im.onload = () => { SH[k] = im; ok(); }; im.onerror = no; im.src = P + f;
+  })),
+  loadBedroomSheets().then((sheets) => Object.assign(SH, sheets)),
+]);
+
+const wrap = document.getElementById('wrap');
+for (const id of Object.keys(ROOM)) {
+  const room = plan.placements.find((p) => p.id === id);
+  const R = ROOM[id], r = R.bedroom ? BEDROOM[R.bedroom] : REF[R.ref];
+  const cv = document.createElement('canvas');
+  cv.width = r.W; cv.height = r.H;
+  const g = cv.getContext('2d');
+  g.imageSmoothingEnabled = false;
+  if (R.bedroom) {
+    drawBedroom(g, SH, R.bedroom);
+  } else {
+    shell(g, SH, r);
+    for (const [sx, sy, w, h, dx, dy] of TRACE[R.ref]) {
+      g.drawImage(SH.mk, sx, sy, w, h, dx, dy, w, h);
+    }
+    mouth(g, r);
+    lamp(g, r.W, r.H, [r.W / 2, (r.y0 + r.y1) / 2], R.lit, R.warm);
+  }
+
+  const fig = document.createElement('figure');
+  const big = document.createElement('canvas');
+  big.width = r.W * 2; big.height = r.H * 2;
+  const bc = big.getContext('2d'); bc.imageSmoothingEnabled = false;
+  bc.drawImage(cv, 0, 0, r.W * 2, r.H * 2);
+  fig.appendChild(big);
+  const cap = document.createElement('figcaption');
+  const source = R.bedroom
+    ? 'built from <code>' + r.label + '</code>'
+    : 'traced off <code>' + R.ref + '</code> &middot; ' + TRACE[R.ref].length + ' objects';
+  cap.innerHTML = '<b>' + (room ? room.name : id) + '</b> &middot; ' + r.W + '&times;' + r.H
+    + ' &middot; ' + source + '<br>'
+    + (room ? room.sleeps.map((s) => s.name).join(', ') : '');
+  fig.appendChild(cap);
+  wrap.appendChild(fig);
+  if (!room) LOG.push('MISSING  ' + id + ' is not in habitat-plan.json');
+}
+document.getElementById('log').textContent = LOG.length ? LOG.join('\n')
+  : 'CLEAN - six distinct bedrooms and one preserved games room';
+window.__ready = 1;
+</script>

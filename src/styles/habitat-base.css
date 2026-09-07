@@ -1,0 +1,360 @@
+/* Inherited habitat dossier and relationship layouts, extracted from Portfolio. */
+.hab-dossier {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(6, 5, 13, .985) 0%, rgba(3, 2, 8, .99) 100%);
+  padding: 1.4rem clamp(1.2rem, 6vw, 5rem) 4rem;
+  animation: hab-dossier-in .3s cubic-bezier(.2, .8, .3, 1) both;
+}
+@keyframes hab-dossier-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+.hab-dossier__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 214, 64, .3);
+}
+.hab-portrait {
+  image-rendering: pixelated;
+  border: 1px solid rgba(124, 249, 255, .25);
+  background: #0b0e15;
+  flex: 0 0 auto;
+}
+.hab-dossier__id { flex: 1 1 auto; min-width: 0; }
+.hab-dossier__reg {
+  font-size: .58rem;
+  letter-spacing: .28em;
+  color: rgba(124, 249, 255, .68);
+}
+.hab-dossier__name {
+  margin: .3rem 0 .2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  line-height: 1.05;
+  letter-spacing: .01em;
+  color: #fff3d6;
+}
+.hab-dossier__where {
+  margin: 0;
+  font-size: .78rem;
+  color: rgba(207, 232, 238, .6);
+}
+.hab-dossier__close {
+  flex: 0 0 auto;
+  background: none;
+  border: 1px solid rgba(255, 214, 64, .38);
+  color: var(--c-signal);
+  font: inherit;
+  font-size: .62rem;
+  letter-spacing: .2em;
+  padding: .3rem .8rem;
+  cursor: pointer;
+}
+.hab-dossier__close:hover { background: rgba(255, 214, 64, .1); }
+.hab-dossier__close:focus-visible { outline: 2px solid var(--c-signal); outline-offset: 2px; }
+
+.hab-dossier__blocks {
+  display: grid;
+  gap: 1.6rem;
+  margin-top: 1.4rem;
+  max-width: 74ch;
+}
+.hab-block__head {
+  margin: 0 0 .5rem;
+  font-size: .6rem;
+  font-weight: 400;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: rgba(207, 232, 238, .5);
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+}
+.hab-block__head b {
+  font-weight: 400;
+  color: var(--c-signal);
+  letter-spacing: .1em;
+}
+.hab-block__body {
+  margin: 0;
+  font-size: .87rem;
+  line-height: 1.62;
+  color: rgba(232, 238, 240, .88);
+}
+.hab-block__body--quiet {
+  margin-top: .7rem;
+  font-size: .78rem;
+  color: rgba(207, 232, 238, .48);
+}
+
+.hab-facts { margin: 0; display: grid; gap: .45rem; }
+.hab-facts > div { display: grid; grid-template-columns: 9.5rem 1fr; gap: .8rem; }
+.hab-facts dt {
+  font-size: .6rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(207, 232, 238, .42);
+  padding-top: .18rem;
+}
+.hab-facts dd { margin: 0; font-size: .84rem; line-height: 1.5; color: rgba(232, 238, 240, .88); }
+.hab-facts dd.is-none { color: rgba(255, 168, 120, .8); }
+.hab-facts dd.is-key { color: var(--c-signal); }
+
+.hab-journal {
+  margin: 0;
+  padding: .9rem 1.1rem;
+  border-left: 2px solid rgba(255, 214, 64, .5);
+  background: rgba(255, 214, 64, .04);
+  font-size: .89rem;
+  line-height: 1.68;
+  color: #f3e6cd;
+}
+
+.hab-ties { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.hab-tie { padding-left: .8rem; border-left: 2px solid rgba(124, 249, 255, .3); }
+.hab-tie--latent { border-left-style: dotted; border-left-color: rgba(255, 214, 64, .55); }
+.hab-tie__who {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: .82rem;
+  color: #fff3d6;
+  cursor: pointer;
+}
+.hab-tie__who:hover { color: var(--c-signal); }
+.hab-tie__who:focus-visible { outline: 2px solid var(--c-signal); outline-offset: 2px; }
+.hab-tie__initial {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 214, 64, .4);
+  color: var(--c-signal);
+  font-size: .62rem;
+}
+.hab-tie__line {
+  margin: .28rem 0 0;
+  font-size: .81rem;
+  line-height: 1.5;
+  color: rgba(207, 232, 238, .74);
+}
+.hab-tie--latent .hab-tie__line { color: rgba(207, 232, 238, .5); font-style: italic; }
+.hab-tie__flag {
+  margin: .25rem 0 0;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255, 214, 64, .72);
+}
+
+.hab__personbtn {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.hab__personbtn:hover .hab__personname { color: var(--c-signal); }
+.hab__personbtn:focus-visible { outline: 2px solid var(--c-signal); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) { .hab-dossier { animation: none; } }
+
+/* ── THE WEAVE ────────────────────────────────────────────────────────────
+   The instrument that lives outside the world. Three views of the same six
+   hundred directed edges, because no single one of them tells the truth on
+   its own. */
+
+.weave {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+.weave__bar {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  padding: 0 .2rem .7rem;
+  font-size: .62rem;
+  letter-spacing: .2em;
+}
+.weave__title { color: #7cf9ff; letter-spacing: .4em; }
+.weave__views { display: flex; gap: -1px; }
+.weave__tab {
+  background: none;
+  border: 1px solid rgba(124, 249, 255, .25);
+  border-right-width: 0;
+  color: rgba(207, 232, 238, .6);
+  font: inherit;
+  letter-spacing: .18em;
+  padding: .28rem .7rem;
+  cursor: pointer;
+}
+.weave__tab:last-child { border-right-width: 1px; }
+.weave__tab:hover { color: #7cf9ff; }
+.weave__tab.is-on { color: #04121a; background: var(--c-signal); border-color: var(--c-signal); }
+.weave__tab:focus-visible { outline: 2px solid var(--c-signal); outline-offset: 1px; }
+
+.weave__pick { display: flex; align-items: center; gap: .45rem; color: rgba(207, 232, 238, .45); }
+.weave__pick select {
+  background: var(--c-control-bg);
+  border: 1px solid rgba(124, 249, 255, .25);
+  color: rgba(232, 238, 240, .9);
+  font: inherit;
+  font-size: .62rem;
+  letter-spacing: .12em;
+  padding: .22rem .4rem;
+}
+.weave__pick--wide { margin-bottom: .6rem; }
+
+.weave__stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weave__svg { flex: 1 1 auto; min-height: 0; min-width: 0; width: 100%; }
+.weave__stage--matrix .weave__svg { max-width: 46rem; }
+
+.weave__node { cursor: pointer; }
+.weave__dot {
+  fill: #0d1420;
+  stroke: rgba(124, 249, 255, .7);
+  stroke-width: .35;
+  transition: fill .15s ease, stroke .15s ease;
+}
+.weave__node:hover .weave__dot { fill: #1d2a3c; stroke: #7cf9ff; }
+.weave__node.is-on .weave__dot { fill: rgba(255, 214, 64, .22); stroke: var(--c-signal); stroke-width: .55; }
+.weave__node:focus { outline: none; }
+.weave__node:focus-visible .weave__dot { stroke: var(--c-signal); stroke-width: .7; }
+.weave__initial {
+  font-family: var(--font-mono);
+  font-size: 2.6px;
+  fill: rgba(232, 238, 240, .88);
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.weave__self { fill: rgba(255, 255, 255, .06); }
+.weave__axislabel {
+  font-family: var(--font-mono);
+  font-size: 2.4px;
+  fill: rgba(207, 232, 238, .5);
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+.weave__axislabel--top { dominant-baseline: auto; }
+
+.weave__note {
+  margin: .7rem 0 0;
+  font-size: .7rem;
+  color: rgba(207, 232, 238, .45);
+  text-align: center;
+  max-width: 46rem;
+}
+
+.weave__strings {
+  list-style: none;
+  margin: 0;
+  padding: 0 .2rem;
+  width: 100%;
+  max-width: 48rem;
+  overflow-y: auto;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+.weave__string {
+  display: grid;
+  grid-template-columns: 12rem 1fr 3.2rem;
+  align-items: center;
+  gap: .8rem;
+  padding: .18rem 0;
+  border-bottom: 1px solid rgba(207, 232, 238, .06);
+}
+.weave__stringwho {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: .72rem;
+  color: rgba(232, 238, 240, .85);
+  cursor: pointer;
+  text-align: left;
+}
+.weave__stringwho:hover { color: var(--c-signal); }
+.weave__stringwho:focus-visible { outline: 2px solid var(--c-signal); outline-offset: 2px; }
+.weave__stringinitial {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 214, 64, .35);
+  color: var(--c-signal);
+  font-size: .56rem;
+}
+.weave__trace { width: 100%; height: 1.1rem; }
+.weave__tracebase { stroke: rgba(207, 232, 238, .1); stroke-width: .3; }
+.weave__tracedot { fill: rgba(207, 232, 238, .55); }
+.weave__stringval {
+  font-size: .68rem;
+  color: rgba(207, 232, 238, .55);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.weave__stringval b { color: var(--c-signal); font-weight: 400; }
+
+.hab__toggle {
+  background: none;
+  border: 1px solid rgba(124, 249, 255, .35);
+  color: #7cf9ff;
+  font: inherit;
+  letter-spacing: .2em;
+  padding: .3rem .7rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+.hab__toggle:hover { background: rgba(124, 249, 255, .1); }
+.hab__toggle.is-on { background: #7cf9ff; color: #04121a; border-color: #7cf9ff; }
+.hab__toggle:focus-visible { outline: 2px solid var(--c-signal); outline-offset: 2px; }
+.hab__toggle + .hab__close { margin-left: .6rem; }
+
+@media (prefers-reduced-motion: reduce) { .weave__dot { transition: none; } }
+
+.hab__body--wide { grid-template-columns: minmax(0, 1fr); }
+
+/* A square instrument in a wide box fits the short side, not the long one. */
+.weave__stage:not(.weave__stage--strings) {
+  justify-content: center;
+}
+.weave__stage:not(.weave__stage--strings) .weave__svg {
+  flex: 0 1 auto;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}

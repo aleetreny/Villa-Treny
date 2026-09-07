@@ -1,0 +1,9331 @@
+{
+  "worldRevision": 26,
+  "snapshot": {
+    "day": 106,
+    "watch": 3,
+    "power": 0.93868,
+    "rooms": [
+      {
+        "id": "bridge",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dock",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "longwalk",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "cabin1",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "cabin2",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "cabin3",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "cabin4",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "cabin5",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "breach",
+        "occupants": [],
+        "lit": false
+      },
+      {
+        "id": "hold",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "infirmary",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "camp",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "garden",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "sheltergate",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "graveyard",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "yard",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "common",
+        "occupants": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y"
+        ],
+        "lit": true
+      },
+      {
+        "id": "administration",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dispatch",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "archive",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "records",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "study",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "sparebedroom",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "parlour",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "projection",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "winter",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "library",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "grandbedroom",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "salon",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "hearth",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "maintenance",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "kitchen",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "servicecounter",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "maindiner",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "sodabar",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "stalls",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "washroom",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "row",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "games",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dig1",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dig2",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dig3",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dig4",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dig5",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "dig6",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "workshops",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "well",
+        "occupants": [],
+        "lit": true
+      },
+      {
+        "id": "face",
+        "occupants": [],
+        "lit": true
+      }
+    ],
+    "people": [
+      {
+        "id": "A",
+        "room": "common",
+        "at": {
+          "x": 7,
+          "y": 4
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "B",
+        "room": "common",
+        "at": {
+          "x": 10,
+          "y": 6
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "C",
+        "room": "common",
+        "at": {
+          "x": 3,
+          "y": 5
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "D",
+        "room": "common",
+        "at": {
+          "x": 4,
+          "y": 4
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "E",
+        "room": "common",
+        "at": {
+          "x": 10,
+          "y": 4
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "F",
+        "room": "common",
+        "at": {
+          "x": 4,
+          "y": 1
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "G",
+        "room": "common",
+        "at": {
+          "x": 4,
+          "y": 2
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "H",
+        "room": "common",
+        "at": {
+          "x": 1,
+          "y": 5
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "I",
+        "room": "common",
+        "at": {
+          "x": 7,
+          "y": 3
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "J",
+        "room": "common",
+        "at": {
+          "x": 5,
+          "y": 4
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "K",
+        "room": "common",
+        "at": {
+          "x": 10,
+          "y": 5
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "L",
+        "room": "common",
+        "at": {
+          "x": 2,
+          "y": 5
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "M",
+        "room": "common",
+        "at": {
+          "x": 7,
+          "y": 5
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "N",
+        "room": "common",
+        "at": {
+          "x": 4,
+          "y": 7
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "O",
+        "room": "common",
+        "at": {
+          "x": 6,
+          "y": 8
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "P",
+        "room": "common",
+        "at": {
+          "x": 5,
+          "y": 7
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "Q",
+        "room": "common",
+        "at": {
+          "x": 7,
+          "y": 2
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "R",
+        "room": "common",
+        "at": {
+          "x": 4,
+          "y": 3
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "S",
+        "room": "common",
+        "at": {
+          "x": 1,
+          "y": 4
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "T",
+        "room": "common",
+        "at": {
+          "x": 3,
+          "y": 1
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "U",
+        "room": "common",
+        "at": {
+          "x": 11,
+          "y": 1
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "V",
+        "room": "common",
+        "at": {
+          "x": 4,
+          "y": 5
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "W",
+        "room": "common",
+        "at": {
+          "x": 1,
+          "y": 7
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "X",
+        "room": "common",
+        "at": {
+          "x": 2,
+          "y": 2
+        },
+        "doing": "eating"
+      },
+      {
+        "id": "Y",
+        "room": "common",
+        "at": {
+          "x": 9,
+          "y": 2
+        },
+        "doing": "eating"
+      }
+    ],
+    "record": [
+      {
+        "minute": 21,
+        "room": "administration",
+        "who": [
+          "A"
+        ],
+        "text": "Something was written down that was not an event."
+      },
+      {
+        "minute": 35,
+        "room": "longwalk",
+        "who": [
+          "B",
+          "H"
+        ],
+        "text": "Bex sat with Halim a while."
+      },
+      {
+        "minute": 62,
+        "room": "common",
+        "who": [
+          "H",
+          "J"
+        ],
+        "text": "Halim asked Juno something, and Juno answered."
+      },
+      {
+        "minute": 76,
+        "room": "row",
+        "who": [
+          "Q",
+          "M"
+        ],
+        "text": "Quim sat with Mara a while."
+      },
+      {
+        "minute": 89,
+        "room": "infirmary",
+        "who": [
+          "U"
+        ],
+        "text": "The Infirmary was walked through and looked over."
+      },
+      {
+        "minute": 116,
+        "room": "common",
+        "who": [
+          "E",
+          "H"
+        ],
+        "text": "Edda asked Halim something, and Halim answered."
+      },
+      {
+        "minute": 184,
+        "room": "hold",
+        "who": [
+          "L",
+          "R"
+        ],
+        "text": "Lior and Reva spoke."
+      },
+      {
+        "minute": 198,
+        "room": "common",
+        "who": [
+          "M",
+          "S"
+        ],
+        "text": "Mara and Sten spoke."
+      },
+      {
+        "minute": 212,
+        "room": "infirmary",
+        "who": [
+          "N"
+        ],
+        "text": "The Infirmary was walked through and looked over."
+      },
+      {
+        "minute": 225,
+        "room": "row",
+        "who": [
+          "X",
+          "Y"
+        ],
+        "text": "Xan sat with Yara a while."
+      },
+      {
+        "minute": 266,
+        "room": "longwalk",
+        "who": [
+          "G",
+          "K"
+        ],
+        "text": "Gita asked Kes something, and Kes answered."
+      },
+      {
+        "minute": 280,
+        "room": "administration",
+        "who": [
+          "K"
+        ],
+        "text": "The Great Wall was walked through and looked over."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "from": "A",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "F",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "G",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "I",
+      "axes": {
+        "trust": 28,
+        "affection": 21,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "K",
+      "axes": {
+        "trust": 32,
+        "affection": 26,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "O",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "P",
+      "axes": {
+        "trust": 66,
+        "affection": 70,
+        "admiration": 34,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "R",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "S",
+      "axes": {
+        "trust": 69,
+        "affection": 62,
+        "admiration": 30,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "A",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "U",
+      "axes": {
+        "trust": 70,
+        "affection": 66,
+        "admiration": 28,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "X",
+      "axes": {
+        "trust": 54,
+        "affection": 44,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "A",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "E",
+      "axes": {
+        "trust": 36,
+        "affection": 30,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "B",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "H",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "L",
+      "axes": {
+        "trust": 29,
+        "affection": 24,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "R",
+      "axes": {
+        "trust": 33,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "B",
+      "to": "Y",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "B",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "E",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "M",
+      "axes": {
+        "trust": 25,
+        "affection": 23,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "N",
+      "axes": {
+        "trust": 52,
+        "affection": 22,
+        "admiration": 40,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "P",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "R",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "C",
+      "to": "Y",
+      "axes": {
+        "trust": 49,
+        "affection": 30,
+        "admiration": 26,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "G",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "H",
+      "axes": {
+        "trust": 26,
+        "affection": 12,
+        "admiration": 20,
+        "debt": 34,
+        "resentment": 58,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "P",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "Q",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "V",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "W",
+      "axes": {
+        "trust": 44,
+        "affection": 32,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "D",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "D",
+      "to": "Y",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "B",
+      "axes": {
+        "trust": 40,
+        "affection": 34,
+        "admiration": 20,
+        "debt": 26,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "E",
+      "to": "C",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "H",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "J",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "O",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "P",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "R",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "W",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "E",
+      "to": "Y",
+      "axes": {
+        "trust": 31,
+        "affection": 27,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "A",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "H",
+      "axes": {
+        "trust": 50,
+        "affection": 34,
+        "admiration": 30,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "I",
+      "axes": {
+        "trust": 54,
+        "affection": 50,
+        "admiration": 26,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "J",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "M",
+      "axes": {
+        "trust": 60,
+        "affection": 70,
+        "admiration": 44,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "T",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "V",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "F",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "A",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "D",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "H",
+      "axes": {
+        "trust": 87,
+        "affection": 8,
+        "admiration": 64,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "K",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "L",
+      "axes": {
+        "trust": 34,
+        "affection": 26,
+        "admiration": 10,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "G",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "O",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "P",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "Q",
+      "axes": {
+        "trust": 67,
+        "affection": 32,
+        "admiration": 74,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "W",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "G",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "B",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "D",
+      "axes": {
+        "trust": 30,
+        "affection": 14,
+        "admiration": 20,
+        "debt": 40,
+        "resentment": 44,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "E",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "F",
+      "axes": {
+        "trust": 52,
+        "affection": 30,
+        "admiration": 56,
+        "debt": 18,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "G",
+      "axes": {
+        "trust": 90,
+        "affection": 10,
+        "admiration": 66,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "J",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "M",
+      "axes": {
+        "trust": 25,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "Q",
+      "axes": {
+        "trust": 58,
+        "affection": 24,
+        "admiration": 46,
+        "debt": 8,
+        "resentment": 18,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "T",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "U",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "W",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "H",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "A",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "F",
+      "axes": {
+        "trust": 52,
+        "affection": 46,
+        "admiration": 22,
+        "debt": 8,
+        "resentment": 20,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "K",
+      "axes": {
+        "trust": 27,
+        "affection": 23,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "M",
+      "axes": {
+        "trust": 40,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 52,
+        "resentment": 11,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "T",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "V",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "I",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "E",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "F",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "H",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "K",
+      "axes": {
+        "trust": 66,
+        "affection": 64,
+        "admiration": 46,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 38
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "L",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "N",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "P",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "R",
+      "axes": {
+        "trust": 72,
+        "affection": 54,
+        "admiration": 80,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "J",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "W",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "J",
+      "to": "Y",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "A",
+      "axes": {
+        "trust": 28,
+        "affection": 24,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "G",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "I",
+      "axes": {
+        "trust": 29,
+        "affection": 24,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "J",
+      "axes": {
+        "trust": 68,
+        "affection": 62,
+        "admiration": 40,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 44
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "L",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "N",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "P",
+      "axes": {
+        "trust": 82,
+        "affection": 78,
+        "admiration": 32,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "K",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "B",
+      "axes": {
+        "trust": 29,
+        "affection": 24,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "G",
+      "axes": {
+        "trust": 42,
+        "affection": 40,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "L",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "J",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "K",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "N",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "P",
+      "axes": {
+        "trust": 56,
+        "affection": 58,
+        "admiration": 20,
+        "debt": 62,
+        "resentment": 8,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "R",
+      "axes": {
+        "trust": 26,
+        "affection": 21,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "L",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "C",
+      "axes": {
+        "trust": 25,
+        "affection": 23,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "D",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "F",
+      "axes": {
+        "trust": 32,
+        "affection": 64,
+        "admiration": 30,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "H",
+      "axes": {
+        "trust": 25,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "I",
+      "axes": {
+        "trust": 14,
+        "affection": 8,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 84,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "J",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "P",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "Q",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "S",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "T",
+      "axes": {
+        "trust": 93,
+        "affection": 94,
+        "admiration": 54,
+        "debt": 8,
+        "resentment": 12,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "V",
+      "axes": {
+        "trust": 74,
+        "affection": 86,
+        "admiration": 30,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "X",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "M",
+      "to": "Y",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "C",
+      "axes": {
+        "trust": 46,
+        "affection": 28,
+        "admiration": 34,
+        "debt": 0,
+        "resentment": 24,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "J",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "K",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "L",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "P",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "U",
+      "axes": {
+        "trust": 28,
+        "affection": 21,
+        "admiration": 16,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "V",
+      "axes": {
+        "trust": 41,
+        "affection": 46,
+        "admiration": 12,
+        "debt": 56,
+        "resentment": 14,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "N",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "N",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "A",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "E",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "G",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "S",
+      "axes": {
+        "trust": 78,
+        "affection": 40,
+        "admiration": 74,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "U",
+      "axes": {
+        "trust": 38,
+        "affection": 52,
+        "admiration": 16,
+        "debt": 8,
+        "resentment": 74,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "X",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "O",
+      "to": "Y",
+      "axes": {
+        "trust": 24,
+        "affection": 20,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "A",
+      "axes": {
+        "trust": 64,
+        "affection": 68,
+        "admiration": 30,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "C",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "D",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "E",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "G",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "J",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "K",
+      "axes": {
+        "trust": 80,
+        "affection": 74,
+        "admiration": 26,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "L",
+      "axes": {
+        "trust": 60,
+        "affection": 66,
+        "admiration": 20,
+        "debt": 0,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "N",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "S",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "T",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "V",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "W",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "P",
+      "to": "Y",
+      "axes": {
+        "trust": 25,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "D",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "G",
+      "axes": {
+        "trust": 41,
+        "affection": 16,
+        "admiration": 44,
+        "debt": 8,
+        "resentment": 62,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "H",
+      "axes": {
+        "trust": 30,
+        "affection": 12,
+        "admiration": 34,
+        "debt": 8,
+        "resentment": 78,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "V",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "W",
+      "axes": {
+        "trust": 76,
+        "affection": 64,
+        "admiration": 40,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "X",
+      "axes": {
+        "trust": 24,
+        "affection": 22,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Q",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "A",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "B",
+      "axes": {
+        "trust": 31,
+        "affection": 27,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "C",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "E",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "J",
+      "axes": {
+        "trust": 44,
+        "affection": 36,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "R",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "L",
+      "axes": {
+        "trust": 24,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "W",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "R",
+      "to": "Y",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "A",
+      "axes": {
+        "trust": 57,
+        "affection": 64,
+        "admiration": 20,
+        "debt": 88,
+        "resentment": 0,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "S",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "O",
+      "axes": {
+        "trust": 60,
+        "affection": 46,
+        "admiration": 18,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "P",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "T",
+      "axes": {
+        "trust": 24,
+        "affection": 19,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "U",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "X",
+      "axes": {
+        "trust": 74,
+        "affection": 68,
+        "admiration": 30,
+        "debt": 8,
+        "resentment": 4,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "S",
+      "to": "Y",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "F",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "H",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "I",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "M",
+      "axes": {
+        "trust": 91,
+        "affection": 92,
+        "admiration": 58,
+        "debt": 8,
+        "resentment": 12,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "P",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "S",
+      "axes": {
+        "trust": 25,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "V",
+      "axes": {
+        "trust": 66,
+        "affection": 81,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 34,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "T",
+      "to": "Y",
+      "axes": {
+        "trust": 25,
+        "affection": 19,
+        "admiration": 16,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "A",
+      "axes": {
+        "trust": 72,
+        "affection": 68,
+        "admiration": 24,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "H",
+      "axes": {
+        "trust": 23,
+        "affection": 18,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "N",
+      "axes": {
+        "trust": 31,
+        "affection": 22,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "O",
+      "axes": {
+        "trust": 44,
+        "affection": 58,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 66,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "S",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "X",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "U",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "D",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "F",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "I",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "M",
+      "axes": {
+        "trust": 50,
+        "affection": 54,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 48,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "N",
+      "axes": {
+        "trust": 47,
+        "affection": 40,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "V",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "P",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "Q",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "T",
+      "axes": {
+        "trust": 64,
+        "affection": 84,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 28,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "V",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "D",
+      "axes": {
+        "trust": 18,
+        "affection": 14,
+        "admiration": 6,
+        "debt": 8,
+        "resentment": 46,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": true
+    },
+    {
+      "from": "W",
+      "to": "E",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "G",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "H",
+      "axes": {
+        "trust": 31,
+        "affection": 28,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "J",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "M",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "O",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "P",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "Q",
+      "axes": {
+        "trust": 74,
+        "affection": 60,
+        "admiration": 52,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "R",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "S",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "X",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "W",
+      "to": "Y",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "A",
+      "axes": {
+        "trust": 62,
+        "affection": 58,
+        "admiration": 22,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "B",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "C",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "D",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "E",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "J",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "O",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "P",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "Q",
+      "axes": {
+        "trust": 24,
+        "affection": 22,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "R",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "S",
+      "axes": {
+        "trust": 88,
+        "affection": 76,
+        "admiration": 82,
+        "debt": 8,
+        "resentment": 2,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "T",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "U",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "X",
+      "to": "Y",
+      "axes": {
+        "trust": 25,
+        "affection": 23,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "A",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "B",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "C",
+      "axes": {
+        "trust": 46,
+        "affection": 26,
+        "admiration": 38,
+        "debt": 8,
+        "resentment": 22,
+        "desire": 10
+      },
+      "bonded": true,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "D",
+      "axes": {
+        "trust": 24,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "E",
+      "axes": {
+        "trust": 31,
+        "affection": 27,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "F",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "G",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "H",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "I",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "J",
+      "axes": {
+        "trust": 23,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "K",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "L",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "M",
+      "axes": {
+        "trust": 23,
+        "affection": 19,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "N",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "O",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "P",
+      "axes": {
+        "trust": 26,
+        "affection": 20,
+        "admiration": 14,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "Q",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "R",
+      "axes": {
+        "trust": 30,
+        "affection": 26,
+        "admiration": 20,
+        "debt": 8,
+        "resentment": 14,
+        "desire": 10
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "S",
+      "axes": {
+        "trust": 25,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "T",
+      "axes": {
+        "trust": 29,
+        "affection": 20,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "U",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "V",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "W",
+      "axes": {
+        "trust": 22,
+        "affection": 18,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    },
+    {
+      "from": "Y",
+      "to": "X",
+      "axes": {
+        "trust": 27,
+        "affection": 24,
+        "admiration": 12,
+        "debt": 0,
+        "resentment": 6,
+        "desire": 2
+      },
+      "bonded": false,
+      "latent": false
+    }
+  ],
+  "society": {
+    "startedOnDay": 106,
+    "stock": {
+      "produce": 60,
+      "meals": 100,
+      "water": 250,
+      "materials": 16
+    },
+    "treasury": 0,
+    "maintenance": 90,
+    "balances": [
+      {
+        "id": "A",
+        "cells": 26.769820108001444,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 75,
+          "fed": 91,
+          "well": 68,
+          "safe": 58,
+          "accompanied": 70
+        }
+      },
+      {
+        "id": "B",
+        "cells": 36.312611595673424,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 50,
+          "fed": 91,
+          "well": 66,
+          "safe": 43,
+          "accompanied": 58
+        }
+      },
+      {
+        "id": "C",
+        "cells": 30.698394380001442,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 31,
+          "fed": 91,
+          "well": 61,
+          "safe": 52,
+          "accompanied": 80
+        }
+      },
+      {
+        "id": "D",
+        "cells": 36.27887278791857,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 56,
+          "fed": 91,
+          "well": 58,
+          "safe": 35,
+          "accompanied": 35
+        }
+      },
+      {
+        "id": "E",
+        "cells": 38.13842136089974,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 64,
+          "fed": 91,
+          "well": 71,
+          "safe": 58,
+          "accompanied": 88
+        }
+      },
+      {
+        "id": "F",
+        "cells": 31.558791504413772,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 10,
+          "fed": 91,
+          "well": 40,
+          "safe": 50,
+          "accompanied": 31
+        }
+      },
+      {
+        "id": "G",
+        "cells": 35.31317731036859,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 53,
+          "fed": 91,
+          "well": 61,
+          "safe": 58,
+          "accompanied": 86
+        }
+      },
+      {
+        "id": "H",
+        "cells": 39.99825114530456,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 74,
+          "fed": 91,
+          "well": 73,
+          "safe": 56,
+          "accompanied": 90
+        }
+      },
+      {
+        "id": "I",
+        "cells": 31.420448855751413,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 75,
+          "fed": 91,
+          "well": 77,
+          "safe": 44,
+          "accompanied": 74
+        }
+      },
+      {
+        "id": "J",
+        "cells": 34.27902018195941,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 38,
+          "fed": 91,
+          "well": 64,
+          "safe": 33,
+          "accompanied": 71
+        }
+      },
+      {
+        "id": "K",
+        "cells": 32.350574605301404,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 71,
+          "fed": 91,
+          "well": 68,
+          "safe": 31,
+          "accompanied": 90
+        }
+      },
+      {
+        "id": "L",
+        "cells": 34.38305156081859,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 62,
+          "fed": 91,
+          "well": 62,
+          "safe": 33,
+          "accompanied": 82
+        }
+      },
+      {
+        "id": "M",
+        "cells": 32.499509776413774,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 77,
+          "fed": 91,
+          "well": 62,
+          "safe": 49,
+          "accompanied": 90
+        }
+      },
+      {
+        "id": "N",
+        "cells": 32.350574605301404,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 56,
+          "fed": 91,
+          "well": 61,
+          "safe": 58,
+          "accompanied": 54
+        }
+      },
+      {
+        "id": "O",
+        "cells": 24.909568608901456,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 48,
+          "fed": 91,
+          "well": 75,
+          "safe": 50,
+          "accompanied": 44
+        }
+      },
+      {
+        "id": "P",
+        "cells": 34.4526429745326,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 70,
+          "fed": 91,
+          "well": 60,
+          "safe": 31,
+          "accompanied": 80
+        }
+      },
+      {
+        "id": "Q",
+        "cells": 15.171539155667107,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 52,
+          "fed": 91,
+          "well": 78,
+          "safe": 94,
+          "accompanied": 58
+        }
+      },
+      {
+        "id": "R",
+        "cells": 31.64010004016861,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 43,
+          "fed": 91,
+          "well": 61,
+          "safe": 56,
+          "accompanied": 66
+        }
+      },
+      {
+        "id": "S",
+        "cells": 40.09127172228256,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 43,
+          "fed": 91,
+          "well": 65,
+          "safe": 36,
+          "accompanied": 60
+        }
+      },
+      {
+        "id": "T",
+        "cells": 37.266034419104585,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 65,
+          "fed": 91,
+          "well": 72,
+          "safe": 39,
+          "accompanied": 80
+        }
+      },
+      {
+        "id": "U",
+        "cells": 27.699945857551437,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 57,
+          "fed": 91,
+          "well": 71,
+          "safe": 48,
+          "accompanied": 55
+        }
+      },
+      {
+        "id": "V",
+        "cells": 42.96225458056856,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 49,
+          "fed": 91,
+          "well": 64,
+          "safe": 47,
+          "accompanied": 49
+        }
+      },
+      {
+        "id": "W",
+        "cells": 34.21082610440139,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 55,
+          "fed": 91,
+          "well": 48,
+          "safe": 53,
+          "accompanied": 36
+        }
+      },
+      {
+        "id": "X",
+        "cells": 33.50940276678578,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 70,
+          "fed": 91,
+          "well": 79,
+          "safe": 31,
+          "accompanied": 58
+        }
+      },
+      {
+        "id": "Y",
+        "cells": 34.22212317828257,
+        "workCreditsToday": 0,
+        "conditions": {
+          "rested": 37,
+          "fed": 91,
+          "well": 26,
+          "safe": 36,
+          "accompanied": 90
+        }
+      }
+    ],
+    "debts": [],
+    "ledger": {
+      "initialCells": 828.4872291863744,
+      "minted": 0,
+      "burned": 0,
+      "leaked": 0
+    }
+  }
+}

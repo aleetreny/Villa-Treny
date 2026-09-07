@@ -1,0 +1,43 @@
+<body><pre id="log" style="color:#cfe;background:#111;font:11px monospace;padding:8px"></pre></body>
+<script>
+const T=32;
+const im=new Image();
+im.onload=()=>{
+  const cv=document.createElement('canvas');cv.width=im.width;cv.height=im.height;
+  const cx=cv.getContext('2d');cx.imageSmoothingEnabled=false;cx.drawImage(im,0,0);
+  const W=im.width,H=im.height,d=cx.getImageData(0,0,W,H).data;
+  const solid=new Uint8Array(W*H);
+  for(let i=0;i<W*H;i++) solid[i]=d[i*4+3]>8?1:0;
+  // connected components, 8-connected, so a sprite drawn in one piece stays one
+  const lab=new Int32Array(W*H).fill(-1);
+  const comps=[];
+  const st=new Int32Array(W*H);
+  for(let i=0;i<W*H;i++){
+    if(!solid[i]||lab[i]>=0)continue;
+    const id=comps.length;let sp=0;st[sp++]=i;lab[i]=id;
+    let x0=1e9,y0=1e9,x1=-1,y1=-1,n=0;
+    while(sp){
+      const p=st[--sp],px=p%W,py=(p/W)|0;n++;
+      if(px<x0)x0=px;if(px>x1)x1=px;if(py<y0)y0=py;if(py>y1)y1=py;
+      for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){
+        const nx=px+dx,ny=py+dy;
+        if(nx<0||ny<0||nx>=W||ny>=H)continue;
+        const q=ny*W+nx;
+        if(solid[q]&&lab[q]<0){lab[q]=id;st[sp++]=q;}
+      }
+    }
+    comps.push({x0,y0,w:x1-x0+1,h:y1-y0+1,n});
+  }
+  // keep the substantial ones and report them as tile spans
+  const big=comps.filter(c=>c.n>=90).sort((a,b)=>(a.y0-b.y0)||(a.x0-b.x0));
+  const out=['components: '+comps.length+'  substantial: '+big.length,''];
+  for(const c of big){
+    const tc=Math.floor(c.x0/T), tr=Math.floor(c.y0/T);
+    const tw=Math.ceil((c.x0%T+c.w)/T), th=Math.ceil((c.y0%T+c.h)/T);
+    out.push(`tile(${String(tc).padStart(2)},${String(tr).padStart(2)}) span ${tw}x${th}   px ${String(c.w).padStart(3)}x${String(c.h).padStart(3)} at ${String(c.x0).padStart(3)},${String(c.y0).padStart(3)}   area ${c.n}`);
+  }
+  document.getElementById('log').textContent=out.join('\n');
+  window.__ready=1;
+};
+im.src='../../public/assets/props/shelter_furniture.png';
+</script>

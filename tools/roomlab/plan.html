@@ -1,0 +1,312 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0d0f1a;font:12px/1.5 ui-monospace,monospace;color:#aeb6d4}
+ #wrap{padding:14px}
+ #bar{padding:8px 14px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+ label{display:flex;gap:5px;align-items:center;cursor:pointer;user-select:none}
+ svg{display:block;background:#141527;border-radius:3px}
+ .k{color:#e8ecff}
+</style>
+<div id="bar">
+  <label><input type="checkbox" id="sizes" checked> sizes</label>
+  <label><input type="checkbox" id="links" checked> passages</label>
+  <label><input type="checkbox" id="rock" checked> rock</label>
+  <label><input type="checkbox" id="grids"> room grids</label>
+  <span id="stat"></span>
+</div>
+<div id="wrap"><svg id="p"></svg></div>
+<script>
+// ── THE PLAN ──────────────────────────────────────────────────────────────
+// The habitat at map magnification, drawn from habitat-plan.json, which is
+// generated out of rooms.ts and section.ts by measure/plan-data.mjs. Nothing
+// here is authored: if the plan and the rooms disagree, the plan is wrong and
+// this is where you see it.
+//
+// The instrument register, per the map-art spec: flat ink, no texture, no
+// pixel art. Darkness is the ground and light is the information.
+
+const S = 9;                     // screen px per habitat tile
+const PAD = 26;
+const INK   = '#e9edff';
+const HULL  = '#7d8bc4';         // the ship: inherited, cold
+const ROCK  = '#c2a06a';         // the warren: cut by hand, warm
+const SURFACE = '#c88945';        // the linked open-air places
+const DEAD  = '#5b6289';
+const HOME  = '#d9a441';         // somebody sleeps here
+
+const el = (n, a = {}) => {
+  const e = document.createElementNS('http://www.w3.org/2000/svg', n);
+  for (const k in a) e.setAttribute(k, a[k]);
+  return e;
+};
+
+fetch('habitat-plan.json').then(r => r.json()).then(draw);
+
+function draw(P) {
+  const svg = document.getElementById('p');
+  const W = P.frame.w * S + PAD * 2, H = P.frame.h * S + PAD * 2;
+  svg.setAttribute('width', W); svg.setAttribute('height', H);
+  const at = (v) => PAD + v * S;
+
+  const layers = { rock: el('g'), link: el('g'), room: el('g'), grid: el('g'),
+                   way: el('g'), label: el('g') };
+  const taken = [];   // label boxes already placed, so nothing lands on anything
+
+  // the asteroid, as a single faint closed line — the edge of what is known
+  const pts = P.outline.map(([x, y]) => `${at(x).toFixed(1)},${at(y).toFixed(1)}`).join(' ');
+  layers.rock.appendChild(el('polygon', {
+    points: pts, fill: '#181a2e', stroke: '#2b2f4d', 'stroke-width': 1.5,
+  }));
+
+  for (const p of P.placements) {
+    const home = p.sleeps && p.sleeps.length > 0;
+    const stroke = home ? HOME : (p.side === 'hull' ? HULL : (p.side === 'surface' ? SURFACE : ROCK));
+    const roomFill = p.side === 'hull' ? '#1b1e36'
+      : (p.side === 'surface' ? '#2b2119' : '#221d2e');
+    layers.room.appendChild(el('rect', {
+      x: at(p.x), y: at(p.y), width: p.w * S, height: p.h * S,
+      fill: home ? (p.side === 'hull' ? '#232338' : '#2a2233') : roomFill,
+      stroke, 'stroke-width': home ? 2 : 1.6, rx: 1,
+    }));
+
+    // the room's own grid, so the plan can be checked against the interior
+    for (let y = 0; y < p.grid.length; y++) {
+      for (let x = 0; x < p.grid[y].length; x++) {
+        const ch = p.grid[y][x];
+        if (ch === '.' || ch === '#') continue;
+        const solid = '|*~'.includes(ch);
+        layers.grid.appendChild(el('rect', {
+          x: at(p.x + x) + 1, y: at(p.y + y) + 1, width: S - 2, height: S - 2,
+          fill: solid ? '#3a2f4a' : '#2f3a52', opacity: .9,
+        }));
+      }
+    }
+
+    const label = p.name.replace(/^The /, '');
+    const tw = label.length * 5.4 + 10;
+    const lx = at(p.x + p.w / 2) - tw / 2;
+    const narrow = p.w < 7;
+    const preferredLy = narrow ? at(p.y) - 16 : at(p.y + p.h / 2) - (p.h * S > 60 ? 8 : 14);
+    let ly = preferredLy;
+    for (let attempt = 0; attempt < 12; attempt += 1) {
+      const step = attempt === 0 ? 0 : Math.ceil(attempt / 2) * 16 * (attempt % 2 ? 1 : -1);
+      const candidate = preferredLy + step;
+      const clash = taken.some((item) => Math.abs(item.x - (lx + tw / 2)) < (item.w + tw) / 2
+        && Math.abs(item.y - (candidate + 7)) < 14);
+      if (!clash) { ly = candidate; break; }
+    }
+    const chip = el('g', { class: 'chip' });
+    chip.appendChild(el('rect', {
+      x: lx, y: ly, width: tw, height: 14, rx: 2,
+      fill: '#2a2f4e', stroke: '#3a4168', 'stroke-width': .8,
+    }));
+    const t = el('text', {
+      x: lx + tw / 2, y: ly + 10, 'text-anchor': 'middle',
+      fill: INK, 'font-family': 'ui-monospace,monospace', 'font-size': 9,
+    });
+    t.textContent = label;
+    chip.appendChild(t);
+
+    const sz = el('text', {
+      x: at(p.x + p.w / 2), y: ly + 24, 'text-anchor': 'middle',
+      fill: stroke, 'font-family': 'ui-monospace,monospace', 'font-size': 8, opacity: .85,
+      class: 'size',
+    });
+    sz.textContent = `${p.w}x${p.h}`;
+    chip.appendChild(sz);
+
+    // the household, as initials — the plan's answer to who lives where
+    if (home) {
+      const who = el('text', {
+        x: at(p.x + p.w / 2), y: ly + 36, 'text-anchor': 'middle', fill: HOME,
+        'font-family': 'ui-monospace,monospace', 'font-size': 10,
+        'letter-spacing': 2, class: 'who',
+      });
+      who.textContent = p.sleeps.map((r) => r.id).join('');
+      chip.appendChild(who);
+    }
+    layers.label.appendChild(chip);
+    taken.push({ x: lx + tw / 2, y: ly + 7, w: tw });
+  }
+
+  // ── the passages ────────────────────────────────────────────────────────
+  // Routed orthogonally between the two rooms' nearest faces and steered round
+  // anything in the way, because a corridor is a place you walk down and not a
+  // line between two centres. The widths are not decided; the routes are what
+  // the topology already forces.
+  const NAMED = {
+    'bridge|dock': 'The Climb',
+    'infirmary|workshops': 'The Throat',
+    'common|workshops': 'The Landing',
+    'administration|common': 'The Cut',
+    'well|workshops': 'The Drop', 'row|well': 'The Pipe Run',
+    'face|row': 'The Long Gallery',
+    'camp|dock': 'Surface Path', 'camp|garden': 'Surface Path',
+    'garden|sheltergate': 'The Green Run',
+    'sheltergate|yard': 'Shelter Door', 'common|yard': 'The Descent',
+    'administration|dispatch': 'Paper Run', 'archive|dispatch': 'Paper Run',
+    'archive|records': 'Paper Run',
+    'records|study': 'East Gallery', 'sparebedroom|study': 'East Gallery',
+    'parlour|sparebedroom': 'East Gallery', 'parlour|projection': 'East Gallery',
+    'projection|winter': 'East Gallery',
+    'library|maintenance': 'Old Wing', 'grandbedroom|library': 'Old Wing',
+    'grandbedroom|salon': 'Old Wing', 'hearth|salon': 'Old Wing',
+    'kitchen|servicecounter': 'Service Run', 'maindiner|servicecounter': 'Service Run',
+    'maindiner|sodabar': 'Service Run',
+    'breach|longwalk': 'sealed', 'breach|hold': 'sealed',
+  };
+  // The Long Walk and the Row are rooms now, not labels on a line: the five
+  // cabins and the six diggings open straight onto them, so those doorways are
+  // drawn and left unnamed.
+  const DOORWAY = new Set(['longwalk', 'row']);
+  const shown = new Set();
+  for (const l of P.links) {
+    const A = room(P, l.a), B = room(P, l.b);
+    const pts = route(A, B, P.placements);
+    const key = [l.a, l.b].sort().join('|');
+    const name = NAMED[key];
+    const sealed = name === 'sealed';
+    const doorway = !name && (DOORWAY.has(l.a) || DOORWAY.has(l.b));
+    layers.link.appendChild(el('polyline', {
+      points: pts.map(([x, y]) => `${at(x)},${at(y)}`).join(' '),
+      fill: 'none', stroke: sealed ? '#6b4a4a' : DEAD,
+      'stroke-width': sealed ? 1.4 : (doorway ? 1.6 : 2.6), 'stroke-linejoin': 'round',
+      'stroke-linecap': 'round', 'stroke-dasharray': sealed ? '2 3' : null,
+      opacity: sealed ? .8 : (doorway ? .3 : .5),
+    }));
+    // one label per named space, at the middle of the first route that carries it
+    if (name && !shown.has(name)) {
+      shown.add(name);
+      const m = pts[Math.floor(pts.length / 2)];
+      const tw = name.length * 4.6 + 8;
+      let ly = at(m[1]);
+      for (let guard = 0; guard < 12; guard += 1) {
+        const clash = taken.some((t) => Math.abs(t.x - at(m[0])) < (t.w + tw) / 2
+          && Math.abs(t.y - ly) < 13);
+        if (!clash) break;
+        ly += guard % 2 ? -13 * guard : 13 * guard;
+      }
+      taken.push({ x: at(m[0]), y: ly, w: tw });
+      const g = el('g');
+      g.appendChild(el('rect', {
+        x: at(m[0]) - tw / 2, y: ly - 6, width: tw, height: 12, rx: 6,
+        fill: '#191c30', stroke: '#333a5c', 'stroke-width': .7,
+      }));
+      const t = el('text', {
+        x: at(m[0]), y: ly + 3, 'text-anchor': 'middle', fill: '#8f99c4',
+        'font-family': 'ui-monospace,monospace', 'font-size': 7.5,
+      });
+      t.textContent = name;
+      g.appendChild(t);
+      layers.way.appendChild(g);
+    }
+  }
+
+  svg.replaceChildren(layers.rock, layers.link, layers.room, layers.grid,
+                      layers.way, layers.label);
+
+  const tiles = P.placements.reduce((n, p) => n + p.w * p.h, 0);
+  const x0 = Math.min(...P.placements.map(p => p.x)), x1 = Math.max(...P.placements.map(p => p.x + p.w));
+  const y0 = Math.min(...P.placements.map(p => p.y)), y1 = Math.max(...P.placements.map(p => p.y + p.h));
+  document.getElementById('stat').innerHTML =
+    `<span class="k">${P.placements.length}</span> rooms &middot; `
+    + `<span class="k">${tiles}</span> tiles of floor &middot; `
+    + `footprint <span class="k">${x1 - x0}×${y1 - y0}</span> in a `
+    + `<span class="k">${P.frame.w}×${P.frame.h}</span> frame &middot; `
+    + `largest room <span class="k">${Math.max(...P.placements.map(p => Math.max(p.w, p.h)))}</span> tiles &middot; `
+    + `<span class="k">${P.placements.filter(p => p.sleeps && p.sleeps.length).length}</span> homes housing `
+    + `<span class="k">${P.placements.reduce((n, p) => n + (p.sleeps ? p.sleeps.length : 0), 0)}</span>`;
+
+  const bind = (id, g, on = 'inline') => {
+    const box = document.getElementById(id);
+    const apply = () => g.setAttribute('display', box.checked ? on : 'none');
+    box.addEventListener('change', apply); apply();
+  };
+  const ways = el('g');
+  bind('links', layers.link); bind('rock', layers.rock); bind('grids', layers.grid);
+  document.getElementById('links').addEventListener('change', (e) =>
+    layers.way.setAttribute('display', e.target.checked ? 'inline' : 'none'));
+  const sizeBox = document.getElementById('sizes');
+  const applySizes = () => svg.querySelectorAll('.size')
+    .forEach(n => n.setAttribute('display', sizeBox.checked ? 'inline' : 'none'));
+  sizeBox.addEventListener('change', applySizes); applySizes();
+  window.__ready = 1;
+}
+
+function room(P, id) { return P.placements.find(q => q.id === id); }
+function centre(P, id) {
+  const p = room(P, id);
+  return { x: p.x + p.w / 2, y: p.y + p.h / 2 };
+}
+
+/** Does a straight segment pass through any room that is not one of its ends? */
+function blocked(x1, y1, x2, y2, rooms, a, b) {
+  for (const r of rooms) {
+    if (r === a || r === b) continue;
+    const lo = { x: Math.min(x1, x2), y: Math.min(y1, y2) };
+    const hi = { x: Math.max(x1, x2), y: Math.max(y1, y2) };
+    if (hi.x <= r.x || lo.x >= r.x + r.w || hi.y <= r.y || lo.y >= r.y + r.h) continue;
+    return true;
+  }
+  return false;
+}
+
+/** Where a room's door sits on one of its faces, in world tiles, if it has one
+ *  inside the span the two rooms share. A passage should meet a doorway. */
+function pick(R, side, lo, hi) {
+  const g = R.grid;
+  const row = side === 'N' ? 0 : side === 'S' ? g.length - 1 : null;
+  const hits = [];
+  if (row !== null) {
+    for (let x = 0; x < g[row].length; x++) {
+      if ('+X'.includes(g[row][x]) && R.x + x + 0.5 >= lo && R.x + x + 0.5 <= hi) {
+        hits.push(R.x + x + 0.5);
+      }
+    }
+  } else {
+    const col = side === 'W' ? 0 : g[0].length - 1;
+    for (let y = 0; y < g.length; y++) {
+      if ('+X'.includes(g[y][col]) && R.y + y + 0.5 >= lo && R.y + y + 0.5 <= hi) {
+        hits.push(R.y + y + 0.5);
+      }
+    }
+  }
+  return hits.length ? hits[Math.floor(hits.length / 2)] : null;
+}
+
+/** An orthogonal route from A's face to B's face. Straight where the rooms face
+ *  each other, an elbow otherwise, and of the two possible elbows the one that
+ *  runs into fewer rooms. */
+function route(A, B, rooms) {
+  const ox0 = Math.max(A.x, B.x), ox1 = Math.min(A.x + A.w, B.x + B.w);
+  const oy0 = Math.max(A.y, B.y), oy1 = Math.min(A.y + A.h, B.y + B.h);
+  if (ox1 - ox0 >= 2) {
+    const down = A.y + A.h <= B.y;
+    const x = pick(A, down ? 'S' : 'N', ox0, ox1) ?? pick(B, down ? 'N' : 'S', ox0, ox1)
+      ?? (ox0 + ox1) / 2;
+    return down ? [[x, A.y + A.h], [x, B.y]] : [[x, A.y], [x, B.y + B.h]];
+  }
+  if (oy1 - oy0 >= 2) {
+    const right = A.x + A.w <= B.x;
+    const y = pick(A, right ? 'E' : 'W', oy0, oy1) ?? pick(B, right ? 'W' : 'E', oy0, oy1)
+      ?? (oy0 + oy1) / 2;
+    return right ? [[A.x + A.w, y], [B.x, y]] : [[A.x, y], [B.x + B.w, y]];
+  }
+  const ac = { x: A.x + A.w / 2, y: A.y + A.h / 2 };
+  const bc = { x: B.x + B.w / 2, y: B.y + B.h / 2 };
+  const ax = ac.x < bc.x ? A.x + A.w : A.x;
+  const ay = ac.y < bc.y ? A.y + A.h : A.y;
+  const bx = bc.x < ac.x ? B.x + B.w : B.x;
+  const by = bc.y < ac.y ? B.y + B.h : B.y;
+  const first  = [[ax, ac.y], [bc.x, ac.y], [bc.x, by]];
+  const second = [[ac.x, ay], [ac.x, bc.y], [bx, bc.y]];
+  const cost = (pts) => {
+    let n = 0;
+    for (let i = 1; i < pts.length; i++) {
+      if (blocked(pts[i - 1][0], pts[i - 1][1], pts[i][0], pts[i][1], rooms, A, B)) n++;
+    }
+    return n;
+  };
+  return cost(first) <= cost(second) ? first : second;
+}
+</script>

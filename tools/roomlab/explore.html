@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0e12">
+  <title>Recorrer la nave · Night Shift Habitat</title>
+  <link rel="stylesheet" href="./explorer.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="./corridors.html" aria-label="Volver a la revisión de pasillos">NIGHT SHIFT <span>HABITAT</span></a>
+    <span class="masthead-note">Un lugar a la vez.</span>
+    <button class="quiet-button" id="help-toggle" type="button" aria-expanded="false" aria-controls="help">Cómo moverte</button>
+  </header>
+  <main class="explorer" aria-label="Explorar Night Shift Habitat">
+    <aside class="chart-panel" aria-label="Mapa de la nave">
+      <div class="chart-heading"><h2>La nave</h2><span id="visited-count">—</span></div>
+      <p class="chart-instruction">Elige un lugar para ir andando.</p>
+      <div class="chart-viewport"><svg id="minimap" role="group" aria-label="Mapa de salas y pasillos"></svg></div>
+      <div class="map-key" aria-hidden="true"><span class="map-key-current">Aquí</span><span class="map-key-visited">Visitado</span><span class="map-key-destination">Destino</span></div>
+      <section class="connections" aria-labelledby="connections-title">
+        <h2 id="connections-title">Desde aquí</h2>
+        <div id="exit-list"></div>
+      </section>
+      <a class="review-link" href="./corridors.html">Revisar los pasillos ↗</a>
+    </aside>
+    <section class="current-scene" aria-labelledby="scene-name">
+      <header class="scene-heading">
+        <div><p id="scene-group" class="eyebrow">NIGHT SHIFT HABITAT</p><h1 id="scene-name">Entrando en la nave…</h1></div>
+        <div class="scene-actions"><button class="quiet-button" id="route-cancel" type="button" hidden>Parar recorrido</button><label class="grid-control"><input type="checkbox" id="show-grid"> Ver suelo transitable</label></div>
+      </header>
+      <div id="scene-viewport" class="scene-viewport" tabindex="0" role="application" aria-label="Escena actual. Usa las flechas o W A S D para caminar. También puedes pulsar un punto del suelo.">
+        <div id="scene-world" class="scene-world"></div>
+        <div id="scene-curtain" class="scene-curtain" aria-hidden="true"></div>
+        <div class="loading-note" id="loading-note" role="status">Preparando el recorrido…</div>
+        <div class="touch-pad" aria-label="Moverse">
+          <button type="button" class="direction north" data-direction="north" aria-label="Caminar hacia arriba">↑</button>
+          <button type="button" class="direction west" data-direction="west" aria-label="Caminar a la izquierda">←</button>
+          <button type="button" class="direction south" data-direction="south" aria-label="Caminar hacia abajo">↓</button>
+          <button type="button" class="direction east" data-direction="east" aria-label="Caminar a la derecha">→</button>
+        </div>
+      </div>
+      <footer class="scene-footer"><p id="navigation-status" role="status" aria-live="polite">Las aberturas en las paredes llevan a otros lugares.</p><span class="scale-label" id="scale-label"></span></footer>
+      <div id="help" class="help" hidden><p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> o las flechas para caminar. Pulsa el suelo para ir hasta allí. Elige una sala en el mapa para recorrer el camino completo.</p><p>La ficha «Tú» es la llave original del pack Shelter que señala tu posición durante esta revisión.</p><p>Al llegar a una abertura pasas al siguiente espacio. Para volver, atraviesa de nuevo el hueco. <kbd>Esc</kbd> detiene un recorrido.</p></div>
+    </section>
+  </main>
+  <script type="module" src="./explorer.js"></script>
+</body>
+</html>

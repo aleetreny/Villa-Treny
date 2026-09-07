@@ -1,0 +1,278 @@
+{
+  "dig5": [
+    {
+      "id": "dig5-declared-2",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        420,
+        50,
+        24,
+        43
+      ],
+      "destination": [
+        19,
+        39,
+        24,
+        43
+      ],
+      "label": "large clean mattress"
+    },
+    {
+      "id": "dig5-declared-3",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        361,
+        359,
+        14,
+        24
+      ],
+      "destination": [
+        66,
+        65,
+        14,
+        24
+      ],
+      "label": "small upright bedroll"
+    },
+    {
+      "id": "dig5-declared-4",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        295,
+        384,
+        18,
+        31
+      ],
+      "destination": [
+        23,
+        98,
+        18,
+        31
+      ],
+      "label": "tall mustard locker"
+    },
+    {
+      "id": "dig5-declared-5",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        356,
+        387,
+        26,
+        28
+      ],
+      "destination": [
+        174,
+        63,
+        26,
+        28
+      ],
+      "label": "open mustard storage bin"
+    },
+    {
+      "id": "dig5-declared-6",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        387,
+        387,
+        26,
+        28
+      ],
+      "destination": [
+        174,
+        100,
+        26,
+        28
+      ],
+      "label": "open green-front storage bin"
+    },
+    {
+      "id": "dig5-declared-7",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        6,
+        129,
+        8,
+        8
+      ],
+      "destination": [
+        29,
+        190,
+        8,
+        8
+      ],
+      "label": "white cup"
+    },
+    {
+      "id": "dig5-declared-8",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        19,
+        131,
+        9,
+        10
+      ],
+      "destination": [
+        39,
+        194,
+        9,
+        10
+      ],
+      "label": "white handled cup"
+    },
+    {
+      "id": "dig5-declared-9",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        72,
+        192,
+        16,
+        32
+      ],
+      "destination": [
+        184,
+        219,
+        16,
+        32
+      ],
+      "label": "orange gas cylinder"
+    }
+  ],
+  "dig6": [
+    {
+      "id": "dig6-declared-2",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        456,
+        4,
+        48,
+        25
+      ],
+      "destination": [
+        153,
+        136,
+        48,
+        25
+      ],
+      "label": "wide clean mattress"
+    },
+    {
+      "id": "dig6-declared-3",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        420,
+        146,
+        24,
+        43
+      ],
+      "destination": [
+        24,
+        94,
+        24,
+        43
+      ],
+      "label": "upright worn mattress"
+    },
+    {
+      "id": "dig6-declared-4",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        387,
+        387,
+        26,
+        28
+      ],
+      "destination": [
+        174,
+        86,
+        26,
+        28
+      ],
+      "label": "open green-front storage bin"
+    },
+    {
+      "id": "dig6-declared-5",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        327,
+        391,
+        18,
+        24
+      ],
+      "destination": [
+        29,
+        157,
+        18,
+        24
+      ],
+      "label": "compact mustard locker"
+    },
+    {
+      "id": "dig6-declared-6",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        356,
+        387,
+        26,
+        28
+      ],
+      "destination": [
+        166,
+        184,
+        26,
+        28
+      ],
+      "label": "open mustard storage bin"
+    },
+    {
+      "id": "dig6-declared-7",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        6,
+        129,
+        8,
+        8
+      ],
+      "destination": [
+        109,
+        213,
+        8,
+        8
+      ],
+      "label": "white cup"
+    },
+    {
+      "id": "dig6-declared-8",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        19,
+        131,
+        9,
+        10
+      ],
+      "destination": [
+        120,
+        208,
+        9,
+        10
+      ],
+      "label": "white handled cup"
+    },
+    {
+      "id": "dig6-declared-9",
+      "file": "tools/roomlab/library/sheets/Post Apoc Shelter - Asset Pack/Post Apoc - Shelter 32x32 Grid/Shelter_Furniture_32x32.png",
+      "rect": [
+        40,
+        195,
+        16,
+        26
+      ],
+      "destination": [
+        72,
+        220,
+        16,
+        26
+      ],
+      "label": "short orange gas cylinder"
+    }
+  ]
+}

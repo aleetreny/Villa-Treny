@@ -1,0 +1,45 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aleetreny-habitat-runtime",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-31",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "secrets": {
+    "required": ["ADMIN_TOKEN", "GROQ_API_KEY"]
+  },
+  "triggers": {
+    "crons": ["7 * * * *"]
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "HABITAT_WORLD",
+        "class_name": "HabitatWorld"
+      }
+    ]
+  },
+  "exports": {
+    "HabitatWorld": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    }
+  },
+  "vars": {
+    "HABITAT_ID": "habitat-canonical",
+    "PUBLIC_ORIGIN": "https://aleetreny.github.io",
+    "TICK_INTERVAL_MS": "21600000",
+    "MAX_COGNITIONS_PER_ALARM": "1",
+    "WORKERS_AI_MODEL": "@cf/qwen/qwen3-30b-a3b-fp8",
+    "WORKERS_AI_DAILY_NEURONS_LIMIT": "8000",
+    "GROQ_MODEL": "openai/gpt-oss-20b",
+    "GROQ_DAILY_TOTAL_TOKENS_LIMIT": "150000"
+  }
+}

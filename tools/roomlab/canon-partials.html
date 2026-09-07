@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<title>Remaining canon rooms · RoomLab</title>
+<style>
+  :root{color-scheme:dark}*{box-sizing:border-box}
+  body{margin:0;background:#090b0e;color:#bec7dc;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+  header{padding:20px 22px 9px;border-bottom:1px solid #171c27}h1{margin:0;color:#f0f2f8;font-size:14px;font-weight:500;letter-spacing:.08em}
+  p{margin:5px 0 0;color:#77839f;max-width:1020px}main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;padding:20px 22px 36px;align-items:start}
+  figure{margin:0;padding:14px;background:#10131a;border:1px solid #242b39}.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
+  .panel{height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0b0e13;border:1px solid #1c2230;padding:10px;overflow:hidden}
+  .panel small{align-self:stretch;margin-bottom:8px;color:#66718d;text-transform:uppercase;letter-spacing:.1em}.art{min-height:0;flex:1;display:flex;align-items:center;justify-content:center;width:100%}
+  canvas,.reference{display:block;max-width:100%;max-height:420px;width:auto;height:auto;object-fit:contain;image-rendering:pixelated}
+  figcaption{padding-top:10px;color:#7f8ba8}figcaption b{color:#eef1f8;font-weight:500}figcaption span{color:#d5a95a}code{color:#9ec6ef}
+  @media(max-width:1040px){main{grid-template-columns:1fr}}@media(max-width:650px){.compare{grid-template-columns:1fr}.panel{height:360px}}
+</style>
+<header><h1>SIX REMAINING CANON ROOMS · FULL DETAIL</h1><p>Five unscaled ZIP compositions and the approved Planter Yard reused exactly for Hydroponics. No room in this set is authored from scratch.</p></header>
+<main id="rooms"></main>
+<script type="module">
+import { CANON_PARTIALS, CANON_PARTIAL_MANIFEST, CANON_PARTIAL_SOURCES, canonPartialSourceCount, drawCanonPartial, loadCanonPartialSources } from './canon-partials-kit.js?v=canon-partials-1';
+const rooms = [
+  ['bridge','ruined command superstructure'],['dock','hazardous surface loading zone'],['breach','collapsed hull and salvage field'],
+  ['hold','sealed cargo and drum cache'],['common','decorated communal sitting room'],['hydroponics','the approved Planter Yard, unchanged'],
+];
+const sources=await loadCanonPartialSources(); const root=document.getElementById('rooms');
+for(const [key,note] of rooms){
+  const size=CANON_PARTIALS[key], manifest=CANON_PARTIAL_MANIFEST[key]; const canvas=document.createElement('canvas'); canvas.width=size.W; canvas.height=size.H; canvas.dataset.room=key;
+  if(key==='hydroponics'){canvas.style.width=(size.W*2)+'px';canvas.style.height=(size.H*2)+'px';}
+  drawCanonPartial(canvas.getContext('2d'),sources,key); const figure=document.createElement('figure'), compare=document.createElement('div'); compare.className='compare';
+  const ref=document.createElement('div'); ref.className='panel'; ref.innerHTML='<small>ZIP reference</small><div class="art"></div>';
+  const image=document.createElement('img'); image.className='reference'; image.src=CANON_PARTIAL_SOURCES[manifest.layers[0].sheet]; image.alt=size.label+' primary source'; ref.querySelector('.art').appendChild(image); compare.appendChild(ref);
+  const out=document.createElement('div'); out.className='panel'; out.innerHTML='<small>room output · original pixels</small><div class="art"></div>'; out.querySelector('.art').appendChild(canvas); compare.appendChild(out); figure.appendChild(compare);
+  const caption=document.createElement('figcaption'); caption.innerHTML='<b>'+size.label+'</b> · '+size.W+'x'+size.H+' · '+canonPartialSourceCount(key)+' declared source crop'+(canonPartialSourceCount(key)===1?'':'s')+' · <span>'+note+'</span><br><code>'+manifest.strategy+'</code>'; figure.appendChild(caption); root.appendChild(figure);
+}
+window.__ready=1;
+</script>

@@ -1,0 +1,22 @@
+<style>body{margin:0;background:#12151b}canvas{image-rendering:pixelated;display:block}</style>
+<canvas id="out"></canvas>
+<script>
+const q=new URLSearchParams(location.search);
+const T=32,S=+(q.get('s')||3),PAD=30,SRC=q.get('f');
+const im=new Image();im.onload=()=>{
+ const cols=im.width/T, rows=im.height/T;
+ const c=document.getElementById('out');
+ c.width=cols*T*S+PAD;c.height=rows*T*S+PAD;
+ const x=c.getContext('2d');x.imageSmoothingEnabled=false;
+ x.fillStyle='#171b24';x.fillRect(0,0,c.width,c.height);
+ x.drawImage(im,0,0,im.width,im.height,PAD,PAD,cols*T*S,rows*T*S);
+ x.strokeStyle='rgba(110,200,255,.30)';
+ for(let i=0;i<=cols;i++){x.beginPath();x.moveTo(PAD+i*T*S+.5,PAD);x.lineTo(PAD+i*T*S+.5,c.height);x.stroke();}
+ for(let j=0;j<=rows;j++){x.beginPath();x.moveTo(PAD,PAD+j*T*S+.5);x.lineTo(c.width,PAD+j*T*S+.5);x.stroke();}
+ x.fillStyle='#9fd8ff';x.font='bold 14px monospace';x.textAlign='center';
+ for(let i=0;i<cols;i++)x.fillText(i,PAD+i*T*S+T*S/2,19);
+ x.textAlign='right';
+ for(let j=0;j<rows;j++)x.fillText(j,PAD-5,PAD+j*T*S+T*S/2+5);
+ window.__ready=1;
+};im.src=SRC;
+</script>

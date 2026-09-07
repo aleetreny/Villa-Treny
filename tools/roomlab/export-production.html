@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Export approved rooms · Night Shift</title>
+<p id="status">Preparing approved rooms for production…</p>
+<button id="download" hidden>Download production rooms</button>
+<script type="module">
+import { ROOM_ART, loadExplorerRoom } from './explorer-room-art.js';
+const rooms = {};
+for (const id of Object.keys(ROOM_ART)) {
+  const art = await loadExplorerRoom(id);
+  rooms[id] = {width:art.canvas.width,height:art.canvas.height,cellSize:art.cellSize,grid:art.grid,entry:art.spawn,exits:art.exits,sealed:art.sealed,objects:art.objects,outlineMask:art.outlineMask,diagnostics:art.diagnostics,footprint:art.footprint,png:art.canvas.toDataURL()};
+  document.getElementById('status').textContent=Object.keys(rooms).length+' rooms exported';
+}
+window.__productionRooms=rooms;window.__ready=1;
+const download=document.getElementById('download');download.hidden=false;
+download.addEventListener('click',()=>{
+  const url=URL.createObjectURL(new Blob([JSON.stringify(rooms)],{type:'application/json'}));
+  const link=document.createElement('a');link.href=url;link.download='nightshift-rooms-export.json';link.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+</script></html>

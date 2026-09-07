@@ -1,0 +1,12 @@
+<meta charset="utf-8"><title>Unused room reference audit · RoomLab</title>
+<style>
+  :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#090b0e;color:#ccd3e3;font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+  header{padding:18px 20px 8px}h1{font-size:14px;letter-spacing:.08em;font-weight:500;margin:0}p{color:#78839e;margin:5px 0}
+  main{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:16px 20px 30px}figure{margin:0;background:#10131a;border:1px solid #242b39;padding:10px}img{display:block;width:100%;height:300px;object-fit:contain;background:#fff;image-rendering:pixelated}figcaption{padding-top:8px;color:#9fabbe}
+</style>
+<header><h1>UNUSED COMPLETE ZIP COMPOSITIONS</h1><p>Selection board for Bridge, Dock, Breach, Hold, Common and Hydroponics.</p></header><main id="grid"></main>
+<script>
+const files=['50s_Diner_2.png','Graveyard_1.png','Graveyard_3.png','Post Apoc Office - Asset Pack_1.png','Post Apoc Office - Asset Pack_6.png','Post Apoc Office - Asset Pack_7.png','Post Apoc Shelter - Asset Pack_2.png','Post Apoc Shelter - Asset Pack_5.jpg','Post Apoc Shelter - Asset Pack_6.jpg','Post Apoc Shelter - Asset Pack_7.png','Post Apoc Shelter - Asset Pack_8.gif','PostApoc_Workshop_2.png','PostApoc_Workshop_3.jpg','Public_Bathroom_1.jpg','Public_Bathroom_2.png','Xmas_2.jpg','Xmas_3.png'];
+for(const file of files){const f=document.createElement('figure');const i=document.createElement('img');i.src='./library/rooms/'+file;i.alt=file;const c=document.createElement('figcaption');c.textContent=file;f.append(i,c);grid.append(f)}
+Promise.all([...document.images].map(i=>i.decode())).then(()=>window.__ready=1);
+</script>

@@ -1,0 +1,8681 @@
+{
+  "bridge": [
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_BuildingTiles_32x32.png",
+      "rect": [
+        224,
+        0,
+        39,
+        32
+      ],
+      "at": [
+        128,
+        96
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1244,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_BuildingTiles_32x32.png",
+      "rect": [
+        204,
+        32,
+        8,
+        32
+      ],
+      "at": [
+        44,
+        96
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 256,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_BuildingTiles_32x32.png",
+      "rect": [
+        352,
+        0,
+        32,
+        32
+      ],
+      "at": [
+        32,
+        64
+      ],
+      "flip": false,
+      "ncc": 0.993869,
+      "inliers": 0.9804,
+      "area": 1020,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_BuildingTiles_32x32.png",
+      "rect": [
+        288,
+        0,
+        48,
+        32
+      ],
+      "at": [
+        96,
+        32
+      ],
+      "flip": false,
+      "ncc": 0.989479,
+      "inliers": 0.9765,
+      "area": 1532,
+      "depth": true
+    }
+  ],
+  "administration": [
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        235,
+        8,
+        11,
+        17
+      ],
+      "at": [
+        114,
+        186
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 177,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        392,
+        67,
+        18,
+        58
+      ],
+      "at": [
+        143,
+        54
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 463,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        332,
+        79,
+        8,
+        15
+      ],
+      "at": [
+        17,
+        50
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 90,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        517,
+        131,
+        22,
+        60
+      ],
+      "at": [
+        75,
+        57
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1316,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        419,
+        145,
+        29,
+        46
+      ],
+      "at": [
+        5,
+        124
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1018,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        552,
+        288,
+        18,
+        30
+      ],
+      "at": [
+        20,
+        72
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 420,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        290,
+        294,
+        14,
+        12
+      ],
+      "at": [
+        75,
+        171
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 105,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        305,
+        297,
+        12,
+        12
+      ],
+      "at": [
+        90,
+        174
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 93,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        327,
+        298,
+        19,
+        13
+      ],
+      "at": [
+        50,
+        104
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 139,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        362,
+        327,
+        15,
+        19
+      ],
+      "at": [
+        51,
+        172
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 229,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        582,
+        343,
+        17,
+        34
+      ],
+      "at": [
+        26,
+        186
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 360,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        168,
+        388,
+        16,
+        26
+      ],
+      "at": [
+        88,
+        200
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 368,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        426,
+        394,
+        11,
+        13
+      ],
+      "at": [
+        27,
+        56
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 131,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        8,
+        401,
+        14,
+        15
+      ],
+      "at": [
+        43,
+        52
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 143,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        171,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        52,
+        196
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    }
+  ],
+  "dispatch": [
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        70,
+        11,
+        19,
+        13
+      ],
+      "at": [
+        162,
+        130
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 238,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        358,
+        74,
+        21,
+        45
+      ],
+      "at": [
+        11,
+        118
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 371,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        332,
+        79,
+        8,
+        15
+      ],
+      "at": [
+        31,
+        75
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 90,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        331,
+        106,
+        11,
+        14
+      ],
+      "at": [
+        133,
+        113
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 106,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        488,
+        278,
+        18,
+        39
+      ],
+      "at": [
+        34,
+        103
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 433,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        552,
+        324,
+        17,
+        19
+      ],
+      "at": [
+        43,
+        83
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 258,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        362,
+        385,
+        44,
+        29
+      ],
+      "at": [
+        12,
+        42
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1272,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        326,
+        418,
+        18,
+        27
+      ],
+      "at": [
+        10,
+        73
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 464,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        233,
+        423,
+        15,
+        19
+      ],
+      "at": [
+        139,
+        58
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 281,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        325,
+        324,
+        24,
+        25
+      ],
+      "at": [
+        82,
+        95
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 417,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        360,
+        331,
+        22,
+        18
+      ],
+      "at": [
+        103,
+        147
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 259,
+      "depth": false
+    }
+  ],
+  "archive": [
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        393,
+        0,
+        15,
+        31
+      ],
+      "at": [
+        104,
+        80
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 274,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        327,
+        7,
+        18,
+        18
+      ],
+      "at": [
+        56,
+        13
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 256,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        203,
+        8,
+        11,
+        17
+      ],
+      "at": [
+        85,
+        33
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 177,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        331,
+        106,
+        11,
+        14
+      ],
+      "at": [
+        130,
+        204
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 106,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        170,
+        161,
+        44,
+        61
+      ],
+      "at": [
+        120,
+        54
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2682,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        167,
+        245,
+        11,
+        28
+      ],
+      "at": [
+        44,
+        33
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 304,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        141,
+        247,
+        22,
+        23
+      ],
+      "at": [
+        18,
+        35
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 462,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        11,
+        271,
+        20,
+        10
+      ],
+      "at": [
+        16,
+        59
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 156,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        290,
+        294,
+        14,
+        12
+      ],
+      "at": [
+        49,
+        91
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 105,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        202,
+        296,
+        12,
+        15
+      ],
+      "at": [
+        15,
+        161
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 176,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        305,
+        297,
+        12,
+        12
+      ],
+      "at": [
+        64,
+        94
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 93,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        363,
+        299,
+        10,
+        12
+      ],
+      "at": [
+        138,
+        181
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 109,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        329,
+        329,
+        14,
+        14
+      ],
+      "at": [
+        123,
+        168
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 126,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        391,
+        330,
+        18,
+        52
+      ],
+      "at": [
+        146,
+        123
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 858,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        5,
+        331,
+        22,
+        36
+      ],
+      "at": [
+        9,
+        117
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 628,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        5,
+        331,
+        22,
+        36
+      ],
+      "at": [
+        34,
+        122
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 628,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        263,
+        342,
+        17,
+        37
+      ],
+      "at": [
+        9,
+        191
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 428,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        322,
+        98,
+        27,
+        25
+      ],
+      "at": [
+        86,
+        151
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 469,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        324,
+        293,
+        22,
+        22
+      ],
+      "at": [
+        47,
+        187
+      ],
+      "flip": false,
+      "ncc": 0.99901,
+      "inliers": 0.7569,
+      "area": 288,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        37,
+        353,
+        22,
+        29
+      ],
+      "at": [
+        106,
+        202
+      ],
+      "flip": true,
+      "ncc": 0.968994,
+      "inliers": 0.9209,
+      "area": 506,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        37,
+        353,
+        22,
+        29
+      ],
+      "at": [
+        142,
+        202
+      ],
+      "flip": false,
+      "ncc": 0.964684,
+      "inliers": 0.9229,
+      "area": 506,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        357,
+        145,
+        22,
+        46
+      ],
+      "at": [
+        76,
+        42
+      ],
+      "flip": false,
+      "ncc": 0.878331,
+      "inliers": 0.9067,
+      "area": 1008,
+      "depth": true
+    }
+  ],
+  "records": [
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        329,
+        329,
+        14,
+        14
+      ],
+      "at": [
+        66,
+        49
+      ],
+      "flip": false,
+      "ncc": 0.999609,
+      "inliers": 0.9921,
+      "area": 126,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        266,
+        233,
+        11,
+        14
+      ],
+      "at": [
+        53,
+        49
+      ],
+      "flip": false,
+      "ncc": 0.999568,
+      "inliers": 1.0,
+      "area": 152,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        392,
+        67,
+        18,
+        58
+      ],
+      "at": [
+        14,
+        25
+      ],
+      "flip": false,
+      "ncc": 0.988016,
+      "inliers": 0.8488,
+      "area": 463,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        329,
+        362,
+        14,
+        14
+      ],
+      "at": [
+        55,
+        122
+      ],
+      "flip": false,
+      "ncc": 0.98387,
+      "inliers": 0.9444,
+      "area": 126,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        331,
+        106,
+        11,
+        14
+      ],
+      "at": [
+        148,
+        130
+      ],
+      "flip": false,
+      "ncc": 0.949531,
+      "inliers": 0.783,
+      "area": 106,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        266,
+        233,
+        11,
+        14
+      ],
+      "at": [
+        118,
+        123
+      ],
+      "flip": false,
+      "ncc": 0.874703,
+      "inliers": 0.8487,
+      "area": 152,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        263,
+        300,
+        11,
+        14
+      ],
+      "at": [
+        45,
+        138
+      ],
+      "flip": false,
+      "ncc": 0.839789,
+      "inliers": 0.8456,
+      "area": 149,
+      "depth": false
+    }
+  ],
+  "breach": [
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        361,
+        14,
+        15,
+        38
+      ],
+      "at": [
+        36,
+        73
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 331,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        517,
+        131,
+        22,
+        60
+      ],
+      "at": [
+        162,
+        48
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1316,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        39,
+        181,
+        11,
+        28
+      ],
+      "at": [
+        134,
+        111
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 297,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        13,
+        183,
+        22,
+        23
+      ],
+      "at": [
+        108,
+        113
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 462,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        15,
+        207,
+        20,
+        10
+      ],
+      "at": [
+        110,
+        137
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 151,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Furniture_32x32.png",
+      "rect": [
+        362,
+        327,
+        15,
+        19
+      ],
+      "at": [
+        59,
+        67
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 229,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        353,
+        5,
+        27,
+        50
+      ],
+      "at": [
+        152,
+        198
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 640,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        354,
+        130,
+        27,
+        25
+      ],
+      "at": [
+        130,
+        84
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 337,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        357,
+        164,
+        22,
+        21
+      ],
+      "at": [
+        3,
+        219
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 263,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        324,
+        166,
+        26,
+        22
+      ],
+      "at": [
+        11,
+        105
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 393,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        225,
+        291,
+        60,
+        28
+      ],
+      "at": [
+        106,
+        18
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1300,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        194,
+        294,
+        29,
+        24
+      ],
+      "at": [
+        72,
+        4
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 522,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        194,
+        294,
+        29,
+        24
+      ],
+      "at": [
+        49,
+        215
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 522,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        361,
+        296,
+        16,
+        16
+      ],
+      "at": [
+        44,
+        141
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 252,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        325,
+        324,
+        24,
+        25
+      ],
+      "at": [
+        172,
+        121
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 417,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Exterior_32x32.png",
+      "rect": [
+        360,
+        331,
+        22,
+        18
+      ],
+      "at": [
+        63,
+        185
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 259,
+      "depth": false
+    }
+  ],
+  "dock": [
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        71,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        267,
+        144
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        482,
+        484,
+        28,
+        22
+      ],
+      "at": [
+        9,
+        41
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 608,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        177,
+        68,
+        14,
+        10
+      ],
+      "at": [
+        197,
+        11
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 92,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        301,
+        352,
+        37,
+        31
+      ],
+      "at": [
+        204,
+        96
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1069,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        103,
+        449,
+        18,
+        29
+      ],
+      "at": [
+        91,
+        136
+      ],
+      "flip": false,
+      "ncc": 0.99731,
+      "inliers": 0.9979,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        103,
+        449,
+        18,
+        29
+      ],
+      "at": [
+        59,
+        159
+      ],
+      "flip": false,
+      "ncc": 0.995723,
+      "inliers": 0.9916,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        103,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        246,
+        129
+      ],
+      "flip": false,
+      "ncc": 0.995502,
+      "inliers": 0.9916,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        71,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        151,
+        103
+      ],
+      "flip": false,
+      "ncc": 0.991949,
+      "inliers": 0.9937,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        103,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        54,
+        23
+      ],
+      "flip": false,
+      "ncc": 0.980769,
+      "inliers": 0.9684,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        131,
+        67,
+        23,
+        24
+      ],
+      "at": [
+        256,
+        46
+      ],
+      "flip": false,
+      "ncc": 0.977857,
+      "inliers": 0.9522,
+      "area": 293,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        71,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        111,
+        159
+      ],
+      "flip": false,
+      "ncc": 0.975177,
+      "inliers": 0.9726,
+      "area": 474,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        418,
+        352,
+        28,
+        31
+      ],
+      "at": [
+        161,
+        13
+      ],
+      "flip": false,
+      "ncc": 0.963103,
+      "inliers": 0.9368,
+      "area": 855,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        482,
+        290,
+        28,
+        28
+      ],
+      "at": [
+        167,
+        158
+      ],
+      "flip": false,
+      "ncc": 0.963003,
+      "inliers": 0.9301,
+      "area": 415,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        195,
+        74,
+        25,
+        16
+      ],
+      "at": [
+        129,
+        5
+      ],
+      "flip": false,
+      "ncc": 0.95594,
+      "inliers": 0.9241,
+      "area": 290,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        164,
+        81,
+        19,
+        12
+      ],
+      "at": [
+        214,
+        17
+      ],
+      "flip": false,
+      "ncc": 0.943936,
+      "inliers": 0.9051,
+      "area": 158,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        482,
+        325,
+        26,
+        24
+      ],
+      "at": [
+        10,
+        110
+      ],
+      "flip": false,
+      "ncc": 0.931704,
+      "inliers": 0.8758,
+      "area": 330,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        177,
+        68,
+        14,
+        10
+      ],
+      "at": [
+        261,
+        8
+      ],
+      "flip": false,
+      "ncc": 0.925935,
+      "inliers": 0.837,
+      "area": 92,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        177,
+        68,
+        14,
+        10
+      ],
+      "at": [
+        7,
+        89
+      ],
+      "flip": false,
+      "ncc": 0.925935,
+      "inliers": 0.837,
+      "area": 92,
+      "depth": false
+    }
+  ],
+  "hold": [
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        263,
+        449,
+        18,
+        29
+      ],
+      "at": [
+        26,
+        206
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        385,
+        449,
+        30,
+        30
+      ],
+      "at": [
+        44,
+        191
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 480,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        292,
+        452,
+        24,
+        24
+      ],
+      "at": [
+        130,
+        174
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 312,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        321,
+        512,
+        30,
+        31
+      ],
+      "at": [
+        65,
+        128
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 926,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        231,
+        449,
+        18,
+        29
+      ],
+      "at": [
+        122,
+        95
+      ],
+      "flip": false,
+      "ncc": 0.977418,
+      "inliers": 0.9684,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        263,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        42,
+        104
+      ],
+      "flip": false,
+      "ncc": 0.95729,
+      "inliers": 0.9557,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        4,
+        496,
+        27,
+        15
+      ],
+      "at": [
+        23,
+        226
+      ],
+      "flip": false,
+      "ncc": 0.874598,
+      "inliers": 0.9313,
+      "area": 160,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        263,
+        449,
+        18,
+        29
+      ],
+      "at": [
+        54,
+        87
+      ],
+      "flip": false,
+      "ncc": 0.870353,
+      "inliers": 0.903,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        231,
+        481,
+        18,
+        29
+      ],
+      "at": [
+        112,
+        76
+      ],
+      "flip": false,
+      "ncc": 0.844227,
+      "inliers": 0.8861,
+      "area": 474,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        263,
+        449,
+        18,
+        29
+      ],
+      "at": [
+        133,
+        80
+      ],
+      "flip": false,
+      "ncc": 0.843804,
+      "inliers": 0.8502,
+      "area": 474,
+      "depth": true
+    }
+  ],
+  "sheltergate": [
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        340,
+        224,
+        87,
+        31
+      ],
+      "at": [
+        28,
+        172
+      ],
+      "flip": false,
+      "ncc": 0.875244,
+      "inliers": 0.8873,
+      "area": 1873,
+      "depth": true
+    }
+  ],
+  "face": [
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        324,
+        452,
+        24,
+        24
+      ],
+      "at": [
+        133,
+        34
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 312,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        38,
+        102,
+        22,
+        52
+      ],
+      "at": [
+        230,
+        134
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 346,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        393,
+        166,
+        16,
+        21
+      ],
+      "at": [
+        206,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 217,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        393,
+        166,
+        16,
+        21
+      ],
+      "at": [
+        54,
+        87
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 217,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        396,
+        192,
+        47,
+        31
+      ],
+      "at": [
+        135,
+        63
+      ],
+      "flip": false,
+      "ncc": 0.991406,
+      "inliers": 0.9883,
+      "area": 1023,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        340,
+        224,
+        87,
+        31
+      ],
+      "at": [
+        38,
+        151
+      ],
+      "flip": false,
+      "ncc": 0.917663,
+      "inliers": 0.9546,
+      "area": 1873,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        323,
+        262,
+        26,
+        21
+      ],
+      "at": [
+        19,
+        167
+      ],
+      "flip": false,
+      "ncc": 0.901508,
+      "inliers": 0.8889,
+      "area": 468,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        7,
+        35,
+        18,
+        27
+      ],
+      "at": [
+        238,
+        17
+      ],
+      "flip": false,
+      "ncc": 0.886391,
+      "inliers": 0.9018,
+      "area": 448,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        387,
+        262,
+        26,
+        21
+      ],
+      "at": [
+        181,
+        5
+      ],
+      "flip": false,
+      "ncc": 0.883036,
+      "inliers": 0.8718,
+      "area": 468,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        326,
+        192,
+        47,
+        31
+      ],
+      "at": [
+        31,
+        63
+      ],
+      "flip": false,
+      "ncc": 0.870222,
+      "inliers": 0.9189,
+      "area": 1023,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        361,
+        166,
+        16,
+        24
+      ],
+      "at": [
+        170,
+        61
+      ],
+      "flip": false,
+      "ncc": 0.852541,
+      "inliers": 0.9242,
+      "area": 277,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_exterior.png",
+      "rect": [
+        417,
+        169,
+        31,
+        15
+      ],
+      "at": [
+        64,
+        90
+      ],
+      "flip": false,
+      "ncc": 0.839786,
+      "inliers": 0.9305,
+      "area": 331,
+      "depth": false
+    }
+  ],
+  "common": [
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        50,
+        101,
+        13,
+        18
+      ],
+      "at": [
+        68,
+        50
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 152,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        50,
+        101,
+        13,
+        18
+      ],
+      "at": [
+        42,
+        50
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 152,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        50,
+        101,
+        13,
+        18
+      ],
+      "at": [
+        55,
+        50
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 152,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        7,
+        102,
+        18,
+        19
+      ],
+      "at": [
+        54,
+        9
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 256,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        64,
+        130,
+        48,
+        12
+      ],
+      "at": [
+        71,
+        19
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 96,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        64,
+        130,
+        48,
+        12
+      ],
+      "at": [
+        6,
+        20
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 96,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        113,
+        139,
+        14,
+        19
+      ],
+      "at": [
+        94,
+        68
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 190,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        49,
+        177,
+        13,
+        14
+      ],
+      "at": [
+        33,
+        111
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 178,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        113,
+        178,
+        15,
+        14
+      ],
+      "at": [
+        65,
+        33
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 118,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        65,
+        180,
+        15,
+        11
+      ],
+      "at": [
+        17,
+        117
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 161,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        81,
+        305,
+        14,
+        13
+      ],
+      "at": [
+        56,
+        88
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 134,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        7,
+        47,
+        20,
+        16
+      ],
+      "at": [
+        83,
+        105
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 272,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        214,
+        97,
+        35,
+        79
+      ],
+      "at": [
+        8,
+        34
+      ],
+      "flip": false,
+      "ncc": 0.920007,
+      "inliers": 0.9492,
+      "area": 1555,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        1,
+        172,
+        14,
+        19
+      ],
+      "at": [
+        9,
+        103
+      ],
+      "flip": false,
+      "ncc": 0.913029,
+      "inliers": 0.9008,
+      "area": 262,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        386,
+        273,
+        11,
+        13
+      ],
+      "at": [
+        53,
+        35
+      ],
+      "flip": false,
+      "ncc": 0.882135,
+      "inliers": 0.9545,
+      "area": 132,
+      "depth": false
+    }
+  ],
+  "study": [
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        514,
+        102,
+        11,
+        22
+      ],
+      "at": [
+        84,
+        23
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 232,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        545,
+        102,
+        11,
+        22
+      ],
+      "at": [
+        117,
+        23
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 232,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        422,
+        146,
+        21,
+        14
+      ],
+      "at": [
+        16,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 253,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        546,
+        178,
+        13,
+        13
+      ],
+      "at": [
+        90,
+        115
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 121,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        416,
+        180,
+        16,
+        12
+      ],
+      "at": [
+        111,
+        135
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 133,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        4,
+        257,
+        20,
+        27
+      ],
+      "at": [
+        34,
+        72
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 400,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        384,
+        259,
+        16,
+        29
+      ],
+      "at": [
+        66,
+        53
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 319,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        194,
+        261,
+        18,
+        27
+      ],
+      "at": [
+        38,
+        11
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 486,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        236,
+        261,
+        18,
+        27
+      ],
+      "at": [
+        17,
+        15
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 486,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        257,
+        269,
+        15,
+        19
+      ],
+      "at": [
+        99,
+        39
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 155,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        416,
+        299,
+        31,
+        53
+      ],
+      "at": [
+        7,
+        104
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 869,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        449,
+        326,
+        14,
+        26
+      ],
+      "at": [
+        30,
+        139
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 254,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        527,
+        102,
+        16,
+        22
+      ],
+      "at": [
+        98,
+        23
+      ],
+      "flip": false,
+      "ncc": 0.873522,
+      "inliers": 0.9554,
+      "area": 336,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        3,
+        97,
+        42,
+        31
+      ],
+      "at": [
+        85,
+        50
+      ],
+      "flip": false,
+      "ncc": 0.868117,
+      "inliers": 0.9197,
+      "area": 1170,
+      "depth": true
+    }
+  ],
+  "sparebedroom": [
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        514,
+        146,
+        13,
+        13
+      ],
+      "at": [
+        73,
+        65
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 121,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        512,
+        241,
+        16,
+        15
+      ],
+      "at": [
+        56,
+        61
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 184,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        98,
+        267,
+        12,
+        21
+      ],
+      "at": [
+        27,
+        39
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 198,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        352,
+        267,
+        20,
+        21
+      ],
+      "at": [
+        113,
+        119
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        290,
+        273,
+        12,
+        15
+      ],
+      "at": [
+        100,
+        133
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 119,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        320,
+        275,
+        16,
+        13
+      ],
+      "at": [
+        9,
+        143
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 130,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        449,
+        326,
+        14,
+        26
+      ],
+      "at": [
+        8,
+        58
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 254,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        163,
+        27,
+        28,
+        36
+      ],
+      "at": [
+        11,
+        110
+      ],
+      "flip": true,
+      "ncc": 0.993911,
+      "inliers": 0.997,
+      "area": 661,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        416,
+        180,
+        16,
+        12
+      ],
+      "at": [
+        23,
+        144
+      ],
+      "flip": true,
+      "ncc": 0.962825,
+      "inliers": 0.985,
+      "area": 133,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        355,
+        227,
+        42,
+        26
+      ],
+      "at": [
+        51,
+        17
+      ],
+      "flip": false,
+      "ncc": 0.959716,
+      "inliers": 0.957,
+      "area": 1092,
+      "depth": false
+    }
+  ],
+  "parlour": [
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        227,
+        34,
+        26,
+        29
+      ],
+      "at": [
+        29,
+        170
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 606,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        514,
+        146,
+        13,
+        13
+      ],
+      "at": [
+        33,
+        127
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 121,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        416,
+        180,
+        16,
+        12
+      ],
+      "at": [
+        142,
+        163
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 133,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        353,
+        194,
+        29,
+        29
+      ],
+      "at": [
+        109,
+        10
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 293,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        545,
+        210,
+        13,
+        13
+      ],
+      "at": [
+        36,
+        60
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 121,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        194,
+        261,
+        18,
+        27
+      ],
+      "at": [
+        24,
+        16
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 486,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        215,
+        261,
+        18,
+        27
+      ],
+      "at": [
+        49,
+        16
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 486,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        236,
+        261,
+        18,
+        27
+      ],
+      "at": [
+        74,
+        16
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 486,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        162,
+        267,
+        12,
+        21
+      ],
+      "at": [
+        14,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 198,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        512,
+        273,
+        16,
+        15
+      ],
+      "at": [
+        64,
+        58
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 184,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        320,
+        275,
+        16,
+        13
+      ],
+      "at": [
+        107,
+        42
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 130,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        416,
+        299,
+        31,
+        53
+      ],
+      "at": [
+        136,
+        30
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 869,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        167,
+        320,
+        18,
+        25
+      ],
+      "at": [
+        118,
+        138
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 336,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        449,
+        326,
+        14,
+        26
+      ],
+      "at": [
+        105,
+        173
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 254,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        455,
+        419,
+        17,
+        61
+      ],
+      "at": [
+        5,
+        138
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 931,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        257,
+        269,
+        15,
+        19
+      ],
+      "at": [
+        50,
+        80
+      ],
+      "flip": false,
+      "ncc": 0.992139,
+      "inliers": 0.9032,
+      "area": 155,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        225,
+        155,
+        38,
+        35
+      ],
+      "at": [
+        104,
+        49
+      ],
+      "flip": false,
+      "ncc": 0.878051,
+      "inliers": 0.9531,
+      "area": 1088,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        0,
+        309,
+        32,
+        42
+      ],
+      "at": [
+        111,
+        114
+      ],
+      "flip": false,
+      "ncc": 0.874437,
+      "inliers": 0.9157,
+      "area": 1068,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        384,
+        101,
+        16,
+        26
+      ],
+      "at": [
+        12,
+        59
+      ],
+      "flip": false,
+      "ncc": 0.872212,
+      "inliers": 0.8533,
+      "area": 300,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        67,
+        97,
+        42,
+        31
+      ],
+      "at": [
+        121,
+        168
+      ],
+      "flip": false,
+      "ncc": 0.829634,
+      "inliers": 0.9188,
+      "area": 1170,
+      "depth": true
+    }
+  ],
+  "projection": [
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        6,
+        139,
+        36,
+        51
+      ],
+      "at": [
+        42,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1232,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        195,
+        163,
+        26,
+        26
+      ],
+      "at": [
+        58,
+        100
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 518,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        384,
+        197,
+        32,
+        24
+      ],
+      "at": [
+        43,
+        16
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 768,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        416,
+        229,
+        32,
+        59
+      ],
+      "at": [
+        101,
+        97
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 956,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        384,
+        259,
+        16,
+        29
+      ],
+      "at": [
+        94,
+        136
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 319,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        97,
+        373,
+        44,
+        74
+      ],
+      "at": [
+        87,
+        11
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2627,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        388,
+        433,
+        40,
+        46
+      ],
+      "at": [
+        5,
+        121
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1344,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        420,
+        84,
+        25,
+        43
+      ],
+      "at": [
+        10,
+        35
+      ],
+      "flip": false,
+      "ncc": 0.978472,
+      "inliers": 0.9951,
+      "area": 613,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        384,
+        101,
+        16,
+        26
+      ],
+      "at": [
+        25,
+        82
+      ],
+      "flip": false,
+      "ncc": 0.868826,
+      "inliers": 0.9433,
+      "area": 300,
+      "depth": true
+    }
+  ],
+  "winter": [
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        259,
+        27,
+        28,
+        36
+      ],
+      "at": [
+        65,
+        107
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 661,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        514,
+        146,
+        13,
+        13
+      ],
+      "at": [
+        19,
+        106
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 121,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        353,
+        194,
+        29,
+        29
+      ],
+      "at": [
+        75,
+        18
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 293,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        384,
+        259,
+        16,
+        29
+      ],
+      "at": [
+        10,
+        138
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 319,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        236,
+        261,
+        18,
+        27
+      ],
+      "at": [
+        49,
+        22
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 486,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        257,
+        269,
+        15,
+        19
+      ],
+      "at": [
+        73,
+        42
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 155,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        75,
+        210,
+        74,
+        13
+      ],
+      "at": [
+        53,
+        9
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 446,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        33,
+        225,
+        13,
+        30
+      ],
+      "at": [
+        118,
+        33
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 247,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        7,
+        230,
+        18,
+        19
+      ],
+      "at": [
+        19,
+        22
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 256,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        113,
+        256,
+        15,
+        16
+      ],
+      "at": [
+        42,
+        94
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 124,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        49,
+        273,
+        13,
+        14
+      ],
+      "at": [
+        109,
+        151
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 178,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        82,
+        273,
+        21,
+        14
+      ],
+      "at": [
+        89,
+        146
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 290,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        214,
+        178,
+        35,
+        78
+      ],
+      "at": [
+        94,
+        72
+      ],
+      "flip": true,
+      "ncc": 0.982284,
+      "inliers": 0.9902,
+      "area": 1532,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        20,
+        268,
+        9,
+        19
+      ],
+      "at": [
+        119,
+        140
+      ],
+      "flip": false,
+      "ncc": 0.854643,
+      "inliers": 0.8922,
+      "area": 167,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        387,
+        338,
+        10,
+        14
+      ],
+      "at": [
+        98,
+        46
+      ],
+      "flip": false,
+      "ncc": 0.837873,
+      "inliers": 0.8462,
+      "area": 104,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/midcentury_modern_furnitureset.png",
+      "rect": [
+        327,
+        425,
+        25,
+        53
+      ],
+      "at": [
+        10,
+        95
+      ],
+      "flip": true,
+      "ncc": 0.765358,
+      "inliers": 0.761029,
+      "area": 1088,
+      "review": "Verified white armchair silhouette at native coordinates; cushion and plant cover part of the source.",
+      "depth": true
+    }
+  ],
+  "dig4": [
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        274,
+        321,
+        12,
+        14
+      ],
+      "at": [
+        19,
+        127
+      ],
+      "flip": false,
+      "ncc": 0.999063,
+      "inliers": 0.9606,
+      "area": 127,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        50,
+        101,
+        13,
+        18
+      ],
+      "at": [
+        78,
+        57
+      ],
+      "flip": false,
+      "ncc": 0.998931,
+      "inliers": 0.9474,
+      "area": 152,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        35,
+        176,
+        10,
+        15
+      ],
+      "at": [
+        12,
+        98
+      ],
+      "flip": false,
+      "ncc": 0.997396,
+      "inliers": 0.9589,
+      "area": 146,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        339,
+        120,
+        25,
+        55
+      ],
+      "at": [
+        13,
+        48
+      ],
+      "flip": false,
+      "ncc": 0.996205,
+      "inliers": 0.9698,
+      "area": 729,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        153,
+        305,
+        14,
+        13
+      ],
+      "at": [
+        70,
+        119
+      ],
+      "flip": false,
+      "ncc": 0.903611,
+      "inliers": 0.8582,
+      "area": 134,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Xmas/Xmas_Decorations.png",
+      "rect": [
+        64,
+        130,
+        48,
+        12
+      ],
+      "at": [
+        63,
+        21
+      ],
+      "flip": false,
+      "ncc": 0.852762,
+      "inliers": 0.875,
+      "area": 96,
+      "depth": false
+    }
+  ],
+  "library": [
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        134,
+        67,
+        20,
+        24
+      ],
+      "at": [
+        56,
+        15
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 392,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        167,
+        69,
+        18,
+        22
+      ],
+      "at": [
+        82,
+        21
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 396,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        323,
+        83,
+        9,
+        13
+      ],
+      "at": [
+        56,
+        47
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 115,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        355,
+        83,
+        9,
+        13
+      ],
+      "at": [
+        12,
+        144
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 115,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        195,
+        114,
+        10,
+        13
+      ],
+      "at": [
+        75,
+        51
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 126,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        358,
+        137,
+        20,
+        23
+      ],
+      "at": [
+        70,
+        69
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 348,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        164,
+        259,
+        40,
+        61
+      ],
+      "at": [
+        8,
+        23
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2284,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        323,
+        288,
+        53,
+        32
+      ],
+      "at": [
+        5,
+        111
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1206,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        6,
+        327,
+        20,
+        56
+      ],
+      "at": [
+        112,
+        26
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 962,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        35,
+        347,
+        26,
+        36
+      ],
+      "at": [
+        106,
+        128
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 666,
+      "depth": true
+    }
+  ],
+  "grandbedroom": [
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        260,
+        65,
+        24,
+        31
+      ],
+      "at": [
+        10,
+        12
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 740,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        292,
+        65,
+        24,
+        31
+      ],
+      "at": [
+        106,
+        12
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 740,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        70,
+        72,
+        20,
+        24
+      ],
+      "at": [
+        7,
+        113
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 278,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        326,
+        114,
+        19,
+        13
+      ],
+      "at": [
+        26,
+        126
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 238,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        385,
+        226,
+        14,
+        22
+      ],
+      "at": [
+        119,
+        129
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 230,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        3,
+        403,
+        58,
+        77
+      ],
+      "at": [
+        41,
+        41
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 3910,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        102,
+        359,
+        20,
+        24
+      ],
+      "at": [
+        103,
+        58
+      ],
+      "flip": false,
+      "ncc": 0.826143,
+      "inliers": 0.8973,
+      "area": 448,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        102,
+        359,
+        20,
+        24
+      ],
+      "at": [
+        17,
+        58
+      ],
+      "flip": false,
+      "ncc": 0.826143,
+      "inliers": 0.8973,
+      "area": 448,
+      "depth": true
+    }
+  ],
+  "salon": [
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        162,
+        19,
+        27,
+        45
+      ],
+      "at": [
+        198,
+        78
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 830,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        7,
+        47,
+        20,
+        16
+      ],
+      "at": [
+        172,
+        118
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 272,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        192,
+        66,
+        32,
+        28
+      ],
+      "at": [
+        154,
+        12
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 756,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        134,
+        67,
+        20,
+        24
+      ],
+      "at": [
+        127,
+        18
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 392,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        167,
+        69,
+        18,
+        22
+      ],
+      "at": [
+        32,
+        13
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 396,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        70,
+        72,
+        20,
+        24
+      ],
+      "at": [
+        201,
+        30
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 278,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        96,
+        76,
+        16,
+        20
+      ],
+      "at": [
+        12,
+        29
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 207,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        36,
+        80,
+        8,
+        16
+      ],
+      "at": [
+        49,
+        120
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 82,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        36,
+        80,
+        8,
+        16
+      ],
+      "at": [
+        49,
+        103
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 82,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        355,
+        83,
+        9,
+        13
+      ],
+      "at": [
+        5,
+        131
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 115,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        264,
+        123,
+        16,
+        27
+      ],
+      "at": [
+        45,
+        140
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 338,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        369,
+        171,
+        15,
+        53
+      ],
+      "at": [
+        104,
+        146
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 751,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        1,
+        181,
+        62,
+        43
+      ],
+      "at": [
+        130,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2050,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        321,
+        226,
+        14,
+        21
+      ],
+      "at": [
+        110,
+        43
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 228,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        385,
+        226,
+        14,
+        22
+      ],
+      "at": [
+        191,
+        161
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 230,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        304,
+        251,
+        16,
+        69
+      ],
+      "at": [
+        215,
+        130
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1096,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        4,
+        252,
+        40,
+        68
+      ],
+      "at": [
+        56,
+        14
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2492,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        353,
+        258,
+        14,
+        21
+      ],
+      "at": [
+        128,
+        162
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 228,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        96,
+        336,
+        8,
+        15
+      ],
+      "at": [
+        69,
+        173
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        326,
+        354,
+        36,
+        29
+      ],
+      "at": [
+        193,
+        48
+      ],
+      "flip": false,
+      "ncc": 0.860926,
+      "inliers": 0.9211,
+      "area": 608,
+      "depth": true
+    }
+  ],
+  "hearth": [
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        97,
+        22,
+        30,
+        42
+      ],
+      "at": [
+        42,
+        86
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1054,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        355,
+        83,
+        9,
+        13
+      ],
+      "at": [
+        11,
+        119
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 115,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        321,
+        226,
+        14,
+        21
+      ],
+      "at": [
+        109,
+        55
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 228,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        353,
+        226,
+        14,
+        21
+      ],
+      "at": [
+        151,
+        178
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 228,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        385,
+        226,
+        14,
+        22
+      ],
+      "at": [
+        7,
+        177
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 230,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        4,
+        252,
+        40,
+        68
+      ],
+      "at": [
+        8,
+        15
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2492,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        4,
+        252,
+        40,
+        68
+      ],
+      "at": [
+        124,
+        15
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2492,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        67,
+        331,
+        26,
+        52
+      ],
+      "at": [
+        136,
+        94
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1028,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        97,
+        22,
+        30,
+        42
+      ],
+      "at": [
+        101,
+        87
+      ],
+      "flip": false,
+      "ncc": 0.99997,
+      "inliers": 1.0,
+      "area": 1054,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        225,
+        68,
+        30,
+        24
+      ],
+      "at": [
+        71,
+        13
+      ],
+      "flip": false,
+      "ncc": 0.996681,
+      "inliers": 0.9902,
+      "area": 716,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        2,
+        74,
+        12,
+        21
+      ],
+      "at": [
+        52,
+        22
+      ],
+      "flip": false,
+      "ncc": 0.979324,
+      "inliers": 0.9351,
+      "area": 154,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        2,
+        74,
+        12,
+        21
+      ],
+      "at": [
+        108,
+        22
+      ],
+      "flip": false,
+      "ncc": 0.972449,
+      "inliers": 0.9091,
+      "area": 154,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        70,
+        72,
+        20,
+        24
+      ],
+      "at": [
+        124,
+        163
+      ],
+      "flip": false,
+      "ncc": 0.961886,
+      "inliers": 0.8561,
+      "area": 278,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        70,
+        72,
+        20,
+        24
+      ],
+      "at": [
+        28,
+        163
+      ],
+      "flip": false,
+      "ncc": 0.958876,
+      "inliers": 0.8489,
+      "area": 278,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/FancyMansion_Furniture/fancy_mansion_furnitureset.png",
+      "rect": [
+        259,
+        343,
+        42,
+        40
+      ],
+      "at": [
+        65,
+        40
+      ],
+      "flip": false,
+      "ncc": 0.882934,
+      "inliers": 0.8914,
+      "area": 1612,
+      "depth": true
+    }
+  ],
+  "maindiner": [
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        80,
+        32,
+        16,
+        29
+      ],
+      "at": [
+        102,
+        163
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 362,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        7,
+        73,
+        24,
+        54
+      ],
+      "at": [
+        205,
+        82
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1129,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        7,
+        73,
+        24,
+        54
+      ],
+      "at": [
+        205,
+        145
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1129,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        7,
+        73,
+        24,
+        54
+      ],
+      "at": [
+        150,
+        82
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1129,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        7,
+        73,
+        24,
+        54
+      ],
+      "at": [
+        150,
+        145
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1129,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        97,
+        14,
+        27
+      ],
+      "at": [
+        15,
+        148
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        97,
+        14,
+        27
+      ],
+      "at": [
+        39,
+        148
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        97,
+        14,
+        27
+      ],
+      "at": [
+        67,
+        119
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        97,
+        14,
+        27
+      ],
+      "at": [
+        67,
+        57
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        97,
+        14,
+        27
+      ],
+      "at": [
+        67,
+        87
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        357,
+        224,
+        22,
+        31
+      ],
+      "at": [
+        67,
+        11
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 678,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        390,
+        292,
+        20,
+        25
+      ],
+      "at": [
+        38,
+        12
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 496,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        358,
+        320,
+        21,
+        15
+      ],
+      "at": [
+        184,
+        14
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 311,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        389,
+        322,
+        22,
+        28
+      ],
+      "at": [
+        172,
+        31
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 612,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        226,
+        386,
+        28,
+        29
+      ],
+      "at": [
+        8,
+        30
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 734,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        67,
+        402,
+        26,
+        44
+      ],
+      "at": [
+        200,
+        34
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 972,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        292,
+        417,
+        8,
+        15
+      ],
+      "at": [
+        187,
+        148
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 91,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        180,
+        426,
+        8,
+        20
+      ],
+      "at": [
+        49,
+        103
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 125,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        257,
+        432,
+        14,
+        14
+      ],
+      "at": [
+        183,
+        167
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 140,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        324,
+        433,
+        8,
+        14
+      ],
+      "at": [
+        9,
+        116
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        371,
+        433,
+        9,
+        14
+      ],
+      "at": [
+        185,
+        84
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 122,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        291,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        50,
+        40
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        291,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        38,
+        41
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        307,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        187,
+        102
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    }
+  ],
+  "sodabar": [
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        225,
+        14,
+        27
+      ],
+      "at": [
+        99,
+        135
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        225,
+        14,
+        27
+      ],
+      "at": [
+        147,
+        135
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        423,
+        231,
+        17,
+        17
+      ],
+      "at": [
+        49,
+        11
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 221,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        387,
+        240,
+        26,
+        15
+      ],
+      "at": [
+        70,
+        9
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 386,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        16,
+        281,
+        16,
+        35
+      ],
+      "at": [
+        61,
+        162
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 327,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        16,
+        281,
+        16,
+        35
+      ],
+      "at": [
+        15,
+        162
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 327,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        358,
+        292,
+        20,
+        25
+      ],
+      "at": [
+        90,
+        26
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 496,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        353,
+        14,
+        27
+      ],
+      "at": [
+        124,
+        135
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 248,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        353,
+        353,
+        14,
+        14
+      ],
+      "at": [
+        12,
+        12
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 144,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        369,
+        353,
+        14,
+        14
+      ],
+      "at": [
+        29,
+        22
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 144,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        401,
+        354,
+        9,
+        13
+      ],
+      "at": [
+        129,
+        13
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 82,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        420,
+        354,
+        9,
+        13
+      ],
+      "at": [
+        148,
+        13
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 83,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        165,
+        390,
+        8,
+        23
+      ],
+      "at": [
+        126,
+        92
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 114,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        165,
+        390,
+        8,
+        23
+      ],
+      "at": [
+        114,
+        92
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 114,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        44,
+        401,
+        19,
+        46
+      ],
+      "at": [
+        5,
+        114
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 789,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        129,
+        416,
+        13,
+        31
+      ],
+      "at": [
+        152,
+        31
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 247,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        354,
+        417,
+        12,
+        14
+      ],
+      "at": [
+        138,
+        109
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 113,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        196,
+        426,
+        8,
+        20
+      ],
+      "at": [
+        100,
+        102
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 125,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        212,
+        426,
+        8,
+        20
+      ],
+      "at": [
+        143,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 125,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        257,
+        432,
+        14,
+        14
+      ],
+      "at": [
+        14,
+        78
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 140,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        324,
+        433,
+        8,
+        14
+      ],
+      "at": [
+        101,
+        56
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        324,
+        433,
+        8,
+        14
+      ],
+      "at": [
+        92,
+        53
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        371,
+        433,
+        9,
+        14
+      ],
+      "at": [
+        67,
+        39
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 122,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        291,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        127,
+        53
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        307,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        152,
+        105
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        307,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        36,
+        160
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    }
+  ],
+  "servicecounter": [
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        80,
+        160,
+        16,
+        29
+      ],
+      "at": [
+        10,
+        127
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 362,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        80,
+        160,
+        16,
+        29
+      ],
+      "at": [
+        65,
+        122
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 362,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        80,
+        160,
+        16,
+        29
+      ],
+      "at": [
+        89,
+        125
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 362,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        80,
+        160,
+        16,
+        29
+      ],
+      "at": [
+        113,
+        122
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 362,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        358,
+        261,
+        84,
+        23
+      ],
+      "at": [
+        48,
+        8
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1928,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        322,
+        385,
+        29,
+        30
+      ],
+      "at": [
+        86,
+        33
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 860,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        292,
+        417,
+        8,
+        15
+      ],
+      "at": [
+        18,
+        108
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 91,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        324,
+        433,
+        8,
+        14
+      ],
+      "at": [
+        75,
+        43
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        307,
+        434,
+        11,
+        11
+      ],
+      "at": [
+        64,
+        100
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/50s_Diner/50sdiner_set.png",
+      "rect": [
+        387,
+        224,
+        26,
+        15
+      ],
+      "at": [
+        54,
+        33
+      ],
+      "flip": false,
+      "ncc": 0.938631,
+      "inliers": 0.9508,
+      "area": 386,
+      "depth": false
+    }
+  ],
+  "maintenance": [
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        132,
+        274,
+        9,
+        12
+      ],
+      "at": [
+        189,
+        37
+      ],
+      "flip": false,
+      "ncc": 0.995949,
+      "inliers": 0.8617,
+      "area": 94,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        82,
+        416,
+        12,
+        14
+      ],
+      "at": [
+        111,
+        42
+      ],
+      "flip": false,
+      "ncc": 0.99501,
+      "inliers": 0.9697,
+      "area": 132,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        181,
+        193,
+        7,
+        15
+      ],
+      "at": [
+        192,
+        16
+      ],
+      "flip": false,
+      "ncc": 0.994991,
+      "inliers": 0.7634,
+      "area": 93,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        148,
+        211,
+        10,
+        13
+      ],
+      "at": [
+        169,
+        111
+      ],
+      "flip": false,
+      "ncc": 0.994267,
+      "inliers": 0.7412,
+      "area": 85,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        148,
+        161,
+        8,
+        14
+      ],
+      "at": [
+        255,
+        88
+      ],
+      "flip": false,
+      "ncc": 0.991686,
+      "inliers": 0.8333,
+      "area": 90,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        128,
+        172,
+        16,
+        19
+      ],
+      "at": [
+        132,
+        61
+      ],
+      "flip": false,
+      "ncc": 0.98599,
+      "inliers": 0.831,
+      "area": 290,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        212,
+        226,
+        8,
+        12
+      ],
+      "at": [
+        262,
+        133
+      ],
+      "flip": false,
+      "ncc": 0.976544,
+      "inliers": 0.9048,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        146,
+        403,
+        12,
+        13
+      ],
+      "at": [
+        111,
+        46
+      ],
+      "flip": false,
+      "ncc": 0.92524,
+      "inliers": 0.8828,
+      "area": 128,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        176,
+        161,
+        16,
+        15
+      ],
+      "at": [
+        166,
+        35
+      ],
+      "flip": false,
+      "ncc": 0.8662,
+      "inliers": 0.7778,
+      "area": 225,
+      "depth": false
+    }
+  ],
+  "workshops": [
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        194,
+        130,
+        43,
+        30
+      ],
+      "at": [
+        88,
+        52
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1276,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        39,
+        179,
+        21,
+        42
+      ],
+      "at": [
+        128,
+        162
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 657,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        161,
+        209,
+        14,
+        14
+      ],
+      "at": [
+        77,
+        84
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 192,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        164,
+        226,
+        8,
+        12
+      ],
+      "at": [
+        201,
+        160
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        212,
+        226,
+        8,
+        12
+      ],
+      "at": [
+        42,
+        65
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        164,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        216,
+        71
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        180,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        51,
+        62
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        148,
+        259,
+        9,
+        12
+      ],
+      "at": [
+        14,
+        153
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 94,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        148,
+        259,
+        9,
+        12
+      ],
+      "at": [
+        198,
+        173
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 94,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        465,
+        261,
+        14,
+        20
+      ],
+      "at": [
+        143,
+        36
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 277,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        452,
+        264,
+        10,
+        22
+      ],
+      "at": [
+        145,
+        59
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 162,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        144,
+        288,
+        16,
+        16
+      ],
+      "at": [
+        183,
+        166
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 193,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        37,
+        293,
+        6,
+        21
+      ],
+      "at": [
+        167,
+        158
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 117,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        131,
+        352,
+        10,
+        14
+      ],
+      "at": [
+        144,
+        12
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 88,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        241,
+        385,
+        46,
+        30
+      ],
+      "at": [
+        38,
+        172
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1376,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        465,
+        388,
+        14,
+        21
+      ],
+      "at": [
+        70,
+        59
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 293,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        67,
+        416,
+        10,
+        14
+      ],
+      "at": [
+        12,
+        62
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 104,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        67,
+        416,
+        10,
+        14
+      ],
+      "at": [
+        225,
+        45
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 104,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        82,
+        416,
+        12,
+        14
+      ],
+      "at": [
+        15,
+        77
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 132,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        96,
+        419,
+        13,
+        10
+      ],
+      "at": [
+        9,
+        66
+      ],
+      "flip": false,
+      "ncc": 0.933483,
+      "inliers": 0.86,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        96,
+        419,
+        13,
+        10
+      ],
+      "at": [
+        225,
+        49
+      ],
+      "flip": true,
+      "ncc": 0.906002,
+      "inliers": 0.88,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        146,
+        403,
+        12,
+        13
+      ],
+      "at": [
+        15,
+        81
+      ],
+      "flip": false,
+      "ncc": 0.904547,
+      "inliers": 0.8906,
+      "area": 128,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        96,
+        419,
+        13,
+        10
+      ],
+      "at": [
+        12,
+        66
+      ],
+      "flip": true,
+      "ncc": 0.89327,
+      "inliers": 0.86,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        450,
+        327,
+        29,
+        54
+      ],
+      "at": [
+        34,
+        68
+      ],
+      "flip": false,
+      "ncc": 0.881486,
+      "inliers": 0.9103,
+      "area": 1516,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        128,
+        204,
+        16,
+        19
+      ],
+      "at": [
+        12,
+        130
+      ],
+      "flip": false,
+      "ncc": 0.874436,
+      "inliers": 0.9241,
+      "area": 290,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        96,
+        419,
+        13,
+        10
+      ],
+      "at": [
+        222,
+        49
+      ],
+      "flip": false,
+      "ncc": 0.874223,
+      "inliers": 0.86,
+      "area": 100,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        128,
+        172,
+        16,
+        19
+      ],
+      "at": [
+        216,
+        187
+      ],
+      "flip": false,
+      "ncc": 0.873423,
+      "inliers": 0.9172,
+      "area": 290,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        16,
+        289,
+        16,
+        30
+      ],
+      "at": [
+        154,
+        154
+      ],
+      "flip": false,
+      "ncc": 0.82273,
+      "inliers": 0.9076,
+      "area": 433,
+      "depth": true
+    }
+  ],
+  "yard": [
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        148,
+        161,
+        8,
+        14
+      ],
+      "at": [
+        68,
+        49
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 90,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        161,
+        193,
+        14,
+        14
+      ],
+      "at": [
+        52,
+        49
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 192,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        180,
+        226,
+        8,
+        12
+      ],
+      "at": [
+        76,
+        34
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        212,
+        226,
+        8,
+        12
+      ],
+      "at": [
+        72,
+        17
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        68,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        51,
+        15
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        68,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        30,
+        60
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        144,
+        242,
+        14,
+        13
+      ],
+      "at": [
+        52,
+        34
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 86,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        164,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        67,
+        35
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        180,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        58,
+        18
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        433,
+        393,
+        13,
+        19
+      ],
+      "at": [
+        32,
+        120
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 245,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        16,
+        289,
+        16,
+        30
+      ],
+      "at": [
+        45,
+        79
+      ],
+      "flip": false,
+      "ncc": 0.982081,
+      "inliers": 0.9815,
+      "area": 433,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        16,
+        226,
+        16,
+        29
+      ],
+      "at": [
+        12,
+        44
+      ],
+      "flip": false,
+      "ncc": 0.97849,
+      "inliers": 0.9802,
+      "area": 405,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        212,
+        226,
+        8,
+        12
+      ],
+      "at": [
+        5,
+        98
+      ],
+      "flip": false,
+      "ncc": 0.977289,
+      "inliers": 0.9762,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        355,
+        208,
+        26,
+        16
+      ],
+      "at": [
+        95,
+        88
+      ],
+      "flip": false,
+      "ncc": 0.97403,
+      "inliers": 0.9822,
+      "area": 394,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        163,
+        161,
+        11,
+        15
+      ],
+      "at": [
+        107,
+        68
+      ],
+      "flip": false,
+      "ncc": 0.969626,
+      "inliers": 0.9627,
+      "area": 161,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        6,
+        180,
+        21,
+        40
+      ],
+      "at": [
+        83,
+        54
+      ],
+      "flip": false,
+      "ncc": 0.93823,
+      "inliers": 0.9623,
+      "area": 610,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        193,
+        272,
+        30,
+        47
+      ],
+      "at": [
+        0,
+        124
+      ],
+      "flip": false,
+      "ncc": 0.917685,
+      "inliers": 0.9745,
+      "area": 1295,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        68,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        72,
+        68
+      ],
+      "flip": false,
+      "ncc": 0.916847,
+      "inliers": 0.8095,
+      "area": 84,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        39,
+        179,
+        21,
+        42
+      ],
+      "at": [
+        94,
+        30
+      ],
+      "flip": false,
+      "ncc": 0.890741,
+      "inliers": 0.8417,
+      "area": 657,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/workshop.png",
+      "rect": [
+        68,
+        242,
+        8,
+        12
+      ],
+      "at": [
+        27,
+        51
+      ],
+      "flip": false,
+      "ncc": 0.84171,
+      "inliers": 0.7738,
+      "area": 84,
+      "depth": false
+    }
+  ],
+  "kitchen": [
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        195,
+        4,
+        11,
+        11
+      ],
+      "at": [
+        138,
+        107
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 97,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        212,
+        13,
+        8,
+        18
+      ],
+      "at": [
+        96,
+        153
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 124,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        51,
+        18,
+        9,
+        12
+      ],
+      "at": [
+        10,
+        147
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 94,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        177,
+        18,
+        14,
+        13
+      ],
+      "at": [
+        140,
+        118
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 134,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        337,
+        32,
+        47,
+        32
+      ],
+      "at": [
+        10,
+        5
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1318,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        225,
+        82,
+        31,
+        78
+      ],
+      "at": [
+        132,
+        11
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 2100,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        198,
+        114,
+        25,
+        45
+      ],
+      "at": [
+        142,
+        154
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1085,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        33,
+        161,
+        14,
+        15
+      ],
+      "at": [
+        105,
+        153
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 158,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        1,
+        466,
+        47,
+        46
+      ],
+      "at": [
+        37,
+        97
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1861,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        81,
+        468,
+        31,
+        44
+      ],
+      "at": [
+        90,
+        99
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1215,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        321,
+        468,
+        47,
+        44
+      ],
+      "at": [
+        10,
+        44
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1984,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        161,
+        13,
+        14,
+        17
+      ],
+      "at": [
+        151,
+        105
+      ],
+      "flip": false,
+      "ncc": 0.895183,
+      "inliers": 0.9053,
+      "area": 190,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/kitchen.png",
+      "rect": [
+        51,
+        2,
+        9,
+        12
+      ],
+      "at": [
+        63,
+        155
+      ],
+      "flip": false,
+      "ncc": 0.89343,
+      "inliers": 0.9255,
+      "area": 94,
+      "depth": false
+    }
+  ],
+  "stalls": [
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        192,
+        33,
+        16,
+        31
+      ],
+      "at": [
+        5,
+        103
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 393,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        370,
+        64,
+        13,
+        31
+      ],
+      "at": [
+        90,
+        104
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 374,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        357,
+        135,
+        26,
+        23
+      ],
+      "at": [
+        66,
+        96
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 368,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        192,
+        33,
+        16,
+        31
+      ],
+      "at": [
+        5,
+        82
+      ],
+      "flip": false,
+      "ncc": 0.838151,
+      "inliers": 0.883,
+      "area": 393,
+      "depth": true
+    }
+  ],
+  "washroom": [
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        134,
+        32,
+        22,
+        31
+      ],
+      "at": [
+        75,
+        35
+      ],
+      "flip": false,
+      "ncc": 0.986579,
+      "inliers": 0.8837,
+      "area": 430,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        339,
+        172,
+        10,
+        18
+      ],
+      "at": [
+        72,
+        59
+      ],
+      "flip": false,
+      "ncc": 0.985375,
+      "inliers": 0.8889,
+      "area": 162,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        135,
+        6,
+        20,
+        23
+      ],
+      "at": [
+        76,
+        9
+      ],
+      "flip": false,
+      "ncc": 0.98004,
+      "inliers": 0.7018,
+      "area": 456,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        192,
+        33,
+        16,
+        31
+      ],
+      "at": [
+        5,
+        78
+      ],
+      "flip": false,
+      "ncc": 0.971524,
+      "inliers": 0.855,
+      "area": 393,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        338,
+        65,
+        13,
+        30
+      ],
+      "at": [
+        122,
+        105
+      ],
+      "flip": false,
+      "ncc": 0.964766,
+      "inliers": 0.9096,
+      "area": 365,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        370,
+        64,
+        13,
+        31
+      ],
+      "at": [
+        5,
+        104
+      ],
+      "flip": true,
+      "ncc": 0.858058,
+      "inliers": 0.8342,
+      "area": 374,
+      "depth": true
+    }
+  ],
+  "infirmary": [
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        422,
+        97,
+        20,
+        29
+      ],
+      "at": [
+        47,
+        19
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 540,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        326,
+        101,
+        20,
+        56
+      ],
+      "at": [
+        17,
+        36
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1092,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        298,
+        167,
+        12,
+        23
+      ],
+      "at": [
+        101,
+        174
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 224,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        268,
+        170,
+        8,
+        20
+      ],
+      "at": [
+        18,
+        141
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 136,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        268,
+        170,
+        8,
+        20
+      ],
+      "at": [
+        97,
+        24
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 136,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        268,
+        170,
+        8,
+        20
+      ],
+      "at": [
+        117,
+        162
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 136,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        268,
+        170,
+        8,
+        20
+      ],
+      "at": [
+        108,
+        23
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 136,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        268,
+        170,
+        8,
+        20
+      ],
+      "at": [
+        109,
+        152
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 136,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        72,
+        192,
+        16,
+        31
+      ],
+      "at": [
+        115,
+        69
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 424,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        266,
+        205,
+        12,
+        17
+      ],
+      "at": [
+        78,
+        27
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 176,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        266,
+        205,
+        12,
+        17
+      ],
+      "at": [
+        116,
+        184
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 176,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        266,
+        205,
+        12,
+        17
+      ],
+      "at": [
+        130,
+        188
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 176,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        266,
+        205,
+        12,
+        17
+      ],
+      "at": [
+        129,
+        170
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 176,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        297,
+        233,
+        16,
+        13
+      ],
+      "at": [
+        118,
+        128
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 204,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        136,
+        282,
+        16,
+        31
+      ],
+      "at": [
+        48,
+        158
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 390,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        225,
+        282,
+        30,
+        37
+      ],
+      "at": [
+        42,
+        128
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 854,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        297,
+        201,
+        14,
+        21
+      ],
+      "at": [
+        99,
+        141
+      ],
+      "flip": false,
+      "ncc": 0.862662,
+      "inliers": 0.9173,
+      "area": 266,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        266,
+        205,
+        12,
+        17
+      ],
+      "at": [
+        127,
+        156
+      ],
+      "flip": false,
+      "ncc": 0.829116,
+      "inliers": 0.9205,
+      "area": 176,
+      "depth": true
+    }
+  ],
+  "well": [
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        134,
+        32,
+        22,
+        31
+      ],
+      "at": [
+        127,
+        60
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 430,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        352,
+        65,
+        16,
+        30
+      ],
+      "at": [
+        132,
+        112
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 446,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        224,
+        66,
+        16,
+        19
+      ],
+      "at": [
+        35,
+        46
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 245,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        320,
+        68,
+        16,
+        27
+      ],
+      "at": [
+        113,
+        115
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 419,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        135,
+        86,
+        17,
+        41
+      ],
+      "at": [
+        34,
+        67
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 485,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        354,
+        105,
+        12,
+        22
+      ],
+      "at": [
+        93,
+        107
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 220,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        321,
+        130,
+        15,
+        21
+      ],
+      "at": [
+        104,
+        31
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 311,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        356,
+        225,
+        10,
+        15
+      ],
+      "at": [
+        116,
+        59
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 136,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Public_Bathroom/dirty_publicbathroom_set.png",
+      "rect": [
+        196,
+        265,
+        27,
+        22
+      ],
+      "at": [
+        127,
+        34
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 219,
+      "depth": false
+    }
+  ],
+  "garden": [
+    {
+      "file": "public/assets/props/garden/oilbarrel.png",
+      "rect": [
+        6,
+        0,
+        20,
+        31
+      ],
+      "at": [
+        70,
+        128
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 564,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        198,
+        17,
+        20,
+        15
+      ],
+      "at": [
+        104,
+        81
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 130,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        165,
+        19,
+        21,
+        11
+      ],
+      "at": [
+        28,
+        64
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 139,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        198,
+        47,
+        17,
+        16
+      ],
+      "at": [
+        44,
+        85
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 134,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        98,
+        130,
+        11,
+        28
+      ],
+      "at": [
+        86,
+        36
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 179,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        129,
+        130,
+        14,
+        28
+      ],
+      "at": [
+        85,
+        7
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 199,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        129,
+        130,
+        14,
+        28
+      ],
+      "at": [
+        102,
+        16
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 199,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        161,
+        81,
+        14,
+        15
+      ],
+      "at": [
+        14,
+        98
+      ],
+      "flip": false,
+      "ncc": 0.992192,
+      "inliers": 0.9759,
+      "area": 83,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        161,
+        81,
+        14,
+        15
+      ],
+      "at": [
+        28,
+        115
+      ],
+      "flip": true,
+      "ncc": 0.992192,
+      "inliers": 0.9759,
+      "area": 83,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        391,
+        79,
+        18,
+        15
+      ],
+      "at": [
+        91,
+        106
+      ],
+      "flip": false,
+      "ncc": 0.990423,
+      "inliers": 0.9914,
+      "area": 116,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        161,
+        81,
+        14,
+        15
+      ],
+      "at": [
+        9,
+        127
+      ],
+      "flip": false,
+      "ncc": 0.986944,
+      "inliers": 0.9759,
+      "area": 83,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plasticbucket.png",
+      "rect": [
+        288,
+        10,
+        16,
+        21
+      ],
+      "at": [
+        106,
+        126
+      ],
+      "flip": false,
+      "ncc": 0.981559,
+      "inliers": 0.9578,
+      "area": 308,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/oilbarrel.png",
+      "rect": [
+        70,
+        12,
+        20,
+        19
+      ],
+      "at": [
+        25,
+        39
+      ],
+      "flip": true,
+      "ncc": 0.973359,
+      "inliers": 0.9671,
+      "area": 304,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/oilbarrel.png",
+      "rect": [
+        166,
+        14,
+        20,
+        17
+      ],
+      "at": [
+        42,
+        25
+      ],
+      "flip": false,
+      "ncc": 0.935481,
+      "inliers": 0.9558,
+      "area": 294,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/rubbertire.png",
+      "rect": [
+        36,
+        10,
+        24,
+        21
+      ],
+      "at": [
+        0,
+        69
+      ],
+      "flip": false,
+      "ncc": 0.912288,
+      "inliers": 0.9554,
+      "area": 426,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/oilbarrel.png",
+      "rect": [
+        6,
+        0,
+        20,
+        31
+      ],
+      "at": [
+        10,
+        15
+      ],
+      "flip": false,
+      "ncc": 0.892858,
+      "inliers": 0.9149,
+      "area": 564,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/plasticbucket.png",
+      "rect": [
+        96,
+        10,
+        16,
+        21
+      ],
+      "at": [
+        93,
+        114
+      ],
+      "flip": false,
+      "ncc": 0.888301,
+      "inliers": 0.8474,
+      "area": 308,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/rubbertire.png",
+      "rect": [
+        132,
+        18,
+        24,
+        13
+      ],
+      "at": [
+        98,
+        43
+      ],
+      "flip": false,
+      "ncc": 0.868232,
+      "inliers": 0.8537,
+      "area": 246,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/oilbarrel.png",
+      "rect": [
+        102,
+        0,
+        20,
+        31
+      ],
+      "at": [
+        106,
+        91
+      ],
+      "flip": false,
+      "ncc": 0.851783,
+      "inliers": 0.906,
+      "area": 564,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/oilbarrel.png",
+      "rect": [
+        134,
+        6,
+        20,
+        25
+      ],
+      "at": [
+        54,
+        121
+      ],
+      "flip": false,
+      "ncc": 0.846257,
+      "inliers": 0.8604,
+      "area": 444,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/garden/rubbertire.png",
+      "rect": [
+        132,
+        18,
+        24,
+        13
+      ],
+      "at": [
+        79,
+        63
+      ],
+      "flip": true,
+      "ncc": 0.824908,
+      "inliers": 0.8618,
+      "area": 246,
+      "depth": false
+    },
+    {
+      "file": "public/assets/props/garden/plantbases.png",
+      "rect": [
+        293,
+        67,
+        23,
+        27
+      ],
+      "at": [
+        41,
+        0
+      ],
+      "flip": false,
+      "ncc": 0.823949,
+      "inliers": 0.9323,
+      "area": 266,
+      "depth": true
+    }
+  ],
+  "graveyard": [
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        55,
+        96,
+        18,
+        48
+      ],
+      "at": [
+        10,
+        97
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 796,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        176,
+        96,
+        25,
+        48
+      ],
+      "at": [
+        163,
+        177
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1014,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        176,
+        96,
+        25,
+        48
+      ],
+      "at": [
+        10,
+        177
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1014,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        402,
+        291,
+        11,
+        39
+      ],
+      "at": [
+        71,
+        61
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 172,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        291,
+        308,
+        26,
+        57
+      ],
+      "at": [
+        86,
+        104
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1309,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        292,
+        450,
+        23,
+        28
+      ],
+      "at": [
+        114,
+        198
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 338,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        292,
+        450,
+        23,
+        28
+      ],
+      "at": [
+        30,
+        57
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 338,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        224,
+        465,
+        15,
+        14
+      ],
+      "at": [
+        68,
+        211
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 119,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        224,
+        465,
+        15,
+        14
+      ],
+      "at": [
+        135,
+        83
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 119,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        241,
+        465,
+        14,
+        14
+      ],
+      "at": [
+        142,
+        165
+      ],
+      "flip": true,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 111,
+      "depth": false
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        80,
+        96,
+        25,
+        48
+      ],
+      "at": [
+        10,
+        17
+      ],
+      "flip": true,
+      "ncc": 0.998518,
+      "inliers": 0.998,
+      "area": 1014,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        80,
+        96,
+        25,
+        48
+      ],
+      "at": [
+        163,
+        17
+      ],
+      "flip": false,
+      "ncc": 0.995378,
+      "inliers": 0.9882,
+      "area": 1014,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        304,
+        372,
+        32,
+        74
+      ],
+      "at": [
+        143,
+        103
+      ],
+      "flip": false,
+      "ncc": 0.988778,
+      "inliers": 0.9793,
+      "area": 967,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        407,
+        384,
+        19,
+        63
+      ],
+      "at": [
+        31,
+        116
+      ],
+      "flip": false,
+      "ncc": 0.981463,
+      "inliers": 0.9736,
+      "area": 720,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        292,
+        199,
+        24,
+        41
+      ],
+      "at": [
+        87,
+        61
+      ],
+      "flip": false,
+      "ncc": 0.970919,
+      "inliers": 0.9796,
+      "area": 882,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        304,
+        372,
+        32,
+        74
+      ],
+      "at": [
+        36,
+        5
+      ],
+      "flip": true,
+      "ncc": 0.968861,
+      "inliers": 0.9276,
+      "area": 967,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        55,
+        96,
+        18,
+        48
+      ],
+      "at": [
+        170,
+        97
+      ],
+      "flip": false,
+      "ncc": 0.965133,
+      "inliers": 0.9761,
+      "area": 796,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        192,
+        16,
+        25,
+        64
+      ],
+      "at": [
+        51,
+        161
+      ],
+      "flip": false,
+      "ncc": 0.933528,
+      "inliers": 0.9501,
+      "area": 1302,
+      "depth": true
+    },
+    {
+      "file": "tools/roomlab/library/sheets/Graveyard/Graveyard_Set.png",
+      "rect": [
+        192,
+        16,
+        25,
+        64
+      ],
+      "at": [
+        122,
+        161
+      ],
+      "flip": true,
+      "ncc": 0.850785,
+      "inliers": 0.8134,
+      "area": 1302,
+      "depth": true
+    }
+  ],
+  "dig3": [],
+  "dig5": [
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        420,
+        50,
+        24,
+        43
+      ],
+      "at": [
+        19,
+        39
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1020,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        361,
+        359,
+        14,
+        24
+      ],
+      "at": [
+        66,
+        65
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 295,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        295,
+        384,
+        18,
+        31
+      ],
+      "at": [
+        23,
+        98
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 554,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        356,
+        387,
+        26,
+        28
+      ],
+      "at": [
+        174,
+        63
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 566,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        387,
+        387,
+        26,
+        28
+      ],
+      "at": [
+        174,
+        100
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 566,
+      "depth": true
+    }
+  ],
+  "dig6": [
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        456,
+        4,
+        48,
+        25
+      ],
+      "at": [
+        153,
+        136
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1188,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        420,
+        146,
+        24,
+        43
+      ],
+      "at": [
+        24,
+        94
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 1020,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        40,
+        195,
+        16,
+        26
+      ],
+      "at": [
+        72,
+        220
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 344,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        356,
+        387,
+        26,
+        28
+      ],
+      "at": [
+        166,
+        184
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 566,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        387,
+        387,
+        26,
+        28
+      ],
+      "at": [
+        174,
+        86
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 566,
+      "depth": true
+    },
+    {
+      "file": "public/assets/props/shelter_furniture.png",
+      "rect": [
+        327,
+        391,
+        18,
+        24
+      ],
+      "at": [
+        29,
+        157
+      ],
+      "flip": false,
+      "ncc": 1.0,
+      "inliers": 1.0,
+      "area": 428,
+      "depth": true
+    }
+  ],
+  "camp": []
+}

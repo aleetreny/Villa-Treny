@@ -1,0 +1,1363 @@
+[
+  {
+    "seed": 1,
+    "days": 5000,
+    "minima": {
+      "fed": 19,
+      "rested": 19.19999999999999,
+      "well": 39.79999999999112,
+      "safe": 27,
+      "accompanied": 30
+    },
+    "firstCritical": null,
+    "maxMoneyError": 1.021740133853549e-9,
+    "maxReplayError": 3.9968028886505635e-15,
+    "visits": [
+      "administration",
+      "cabin1",
+      "cabin2",
+      "cabin3",
+      "cabin4",
+      "cabin5",
+      "common",
+      "dig1",
+      "dig2",
+      "dig3",
+      "dig4",
+      "dig5",
+      "dig6",
+      "dispatch",
+      "dock",
+      "face",
+      "games",
+      "garden",
+      "hold",
+      "infirmary",
+      "library",
+      "longwalk",
+      "parlour",
+      "projection",
+      "records",
+      "sodabar",
+      "study",
+      "well",
+      "workshops",
+      "yard"
+    ],
+    "counts": {
+      "listen": 1860,
+      "dig": 7626,
+      "work": 147172,
+      "charge": 10457,
+      "note": 4332,
+      "grow": 4460,
+      "inspect": 12990,
+      "ask": 4014,
+      "speak": 18178,
+      "go": 350401,
+      "eat": 98968,
+      "accompany": 44,
+      "rest": 12062,
+      "sleep": 114220,
+      "joke": 10148,
+      "repair": 14056,
+      "cook": 14302,
+      "trade": 4537,
+      "clean": 6703,
+      "confide": 5879,
+      "teach": 675,
+      "argue": 23,
+      "wash": 2411,
+      "lend": 703,
+      "repay": 1406,
+      "give": 2771,
+      "console": 3
+    },
+    "thoughts": {
+      "T": 801,
+      "U": 800,
+      "S": 800,
+      "O": 800,
+      "A": 800,
+      "M": 800,
+      "V": 800,
+      "G": 800,
+      "I": 800,
+      "W": 800,
+      "C": 800,
+      "E": 800,
+      "J": 800,
+      "P": 800,
+      "Q": 800,
+      "Y": 800,
+      "B": 800,
+      "D": 800,
+      "F": 800,
+      "H": 800,
+      "K": 800,
+      "L": 800,
+      "N": 800,
+      "R": 800,
+      "X": 799
+    },
+    "samples": [
+      {
+        "elapsedDays": 7,
+        "power": 0.93846,
+        "money": 406.95059970548954,
+        "treasury": 86.35119999999999,
+        "stock": {
+          "produce": 60,
+          "meals": 62,
+          "water": 142,
+          "materials": 29
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 68.20000000000016,
+            "max": 92.20000000000016
+          },
+          "safe": {
+            "min": 44,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 64,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 30,
+        "power": 0.9334,
+        "money": 374.92368778292234,
+        "treasury": 85.65960000000004,
+        "stock": {
+          "produce": 68,
+          "meals": 65,
+          "water": 110,
+          "materials": 28
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 59.00000000000028,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 43,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 62,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 90,
+        "power": 0.9202000000000001,
+        "money": 326.26163289269306,
+        "treasury": 85.65960000000003,
+        "stock": {
+          "produce": 76,
+          "meals": 65,
+          "water": 124,
+          "materials": 30
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 43.000000000000504,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 46,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 75,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 365,
+        "power": 0.8597000000000007,
+        "money": 197.81162668263698,
+        "treasury": 85.31380000000001,
+        "stock": {
+          "produce": 60,
+          "meals": 69,
+          "water": 114,
+          "materials": 31
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 43.000000000000504,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 47,
+            "max": 94
+          },
+          "accompanied": {
+            "min": 59,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 1000,
+        "power": 0.720000000000002,
+        "money": 270.5163959224289,
+        "treasury": 84.96799999999998,
+        "stock": {
+          "produce": 64,
+          "meals": 65,
+          "water": 138,
+          "materials": 31
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 43.99999999999911,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 45,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 75,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 2000,
+        "power": 0.500000000000004,
+        "money": 281.0429806680019,
+        "treasury": 84.27640000000002,
+        "stock": {
+          "produce": 64,
+          "meals": 65,
+          "water": 115,
+          "materials": 29
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 42.99999999999837,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 45,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 80,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 2700,
+        "power": 0.3460000000000054,
+        "money": 15.196002572916253,
+        "treasury": 0,
+        "stock": {
+          "produce": 56,
+          "meals": 60,
+          "water": 66,
+          "materials": 28
+        },
+        "conditions": {
+          "fed": {
+            "min": 19,
+            "max": 82
+          },
+          "rested": {
+            "min": 58.8,
+            "max": 95
+          },
+          "well": {
+            "min": 43.999999999997804,
+            "max": 98.60000000000005
+          },
+          "safe": {
+            "min": 41,
+            "max": 96
+          },
+          "accompanied": {
+            "min": 65,
+            "max": 95
+          }
+        }
+      },
+      {
+        "elapsedDays": 3000,
+        "power": 0.280000000000006,
+        "money": 0.40626811090606774,
+        "treasury": 0,
+        "stock": {
+          "produce": 24,
+          "meals": 51,
+          "water": 49,
+          "materials": 3
+        },
+        "conditions": {
+          "fed": {
+            "min": 20,
+            "max": 63
+          },
+          "rested": {
+            "min": 58.8,
+            "max": 95
+          },
+          "well": {
+            "min": 41.99999999999667,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 40,
+            "max": 55
+          },
+          "accompanied": {
+            "min": 90,
+            "max": 95
+          }
+        }
+      },
+      {
+        "elapsedDays": 4000,
+        "power": 0.06000000000000805,
+        "money": 0.0000023214392461585626,
+        "treasury": 0,
+        "stock": {
+          "produce": 32,
+          "meals": 53,
+          "water": 50,
+          "materials": 5
+        },
+        "conditions": {
+          "fed": {
+            "min": 21,
+            "max": 59
+          },
+          "rested": {
+            "min": 58.8,
+            "max": 95
+          },
+          "well": {
+            "min": 42.99999999999377,
+            "max": 96.60000000000005
+          },
+          "safe": {
+            "min": 40,
+            "max": 53
+          },
+          "accompanied": {
+            "min": 80,
+            "max": 95
+          }
+        }
+      },
+      {
+        "elapsedDays": 5000,
+        "power": 0,
+        "money": 1.3264836764043246e-11,
+        "treasury": 3.790975209679061e-27,
+        "stock": {
+          "produce": 4,
+          "meals": 8,
+          "water": 24,
+          "materials": 3
+        },
+        "conditions": {
+          "fed": {
+            "min": 19,
+            "max": 63
+          },
+          "rested": {
+            "min": 54.599999999999994,
+            "max": 95
+          },
+          "well": {
+            "min": 39.99999999999222,
+            "max": 66.99999999999298
+          },
+          "safe": {
+            "min": 42,
+            "max": 56
+          },
+          "accompanied": {
+            "min": 70,
+            "max": 95
+          }
+        }
+      }
+    ],
+    "examples": [
+      {
+        "room": "common",
+        "who": [
+          "V",
+          "F"
+        ],
+        "text": "Vero lent Ferran 4 charge cells, due on day 176.",
+        "kind": "meeting",
+        "day": 171,
+        "watch": 3,
+        "minute": 904
+      },
+      {
+        "room": "dig1",
+        "who": [
+          "F",
+          "V"
+        ],
+        "text": "Ferran repaid Vero 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 172,
+        "watch": 1,
+        "minute": 184
+      },
+      {
+        "room": "garden",
+        "who": [
+          "F",
+          "V"
+        ],
+        "text": "Ferran repaid Vero 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 172,
+        "watch": 2,
+        "minute": 476
+      },
+      {
+        "room": "common",
+        "who": [
+          "X",
+          "K"
+        ],
+        "text": "Xan lent Kes 4 charge cells, due on day 179.",
+        "kind": "meeting",
+        "day": 174,
+        "watch": 3,
+        "minute": 755
+      },
+      {
+        "room": "common",
+        "who": [
+          "K",
+          "X"
+        ],
+        "text": "Kes repaid Xan 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 174,
+        "watch": 3,
+        "minute": 986
+      },
+      {
+        "room": "dig4",
+        "who": [
+          "K",
+          "X"
+        ],
+        "text": "Kes repaid Xan 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 175,
+        "watch": 1,
+        "minute": 116
+      },
+      {
+        "room": "common",
+        "who": [
+          "J",
+          "N"
+        ],
+        "text": "Juno lent Noor 4 charge cells, due on day 184.",
+        "kind": "meeting",
+        "day": 179,
+        "watch": 3,
+        "minute": 1054
+      },
+      {
+        "room": "workshops",
+        "who": [
+          "N",
+          "J"
+        ],
+        "text": "Noor repaid Juno 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 180,
+        "watch": 1,
+        "minute": 157
+      },
+      {
+        "room": "workshops",
+        "who": [
+          "N",
+          "J"
+        ],
+        "text": "Noor repaid Juno 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 180,
+        "watch": 2,
+        "minute": 612
+      },
+      {
+        "room": "common",
+        "who": [
+          "V",
+          "F"
+        ],
+        "text": "Vero lent Ferran 4 charge cells, due on day 185.",
+        "kind": "meeting",
+        "day": 180,
+        "watch": 2,
+        "minute": 680
+      },
+      {
+        "room": "common",
+        "who": [
+          "F",
+          "V"
+        ],
+        "text": "Ferran repaid Vero 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 180,
+        "watch": 3,
+        "minute": 809
+      },
+      {
+        "room": "dig1",
+        "who": [
+          "F",
+          "V"
+        ],
+        "text": "Ferran repaid Vero 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 181,
+        "watch": 1,
+        "minute": 103
+      }
+    ]
+  },
+  {
+    "seed": 7,
+    "days": 365,
+    "minima": {
+      "fed": 19,
+      "rested": 39.599999999999994,
+      "well": 41.00000000000057,
+      "safe": 28,
+      "accompanied": 34
+    },
+    "firstCritical": null,
+    "maxMoneyError": 6.0254023992456496e-12,
+    "maxReplayError": 1.1102230246251565e-16,
+    "visits": [
+      "administration",
+      "cabin1",
+      "cabin2",
+      "cabin3",
+      "cabin4",
+      "cabin5",
+      "common",
+      "dig1",
+      "dig2",
+      "dig3",
+      "dig4",
+      "dig5",
+      "dig6",
+      "dispatch",
+      "dock",
+      "face",
+      "games",
+      "garden",
+      "hold",
+      "infirmary",
+      "library",
+      "longwalk",
+      "parlour",
+      "projection",
+      "records",
+      "sodabar",
+      "study",
+      "well",
+      "workshops",
+      "yard"
+    ],
+    "counts": {
+      "work": 7158,
+      "grow": 227,
+      "inspect": 1402,
+      "speak": 2032,
+      "dig": 189,
+      "charge": 1065,
+      "note": 499,
+      "go": 29019,
+      "ask": 1020,
+      "eat": 7296,
+      "listen": 1061,
+      "rest": 1315,
+      "sleep": 9123,
+      "accompany": 10,
+      "joke": 233,
+      "repair": 93,
+      "cook": 908,
+      "confide": 228,
+      "trade": 650,
+      "clean": 373,
+      "argue": 6,
+      "teach": 30,
+      "wash": 110,
+      "lend": 399,
+      "repay": 798,
+      "give": 275
+    },
+    "thoughts": {
+      "I": 59,
+      "L": 59,
+      "P": 59,
+      "Y": 59,
+      "O": 59,
+      "H": 59,
+      "T": 59,
+      "F": 59,
+      "M": 59,
+      "U": 59,
+      "S": 58,
+      "D": 58,
+      "K": 58,
+      "N": 58,
+      "G": 58,
+      "W": 58,
+      "B": 58,
+      "E": 58,
+      "J": 58,
+      "Q": 58,
+      "V": 58,
+      "X": 58,
+      "A": 58,
+      "C": 58,
+      "R": 58
+    },
+    "samples": [
+      {
+        "elapsedDays": 7,
+        "power": 0.93846,
+        "money": 421.5860183447083,
+        "treasury": 82.20159999999998,
+        "stock": {
+          "produce": 76,
+          "meals": 65,
+          "water": 118,
+          "materials": 31
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 69.20000000000016,
+            "max": 92.20000000000016
+          },
+          "safe": {
+            "min": 46,
+            "max": 98
+          },
+          "accompanied": {
+            "min": 54,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 30,
+        "power": 0.9334,
+        "money": 398.1105173542677,
+        "treasury": 83.23900000000002,
+        "stock": {
+          "produce": 68,
+          "meals": 64,
+          "water": 133,
+          "materials": 28
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 60.00000000000036,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 43,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 54,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 90,
+        "power": 0.9202000000000001,
+        "money": 342.78397485811865,
+        "treasury": 85.65960000000003,
+        "stock": {
+          "produce": 76,
+          "meals": 64,
+          "water": 121,
+          "materials": 28
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 43.000000000000504,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 45,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 50,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 365,
+        "power": 0.8597000000000007,
+        "money": 222.64221697227026,
+        "treasury": 84.2764,
+        "stock": {
+          "produce": 60,
+          "meals": 68,
+          "water": 135,
+          "materials": 29
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 44.000000000000476,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 44,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 70,
+            "max": 90
+          }
+        }
+      }
+    ],
+    "examples": [
+      {
+        "room": "common",
+        "who": [
+          "M",
+          "N"
+        ],
+        "text": "Mara lent Noor 4 charge cells, due on day 192.",
+        "kind": "meeting",
+        "day": 187,
+        "watch": 2,
+        "minute": 517
+      },
+      {
+        "room": "face",
+        "who": [
+          "N",
+          "M"
+        ],
+        "text": "Noor repaid Mara 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 187,
+        "watch": 3,
+        "minute": 1000
+      },
+      {
+        "room": "dig1",
+        "who": [
+          "N",
+          "M"
+        ],
+        "text": "Noor repaid Mara 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 188,
+        "watch": 1,
+        "minute": 266
+      },
+      {
+        "room": "dig1",
+        "who": [
+          "M",
+          "N"
+        ],
+        "text": "Mara lent Noor 4 charge cells, due on day 193.",
+        "kind": "meeting",
+        "day": 188,
+        "watch": 1,
+        "minute": 280
+      },
+      {
+        "room": "common",
+        "who": [
+          "N",
+          "M"
+        ],
+        "text": "Noor repaid Mara 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 188,
+        "watch": 3,
+        "minute": 891
+      },
+      {
+        "room": "dig1",
+        "who": [
+          "N",
+          "M"
+        ],
+        "text": "Noor repaid Mara 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 189,
+        "watch": 1,
+        "minute": 212
+      },
+      {
+        "room": "dig2",
+        "who": [
+          "W",
+          "D"
+        ],
+        "text": "Wen lent Dima 4 charge cells, due on day 201.",
+        "kind": "meeting",
+        "day": 196,
+        "watch": 2,
+        "minute": 612
+      },
+      {
+        "room": "dig2",
+        "who": [
+          "D",
+          "W"
+        ],
+        "text": "Dima repaid Wen 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 197,
+        "watch": 1,
+        "minute": 76
+      },
+      {
+        "room": "common",
+        "who": [
+          "D",
+          "W"
+        ],
+        "text": "Dima repaid Wen 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 197,
+        "watch": 2,
+        "minute": 558
+      },
+      {
+        "room": "cabin4",
+        "who": [
+          "H",
+          "I"
+        ],
+        "text": "Halim lent Iris 4 charge cells, due on day 204.",
+        "kind": "meeting",
+        "day": 199,
+        "watch": 2,
+        "minute": 667
+      },
+      {
+        "room": "cabin4",
+        "who": [
+          "I",
+          "H"
+        ],
+        "text": "Iris repaid Halim 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 199,
+        "watch": 3,
+        "minute": 728
+      },
+      {
+        "room": "dig6",
+        "who": [
+          "I",
+          "H"
+        ],
+        "text": "Iris repaid Halim 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 200,
+        "watch": 1,
+        "minute": 212
+      }
+    ]
+  },
+  {
+    "seed": 23,
+    "days": 365,
+    "minima": {
+      "fed": 19,
+      "rested": 38.8,
+      "well": 41,
+      "safe": 27,
+      "accompanied": 30
+    },
+    "firstCritical": null,
+    "maxMoneyError": 8.071765478234738e-12,
+    "maxReplayError": 0,
+    "visits": [
+      "administration",
+      "cabin1",
+      "cabin2",
+      "cabin3",
+      "cabin4",
+      "cabin5",
+      "common",
+      "dig1",
+      "dig2",
+      "dig3",
+      "dig4",
+      "dig5",
+      "dig6",
+      "dispatch",
+      "dock",
+      "face",
+      "games",
+      "garden",
+      "hold",
+      "infirmary",
+      "library",
+      "longwalk",
+      "parlour",
+      "projection",
+      "records",
+      "sodabar",
+      "study",
+      "well",
+      "workshops",
+      "yard"
+    ],
+    "counts": {
+      "work": 7250,
+      "speak": 2085,
+      "listen": 982,
+      "dig": 186,
+      "charge": 1046,
+      "ask": 927,
+      "note": 453,
+      "joke": 222,
+      "grow": 227,
+      "go": 28870,
+      "eat": 7294,
+      "inspect": 1393,
+      "accompany": 6,
+      "rest": 1325,
+      "sleep": 9124,
+      "confide": 237,
+      "repair": 86,
+      "cook": 907,
+      "teach": 25,
+      "trade": 647,
+      "clean": 372,
+      "argue": 8,
+      "lend": 442,
+      "wash": 107,
+      "repay": 882,
+      "give": 266,
+      "console": 1
+    },
+    "thoughts": {
+      "L": 60,
+      "D": 59,
+      "T": 59,
+      "A": 59,
+      "Y": 59,
+      "O": 59,
+      "V": 59,
+      "R": 59,
+      "M": 59,
+      "G": 58,
+      "E": 58,
+      "J": 58,
+      "B": 58,
+      "U": 58,
+      "F": 58,
+      "I": 58,
+      "Q": 58,
+      "C": 58,
+      "H": 58,
+      "K": 58,
+      "N": 58,
+      "P": 58,
+      "S": 58,
+      "W": 58,
+      "X": 58
+    },
+    "samples": [
+      {
+        "elapsedDays": 7,
+        "power": 0.93846,
+        "money": 374.5868706692918,
+        "treasury": 82.89320000000001,
+        "stock": {
+          "produce": 60,
+          "meals": 61,
+          "water": 117,
+          "materials": 28
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 68.20000000000016,
+            "max": 90.20000000000016
+          },
+          "safe": {
+            "min": 47,
+            "max": 96
+          },
+          "accompanied": {
+            "min": 70,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 30,
+        "power": 0.9334,
+        "money": 359.2098202110045,
+        "treasury": 85.3138,
+        "stock": {
+          "produce": 68,
+          "meals": 66,
+          "water": 112,
+          "materials": 29
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 59.00000000000028,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 44,
+            "max": 99
+          },
+          "accompanied": {
+            "min": 70,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 90,
+        "power": 0.9202000000000001,
+        "money": 318.6828876573712,
+        "treasury": 86.00540000000002,
+        "stock": {
+          "produce": 60,
+          "meals": 66,
+          "water": 103,
+          "materials": 28
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 44.00000000000059,
+            "max": 99.00000000000003
+          },
+          "safe": {
+            "min": 45,
+            "max": 98
+          },
+          "accompanied": {
+            "min": 45,
+            "max": 90
+          }
+        }
+      },
+      {
+        "elapsedDays": 365,
+        "power": 0.8597000000000007,
+        "money": 232.58287835638458,
+        "treasury": 84.6222,
+        "stock": {
+          "produce": 64,
+          "meals": 62,
+          "water": 123,
+          "materials": 27
+        },
+        "conditions": {
+          "fed": {
+            "min": 46,
+            "max": 82
+          },
+          "rested": {
+            "min": 95,
+            "max": 95
+          },
+          "well": {
+            "min": 43.00000000000039,
+            "max": 99.4
+          },
+          "safe": {
+            "min": 44,
+            "max": 98
+          },
+          "accompanied": {
+            "min": 70,
+            "max": 90
+          }
+        }
+      }
+    ],
+    "examples": [
+      {
+        "room": "cabin2",
+        "who": [
+          "Q",
+          "L"
+        ],
+        "text": "Quim lent Lior 4 charge cells, due on day 175.",
+        "kind": "meeting",
+        "day": 170,
+        "watch": 2,
+        "minute": 490
+      },
+      {
+        "room": "dig2",
+        "who": [
+          "L",
+          "Q"
+        ],
+        "text": "Lior repaid Quim 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 171,
+        "watch": 1,
+        "minute": 198
+      },
+      {
+        "room": "workshops",
+        "who": [
+          "L",
+          "Q"
+        ],
+        "text": "Lior repaid Quim 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 171,
+        "watch": 2,
+        "minute": 585
+      },
+      {
+        "room": "cabin3",
+        "who": [
+          "Q",
+          "R"
+        ],
+        "text": "Quim lent Reva 4 charge cells, due on day 188.",
+        "kind": "meeting",
+        "day": 183,
+        "watch": 1,
+        "minute": 116
+      },
+      {
+        "room": "common",
+        "who": [
+          "R",
+          "Q"
+        ],
+        "text": "Reva repaid Quim 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 183,
+        "watch": 3,
+        "minute": 1013
+      },
+      {
+        "room": "dig2",
+        "who": [
+          "R",
+          "Q"
+        ],
+        "text": "Reva repaid Quim 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 184,
+        "watch": 1,
+        "minute": 116
+      },
+      {
+        "room": "common",
+        "who": [
+          "E",
+          "C"
+        ],
+        "text": "Edda lent Cato 4 charge cells, due on day 189.",
+        "kind": "meeting",
+        "day": 184,
+        "watch": 2,
+        "minute": 626
+      },
+      {
+        "room": "common",
+        "who": [
+          "C",
+          "E"
+        ],
+        "text": "Cato repaid Edda 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 184,
+        "watch": 3,
+        "minute": 877
+      },
+      {
+        "room": "common",
+        "who": [
+          "C",
+          "E"
+        ],
+        "text": "Cato repaid Edda 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 185,
+        "watch": 1,
+        "minute": 334
+      },
+      {
+        "room": "common",
+        "who": [
+          "J",
+          "C"
+        ],
+        "text": "Juno lent Cato 4 charge cells, due on day 190.",
+        "kind": "meeting",
+        "day": 185,
+        "watch": 2,
+        "minute": 599
+      },
+      {
+        "room": "projection",
+        "who": [
+          "C",
+          "J"
+        ],
+        "text": "Cato repaid Juno 2 charge cells; 2 still owed.",
+        "kind": "meeting",
+        "day": 185,
+        "watch": 3,
+        "minute": 891
+      },
+      {
+        "room": "dig3",
+        "who": [
+          "C",
+          "J"
+        ],
+        "text": "Cato repaid Juno 2 charge cells; 0 still owed.",
+        "kind": "meeting",
+        "day": 186,
+        "watch": 1,
+        "minute": 35
+      }
+    ]
+  }
+]

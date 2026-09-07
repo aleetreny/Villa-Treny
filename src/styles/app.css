@@ -1,0 +1,8 @@
+@import './habitat-base.css';
+@font-face { font-family: 'IBM Plex Mono'; src: url('/fonts/IBMPlexMono-Regular.ttf') format('truetype'); font-style: normal; font-weight: 400; font-display: swap; }
+:root { color-scheme: dark; font-family: 'IBM Plex Sans Condensed', sans-serif; background: #171c22; color: #ddd3b9; }
+html, body, #root { margin: 0; width: 100%; min-height: 100%; }
+body { overscroll-behavior: none; }
+*, *::before, *::after { box-sizing: border-box; }
+button, input, select { font: inherit; }
+canvas { image-rendering: pixelated; }

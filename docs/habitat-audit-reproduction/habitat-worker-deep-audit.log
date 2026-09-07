@@ -1,0 +1,19 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__filename` (../../node_modules/.pnpm/@cloudflare+vitest-plugin@1.1.2_@vitest+runner@4.1.10_@vitest+snapshot@4.1.10_vitest@4._724f1a881fca4a14de451b1cbbcea513/node_modules/@cloudflare/vitest-plugin/dist/pool/index.mjs:25217:33). Use `import.meta.filename` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.10 /Users/alejandrotreny/Documents/ChatGPT/Portfolio/workers/habitat-runtime
+
+Using secrets defined in process.env
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mMissing required secrets: ADMIN_TOKEN, GROQ_API_KEY. Add them to .dev.vars, .env, or set as environment variables.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mAI bindings always access remote resources, and so may incur usage charges even in local dev. To suppress this warning, set `remote: true` for the binding definition in your configuration file.[0m
+
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  20:01:52
+   Duration  1.29s (transform 191ms, setup 0ms, import 468ms, tests 100ms, environment 0ms)
+

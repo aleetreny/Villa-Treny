@@ -1,0 +1,83 @@
+<meta charset="utf-8">
+<title>Four exact service rooms · RoomLab</title>
+<style>
+  :root{color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0;background:#090b0e;color:#bec7dc;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+  header{padding:18px 20px 8px}
+  h1{margin:0;color:#f0f2f8;font-size:14px;font-weight:500;letter-spacing:.08em}
+  p{margin:5px 0 0;color:#77839f;max-width:920px}
+  main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 20px 34px;align-items:start}
+  figure{margin:0;padding:14px;background:#10131a;border:1px solid #242b39;box-shadow:0 14px 40px rgba(0,0,0,.2)}
+  .compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:end}
+  .panel{min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;background:#0b0e13;border:1px solid #1c2230;padding:10px;overflow:hidden}
+  .panel small{align-self:stretch;margin-bottom:8px;color:#66718d;text-transform:uppercase;letter-spacing:.1em}
+  canvas,.reference{display:block;max-width:100%;height:auto;image-rendering:pixelated}
+  figcaption{padding-top:10px;color:#7f8ba8}
+  figcaption b{color:#eef1f8;font-weight:500}
+  figcaption span{color:#d5a95a}
+  code{color:#9ec6ef}
+  @media(max-width:980px){main{grid-template-columns:1fr}.compare{grid-template-columns:1fr 1fr}}
+</style>
+<header>
+  <h1>FOUR SERVICE ROOMS · EXACT ZIP COMPOSITIONS</h1>
+  <p>Maintenance, The Kitchen, The Stalls and The Washroom. Each output keeps the complete room boundary and every original object at native-pixel scale.</p>
+</header>
+<main id="rooms"></main>
+<script type="module">
+import { FACILITY, FACILITY_MANIFEST, FACILITY_SOURCES, drawFacility, loadFacilitySources } from './facility-kit.js';
+
+const rooms = [
+  { key: 'maintenance', name: 'Maintenance', note: 'office, repair benches + stores' },
+  { key: 'kitchen', name: 'The Kitchen', note: 'professional food preparation' },
+  { key: 'stalls', name: 'The Stalls', note: 'three cubicles + cleaning cart' },
+  { key: 'washroom', name: 'The Washroom', note: 'toilet, urinal, basin + cubicle' },
+];
+const sources = await loadFacilitySources();
+const root = document.getElementById('rooms');
+
+for (const room of rooms) {
+  const size = FACILITY[room.key];
+  const manifest = FACILITY_MANIFEST[room.key];
+  const native = document.createElement('canvas');
+  native.width = size.W;
+  native.height = size.H;
+  drawFacility(native.getContext('2d'), sources, room.key);
+
+  const canvas = document.createElement('canvas');
+  canvas.width = size.W * 2;
+  canvas.height = size.H * 2;
+  canvas.dataset.room = room.key;
+  const g = canvas.getContext('2d');
+  g.imageSmoothingEnabled = false;
+  g.drawImage(native, 0, 0, canvas.width, canvas.height);
+
+  const figure = document.createElement('figure');
+  const compare = document.createElement('div');
+  compare.className = 'compare';
+  const referencePanel = document.createElement('div');
+  referencePanel.className = 'panel';
+  referencePanel.innerHTML = '<small>ZIP reference</small>';
+  const image = document.createElement('img');
+  image.className = 'reference';
+  image.src = FACILITY_SOURCES[manifest.sheet];
+  image.alt = room.name + ' reference';
+  referencePanel.appendChild(image);
+  compare.appendChild(referencePanel);
+
+  const outputPanel = document.createElement('div');
+  outputPanel.className = 'panel';
+  outputPanel.innerHTML = '<small>exact room crop</small>';
+  outputPanel.appendChild(canvas);
+  compare.appendChild(outputPanel);
+  figure.appendChild(compare);
+
+  const caption = document.createElement('figcaption');
+  caption.innerHTML = '<b>' + room.name + '</b> · ' + size.W + '×' + size.H
+    + ' native · <span>' + room.note + '</span><br><code>'
+    + manifest.strategy + '</code>';
+  figure.appendChild(caption);
+  root.appendChild(figure);
+}
+window.__ready = 1;
+</script>

@@ -1,0 +1,226 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0b0d11;font:12px/1.6 ui-monospace,monospace;color:#b9c2dd}
+ canvas{image-rendering:pixelated;display:block}
+ .strip{display:flex;gap:18px;padding:16px;align-items:flex-start}
+ .cab{width:204px}
+ .cab h2{margin:0 0 2px;font-size:12px;color:#e9edff;font-weight:400;letter-spacing:.4px}
+ .cab .who{color:#d9a441;font-size:11px}
+ .cab .one{color:#8f99c4;font-size:10.5px;margin:4px 0 6px;min-height:44px}
+ .cab .log{color:#5f6b8f;font-size:10px;white-space:pre-wrap}
+ .cab .log.bad{color:#e0776a}
+ h1{font-size:13px;font-weight:400;color:#e9edff;margin:0;padding:14px 16px 0;letter-spacing:.5px}
+ .note{padding:2px 16px 0;color:#7b85ab;max-width:1100px}
+</style>
+<h1>THE FIVE CABINS</h1>
+<div class="note">
+  One mould, five times. Every one is <code>cabin-kit.js</code> — the two-berth cabin
+  traced 1:1 off <code>reference/two-berth-cabin.jpg</code> — and the only things that
+  differ are the lamp, whether the cabin is to starboard (mirrored, because its floor
+  tilts the other way), and the single object that is only in that one.
+</div>
+<div class="strip" id="strip"></div>
+<div class="strip" id="zoom"></div>
+<script type="module">
+import { drawCabin, W, H } from './cabin-kit.js';
+
+// ── THE FIVE ──────────────────────────────────────────────────────────────
+// Clone first, vary afterwards, and vary very little. Each cabin gets:
+//   · its own lamp brightness — the Cabins' authored direction is that the
+//     modularity is in the geometry and the variation is in the light
+//   · one object nobody else has, which is the glyph its room legend declares
+//   · at most one mould prop given up to make room for it
+// Nothing else moves. The bunks, the well, the trestle, the table, the pipes and
+// the plate are in the same pixels in all five.
+
+const CABINS = [
+  {
+    id: 'cabin1', name: 'Cabin One', who: 'Dima Vashenko · Edda Halvorsen',
+    one: 'A sleeping passenger\'s case, stowed where they left it and never once '
+       + 'opened. The brightest lamp of the five, and neither of them has said who chose that.',
+    lamp: 1.0,
+    extras({ sprite }) {
+      // Somebody else's luggage, in the stores corner beside the desk. It is the
+      // etiquette nobody wrote, as one object.
+      sprite('furn', 17, 13, 1, 1, 136, 132);
+      // and a second document on the table, a different one: the outing list is
+      // already there in the mould, so this is the allocation ledger beside it
+      sprite('furn', 1, 4, 1, 1, 82, 161);
+    },
+  },
+  {
+    id: 'cabin2', name: 'Cabin Two', who: 'Ferran Solé · Halim Zoubir',
+    one: 'A shim stack in the after corner, one plate every nine days for a hundred '
+       + 'days. The closest thing in the habitat to a calendar nobody meant to keep.',
+    lamp: 0.55,
+    omit: ['book', 'paper'],                      // the corner is the stack's now
+    extras({ g }) {
+      // Drawn, not stamped: no sheet in the pack carries a stack of shims. What
+      // you see of a stack from here is the top plate's face and the edges of
+      // the ones under it — so that is what is drawn, in the pack's own idiom:
+      // flat tones, hard steps, a dark line under every leaf. A cut edge is a
+      // date, and the top plate is bright because it was cut this week.
+      const x = 139, w = 17, base = 192, n = 6;         // the after corner
+      g.fillStyle = 'rgba(0,0,0,.42)';                  // the shadow it sits in
+      g.fillRect(x - 2, base, w + 5, 3);
+      const jit = [0, 1, -1, 0, 2, -1];                 // hand-cut, so not square
+      for (let i = 0; i < n; i++) {                     // oldest at the bottom
+        const y = base - 2 - i * 2, jx = jit[i], ww = w - (i % 3);
+        g.fillStyle = '#211f1b';                        // the ink under each leaf
+        g.fillRect(x + jx - 1, y, ww + 2, 2);
+        const v = 0.42 + 0.07 * i;                      // and the older, the browner
+        g.fillStyle = `rgb(${Math.round(190 * v + 40)},${Math.round(180 * v + 36)},`
+          + `${Math.round(158 * v + 30)})`;
+        g.fillRect(x + jx, y, ww, 1);                   // its cut edge, seen end-on
+        g.fillStyle = '#3b352d';                        // the gap to the one beneath
+        g.fillRect(x + jx, y + 1, ww, 1);
+      }
+      const ty = base - 2 - n * 2;                      // the top plate, seen flat
+      g.fillStyle = '#1d1b18'; g.fillRect(x - 1, ty - 6, w + 2, 7);
+      g.fillStyle = '#b3aea0'; g.fillRect(x, ty - 5, w, 5);
+      g.fillStyle = '#ddd7c4'; g.fillRect(x, ty - 5, w, 1);   // this week's cut edge
+    },
+  },
+  {
+    id: 'cabin3', name: 'Cabin Three', who: 'Cato Lindqvist · Gita Raman',
+    one: 'A photograph taped across the square of wall where a plate came off. The '
+       + 'ship\'s ribs are behind it. Nobody has put the plate back, and nobody has '
+       + 'asked. The furthest cabin down the walk, and the darkest.',
+    lamp: 0.3,
+    omit: ['yellownotice'],
+    // On the plate, before the pipes and the fittings go on, so it reads as part
+    // of the wall rather than as something hung on it.
+    plate({ g }) {
+      // One panel of plate, lifted. The pipes are drawn after this, so the run
+      // crosses it the way it would if the plate had been cut out around them.
+      const x0 = 155, y0 = 50, w = 30, h = 26;
+      g.fillStyle = '#474139'; g.fillRect(x0, y0, w, h);  // the cavity behind
+      g.fillStyle = '#615a4e';                            // two of the ship's ribs
+      g.fillRect(x0 + 8, y0 + 1, 5, h - 2); g.fillRect(x0 + 21, y0 + 1, 5, h - 2);
+      g.fillStyle = '#2c2823';
+      g.fillRect(x0 + 8, y0 + 1, 1, h - 2); g.fillRect(x0 + 21, y0 + 1, 1, h - 2);
+      g.fillRect(x0 + 1, y0 + 13, w - 2, 2);              // and the stringer across them
+      g.fillStyle = '#4d473e'; g.fillRect(x0 + 1, y0 + 12, w - 2, 1);
+      // The cut edge stays bright where the shear went through and breaks where
+      // the plate tore. An unbroken line all the way round would read as a
+      // picture frame, which is the one thing this must not be.
+      g.fillStyle = '#c4c4c4';
+      g.fillRect(x0, y0, 12, 1); g.fillRect(x0 + 15, y0, w - 15, 2);
+      g.fillRect(x0, y0 + h - 2, 8, 2); g.fillRect(x0 + 11, y0 + h - 1, w - 17, 1);
+      g.fillRect(x0, y0, 1, 10); g.fillRect(x0, y0 + 14, 1, h - 14);
+      g.fillRect(x0 + w - 1, y0 + 2, 1, h - 8);
+      g.fillStyle = '#7d7a73';                            // and where it has dulled
+      g.fillRect(x0 + 12, y0, 3, 1); g.fillRect(x0 + w - 1, y0 + h - 6, 1, 5);
+      g.fillRect(x0, y0 + 10, 1, 4);
+      g.fillStyle = '#9c8459';                        // the bolt stubs left behind
+      for (let y = y0 + 5; y < y0 + h - 4; y += 8) {
+        g.fillRect(x0 + 2, y, 2, 2); g.fillRect(x0 + w - 4, y, 2, 2);
+      }
+    },
+    extras({ g, cut }) {
+      // The photograph is the picture off furn(13,0) with its calendar cut away —
+      // the pack has no photograph on its own, and the pipe runs are already used
+      // this way, so the sprite is cut rather than something invented.
+      const x = 159, y = 54;
+      g.fillStyle = 'rgba(0,0,0,.5)'; g.fillRect(x + 1, y + 2, 20, 15);
+      cut('furn', 422, 1, 20, 15, x, y);                  // the only photograph in the
+                                                          // pack that is not a pin-up
+      // two strips of tape, corner to corner across the cut edge, which is what
+      // is actually holding it up
+      g.fillStyle = 'rgba(222,213,186,.78)';
+      g.fillRect(x - 4, y - 2, 9, 3); g.fillRect(x + 15, y + 14, 9, 3);
+      g.fillStyle = 'rgba(255,250,230,.5)';
+      g.fillRect(x - 4, y - 2, 9, 1); g.fillRect(x + 15, y + 14, 9, 1);
+    },
+  },
+  {
+    id: 'cabin4', name: 'Cabin Four', who: 'Bex Ferreira · Reva Sandoval',
+    one: 'A shelf of hull plate lashed down onto two uprights in the after corner. '
+       + 'Both of them catalogue things for a living, and neither will keep a list '
+       + 'on the deck.',
+    lamp: 0.6, mirror: true,
+    omit: ['book', 'paper'],                      // both went up onto the shelf
+    extras({ g, sprite, mx }) {
+      // In the corner, not over a bunk: a shelf hung over the head of a berth
+      // takes the berth with it, and the berths are the room.
+      const L = mx(128, 36), R = L + 36, top = 180;
+      sprite('furn', 1, 4, 1, 1, L + 3, 164);     // the ledger, off the deck,
+      sprite('furn', 2, 4, 1, 1, L + 19, 166);    // and the day's list beside it —
+                                                  // the plate goes on over their
+                                                  // feet, so they sit on it
+      g.fillStyle = '#1a1a1a'; g.fillRect(L - 1, top - 1, 38, 10);
+      g.fillStyle = '#8d8d8d'; g.fillRect(L, top, 36, 8);
+      g.fillStyle = '#c4c4c4'; g.fillRect(L, top, 36, 1);   // its fresh cut edge
+      g.fillStyle = '#767676'; g.fillRect(L, top + 7, 36, 1);
+      for (const ux of [L + 4, R - 10]) {
+        g.fillStyle = '#1a1a1a'; g.fillRect(ux - 1, top + 7, 8, 11);  // an upright
+        g.fillStyle = '#5e5e5e'; g.fillRect(ux, top + 8, 6, 9);       // under each end
+        g.fillStyle = '#828282'; g.fillRect(ux, top + 8, 2, 9);
+        g.fillStyle = '#26231e'; g.fillRect(ux - 1, top - 1, 8, 11);  // and the cord
+        g.fillStyle = '#7a6d52'; g.fillRect(ux, top, 6, 9);           // lashing the
+        g.fillStyle = '#4a4335';                                      // plate to it
+        for (let y = top + 1; y < top + 9; y += 3) g.fillRect(ux, y, 6, 1);
+      }
+      g.fillStyle = 'rgba(0,0,0,.3)';             // what it sits in
+      g.fillRect(L, top + 18, 36, 3);
+    },
+  },
+  {
+    id: 'cabin5', name: 'Cabin Five', who: 'Iris Calloway · Osvald Berg',
+    one: 'A locker that is not the ship\'s, shut, and wedged as far into the corner '
+       + 'as it will go. It came up the walk from somewhere and it is on no inventory.',
+    lamp: 0.45, mirror: true,
+    omit: ['book', 'paper'],                      // it stands on both of them
+    extras({ g, sprite, mx }) {
+      // furn(10,3), the closed locker — the one with its door shut, its vents and
+      // its handle. It is 20 x 56, so it fits the corner the wide one overran.
+      const x = mx(146, 20), base = 195;
+      sprite('furn', 10, 3, 1, 2, x, base - 55);
+      g.fillStyle = 'rgba(0,0,0,.45)';            // under it, and nowhere else:
+      g.fillRect(x - 1, base, 22, 3);             // no drag marks, no side shadow
+    },
+  },
+];
+
+const P = '../../public/assets/props/';
+const NEED = { furn: P + 'shelter_furniture.png', walls: P + 'shelter_walls.png' };
+const SH = {};
+let left = Object.keys(NEED).length;
+for (const k in NEED) {
+  const im = new Image();
+  im.onload = () => { SH[k] = im; if (!--left) build(); };
+  im.src = NEED[k];
+}
+
+function build() {
+  const strip = document.getElementById('strip');
+  const zoom = document.getElementById('zoom');
+  for (const spec of CABINS) {
+    const { canvas, clash, floor, wall } = drawCabin(SH, spec);
+
+    const box = document.createElement('div');
+    box.className = 'cab';
+    box.innerHTML = `<h2>${spec.name}</h2><div class="who">${spec.who}</div>`
+      + `<div class="one">${spec.one}</div>`;
+    const c1 = document.createElement('canvas');
+    c1.width = W; c1.height = H;
+    const g1 = c1.getContext('2d'); g1.imageSmoothingEnabled = false;
+    g1.drawImage(canvas, 0, 0);
+    box.appendChild(c1);
+    const log = document.createElement('div');
+    log.className = 'log' + (clash.length ? ' bad' : '');
+    log.textContent = clash.length ? clash.join('\n')
+      : `clean — ${floor.length} on the deck, ${wall.length} on the plate`
+        + `\nlamp ${spec.lamp}${spec.mirror ? ' · starboard' : ''}`;
+    box.appendChild(log);
+    strip.appendChild(box);
+
+    const c2 = document.createElement('canvas');
+    c2.width = W * 3; c2.height = H * 3;
+    const g2 = c2.getContext('2d'); g2.imageSmoothingEnabled = false;
+    g2.drawImage(canvas, 0, 0, W * 3, H * 3);
+    zoom.appendChild(c2);
+  }
+  window.__ready = 1;
+}
+</script>

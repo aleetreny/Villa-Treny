@@ -1,0 +1,26 @@
+[
+  {
+    "zip": "Archive_referencias_por_libreria.zip",
+    "entry": "Ejemplos de sala/Post Apoc Shelter - Asset Pack_4.jpg",
+    "local": "tools/roomlab/reference/shelter-bunk-and-stores.jpg",
+    "sha256": "e51ff0c0ef2af7a56183b72f6a55c1106a7959f63a7eab79daba299a16d447a7"
+  },
+  {
+    "zip": "Archive_referencias_por_libreria.zip",
+    "entry": "Ejemplos de sala/Camping_Set_1.jpg",
+    "local": "tools/roomlab/library/rooms/Camping_Set_1.jpg",
+    "sha256": "83284e72396060bc2a1a55e0b71a7d1e0450818315e0cf4ab9503ca9cd9c9d6a"
+  },
+  {
+    "zip": "Archive.zip",
+    "entry": "Ejemplos de sala/94952f669aa3d5699b1408d76840febd.jpg",
+    "local": "tools/roomlab/library/rooms/Camping_Set_1.jpg",
+    "sha256": "83284e72396060bc2a1a55e0b71a7d1e0450818315e0cf4ab9503ca9cd9c9d6a"
+  },
+  {
+    "zip": "Archive.zip",
+    "entry": "Ejemplos de sala/a3d7f86d1f21b8aa912d92bd24e39542.jpg",
+    "local": "tools/roomlab/reference/shelter-bunk-and-stores.jpg",
+    "sha256": "e51ff0c0ef2af7a56183b72f6a55c1106a7959f63a7eab79daba299a16d447a7"
+  }
+]

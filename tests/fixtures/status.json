@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 5,
+  "worldCodecVersion": 3,
+  "habitatId": "habitat-canonical",
+  "residentCapacity": 25,
+  "mode": "running",
+  "pauseReason": null,
+  "health": "healthy",
+  "worldRevision": 26,
+  "controlRevision": 3,
+  "simTime": {
+    "day": 106,
+    "minute": 720
+  },
+  "lastRun": {
+    "runId": "habitat-canonical:world:25:watch",
+    "committedAtMs": 1788786485817
+  },
+  "nextWatchAtMs": 1788808084141,
+  "nextWake": {
+    "generation": 28,
+    "dueAtMs": 1788808084141,
+    "reason": "clock",
+    "installedAtMs": 1788808084141
+  },
+  "queue": {
+    "counts": {
+      "applied": 16,
+      "dead": 10
+    },
+    "oldestDueAtMs": null
+  },
+  "providers": {
+    "day": "2026-09-07",
+    "resetAtMs": 1788825600000,
+    "usage": [
+      {
+        "provider": "workers-ai",
+        "requests": 5,
+        "input_tokens": 19352,
+        "output_tokens": 1152,
+        "neurons": 128
+      }
+    ],
+    "breakers": [
+      {
+        "provider": "groq",
+        "open_until_ms": 1788808086404,
+        "reason": "rejected",
+        "failure_streak": 1
+      },
+      {
+        "provider": "workers-ai",
+        "open_until_ms": 0,
+        "reason": null,
+        "failure_streak": 0
+      }
+    ],
+    "configured": {
+      "workersAI": true,
+      "groq": true
+    },
+    "recentAttempts": [
+      {
+        "provider": "workers-ai",
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "ok": true,
+        "kind": null,
+        "retryable": false,
+        "retryAtMs": null,
+        "detailCode": null,
+        "latencyMs": 936,
+        "recordedAtMs": 1788796032815
+      },
+      {
+        "provider": "workers-ai",
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "ok": true,
+        "kind": null,
+        "retryable": false,
+        "retryAtMs": null,
+        "detailCode": null,
+        "latencyMs": 809,
+        "recordedAtMs": 1788790108091
+      },
+      {
+        "provider": "workers-ai",
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "ok": false,
+        "kind": "unavailable",
+        "retryable": true,
+        "retryAtMs": null,
+        "detailCode": "TypeError",
+        "latencyMs": 1671,
+        "recordedAtMs": 1788786485817
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "ok": false,
+        "kind": "quota-exhausted",
+        "retryable": true,
+        "retryAtMs": 1788808086404,
+        "detailCode": "local_cost_firewall",
+        "latencyMs": 0,
+        "recordedAtMs": 1788786485817
+      },
+      {
+        "provider": "workers-ai",
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "ok": false,
+        "kind": "unavailable",
+        "retryable": true,
+        "retryAtMs": null,
+        "detailCode": "TypeError",
+        "latencyMs": 2172,
+        "recordedAtMs": 1788764886314
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "ok": false,
+        "kind": "quota-exhausted",
+        "retryable": true,
+        "retryAtMs": 1788808086404,
+        "detailCode": "local_cost_firewall",
+        "latencyMs": 0,
+        "recordedAtMs": 1788764886314
+      },
+      {
+        "provider": "workers-ai",
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "ok": false,
+        "kind": "unavailable",
+        "retryable": true,
+        "retryAtMs": null,
+        "detailCode": "TypeError",
+        "latencyMs": 1074,
+        "recordedAtMs": 1788743285216
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "ok": false,
+        "kind": "quota-exhausted",
+        "retryable": true,
+        "retryAtMs": 1788808086404,
+        "detailCode": "local_cost_firewall",
+        "latencyMs": 0,
+        "recordedAtMs": 1788743285216
+      }
+    ]
+  },
+  "lastErrorCode": null
+}

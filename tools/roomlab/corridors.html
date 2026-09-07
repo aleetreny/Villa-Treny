@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasillos de la nave · Night Shift Habitat · RoomLab</title>
+<style>
+  :root{color-scheme:dark;--paper:#0b0e12;--panel:#11161d;--line:#28313f;--ink:#edf2f8;--muted:#9aa8bb;--route:#62e8d2}
+  *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+  header{padding:20px 24px 17px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:14px;font-weight:600;letter-spacing:.08em}.intro{margin:7px 0 0;color:var(--muted);max-width:1000px}
+  a{color:#b5c8df;text-underline-offset:3px}a:hover{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--route);outline-offset:4px}
+  .controls,nav{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin-top:12px;color:#b5c8df}.controls input{accent-color:var(--route)}
+  main{max-width:1760px;margin:auto;padding:24px}.group{scroll-margin-top:20px}.group+.group{margin-top:36px}
+  h2{margin:0;font-size:13px;font-weight:600;letter-spacing:.06em}.group-note{margin:5px 0 16px;color:var(--muted)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,800px),1fr));gap:22px;align-items:start}
+  .approved{grid-template-columns:minmax(0,1fr) minmax(240px,.55fr)}.approved .longwalk{grid-row:span 2}
+  figure{min-width:0;margin:0;background:var(--panel);border:1px solid var(--line);padding:16px}
+  h3{margin:0 0 3px;font-size:13px;font-weight:600;letter-spacing:.04em}.meta{color:var(--muted);margin-bottom:14px}
+  .viewport{max-width:100%;overflow-x:auto;padding:1px;overscroll-behavior-x:contain}
+  .stage{position:relative;width:max-content;margin:auto;isolation:isolate;box-shadow:0 0 0 1px #050608}
+  canvas{display:block;image-rendering:pixelated;width:calc(var(--w) * var(--zoom));height:calc(var(--h) * var(--zoom));max-width:none}
+  .walk{position:absolute;inset:0;pointer-events:none;opacity:0}.show-path .walk{opacity:1}
+  .walk i{position:absolute;background:rgba(98,232,210,.22);box-shadow:inset 0 0 0 1px rgba(98,232,210,.42)}
+  .walk i.exit{background:rgba(255,220,112,.38);box-shadow:inset 0 0 0 2px rgba(255,220,112,.9)}
+  .walk i.sealed{background:rgba(238,91,91,.42);box-shadow:inset 0 0 0 2px rgba(238,91,91,.92)}
+  .runner{position:absolute;pointer-events:none;z-index:1;background:rgba(255,233,154,.35);box-shadow:inset 0 0 0 3px #ffe99a}
+  .runner[hidden]{display:none}figcaption{margin-top:14px;color:var(--muted)}.ok{color:var(--route)}.blocked{color:#ff9696}
+  .exits{display:flex;flex-wrap:wrap;gap:5px 16px;margin:8px 0}.exit-label{white-space:nowrap}.sources{margin-top:9px;overflow-wrap:anywhere}
+  .sources summary{cursor:pointer;color:#b5c8df}.source-list{margin-top:7px;font-size:11px}.source-list p{margin:4px 0}
+  .traverse{margin-top:13px;padding-top:12px;border-top:1px solid var(--line)}.traverse p{margin:0 0 7px}.traverse-controls{display:flex;flex-wrap:wrap;gap:8px}
+  .explore-link{display:inline-block;margin-top:14px;padding:10px 14px;background:#203c3b;color:#d7fff7;border:1px solid #49756e;text-decoration:none}.network-viewport{max-height:340px;overflow:auto}.network-caption{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  button{border:1px solid #425069;border-radius:3px;padding:7px 10px;background:#1b2532;color:var(--ink);font:inherit;cursor:pointer}button:hover{background:#263449}button:disabled{opacity:.45;cursor:default}
+  output{display:block;margin-top:8px;min-height:19px;color:#b5c8df}.legend{font-size:11px;color:var(--muted)}
+  @media(max-width:1050px){.approved{grid-template-columns:1fr}.approved .longwalk{grid-row:auto}}
+  @media(max-width:600px){header{padding:17px 14px}main{padding:20px 12px}figure{padding:12px}.meta{font-size:11px}}
+</style>
+<header>
+  <h1>NIGHT SHIFT HABITAT · PASILLOS DE LA NAVE</h1>
+  <p class="intro">Una red completa con un estilo común, accesos abiertos y pequeños halls por familias de salas. El explorador permite caminar, entrar y volver con un fundido, manteniendo el minimapa a la izquierda.</p>
+  <a class="explore-link" href="./explore.html">Recorrer toda la nave →</a>
+  <nav aria-label="Secciones"><a href="#network-corridors">La red completa</a><a href="#new-corridors">Estudios: los tres nuevos</a><a href="#approved-corridors">Estudios: los tres primeros</a><a href="./corridor-sources.md">Recortes y coordenadas del ZIP</a></nav>
+  <label class="controls"><span><input id="paths" type="checkbox"> Mostrar cuadrícula transitable</span><span class="legend">Cian: recorrido · amarillo: salida · rojo: acceso sellado</span></label>
+</header>
+<main id="root">
+  <section class="group" id="network-corridors" aria-labelledby="network-title">
+    <h2 id="network-title">LA RED COMPLETA · PARA REVISIÓN</h2>
+    <p class="group-note">Un eje y nueve alas. Las imágenes largas se pueden desplazar; «Caminar aquí» abre ese tramo. Cada hueco lleva a una sala existente. El espacio libre se comprueba con una cuadrícula de 4 píxeles.</p>
+    <div class="cards" id="network-cards"></div>
+  </section>
+  <section class="group" id="new-corridors" aria-labelledby="new-title">
+    <h2 id="new-title">ESTUDIOS INICIALES · LOS TRES NUEVOS</h2>
+    <p class="group-note">The Landing, The Cut y The Green Run. «Recorrer» muestra una celda a la vez siguiendo la cuadrícula real.</p>
+    <div class="cards" id="new-cards"></div>
+  </section>
+  <section class="group" id="approved-corridors" aria-labelledby="approved-title">
+    <h2 id="approved-title">ESTUDIOS INICIALES · LOS TRES PRIMEROS</h2>
+    <p class="group-note">The Climb, The Long Walk y The Throat. Los accesos transitables son huecos en la pared, sin puertas ni marcos.</p>
+    <div class="cards approved" id="approved-cards"></div>
+  </section>
+</main>
+<script type="module">
+import { CORRIDORS, CORRIDOR_MANIFEST, corridorReachability, drawCorridor, loadCorridorSources } from './corridor-kit.js?v=corridors-5';
+import { createCorridorArt } from './explorer-corridor-art.js';
+
+const sources=await loadCorridorSources();
+const cards=[];
+const newKeys=['landing','cut','greenrun'];
+const roomPages={
+  'Workshops':'./workshops.html', 'Common':'./canon-partials.html',
+  'Administration':'./offices.html', 'Hydroponics Yard':'./outside.html',
+  'Shelter Entrance':'./outside.html', 'Infirmary':'./infirmary.html',
+  'Bridge':'./canon-partials.html', 'Dock':'./canon-partials.html',
+  'Hold':'./canon-partials.html', 'Breach':'./canon-partials.html',
+  'Cabin One':'./cabins.html', 'Cabin Two':'./cabins.html',
+  'Cabin Three':'./cabins.html', 'Cabin Four':'./cabins.html', 'Cabin Five':'./cabins.html',
+};
+
+// The diagnostic marker follows a four-neighbour BFS on the same declared
+// grid used by corridorReachability. It never draws into the artwork canvas.
+function findRoute(spec,start,end){
+  const id=({x,y})=>`${x},${y}`;
+  const pending=[start], previous=new Map([[id(start),null]]);
+  for(let index=0;index<pending.length;index++){
+    const here=pending[index];
+    if(id(here)===id(end)){
+      const route=[];
+      for(let cell=here;cell;cell=previous.get(id(cell)))route.push(cell);
+      return route.reverse();
+    }
+    for(const [x,y] of [[here.x+1,here.y],[here.x-1,here.y],[here.x,here.y+1],[here.x,here.y-1]]){
+      const cell=spec.grid[y]?.[x];
+      if(cell===undefined||'#X'.includes(cell)||previous.has(`${x},${y}`))continue;
+      const next={x,y};previous.set(id(next),here);pending.push(next);
+    }
+  }
+  return [];
+}
+
+function placeCell(mark,x,y,cw,ch,zoom){
+  mark.style.left=(x*cw*zoom)+'px';mark.style.top=(y*ch*zoom)+'px';
+  mark.style.width=(cw*zoom)+'px';mark.style.height=(ch*zoom)+'px';
+}
+
+function addTraversal(figure,stage,spec,cw,ch){
+  const exits=spec.exits.filter(exit=>!exit.sealed);
+  const box=document.createElement('div');box.className='traverse';
+  box.innerHTML='<p>Prueba de recorrido <span class="legend">· marcador diagnóstico, externo al arte</span></p><div class="traverse-controls"><button type="button" data-action="traverse">Recorrer</button><button type="button" data-action="reverse">Invertir sentido</button><button type="button" data-action="clear" disabled>Quitar marcador</button></div><output aria-live="polite"></output>';
+  const run=box.querySelector('[data-action="traverse"]');
+  const reverse=box.querySelector('[data-action="reverse"]');
+  const clear=box.querySelector('[data-action="clear"]');
+  const status=box.querySelector('output');
+  const runner=document.createElement('div');runner.className='runner';runner.hidden=true;runner.setAttribute('aria-hidden','true');stage.appendChild(runner);
+  let backwards=false,timer=null;
+  const ends=()=>backwards?[exits[1],exits[0]]:[exits[0],exits[1]];
+  const describe=()=>ends().map(exit=>`${exit.room} (${exit.x},${exit.y})`).join(' → ');
+  const stop=()=>{clearInterval(timer);timer=null;run.disabled=false;reverse.disabled=false;};
+  const reset=()=>{stop();runner.hidden=true;clear.disabled=true;status.textContent=describe();};
+  run.addEventListener('click',()=>{
+    stop();
+    const [start,end]=ends(),route=findRoute(spec,start,end);
+    if(!route.length){status.textContent='No existe una ruta continua entre estas salidas.';return;}
+    run.disabled=true;reverse.disabled=true;clear.disabled=false;
+    let step=0;runner.hidden=false;
+    const advance=()=>{
+      const cell=route[step];placeCell(runner,cell.x,cell.y,cw,ch,spec.zoom);
+      runner.dataset.x=cell.x;runner.dataset.y=cell.y;
+      status.textContent=`${describe()} · ${step+1}/${route.length} celdas`;
+      step++;
+      if(step===route.length){stop();status.textContent+= ' · llegada';}
+    };
+    advance();
+    if(step<route.length)timer=setInterval(advance,160);
+  });
+  reverse.addEventListener('click',()=>{backwards=!backwards;reset();});
+  clear.addEventListener('click',reset);
+  reset();figure.appendChild(box);
+}
+
+for(const key of [...newKeys,'climb','longwalk','throat']){
+  const spec=CORRIDORS[key],result=corridorReachability(key);
+  const figure=document.createElement('figure');figure.className=key;figure.id=key;
+  figure.innerHTML=`<h3>${spec.label}</h3><div class="meta">${spec.W}×${spec.H} píxeles originales · escala ${spec.zoom}× · ${result.liveExits} salidas utilizables</div>`;
+  const viewport=document.createElement('div');viewport.className='viewport';viewport.tabIndex=0;viewport.setAttribute('role','region');viewport.setAttribute('aria-label',`${spec.label}: imagen a escala entera; desplazamiento horizontal disponible`);
+  const stage=document.createElement('div');stage.className='stage';
+  stage.style.setProperty('--w',spec.W+'px');stage.style.setProperty('--h',spec.H+'px');stage.style.setProperty('--zoom',spec.zoom);
+  const canvas=document.createElement('canvas');canvas.width=spec.W;canvas.height=spec.H;canvas.dataset.corridor=key;canvas.setAttribute('role','img');canvas.setAttribute('aria-label',spec.label+' · '+spec.exits.filter(exit=>!exit.sealed).map(exit=>exit.room).join(' ↔ '));
+  drawCorridor(canvas.getContext('2d'),sources,key);stage.appendChild(canvas);
+  const overlay=document.createElement('div');overlay.className='walk';overlay.setAttribute('aria-hidden','true');
+  const rows=spec.grid.length,cols=spec.grid[0].length,cw=spec.W/cols,ch=spec.H/rows;
+  spec.grid.forEach((row,y)=>[...row].forEach((cell,x)=>{
+    if('#X'.includes(cell))return;
+    const mark=document.createElement('i');placeCell(mark,x,y,cw,ch,spec.zoom);
+    if(spec.exits.some(exit=>exit.x===x&&exit.y===y))mark.classList.add('exit');
+    overlay.appendChild(mark);
+  }));
+  for(const exit of spec.exits.filter(exit=>exit.sealed)){
+    const mark=document.createElement('i');mark.className='sealed';placeCell(mark,exit.x,exit.y,cw,ch,spec.zoom);overlay.appendChild(mark);
+  }
+  stage.appendChild(overlay);viewport.appendChild(stage);figure.appendChild(viewport);
+  const caption=document.createElement('figcaption');
+  caption.innerHTML=`<span class="${result.connected?'ok':'blocked'}">${result.connected?'CONECTADO':'BLOQUEADO'}</span> · ${result.reachable} celdas alcanzables · coordenadas (columna, fila), desde 0`;
+  const exits=document.createElement('div');exits.className='exits';
+  for(const exit of spec.exits){
+    const label=document.createElement('span');label.className='exit-label';
+    const name=document.createElement(roomPages[exit.room]?'a':'span');name.textContent=exit.room;
+    if(roomPages[exit.room])name.href=roomPages[exit.room];
+    label.append(name,` (${exit.x},${exit.y})${exit.sealed?' · sellado':''}`);exits.appendChild(label);
+  }
+  caption.appendChild(exits);
+  const manifest=document.createElement('details');manifest.className='sources';
+  const summary=document.createElement('summary');summary.textContent='Ver elementos originales del ZIP';manifest.appendChild(summary);
+  const list=document.createElement('div');list.className='source-list';
+  for(const source of CORRIDOR_MANIFEST[key]){const line=document.createElement('p');line.textContent=source;list.appendChild(line);}
+  manifest.appendChild(list);caption.appendChild(manifest);figure.appendChild(caption);
+  if(newKeys.includes(key))addTraversal(figure,stage,spec,cw,ch);
+  document.getElementById(newKeys.includes(key)?'new-cards':'approved-cards').appendChild(figure);cards.push(stage);
+}
+const network=await fetch('./explorer-network.json',{cache:'no-store'}).then(response=>response.json());
+for(const scene of network.scenes.filter(scene=>scene.kind==='corridor')){
+  const art=await createCorridorArt(scene);
+  const figure=document.createElement('figure');figure.id='network-'+scene.corridorId;
+  const title=document.createElement('h3');title.textContent=scene.name;
+  const meta=document.createElement('p');meta.className='meta';meta.textContent=`${art.canvas.width}×${art.canvas.height} píxeles · ${scene.exits.length} accesos · escala 1×`;
+  const viewport=document.createElement('div');viewport.className='viewport network-viewport';viewport.tabIndex=0;viewport.setAttribute('role','region');viewport.setAttribute('aria-label',scene.name+': imagen con desplazamiento');
+  const stage=document.createElement('div');stage.className='stage';
+  stage.style.setProperty('--w',art.canvas.width+'px');stage.style.setProperty('--h',art.canvas.height+'px');stage.style.setProperty('--zoom',1);
+  art.canvas.dataset.network=scene.id;art.canvas.setAttribute('role','img');art.canvas.setAttribute('aria-label',scene.name);
+  stage.appendChild(art.canvas);
+  const overlay=document.createElement('div');overlay.className='walk';overlay.setAttribute('aria-hidden','true');
+  art.grid.forEach((row,y)=>{
+    for(let x=0;x<row.length;){
+      if(row[x]!=='.'){x++;continue;}
+      const start=x;while(x<row.length&&row[x]==='.')x++;
+      const mark=document.createElement('i');placeCell(mark,start,y,4,4,1);mark.style.width=(x-start)*4+'px';overlay.appendChild(mark);
+    }
+  });
+  for(const exit of art.exits){const mark=document.createElement('i');mark.className='exit';placeCell(mark,exit.at.x,exit.at.y,4,4,1);overlay.appendChild(mark);}
+  stage.appendChild(overlay);viewport.appendChild(stage);cards.push(stage);
+  const caption=document.createElement('figcaption');caption.className='network-caption';
+  const destinations=document.createElement('span');destinations.textContent=scene.exits.map(exit=>network.scenes.find(item=>item.id===exit.to).name).join(' · ');
+  const link=document.createElement('a');link.href='./explore.html?scene='+encodeURIComponent(scene.id);link.textContent='Caminar aquí →';
+  caption.append(destinations,link);figure.append(title,meta,viewport,caption);document.getElementById('network-cards').appendChild(figure);
+}
+document.getElementById('paths').addEventListener('change',event=>cards.forEach(card=>card.classList.toggle('show-path',event.target.checked)));
+window.__corridorReport=Object.fromEntries(Object.keys(CORRIDORS).map(key=>[key,corridorReachability(key)]));
+window.__ready=1;
+</script>
+</html>

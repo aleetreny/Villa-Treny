@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<title>The Face · exact ZIP room · RoomLab</title>
+<style>
+  :root{color-scheme:dark}*{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:#090b0e;color:#bec7dc;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+  header{padding:18px 20px 8px}h1{margin:0;color:#f0f2f8;font-size:14px;font-weight:500;letter-spacing:.08em}
+  p{margin:5px 0 0;color:#77839f;max-width:880px}main{padding:18px 20px 34px}
+  figure{max-width:1120px;margin:0;padding:14px;background:#10131a;border:1px solid #242b39;box-shadow:0 14px 40px rgba(0,0,0,.2)}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}.panel{min-height:390px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;background:#0b0e13;border:1px solid #1c2230;padding:12px;overflow:hidden}
+  .panel small{align-self:stretch;margin-bottom:10px;color:#66718d;text-transform:uppercase;letter-spacing:.1em}canvas,.reference{display:block;max-width:100%;height:auto;image-rendering:pixelated}
+  figcaption{padding-top:11px;color:#7f8ba8}figcaption b{color:#eef1f8;font-weight:500}figcaption span{color:#d5a95a}code{color:#9ec6ef}
+  @media(max-width:760px){.compare{grid-template-columns:1fr}.panel{min-height:260px}}
+</style>
+<header><h1>THE FACE · STOPPED EXCAVATION</h1><p>The unused shelter-mouth composition already contains the entire frontier vocabulary, so the output is a literal native-scale copy.</p></header>
+<main><figure><div class="compare"><div class="panel"><small>ZIP reference</small><img class="reference" alt="The Face ZIP reference"></div><div class="panel"><small>exact room crop</small><canvas data-room="face"></canvas></div></div><figcaption><b>The Face</b> · 216×144 native · <span>boarded mouth, spoil, shovel and a path that stops</span><br><code>exact 4x ZIP composition crop</code></figcaption></figure></main>
+<script type="module">
+import { FACE, FACE_SOURCE, drawFace, loadFaceSource } from './face-kit.js?v=face-1';
+const source=await loadFaceSource(); document.querySelector('.reference').src=FACE_SOURCE;
+const native=document.createElement('canvas'); native.width=FACE.W; native.height=FACE.H; drawFace(native.getContext('2d'),source);
+const canvas=document.querySelector('canvas'); canvas.width=FACE.W*3; canvas.height=FACE.H*3; const g=canvas.getContext('2d'); g.imageSmoothingEnabled=false; g.drawImage(native,0,0,canvas.width,canvas.height);
+window.__ready=1;
+</script>

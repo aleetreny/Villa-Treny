@@ -1,0 +1,2 @@
+import { cloudflareTest } from '/Users/alejandrotreny/Documents/ChatGPT/Portfolio/workers/habitat-runtime/node_modules/@cloudflare/vitest-plugin/dist/pool/index.mjs';
+export default { root:'/Users/alejandrotreny/Documents/ChatGPT/Portfolio/workers/habitat-runtime', cacheDir:'/tmp/habitat-worker-audit-cache', plugins:[cloudflareTest({remoteBindings:false,wrangler:{configPath:'/Users/alejandrotreny/Documents/ChatGPT/Portfolio/workers/habitat-runtime/wrangler.jsonc'}})],test:{include:['/tmp/habitat-worker-deep-audit.test.ts']}};

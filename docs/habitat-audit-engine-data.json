@@ -1,0 +1,5026 @@
+{
+  "oneWater": {
+    "choices": [
+      {
+        "verb": "go",
+        "actor": "A",
+        "room": "archive"
+      },
+      {
+        "verb": "go",
+        "actor": "B",
+        "room": "longwalk"
+      },
+      {
+        "verb": "go",
+        "actor": "C",
+        "room": "hold"
+      }
+    ],
+    "failure": {
+      "watch": 0,
+      "message": "No unoccupied walkable tile remains in garden",
+      "rooms": {
+        "hold": 2,
+        "infirmary": 1,
+        "camp": 1,
+        "garden": 18,
+        "common": 1,
+        "workshops": 1,
+        "face": 1
+      }
+    },
+    "stock": {
+      "produce": 0,
+      "meals": 0,
+      "water": 1,
+      "materials": 16
+    },
+    "conditions": {
+      "rested": {
+        "min": 58.999999999999986,
+        "max": 87.39999999999999
+      },
+      "fed": {
+        "min": 20,
+        "max": 20
+      },
+      "well": {
+        "min": 71,
+        "max": 95
+      },
+      "safe": {
+        "min": 57,
+        "max": 84
+      },
+      "accompanied": {
+        "min": 40,
+        "max": 83
+      }
+    },
+    "lastMemories": [
+      {
+        "kind": "grow",
+        "outcome": "not enough water for the trays",
+        "day": 100,
+        "watch": 1
+      }
+    ]
+  },
+  "overwrittenCognition": {
+    "intent": {
+      "actor": "A",
+      "verb": "go",
+      "room": "archive"
+    },
+    "valid": null,
+    "finalRoom": "records",
+    "doing": "writing something down",
+    "lastThoughtWatch": 400,
+    "memory": []
+  },
+  "remoteMemory": {
+    "targetRoom": "hold",
+    "actorRoom": "garden",
+    "decoded": {
+      "ok": true,
+      "intent": {
+        "actor": "V",
+        "verb": "grow",
+        "target": "B"
+      }
+    },
+    "outcome": {
+      "ok": true,
+      "happening": {
+        "room": "garden",
+        "who": [
+          "V"
+        ],
+        "text": "Vero harvested 16 produce; 2 water used.",
+        "kind": "work"
+      }
+    },
+    "targetMemory": [
+      {
+        "kind": "grow",
+        "other": "V",
+        "outcome": "Vero harvested 16 produce; 2 water used.",
+        "day": 100,
+        "watch": 1
+      }
+    ]
+  },
+  "codec": [
+    {
+      "name": "offGrid",
+      "accepted": true
+    },
+    {
+      "name": "duplicateBodyId",
+      "accepted": true
+    },
+    {
+      "name": "duplicatePosition",
+      "accepted": true
+    },
+    {
+      "name": "futureThought",
+      "accepted": true
+    },
+    {
+      "name": "negativeCalendarRelation",
+      "accepted": true
+    }
+  ],
+  "failedThoughts": {
+    "selected": {
+      "T": 360
+    },
+    "distinct": 1
+  },
+  "socialRaces": {
+    "offered": 1170,
+    "refused": 426,
+    "examples": [
+      {
+        "day": 100,
+        "watch": 4,
+        "intent": {
+          "verb": "speak",
+          "actor": "S",
+          "target": "A"
+        },
+        "before": {
+          "actorRoom": "common",
+          "targetRoom": "common"
+        },
+        "after": {
+          "actorRoom": "common",
+          "targetRoom": "records"
+        },
+        "memory": {
+          "kind": "speak",
+          "other": "A",
+          "outcome": "not in the same room",
+          "day": 100,
+          "watch": 3
+        }
+      },
+      {
+        "day": 102,
+        "watch": 2,
+        "intent": {
+          "verb": "speak",
+          "actor": "I",
+          "target": "O"
+        },
+        "before": {
+          "actorRoom": "cabin5",
+          "targetRoom": "cabin5"
+        },
+        "after": {
+          "actorRoom": "cabin5",
+          "targetRoom": "well"
+        },
+        "memory": {
+          "kind": "speak",
+          "other": "O",
+          "outcome": "not in the same room",
+          "day": 102,
+          "watch": 1
+        }
+      },
+      {
+        "day": 103,
+        "watch": 1,
+        "intent": {
+          "verb": "speak",
+          "actor": "E",
+          "target": "H"
+        },
+        "before": {
+          "actorRoom": "common",
+          "targetRoom": "common"
+        },
+        "after": {
+          "actorRoom": "common",
+          "targetRoom": "cabin2"
+        },
+        "memory": {
+          "kind": "speak",
+          "other": "H",
+          "outcome": "not in the same room",
+          "day": 102,
+          "watch": 4
+        }
+      },
+      {
+        "day": 103,
+        "watch": 2,
+        "intent": {
+          "verb": "speak",
+          "actor": "J",
+          "target": "K"
+        },
+        "before": {
+          "actorRoom": "dig3",
+          "targetRoom": "dig3"
+        },
+        "after": {
+          "actorRoom": "dig3",
+          "targetRoom": "dispatch"
+        },
+        "memory": {
+          "kind": "speak",
+          "other": "K",
+          "outcome": "not in the same room",
+          "day": 103,
+          "watch": 1
+        }
+      }
+    ]
+  },
+  "powerlessProduction": [
+    {
+      "intent": {
+        "actor": "V",
+        "verb": "grow"
+      },
+      "before": {
+        "produce": 60,
+        "meals": 100,
+        "water": 250,
+        "materials": 16
+      },
+      "after": {
+        "produce": 76,
+        "meals": 100,
+        "water": 248,
+        "materials": 16
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "garden",
+          "who": [
+            "V"
+          ],
+          "text": "Vero harvested 16 produce; 2 water used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "intent": {
+        "actor": "E",
+        "verb": "cook"
+      },
+      "before": {
+        "produce": 76,
+        "meals": 100,
+        "water": 248,
+        "materials": 16
+      },
+      "after": {
+        "produce": 72,
+        "meals": 108,
+        "water": 247,
+        "materials": 16
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "common",
+          "who": [
+            "E"
+          ],
+          "text": "Edda cooked 8 meals from 4 produce and 1 water.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "intent": {
+        "actor": "O",
+        "verb": "clean"
+      },
+      "before": {
+        "produce": 72,
+        "meals": 108,
+        "water": 247,
+        "materials": 16
+      },
+      "after": {
+        "produce": 72,
+        "meals": 108,
+        "water": 271,
+        "materials": 16
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "well",
+          "who": [
+            "O"
+          ],
+          "text": "Osvald filtered 24 water at the well.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "intent": {
+        "actor": "F",
+        "verb": "dig"
+      },
+      "before": {
+        "produce": 72,
+        "meals": 108,
+        "water": 271,
+        "materials": 16
+      },
+      "after": {
+        "produce": 72,
+        "meals": 108,
+        "water": 270,
+        "materials": 20
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "F"
+          ],
+          "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      }
+    }
+  ],
+  "longRun": [
+    {
+      "elapsed": 90,
+      "day": 190,
+      "power": 0.9202000000000001,
+      "stock": {
+        "produce": 76,
+        "meals": 65,
+        "water": 135,
+        "materials": 31
+      },
+      "treasury": 82.20160000000003,
+      "money": 383.1726498301906,
+      "accountingError": 3.979039320256561e-13,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000059,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 71,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 13,
+          "max": 90,
+          "critical": 1
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 29,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 24,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 0,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 0,
+          "at0": 493
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 20
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 2080,
+        "dig": 64,
+        "listen": 145,
+        "charge": 410,
+        "note": 158,
+        "grow": 56,
+        "inspect": 396,
+        "ask": 165,
+        "go": 19925,
+        "eat": 1795,
+        "accompany": 299,
+        "sleep": 2250,
+        "console": 90,
+        "speak": 369,
+        "repair": 41,
+        "cook": 220,
+        "joke": 91,
+        "trade": 200,
+        "clean": 87,
+        "confide": 57,
+        "teach": 6,
+        "give": 3,
+        "lend": 4,
+        "repay": 8,
+        "wash": 6
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 0,
+      "record": 32,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 64,
+        "meals": 61,
+        "water": 102,
+        "materials": 26
+      },
+      "treasury": 86.3512,
+      "money": 237.24393961725207,
+      "accountingError": 4.433786671143025e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000016,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 75,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 25,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 88,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 69,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 3,
+          "at0": 484
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 91
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8089,
+        "dig": 260,
+        "listen": 218,
+        "charge": 1517,
+        "note": 611,
+        "grow": 227,
+        "inspect": 1454,
+        "ask": 395,
+        "go": 80447,
+        "eat": 7295,
+        "accompany": 953,
+        "sleep": 9125,
+        "console": 298,
+        "speak": 1456,
+        "repair": 192,
+        "cook": 907,
+        "joke": 698,
+        "trade": 838,
+        "clean": 372,
+        "confide": 428,
+        "teach": 44,
+        "give": 275,
+        "lend": 260,
+        "repay": 505,
+        "wash": 80,
+        "argue": 1,
+        "rest": 2
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 9,
+      "record": 34,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 1000,
+      "day": 1100,
+      "power": 0.720000000000002,
+      "stock": {
+        "produce": 64,
+        "meals": 65,
+        "water": 128,
+        "materials": 28
+      },
+      "treasury": 84.62220000000005,
+      "money": 231.2671917139274,
+      "accountingError": 4.604316927725449e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 42.999999999998884,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 66,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 32,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 147,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 100,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 24,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 9,
+          "at0": 439
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 138
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 21525,
+        "dig": 716,
+        "listen": 268,
+        "charge": 3678,
+        "note": 1640,
+        "grow": 624,
+        "inspect": 3871,
+        "ask": 696,
+        "go": 218621,
+        "eat": 19995,
+        "accompany": 2477,
+        "sleep": 25000,
+        "console": 773,
+        "speak": 3553,
+        "repair": 561,
+        "cook": 2495,
+        "joke": 1820,
+        "trade": 2291,
+        "clean": 1035,
+        "confide": 1203,
+        "teach": 373,
+        "give": 1450,
+        "lend": 1231,
+        "repay": 2453,
+        "wash": 254,
+        "argue": 2,
+        "rest": 16
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 6,
+      "record": 33,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 2000,
+      "day": 2100,
+      "power": 0.500000000000004,
+      "stock": {
+        "produce": 64,
+        "meals": 65,
+        "water": 126,
+        "materials": 27
+      },
+      "treasury": 82.2016,
+      "money": 241.44557844640303,
+      "accountingError": -2.773958840407431e-11,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.99999999999877,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 86,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 18,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 245,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 163,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 47,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 29,
+          "at0": 380
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 196
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 42878,
+        "dig": 1432,
+        "listen": 324,
+        "charge": 7184,
+        "note": 3270,
+        "grow": 1249,
+        "inspect": 7634,
+        "ask": 1120,
+        "go": 436185,
+        "eat": 39995,
+        "accompany": 4618,
+        "sleep": 50000,
+        "console": 1557,
+        "speak": 6807,
+        "repair": 1144,
+        "cook": 4995,
+        "joke": 3586,
+        "trade": 4573,
+        "clean": 2077,
+        "confide": 2412,
+        "teach": 1060,
+        "give": 3588,
+        "lend": 2652,
+        "repay": 5298,
+        "wash": 526,
+        "argue": 3,
+        "rest": 18
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 4,
+      "record": 27,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 2700,
+      "day": 2800,
+      "power": 0.3460000000000054,
+      "stock": {
+        "produce": 0,
+        "meals": 6,
+        "water": 24,
+        "materials": 29
+      },
+      "treasury": 4.798939023942239e-16,
+      "money": 8.030407479017407,
+      "accountingError": 5.8202331842949206e-11,
+      "dark": [
+        "breach",
+        "maindiner",
+        "sodabar"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "fed": {
+          "min": 0,
+          "max": 10,
+          "critical": 25
+        },
+        "well": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "safe": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "accompanied": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 301,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 194,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 55,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 37,
+          "at0": 264
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 236
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 62653,
+        "dig": 1849,
+        "listen": 354,
+        "charge": 9541,
+        "note": 4250,
+        "grow": 1663,
+        "inspect": 9864,
+        "ask": 1399,
+        "go": 575375,
+        "eat": 53430,
+        "accompany": 6252,
+        "sleep": 65969,
+        "console": 2288,
+        "speak": 8878,
+        "repair": 1507,
+        "cook": 6667,
+        "joke": 4635,
+        "trade": 5876,
+        "clean": 2771,
+        "confide": 3144,
+        "teach": 1545,
+        "give": 4637,
+        "lend": 3291,
+        "repay": 6581,
+        "wash": 729,
+        "argue": 3,
+        "rest": 224
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 1,
+      "record": 3,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 2800,
+      "day": 2900,
+      "power": 0.3240000000000056,
+      "stock": {
+        "produce": 4,
+        "meals": 2,
+        "water": 15,
+        "materials": 29
+      },
+      "treasury": 0,
+      "money": 2.401220495370905,
+      "accountingError": 4.943734310813852e-11,
+      "dark": [
+        "breach",
+        "hearth",
+        "servicecounter",
+        "maindiner",
+        "sodabar"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "fed": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "well": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "safe": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "accompanied": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 301,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 194,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 55,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 37,
+          "at0": 264
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 236
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 72619,
+        "dig": 1849,
+        "listen": 354,
+        "charge": 9541,
+        "note": 4250,
+        "grow": 1664,
+        "inspect": 9864,
+        "ask": 1399,
+        "go": 575389,
+        "eat": 53458,
+        "accompany": 6252,
+        "sleep": 65970,
+        "console": 2288,
+        "speak": 8878,
+        "repair": 1507,
+        "cook": 6670,
+        "joke": 4635,
+        "trade": 5876,
+        "clean": 2772,
+        "confide": 3144,
+        "teach": 1545,
+        "give": 4637,
+        "lend": 3291,
+        "repay": 6581,
+        "wash": 729,
+        "argue": 3,
+        "rest": 224
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 1,
+      "record": 1,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 3000,
+      "day": 3100,
+      "power": 0.280000000000006,
+      "stock": {
+        "produce": 4,
+        "meals": 2,
+        "water": 15,
+        "materials": 29
+      },
+      "treasury": 0,
+      "money": 0.2146945198680748,
+      "accountingError": 3.249961411100344e-11,
+      "dark": [
+        "bridge",
+        "dock",
+        "breach",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "face"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "fed": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "well": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "safe": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "accompanied": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 301,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 194,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 55,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 37,
+          "at0": 264
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 236
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 92619,
+        "dig": 1849,
+        "listen": 354,
+        "charge": 9541,
+        "note": 4250,
+        "grow": 1664,
+        "inspect": 9864,
+        "ask": 1399,
+        "go": 575389,
+        "eat": 53458,
+        "accompany": 6252,
+        "sleep": 65970,
+        "console": 2288,
+        "speak": 8878,
+        "repair": 1507,
+        "cook": 6670,
+        "joke": 4635,
+        "trade": 5876,
+        "clean": 2772,
+        "confide": 3144,
+        "teach": 1545,
+        "give": 4637,
+        "lend": 3291,
+        "repay": 6581,
+        "wash": 729,
+        "argue": 3,
+        "rest": 224
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 1,
+      "record": 1,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 4000,
+      "day": 4100,
+      "power": 0.06000000000000805,
+      "stock": {
+        "produce": 4,
+        "meals": 2,
+        "water": 15,
+        "materials": 29
+      },
+      "treasury": 0,
+      "money": 0.000001226776778628625,
+      "accountingError": 4.941538259758175e-11,
+      "dark": [
+        "bridge",
+        "dock",
+        "longwalk",
+        "cabin1",
+        "cabin2",
+        "cabin3",
+        "cabin4",
+        "cabin5",
+        "breach",
+        "hold",
+        "infirmary",
+        "dispatch",
+        "archive",
+        "records",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "row",
+        "games",
+        "dig1",
+        "dig2",
+        "dig3",
+        "dig4",
+        "dig5",
+        "dig6",
+        "workshops",
+        "face"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "fed": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "well": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "safe": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "accompanied": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 301,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 194,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 55,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 37,
+          "at0": 264
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 236
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 192619,
+        "dig": 1849,
+        "listen": 354,
+        "charge": 9541,
+        "note": 4250,
+        "grow": 1664,
+        "inspect": 9864,
+        "ask": 1399,
+        "go": 575389,
+        "eat": 53458,
+        "accompany": 6252,
+        "sleep": 65970,
+        "console": 2288,
+        "speak": 8878,
+        "repair": 1507,
+        "cook": 6670,
+        "joke": 4635,
+        "trade": 5876,
+        "clean": 2772,
+        "confide": 3144,
+        "teach": 1545,
+        "give": 4637,
+        "lend": 3291,
+        "repay": 6581,
+        "wash": 729,
+        "argue": 3,
+        "rest": 224
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 1,
+      "record": 1,
+      "codec": "valid"
+    },
+    {
+      "elapsed": 5000,
+      "day": 5100,
+      "power": 0,
+      "stock": {
+        "produce": 4,
+        "meals": 2,
+        "water": 15,
+        "materials": 29
+      },
+      "treasury": 0,
+      "money": 7.009872750861102e-12,
+      "accountingError": -6.141750085600489e-10,
+      "dark": [
+        "bridge",
+        "dock",
+        "longwalk",
+        "cabin1",
+        "cabin2",
+        "cabin3",
+        "cabin4",
+        "cabin5",
+        "breach",
+        "hold",
+        "infirmary",
+        "common",
+        "administration",
+        "dispatch",
+        "archive",
+        "records",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "row",
+        "games",
+        "dig1",
+        "dig2",
+        "dig3",
+        "dig4",
+        "dig5",
+        "dig6",
+        "workshops",
+        "well",
+        "face"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "fed": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "well": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "safe": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        },
+        "accompanied": {
+          "min": 0,
+          "max": 0,
+          "critical": 25
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 301,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 194,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 55,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 37,
+          "at0": 264
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 236
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 292619,
+        "dig": 1849,
+        "listen": 354,
+        "charge": 9541,
+        "note": 4250,
+        "grow": 1664,
+        "inspect": 9864,
+        "ask": 1399,
+        "go": 575389,
+        "eat": 53458,
+        "accompany": 6252,
+        "sleep": 65970,
+        "console": 2288,
+        "speak": 8878,
+        "repair": 1507,
+        "cook": 6670,
+        "joke": 4635,
+        "trade": 5876,
+        "clean": 2772,
+        "confide": 3144,
+        "teach": 1545,
+        "give": 4637,
+        "lend": 3291,
+        "repay": 6581,
+        "wash": 729,
+        "argue": 3,
+        "rest": 224
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 1,
+      "record": 1,
+      "codec": "valid"
+    }
+  ],
+  "firstCritical": {
+    "elapsed": 2232,
+    "watch": 3,
+    "bodies": [
+      {
+        "id": "N",
+        "room": "common",
+        "cells": 1.453096771919569,
+        "condition": {
+          "rested": 59.599999999999994,
+          "fed": 10,
+          "well": 60.19999999999784,
+          "safe": 61,
+          "accompanied": 80
+        }
+      }
+    ]
+  },
+  "yearSeeds": [
+    {
+      "seed": 2,
+      "minPhysical": 28,
+      "worst": {
+        "day": 258,
+        "watch": 1,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 73.39999999999998,
+              "fed": 28,
+              "well": 54.00000000000049,
+              "safe": 63,
+              "accompanied": 90
+            },
+            "cells": 0.46746848642902644,
+            "memory": [
+              {
+                "kind": "lend",
+                "other": "Q",
+                "outcome": "Quim lent Lior 4 charge cells, due on day 358.",
+                "day": 353,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Lior repaid Juno 2 charge cells; 2 still owed.",
+                "day": 353,
+                "watch": 1
+              },
+              {
+                "kind": "joke",
+                "other": "R",
+                "outcome": "Lior made Reva laugh.",
+                "day": 353,
+                "watch": 3
+              },
+              {
+                "kind": "ask",
+                "other": "B",
+                "outcome": "Bex asked Lior something, and Lior answered.",
+                "day": 353,
+                "watch": 3
+              },
+              {
+                "kind": "overdue",
+                "other": "J",
+                "amount": 2,
+                "outcome": "2 cells were still owed at the agreed date.",
+                "day": 354,
+                "watch": 4
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Lior repaid Juno 2 charge cells; 0 still owed.",
+                "day": 356,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "R",
+                "outcome": "Lior paid Reva 2 cells for a repair; Reva used 1 material and 1 cell.",
+                "day": 356,
+                "watch": 3
+              },
+              {
+                "kind": "speak",
+                "other": "B",
+                "outcome": "Bex and Lior spoke.",
+                "day": 357,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 69,
+        "water": 137,
+        "materials": 29
+      },
+      "treasury": 80.1268,
+      "money": 234.13334769627605,
+      "accountingError": 1.7337242752546445e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.000000000000504,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 46,
+          "max": 64,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 38,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 74,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 65,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 6,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 4,
+          "at0": 482
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 80
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8107,
+        "dig": 266,
+        "grow": 227,
+        "note": 592,
+        "charge": 1494,
+        "inspect": 1493,
+        "ask": 360,
+        "listen": 217,
+        "speak": 1345,
+        "go": 80091,
+        "eat": 7295,
+        "teach": 52,
+        "sleep": 9125,
+        "accompany": 1097,
+        "console": 250,
+        "repair": 223,
+        "cook": 908,
+        "confide": 394,
+        "trade": 828,
+        "joke": 643,
+        "clean": 374,
+        "argue": 1,
+        "wash": 83,
+        "give": 282,
+        "lend": 285,
+        "repay": 559
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 7,
+      "record": 29
+    },
+    {
+      "seed": 3,
+      "minPhysical": 35.599999999999994,
+      "worst": {
+        "day": 1,
+        "watch": 2,
+        "people": [
+          {
+            "id": "K",
+            "condition": {
+              "rested": 35.599999999999994,
+              "fed": 91,
+              "well": 72.20000000000002,
+              "safe": 72,
+              "accompanied": 59
+            },
+            "cells": 13.5,
+            "memory": []
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 68,
+        "water": 95,
+        "materials": 30
+      },
+      "treasury": 84.96800000000002,
+      "money": 268.98886348927766,
+      "accountingError": -2.3305801732931286e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000005,
+          "max": 99.00000000000003,
+          "critical": 0
+        },
+        "safe": {
+          "min": 40,
+          "max": 64,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 32,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 88,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 62,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 7,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 4,
+          "at0": 483
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 89
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8000,
+        "inspect": 1513,
+        "ask": 358,
+        "listen": 221,
+        "dig": 261,
+        "grow": 227,
+        "speak": 1431,
+        "charge": 1469,
+        "note": 615,
+        "eat": 7296,
+        "go": 80161,
+        "confide": 391,
+        "sleep": 9125,
+        "accompany": 1023,
+        "repair": 172,
+        "cook": 908,
+        "console": 296,
+        "trade": 858,
+        "joke": 684,
+        "clean": 372,
+        "teach": 55,
+        "wash": 82,
+        "lend": 275,
+        "repay": 548,
+        "give": 320
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 2,
+      "record": 32
+    },
+    {
+      "seed": 4,
+      "minPhysical": 33.79999999999998,
+      "worst": {
+        "day": 1,
+        "watch": 2,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 33.79999999999998,
+              "fed": 82,
+              "well": 85.20000000000002,
+              "safe": 55,
+              "accompanied": 90
+            },
+            "cells": 16.5,
+            "memory": [
+              {
+                "kind": "speak",
+                "other": "B",
+                "outcome": "Bex and Lior spoke.",
+                "day": 100,
+                "watch": 2
+              },
+              {
+                "kind": "speak",
+                "other": "P",
+                "outcome": "Pilar and Lior spoke.",
+                "day": 100,
+                "watch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 68,
+        "meals": 51,
+        "water": 121,
+        "materials": 29
+      },
+      "treasury": 85.65960000000003,
+      "money": 215.15811019630218,
+      "accountingError": 9.265477274311706e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.00000000000039,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 43,
+          "max": 71,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 18,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 86,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 58,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 6,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 4,
+          "at0": 481
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 90
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "grow": 227,
+        "work": 7880,
+        "charge": 1420,
+        "inspect": 1547,
+        "dig": 264,
+        "listen": 239,
+        "note": 606,
+        "speak": 1340,
+        "go": 80299,
+        "eat": 7297,
+        "ask": 378,
+        "confide": 381,
+        "sleep": 9125,
+        "accompany": 925,
+        "joke": 625,
+        "repair": 205,
+        "cook": 906,
+        "console": 268,
+        "trade": 838,
+        "clean": 373,
+        "teach": 59,
+        "wash": 80,
+        "give": 355,
+        "lend": 390,
+        "repay": 769,
+        "rest": 3
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 7,
+      "record": 32
+    },
+    {
+      "seed": 5,
+      "minPhysical": 35,
+      "worst": {
+        "day": 2,
+        "watch": 0,
+        "people": [
+          {
+            "id": "V",
+            "condition": {
+              "rested": 78.99999999999997,
+              "fed": 35,
+              "well": 86.00000000000003,
+              "safe": 63,
+              "accompanied": 40
+            },
+            "cells": 10.2752,
+            "memory": [
+              {
+                "kind": "grow",
+                "outcome": "Vero harvested 16 produce; 2 water used.",
+                "day": 100,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 66,
+        "water": 136,
+        "materials": 29
+      },
+      "treasury": 83.93060000000001,
+      "money": 284.85773644990934,
+      "accountingError": 2.6147972675971687e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 42.99999999999965,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 45,
+          "max": 68,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 30,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 88,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 72,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 6,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 8,
+          "at0": 484
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 82
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "dig": 256,
+        "inspect": 1529,
+        "charge": 1494,
+        "speak": 1374,
+        "note": 625,
+        "work": 8073,
+        "grow": 227,
+        "confide": 417,
+        "ask": 349,
+        "listen": 254,
+        "go": 80365,
+        "eat": 7298,
+        "sleep": 9125,
+        "accompany": 1019,
+        "console": 338,
+        "cook": 908,
+        "joke": 693,
+        "repair": 180,
+        "trade": 831,
+        "clean": 373,
+        "argue": 1,
+        "teach": 67,
+        "wash": 75,
+        "give": 270,
+        "lend": 242,
+        "repay": 482
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 1,
+      "record": 30
+    },
+    {
+      "seed": 6,
+      "minPhysical": 28,
+      "worst": {
+        "day": 321,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 84,
+              "fed": 28,
+              "well": 58.40000000000062,
+              "safe": 62,
+              "accompanied": 95
+            },
+            "cells": 4.120387014216062,
+            "memory": [
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Lior repaid Quim 2 charge cells; 0 still owed.",
+                "day": 418,
+                "watch": 3
+              },
+              {
+                "kind": "trade",
+                "other": "M",
+                "outcome": "Mara paid Lior 2 cells for a repair; Lior used 1 material and 1 cell.",
+                "day": 418,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 2 still owed.",
+                "day": 419,
+                "watch": 1
+              },
+              {
+                "kind": "repair",
+                "outcome": "Lior repaired The Unfinished Rooms; 1 material and 2 charge cells used.",
+                "day": 419,
+                "watch": 2
+              },
+              {
+                "kind": "accompany",
+                "other": "G",
+                "outcome": "Gita sat with Lior a while.",
+                "day": 419,
+                "watch": 3
+              },
+              {
+                "kind": "lend",
+                "other": "J",
+                "outcome": "Juno lent Lior 4 charge cells, due on day 424.",
+                "day": 419,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 0 still owed.",
+                "day": 420,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "Q",
+                "outcome": "Quim paid Lior 2 cells for a repair; Lior used 1 material and 1 cell.",
+                "day": 420,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 70,
+        "water": 93,
+        "materials": 29
+      },
+      "treasury": 86.69700000000005,
+      "money": 240.16890427038555,
+      "accountingError": 9.265477274311706e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.000000000000504,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 65,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 26,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 87,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 67,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 6,
+          "at0": 484
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 80
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8018,
+        "inspect": 1519,
+        "ask": 344,
+        "listen": 230,
+        "dig": 265,
+        "speak": 1439,
+        "note": 595,
+        "charge": 1493,
+        "grow": 227,
+        "go": 80219,
+        "eat": 7294,
+        "accompany": 991,
+        "joke": 639,
+        "sleep": 9125,
+        "teach": 48,
+        "console": 265,
+        "repair": 217,
+        "confide": 407,
+        "cook": 908,
+        "trade": 830,
+        "clean": 372,
+        "give": 331,
+        "wash": 82,
+        "lend": 290,
+        "repay": 568,
+        "rest": 2,
+        "argue": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 8,
+      "record": 38
+    },
+    {
+      "seed": 7,
+      "minPhysical": 28,
+      "worst": {
+        "day": 362,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 83.99999999999999,
+              "fed": 28,
+              "well": 63.00000000000033,
+              "safe": 62,
+              "accompanied": 73
+            },
+            "cells": 1.010734030750234,
+            "memory": [
+              {
+                "kind": "lend",
+                "other": "Q",
+                "outcome": "Quim lent Lior 4 charge cells, due on day 461.",
+                "day": 456,
+                "watch": 2
+              },
+              {
+                "kind": "give",
+                "other": "P",
+                "outcome": "Lior gave Pilar 2 charge cells.",
+                "day": 456,
+                "watch": 3
+              },
+              {
+                "kind": "speak",
+                "other": "S",
+                "outcome": "Sten and Lior spoke.",
+                "day": 456,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 2 still owed.",
+                "day": 457,
+                "watch": 1
+              },
+              {
+                "kind": "joke",
+                "other": "B",
+                "outcome": "Lior made Bex laugh.",
+                "day": 457,
+                "watch": 3
+              },
+              {
+                "kind": "trade",
+                "other": "G",
+                "outcome": "Lior paid Gita 2 cells for a repair; Gita used 1 material and 1 cell.",
+                "day": 460,
+                "watch": 1
+              },
+              {
+                "kind": "overdue",
+                "other": "W",
+                "amount": 2,
+                "outcome": "2 cells were still owed at the agreed date.",
+                "day": 460,
+                "watch": 4
+              },
+              {
+                "kind": "speak",
+                "other": "B",
+                "outcome": "Bex and Lior spoke.",
+                "day": 461,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 68,
+        "water": 125,
+        "materials": 28
+      },
+      "treasury": 84.96800000000003,
+      "money": 239.38776019758302,
+      "accountingError": 9.549694368615746e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.00000000000008,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 45,
+          "max": 78,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 28,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 79,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 64,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 6,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 4,
+          "at0": 475
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 84
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8065,
+        "grow": 227,
+        "inspect": 1536,
+        "speak": 1374,
+        "dig": 263,
+        "charge": 1468,
+        "note": 603,
+        "ask": 327,
+        "eat": 7296,
+        "go": 80215,
+        "listen": 257,
+        "accompany": 1021,
+        "sleep": 9125,
+        "console": 276,
+        "repair": 206,
+        "cook": 908,
+        "trade": 834,
+        "confide": 398,
+        "clean": 373,
+        "joke": 718,
+        "teach": 64,
+        "wash": 78,
+        "give": 290,
+        "lend": 267,
+        "repay": 525,
+        "argue": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 7,
+      "record": 31
+    },
+    {
+      "seed": 8,
+      "minPhysical": 28,
+      "worst": {
+        "day": 365,
+        "watch": 0,
+        "people": [
+          {
+            "id": "N",
+            "condition": {
+              "rested": 89.39999999999999,
+              "fed": 28,
+              "well": 53.79999999999977,
+              "safe": 63,
+              "accompanied": 95
+            },
+            "cells": 3.183363212612659,
+            "memory": [
+              {
+                "kind": "trade",
+                "other": "K",
+                "outcome": "Kes paid Noor 2 cells for a repair; Noor used 1 material and 1 cell.",
+                "day": 461,
+                "watch": 3
+              },
+              {
+                "kind": "joke",
+                "other": "U",
+                "outcome": "Ulla made Noor laugh.",
+                "day": 462,
+                "watch": 1
+              },
+              {
+                "kind": "speak",
+                "other": "U",
+                "outcome": "Ulla and Noor spoke.",
+                "day": 462,
+                "watch": 2
+              },
+              {
+                "kind": "trade",
+                "other": "Y",
+                "outcome": "Yara paid Noor 2 cells for a repair; Noor used 1 material and 1 cell.",
+                "day": 463,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Noor repaid Juno 2 charge cells; 0 still owed.",
+                "day": 463,
+                "watch": 1
+              },
+              {
+                "kind": "repair",
+                "outcome": "Noor repaired The Near Rooms; 1 material and 2 charge cells used.",
+                "day": 463,
+                "watch": 2
+              },
+              {
+                "kind": "lend",
+                "other": "J",
+                "outcome": "Juno lent Noor 4 charge cells, due on day 468.",
+                "day": 463,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Noor repaid Wen 2 charge cells; 2 still owed.",
+                "day": 464,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 64,
+        "meals": 60,
+        "water": 117,
+        "materials": 29
+      },
+      "treasury": 83.5848,
+      "money": 252.3848576108213,
+      "accountingError": 5.5706550483591855e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.000000000000504,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 43,
+          "max": 69,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 12,
+          "max": 90,
+          "critical": 1
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 83,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 65,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 9,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 6,
+          "at0": 481
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 84
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "grow": 227,
+        "charge": 1495,
+        "work": 8134,
+        "dig": 262,
+        "ask": 399,
+        "note": 595,
+        "inspect": 1473,
+        "confide": 393,
+        "speak": 1352,
+        "go": 80071,
+        "eat": 7296,
+        "joke": 631,
+        "listen": 222,
+        "sleep": 9125,
+        "accompany": 978,
+        "console": 291,
+        "repair": 193,
+        "cook": 907,
+        "trade": 842,
+        "clean": 373,
+        "teach": 68,
+        "give": 288,
+        "wash": 83,
+        "lend": 295,
+        "repay": 578
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 7,
+      "record": 27
+    },
+    {
+      "seed": 9,
+      "minPhysical": 21,
+      "worst": {
+        "day": 247,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 82.99999999999999,
+              "fed": 21,
+              "well": 44.00000000000104,
+              "safe": 60,
+              "accompanied": 95
+            },
+            "cells": 2.4326969743245295,
+            "memory": [
+              {
+                "kind": "joke",
+                "other": "R",
+                "outcome": "Lior made Reva laugh.",
+                "day": 344,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "J",
+                "outcome": "Juno paid Lior 2 cells for a repair; Lior used 1 material and 1 cell.",
+                "day": 344,
+                "watch": 3
+              },
+              {
+                "kind": "trade",
+                "other": "G",
+                "outcome": "Lior paid Gita 2 cells for a repair; Gita used 1 material and 1 cell.",
+                "day": 344,
+                "watch": 3
+              },
+              {
+                "kind": "accompany",
+                "other": "Q",
+                "outcome": "Quim sat with Lior a while.",
+                "day": 344,
+                "watch": 3
+              },
+              {
+                "kind": "speak",
+                "other": "B",
+                "outcome": "Bex and Lior spoke.",
+                "day": 345,
+                "watch": 2
+              },
+              {
+                "kind": "overdue",
+                "other": "J",
+                "amount": 2,
+                "outcome": "2 cells were still owed at the agreed date.",
+                "day": 345,
+                "watch": 4
+              },
+              {
+                "kind": "trade",
+                "other": "Q",
+                "outcome": "Quim paid Lior 2 cells for a repair; Lior used 1 material and 1 cell.",
+                "day": 346,
+                "watch": 1
+              },
+              {
+                "kind": "joke",
+                "other": "B",
+                "outcome": "Lior made Bex laugh.",
+                "day": 346,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 64,
+        "meals": 63,
+        "water": 132,
+        "materials": 29
+      },
+      "treasury": 81.85579999999999,
+      "money": 266.78333747558304,
+      "accountingError": 5.9117155615240335e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000016,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 70,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 24,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 84,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 65,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 5,
+          "at0": 477
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 86
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8110,
+        "inspect": 1557,
+        "ask": 388,
+        "dig": 258,
+        "listen": 229,
+        "charge": 1513,
+        "note": 589,
+        "grow": 227,
+        "go": 80393,
+        "eat": 7293,
+        "speak": 1404,
+        "confide": 448,
+        "joke": 726,
+        "sleep": 9125,
+        "accompany": 1076,
+        "console": 306,
+        "repair": 217,
+        "cook": 907,
+        "trade": 802,
+        "clean": 373,
+        "teach": 49,
+        "argue": 4,
+        "wash": 79,
+        "give": 219,
+        "lend": 203,
+        "repay": 398
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 5,
+      "record": 36
+    },
+    {
+      "seed": 10,
+      "minPhysical": 10,
+      "worst": {
+        "day": 346,
+        "watch": 3,
+        "people": [
+          {
+            "id": "B",
+            "condition": {
+              "rested": 52.999999999999986,
+              "fed": 10,
+              "well": 59.60000000000117,
+              "safe": 61,
+              "accompanied": 70
+            },
+            "cells": 1.7922241505682952,
+            "memory": [
+              {
+                "kind": "speak",
+                "other": "R",
+                "outcome": "Reva and Bex spoke.",
+                "day": 442,
+                "watch": 1
+              },
+              {
+                "kind": "overdue",
+                "other": "J",
+                "amount": 2,
+                "outcome": "2 cells were still owed at the agreed date.",
+                "day": 442,
+                "watch": 4
+              },
+              {
+                "kind": "joke",
+                "other": "L",
+                "outcome": "Lior made Bex laugh.",
+                "day": 443,
+                "watch": 2
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Bex repaid Juno 2 charge cells; 0 still owed.",
+                "day": 444,
+                "watch": 1
+              },
+              {
+                "kind": "lend",
+                "other": "J",
+                "outcome": "Juno lent Bex 4 charge cells, due on day 449.",
+                "day": 444,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Bex repaid Juno 2 charge cells; 2 still owed.",
+                "day": 444,
+                "watch": 2
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Bex repaid Juno 2 charge cells; 0 still owed.",
+                "day": 444,
+                "watch": 3
+              },
+              {
+                "kind": "repair",
+                "outcome": "Bex repaired Cabin Four; 1 material and 2 charge cells used.",
+                "day": 445,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 64,
+        "meals": 61,
+        "water": 123,
+        "materials": 31
+      },
+      "treasury": 82.20159999999998,
+      "money": 232.41838974827687,
+      "accountingError": 1.3130829756846651e-11,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.00000000000008,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 62,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 28,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 84,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 63,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 7,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 4,
+          "at0": 480
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 85
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8124,
+        "grow": 227,
+        "charge": 1489,
+        "note": 602,
+        "inspect": 1445,
+        "ask": 360,
+        "speak": 1398,
+        "dig": 265,
+        "joke": 623,
+        "eat": 7295,
+        "go": 80375,
+        "sleep": 9124,
+        "accompany": 991,
+        "listen": 243,
+        "console": 263,
+        "repair": 204,
+        "cook": 907,
+        "trade": 841,
+        "clean": 373,
+        "confide": 407,
+        "teach": 59,
+        "lend": 303,
+        "repay": 593,
+        "wash": 79,
+        "give": 284,
+        "rest": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 8,
+      "record": 27
+    },
+    {
+      "seed": 11,
+      "minPhysical": 28,
+      "worst": {
+        "day": 152,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 89.39999999999999,
+              "fed": 28,
+              "well": 64.00000000000024,
+              "safe": 63,
+              "accompanied": 95
+            },
+            "cells": 2.6564319588874348,
+            "memory": [
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Lior repaid Quim 2 charge cells; 2 still owed.",
+                "day": 248,
+                "watch": 3
+              },
+              {
+                "kind": "lend",
+                "other": "W",
+                "outcome": "Wen lent Lior 4 charge cells, due on day 254.",
+                "day": 249,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Lior repaid Quim 2 charge cells; 0 still owed.",
+                "day": 249,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 2 still owed.",
+                "day": 249,
+                "watch": 3
+              },
+              {
+                "kind": "speak",
+                "other": "B",
+                "outcome": "Bex and Lior spoke.",
+                "day": 250,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "R",
+                "outcome": "Lior paid Reva 2 cells for a repair; Reva used 1 material and 1 cell.",
+                "day": 250,
+                "watch": 2
+              },
+              {
+                "kind": "lend",
+                "other": "K",
+                "outcome": "Kes lent Lior 4 charge cells, due on day 255.",
+                "day": 250,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 0 still owed.",
+                "day": 251,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 67,
+        "water": 92,
+        "materials": 28
+      },
+      "treasury": 84.62220000000002,
+      "money": 255.83155299319057,
+      "accountingError": -7.105427357601002e-13,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000059,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 46,
+          "max": 75,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 18,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 81,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 65,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 5,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 3,
+          "at0": 483
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 82
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "charge": 1500,
+        "work": 8052,
+        "dig": 267,
+        "grow": 227,
+        "speak": 1392,
+        "listen": 252,
+        "ask": 349,
+        "inspect": 1512,
+        "note": 587,
+        "go": 80195,
+        "eat": 7297,
+        "sleep": 9125,
+        "accompany": 992,
+        "joke": 652,
+        "repair": 219,
+        "cook": 908,
+        "console": 250,
+        "trade": 837,
+        "confide": 398,
+        "clean": 372,
+        "teach": 57,
+        "wash": 80,
+        "give": 331,
+        "lend": 283,
+        "repay": 560,
+        "argue": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 4,
+      "record": 33
+    },
+    {
+      "seed": 12,
+      "minPhysical": 19,
+      "worst": {
+        "day": 354,
+        "watch": 2,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 63.39999999999998,
+              "fed": 19,
+              "well": 55.00000000000122,
+              "safe": 61,
+              "accompanied": 94
+            },
+            "cells": 4.400628945686203,
+            "memory": [
+              {
+                "kind": "lend",
+                "other": "W",
+                "outcome": "Wen lent Lior 4 charge cells, due on day 455.",
+                "day": 450,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Lior repaid Quim 2 charge cells; 2 still owed.",
+                "day": 450,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Lior repaid Quim 2 charge cells; 0 still owed.",
+                "day": 451,
+                "watch": 1
+              },
+              {
+                "kind": "lend",
+                "other": "Q",
+                "outcome": "Quim lent Lior 4 charge cells, due on day 456.",
+                "day": 451,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 2 still owed.",
+                "day": 451,
+                "watch": 2
+              },
+              {
+                "kind": "repay",
+                "other": "W",
+                "outcome": "Lior repaid Wen 2 charge cells; 0 still owed.",
+                "day": 452,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "J",
+                "outcome": "Lior paid Juno 2 cells for a repair; Juno used 1 material and 1 cell.",
+                "day": 452,
+                "watch": 2
+              },
+              {
+                "kind": "lend",
+                "other": "J",
+                "outcome": "Juno lent Lior 4 charge cells, due on day 458.",
+                "day": 453,
+                "watch": 3
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 64,
+        "water": 68,
+        "materials": 30
+      },
+      "treasury": 83.23900000000002,
+      "money": 227.16131474044732,
+      "accountingError": 8.412825991399586e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 66,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.000000000000504,
+          "max": 98.60000000000005,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 70,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 38,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 82,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 68,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 5,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 5,
+          "at0": 483
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 92
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8031,
+        "dig": 266,
+        "listen": 228,
+        "inspect": 1543,
+        "speak": 1427,
+        "note": 590,
+        "charge": 1470,
+        "ask": 337,
+        "grow": 227,
+        "joke": 700,
+        "eat": 7300,
+        "go": 80321,
+        "teach": 65,
+        "sleep": 9124,
+        "accompany": 1050,
+        "console": 264,
+        "cook": 908,
+        "repair": 202,
+        "confide": 387,
+        "trade": 848,
+        "clean": 371,
+        "wash": 79,
+        "lend": 264,
+        "repay": 519,
+        "give": 299,
+        "argue": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 6,
+      "record": 28
+    },
+    {
+      "seed": 13,
+      "minPhysical": 33.19999999999999,
+      "worst": {
+        "day": 1,
+        "watch": 2,
+        "people": [
+          {
+            "id": "F",
+            "condition": {
+              "rested": 33.19999999999999,
+              "fed": 82,
+              "well": 78.20000000000002,
+              "safe": 55,
+              "accompanied": 32
+            },
+            "cells": 9.5,
+            "memory": [
+              {
+                "kind": "dig",
+                "outcome": "Ferran recovered 4 usable materials at the face; 1 water used.",
+                "day": 100,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 64,
+        "meals": 61,
+        "water": 118,
+        "materials": 31
+      },
+      "treasury": 82.5474,
+      "money": 261.72693851076735,
+      "accountingError": 4.433786671143025e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000059,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 45,
+          "max": 63,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 16,
+          "max": 90,
+          "critical": 1
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 79,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 66,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 6,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 5,
+          "at0": 481
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 75
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "dig": 264,
+        "ask": 404,
+        "work": 8069,
+        "inspect": 1567,
+        "listen": 240,
+        "grow": 227,
+        "charge": 1530,
+        "speak": 1487,
+        "note": 591,
+        "go": 80501,
+        "eat": 7295,
+        "sleep": 9125,
+        "accompany": 1073,
+        "console": 275,
+        "joke": 665,
+        "repair": 190,
+        "cook": 907,
+        "trade": 851,
+        "clean": 373,
+        "confide": 397,
+        "teach": 57,
+        "argue": 1,
+        "give": 253,
+        "wash": 82,
+        "lend": 195,
+        "repay": 382
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 6,
+      "record": 29
+    },
+    {
+      "seed": 14,
+      "minPhysical": 33.19999999999999,
+      "worst": {
+        "day": 1,
+        "watch": 2,
+        "people": [
+          {
+            "id": "X",
+            "condition": {
+              "rested": 33.19999999999999,
+              "fed": 82,
+              "well": 76.20000000000002,
+              "safe": 79,
+              "accompanied": 57
+            },
+            "cells": 14.5,
+            "memory": [
+              {
+                "kind": "dig",
+                "outcome": "Xan recovered 4 usable materials at the face; 1 water used.",
+                "day": 100,
+                "watch": 1
+              },
+              {
+                "kind": "ask",
+                "other": "Y",
+                "outcome": "Yara asked Xan something, and Xan answered.",
+                "day": 100,
+                "watch": 3
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 71,
+        "water": 104,
+        "materials": 29
+      },
+      "treasury": 83.5848,
+      "money": 264.25749122386014,
+      "accountingError": 4.774847184307873e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.00000000000039,
+          "max": 99.00000000000003,
+          "critical": 0
+        },
+        "safe": {
+          "min": 44,
+          "max": 64,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 36,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 87,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 66,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 5,
+          "at0": 484
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 87
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8052,
+        "charge": 1524,
+        "speak": 1473,
+        "dig": 263,
+        "grow": 227,
+        "note": 583,
+        "listen": 246,
+        "ask": 380,
+        "inspect": 1480,
+        "go": 79861,
+        "eat": 7293,
+        "joke": 631,
+        "sleep": 9125,
+        "accompany": 1058,
+        "repair": 204,
+        "cook": 908,
+        "console": 292,
+        "trade": 835,
+        "confide": 381,
+        "clean": 372,
+        "teach": 45,
+        "argue": 2,
+        "wash": 78,
+        "give": 267,
+        "lend": 263,
+        "repay": 518
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 4,
+      "record": 34
+    },
+    {
+      "seed": 15,
+      "minPhysical": 28,
+      "worst": {
+        "day": 337,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 83.99999999999999,
+              "fed": 28,
+              "well": 59.00000000000104,
+              "safe": 60,
+              "accompanied": 95
+            },
+            "cells": 2.953708263291633,
+            "memory": [
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Lior repaid Juno 2 charge cells; 0 still owed.",
+                "day": 432,
+                "watch": 3
+              },
+              {
+                "kind": "lend",
+                "other": "W",
+                "outcome": "Wen lent Lior 4 charge cells, due on day 438.",
+                "day": 433,
+                "watch": 3
+              },
+              {
+                "kind": "give",
+                "other": "P",
+                "outcome": "Lior gave Pilar 2 charge cells.",
+                "day": 433,
+                "watch": 3
+              },
+              {
+                "kind": "accompany",
+                "other": "I",
+                "outcome": "Iris sat with Lior a while.",
+                "day": 433,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Lior repaid Quim 2 charge cells; 2 still owed.",
+                "day": 434,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "B",
+                "outcome": "Lior paid Bex 2 cells for a repair; Bex used 1 material and 1 cell.",
+                "day": 434,
+                "watch": 3
+              },
+              {
+                "kind": "speak",
+                "other": "R",
+                "outcome": "Lior and Reva spoke.",
+                "day": 435,
+                "watch": 2
+              },
+              {
+                "kind": "give",
+                "other": "R",
+                "outcome": "Reva gave Lior 2 charge cells.",
+                "day": 436,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 66,
+        "water": 106,
+        "materials": 29
+      },
+      "treasury": 85.6596,
+      "money": 250.27430585613786,
+      "accountingError": 6.480149750132114e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 45.00000000000053,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 40,
+          "max": 70,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 30,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 84,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 72,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 5,
+          "at0": 481
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 83
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "speak": 1425,
+        "work": 8026,
+        "joke": 691,
+        "dig": 260,
+        "charge": 1466,
+        "grow": 227,
+        "ask": 307,
+        "note": 594,
+        "inspect": 1495,
+        "listen": 257,
+        "go": 79975,
+        "eat": 7298,
+        "confide": 410,
+        "sleep": 9125,
+        "accompany": 1038,
+        "console": 310,
+        "repair": 196,
+        "cook": 908,
+        "trade": 831,
+        "clean": 372,
+        "teach": 35,
+        "wash": 76,
+        "give": 280,
+        "lend": 293,
+        "repay": 579,
+        "argue": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 5,
+      "record": 31
+    },
+    {
+      "seed": 16,
+      "minPhysical": 21,
+      "worst": {
+        "day": 311,
+        "watch": 0,
+        "people": [
+          {
+            "id": "C",
+            "condition": {
+              "rested": 86.39999999999999,
+              "fed": 21,
+              "well": 45.40000000000104,
+              "safe": 60,
+              "accompanied": 85
+            },
+            "cells": 1.0357104695254284,
+            "memory": [
+              {
+                "kind": "lend",
+                "other": "Q",
+                "outcome": "Quim lent Cato 4 charge cells, due on day 410.",
+                "day": 405,
+                "watch": 3
+              },
+              {
+                "kind": "give",
+                "other": "N",
+                "outcome": "Cato gave Noor 2 charge cells.",
+                "day": 406,
+                "watch": 2
+              },
+              {
+                "kind": "give",
+                "other": "U",
+                "outcome": "Cato gave Ulla 2 charge cells.",
+                "day": 407,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "Q",
+                "outcome": "Cato repaid Quim 2 charge cells; 2 still owed.",
+                "day": 407,
+                "watch": 3
+              },
+              {
+                "kind": "trade",
+                "other": "O",
+                "outcome": "Cato paid Osvald 2 cells for a repair; Osvald used 1 material and 1 cell.",
+                "day": 408,
+                "watch": 3
+              },
+              {
+                "kind": "accompany",
+                "other": "G",
+                "outcome": "Gita sat with Cato a while.",
+                "day": 409,
+                "watch": 1
+              },
+              {
+                "kind": "joke",
+                "other": "N",
+                "outcome": "Cato made Noor laugh.",
+                "day": 409,
+                "watch": 1
+              },
+              {
+                "kind": "accompany",
+                "other": "D",
+                "outcome": "Dima sat with Cato a while.",
+                "day": 409,
+                "watch": 3
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 71,
+        "water": 100,
+        "materials": 31
+      },
+      "treasury": 83.23899999999999,
+      "money": 247.80738398021924,
+      "accountingError": 1.1254996934439987e-11,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 45.00000000000022,
+          "max": 99.00000000000003,
+          "critical": 0
+        },
+        "safe": {
+          "min": 45,
+          "max": 67,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 20,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 85,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 63,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 7,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 4,
+          "at0": 480
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 82
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8046,
+        "charge": 1471,
+        "ask": 399,
+        "speak": 1371,
+        "dig": 265,
+        "joke": 639,
+        "inspect": 1433,
+        "grow": 227,
+        "note": 592,
+        "listen": 233,
+        "eat": 7293,
+        "go": 80071,
+        "confide": 343,
+        "sleep": 9125,
+        "accompany": 1007,
+        "repair": 200,
+        "cook": 908,
+        "console": 265,
+        "trade": 845,
+        "clean": 372,
+        "wash": 79,
+        "give": 347,
+        "teach": 64,
+        "lend": 327,
+        "repay": 648,
+        "rest": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 4,
+      "record": 29
+    },
+    {
+      "seed": 17,
+      "minPhysical": 33.99999999999997,
+      "worst": {
+        "day": 1,
+        "watch": 2,
+        "people": [
+          {
+            "id": "D",
+            "condition": {
+              "rested": 33.99999999999997,
+              "fed": 82,
+              "well": 90.20000000000002,
+              "safe": 61,
+              "accompanied": 44
+            },
+            "cells": 13.5,
+            "memory": []
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 76,
+        "meals": 68,
+        "water": 120,
+        "materials": 29
+      },
+      "treasury": 83.93060000000001,
+      "money": 227.67230182189275,
+      "accountingError": 7.332801033044234e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.000000000000504,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 42,
+          "max": 66,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 28,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 87,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 66,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 6,
+          "at0": 484
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 91
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "dig": 260,
+        "charge": 1458,
+        "work": 8074,
+        "inspect": 1515,
+        "speak": 1425,
+        "listen": 228,
+        "joke": 694,
+        "note": 599,
+        "grow": 228,
+        "ask": 347,
+        "eat": 7296,
+        "go": 80073,
+        "accompany": 1123,
+        "sleep": 9125,
+        "console": 297,
+        "repair": 225,
+        "cook": 908,
+        "confide": 415,
+        "trade": 802,
+        "clean": 373,
+        "teach": 38,
+        "wash": 81,
+        "give": 261,
+        "lend": 245,
+        "repay": 483
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 4,
+      "record": 31
+    },
+    {
+      "seed": 18,
+      "minPhysical": 21,
+      "worst": {
+        "day": 324,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 83.99999999999999,
+              "fed": 21,
+              "well": 50.2,
+              "safe": 62,
+              "accompanied": 75
+            },
+            "cells": 0.8980032196915549,
+            "memory": [
+              {
+                "kind": "confide",
+                "other": "R",
+                "outcome": "Lior spoke privately with Reva.",
+                "day": 417,
+                "watch": 3
+              },
+              {
+                "kind": "joke",
+                "other": "R",
+                "outcome": "Lior made Reva laugh.",
+                "day": 418,
+                "watch": 1
+              },
+              {
+                "kind": "trade",
+                "other": "E",
+                "outcome": "Edda paid Lior 2 cells for a repair; Lior used 1 material and 1 cell.",
+                "day": 418,
+                "watch": 3
+              },
+              {
+                "kind": "overdue",
+                "other": "Q",
+                "amount": 4,
+                "outcome": "4 cells were still owed at the agreed date.",
+                "day": 418,
+                "watch": 4
+              },
+              {
+                "kind": "joke",
+                "other": "R",
+                "outcome": "Reva made Lior laugh.",
+                "day": 419,
+                "watch": 1
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Lior repaid Juno 2 charge cells; 2 still owed.",
+                "day": 420,
+                "watch": 1
+              },
+              {
+                "kind": "confide",
+                "other": "B",
+                "outcome": "Bex spoke privately with Lior.",
+                "day": 421,
+                "watch": 2
+              },
+              {
+                "kind": "trade",
+                "other": "W",
+                "outcome": "Lior paid Wen 2 cells for a repair; Wen used 1 material and 1 cell.",
+                "day": 422,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 70,
+        "water": 121,
+        "materials": 27
+      },
+      "treasury": 84.6222,
+      "money": 221.6893298721202,
+      "accountingError": 6.366462912410498e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.00000000000019,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 43,
+          "max": 65,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 24,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 88,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 66,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 5,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 5,
+          "at0": 480
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 93
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "work": 8041,
+        "speak": 1358,
+        "listen": 250,
+        "inspect": 1491,
+        "charge": 1452,
+        "dig": 263,
+        "note": 592,
+        "grow": 227,
+        "go": 80321,
+        "eat": 7294,
+        "ask": 352,
+        "accompany": 1046,
+        "sleep": 9125,
+        "joke": 692,
+        "repair": 198,
+        "cook": 908,
+        "console": 269,
+        "trade": 843,
+        "clean": 373,
+        "confide": 404,
+        "teach": 47,
+        "wash": 81,
+        "give": 283,
+        "lend": 306,
+        "repay": 603,
+        "argue": 1,
+        "rest": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 7,
+      "record": 35
+    },
+    {
+      "seed": 19,
+      "minPhysical": 28,
+      "worst": {
+        "day": 255,
+        "watch": 0,
+        "people": [
+          {
+            "id": "L",
+            "condition": {
+              "rested": 88.99999999999999,
+              "fed": 28,
+              "well": 56.800000000000566,
+              "safe": 63,
+              "accompanied": 95
+            },
+            "cells": 5.294568352166208,
+            "memory": [
+              {
+                "kind": "lend",
+                "other": "K",
+                "outcome": "Kes lent Lior 4 charge cells, due on day 356.",
+                "day": 351,
+                "watch": 3
+              },
+              {
+                "kind": "give",
+                "other": "B",
+                "outcome": "Lior gave Bex 2 charge cells.",
+                "day": 351,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Lior repaid Juno 2 charge cells; 2 still owed.",
+                "day": 352,
+                "watch": 3
+              },
+              {
+                "kind": "give",
+                "other": "B",
+                "outcome": "Bex gave Lior 2 charge cells.",
+                "day": 352,
+                "watch": 3
+              },
+              {
+                "kind": "repay",
+                "other": "J",
+                "outcome": "Lior repaid Juno 2 charge cells; 0 still owed.",
+                "day": 353,
+                "watch": 1
+              },
+              {
+                "kind": "repair",
+                "outcome": "Lior repaired The Workshops; 1 material and 2 charge cells used.",
+                "day": 353,
+                "watch": 2
+              },
+              {
+                "kind": "lend",
+                "other": "J",
+                "outcome": "Juno lent Lior 4 charge cells, due on day 358.",
+                "day": 353,
+                "watch": 3
+              },
+              {
+                "kind": "confide",
+                "other": "R",
+                "outcome": "Lior spoke privately with Reva.",
+                "day": 354,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 60,
+        "meals": 68,
+        "water": 113,
+        "materials": 30
+      },
+      "treasury": 82.5474,
+      "money": 222.72302671038602,
+      "accountingError": 1.3244516594568267e-11,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 43.00000000000039,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 45,
+          "max": 81,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 34,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 90,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 67,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 4,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 3,
+          "at0": 480
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 88
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "charge": 1454,
+        "work": 8021,
+        "speak": 1323,
+        "note": 599,
+        "grow": 227,
+        "dig": 265,
+        "confide": 403,
+        "listen": 249,
+        "inspect": 1505,
+        "eat": 7296,
+        "go": 80139,
+        "ask": 346,
+        "joke": 672,
+        "sleep": 9125,
+        "accompany": 938,
+        "repair": 228,
+        "cook": 908,
+        "console": 272,
+        "trade": 818,
+        "clean": 373,
+        "teach": 39,
+        "argue": 2,
+        "give": 333,
+        "lend": 343,
+        "repay": 676,
+        "wash": 83,
+        "rest": 2
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 8,
+      "record": 29
+    },
+    {
+      "seed": 20,
+      "minPhysical": 34,
+      "worst": {
+        "day": 1,
+        "watch": 2,
+        "people": [
+          {
+            "id": "T",
+            "condition": {
+              "rested": 34,
+              "fed": 57,
+              "well": 78.20000000000002,
+              "safe": 54,
+              "accompanied": 59
+            },
+            "cells": 16,
+            "memory": [
+              {
+                "kind": "speak",
+                "other": "M",
+                "outcome": "Mara and Tomás spoke.",
+                "day": 100,
+                "watch": 1
+              }
+            ]
+          }
+        ]
+      },
+      "elapsed": 365,
+      "day": 465,
+      "power": 0.8597000000000007,
+      "stock": {
+        "produce": 64,
+        "meals": 59,
+        "water": 109,
+        "materials": 31
+      },
+      "treasury": 86.697,
+      "money": 283.3518555358317,
+      "accountingError": 5.5138116294983774e-12,
+      "dark": [
+        "breach"
+      ],
+      "conditions": {
+        "rested": {
+          "min": 95,
+          "max": 95,
+          "critical": 0
+        },
+        "fed": {
+          "min": 46,
+          "max": 82,
+          "critical": 0
+        },
+        "well": {
+          "min": 44.00000000000059,
+          "max": 99.4,
+          "critical": 0
+        },
+        "safe": {
+          "min": 45,
+          "max": 71,
+          "critical": 0
+        },
+        "accompanied": {
+          "min": 20,
+          "max": 90,
+          "critical": 0
+        }
+      },
+      "axes": {
+        "trust": {
+          "at100": 85,
+          "at0": 0
+        },
+        "affection": {
+          "at100": 70,
+          "at0": 0
+        },
+        "admiration": {
+          "at100": 7,
+          "at0": 0
+        },
+        "debt": {
+          "at100": 1,
+          "at0": 482
+        },
+        "resentment": {
+          "at100": 0,
+          "at0": 88
+        },
+        "desire": {
+          "at100": 0,
+          "at0": 0
+        }
+      },
+      "verbs": {
+        "grow": 227,
+        "note": 587,
+        "work": 8217,
+        "speak": 1434,
+        "charge": 1543,
+        "ask": 365,
+        "dig": 267,
+        "listen": 242,
+        "confide": 416,
+        "joke": 656,
+        "eat": 7297,
+        "go": 80375,
+        "inspect": 1522,
+        "sleep": 9125,
+        "accompany": 1100,
+        "repair": 196,
+        "cook": 907,
+        "console": 256,
+        "trade": 857,
+        "clean": 373,
+        "teach": 66,
+        "wash": 84,
+        "give": 211,
+        "lend": 185,
+        "repay": 366,
+        "rest": 1
+      },
+      "neverVisited": [
+        "bridge",
+        "breach",
+        "graveyard",
+        "study",
+        "sparebedroom",
+        "parlour",
+        "projection",
+        "winter",
+        "library",
+        "grandbedroom",
+        "salon",
+        "hearth",
+        "maintenance",
+        "kitchen",
+        "servicecounter",
+        "maindiner",
+        "sodabar",
+        "stalls",
+        "washroom",
+        "games"
+      ],
+      "openDebts": 3,
+      "record": 34
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "same_snapshot": true,
+  "same_relationships": true,
+  "same_archive": true,
+  "same_revision": true,
+  "schema_before": 5,
+  "schema_after": 6,
+  "health_after": "healthy",
+  "archive_count": 174,
+  "society_equal": true,
+  "controlRevision": {
+    "before": 3,
+    "after": 3
+  },
+  "mode": {
+    "before": "running",
+    "after": "running"
+  },
+  "simTime": {
+    "before": {
+      "day": 106,
+      "minute": 1080
+    },
+    "after": {
+      "day": 106,
+      "minute": 1080
+    }
+  },
+  "deploymentVersion": "2b6d3511-fae3-460d-acc1-ad01b162c88d",
+  "worldRevision": 27,
+  "day": 106,
+  "watch": 4,
+  "existingPrivateStateFieldsChanged": 0,
+  "privateRecovery": {
+    "verifiedComplete": true,
+    "downloadedPages": 15
+  },
+  "nextScheduledWatchPreserved": true
+}

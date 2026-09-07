@@ -1,0 +1,231 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0b0d11;font:12px/1.6 ui-monospace,monospace;color:#b9c2dd}
+ canvas{image-rendering:pixelated;display:block}
+ .row{display:flex;gap:20px;align-items:flex-start;padding:16px}
+ h1{font-size:13px;font-weight:400;color:#e9edff;margin:0;padding:14px 16px 0;letter-spacing:.5px}
+ .note{padding:2px 16px 0;color:#7b85ab;max-width:1000px}
+ #log{padding:8px 16px;white-space:pre;color:#5f6b8f}
+ #log.bad{color:#e0776a}
+</style>
+<h1>THE WELL</h1>
+<div class="note">
+  Traced off <code>reference/bathroom-wet-and-filthy.jpg</code>. <b>×4 → 184 × 170</b>,
+  not the ×2 <code>native.py</code> reports — it under-reads this JPEG, and the tell is
+  <code>provenance.py</code> then matching at <code>x2.0</code>. Reduce by hand with
+  NEAREST: BOX averages the JPEG's ringing into the pixels and halves the hit count.
+</div>
+<div class="row"><canvas id="z"></canvas><canvas id="one"></canvas></div>
+<pre id="log"></pre>
+<script type="module">
+// ── THE WELL ──────────────────────────────────────────────────────────────
+// Water reclamation and air scrubbing, traced off a filthy public bathroom.
+//
+// Everything below was measured off the native render, not judged by eye.
+//
+//   outline   ink at x 20 and 160, y 22 and 146; the band between them is
+//             1 px ink, 4 px tan, 1 px ink — the roomtiles band cross-section
+//             sampled straight off the sheet (#786953, not the #766952 I had)
+//   door      the south band is cut from x 59 to x 90; its inner ink line at
+//             y 141 runs straight across the gap, so the doorway reads as a
+//             threshold rather than a hole
+//   wall      bathroom_roomtiles column 5, rows 7-8 — one 32x64 block whose
+//             bottom five rows ARE the skirting. Solved by brute force over
+//             every opaque tile x every phase, scoring the lowest 50 % of
+//             per-pixel errors so the props could not drag the fit: block top
+//             y = 29, x phase 27. That puts the skirting's dark row at y 92,
+//             which is where the reference puts it, to the pixel.
+//   floor     bathroom_roomtiles tile (6,8), phase (27,13) — median error 9 out
+//             of 765. Its grout falls on x = 6 mod 8 and y = 0 mod 8, which is
+//             exactly where the reference's grout falls.
+//   partition The stall is not a wall. It is 0_mem0ry's own stall-partition
+//             sprite, used three ways: the 4 px light post (sheet 14,128) for
+//             the run above the rail, the rail itself (sheet 20,150) laid
+//             across, and the 6 px dark post (sheet 14,160) for the run that
+//             stands on the floor. The reference changes width at y 70 because
+//             the artist changed sprite there, not because the wall thickens.
+//
+// The props are placed by masked mean-removed NCC — each one is that sprite's
+// own best position in the render, and the score is in the comment. Where a
+// sprite is too small for NCC to be trustworthy (a mask under 30 px: the
+// graffiti, the puddles, which are half-alpha) it is placed by matching the
+// colour blob's bounding box in sheet and render instead. Those are marked.
+
+const S = 3;
+const W = 184, H = 170;
+const LEFT = 20, RIGHT = 160, TOP = 22, BOT = 146;   // ink lines, inclusive
+const BAND = 6;
+const FACE = 93;                                     // first floor row
+const DOOR_X0 = 59, DOOR_X1 = 90;
+const IN_X0 = LEFT + BAND, IN_X1 = RIGHT - BAND;     // 26 .. 154
+const IN_Y0 = TOP + BAND, IN_Y1 = BOT - BAND;        // 28 .. 140
+const INK = '#000000', TAN = '#786953';
+
+const P = '../../public/assets/props/';
+const NEED = { bath: P + 'bathroom.png', rt: P + 'bathroom_roomtiles.png' };
+const SH = {};
+let left = Object.keys(NEED).length;
+for (const k in NEED) {
+  const im = new Image();
+  im.onload = () => { SH[k] = im; if (!--left) build(); };
+  im.src = NEED[k];
+}
+
+function build() {
+  const room = document.createElement('canvas');
+  room.width = W; room.height = H;
+  const g = room.getContext('2d');
+  g.imageSmoothingEnabled = false;
+
+  const PROPS = [], CLASH = [];
+  const cut = (sheet, sx, sy, sw, sh, dx, dy) =>
+    g.drawImage(SH[sheet], sx, sy, sw, sh, dx, dy, sw, sh);
+
+  // A sprite laid down at its own measured position. `layer: 'on'` means it is
+  // meant to sit over something already drawn and the overlap is not a mistake.
+  function crop(name, sheet, sx, sy, sw, sh, dx, dy, layer) {
+    const rect = { x: dx, y: dy, w: sw, h: sh, name };
+    for (const o of (layer === 'on' ? [] : PROPS)) {
+      const ox = Math.max(0, Math.min(dx + sw, o.x + o.w) - Math.max(dx, o.x));
+      const oy = Math.max(0, Math.min(dy + sh, o.y + o.h) - Math.max(dy, o.y));
+      if (ox > 3 && oy > 3) CLASH.push('OVERLAP  ' + name + ' x ' + o.name + '  (' + ox + 'x' + oy + ')');
+    }
+    // a prop may touch the band's inner ink line — the reference's bins do
+    if (dx < IN_X0 - 1 || dx + sw - 1 > IN_X1 + 1 || dy < IN_Y0 - 1 || dy + sh - 1 > IN_Y1 + 1)
+      CLASH.push('OFF-FRAME  ' + name + '  [' + dx + ',' + dy + ' ' + sw + 'x' + sh + ']');
+    if (layer !== 'on') PROPS.push(rect);
+    cut(sheet, sx, sy, sw, sh, dx, dy);
+  }
+
+  // A sprite repeated to fill a run — the partitions and the tiling.
+  function fill(sheet, sx, sy, sw, sh, x0, y0, x1, y1) {
+    g.save(); g.beginPath(); g.rect(x0, y0, x1 - x0, y1 - y0); g.clip();
+    for (let y = y0; y < y1; y += sh)
+      for (let x = x0; x < x1; x += sw) cut(sheet, sx, sy, sw, sh, x, y);
+    g.restore();
+  }
+  function grid(sheet, sx, sy, n, px, py, x0, y0, x1, y1) {
+    g.save(); g.beginPath(); g.rect(x0, y0, x1 - x0, y1 - y0); g.clip();
+    for (let y = py; y > y0 - n; y -= n) { /* phase up */ }
+    for (let y = py - n * Math.ceil((py - y0) / n); y < y1; y += n)
+      for (let x = px - n * Math.ceil((px - x0) / n); x < x1; x += n)
+        cut(sheet, sx, sy, n, n, x, y);
+    g.restore();
+  }
+
+  // ── the shell ────────────────────────────────────────────────────────────
+  // the band: ink, four of tan, ink — the sheet's own cross-section
+  g.fillStyle = TAN;
+  g.fillRect(LEFT, TOP, RIGHT - LEFT + 1, BOT - TOP + 1);
+  g.fillStyle = INK;
+  g.strokeStyle = INK;
+  const ring = (x0, y0, x1, y1) => {
+    g.fillRect(x0, y0, x1 - x0 + 1, 1); g.fillRect(x0, y1, x1 - x0 + 1, 1);
+    g.fillRect(x0, y0, 1, y1 - y0 + 1); g.fillRect(x1, y0, 1, y1 - y0 + 1);
+  };
+  ring(LEFT, TOP, RIGHT, BOT);
+  ring(LEFT + BAND - 1, TOP + BAND - 1, RIGHT - BAND + 1, BOT - BAND + 1);
+
+  // the wall and the floor, inside the bands
+  g.save();
+  g.beginPath();
+  g.rect(IN_X0, IN_Y0, IN_X1 - IN_X0 + 1, IN_Y1 - IN_Y0 + 1);
+  g.clip();
+
+  // the 32x64 wall block, its skirting landing on y 92; one more row of the
+  // upper tile above it so the single row under the north band is not bare
+  for (let x = 27 - 32; x < IN_X1 + 32; x += 32) {
+    cut('rt', 160, 224, 32, 32, x, -3);
+    cut('rt', 160, 224, 32, 64, x, 29);
+  }
+  // the floor, from the row under the skirting down
+  g.save(); g.beginPath();
+  g.rect(IN_X0, FACE, IN_X1 - IN_X0 + 1, IN_Y1 - FACE + 1); g.clip();
+  for (let y = 13 - 32; y < IN_Y1 + 32; y += 32)
+    for (let x = 27 - 32; x < IN_X1 + 32; x += 32) cut('rt', 192, 256, 32, 32, x, y);
+  g.restore();
+
+  // the puddles are half-alpha, so NCC will not hold them; they are placed by
+  // lowest mean colour error instead, and they go down before the stall posts
+  // because in the reference the posts stand in the wet, not under it
+  cut('bath', 197, 163, 23, 13, 54, 93);                // MAE 26.8
+  cut('bath', 192, 176, 16, 16, 130, 88);               // MAE  8.8
+
+  // ── the stall ────────────────────────────────────────────────────────────
+  // the light post above the rail, x 57..60
+  fill('bath', 14, 128, 4, 24, 57, TOP + 5, 61, 71);
+  // the rail across, y 67..70, from the west band to the post
+  cut('bath', 20, 150, 36, 4, 25, 67);
+  // the two dark posts below it, standing on the floor. The east one at
+  // x 55..60 is obvious; the west one at x 25..30 hides against the wall band
+  // and I missed it until the diff lit up a stripe the full height of the room.
+  fill('bath', 14, 160, 6, 32, 55, 70, 61, 124);
+  // The west post reads 4 px wide in the reference — ink 26, tan 27-28, ink 29 —
+  // and no sheet holds a 4 px dark post, so it is the 6 px one clipped: its left
+  // three columns, then its own right-hand ink column butted against them. Every
+  // pixel is still the sprite's; only the width is the artist's edit.
+  fill('bath', 14, 160, 3, 32, 26, 70, 29, 124);
+  fill('bath', 19, 160, 1, 32, 29, 70, 30, 124);
+  g.fillStyle = 'rgba(0,0,0,.5)';                     // what it throws east — the
+  g.fillRect(30, 70, 1, 54);                          // reference has this, the
+  g.fillStyle = INK;                                  // east post has none
+  g.fillRect(56, 124, 4, 1);                          // each post's own foot
+  g.fillRect(27, 124, 2, 1);
+
+  // ── what is on the wall ──────────────────────────────────────────────────
+  crop('graf-die', 'bath', 193, 224, 15, 14, 31, 29);         // BLOB (red)
+  crop('graf-car', 'bath', 207, 287, 16, 12, 41, 36, 'on');   // 0.880 — over 'die!'
+  crop('dispenser-w', 'bath', 224, 66, 16, 19, 35, 46);       // SUBSTITUTE — see spec
+  crop('graf-green', 'bath', 193, 242, 11, 11, 64, 36);       // BLOB (green)
+  crop('graf-A', 'bath', 210, 226, 11, 13, 77, 30);           // BLOB (red)
+  crop('graf-blue', 'bath', 210, 242, 12, 11, 78, 45);        // BLOB (blue)
+  crop('graf-wk', 'bath', 194, 259, 15, 10, 89, 36);          // 0.803
+  crop('poster', 'bath', 321, 130, 15, 21, 104, 31);          // 0.934
+  crop('window', 'bath', 289, 5, 30, 26, 122, 31);            // 0.688
+  crop('graf-wk2', 'bath', 194, 259, 15, 10, 125, 28, 'on');  // 0.982
+  crop('graf-tag', 'bath', 196, 265, 27, 22, 127, 34, 'on');  // 0.736
+  crop('graf-cro', 'bath', 210, 258, 13, 11, 141, 27, 'on');  // 0.920
+
+  // ── the fixtures ─────────────────────────────────────────────────────────
+  crop('toilet', 'bath', 135, 86, 17, 41, 34, 67);            // 0.933
+  crop('urinalA', 'bath', 48, 12, 16, 41, 68, 50, 'on');      // 0.966 — over the blue tag
+  crop('urinalB', 'bath', 64, 12, 16, 41, 91, 50);            // 0.969
+  crop('dispenser', 'bath', 356, 224, 10, 15, 116, 59);       // 0.978
+  crop('sink', 'bath', 134, 32, 22, 31, 127, 60);             // 0.981
+
+  // ── the floor ────────────────────────────────────────────────────────────
+  crop('sign', 'bath', 354, 105, 12, 22, 93, 107);            // 1.000
+  crop('binB', 'bath', 320, 68, 16, 27, 113, 115);            // 0.999
+  crop('binA', 'bath', 352, 65, 16, 30, 132, 112);            // 0.992
+  crop('litter-stick', 'bath', 305, 145, 13, 13, 37, 123);    // 0.983
+  crop('litter-a', 'bath', 290, 150, 7, 7, 53, 131);          // 0.999
+  crop('litter-b', 'bath', 305, 121, 8, 6, 97, 134);          // 0.998
+  crop('litter-c', 'bath', 306, 102, 9, 6, 147, 129);         // 0.963
+  // Still missing: the dark object at 36..46 x 110..120. Nothing in either
+  // sheet fits it under MAE 33, and the one thing that scored 11 was a piece
+  // of the partition rail matching tan on tan. Left out rather than faked.
+  crop('litter-d', 'bath', 296, 145, 7, 7, 107, 126);         // 0.617
+
+  g.restore();
+
+  // the doorway: the band is cut, but its inner ink line runs on as a threshold
+  g.clearRect(DOOR_X0, BOT - BAND + 2, DOOR_X1 - DOOR_X0 + 1, BAND);
+  g.fillStyle = INK;
+  g.fillRect(DOOR_X0, BOT - BAND + 1, DOOR_X1 - DOOR_X0 + 1, 1);
+
+  const z = document.getElementById('z');
+  z.width = W * S; z.height = H * S;
+  const c = z.getContext('2d'); c.imageSmoothingEnabled = false;
+  c.drawImage(room, 0, 0, W * S, H * S);
+  const o = document.getElementById('one');
+  o.width = W; o.height = H;
+  const oc = o.getContext('2d'); oc.imageSmoothingEnabled = false;
+  oc.drawImage(room, 0, 0);
+
+  const log = document.getElementById('log');
+  log.className = CLASH.length ? 'bad' : '';
+  log.textContent = (CLASH.length ? CLASH.join('\n') : 'CLEAN — ' + PROPS.length + ' props')
+    + '\nroom ' + W + 'x' + H + ' px';
+  window.__ready = 1;
+}
+</script>

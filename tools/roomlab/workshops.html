@@ -1,0 +1,268 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0b0d11;font:12px/1.6 ui-monospace,monospace;color:#b9c2dd}
+ canvas{image-rendering:pixelated;display:block}
+ .row{display:flex;gap:20px;align-items:flex-start;padding:16px}
+ h1{font-size:13px;font-weight:400;color:#e9edff;margin:0;padding:14px 16px 0;letter-spacing:.5px}
+ .note{padding:2px 16px 0;color:#7b85ab;max-width:1100px}
+ #log{padding:8px 16px;white-space:pre;color:#5f6b8f}
+ #log.bad{color:#e0776a}
+</style>
+<h1>THE WORKSHOPS</h1>
+<div class="note">
+  Traced 1:1 off <code>reference/workshop-two-bay.jpg</code> (×4 → 250 × 228 native).
+  Same walls, same floor, same objects, same places. Sprites are placed by their ink
+  rectangle, never by their tile, and every position below is either an <b>ncc anchor</b>
+  — the sprite's own best correlation against the render — or measured off it.
+</div>
+<div class="row"><canvas id="z"></canvas><canvas id="one"></canvas></div>
+<pre id="log"></pre>
+<script type="module">
+// ── THE WORKSHOPS ─────────────────────────────────────────────────────────
+// A trace, not a version. The reference is a concrete workshop with a block
+// wall and a tiled floor, and so is this: the two bays, the wall, the floor,
+// the pipe run, the lockers, the pegboard, the bench, the shutter, the grate,
+// the chest and the stock are the reference's, in the reference's places.
+//
+// The measurements, all read off the native render rather than estimated:
+//   room       x 7..242, y 7..210
+//   the step   bay two is cut 32 px higher; its west wall is x 135..140
+//   the bands  6 px everywhere: 1 px ink, 4 px of #6c6c6c, 1 px ink
+//   the floor  the roomtiles floor tile, phase (29,29) — matched at ncc 0.975
+//   the wall   the roomtiles block wall, mortar every 8 px
+//   FACE       bay one's wall meets the floor at y 112, bay two's at y 76
+//
+// Sprite provenance: every prop matches workshop.png or workshop_roomtiles.png
+// at scale 1.0. Positions marked ANCHOR are that sprite's own best normalised
+// cross-correlation position in the render — measure/trace.py prints the list.
+
+const S = 3;                                  // display zoom
+const T = 32;
+const W = 250, H = 228;
+
+const LEFT = 7, RIGHT = 242, BOT = 210, TOP_R = 7, TOP_L = 39, STEP = 135;
+const BAND = 6;
+// The wall is one 32 x 64 block-wall tile pair, and both bays use it: bay one's
+// sits at y 45 and bay two's at y 13, which is the 32 px step in the outline.
+// Mortar every 8 px, so the phases are forced — x = 13 + 32k, y as above.
+const WALL_Y_A = 45, WALL_Y_B = 13, WALL_X0 = 13;
+const FACE_A = WALL_Y_A + 64, FACE_B = WALL_Y_B + 64;   // 109 and 77
+const PART_X0 = 135, PART_X1 = 141, PART_Y = 141;
+const DOOR_X0 = 46, DOOR_X1 = 76;                       // the gap in the south wall
+const FLOOR_PH = 29;                                    // matched at ncc 0.975
+const INK = '#000000', WALLGREY = '#6c6c6c';
+
+const P = '../../public/assets/props/';
+const NEED = { ws: P + 'workshop.png', rt: P + 'workshop_roomtiles.png' };
+const SH = {};
+let left = Object.keys(NEED).length;
+for (const k in NEED) {
+  const im = new Image();
+  im.onload = () => { SH[k] = im; if (!--left) build(); };
+  im.src = NEED[k];
+}
+
+function outline(d) {
+  return [[LEFT + d, TOP_L + d], [STEP - d, TOP_L + d], [STEP - d, TOP_R + d],
+    [RIGHT - d, TOP_R + d], [RIGHT - d, BOT - d], [LEFT + d, BOT - d]];
+}
+function path(g, pts) {
+  g.beginPath();
+  pts.forEach((p, i) => (i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1])));
+  g.closePath();
+}
+function inside(r) {
+  const pad = BAND - 1;
+  const pts = [[r.x, r.y], [r.x + r.w - 1, r.y], [r.x, r.y + r.h - 1], [r.x + r.w - 1, r.y + r.h - 1]];
+  return pts.every(([x, y]) => {
+    if (y > BOT - pad || x < LEFT + pad || x > RIGHT - pad) return false;
+    return y >= (x < STEP ? TOP_L + pad : TOP_R + pad);
+  });
+}
+
+function build() {
+  const room = document.createElement('canvas');
+  room.width = W; room.height = H;
+  const g = room.getContext('2d');
+  g.imageSmoothingEnabled = false;
+
+  const BB = {}, FLOORPROPS = [], WALLPROPS = [], CLASH = [];
+
+  function inkBox(sheet, c, r, w, h) {
+    const k = sheet + c + ',' + r + ',' + w + ',' + h;
+    if (BB[k] !== undefined) return BB[k];
+    const cv = document.createElement('canvas');
+    cv.width = T * w; cv.height = T * h;
+    const cx = cv.getContext('2d'); cx.imageSmoothingEnabled = false;
+    cx.drawImage(SH[sheet], c * T, r * T, T * w, T * h, 0, 0, T * w, T * h);
+    const d = cx.getImageData(0, 0, T * w, T * h).data;
+    let x0 = 1e9, y0 = 1e9, x1 = -1, y1 = -1;
+    for (let y = 0; y < T * h; y++) {
+      for (let x = 0; x < T * w; x++) {
+        if (d[(y * T * w + x) * 4 + 3] > 8) {
+          if (x < x0) x0 = x; if (x > x1) x1 = x;
+          if (y < y0) y0 = y; if (y > y1) y1 = y;
+        }
+      }
+    }
+    return BB[k] = (x1 < 0 ? null : { x0, y0, w: x1 - x0 + 1, h: y1 - y0 + 1 });
+  }
+  const cut = (sheet, sx, sy, sw, sh, dx, dy) =>
+    g.drawImage(SH[sheet], sx, sy, sw, sh, dx, dy, sw, sh);
+  const tile = (sheet, sx, sy, sw, sh, x0, y0, x1, y1) => {
+    for (let y = y0; y < y1; y += sh) {
+      for (let x = x0; x < x1; x += sw) cut(sheet, sx, sy, sw, sh, x, y);
+    }
+  };
+  function register(name, x, y, w, h, layer) {
+    const rect = { x, y, w, h, name };
+    const list = layer === 'wall' ? WALLPROPS : layer === 'on' ? [] : FLOORPROPS;
+    for (const o of list) {
+      const ox = Math.max(0, Math.min(x + w, o.x + o.w) - Math.max(x, o.x));
+      const oy = Math.max(0, Math.min(y + h, o.y + o.h) - Math.max(y, o.y));
+      if (ox > 3 && oy > 3) CLASH.push('OVERLAP  ' + name + ' x ' + o.name + '  (' + ox + 'x' + oy + ')');
+    }
+    if (!inside(rect)) CLASH.push('OFF-FRAME  ' + name + '  [' + x + ',' + y + ' ' + w + 'x' + h + ']');
+    list.push(rect);
+  }
+  /** A sprite placed so its INK lands at (ix,iy). */
+  function put(name, sheet, c, r, w, h, ix, iy, layer) {
+    const b = inkBox(sheet, c, r, w, h);
+    if (!b) { CLASH.push('EMPTY  ' + name); return; }
+    register(name, ix, iy, b.w, b.h, layer);
+    g.drawImage(SH[sheet], c * T, r * T, T * w, T * h, ix - b.x0, iy - b.y0, T * w, T * h);
+  }
+  /** Half this sheet's tiles hold two or three objects, so most props are a
+   *  sub-rectangle read off a connected-component pass rather than a tile. */
+  function crop(name, sheet, sx, sy, sw, sh, dx, dy, layer) {
+    register(name, dx, dy, sw, sh, layer);
+    cut(sheet, sx, sy, sw, sh, dx, dy);
+  }
+
+  // ── the shell ────────────────────────────────────────────────────────────
+  path(g, outline(0)); g.fillStyle = INK; g.fill();
+  path(g, outline(1)); g.fillStyle = WALLGREY; g.fill();
+  path(g, outline(BAND - 1)); g.fillStyle = INK; g.fill();
+
+  g.save(); path(g, outline(BAND)); g.clip();
+
+  // the floor, at the phase it sits at in the render
+  tile('rt', 8 * T, 8 * T, T, T, FLOOR_PH - T, FLOOR_PH - T, W, H);
+  cut('rt', 7 * T, 7 * T, T, T, 189, 125);          // the two tiles that are
+  cut('rt', 7 * T, 8 * T, T, T, 61, 157);           // cracked in the render
+
+  // the wall in elevation: one 32 x 64 tile pair, twice
+  const wall = (x0, x1, top) => {
+    g.save(); g.beginPath(); g.rect(x0, top, x1 - x0, 64); g.clip();
+    for (let x = WALL_X0 - T * 8; x < x1; x += T) {
+      cut('rt', 4 * T, 7 * T, T, T, x, top);
+      cut('rt', 4 * T, 8 * T, T, T, x, top + T);
+    }
+    g.restore();
+  };
+  wall(LEFT, PART_X0, WALL_Y_A);
+  wall(PART_X1, RIGHT, WALL_Y_B);
+
+  // Bay two's west wall. Above bay two's floor line it is the 6 px band seen
+  // from over the top; below it you are looking at its face, so it carries the
+  // same block wall as everything else.
+  g.fillStyle = INK; g.fillRect(PART_X0, TOP_R, 6, PART_Y - TOP_R + 1);
+  g.fillStyle = WALLGREY; g.fillRect(PART_X0 + 1, TOP_R, 4, FACE_B - TOP_R);
+  g.save(); g.beginPath(); g.rect(PART_X0 + 1, FACE_B + 1, 4, PART_Y - FACE_B - 2); g.clip();
+  for (let x = WALL_X0 - T * 8; x < PART_X1; x += T) {
+    cut('rt', 4 * T, 7 * T, T, T, x, FACE_B + 1);
+    cut('rt', 4 * T, 8 * T, T, T, x, FACE_B + 1 + T);
+  }
+  g.restore();
+  // and bay one's east face, below bay one's own floor line
+  g.fillStyle = INK; g.fillRect(131, FACE_A, 1, PART_Y - FACE_A);
+  g.save(); g.beginPath(); g.rect(132, FACE_A, 3, PART_Y - FACE_A); g.clip();
+  for (let x = WALL_X0 - T * 8; x < PART_X0; x += T) {
+    cut('rt', 4 * T, 8 * T, T, T, x, FACE_A - 12);
+  }
+  g.restore();
+  g.fillStyle = INK; g.fillRect(PART_X0, PART_Y, 6, 1);
+
+  // the doorway in the south wall, which the render leaves open
+  g.restore();
+  g.clearRect(DOOR_X0, BOT - BAND + 1, DOOR_X1 - DOOR_X0, BAND);
+  g.fillStyle = INK;
+  g.fillRect(DOOR_X0 - 1, BOT - BAND + 1, 1, BAND);
+  g.fillRect(DOOR_X1, BOT - BAND + 1, 1, BAND);
+  g.save(); path(g, outline(BAND)); g.clip();
+
+  // ── bay one ──────────────────────────────────────────────────────────────
+  // the pipe run along the wall, its drop, and the box it ends in
+  // The run's own rows are 422..426 of the sheet, and in the render its bright
+  // row lands on y 52 — so the piece goes at y 51, and the run is x 21..68.
+  for (let x = 21; x < 68; x += 16) cut('ws', 140, 422, Math.min(16, 68 - x), 5, x, 51);
+  cut('ws', 133, 416, 4, 8, 67, 44);                        // the riser at its far end
+  for (let y = 50; y < 72; y += 12) cut('ws', 133, 416, 5, Math.min(12, 72 - y), 16, y);
+  crop('valve', 'ws', 0, 436, 16, 8, 29, 49, 'wall');       // ANCHOR 0.999
+  crop('collar', 'ws', 80, 438, 16, 4, 50, 51, 'wall');     // ANCHOR 0.969
+  crop('tap', 'ws', 67, 416, 10, 14, 12, 62, 'wall');
+  crop('box', 'ws', 82, 416, 12, 14, 15, 77, 'wall');       // ANCHOR 0.999
+  put('shelf', 'ws', 14, 3, 1, 3, 12, 130);                 // ANCHOR 0.999
+  put('locker', 'ws', 14, 10, 1, 2, 34, 68);                // ANCHOR 0.887
+  crop('jarA', 'ws', 212, 226, 8, 12, 42, 65, 'on');        // ANCHOR 0.999
+  crop('jarB', 'ws', 180, 242, 8, 12, 51, 62, 'on');        // ANCHOR 0.999
+  crop('spill', 'ws', 80, 438, 16, 4, 42, 116, 'on');       // ANCHOR 0.957
+  // MISSING OBJECT: the render also has a pale spill around this, running out
+  // from under the lockers with a tin lying in it. No sprite in either sheet
+  // matches it above 0.64 — it is drawn in the render, not stamped — so it is
+  // left out rather than substituted.
+  crop('notice', 'ws', 465, 388, 14, 21, 70, 59, 'wall');   // ANCHOR 0.999
+  put('pegboard', 'ws', 6, 4, 2, 1, 88, 52, 'wall');        // ANCHOR 0.999
+  put('bench', 'ws', 11, 2, 2, 2, 71, 83);                  // ANCHOR 0.902
+  crop('stool', 'ws', 32, 128, 16, 31, 107, 116, 'on');     // ANCHOR 0.999
+
+  // ── bay two ──────────────────────────────────────────────────────────────
+  crop('lamp', 'ws', 131, 352, 10, 14, 144, 12, 'wall');    // ANCHOR 1.000
+  crop('panel', 'ws', 465, 261, 14, 20, 143, 36, 'wall');   // ANCHOR 1.000
+  crop('extinguisher', 'ws', 452, 264, 10, 22, 145, 59, 'wall'); // ANCHOR 0.999
+  crop('shutter', 'rt', 192, 292, 64, 60, 158, 17, 'wall'); // ANCHOR 0.986
+  crop('hook', 'ws', 102, 432, 4, 16, 228, 16, 'wall');     // ANCHOR 1.000
+  crop('cable', 'ws', 70, 432, 4, 16, 228, 19, 'on');       // ANCHOR 0.973
+  crop('pulley', 'ws', 20, 432, 8, 16, 226, 29, 'on');      // ANCHOR 1.000
+  crop('wheel', 'ws', 67, 416, 10, 14, 225, 45, 'wall');    // ANCHOR 0.999
+  crop('tin', 'ws', 164, 242, 8, 12, 216, 71, 'on');        // ANCHOR 0.999
+  crop('grate', 'ws', 227, 417, 59, 31, 161, 92, 'on');     // ANCHOR 0.991; the
+                                                            // chest stands on it
+  crop('chest', 'ws', 256, 246, 32, 42, 206, 102);          // ANCHOR 0.999
+  crop('spanA', 'ws', 51, 339, 5, 12, 209, 104, 'on');      // ANCHOR 0.998
+  crop('spanB', 'ws', 57, 339, 5, 11, 215, 104, 'on');      // ANCHOR 0.999
+  crop('rag', 'ws', 116, 340, 8, 8, 221, 105, 'on');        // ANCHOR 0.999
+  crop('flask', 'ws', 132, 259, 9, 12, 229, 97, 'on');
+
+  // ── the stock, across the bottom of both bays ────────────────────────────
+  put('mat', 'ws', 7, 12, 2, 1, 38, 172);                   // ANCHOR 0.994
+  crop('lowbench', 'ws', 353, 20, 62, 44, 150, 162);        // ANCHOR 0.660
+  put('timberL', 'ws', 1, 5, 1, 2, 128, 162);               // ANCHOR 0.999
+  crop('caddy', 'ws', 16, 289, 16, 30, 154, 154, 'on');
+  crop('plank', 'ws', 49, 295, 13, 7, 172, 164, 'on');      // ANCHOR 0.999
+  crop('offcut', 'ws', 144, 288, 16, 16, 183, 166, 'on');   // ANCHOR 0.948
+  crop('batten', 'ws', 37, 293, 6, 21, 167, 158, 'on');
+  crop('bottle', 'ws', 148, 259, 9, 12, 198, 173, 'on');    // ANCHOR 0.999
+  crop('redtop', 'ws', 164, 226, 8, 13, 201, 160, 'on');
+  put('timberR', 'ws', 1, 5, 1, 2, 215, 152, 'on');         // the can stands in front
+  crop('jerrycan', 'ws', 128, 172, 16, 19, 216, 187);       // ANCHOR 1.000
+
+  g.restore();
+
+  const z = document.getElementById('z');
+  z.width = W * S; z.height = H * S;
+  const c = z.getContext('2d'); c.imageSmoothingEnabled = false;
+  c.drawImage(room, 0, 0, W * S, H * S);
+  const o = document.getElementById('one');
+  o.width = W; o.height = H;
+  const oc = o.getContext('2d'); oc.imageSmoothingEnabled = false;
+  oc.drawImage(room, 0, 0);
+
+  const log = document.getElementById('log');
+  log.className = CLASH.length ? 'bad' : '';
+  log.textContent = (CLASH.length ? CLASH.join('\n')
+    : 'CLEAN — ' + FLOORPROPS.length + ' on the floor, ' + WALLPROPS.length + ' on the wall')
+    + '\nroom ' + W + 'x' + H + ' px';
+  window.__ready = 1;
+}
+</script>

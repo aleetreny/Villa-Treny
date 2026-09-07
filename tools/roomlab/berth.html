@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+<style>
+ body{margin:0;background:#0b0d11;font:12px/1.5 monospace;color:#cfe}
+ canvas{image-rendering:pixelated;display:block}
+ #log{padding:8px;white-space:pre}
+ .row{display:flex;gap:12px;align-items:flex-start;padding:8px}
+</style>
+<div class="row"><canvas id="z"></canvas><canvas id="one"></canvas></div>
+<pre id="log"></pre>
+<script type="module">
+// ── A TWO-BERTH CABIN ─────────────────────────────────────────────────────
+// The mould, alone and unvaried. Traced 1:1 off reference/two-berth-cabin.jpg:
+// every position was measured off that image and divided by its 5.34x display
+// scale, so the room comes out at the scale the sprites were drawn for.
+// 204 x 205 px — about six tiles across.
+//
+// The trace itself now lives in cabin-kit.js, because the hull has five of these
+// and they have to be the same room rather than five that look alike. This page
+// is the mould with no variation at all: no lamp, no mirror, no extra object.
+// cabins.html is the five.
+//
+// The corrugation was measured off the reference by folding a column profile:
+// 8 px period, light 161/145/146 then dark 98/103/102 — which is the walls
+// sheet at 1:1. The deck is flat #919191 with a grid line every 8 px, also
+// measured; no sheet in the pack carries that, so it is drawn.
+//
+// One prop is not in the pack: the reference's right-hand wall carries a
+// landscape yellow notice with ruled lines. The nearest the sheets hold is
+// furn(13,15), which has a skull on it.
+
+import { drawCabin, W, H } from './cabin-kit.js';
+
+const S = 4;                          // display zoom
+const P = '../../public/assets/props/';
+const NEED = { furn: P + 'shelter_furniture.png', walls: P + 'shelter_walls.png' };
+const SH = {};
+let left = Object.keys(NEED).length;
+for (const k in NEED) {
+  const im = new Image();
+  im.onload = () => { SH[k] = im; if (!--left) build(); };
+  im.src = NEED[k];
+}
+
+function build() {
+  const { canvas, clash, floor, wall } = drawCabin(SH);
+
+  const z = document.getElementById('z');
+  z.width = W * S; z.height = H * S;
+  const c = z.getContext('2d'); c.imageSmoothingEnabled = false;
+  c.fillStyle = '#0b0d11'; c.fillRect(0, 0, z.width, z.height);
+  c.drawImage(canvas, 0, 0, W * S, H * S);
+
+  const o = document.getElementById('one');
+  o.width = W; o.height = H;
+  const oc = o.getContext('2d'); oc.imageSmoothingEnabled = false;
+  oc.fillStyle = '#0b0d11'; oc.fillRect(0, 0, W, H);
+  oc.drawImage(canvas, 0, 0);
+
+  document.getElementById('log').textContent =
+    (clash.length ? clash.join('\n') : 'CLEAN — ' + floor.length + ' on the deck, ' + wall.length + ' on the plate')
+    + '\nroom ' + W + 'x' + H + ' px';
+  window.__ready = 1;
+}
+</script>
