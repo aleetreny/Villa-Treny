@@ -1,3 +1,9 @@
+## 9 September 2026 — first hosted check and test-efficiency correction
+
+- Public main now includes `803afa5` and the previously accumulated commits. Actions run `34404581965` correctly stopped before deployment when one historical offer-disposition test exceeded its 5,000 ms deadline (5,362 ms on Ubuntu).
+- That test repeatedly rebuilt the identical large schema for 18 valid proposals and five invalid decisions. It now compiles the immutable state/turn schema once and preserves every round-trip, numeric bound, application-equivalence and rejection assertion. The timeout and production code are unchanged.
+- The seven-test suite passes locally after this correction. The hosted pipeline will recheck the complete repository before publishing.
+
 ## 9 September 2026 — responsive review and release authorization
 
 - Owner created the Cloudflare token and confirmed permission for public source/artwork. Stored the token directly in the main-only GitHub production environment, without writing its value to source or logs.

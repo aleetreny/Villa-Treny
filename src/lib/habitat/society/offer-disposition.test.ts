@@ -91,6 +91,9 @@ describe('explicit disposition of an actual incoming offer', () => {
 
   it('preserves every proposal family and exact numeric/capability bounds rather than choosing terms', () => {
     const f = offered(), turn = prepare(f, 'A');
+    // Every case uses the same immutable state/turn. Compile its large schema
+    // once; rebuilding it per payload made this regression time out on CI.
+    const proposalSchema = z.fromJSONSchema(offerDispositionJsonSchema(f.state, f.world, turn));
     const deals = [
       { kind: 'accept', offerId: f.state.offers[0]!.id }, { kind: 'reject', offerId: f.state.offers[0]!.id },
       ...['give', 'ask'].map(direction => ({ kind: 'transfer', direction, cells: 1.25 })),
@@ -102,7 +105,7 @@ describe('explicit disposition of an actual incoming offer', () => {
     for (const deal of deals) {
       const raw = reply(f, { deal }), projected = toOfferDispositionResponse(f.state, f.world, turn, raw);
       expect(fromOfferDispositionResponse(projected)).toEqual(raw);
-      expect(valid(offerDispositionJsonSchema(f.state, f.world, turn), projected)).toBe(true);
+      expect(proposalSchema.safeParse(projected).success).toBe(true);
       expect(applyOfferDisposition(f.state, f.world, turn, projected, control(f)))
         .toEqual(applyAttentionCapabilityChoice(f.state, f.world, turn, raw, control(f)));
     }
@@ -110,7 +113,7 @@ describe('explicit disposition of an actual incoming offer', () => {
       { choice: 'accept:invented' }, { choice: 'no_deal', cells: 1 },
       { choice: 'propose_give', cells: 0 }, { choice: 'propose_give', cells: 1.001 },
       { choice: 'propose_work', cells: 0, units: 1, slackWatches: 0, task: { verb: 'grow', room: 'common' } },
-    ]) expect(valid(offerDispositionJsonSchema(f.state, f.world, turn), { ...reply(f), decision })).toBe(false);
+    ]) expect(proposalSchema.safeParse({ ...reply(f), decision }).success).toBe(false);
   });
 
   it('does not require disposition during private work, contact, leaving or exclusive lookup', () => {

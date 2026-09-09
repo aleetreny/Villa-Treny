@@ -29,6 +29,10 @@ The refinement preserves the approved rooms, authored portraits, typography and 
 - One visual batch inspected board, archive, residents and habitat at 1920×1080 and 390×844, plus reading/reply/summary views, using the actual saved edition **The Restored Hearing Threshold**. Captured pages had no JavaScript errors or horizontal overflow. README screenshots come from that batch.
 - Verification uses saved text or isolated fixtures. It does not generate debates, switch models, reset storage or spend inference quota.
 
+## Hosted runner correction
+
+The first GitHub run (`34404581965`, source `803afa5`) stopped before deployment: the historical offer-disposition regression spent 5,362 ms against its 5,000 ms limit on Ubuntu. Its 23 inputs all share one immutable state/turn; compiling the schema once removes redundant work while retaining every assertion and the existing timeout. Production engine behavior is unchanged. The subsequent hosted result is recorded in the release verification.
+
 ## Practical limits
 
 Browser emulation is not a physical iPhone/Android device test. The camera deliberately preserves native pixels and integer zoom; large rooms can require panning. Existing source-image limitations remain as documented in the art catalogue. The build still reports a 619 kB lazy room/legacy chunk (56 kB compressed); it is separate from the initial forum bundle. These interface checks do not establish the factual correctness or editorial quality of future model output.
