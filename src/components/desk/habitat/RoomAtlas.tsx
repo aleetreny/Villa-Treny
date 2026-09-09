@@ -72,17 +72,19 @@ const PLACES: readonly AtlasPlace[] = [
   { id: 'dig6', x: 70, y: 202, w: 33, h: 24 },
 ];
 
-export function RoomAtlas({ selected, snapshot, onSelect }: {
+export function RoomAtlas({ selected, snapshot, onSelect, compact = false }: {
   selected: RoomId;
   snapshot: HabitatSnapshot;
   onSelect: (id: RoomId) => void;
+  /** Small touch maps are orientation aids; the native selector owns navigation. */
+  compact?: boolean;
 }) {
   const [hovered, setHovered] = useState<RoomId | null>(null);
   const current = hovered ?? selected;
   return (
     <nav className="ns-atlas" aria-label="Explore the rooms">
       <h2>The habitat</h2>
-      <svg className="ns-atlas__map" viewBox="0 0 216 250" aria-label="Room atlas">
+      <svg className={'ns-atlas__map'+(compact?' is-compact':'')} viewBox="0 0 216 250" aria-label="Room atlas" aria-hidden={compact || undefined}>
         {PLACES.map((place) => {
           const people = snapshot.people.filter((person) => observerRoom(person.room) === place.id);
           const sealed = place.id === 'breach';
@@ -91,18 +93,18 @@ export function RoomAtlas({ selected, snapshot, onSelect }: {
               key={place.id}
               className={`ns-atlas__room${place.id === selected ? ' is-selected' : ''}${sealed ? ' is-sealed' : ''}`}
               data-side={ROOM_BY_ID[place.id].side}
-              role="button"
+              role={compact ? undefined : 'button'}
               aria-disabled={sealed}
-              tabIndex={sealed ? -1 : 0}
+              tabIndex={sealed || compact ? -1 : 0}
               aria-label={`${ROOM_BY_ID[place.id].name}${sealed ? ', sealed' : `, ${people.length} ${people.length === 1 ? 'resident' : 'residents'}`}`}
               aria-pressed={place.id === selected}
-              onClick={() => { if (!sealed) onSelect(place.id); }}
+              onClick={() => { if (!sealed && !compact) onSelect(place.id); }}
               onMouseEnter={() => setHovered(place.id)}
               onMouseLeave={() => setHovered(null)}
               onFocus={() => setHovered(place.id)}
               onBlur={() => setHovered(null)}
               onKeyDown={(event) => {
-                if (!sealed && (event.key === 'Enter' || event.key === ' ')) {
+                if (!sealed && !compact && (event.key === 'Enter' || event.key === ' ')) {
                   event.preventDefault();
                   onSelect(place.id);
                 }

@@ -1,3 +1,12 @@
+## 9 September 2026 — responsive review and release authorization
+
+- Owner created the Cloudflare token and confirmed permission for public source/artwork. Stored the token directly in the main-only GitHub production environment, without writing its value to source or logs.
+- Found 306 untracked byte-identical ` 2` duplicates. Preserved all under ignored `.local/responsive-review/duplicate-copies`; originals were not overwritten.
+- Corrected fluid margins, phone layouts, generic styles leaking onto sprite buttons, self-targeting post labels, source/return links, clipboard recovery, room/follow browser history and independent archive loading.
+- Reviewed 14 desktop/mobile captures using the actual saved edition. Original room artwork, integer scale and geometry are unchanged. Added a WebKit touch flow and six-size overflow/navigation regressions.
+- Local check: 67 Node, 1,090 app, 411 Worker tests; 38 browser flows; build, room/mask verification, dry deploy and seven bundled hosting tests pass. No inference used. The complete review and limits are in `docs/responsive-review.md`.
+- Portfolio remains unchanged. Public CI deployment and the new release identity are the remaining acceptance step.
+
 ## Independent public release — 9 September 2026
 
 - Commit 08b8c46 saves the accumulated implementation/research (635 files). Known-secret comparison inspected all 1,193 candidate files against five real local credentials without exposing values; no match. Apparent assignments were synthetic tests/placeholders.

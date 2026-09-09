@@ -1,3 +1,14 @@
+# Current task: responsive refinement and automated public release — 9 September 2026
+
+The owner confirms public source/artwork authorization and has created the scoped Cloudflare deploy token. Preserve both repositories as independent projects. Commit verified logical changes, fast-forward main, push and verify public delivery. No model calls are needed for interface testing.
+
+1. **Audit — complete.** Reproduce the reported margins, isolate generic button CSS leaking onto habitat sprites, inspect post navigation, route/query behavior and mobile layout. Preserve 306 byte-identical untracked duplicate copies under ignored `.local/responsive-review/duplicate-copies` so they cannot duplicate tests or enter Git.
+2. **Refine and verify locally — complete.** Fluid shell with readable prose, responsive navigation and room controls, meaningful post links/return path, robust route and error behavior. Test desktop, narrow touch layouts, keyboard and browser history.
+3. **Publish — in progress.** Store the account-scoped token as the production environment secret; run the complete checks, commit and push, monitor the real GitHub Actions deploy and verify the public release and preserved saved data.
+4. **Document — implementation review complete; deployment receipt pending.** Refresh README presentation and release evidence; document actual limitations and operation. Portfolio remains unchanged.
+
+---
+
 # Current task: independent public releases and continuous commits — 9 September 2026
 
 The owner explicitly authorizes committing all verified accumulated work, pushing both independent repositories, publishing their public websites, and making incremental commits for subsequent completed changes. This supersedes the historical no-automatic-commit instruction below. Preserve original licensed artwork and durable production data. English product and repository documentation; Spanish progress reports.
