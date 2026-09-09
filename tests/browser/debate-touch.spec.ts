@@ -14,6 +14,9 @@ import { board } from './debate-fixture';
   await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'The habitat'}).tap();
   await expect(page.locator('.ns-atlas__map')).toHaveAttribute('aria-hidden','true');
   await page.getByLabel('Go to a room').selectOption('common');
+  const selector=page.getByLabel('Go to a room');
+  expect((await selector.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  expect(await selector.evaluate(e=>getComputedStyle(e).appearance)).toBe('none');
   await expect(page.locator('.room-view__world.is-ready')).toBeVisible();
   for(const button of await page.getByRole('group',{name:'Room magnification'}).getByRole('button').all()){
    const rect=(await button.boundingBox())!;expect(rect.width).toBeGreaterThanOrEqual(44);expect(rect.height).toBeGreaterThanOrEqual(44);

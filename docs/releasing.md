@@ -4,6 +4,8 @@
 
 **Application releases:** commit a checked change and push `main`. The `Verify and publish Villa Treny` GitHub Actions workflow runs lint, types, unit/integration tests, browser interactions, the original-room verification and a local test of the bundled Worker. Only a successful check job can deploy. Pull requests and other branches do not receive deployment credentials.
 
+The release checker allows seven reads five seconds apart for the expected commit to become visible after upload. It never accepts an older commit as success; API, identity and transport errors still fail. This handles the observed brief publication delay without hiding failures.
+
 The deploy job downloads that run's verified frontend artifact, deploys it together with the Worker, and checks the public pages, saved archive, release commit and protected administration. Main runs are serialized so a newer deployment cannot be overwritten by an older concurrent run. Failed checks leave the current public version in place. A failed post-deploy check requires inspection; it does not imply an automatic rollback.
 
 **Daily discussions:** the deployed Cloudflare Durable Object starts a new date at 09:00 UTC and advances one saved step at a time. An hourly cron reconciles missed scheduling. Accepted posts and the final summary are stored in SQLite, with the archive and recommendation counts. The browser reads the API; it never starts inference. No GitHub Actions schedule, generated Markdown commit, rebuild or laptop process is involved.

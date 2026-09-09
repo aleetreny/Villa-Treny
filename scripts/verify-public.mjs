@@ -1,5 +1,6 @@
 /** Read-only post-deployment check. Never calls a model or changes a vote. */
 import assert from 'node:assert/strict';
+import { readPublishedRelease } from './release-readiness.mjs';
 
 const origin = 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev';
 const args = process.argv.slice(2);
@@ -16,9 +17,10 @@ async function read(path, type = 'application/json', status = 200) {
   return type === 'application/json' ? response.json() : response.text();
 }
 
-const release = await read('/release.json');
-assert.equal(release.application, 'villa-treny');
-if (args[1]) assert.equal(release.commit, args[1], 'The public site does not match the release commit.');
+const release = await readPublishedRelease(() => read('/release.json'), {
+  expectedCommit: args[1],
+  onWait: (attempt, attempts) => console.log(`Waiting for the expected public commit (${attempt}/${attempts}).`),
+});
 assert.equal((await read('/health')).ok, true);
 const archive = await read('/v1/debates');
 assert.ok(Array.isArray(archive.entries), 'Archive must be an actual API result.');

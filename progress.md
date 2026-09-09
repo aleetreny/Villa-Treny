@@ -1,3 +1,10 @@
+## 9 September 2026 — automatic deployment and public continuity
+
+- Hosted run `34405012806` passed the entire check job and deployed source `31345cc` using the configured GitHub environment token. Its immediate post-deploy read saw the previous version; the next read-only verifier confirmed the correct release. Added bounded exact-SHA readiness and five regressions rather than accepting a stale success or retrying arbitrary API errors.
+- At 21:14 UTC, the public board/archive/profiles/rooms passed desktop Chromium and mobile WebKit checks, with no page overflow, JavaScript errors, writes or inference. The private edition/attempt export, legacy observer and daily scheduler diagnostics remain unchanged; the old world is paused at revision 386.
+- Completed clipboard-denied focus/selection and consistent WebKit selector geometry, with targeted browser regressions. The public visual confirmation preserves original art. No further design iteration is required.
+- Updated README desktop/mobile presentation, operator/design documentation and the release receipt. Final delivery continues to use verified main pushes; actual run and public SHA remain the authority for each release.
+
 ## 9 September 2026 — first hosted check and test-efficiency correction
 
 - Public main now includes `803afa5` and the previously accumulated commits. Actions run `34404581965` correctly stopped before deployment when one historical offer-disposition test exceeded its 5,000 ms deadline (5,362 ms on Ubuntu).

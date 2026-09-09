@@ -21,9 +21,9 @@ The refinement preserves the approved rooms, authored portraits, typography and 
 
 ## Verification
 
-- `pnpm check`: lint/types, 67 Node/provenance/evaluator tests, 1,090 application tests and 411 Worker tests passed.
+- `pnpm check`: lint/types, 72 Node/provenance/evaluator/readiness tests (67 base checks plus five release-readiness regressions), 1,090 application tests and 411 Worker tests passed.
 - `pnpm test:browser`: 38 flows passed, including Chromium layout checks at 320×740, 390×844, 768×1024, 844×390, 1920×1080 and 2560×1440; no horizontal page overflow.
-- WebKit 26.5 exercised touch reading, source/return links, recommendation, archive filtering, native room selection and follow at 390×844 with a 3× device scale. Zoom controls were measured at a minimum 44×44 CSS pixels.
+- WebKit 26.5 exercised touch reading, source/return links, recommendation, archive filtering, native room selection and follow at 390×844 with a 3× device scale. Native option pickers retain consistent 44 px control styling in WebKit. Zoom controls were measured at a minimum 44×44 CSS pixels.
 - Existing browser coverage still loads all 45 visitable interiors, checks integer fit, foreground-aware following, reduced motion, retries, historical records and private-data boundaries.
 - `pnpm build`, source-room verification, dry deploy and seven tests of the actual bundled Worker passed. The distribution contains 67 deployable files and 46 room images; raw packs and private runtime files are excluded. Room export verifies 373 foreground masks; legacy art checks verify 11 rasters and 24 authoring dependencies.
 - One visual batch inspected board, archive, residents and habitat at 1920×1080 and 390×844, plus reading/reply/summary views, using the actual saved edition **The Restored Hearing Threshold**. Captured pages had no JavaScript errors or horizontal overflow. README screenshots come from that batch.
@@ -31,7 +31,7 @@ The refinement preserves the approved rooms, authored portraits, typography and 
 
 ## Hosted runner correction
 
-The first GitHub run (`34404581965`, source `803afa5`) stopped before deployment: the historical offer-disposition regression spent 5,362 ms against its 5,000 ms limit on Ubuntu. Its 23 inputs all share one immutable state/turn; compiling the schema once removes redundant work while retaining every assertion and the existing timeout. Production engine behavior is unchanged. The subsequent hosted result is recorded in the release verification.
+The first GitHub run (`34404581965`, source `803afa5`) stopped before deployment: the historical offer-disposition regression spent 5,362 ms against its 5,000 ms limit on Ubuntu. Its 23 inputs all share one immutable state/turn; compiling the schema once removes redundant work while retaining every assertion and the existing timeout. Production engine behavior is unchanged. The next hosted run passed every check and deployed successfully; its immediate public check briefly saw the previous commit. Readiness verification now requires the exact commit within seven reads, five seconds apart, with regressions for stale, invalid and unavailable responses. Transport or identity errors still fail. See the release verification for the observed public result.
 
 ## Practical limits
 

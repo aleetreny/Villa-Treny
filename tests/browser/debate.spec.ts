@@ -52,6 +52,8 @@ test('copy post link produces a dated URL and a selectable fallback when clipboa
  await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:async()=>{throw new Error('Denied');}}}));
  await page.locator('.forum-post').first().getByRole('button',{name:/Copy link/}).click();
  await expect(page.getByLabel('Copy this post’s address')).toHaveValue(copied!);
+ await expect(page.getByLabel('Copy this post’s address')).toBeFocused();
+ await expect(page.getByLabel('Copy this post’s address')).toBeInViewport();
 });
 
 test('room selection, following, stop and browser history retain the correct room', async ({page}) => {

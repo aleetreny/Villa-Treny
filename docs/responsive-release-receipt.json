@@ -1,0 +1,65 @@
+{
+  "at": "2026-09-09T21:14:17.721Z",
+  "release": {
+    "application": "villa-treny",
+    "version": "0.1.0",
+    "commit": "31345cceea468ecd784be613e4be1f936417c914"
+  },
+  "continuity": {
+    "privateEditionAndAttempts": "unchanged",
+    "legacyObserver": "unchanged",
+    "schedulerDiagnostics": "unchanged",
+    "worldRevision": 386,
+    "legacyMode": "paused",
+    "model": "gemini-3.5-flash-lite",
+    "enabled": true,
+    "nextAlarmAt": 1789030800000
+  },
+  "browser": {
+    "screens": [
+      {
+        "name": "desktop",
+        "surface": "board",
+        "overflow": false
+      },
+      {
+        "name": "desktop",
+        "surface": "archive",
+        "overflow": false
+      },
+      {
+        "name": "desktop",
+        "surface": "profiles",
+        "overflow": false
+      },
+      {
+        "name": "desktop",
+        "surface": "rooms",
+        "overflow": false
+      },
+      {
+        "name": "mobile",
+        "surface": "board",
+        "overflow": false
+      },
+      {
+        "name": "mobile",
+        "surface": "archive",
+        "overflow": false
+      },
+      {
+        "name": "mobile",
+        "surface": "profiles",
+        "overflow": false
+      },
+      {
+        "name": "mobile",
+        "surface": "rooms",
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "realInference": 0
+  }
+}

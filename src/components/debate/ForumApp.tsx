@@ -39,7 +39,7 @@ function Post({post,day}:{post:DailyPost;day:PublicDebate}) {
     </div></div>
    <div className="forum-post-body">{post.quote&&target?<blockquote><a href={'#'+target.id}>“{post.quote}” <span>— {name(target.author)} · Read the original</span></a></blockquote>:null}
     {post.body.split(/\n\s*\n/).map((p,i)=><p key={i}>{p}</p>)}
-    {shareLink?<label className="forum-share-fallback">Copy this post’s address<input readOnly value={shareLink} onFocus={e=>e.target.select()}/></label>:null}</div>
+    {shareLink?<label className="forum-share-fallback">Copy this post’s address<input autoFocus readOnly value={shareLink} onFocus={e=>e.target.select()}/></label>:null}</div>
  </article>;
 }
 function Summary({day}:{day:PublicDebate}){return day.summary?<section className="forum-summary" id="debate-summary" tabIndex={-1} aria-labelledby="summary-title"><h2 id="summary-title">Where they landed</h2><p>{day.summary.overview}</p>

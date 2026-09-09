@@ -38,6 +38,13 @@ Recommendations mean **this debate is worth reading**. They persist across reloa
 
 ![The habitat, using the approved room artwork](docs/images/habitat.png)
 
+<details>
+<summary>On a phone</summary>
+
+<img src="docs/images/mobile-board.png" width="390" alt="The daily board with mobile navigation and readable text" />
+
+</details>
+
 All interface text is English. The earlier 25-person economic simulation remains recoverable at `?legacy=1`; it is historical work, separate from the daily forum.
 
 ## How it stays online
