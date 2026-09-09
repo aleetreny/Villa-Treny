@@ -105,6 +105,7 @@ For an actual trial, put `GEMINI_API_KEY` in the ignored `.env.gemini.local`. Pr
 
 ## Documentation and releases
 
+- [Current release verification and delivery status](docs/release-validation.md).
 - [Publishing and operating the public site](docs/releasing.md): automatic releases, daily updates, credentials, recovery and troubleshooting.
 - [Daily forum architecture](docs/daily-forum.md): editorial protocol, budgets, durability and protected administration.
 - [Production acceptance review](docs/daily-forum-review.md): actual results and remaining model limitations.

@@ -5,7 +5,8 @@
 - Added a check-gated main deployment workflow, a release commit manifest and a read-only public release verifier. Production environment permits main only. GitHub CLI workflow access refreshed through its existing authorization.
 - Disabled the accidental GitHub Pages /docs site; canonical Cloudflare URL is now the repository homepage. The portfolio keeps its own Pages configuration.
 - All local release checks pass: 67 Node tests, 1,090 app tests, 411 Worker tests, 26 browser flows, 7 bundled hosting tests, build and all 46 room / 373 foreground masks / 11 legacy raster checks. No model calls made by these checks.
-- Portfolio documentation and incremental-commit policy published in 5361e03 after 265 tests and build passed. Its GitHub CI and Pages release are being verified.
+- Portfolio documentation and incremental-commit policy published in 5361e03 after 265 tests and build passed. Its GitHub CI and Pages deployment both succeeded; main and origin/main match and the live board was inspected.
+- Public Villa Treny commit 15e711f deployed through the existing authorized Wrangler session as version 97c96137-d405-4f1f-a8f7-1991cdd3bb45. Read-only public checks and exact pre/post saved-state comparisons passed; next alarm remains 10 September 09:00 UTC. A fresh complete 35-page private backup preceded deployment.
 - Two concrete owner decisions are pending: creation/storage of the prepared minimal Cloudflare deployment token, and whether to keep Villa Treny source private because original sprite packs prohibit redistribution. Its public application remains available either way.
 
 - The owner now authorizes commits, pushes and public publication for both repositories, with incremental commits in future. Earlier no-commit checkpoints are historical.

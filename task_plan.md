@@ -5,7 +5,7 @@ The owner explicitly authorizes committing all verified accumulated work, pushin
 1. **Audit boundaries and publication — complete.** Inspect both trees and existing hosting, verify source files contain no credentials, and keep each project's backend independent. Neon belongs to Portfolio; Villa Treny already has its own Cloudflare SQLite storage.
 2. **Preserve accumulated work — complete.** Commit 08b8c46 preserves 635 accumulated files after 67 Node, 1,090 app and 411 Worker tests passed. Commit the verified daily-forum implementation and research history using the owner's author and committer identity.
 3. **Finish independent delivery — in progress.** Remove remaining cross-project navigation/configuration, document operation and releases, configure automatic Villa Treny deployment, and replace the accidental Pages /docs publication with the actual application.
-4. **Verify and publish — pending.** Run appropriate checks, push verified commits to main, verify public deployments and saved debates, and leave both working trees clean.
+4. **Verify and publish — partially complete; owner decisions pending.** Portfolio 5361e03 is pushed with successful CI/Pages. Villa 15e711f is publicly deployed and its saved state verified unchanged; automated delivery and GitHub push await the prepared token authorization and source-visibility choice. Run appropriate checks, push verified commits to main, verify public deployments and saved debates, and leave both working trees clean.
 
 ---
 
