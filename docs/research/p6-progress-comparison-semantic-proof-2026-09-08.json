@@ -1,0 +1,347 @@
+{
+  "format": "villa-eight-progress-semantic-preservation-v1",
+  "auditedAt": "2026-09-08T21:01:30.559Z",
+  "scope": "Independent offline replay of eight labelled A/B local responses against exact saved inputs and source manifest. No inference or new physical watch. Private candidate records omitted.",
+  "source": {
+    "worldRevision": 199,
+    "backupSha256": "82cdd88b6e4acfbb083289cfad6e732974049d2680a5977505b0b327bef138d7",
+    "ledgerSha256": "b3ed1456f4679076e11bebd78cef54a19d4abadd7aa8dbd979ab6e7f8352dde4",
+    "casesSha256": "91f0e9ec9e1982f9ebe0295a1724f8ad31da0145e40e0681c3bb74871c747ace",
+    "publicReportSha256": "dbe46d08f955c182241c31a0e7204d2e22016e9116e06a216806b0ccec48facc",
+    "sourceManifestSha256": "24d936798e18de60a024ceeaf84ff7c68d3fd9f30a4b09f02357f4536f440ed6",
+    "scriptSha256": "ad371f5e92a00ead211195bfe9b34bb9088a66d73961daa9385e38cddce646a1"
+  },
+  "replay": {
+    "newCalls": 0,
+    "eightResultsExactlyMatch": true,
+    "ledgerUnchanged": true,
+    "sourcesUnchanged": true
+  },
+  "counts": {
+    "candidates": 8,
+    "applied": 6,
+    "rejected": 2,
+    "newOffers": 6,
+    "agreements": 0,
+    "payments": 0,
+    "documents": 0,
+    "closures": 0,
+    "physicalWatches": 0
+  },
+  "cases": [
+    {
+      "pair": "BK",
+      "variant": "A",
+      "actor": "B",
+      "application": "applied",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:7",
+          "proposer": "B",
+          "counterpart": "K",
+          "status": "open",
+          "terms": {
+            "kind": "transfer",
+            "from": "B",
+            "to": "K",
+            "cells": 1.5
+          }
+        }
+      ],
+      "readableDocumentCount": 1,
+      "hasOtherAuthorDocument": false,
+      "message": {
+        "conversationId": "conversation:7",
+        "id": "turn:408",
+        "speaker": "B",
+        "text": "Thanks for sending those over, Kes. I’ve got everything I need for now, so no further action is required on my end.",
+        "atMs": 1788898916650
+      }
+    },
+    {
+      "pair": "BK",
+      "variant": "B",
+      "actor": "B",
+      "application": "applied",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:7",
+          "proposer": "B",
+          "counterpart": "K",
+          "status": "open",
+          "terms": {
+            "kind": "transfer",
+            "from": "B",
+            "to": "K",
+            "cells": 1.5
+          }
+        }
+      ],
+      "readableDocumentCount": 1,
+      "hasOtherAuthorDocument": false,
+      "message": {
+        "conversationId": "conversation:7",
+        "id": "turn:408",
+        "speaker": "B",
+        "text": "Thanks for sending those over. I really appreciate you keeping me in the loop.",
+        "atMs": 1788898916650
+      }
+    },
+    {
+      "pair": "CN",
+      "variant": "B",
+      "actor": "N",
+      "application": "record_content_too_large",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [],
+      "readableDocumentCount": 0,
+      "hasOtherAuthorDocument": false,
+      "rejectedRecord": {
+        "kind": "draft",
+        "audience": "private",
+        "publish": false,
+        "titleBytes": 25,
+        "textBytes": 600,
+        "totalBytes": 625,
+        "contentOmitted": true
+      },
+      "message": null
+    },
+    {
+      "pair": "CN",
+      "variant": "A",
+      "actor": "N",
+      "application": "record_content_too_large",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [],
+      "readableDocumentCount": 0,
+      "hasOtherAuthorDocument": false,
+      "rejectedRecord": {
+        "kind": "draft",
+        "audience": "private",
+        "publish": false,
+        "titleBytes": 25,
+        "textBytes": 600,
+        "totalBytes": 625,
+        "contentOmitted": true
+      },
+      "message": null
+    },
+    {
+      "pair": "IO",
+      "variant": "A",
+      "actor": "I",
+      "application": "applied",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:71",
+          "proposer": "I",
+          "counterpart": "O",
+          "status": "open",
+          "terms": {
+            "kind": "work",
+            "worker": "I",
+            "payer": "O",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 433
+          }
+        }
+      ],
+      "readableDocumentCount": 0,
+      "hasOtherAuthorDocument": false,
+      "message": {
+        "conversationId": "conversation:71",
+        "id": "turn:408",
+        "speaker": "I",
+        "text": "The garden is ready. I am using the reserved resources to grow produce now.",
+        "atMs": 1788898916650
+      }
+    },
+    {
+      "pair": "IO",
+      "variant": "B",
+      "actor": "I",
+      "application": "applied",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:71",
+          "proposer": "I",
+          "counterpart": "O",
+          "status": "open",
+          "terms": {
+            "kind": "work",
+            "worker": "I",
+            "payer": "O",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 432
+          }
+        }
+      ],
+      "readableDocumentCount": 0,
+      "hasOtherAuthorDocument": false,
+      "message": {
+        "conversationId": "conversation:71",
+        "id": "turn:408",
+        "speaker": "I",
+        "text": "I have the resources. I am starting the grow operation now.",
+        "atMs": 1788898916650
+      }
+    },
+    {
+      "pair": "GQ",
+      "variant": "B",
+      "actor": "G",
+      "application": "applied",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:59",
+          "proposer": "G",
+          "counterpart": "Q",
+          "status": "open",
+          "terms": {
+            "kind": "transfer",
+            "from": "Q",
+            "to": "G",
+            "cells": 2
+          }
+        }
+      ],
+      "readableDocumentCount": 0,
+      "hasOtherAuthorDocument": false,
+      "message": {
+        "conversationId": "conversation:59",
+        "id": "turn:408",
+        "speaker": "G",
+        "text": "Materials are depleted. I need 1 unit to proceed with the repair.",
+        "atMs": 1788898916650
+      }
+    },
+    {
+      "pair": "GQ",
+      "variant": "A",
+      "actor": "G",
+      "application": "applied",
+      "projectsUnchanged": true,
+      "existingOffersAndAgreementsUnchanged": true,
+      "economyUnchanged": true,
+      "recordsUnchanged": true,
+      "noPhysicalWatch": true,
+      "publicStock": {
+        "produce": 84,
+        "meals": 109,
+        "water": 251,
+        "materials": 26
+      },
+      "proposedOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:59",
+          "proposer": "G",
+          "counterpart": "Q",
+          "status": "open",
+          "terms": {
+            "kind": "transfer",
+            "from": "Q",
+            "to": "G",
+            "cells": 2
+          }
+        }
+      ],
+      "readableDocumentCount": 0,
+      "hasOtherAuthorDocument": false,
+      "message": {
+        "conversationId": "conversation:59",
+        "id": "turn:408",
+        "speaker": "G",
+        "text": "Materials are depleted. I need 1 unit to proceed with the repair.",
+        "atMs": 1788898916650
+      }
+    }
+  ]
+}

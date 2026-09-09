@@ -1,0 +1,104 @@
+{
+  "mode": "offline_plan",
+  "httpRequests": 0,
+  "policy": {
+    "version": 1,
+    "protocol": 3,
+    "maxCalls": 6,
+    "maxOutputTokens": 1024,
+    "thinking": false,
+    "timeoutMs": 120000,
+    "concurrency": 1,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+    "selection": [
+      [
+        "G",
+        "initial",
+        6
+      ],
+      [
+        "L",
+        "initial",
+        11
+      ],
+      [
+        "B",
+        "reply",
+        0
+      ]
+    ],
+    "order": [
+      "G:A",
+      "G:B",
+      "L:B",
+      "L:A",
+      "B:A",
+      "B:B"
+    ]
+  },
+  "source": {
+    "sourceBundleSha256": "f9073d2546197690f8fd0d5391dd2ed2826f9675e0990873f776f8dd9faf5817",
+    "referenceLedgerSha256": "5c522aa859f7d06f157166126436f1f7f834baa32a449a67e7590f2be6e0b42b",
+    "sourceFileCount": 62,
+    "dependencies": {
+      "vite": "8.2.0",
+      "zod": "4.4.3"
+    }
+  },
+  "jobs": [
+    {
+      "id": "v7-deal-order-v1:A:isolated-society-runtime-v7-local:mind:G:1:6:g:0",
+      "actor": "G",
+      "stage": "initial",
+      "index": 6,
+      "beforeHash": "f4430efe707dcc7c475175e2234c6269c754e683a0a80bd551d2bb5cadbe002c",
+      "payloadHash": "3d403794f9a12738965718b1c38c57afec26d6af13e05e918b25952f67f37223",
+      "sourceJobHash": "497929ea01e38f2e3765f0a2d5ccec8b2aff58dd8d92c3334989998425fbbf4f"
+    },
+    {
+      "id": "v7-deal-order-v1:B:isolated-society-runtime-v7-local:mind:G:1:6:g:0",
+      "actor": "G",
+      "stage": "initial",
+      "index": 6,
+      "beforeHash": "f4430efe707dcc7c475175e2234c6269c754e683a0a80bd551d2bb5cadbe002c",
+      "payloadHash": "6d2f83b39075dd28d0a6e18fa965886f04f8d111228f95fc0cc8774488b6dc2b",
+      "sourceJobHash": "497929ea01e38f2e3765f0a2d5ccec8b2aff58dd8d92c3334989998425fbbf4f"
+    },
+    {
+      "id": "v7-deal-order-v1:B:isolated-society-runtime-v7-local:mind:L:1:11:g:0",
+      "actor": "L",
+      "stage": "initial",
+      "index": 11,
+      "beforeHash": "f6a74ba9bdd41b89de70e4b704fb35c3f1970b4b6dbeb71f2439d85526f37fee",
+      "payloadHash": "339d23447f07c95b2c61cfd31035d7a8bdbcd873613616df1f350e6ad5f0db5f",
+      "sourceJobHash": "9629f6ca56bb208dd64056856b127fc0683560c0b9ab9a8aa7e88e9f4cefff45"
+    },
+    {
+      "id": "v7-deal-order-v1:A:isolated-society-runtime-v7-local:mind:L:1:11:g:0",
+      "actor": "L",
+      "stage": "initial",
+      "index": 11,
+      "beforeHash": "f6a74ba9bdd41b89de70e4b704fb35c3f1970b4b6dbeb71f2439d85526f37fee",
+      "payloadHash": "05fefabc0b40365e33b4b7fc2fbdc6de34cb2fbc3bdc18f237e17595f6c996da",
+      "sourceJobHash": "9629f6ca56bb208dd64056856b127fc0683560c0b9ab9a8aa7e88e9f4cefff45"
+    },
+    {
+      "id": "v7-deal-order-v1:A:isolated-society-runtime-v7-local:mind:B:3:25:g:0",
+      "actor": "B",
+      "stage": "reply",
+      "index": 0,
+      "beforeHash": "7154c90ddd1a054699e56b911300e51ca56433e1b7badec0772a24e5ef3d5b68",
+      "payloadHash": "ef54886b4f2bcce4d5453d2648fc77c15a68a5a1b7c77296b7885a462c9d8038",
+      "sourceJobHash": "c82d90033ba4a2dffafe4f9364a9ac0604b7ad8d80f7d9234364c0876df320f8"
+    },
+    {
+      "id": "v7-deal-order-v1:B:isolated-society-runtime-v7-local:mind:B:3:25:g:0",
+      "actor": "B",
+      "stage": "reply",
+      "index": 0,
+      "beforeHash": "7154c90ddd1a054699e56b911300e51ca56433e1b7badec0772a24e5ef3d5b68",
+      "payloadHash": "ab8677206518ee1b1a8312a61ded4adb787cd99f60d8e26c51f624034cdf76f2",
+      "sourceJobHash": "c82d90033ba4a2dffafe4f9364a9ac0604b7ad8d80f7d9234364c0876df320f8"
+    }
+  ]
+}

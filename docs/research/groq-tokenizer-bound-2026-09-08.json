@@ -1,0 +1,557 @@
+{
+  "format": "villa-groq-tokenizer-bound-measurements-v1",
+  "scope": "Offline synthetic inputs and local installed WASM; no production state, model calls, downloads or deployment. Measurements are host observations, not a Cloudflare CPU or full-runtime memory guarantee.",
+  "nodeBeforeImplementation": {
+    "format": "villa-local-tokenizer-bound-audit-v1",
+    "measuredAt": "2026-09-08T19:20:03.160Z",
+    "scope": "Offline pinned installed WASM measurements on development Mac; no requests or source edits. Padded/adversarial cases are synthetic, not production jobs. Node CPU is not a Cloudflare CPU guarantee.",
+    "node": "v24.19.0",
+    "packageVersion": "1.0.22",
+    "wasmSha256": "870fa4e0d8fe30a02b4703b2c4e24e7a8d99dcf6a1e8416c14b239f52a2eed55",
+    "ranksJsonSha256": "df53e1a5f146e33a1b144d12ad9d685ee1b54dbc8b0950791ed45c933b119dc1",
+    "stressJobSha256": "481d7bc616327adc8894196bb2bb2f1053b369f2467e987162fdae8947305770",
+    "baseline": {
+      "rss": 65503232,
+      "heapTotal": 12845056,
+      "heapUsed": 7369352,
+      "external": 5791883,
+      "arrayBuffers": 1216975
+    },
+    "initial": {
+      "wallMs": 61.232709,
+      "cpuUs": {
+        "user": 118085,
+        "system": 5035
+      },
+      "memory": {
+        "rss": 134266880,
+        "heapTotal": 12845056,
+        "heapUsed": 7535496,
+        "external": 31682840,
+        "arrayBuffers": 1216995
+      },
+      "linearBytes": 28246016
+    },
+    "rows": [
+      {
+        "label": "real-synthetic-release-context",
+        "utf8Bytes": 25365,
+        "componentBytes": [
+          6524,
+          6320,
+          12521
+        ],
+        "ordinaryCounts": [
+          1233,
+          1721,
+          3590
+        ],
+        "tokenIdsSha256": "ce72cb452ef893bcf2b63e3e83cd140c22841f0a2977239b409e079402820135",
+        "repetitions": 15,
+        "wallMs": {
+          "min": 2.629125000000002,
+          "median": 2.714874999999992,
+          "max": 6.718833000000004
+        },
+        "cpuUs": {
+          "min": 2643,
+          "median": 2730,
+          "max": 25357
+        },
+        "linearBytes": 28246016,
+        "memory": {
+          "rss": 141770752,
+          "heapTotal": 12845056,
+          "heapUsed": 7605736,
+          "external": 32075480,
+          "arrayBuffers": 1609635
+        }
+      },
+      {
+        "label": "same-schema-user-at-6500-byte-target",
+        "utf8Bytes": 25545,
+        "componentBytes": [
+          6524,
+          6500,
+          12521
+        ],
+        "ordinaryCounts": [
+          1233,
+          1723,
+          3590
+        ],
+        "tokenIdsSha256": "001d28427e51d9090564c2c914f5ddb999694f4203538f4e7df1e7174ba953fc",
+        "repetitions": 15,
+        "wallMs": {
+          "min": 2.5668330000000026,
+          "median": 2.6707910000000084,
+          "max": 2.8662920000000156
+        },
+        "cpuUs": {
+          "min": 2567,
+          "median": 2663,
+          "max": 2869
+        },
+        "linearBytes": 28246016,
+        "memory": {
+          "rss": 142229504,
+          "heapTotal": 12845056,
+          "heapUsed": 7640920,
+          "external": 32468240,
+          "arrayBuffers": 2002395
+        }
+      },
+      {
+        "label": "padded-schema-total-32000",
+        "utf8Bytes": 32000,
+        "componentBytes": [
+          6524,
+          6320,
+          19156
+        ],
+        "ordinaryCounts": [
+          1233,
+          1721,
+          4538
+        ],
+        "tokenIdsSha256": "358eb5d2a4bb07180c6898ad9138c5935537cd0244e7a167083157577ca820f3",
+        "repetitions": 15,
+        "wallMs": {
+          "min": 2.994917000000015,
+          "median": 3.084666999999996,
+          "max": 3.3160830000000203
+        },
+        "cpuUs": {
+          "min": 2996,
+          "median": 3085,
+          "max": 3318
+        },
+        "linearBytes": 28246016,
+        "memory": {
+          "rss": 142721024,
+          "heapTotal": 12845056,
+          "heapUsed": 7847192,
+          "external": 32983296,
+          "arrayBuffers": 2517451
+        }
+      },
+      {
+        "label": "adversarial-one-regex-piece-24000",
+        "utf8Bytes": 24000,
+        "componentBytes": [
+          24000
+        ],
+        "ordinaryCounts": [
+          3000
+        ],
+        "tokenIdsSha256": "5d4dbccfaf0409f464ffe385a43c242262b13b45c438d3ac74667ae6b39bfd87",
+        "repetitions": 5,
+        "wallMs": {
+          "min": 102.71687499999996,
+          "median": 103.46466599999997,
+          "max": 104.37783400000001
+        },
+        "cpuUs": {
+          "min": 102650,
+          "median": 103389,
+          "max": 104306
+        },
+        "linearBytes": 28246016,
+        "memory": {
+          "rss": 142802944,
+          "heapTotal": 12845056,
+          "heapUsed": 7717656,
+          "external": 33043296,
+          "arrayBuffers": 2577451
+        }
+      },
+      {
+        "label": "adversarial-one-regex-piece-25365",
+        "utf8Bytes": 25365,
+        "componentBytes": [
+          25365
+        ],
+        "ordinaryCounts": [
+          3172
+        ],
+        "tokenIdsSha256": "8fc3bc5a9eea05ce4d530ef8b0eba28b783f273cfd3747426deed72539017756",
+        "repetitions": 5,
+        "wallMs": {
+          "min": 114.91658399999994,
+          "median": 115.19800000000009,
+          "max": 118.953125
+        },
+        "cpuUs": {
+          "min": 114844,
+          "median": 115120,
+          "max": 118883
+        },
+        "linearBytes": 28246016,
+        "memory": {
+          "rss": 142901248,
+          "heapTotal": 12845056,
+          "heapUsed": 7753176,
+          "external": 33106736,
+          "arrayBuffers": 2640891
+        }
+      },
+      {
+        "label": "adversarial-one-regex-piece-32000",
+        "utf8Bytes": 32000,
+        "componentBytes": [
+          32000
+        ],
+        "ordinaryCounts": [
+          4000
+        ],
+        "tokenIdsSha256": "4db0d3ce70a31796b57d7bab7a53cad0c9d89e0965ea6c3e6ed10ff1d92f255a",
+        "repetitions": 5,
+        "wallMs": {
+          "min": 184.58124999999995,
+          "median": 185.15345799999977,
+          "max": 186.20666699999992
+        },
+        "cpuUs": {
+          "min": 184454,
+          "median": 185014,
+          "max": 186057
+        },
+        "linearBytes": 28246016,
+        "memory": {
+          "rss": 143032320,
+          "heapTotal": 12845056,
+          "heapUsed": 7827848,
+          "external": 33252272,
+          "arrayBuffers": 2786427
+        }
+      }
+    ],
+    "pathologicalSearch": {
+      "candidates": 25,
+      "wallMs": 4585.217958,
+      "cpuUs": 4581647,
+      "linearBytes": 28246016
+    },
+    "retained": {
+      "rss": 143704064,
+      "heapTotal": 9699328,
+      "heapUsed": 7655720,
+      "external": 33652272,
+      "arrayBuffers": 1232995
+    },
+    "guards": [
+      {
+        "label": "real-synthetic-release-context",
+        "bytes": 25365,
+        "at24000": false,
+        "at32000": true
+      },
+      {
+        "label": "same-schema-user-at-6500-byte-target",
+        "bytes": 25545,
+        "at24000": false,
+        "at32000": true
+      },
+      {
+        "label": "padded-schema-total-32000",
+        "bytes": 32000,
+        "at24000": false,
+        "at32000": true
+      },
+      {
+        "label": "adversarial-one-regex-piece-24000",
+        "bytes": 24000,
+        "at24000": true,
+        "at32000": true
+      },
+      {
+        "label": "adversarial-one-regex-piece-25365",
+        "bytes": 25365,
+        "at24000": false,
+        "at32000": true
+      },
+      {
+        "label": "adversarial-one-regex-piece-32000",
+        "bytes": 32000,
+        "at24000": false,
+        "at32000": true
+      },
+      {
+        "label": "both-generic-prompt-fields-at-24000-UTF16-units-plus-minimal-schema",
+        "bytes": 144002,
+        "at24000": false,
+        "at32000": false
+      }
+    ],
+    "noFiniteCombinedContractMaximum": "SYSTEM and USER each have 24000 UTF-16-unit limits; serialized JSON Schema has no global byte bound. 6500 UTF-8 bytes is only a prepared-society USER target; contextOverflow is recorded but essential context is retained.",
+    "candidate32kProof": {
+      "componentCount": 6544,
+      "framing": 128,
+      "maximumOutput": 1024,
+      "reservation": 7696,
+      "headroomUnder8000": 304
+    },
+    "guardNeverTruncates": true
+  },
+  "workerdLargerIndividualPieceComparison": {
+    "format": "villa-isolated-workerd-tokenizer-bound-v1",
+    "scope": "Offline Miniflare workerd, only local dispatchFetch, all outbound blocked. Candidate byte guard modified in bundle memory only, plus WASM-memory observation hook; repository source unchanged.",
+    "measuredAt": "2026-09-08T19:21:09.482Z",
+    "sourceSha256": "99b665861f1371d034149d689667619df1fed7ca5a059da43ebb7cf853d9d554",
+    "candidateBytes": 32000,
+    "bundleBytes": 2333083,
+    "wasmModuleBytes": 1073364,
+    "wasmSha256": "870fa4e0d8fe30a02b4703b2c4e24e7a8d99dcf6a1e8416c14b239f52a2eed55",
+    "readyMs": 54.61991699999999,
+    "before": {
+      "wasmBytes": 0
+    },
+    "rows": [
+      {
+        "label": "real-synthetic-release-context",
+        "hostWallMs": [
+          74.65145800000005,
+          5.2450000000000045,
+          4.4632499999999595
+        ],
+        "admitted": true,
+        "counts": [
+          1233,
+          1721,
+          3590
+        ],
+        "sha256": "ce72cb452ef893bcf2b63e3e83cd140c22841f0a2977239b409e079402820135",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "same-schema-user-at-6500-byte-target",
+        "hostWallMs": [
+          4.54483300000004,
+          4.291249999999991,
+          4.159583999999995
+        ],
+        "admitted": true,
+        "counts": [
+          1233,
+          1723,
+          3590
+        ],
+        "sha256": "001d28427e51d9090564c2c914f5ddb999694f4203538f4e7df1e7174ba953fc",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "padded-schema-total-32000",
+        "hostWallMs": [
+          4.35083400000002,
+          4.774249999999995,
+          4.687457999999992
+        ],
+        "admitted": true,
+        "counts": [
+          1233,
+          1721,
+          4538
+        ],
+        "sha256": "358eb5d2a4bb07180c6898ad9138c5935537cd0244e7a167083157577ca820f3",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "adversarial-one-regex-piece-24000",
+        "hostWallMs": [
+          162.52679199999994,
+          161.08937500000002,
+          160.18450000000007
+        ],
+        "admitted": true,
+        "counts": [
+          3000
+        ],
+        "sha256": "5d4dbccfaf0409f464ffe385a43c242262b13b45c438d3ac74667ae6b39bfd87",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "adversarial-one-regex-piece-25365",
+        "hostWallMs": [
+          179.15525000000002,
+          178.729333,
+          178.62912500000016
+        ],
+        "admitted": true,
+        "counts": [
+          3172
+        ],
+        "sha256": "8fc3bc5a9eea05ce4d530ef8b0eba28b783f273cfd3747426deed72539017756",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "adversarial-one-regex-piece-32000",
+        "hostWallMs": [
+          284.311375,
+          283.71474999999987,
+          284.39054199999987
+        ],
+        "admitted": true,
+        "counts": [
+          4000
+        ],
+        "sha256": "4db0d3ce70a31796b57d7bab7a53cad0c9d89e0965ea6c3e6ed10ff1d92f255a",
+        "wasmBytes": 28246016
+      }
+    ],
+    "rejection": [
+      {
+        "totalBytes": 32001,
+        "partCount": 1,
+        "admitted": false,
+        "wasmBytes": 28246016
+      },
+      {
+        "totalBytes": 32001,
+        "partCount": 2,
+        "admitted": false,
+        "wasmBytes": 28246016
+      },
+      {
+        "totalBytes": 4,
+        "partCount": 4,
+        "admitted": false,
+        "wasmBytes": 28246016
+      }
+    ],
+    "outboundRequests": 0,
+    "allTokenIdsEqualNode": true
+  },
+  "workerdFinalImplementation": {
+    "format": "villa-isolated-workerd-tokenizer-bound-v1",
+    "scope": "Offline Miniflare workerd, only local dispatchFetch, all outbound blocked. Actual32KB-total/24KB-component implementation, with a WASM-memory observation hook only; repository source unchanged during measurement.",
+    "measuredAt": "2026-09-08T19:26:52.959Z",
+    "sourceSha256": "a49a0f09f3d3072bc4c6bcd6dde2669610d216f8de5cd09b4598ca9466898f19",
+    "totalBytes": 32000,
+    "componentBytes": 24000,
+    "bundleBytes": 2333127,
+    "wasmModuleBytes": 1073364,
+    "wasmSha256": "870fa4e0d8fe30a02b4703b2c4e24e7a8d99dcf6a1e8416c14b239f52a2eed55",
+    "readyMs": 54.76237499999999,
+    "before": {
+      "wasmBytes": 0
+    },
+    "rows": [
+      {
+        "label": "real-synthetic-release-context",
+        "hostWallMs": [
+          74.71025,
+          4.894499999999994,
+          4.596334000000013
+        ],
+        "admitted": true,
+        "counts": [
+          1233,
+          1721,
+          3590
+        ],
+        "sha256": "ce72cb452ef893bcf2b63e3e83cd140c22841f0a2977239b409e079402820135",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "same-schema-user-at-6500-byte-target",
+        "hostWallMs": [
+          4.454415999999981,
+          4.396333000000027,
+          4.379957999999988
+        ],
+        "admitted": true,
+        "counts": [
+          1233,
+          1723,
+          3590
+        ],
+        "sha256": "001d28427e51d9090564c2c914f5ddb999694f4203538f4e7df1e7174ba953fc",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "padded-schema-total-32000",
+        "hostWallMs": [
+          4.362832999999966,
+          5.134874999999965,
+          4.696416999999997
+        ],
+        "admitted": true,
+        "counts": [
+          1233,
+          1721,
+          4538
+        ],
+        "sha256": "358eb5d2a4bb07180c6898ad9138c5935537cd0244e7a167083157577ca820f3",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "adversarial-one-regex-piece-24000",
+        "hostWallMs": [
+          163.222875,
+          162.70729099999994,
+          161.34920899999997
+        ],
+        "admitted": true,
+        "counts": [
+          3000
+        ],
+        "sha256": "5d4dbccfaf0409f464ffe385a43c242262b13b45c438d3ac74667ae6b39bfd87",
+        "wasmBytes": 28246016
+      },
+      {
+        "label": "maximum-split-24000-plus-8000",
+        "hostWallMs": [
+          181.02816700000005,
+          182.60374999999988,
+          181.43150000000014
+        ],
+        "admitted": true,
+        "counts": [
+          3000,
+          1000
+        ],
+        "sha256": "4db0d3ce70a31796b57d7bab7a53cad0c9d89e0965ea6c3e6ed10ff1d92f255a",
+        "wasmBytes": 28246016
+      }
+    ],
+    "rejection": [
+      {
+        "totalBytes": 32001,
+        "partCount": 1,
+        "admitted": false,
+        "wasmBytes": 28246016
+      },
+      {
+        "totalBytes": 32001,
+        "partCount": 2,
+        "admitted": false,
+        "wasmBytes": 28246016
+      },
+      {
+        "totalBytes": 24001,
+        "partCount": 1,
+        "admitted": false,
+        "wasmBytes": 28246016
+      },
+      {
+        "totalBytes": 24003,
+        "partCount": 1,
+        "admitted": false,
+        "wasmBytes": 28246016
+      },
+      {
+        "totalBytes": 4,
+        "partCount": 4,
+        "admitted": false,
+        "wasmBytes": 28246016
+      }
+    ],
+    "outboundRequests": 0,
+    "allTokenIdsEqualNode": true
+  },
+  "verification": {
+    "workerTokenizerTests": 14,
+    "workerTypecheck": true,
+    "changedFileEslint": true
+  }
+}

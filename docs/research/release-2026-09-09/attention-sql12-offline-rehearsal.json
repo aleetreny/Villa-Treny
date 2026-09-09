@@ -1,0 +1,1067 @@
+{
+  "format": "villa-attention-sql12-offline-rehearsal-v1",
+  "auditedAt": "2026-09-09T11:30:43.014Z",
+  "status": "passed",
+  "scope": "Offline restore of both complete SQL11 backups into isolated local Durable Object storage, actual SQL12 migration, exact26-table comparison and verified complete re-export. No production migration or natural activity is claimed.",
+  "source": {
+    "files": [
+      {
+        "path": "package.json",
+        "sha256": "5bb112318dee2355ab2a29981ee51fe840584c3fd3055f0a6c3caba53f5c1979"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "03af0997568d17db7048c52941ba924985827c7e763dee12d196a0f7a3e0658b"
+      },
+      {
+        "path": "src/lib/habitat/agency.ts",
+        "sha256": "00a1a426146382470f9f8b594e4778c5be6d57ab9ff583d1aa2ce6e256c088f6"
+      },
+      {
+        "path": "src/lib/habitat/archive-message.ts",
+        "sha256": "e85365989d2e27b55093a6f56d422bbe8589a9331bc29155acc8b7bcef8bd4b8"
+      },
+      {
+        "path": "src/lib/habitat/axes.ts",
+        "sha256": "cd74388ccd7f4d2f9af2d45a130dc825cacaad4d685fcfa0f7e56bac41e5fbd9"
+      },
+      {
+        "path": "src/lib/habitat/bitmap-codec.ts",
+        "sha256": "4fc39555204830e98ee585474f82e6696e5a5140f0f6db82ed5d39438836eada"
+      },
+      {
+        "path": "src/lib/habitat/conversation-outcomes.ts",
+        "sha256": "465e0635f016c2719214c5ff9fa159f45fdf16949fbf9c61c305696829b94b7c"
+      },
+      {
+        "path": "src/lib/habitat/engine/economy.ts",
+        "sha256": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8"
+      },
+      {
+        "path": "src/lib/habitat/engine/knowledge.ts",
+        "sha256": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14"
+      },
+      {
+        "path": "src/lib/habitat/engine/state.ts",
+        "sha256": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8"
+      },
+      {
+        "path": "src/lib/habitat/engine/tick.ts",
+        "sha256": "197d912fff855258b42925a4bd71a4bb855109c8c5cffdf2503c94112b25a02e"
+      },
+      {
+        "path": "src/lib/habitat/engine/verbs.ts",
+        "sha256": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3"
+      },
+      {
+        "path": "src/lib/habitat/generated/rooms.json",
+        "sha256": "d7d9631c820a8321e5db00cdbb85a069dd72611312f3aecc20173cde4e54e208"
+      },
+      {
+        "path": "src/lib/habitat/graph.ts",
+        "sha256": "ffa22d815347a48c307d5dc22dc53755fd3d07267a976f8933dddee698ca77b0"
+      },
+      {
+        "path": "src/lib/habitat/grid.ts",
+        "sha256": "f1d005f71327df39c047e2e9625da451fd5e04ac59ff47f3ca62fd592c584cd1"
+      },
+      {
+        "path": "src/lib/habitat/journal.ts",
+        "sha256": "b1ea6f4230404ec9d5084a0036912a382a61723bbf68a26791aac0d6749fb470"
+      },
+      {
+        "path": "src/lib/habitat/live.ts",
+        "sha256": "bd51af19f989027f5dbf53976beaa6b53c098f31e9fb032e23c456dae9b7b6a6"
+      },
+      {
+        "path": "src/lib/habitat/navigation.ts",
+        "sha256": "6078a44b9520163bdf1014b08ef0d950206aa7db4e59ac1503d8b81c12b6a3f7"
+      },
+      {
+        "path": "src/lib/habitat/observer-camera.ts",
+        "sha256": "2f2d9cc048756b5dffde9ad01ff4e28329a50e8fdb08111aca6dbd5d56a5c048"
+      },
+      {
+        "path": "src/lib/habitat/observer-matrix.ts",
+        "sha256": "26da0f7e03bca8d076649eda071261b2237070032dad39f69285274a37600a27"
+      },
+      {
+        "path": "src/lib/habitat/observer-preferences.ts",
+        "sha256": "8cf50c24deaccf47eeb22e5570f3348a55682f3b62942851db198eb7c1737073"
+      },
+      {
+        "path": "src/lib/habitat/passages.ts",
+        "sha256": "63203b2b2e1d099ec760f8c069efb9676317693006a83126e6c3dc1be216cb1a"
+      },
+      {
+        "path": "src/lib/habitat/portraits.ts",
+        "sha256": "b717c55fc544ec643d6dfb437e40a59a92dffbf2dba197da121acb5262b54754"
+      },
+      {
+        "path": "src/lib/habitat/public-message-translation.ts",
+        "sha256": "33394bccd53a77f3856bfd5886c28f51ae04723bed2ca92bbf198b5bd601a8d8"
+      },
+      {
+        "path": "src/lib/habitat/public-records.ts",
+        "sha256": "00ef0d0b359ed23790065e8ab67146242004e295a5218ab1b90aeaceac811ebe"
+      },
+      {
+        "path": "src/lib/habitat/random.ts",
+        "sha256": "e18394c5735036e93d0bf001a1b2a1d95ab1255484e84a79bd8ceb77e2d17c33"
+      },
+      {
+        "path": "src/lib/habitat/residents.ts",
+        "sha256": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29"
+      },
+      {
+        "path": "src/lib/habitat/room-art.ts",
+        "sha256": "217bb8023ecce49099e18c78e39f8d7599f989becc88820243f92e6bda865124"
+      },
+      {
+        "path": "src/lib/habitat/room-motion.ts",
+        "sha256": "3b456066b93d9016a62ee039936a714284ac36f43b993c42c99f4903a5a2c99f"
+      },
+      {
+        "path": "src/lib/habitat/rooms.ts",
+        "sha256": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57"
+      },
+      {
+        "path": "src/lib/habitat/section.ts",
+        "sha256": "ed6147c44affe83c8f00d64ffab216aa2dd9dd8bd3879085596300a7abdff7c6"
+      },
+      {
+        "path": "src/lib/habitat/snapshot.ts",
+        "sha256": "a3569e0ce59798859a38445ea45998864072dcf737ac151d7df38a3c24b027e4"
+      },
+      {
+        "path": "src/lib/habitat/society.ts",
+        "sha256": "90d6e2046a3151deb4e0b3f943b2727bbd8946cf5a495f641687c6415aaca13a"
+      },
+      {
+        "path": "src/lib/habitat/society/appraisal.ts",
+        "sha256": "f946f0accaece3c460d3a6e5fe884aa4797e2fccfc403ea17fcdbaa25a37ea7b"
+      },
+      {
+        "path": "src/lib/habitat/society/attention-choice.ts",
+        "sha256": "50cfc5cf73613d21a1d6337c2e8554c060f1dd73dfb9da1f1f06484a56c34b54"
+      },
+      {
+        "path": "src/lib/habitat/society/attention-instructions-candidate.ts",
+        "sha256": "5980bf8bbdc6e3fff808e6c42f50f379cbd6b710ea70f596ff082b83097ff0c8"
+      },
+      {
+        "path": "src/lib/habitat/society/attention-instructions.ts",
+        "sha256": "611f783672c35bf5790858105212fef27eba939659209fa384a6ea0bdda269c0"
+      },
+      {
+        "path": "src/lib/habitat/society/attention-state.ts",
+        "sha256": "17d88b11f57bc95c45989820936c2e1c0a82b9ce8706842f34097830357b56b9"
+      },
+      {
+        "path": "src/lib/habitat/society/capabilities.ts",
+        "sha256": "d63a161cf3fb4f0baa754e2c71f1d310fb6cac9ab56353586be6bb2f86c7283a"
+      },
+      {
+        "path": "src/lib/habitat/society/choice.ts",
+        "sha256": "8bca50cf7899307b4662dd3152e4b885ff18290a3a8c777c03b0e6f88e69d53d"
+      },
+      {
+        "path": "src/lib/habitat/society/closing-turn.ts",
+        "sha256": "efa5bd2339c2c37534e1a61ba6423d8d54701a4b845b332e6d6b2ba19b244e61"
+      },
+      {
+        "path": "src/lib/habitat/society/compact-schema.ts",
+        "sha256": "ccfba543c6d06a72fa697dda20c358de6fc424fc8d07e51552cb17e7e59d7be8"
+      },
+      {
+        "path": "src/lib/habitat/society/dialogue.ts",
+        "sha256": "9fa6d4b401ae057d322568fc7abc1552caab2a3dc08bd5fd4e977503c5342a0f"
+      },
+      {
+        "path": "src/lib/habitat/society/economy.ts",
+        "sha256": "5a11678e655670b96f70d3a22fdc675c10b973cd3e2559a435acb514f9def6fa"
+      },
+      {
+        "path": "src/lib/habitat/society/evidence-layout.ts",
+        "sha256": "663c0e814d0fb8ebcf58d8c0281d5c6825e1bdaf27a671f8785c510b417c9c0d"
+      },
+      {
+        "path": "src/lib/habitat/society/index.ts",
+        "sha256": "0d9d4f02d72b8b441ad7a5ef11dd74f5c637b65ab018a0ccc384ccca76f27e3e"
+      },
+      {
+        "path": "src/lib/habitat/society/instructions.ts",
+        "sha256": "2492fa357702571edb9c84c22a9ff50e471c9c6df8ef771af8e3dd48534c3e7f"
+      },
+      {
+        "path": "src/lib/habitat/society/money.ts",
+        "sha256": "923226735ffaadfdeb4fecf6ef6418b08257285c3eebf8a56941ceefe4684b8a"
+      },
+      {
+        "path": "src/lib/habitat/society/ordered-choice.ts",
+        "sha256": "8210dc505fdf7677582e314b49bbf809a4112a4da1af1e3c04197492571b0809"
+      },
+      {
+        "path": "src/lib/habitat/society/physical.ts",
+        "sha256": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae"
+      },
+      {
+        "path": "src/lib/habitat/society/public-record-publication.ts",
+        "sha256": "008f564793ed576e8072c11f2633822103184deb2468b3f9a39494620dd5dc91"
+      },
+      {
+        "path": "src/lib/habitat/society/public.ts",
+        "sha256": "9d86ff4204f2e517a822ad549ce1013c779129ef5e4a322a2d52bf1dbb4583e3"
+      },
+      {
+        "path": "src/lib/habitat/society/record-archive.ts",
+        "sha256": "d631275ff9deab1765ed94fa8e64e5bc5a89de6d8bcbbc1e156e16228373ff47"
+      },
+      {
+        "path": "src/lib/habitat/society/record-choice.ts",
+        "sha256": "a340fc483b40166f26e30431a4b5b5d5af060c91439862b1f6c64a442c6a0a0e"
+      },
+      {
+        "path": "src/lib/habitat/society/record-instructions.ts",
+        "sha256": "c8e3c02dcdbc0a672a03dff79176dc94934423dceb3931c0d40133f868fb36f1"
+      },
+      {
+        "path": "src/lib/habitat/society/record-retrieval.ts",
+        "sha256": "8cfd2504ec20f309612c0202e06ce2422fc84f84cd81ba93d330861c83cc7ec7"
+      },
+      {
+        "path": "src/lib/habitat/society/record-schema.ts",
+        "sha256": "2849742cdedf817ddfeef342fe4fef9e3699a36a59b66e26632b78b4a061cedd"
+      },
+      {
+        "path": "src/lib/habitat/society/record-types.ts",
+        "sha256": "e744fa2867a1e2dc6cf80db32a5f81ad10c76688300f9e53336aa4f519bd5f38"
+      },
+      {
+        "path": "src/lib/habitat/society/record-watch.ts",
+        "sha256": "618e554836097c57f5a71d1ce1596a04b925c1a64aa47dce2c4f13c782ff6705"
+      },
+      {
+        "path": "src/lib/habitat/society/records-test-fixture.ts",
+        "sha256": "ec0e35e4d0fb4a677e60ca61974dd927205e2b624e59807cfc85d06d59c4fcab"
+      },
+      {
+        "path": "src/lib/habitat/society/records.ts",
+        "sha256": "b1bccc05a3c932399d0fe83ec50558ba4ea72ef5bf2dc8276524dba16e9a3076"
+      },
+      {
+        "path": "src/lib/habitat/society/retrieval-choice.ts",
+        "sha256": "c854ce68ab870ea0612f270ba350d09867b04e029059996de49b64fa00853614"
+      },
+      {
+        "path": "src/lib/habitat/society/retrieval-instructions.ts",
+        "sha256": "2c8e3b3a2770c363240bc39f2227538cdd4a8f5e169a92224a52960c8f5e889c"
+      },
+      {
+        "path": "src/lib/habitat/society/retrieval-state.ts",
+        "sha256": "29f4af2100e94ae0d724c5b49ec328f57c05c685cd5478b6d83ba569945a3bdb"
+      },
+      {
+        "path": "src/lib/habitat/society/schema.ts",
+        "sha256": "b10eb237d964a9e9f63b2c0cad948e5f54371628b6e839cf3b5dfa3f867b2635"
+      },
+      {
+        "path": "src/lib/habitat/society/state.ts",
+        "sha256": "a89eb700ad0bcaa237a5dbce062078ef842635027ec112c697406a43a8cdb381"
+      },
+      {
+        "path": "src/lib/habitat/society/turn.ts",
+        "sha256": "9db2fb599f75910fd8f5936dd7f5c639cab291a8b879dfbe261a8261a946008c"
+      },
+      {
+        "path": "src/lib/habitat/society/types.ts",
+        "sha256": "e80ec6785326171dc3ff98dabb5118dd2b396a5b0bd54b49ce9d40ad044a7af6"
+      },
+      {
+        "path": "src/lib/habitat/tiles.ts",
+        "sha256": "1ad438260ca82edf4a60d950f54026314b3a7d82dc9c449f2dbb675d5097a2a7"
+      },
+      {
+        "path": "src/lib/habitat/useHabitatLive.ts",
+        "sha256": "62f157c27cd08274e8d5bf2eb2e9c64de770ff3462c84adaa8d92382523cdefe"
+      },
+      {
+        "path": "src/lib/habitat/useObserverPresence.ts",
+        "sha256": "896d46511296a53ea2557ddd5419d4730d661a23c681577283447aea2cb3e77c"
+      },
+      {
+        "path": "src/lib/habitat/weave.ts",
+        "sha256": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5"
+      },
+      {
+        "path": "workers/habitat-runtime/package.json",
+        "sha256": "3b3c0a1f715373d4329886ed03713760da783373d10b555100d1089d095b7b4f"
+      },
+      {
+        "path": "workers/habitat-runtime/src/auth.ts",
+        "sha256": "ca46bb3f9ba245715dcca3bf366fb2019906acaace6b9422efe26bd6481b38f5"
+      },
+      {
+        "path": "workers/habitat-runtime/src/checkpoint.ts",
+        "sha256": "7e1c0532d6dbd7f4d1ff60cb623e6165f12fc5422d59c1f47255c888fee8e221"
+      },
+      {
+        "path": "workers/habitat-runtime/src/cognition-pacing.ts",
+        "sha256": "b1f8aa948930f977290eb5458d632d28c07e8b6fe8d2fbbe01ffc6316ff867df"
+      },
+      {
+        "path": "workers/habitat-runtime/src/cognition-retention.ts",
+        "sha256": "ab070825db6a991621d116c1582a484752b42645fb975a89f9f7846a1bcb77eb"
+      },
+      {
+        "path": "workers/habitat-runtime/src/conditional.ts",
+        "sha256": "60fc4bcfd61e5e524de5a1f29d0d5a1bf65a3a34ba217a8376f2489318f5ffb1"
+      },
+      {
+        "path": "workers/habitat-runtime/src/contracts.ts",
+        "sha256": "a3f5c9c62c5bb2a430ca3dd593cd3654c6201887b18cf9fb873267e484fc6383"
+      },
+      {
+        "path": "workers/habitat-runtime/src/domain.ts",
+        "sha256": "a0523ad945e440c86aec54251c4e114ef9a328f8ed0f848cc8b4dd4f25d8768e"
+      },
+      {
+        "path": "workers/habitat-runtime/src/habitat-world.ts",
+        "sha256": "1da55897197445847043f2fb276506170fb7efa1ea259db4a44a83d3c70b8b93"
+      },
+      {
+        "path": "workers/habitat-runtime/src/http.ts",
+        "sha256": "be051b051dc463cadb325157e79d140835db925c31d44b993e96afd2e8ece16a"
+      },
+      {
+        "path": "workers/habitat-runtime/src/index.ts",
+        "sha256": "ba947377273340f19edc6f2429f3a8c2e28518ca13b391f21973ad824399abc4"
+      },
+      {
+        "path": "workers/habitat-runtime/src/prompt-budget.ts",
+        "sha256": "36d13cecbbf47218f574038c57cd9a532383a74fba056a8246c19ea44bea42a1"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/deadline.ts",
+        "sha256": "2d97949eeb8c0ed829e171147f27782bdfa48fd1e408d33d7f6fa62d486f357c"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/free-model-router.ts",
+        "sha256": "f7265d0ade138abd28d720c9069d63dcfd680dfa589f34e8ede1e089cd3a2a5c"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+        "sha256": "6823567f80d64db0156fe74726b43d4e0984a659c965db638c33c5a1d2e31c32"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+        "sha256": "a49a0f09f3d3072bc4c6bcd6dde2669610d216f8de5cd09b4598ca9466898f19"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq.ts",
+        "sha256": "9e54a7af1b14402435924fa13903c4c99a8d717c8542f54d467f29277224efe5"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/router.ts",
+        "sha256": "97d50a484b6b1cbf960bce6e1992985a3679541677b5c0ce14f356b49470132f"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "9214522d075380d814b553ab8c55a287b1db754427643729cf46bec4cc9a80ef"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/tiktoken-wasm.d.ts",
+        "sha256": "18aafdd5703deffb3dbb9ffc63d06487d26d93ae9450eed8c0f26c19d024829d"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+        "sha256": "6e0e2acfbf2fe9fe855b600b9b450f10b4277f688fc44451187776901f87b9c6"
+      },
+      {
+        "path": "workers/habitat-runtime/src/quota-migration.ts",
+        "sha256": "b20850be0b61490e799193a9181a13446d1a3ec94e5b91db270e79d543a76606"
+      },
+      {
+        "path": "workers/habitat-runtime/src/quota.ts",
+        "sha256": "d53138b030a005c53bbb7f43b7c97b97e49ac677ab5f920a24c875e5dfac0063"
+      },
+      {
+        "path": "workers/habitat-runtime/src/recovery.ts",
+        "sha256": "578d8f84226013ff18d48192633be0c14fcd96af2852c90eb434ad289cdcda04"
+      },
+      {
+        "path": "workers/habitat-runtime/src/rejection-log.ts",
+        "sha256": "839b066c9753dec486677d7563e611eed80f96ee947254aefe1010e2e3190437"
+      },
+      {
+        "path": "workers/habitat-runtime/src/retry-feedback.ts",
+        "sha256": "ed00bade635c7e8e272ef3d25ba6ac358700abc35e3891c44925dfad6d6853eb"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-issued-protocol.ts",
+        "sha256": "3a09c76915562b612b17a29c6371e1ccd0ff84ec481a65cf1fa1358210d0d304"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "c11344b93363c0f635e5dfea41fc91bd88b0648d39cf5b20f343ef17db9cf0f5"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "22d6b9b419410dac0ad1c1da6975824a14ae55666e7137847afbf98b26e3f8e6"
+      },
+      {
+        "path": "workers/habitat-runtime/src/structural-feedback.ts",
+        "sha256": "73fdca3dc1e1b890f82f7938491cebc033aa28019754b1d6ecf5acb051057e7a"
+      },
+      {
+        "path": "workers/habitat-runtime/wrangler.jsonc",
+        "sha256": "201989c6ab6c4a0aee94a536d18aeacf0ca9290a19effef6de08979caf51dea7"
+      }
+    ],
+    "sha256": "4b610e5361a8e349cbad6cc0810fd43e7b80ab859cc665b26425a05f4f14478b",
+    "currentSourceMatchesFrozen": true,
+    "currentMismatches": []
+  },
+  "harness": {
+    "files": [
+      {
+        "path": "attention-migration-rehearsal.test.ts",
+        "sha256": "dfa9c46c75ddee4533f26110d019b84163937f131ce534e95e455a5affe553c0"
+      },
+      {
+        "path": "vitest.config.ts",
+        "sha256": "c4f347de3f68d936fa60bc0308b25e5704cf3c29a0b02763d70c596b7f8b0778"
+      },
+      {
+        "path": "package.json",
+        "sha256": "2f3a694f70b8192167fd84fa58fe53f804fb60d6637a00a8b392f74ee88372d1"
+      }
+    ],
+    "logSha256": "c4f5a1490427e94b85d8047086e2aa9987c1b8710203ecb9a716a6c634cb1fd3"
+  },
+  "backups": [
+    {
+      "revision": 317,
+      "bytes": 3810072,
+      "sha256": "1e06e901431c4e688074057ee2ba99f836dce40ef9e658f7587e6a612ca9b3d9",
+      "pages": 33
+    },
+    {
+      "revision": 322,
+      "bytes": 3865289,
+      "sha256": "832c560405d05fd67a21fcdb3196c5953475c17b3ae6871f7c04810283514779",
+      "pages": 33
+    }
+  ],
+  "results": [
+    {
+      "revision": 317,
+      "sourceSchema": 11,
+      "targetSchema": 12,
+      "sourceCodec": 3,
+      "targetCodec": 4,
+      "pages": 33,
+      "tables": 26,
+      "beforeRows": 2079,
+      "afterRows": 2081,
+      "societyRevision": 287,
+      "migrationAtMs": 1788949554643,
+      "originalSocietySha256": "7b4a8c7fdd8946e2f63449e4509abe8228b20c38c6cb5de70db4208d0e74b3b4",
+      "migratedSocietySha256": "a7348fc71c09fa5d11c8f4ba024b13555874e30a7cf05d1010721d4a78ff7fe9",
+      "pendingPublicationCount": 1,
+      "pendingPublicationSha256": "2a17106ed4e12095314e483d8e5402a083a67e55ecb96d9308980dbb374a16df",
+      "savedJobs": 166,
+      "savedContexts": 136,
+      "pendingJobs": 0,
+      "conversations": 12,
+      "attentionMarkers": 24,
+      "tableProof": [
+        {
+          "table": "runtime_meta",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "32a7e7a368add82e24a2d24d661b985fe681129997c9bea8aeec5491d331f8ed",
+          "afterSha256": "32a7e7a368add82e24a2d24d661b985fe681129997c9bea8aeec5491d331f8ed",
+          "expectedSha256": "32a7e7a368add82e24a2d24d661b985fe681129997c9bea8aeec5491d331f8ed",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "world_state",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "dca3fb7f1b149a354a28f8b3fde281d2626f4ee35da416f803b12a2b6c3cff1e",
+          "afterSha256": "dca3fb7f1b149a354a28f8b3fde281d2626f4ee35da416f803b12a2b6c3cff1e",
+          "expectedSha256": "dca3fb7f1b149a354a28f8b3fde281d2626f4ee35da416f803b12a2b6c3cff1e",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "watch_runs",
+          "beforeRows": 30,
+          "afterRows": 30,
+          "beforeSha256": "cd5247d399a400d531bbd411893ce1d5f2468b7497347771c54c4652e4d24dda",
+          "afterSha256": "cd5247d399a400d531bbd411893ce1d5f2468b7497347771c54c4652e4d24dda",
+          "expectedSha256": "cd5247d399a400d531bbd411893ce1d5f2468b7497347771c54c4652e4d24dda",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "cognition_jobs",
+          "beforeRows": 166,
+          "afterRows": 166,
+          "beforeSha256": "5c41150cc0d0ac2ba4fb780a76f2d1c8216c4fc4ac6be681b4af92a75960023a",
+          "afterSha256": "5c41150cc0d0ac2ba4fb780a76f2d1c8216c4fc4ac6be681b4af92a75960023a",
+          "expectedSha256": "5c41150cc0d0ac2ba4fb780a76f2d1c8216c4fc4ac6be681b4af92a75960023a",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_attempts",
+          "beforeRows": 196,
+          "afterRows": 196,
+          "beforeSha256": "023bdf2f87f09df864e4373843ea6905298c03353cf305b82d49bc117ea89a44",
+          "afterSha256": "023bdf2f87f09df864e4373843ea6905298c03353cf305b82d49bc117ea89a44",
+          "expectedSha256": "023bdf2f87f09df864e4373843ea6905298c03353cf305b82d49bc117ea89a44",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "happenings",
+          "beforeRows": 329,
+          "afterRows": 329,
+          "beforeSha256": "bec67cdc7d24172493d60c25a5ace85be88b71562ffab4490bbbf151b5279991",
+          "afterSha256": "bec67cdc7d24172493d60c25a5ace85be88b71562ffab4490bbbf151b5279991",
+          "expectedSha256": "bec67cdc7d24172493d60c25a5ace85be88b71562ffab4490bbbf151b5279991",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "happening_people",
+          "beforeRows": 563,
+          "afterRows": 563,
+          "beforeSha256": "d56e44ac47b05c3dbf8b321d9b1037d826205acd8ceac98b9e6f130bd1b60584",
+          "afterSha256": "d56e44ac47b05c3dbf8b321d9b1037d826205acd8ceac98b9e6f130bd1b60584",
+          "expectedSha256": "d56e44ac47b05c3dbf8b321d9b1037d826205acd8ceac98b9e6f130bd1b60584",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "economic_events",
+          "beforeRows": 79,
+          "afterRows": 79,
+          "beforeSha256": "3983047c4c2986e49add5e043d56882c568d9e81db5127ff6e2a868ebd85d2c8",
+          "afterSha256": "3983047c4c2986e49add5e043d56882c568d9e81db5127ff6e2a868ebd85d2c8",
+          "expectedSha256": "3983047c4c2986e49add5e043d56882c568d9e81db5127ff6e2a868ebd85d2c8",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "world_checkpoints",
+          "beforeRows": 3,
+          "afterRows": 3,
+          "beforeSha256": "3d450d73995959dcd2ca62bde166d50bc2f9543824e7bd3a346966ae5be0f086",
+          "afterSha256": "3d450d73995959dcd2ca62bde166d50bc2f9543824e7bd3a346966ae5be0f086",
+          "expectedSha256": "3d450d73995959dcd2ca62bde166d50bc2f9543824e7bd3a346966ae5be0f086",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "world_layout_backups",
+          "beforeRows": 3,
+          "afterRows": 3,
+          "beforeSha256": "7f31ea4c6c96b20beb546d230abd56c693b8d6844e10ebe1a3069b71786688e6",
+          "afterSha256": "7f31ea4c6c96b20beb546d230abd56c693b8d6844e10ebe1a3069b71786688e6",
+          "expectedSha256": "7f31ea4c6c96b20beb546d230abd56c693b8d6844e10ebe1a3069b71786688e6",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "_sql_schema_migrations",
+          "beforeRows": 11,
+          "afterRows": 12,
+          "beforeSha256": "664f8ca4a76adc373ad318652a6e66f97c636a0ccfbd3111dd18d5c71769a45e",
+          "afterSha256": "3851e4a6cdd678b4f14509ec070b8535564d894d43247ea0bb57fd7d4d95f32a",
+          "expectedSha256": "3851e4a6cdd678b4f14509ec070b8535564d894d43247ea0bb57fd7d4d95f32a",
+          "exact": true,
+          "changed": true
+        },
+        {
+          "table": "quota_reservations",
+          "beforeRows": 198,
+          "afterRows": 198,
+          "beforeSha256": "8da847a7fd374d5cc5640ba916b5df24ce3b442fea2ba3ea8dd6e3922d981ca5",
+          "afterSha256": "8da847a7fd374d5cc5640ba916b5df24ce3b442fea2ba3ea8dd6e3922d981ca5",
+          "expectedSha256": "8da847a7fd374d5cc5640ba916b5df24ce3b442fea2ba3ea8dd6e3922d981ca5",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_usage_daily",
+          "beforeRows": 16,
+          "afterRows": 16,
+          "beforeSha256": "e5b703fdb24fd6c615c02693ae26bd8454ad3b3ab955ddfd3b2fdd3879add1ec",
+          "afterSha256": "e5b703fdb24fd6c615c02693ae26bd8454ad3b3ab955ddfd3b2fdd3879add1ec",
+          "expectedSha256": "e5b703fdb24fd6c615c02693ae26bd8454ad3b3ab955ddfd3b2fdd3879add1ec",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_breakers",
+          "beforeRows": 2,
+          "afterRows": 2,
+          "beforeSha256": "2c1343e74cbc62decdb75a3400fb1a4f5c81af76677e64cd266d62fc1aa58f18",
+          "afterSha256": "2c1343e74cbc62decdb75a3400fb1a4f5c81af76677e64cd266d62fc1aa58f18",
+          "expectedSha256": "2c1343e74cbc62decdb75a3400fb1a4f5c81af76677e64cd266d62fc1aa58f18",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "alarm_runs",
+          "beforeRows": 0,
+          "afterRows": 0,
+          "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "afterSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "expectedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "admin_commands",
+          "beforeRows": 9,
+          "afterRows": 9,
+          "beforeSha256": "ffddcb4ae017b9e2a90d428b92cb445ca5aaf790a80b1ac6c3aa2c05acad8830",
+          "afterSha256": "ffddcb4ae017b9e2a90d428b92cb445ca5aaf790a80b1ac6c3aa2c05acad8830",
+          "expectedSha256": "ffddcb4ae017b9e2a90d428b92cb445ca5aaf790a80b1ac6c3aa2c05acad8830",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "runtime_events",
+          "beforeRows": 183,
+          "afterRows": 183,
+          "beforeSha256": "fac61e079f526998de22f1e6b5e0e64b1b667a46fee487d0f4239d10f5f878b0",
+          "afterSha256": "fac61e079f526998de22f1e6b5e0e64b1b667a46fee487d0f4239d10f5f878b0",
+          "expectedSha256": "fac61e079f526998de22f1e6b5e0e64b1b667a46fee487d0f4239d10f5f878b0",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "society_state",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "1a633eea02726ca81eff7e8682ba849e565353cf255a949090a192e4a62cb8bd",
+          "afterSha256": "9dcb5b6d167d6547bec53837b05b0746d50673567f48378e5f09bcadedee0357",
+          "expectedSha256": "9dcb5b6d167d6547bec53837b05b0746d50673567f48378e5f09bcadedee0357",
+          "exact": true,
+          "changed": true
+        },
+        {
+          "table": "cognition_contexts",
+          "beforeRows": 136,
+          "afterRows": 136,
+          "beforeSha256": "90bc3f86af80962de991201ef79b78069a5a9c95cc02d943781559131b0e2ec0",
+          "afterSha256": "90bc3f86af80962de991201ef79b78069a5a9c95cc02d943781559131b0e2ec0",
+          "expectedSha256": "90bc3f86af80962de991201ef79b78069a5a9c95cc02d943781559131b0e2ec0",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "physical_runs",
+          "beforeRows": 3,
+          "afterRows": 3,
+          "beforeSha256": "808707c956dbcdfd77ddf6e7f5c2bd7e4156260b21ac8a6d1e4f3153b42c9931",
+          "afterSha256": "808707c956dbcdfd77ddf6e7f5c2bd7e4156260b21ac8a6d1e4f3153b42c9931",
+          "expectedSha256": "808707c956dbcdfd77ddf6e7f5c2bd7e4156260b21ac8a6d1e4f3153b42c9931",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "society_events",
+          "beforeRows": 134,
+          "afterRows": 134,
+          "beforeSha256": "e432923ade71577b7b52d1b2310e6e3fb4692bba39e0ce1231c737d8aded2d37",
+          "afterSha256": "e432923ade71577b7b52d1b2310e6e3fb4692bba39e0ce1231c737d8aded2d37",
+          "expectedSha256": "e432923ade71577b7b52d1b2310e6e3fb4692bba39e0ce1231c737d8aded2d37",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "society_layout_backups",
+          "beforeRows": 2,
+          "afterRows": 3,
+          "beforeSha256": "02b464f756dfd28bfc60c74a92d7c1e06d66ff8967c0a88e33fe1dbf1cd6d3f9",
+          "afterSha256": "7516dececbb5ed06367823eacf8e9bd9c32f608be8c462350f386a082fe43655",
+          "expectedSha256": "7516dececbb5ed06367823eacf8e9bd9c32f608be8c462350f386a082fe43655",
+          "exact": true,
+          "changed": true
+        },
+        {
+          "table": "authored_publications",
+          "beforeRows": 0,
+          "afterRows": 0,
+          "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "afterSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "expectedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_rejections",
+          "beforeRows": 10,
+          "afterRows": 10,
+          "beforeSha256": "7a8fc7a211cf894402e8ae80ee43bad5f6a2bddeaf1c103a0b897836424ebb0c",
+          "afterSha256": "7a8fc7a211cf894402e8ae80ee43bad5f6a2bddeaf1c103a0b897836424ebb0c",
+          "expectedSha256": "7a8fc7a211cf894402e8ae80ee43bad5f6a2bddeaf1c103a0b897836424ebb0c",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "quota_model_migration",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "3ca491c0fd98cdeaab6d42bbcfb6e57ade293e2530c2c60935ca5a0c815929b1",
+          "afterSha256": "3ca491c0fd98cdeaab6d42bbcfb6e57ade293e2530c2c60935ca5a0c815929b1",
+          "expectedSha256": "3ca491c0fd98cdeaab6d42bbcfb6e57ade293e2530c2c60935ca5a0c815929b1",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_model_breakers",
+          "beforeRows": 2,
+          "afterRows": 2,
+          "beforeSha256": "2ed8247884ced89484590fe60ff48cb9009ec41d930e5280630363eb8d424ab3",
+          "afterSha256": "2ed8247884ced89484590fe60ff48cb9009ec41d930e5280630363eb8d424ab3",
+          "expectedSha256": "2ed8247884ced89484590fe60ff48cb9009ec41d930e5280630363eb8d424ab3",
+          "exact": true,
+          "changed": false
+        }
+      ],
+      "dispatcherSecondRunUnchanged": true,
+      "status": "passed",
+      "roundtripVerified": true,
+      "networkAttempts": 0,
+      "providerCalls": 0,
+      "productionWrites": 0,
+      "physicalAdvances": 0,
+      "cognitionApplications": 0
+    },
+    {
+      "revision": 322,
+      "sourceSchema": 11,
+      "targetSchema": 12,
+      "sourceCodec": 3,
+      "targetCodec": 4,
+      "pages": 33,
+      "tables": 26,
+      "beforeRows": 2098,
+      "afterRows": 2100,
+      "societyRevision": 292,
+      "migrationAtMs": 1788953105396,
+      "originalSocietySha256": "a00d0d2cdffb94b69048ce122b68c33baa1b5af24a8424abfb6c7950ed6bcce0",
+      "migratedSocietySha256": "fc55ffd8d6e60001b19cfdd483350a218aab0c89d2c2ff2a64f8ef3cdf2c5d3e",
+      "pendingPublicationCount": 1,
+      "pendingPublicationSha256": "2a17106ed4e12095314e483d8e5402a083a67e55ecb96d9308980dbb374a16df",
+      "savedJobs": 169,
+      "savedContexts": 139,
+      "pendingJobs": 0,
+      "conversations": 12,
+      "attentionMarkers": 24,
+      "tableProof": [
+        {
+          "table": "runtime_meta",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "7f97f4b14c6831715ce36bddb00296612f71a4a6d2406402505147862a664382",
+          "afterSha256": "7f97f4b14c6831715ce36bddb00296612f71a4a6d2406402505147862a664382",
+          "expectedSha256": "7f97f4b14c6831715ce36bddb00296612f71a4a6d2406402505147862a664382",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "world_state",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "f5682c78755f57ca3e4c7e74697330214120e4604eb065b26f2a364206801379",
+          "afterSha256": "f5682c78755f57ca3e4c7e74697330214120e4604eb065b26f2a364206801379",
+          "expectedSha256": "f5682c78755f57ca3e4c7e74697330214120e4604eb065b26f2a364206801379",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "watch_runs",
+          "beforeRows": 30,
+          "afterRows": 30,
+          "beforeSha256": "cd5247d399a400d531bbd411893ce1d5f2468b7497347771c54c4652e4d24dda",
+          "afterSha256": "cd5247d399a400d531bbd411893ce1d5f2468b7497347771c54c4652e4d24dda",
+          "expectedSha256": "cd5247d399a400d531bbd411893ce1d5f2468b7497347771c54c4652e4d24dda",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "cognition_jobs",
+          "beforeRows": 169,
+          "afterRows": 169,
+          "beforeSha256": "d73c38f4af0ee52d3f73dfc970c22b98b05a5346980238b92306b59f5917674f",
+          "afterSha256": "d73c38f4af0ee52d3f73dfc970c22b98b05a5346980238b92306b59f5917674f",
+          "expectedSha256": "d73c38f4af0ee52d3f73dfc970c22b98b05a5346980238b92306b59f5917674f",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_attempts",
+          "beforeRows": 199,
+          "afterRows": 199,
+          "beforeSha256": "a95d9057531089ef79d897547699bf429b24c143d8a99ac26531b40b96d962d9",
+          "afterSha256": "a95d9057531089ef79d897547699bf429b24c143d8a99ac26531b40b96d962d9",
+          "expectedSha256": "a95d9057531089ef79d897547699bf429b24c143d8a99ac26531b40b96d962d9",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "happenings",
+          "beforeRows": 330,
+          "afterRows": 330,
+          "beforeSha256": "1d71878b5c5dd8bc675459af385669bdc133e8ed25cc996af29460fb03206f3c",
+          "afterSha256": "1d71878b5c5dd8bc675459af385669bdc133e8ed25cc996af29460fb03206f3c",
+          "expectedSha256": "1d71878b5c5dd8bc675459af385669bdc133e8ed25cc996af29460fb03206f3c",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "happening_people",
+          "beforeRows": 565,
+          "afterRows": 565,
+          "beforeSha256": "31023ecb978a1dd9fa1c9dce1430fc3cc15fc145f60db0aff91e1baec2536a78",
+          "afterSha256": "31023ecb978a1dd9fa1c9dce1430fc3cc15fc145f60db0aff91e1baec2536a78",
+          "expectedSha256": "31023ecb978a1dd9fa1c9dce1430fc3cc15fc145f60db0aff91e1baec2536a78",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "economic_events",
+          "beforeRows": 79,
+          "afterRows": 79,
+          "beforeSha256": "3983047c4c2986e49add5e043d56882c568d9e81db5127ff6e2a868ebd85d2c8",
+          "afterSha256": "3983047c4c2986e49add5e043d56882c568d9e81db5127ff6e2a868ebd85d2c8",
+          "expectedSha256": "3983047c4c2986e49add5e043d56882c568d9e81db5127ff6e2a868ebd85d2c8",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "world_checkpoints",
+          "beforeRows": 3,
+          "afterRows": 3,
+          "beforeSha256": "3d450d73995959dcd2ca62bde166d50bc2f9543824e7bd3a346966ae5be0f086",
+          "afterSha256": "3d450d73995959dcd2ca62bde166d50bc2f9543824e7bd3a346966ae5be0f086",
+          "expectedSha256": "3d450d73995959dcd2ca62bde166d50bc2f9543824e7bd3a346966ae5be0f086",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "world_layout_backups",
+          "beforeRows": 3,
+          "afterRows": 3,
+          "beforeSha256": "7f31ea4c6c96b20beb546d230abd56c693b8d6844e10ebe1a3069b71786688e6",
+          "afterSha256": "7f31ea4c6c96b20beb546d230abd56c693b8d6844e10ebe1a3069b71786688e6",
+          "expectedSha256": "7f31ea4c6c96b20beb546d230abd56c693b8d6844e10ebe1a3069b71786688e6",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "_sql_schema_migrations",
+          "beforeRows": 11,
+          "afterRows": 12,
+          "beforeSha256": "664f8ca4a76adc373ad318652a6e66f97c636a0ccfbd3111dd18d5c71769a45e",
+          "afterSha256": "a87306350fa760ab84d532d788a25c244b5dd042c9703b6b9a9f6ae6c7742770",
+          "expectedSha256": "a87306350fa760ab84d532d788a25c244b5dd042c9703b6b9a9f6ae6c7742770",
+          "exact": true,
+          "changed": true
+        },
+        {
+          "table": "quota_reservations",
+          "beforeRows": 201,
+          "afterRows": 201,
+          "beforeSha256": "8b2865c8382092a8ef87d502d5ba0d2a43dd3f5a0e1adc0c4046baf1066c1e4c",
+          "afterSha256": "8b2865c8382092a8ef87d502d5ba0d2a43dd3f5a0e1adc0c4046baf1066c1e4c",
+          "expectedSha256": "8b2865c8382092a8ef87d502d5ba0d2a43dd3f5a0e1adc0c4046baf1066c1e4c",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_usage_daily",
+          "beforeRows": 16,
+          "afterRows": 16,
+          "beforeSha256": "48447435c842eb46222ca75feeaa4b2db87cd8439571e54948261cf132cec8c5",
+          "afterSha256": "48447435c842eb46222ca75feeaa4b2db87cd8439571e54948261cf132cec8c5",
+          "expectedSha256": "48447435c842eb46222ca75feeaa4b2db87cd8439571e54948261cf132cec8c5",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_breakers",
+          "beforeRows": 2,
+          "afterRows": 2,
+          "beforeSha256": "0595c74759425dea8af55b5933a49e2490c4c366bb72bc8f9707adfb01f7c61b",
+          "afterSha256": "0595c74759425dea8af55b5933a49e2490c4c366bb72bc8f9707adfb01f7c61b",
+          "expectedSha256": "0595c74759425dea8af55b5933a49e2490c4c366bb72bc8f9707adfb01f7c61b",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "alarm_runs",
+          "beforeRows": 0,
+          "afterRows": 0,
+          "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "afterSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "expectedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "admin_commands",
+          "beforeRows": 9,
+          "afterRows": 9,
+          "beforeSha256": "ffddcb4ae017b9e2a90d428b92cb445ca5aaf790a80b1ac6c3aa2c05acad8830",
+          "afterSha256": "ffddcb4ae017b9e2a90d428b92cb445ca5aaf790a80b1ac6c3aa2c05acad8830",
+          "expectedSha256": "ffddcb4ae017b9e2a90d428b92cb445ca5aaf790a80b1ac6c3aa2c05acad8830",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "runtime_events",
+          "beforeRows": 185,
+          "afterRows": 185,
+          "beforeSha256": "4435779241316e54ed64a1f9f46d248db940582bf2d67189dc0b7af969f36a5a",
+          "afterSha256": "4435779241316e54ed64a1f9f46d248db940582bf2d67189dc0b7af969f36a5a",
+          "expectedSha256": "4435779241316e54ed64a1f9f46d248db940582bf2d67189dc0b7af969f36a5a",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "society_state",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "bd8cea01ac7220f5b667f5fed0b1d1d1be6a9477173ef144bcc7cf323846932b",
+          "afterSha256": "d46c3cd963b62b2463fd9aa3fd7a0ef47acd242991086097c68ad36d23cb8d5b",
+          "expectedSha256": "d46c3cd963b62b2463fd9aa3fd7a0ef47acd242991086097c68ad36d23cb8d5b",
+          "exact": true,
+          "changed": true
+        },
+        {
+          "table": "cognition_contexts",
+          "beforeRows": 139,
+          "afterRows": 139,
+          "beforeSha256": "c2add1458a51a8830926db9ca3b430653a5b831512b083a740e87dc4eb2bf276",
+          "afterSha256": "c2add1458a51a8830926db9ca3b430653a5b831512b083a740e87dc4eb2bf276",
+          "expectedSha256": "c2add1458a51a8830926db9ca3b430653a5b831512b083a740e87dc4eb2bf276",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "physical_runs",
+          "beforeRows": 3,
+          "afterRows": 3,
+          "beforeSha256": "808707c956dbcdfd77ddf6e7f5c2bd7e4156260b21ac8a6d1e4f3153b42c9931",
+          "afterSha256": "808707c956dbcdfd77ddf6e7f5c2bd7e4156260b21ac8a6d1e4f3153b42c9931",
+          "expectedSha256": "808707c956dbcdfd77ddf6e7f5c2bd7e4156260b21ac8a6d1e4f3153b42c9931",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "society_events",
+          "beforeRows": 136,
+          "afterRows": 136,
+          "beforeSha256": "82f6c121c1d6b257de80da79800bf460ce5f5e092296d1af25ce12152ecdf579",
+          "afterSha256": "82f6c121c1d6b257de80da79800bf460ce5f5e092296d1af25ce12152ecdf579",
+          "expectedSha256": "82f6c121c1d6b257de80da79800bf460ce5f5e092296d1af25ce12152ecdf579",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "society_layout_backups",
+          "beforeRows": 2,
+          "afterRows": 3,
+          "beforeSha256": "02b464f756dfd28bfc60c74a92d7c1e06d66ff8967c0a88e33fe1dbf1cd6d3f9",
+          "afterSha256": "9220e4c07ca826a67c01c9a00a332fd57412da606e378160f7116477cb4a396e",
+          "expectedSha256": "9220e4c07ca826a67c01c9a00a332fd57412da606e378160f7116477cb4a396e",
+          "exact": true,
+          "changed": true
+        },
+        {
+          "table": "authored_publications",
+          "beforeRows": 0,
+          "afterRows": 0,
+          "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "afterSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "expectedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_rejections",
+          "beforeRows": 10,
+          "afterRows": 10,
+          "beforeSha256": "7a8fc7a211cf894402e8ae80ee43bad5f6a2bddeaf1c103a0b897836424ebb0c",
+          "afterSha256": "7a8fc7a211cf894402e8ae80ee43bad5f6a2bddeaf1c103a0b897836424ebb0c",
+          "expectedSha256": "7a8fc7a211cf894402e8ae80ee43bad5f6a2bddeaf1c103a0b897836424ebb0c",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "quota_model_migration",
+          "beforeRows": 1,
+          "afterRows": 1,
+          "beforeSha256": "3ca491c0fd98cdeaab6d42bbcfb6e57ade293e2530c2c60935ca5a0c815929b1",
+          "afterSha256": "3ca491c0fd98cdeaab6d42bbcfb6e57ade293e2530c2c60935ca5a0c815929b1",
+          "expectedSha256": "3ca491c0fd98cdeaab6d42bbcfb6e57ade293e2530c2c60935ca5a0c815929b1",
+          "exact": true,
+          "changed": false
+        },
+        {
+          "table": "provider_model_breakers",
+          "beforeRows": 2,
+          "afterRows": 2,
+          "beforeSha256": "b1bf4b2106291ae453557f0df236506b878d883eff8221423a9b8f9e69f9693d",
+          "afterSha256": "b1bf4b2106291ae453557f0df236506b878d883eff8221423a9b8f9e69f9693d",
+          "expectedSha256": "b1bf4b2106291ae453557f0df236506b878d883eff8221423a9b8f9e69f9693d",
+          "exact": true,
+          "changed": false
+        }
+      ],
+      "dispatcherSecondRunUnchanged": true,
+      "status": "passed",
+      "roundtripVerified": true,
+      "networkAttempts": 0,
+      "providerCalls": 0,
+      "productionWrites": 0,
+      "physicalAdvances": 0,
+      "cognitionApplications": 0
+    }
+  ],
+  "checks": {
+    "sourceBackupBytesUnchanged": true,
+    "frozenSourceBytesUnchanged": true,
+    "independentAttentionMarkerOracle": true,
+    "originalSocietyFieldsUnchanged": true,
+    "completeOriginalSocietyJsonArchivedExactly": true,
+    "all26TablesChecked": true,
+    "onlySpecifiedThreeTablesChanged": true,
+    "allHistoricalJobsAndPreparedContextsPreserved": true,
+    "pendingPublicationPreservedExactly": true,
+    "clocksQuotasAgreementsAndPhysicalStatePreserved": true,
+    "secondMigrationDispatchNoop": true,
+    "completeRoundtripVerified": true
+  },
+  "actions": {
+    "networkAttempts": 0,
+    "providerCalls": 0,
+    "productionWrites": 0,
+    "physicalAdvances": 0,
+    "cognitionApplications": 0
+  },
+  "limitations": [
+    "This is an offline migration rehearsal, not proof that the release has been deployed.",
+    "This tests the current migration against two complete backups; it does not prove model decisions, future emergence, request admission or remote CPU capacity."
+  ]
+}

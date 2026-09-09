@@ -1,0 +1,176 @@
+{
+  "status": "completed_local_negative_social_to_action_diagnostic",
+  "date": "2026-09-09",
+  "sourceRevision": 322,
+  "backupSha256": "832c560405d05fd67a21fcdb3196c5953475c17b3ae6871f7c04810283514779",
+  "sourceManifestSha256": "c40b17a6b49daeae4c94c578a70dd970a5a179652366eb42ef4acbf034c5e187",
+  "binding": "0e99958e8c30e368b23031b8d3157b11d09ef8cdac9c0a639cb65104f1d1eb64",
+  "model": "Qwen3.6-35B-A3B-4bit",
+  "calls": 6,
+  "applied": 6,
+  "newAgreements": 0,
+  "physicalWatches": 3,
+  "physicalObservations": 75,
+  "cloudRequests": 0,
+  "productionWrites": 0,
+  "armResults": [
+    {
+      "protocol": 7,
+      "calls": 3,
+      "applied": 3,
+      "newOffers": [
+        {
+          "id": "offer:614",
+          "worker": "Y",
+          "payer": "T",
+          "cells": 0,
+          "verb": "grow",
+          "room": "garden",
+          "units": 1,
+          "dueWatch": 434
+        },
+        {
+          "id": "offer:618",
+          "worker": "Y",
+          "payer": "T",
+          "cells": 0,
+          "verb": "grow",
+          "room": "garden",
+          "units": 1,
+          "dueWatch": 434
+        },
+        {
+          "id": "offer:647",
+          "worker": "Y",
+          "payer": "T",
+          "cells": 0,
+          "verb": "grow",
+          "room": "garden",
+          "units": 1,
+          "dueWatch": 435
+        }
+      ],
+      "newAgreements": 0,
+      "originalOfferStatusAfterLastDecision": "replaced",
+      "yExecutablePlanBeforeWatch": null,
+      "yAction": "eat",
+      "yRoom": "common",
+      "newAcceptedGrowFulfilments": 0,
+      "newNegotiatedWorkPayments": 0,
+      "reportedLocalTokens": {
+        "prompt_tokens": 9457,
+        "completion_tokens": 390,
+        "total_tokens": 9847
+      },
+      "maxAbsoluteMonetaryResidual": 4.547473508864641e-13
+    },
+    {
+      "protocol": 8,
+      "calls": 3,
+      "applied": 3,
+      "newOffers": [],
+      "newAgreements": 0,
+      "originalOfferStatusAfterLastDecision": "open",
+      "yExecutablePlanBeforeWatch": null,
+      "yAction": "eat",
+      "yRoom": "common",
+      "newAcceptedGrowFulfilments": 0,
+      "newNegotiatedWorkPayments": 0,
+      "reportedLocalTokens": {
+        "prompt_tokens": 8023,
+        "completion_tokens": 307,
+        "total_tokens": 8330
+      },
+      "maxAbsoluteMonetaryResidual": 4.547473508864641e-13
+    }
+  ],
+  "control": {
+    "inferenceCalls": 0,
+    "yAction": "eat",
+    "yRoom": "common",
+    "yObservationIdenticalAcrossArms": true,
+    "yObservationCanonicalSha256": "12a4a537089ba51eca3fa62bec960fcd19e73d8dd0dfb47e9d9deb980d69bb92",
+    "preExistingWPublication": {
+      "intentId": "record:intent:11",
+      "publicationId": "record:publication:14",
+      "observationIdenticalAcrossArms": true,
+      "observationCanonicalSha256": "0814444077c80e04743e08993e32d8b011421e7087a32c47ca6249b36937607d",
+      "creditedToNewDecisions": false
+    }
+  },
+  "replay": {
+    "newCalls": 0,
+    "complete": true,
+    "entries": 9,
+    "finalHashesMatchOriginalRun": true,
+    "finalHashes": {
+      "7": "e5559a28a2c0688aa0b7a62d868dced2388850052490cbc4ca0f6e70820ba4ad",
+      "8": "3547bcb1a324a53fccca2ebd75894ceb01ac26bf64d8ab2e83f23f14d0fdc621",
+      "control": "a76fb351d3f20176fd5b2dc0357ef540f631d897c9feeeebdbfa576b08b200d3"
+    }
+  },
+  "serverClosure": {
+    "pid": 10637,
+    "logConfirmsApplicationShutdownAndProcessFinished": true,
+    "rootRecordedExit": 143,
+    "rootRecordedPort8018NoListener": true
+  },
+  "researchTotals": {
+    "localRequests": 171,
+    "newLocalRequests": 6,
+    "historicalCloudNeurons": 1852,
+    "newCloudResearchNeurons": 0
+  },
+  "evidenceHashes": [
+    {
+      "artifact": "private-ledger.json",
+      "sha256": "1ca9a9a2f43511f48d5273ecf3d17eed6ed9386d6e81586922704679ecb2863c"
+    },
+    {
+      "artifact": "private-public-report.json",
+      "sha256": "698fb0dc3bf1877f731435ca28806891cd07a6d3cd9f1fc4e1971c0672de988b"
+    },
+    {
+      "artifact": "private-public-plan.json",
+      "sha256": "93fea3f3a6cbc94793e1d76b16917b5bdac28da9bccb007a32da643b62834da1"
+    },
+    {
+      "artifact": "private-run.log",
+      "sha256": "698fb0dc3bf1877f731435ca28806891cd07a6d3cd9f1fc4e1971c0672de988b"
+    },
+    {
+      "artifact": "private-replay.log",
+      "sha256": "471cdda3c4823d2137de34d251850eb6cf964f8768af3a99eb0a344d8ad8205e"
+    },
+    {
+      "artifact": "private-server.log",
+      "sha256": "08690d2a3b0626df234a9de599bc3899c91416f151061343cf5da1ed5d4ecab4"
+    }
+  ],
+  "limitations": [
+    "Six valid decisions do not establish social-to-action progress.",
+    "One paired trajectory cannot isolate concurrent-channel capacity or establish a causal advantage of P8.",
+    "Voluntary zero-cell terms are not wages.",
+    "Local model-reported tokens are not cloud quota or full grammar-compilation cost.",
+    "Semantic claims are reviewed separately; this receipt contains no private messages, motivations or authored text."
+  ],
+  "nativeWatchHorizon": {
+    "sourceClock": {
+      "day": 108,
+      "watch": 2
+    },
+    "executedSlot": 433,
+    "resultClock": {
+      "day": 108,
+      "watch": 3
+    },
+    "originalOfferDueWatch": 434,
+    "deadlineInclusiveHorizonWouldRequireTwoWatches": true,
+    "thisExperimentWatchesPerCloneUnchanged": 1
+  },
+  "independentSemanticReview": {
+    "path": "attention-chain-independent-semantic-review.json",
+    "sha256": "ef486ef6eb590099c0f1cb8be63edc4c620b6a0f24fd3a3caff657ac9d092880",
+    "separateFromMechanicalReceipt": true
+  }
+}

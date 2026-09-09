@@ -1,0 +1,131 @@
+{
+  "auditedAt": "2026-09-08T19:01:50.326Z",
+  "scope": "One actual P6 job; exact offline input reconstruction and application, no network or inference.",
+  "baseline": {
+    "revision": 175,
+    "exportedAtMs": 1788893253749,
+    "backupSha256": "0805dfeb345f194e4955f60f5bb34d84582065c803f45a5e275eac5143cd4351"
+  },
+  "observation": {
+    "revision": 177,
+    "exportedAtMs": 1788893903256,
+    "backupSha256": "92800851e979ac6d52a4c02abea15d2ebfb6027d82d61c2459457fb12237825a"
+  },
+  "source": {
+    "analyzerManifestSha256": "c9e8a12102d86fb6cf229db002a1106b30b55e89d199453279c503ed62224ab2",
+    "additionalFiles": [
+      {
+        "path": "/workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "a13087e711d0f953bb6357587b4a417b5ddd7f31049cd94dbae1ed634d52b6c3"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "35d59e4c6cbf8a5c6bb32497fa610fd5503f233510ef5ed5a5d2442841fbe3a9"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/habitat-world.ts",
+        "sha256": "0e329458c7c558c2818346ce7d5404546dac61bd2b942903742ec345179b7cb3"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/cognition-retention.ts",
+        "sha256": "ab070825db6a991621d116c1582a484752b42645fb975a89f9f7846a1bcb77eb"
+      }
+    ],
+    "scriptSha256": "27e32394db28e2cf6d73aede64405057f6ae1cbdf1a41a89c58591607535004a"
+  },
+  "job": {
+    "id": "habitat-canonical:mind:C:12:72:g:3",
+    "actor": "C",
+    "sequence": 72,
+    "protocol": 6,
+    "status": "applied",
+    "createdAtMs": 1788893850078,
+    "appliedAtMs": 1788893857308
+  },
+  "provider": {
+    "provider": "workers-ai",
+    "model": "@cf/openai/gpt-oss-120b",
+    "attempts": 1,
+    "rejections": 0,
+    "usageConfirmed": true,
+    "usage": {
+      "inputTokens": 2630,
+      "outputTokens": 225,
+      "neurons": 100
+    },
+    "maximum": {
+      "inputTokens": 23276,
+      "outputTokens": 1024,
+      "neurons": 811
+    },
+    "latencyMs": 7230
+  },
+  "replay": {
+    "promptHashes": {
+      "system": {
+        "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+        "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+        "matches": true
+      },
+      "user": {
+        "expected": "f3f614f80ba0b07dfae8d20b3d2f521e75f5c9934c2eb7dd5760e5a96e466551",
+        "actual": "f3f614f80ba0b07dfae8d20b3d2f521e75f5c9934c2eb7dd5760e5a96e466551",
+        "matches": true
+      },
+      "prepared": {
+        "expected": "f3f614f80ba0b07dfae8d20b3d2f521e75f5c9934c2eb7dd5760e5a96e466551",
+        "actual": "f3f614f80ba0b07dfae8d20b3d2f521e75f5c9934c2eb7dd5760e5a96e466551",
+        "matches": true
+      }
+    },
+    "completePreparedMetadataMatches": true,
+    "schemaMatches": true,
+    "savedSchemaAcceptsOutput": true,
+    "schemaSha256": "7a4429cd396240ebc9ab41a5c1bd9bd607537f83719773421ce9a479ee4642cf",
+    "outputSha256": "d36fa4d670610caad8c41856720a6c08106772e34a5f164f47e6a366f327b935",
+    "societyStateJsonMatchesExactly": true,
+    "worldStateJsonMatchesExactly": true,
+    "societyStateSha256": "acf9e9898f0829054094e630b9e2294d3998e9259552704bf12b5697891e02da",
+    "worldStateSha256": "adf583dceaf8f1546a025257161e9eae56c550d2d1fad2ca10d3ecf48ba15954",
+    "duplicateIsNoOp": true
+  },
+  "effects": {
+    "publicMessage": {
+      "conversationId": "conversation:17",
+      "id": "turn:347",
+      "from": "C",
+      "to": "N",
+      "textSha256": "a5e661bb9a11ab7532a7ff2fcab63692c3c0a47f81b3ac4b1e4ea6fad501830a",
+      "archived": true
+    },
+    "recordsOperation": null,
+    "records": {
+      "drafts": 0,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    },
+    "newRecordPublications": 0,
+    "newRecordCommissionPayments": 0,
+    "newEconomicEvents": 0,
+    "newPhysicalRuns": 0,
+    "dayBefore": 107,
+    "dayAfter": 107,
+    "watchBefore": 3,
+    "watchAfter": 3,
+    "balancesAndEconomyUnchanged": true,
+    "physicalBodiesUnchangedExceptThoughtCoverage": true
+  },
+  "privacy": {
+    "privatePromptsAndResponseStoredOutsideRepository": true,
+    "publicReceiptIncludesNoPromptReflectionDraftText": true
+  },
+  "limits": [
+    "This confirms delivery and exact application of a single reply, not the quality or reliability of P6 generally.",
+    "The response contained only message. No drafting, sharing, publication, consent or payment was executed.",
+    "Language about a document is an authored claim, not evidence that its exact text exists or was read.",
+    "The isolated replay used saved timestamps and original state. It did not advance production or simulate a physical watch."
+  ]
+}

@@ -40,9 +40,19 @@ describe('runtime contracts', () => {
       WORKERS_AI_MODEL: '@cf/qwen/qwen3-30b-a3b-fp8',
       WORKERS_AI_DAILY_NEURONS_LIMIT: '8000',
       GROQ_MODEL: 'openai/gpt-oss-20b',
-      GROQ_DAILY_TOTAL_TOKENS_LIMIT: '150000',
+      GROQ_DAILY_TOTAL_TOKENS_LIMIT: '200000',
     };
     expect(runtimeConfigSchema.parse(config).MAX_COGNITIONS_PER_ALARM).toBe(1);
+    expect(runtimeConfigSchema.parse(config).GROQ_DAILY_TOTAL_TOKENS_LIMIT).toBe(200_000);
+    expect(runtimeConfigSchema.parse({ ...config, GROQ_DAILY_TOTAL_TOKENS_LIMIT: '150000' })
+      .GROQ_DAILY_TOTAL_TOKENS_LIMIT).toBe(150_000);
+    expect(() => runtimeConfigSchema.parse({ ...config, GROQ_DAILY_TOTAL_TOKENS_LIMIT: '200001' })).toThrow();
+    expect(runtimeConfigSchema.parse({ ...config, WORKERS_AI_MODEL: '@cf/google/gemma-4-26b-a4b-it' })
+      .WORKERS_AI_MODEL).toBe('@cf/google/gemma-4-26b-a4b-it');
+    expect(runtimeConfigSchema.parse({ ...config, WORKERS_AI_MODEL: '@cf/openai/gpt-oss-120b' })
+      .WORKERS_AI_MODEL).toBe('@cf/openai/gpt-oss-120b');
+    expect(() => runtimeConfigSchema.parse({ ...config, WORKERS_AI_MODEL: '@cf/zai-org/glm-4.7-flash' })).toThrow();
+    expect(() => runtimeConfigSchema.parse({ ...config, WORKERS_AI_MODEL: '@cf/another/model' })).toThrow();
     expect(() => runtimeConfigSchema.parse({ ...config, TICK_INTERVAL_MS: '3600000' })).toThrow();
     expect(() => runtimeConfigSchema.parse({ ...config, MAX_COGNITIONS_PER_ALARM: '2' })).toThrow();
     expect(() => runtimeConfigSchema.parse({ ...config, GROQ_MODEL: 'expensive-model' })).toThrow();

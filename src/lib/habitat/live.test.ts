@@ -44,6 +44,21 @@ describe('the live habitat snapshot boundary', () => {
     const broken = vi.fn<typeof fetch>(async () => response({ day: 105, entries: [{ ...entries[0], day: 104 }] }));
     await expect(fetchHabitatArchive('https://habitat.example', 105, { fetcher: broken })).rejects.toThrow();
   });
+  it('retains verified speech provenance, accepts older archives and rejects conflicting attribution', async () => {
+    const entry = { day: 107, watch: 3, minute: 720, room: 'workshops', who: ['G', 'Q'],
+      text: 'Q: Here are two cells.', kind: 'meeting', speech: { speaker: 'Q', turnId: 'turn:263' } };
+    const fetcher = vi.fn<typeof fetch>(async () => response({ day: 107, entries: [entry] }));
+    await expect(fetchHabitatArchive('https://habitat.example', 107, { fetcher })).resolves.toEqual([entry]);
+    for (const speech of [{ speaker: 'G', turnId: 'turn:263' }, { speaker: 'Q', turnId: 'turn:263', paid: true }, null]) {
+      const invalid = vi.fn<typeof fetch>(async () => response({ day: 107, entries: [{ ...entry, speech }] }));
+      await expect(fetchHabitatArchive('https://habitat.example', 107, { fetcher: invalid })).rejects.toThrow('could not be read');
+    }
+    const { speech: _speech, ...legacy } = entry;
+    expect(_speech.speaker).toBe('Q');
+    const older = vi.fn<typeof fetch>(async () => response({ day: 107, entries: [legacy] }));
+    await expect(fetchHabitatArchive('https://habitat.example', 107, { fetcher: older })).resolves.toEqual([legacy]);
+  });
+
   it('accepts a complete canonical snapshot', () => {
     expect(isHabitatSnapshot(liveSnapshot())).toBe(true);
   });

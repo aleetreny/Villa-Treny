@@ -1,0 +1,434 @@
+{
+  "scope": "Three exact historical J44/L45/J46 contexts, each P4/P5, counterbalanced. No physical watch.",
+  "intervention": "P5 changes only its response format/grammar and format instructions derived from the saved P4 SYSTEM. USER, sampling and seed unchanged. No later English instruction added.",
+  "limitation": "Selected negotiation contexts; not spontaneous economics, model ranking or a requirement to accept legitimate counterproposals.",
+  "humanReview": "pending",
+  "newCalls": 6,
+  "stopped": "all_six_cases_processed",
+  "rows": [
+    {
+      "caseKey": "J44",
+      "variant": "P4",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "I have the materials and cells ready at the power bay. Since you're here, let's start the repair immediately to get the maintenance up."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 1,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "16edd9e65e952f00e4462ece7c39bbaea0067f437d6251d923f0075ac1e9d947",
+        "canonicalEffectEquivalent": true,
+        "decision": "propose_work",
+        "explicitOfferId": null,
+        "newOffers": [
+          {
+            "id": "offer:75",
+            "conversationId": "conversation:41",
+            "proposer": "J",
+            "counterpart": "L",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 402
+            },
+            "status": "open",
+            "replaces": null,
+            "createdAtMs": 1788825644001,
+            "expiresAtWatch": 402,
+            "acceptedAtMs": null
+          }
+        ],
+        "newAgreements": [],
+        "proposedTermsMatchIncoming": [
+          false
+        ],
+        "balanceChanges": [],
+        "clockUnchanged": true,
+        "physicalWatches": 0
+      },
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 2099,
+        "completion_tokens": 125,
+        "total_tokens": 2224,
+        "input_tokens": 2099,
+        "output_tokens": 125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 6.1,
+        "total_time": 3.82
+      },
+      "latencyMs": 13008
+    },
+    {
+      "caseKey": "J44",
+      "variant": "P5",
+      "state": "completed",
+      "output": {
+        "turn": [
+          {
+            "choice": "accept:offer:70"
+          },
+          {
+            "message": {
+              "to": "L",
+              "text": "Let's begin the repair."
+            },
+            "appraisal": {
+              "axis": "trust",
+              "delta": 1,
+              "ref": "turn:67",
+              "why": "Lior arrived and confirmed readiness as promised."
+            }
+          }
+        ]
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "a81b33519e55c5c49efac9796a6e6350097377aba343d401cc748e8b75c68317",
+        "canonicalEffectEquivalent": true,
+        "decision": "accept",
+        "explicitOfferId": "offer:70",
+        "newOffers": [],
+        "newAgreements": [
+          {
+            "id": "agreement:75",
+            "offerId": "offer:70",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 401
+            },
+            "status": "active",
+            "acceptedAtMs": 1788825644001,
+            "acceptedAtWatch": 400,
+            "acceptedAfterEventSequence": 0,
+            "progress": 0,
+            "completedAtMs": null,
+            "evidenceIds": [],
+            "debtId": null
+          }
+        ],
+        "proposedTermsMatchIncoming": [],
+        "balanceChanges": [],
+        "clockUnchanged": true,
+        "physicalWatches": 0
+      },
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 2197,
+        "completion_tokens": 74,
+        "total_tokens": 2271,
+        "input_tokens": 2197,
+        "output_tokens": 74,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.1
+      },
+      "latencyMs": 2182
+    },
+    {
+      "caseKey": "L45",
+      "variant": "P5",
+      "state": "completed",
+      "output": {
+        "turn": [
+          {
+            "choice": "accept:offer:75"
+          },
+          {
+            "message": {
+              "to": "J",
+              "text": "I'm ready. Let's get that maintenance fixed."
+            }
+          }
+        ]
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "bf777dda5ed89059e7b507aad13452c397d289342dbca18f6e830e93e528944d",
+        "canonicalEffectEquivalent": true,
+        "decision": "accept",
+        "explicitOfferId": "offer:75",
+        "newOffers": [],
+        "newAgreements": [
+          {
+            "id": "agreement:79",
+            "offerId": "offer:75",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 402
+            },
+            "status": "active",
+            "acceptedAtMs": 1788825645001,
+            "acceptedAtWatch": 400,
+            "acceptedAfterEventSequence": 0,
+            "progress": 0,
+            "completedAtMs": null,
+            "evidenceIds": [],
+            "debtId": null
+          }
+        ],
+        "proposedTermsMatchIncoming": [],
+        "balanceChanges": [],
+        "clockUnchanged": true,
+        "physicalWatches": 0
+      },
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 2126,
+        "completion_tokens": 41,
+        "total_tokens": 2167,
+        "input_tokens": 2126,
+        "output_tokens": 41,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 1.58
+      },
+      "latencyMs": 1662
+    },
+    {
+      "caseKey": "L45",
+      "variant": "P4",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "J",
+          "text": "I'm ready when you are. Shall we open the deal for the repair?"
+        },
+        "deal": {
+          "kind": "work",
+          "role": "work",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 0,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "56345f03016006ebbec31b8ebb459c5bd6282ffdf613a5747792764d7ceb6de6",
+        "canonicalEffectEquivalent": true,
+        "decision": "propose_work",
+        "explicitOfferId": null,
+        "newOffers": [
+          {
+            "id": "offer:79",
+            "conversationId": "conversation:41",
+            "proposer": "L",
+            "counterpart": "J",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 401
+            },
+            "status": "open",
+            "replaces": null,
+            "createdAtMs": 1788825645001,
+            "expiresAtWatch": 402,
+            "acceptedAtMs": null
+          }
+        ],
+        "newAgreements": [],
+        "proposedTermsMatchIncoming": [
+          false
+        ],
+        "balanceChanges": [],
+        "clockUnchanged": true,
+        "physicalWatches": 0
+      },
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 2028,
+        "completion_tokens": 112,
+        "total_tokens": 2140,
+        "input_tokens": 2028,
+        "output_tokens": 112,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.3
+      },
+      "latencyMs": 2392
+    },
+    {
+      "caseKey": "J46",
+      "variant": "P4",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "Yes, let's open the deal. I accept the terms for one unit of repair at the workshops for 0 cells."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 0,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "3e1e1d8e4ae9291b309f0cc7ce94dc1e02f036cd300f21ef63ba3758eb631a3e",
+        "canonicalEffectEquivalent": true,
+        "decision": "propose_work",
+        "explicitOfferId": null,
+        "newOffers": [
+          {
+            "id": "offer:83",
+            "conversationId": "conversation:41",
+            "proposer": "J",
+            "counterpart": "L",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 401
+            },
+            "status": "open",
+            "replaces": null,
+            "createdAtMs": 1788825646001,
+            "expiresAtWatch": 402,
+            "acceptedAtMs": null
+          }
+        ],
+        "newAgreements": [],
+        "proposedTermsMatchIncoming": [
+          true
+        ],
+        "balanceChanges": [],
+        "clockUnchanged": true,
+        "physicalWatches": 0
+      },
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 2084,
+        "completion_tokens": 121,
+        "total_tokens": 2205,
+        "input_tokens": 2084,
+        "output_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.52
+      },
+      "latencyMs": 2618
+    },
+    {
+      "caseKey": "J46",
+      "variant": "P5",
+      "state": "completed",
+      "output": {
+        "turn": [
+          {
+            "choice": "accept:offer:79"
+          },
+          {
+            "message": {
+              "to": "L",
+              "text": "Deal. I'm at the power bay with the materials and cells ready. Let's get to work."
+            }
+          }
+        ]
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "b4fd42fc4d6837aa7ddff2e4294d750e17bc788b51640c552d4cbdc42685c76b",
+        "canonicalEffectEquivalent": true,
+        "decision": "accept",
+        "explicitOfferId": "offer:79",
+        "newOffers": [],
+        "newAgreements": [
+          {
+            "id": "agreement:83",
+            "offerId": "offer:79",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 401
+            },
+            "status": "active",
+            "acceptedAtMs": 1788825646001,
+            "acceptedAtWatch": 400,
+            "acceptedAfterEventSequence": 0,
+            "progress": 0,
+            "completedAtMs": null,
+            "evidenceIds": [],
+            "debtId": null
+          }
+        ],
+        "proposedTermsMatchIncoming": [],
+        "balanceChanges": [],
+        "clockUnchanged": true,
+        "physicalWatches": 0
+      },
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 2182,
+        "completion_tokens": 52,
+        "total_tokens": 2234,
+        "input_tokens": 2182,
+        "output_tokens": 52,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 1.73
+      },
+      "latencyMs": 1810
+    }
+  ]
+}

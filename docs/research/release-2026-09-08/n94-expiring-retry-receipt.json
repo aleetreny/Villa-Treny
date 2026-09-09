@@ -1,0 +1,140 @@
+{
+  "format": "villa-n94-expiring-retry-audit-v1",
+  "auditedAt": "2026-09-08T22:16:14.854Z",
+  "status": "reproduced_offline",
+  "backupSha256": "c78a9e789b6bdecb2c719f8f9c388fdc0ca84996506143ebd8dd9653fe3c62c2",
+  "revision": 227,
+  "exportedAtMs": 1788905583300,
+  "job": {
+    "id": "habitat-canonical:mind:N:13:94:g:3",
+    "protocol": 6,
+    "status": "deferred",
+    "createdAtMs": 1788904654671,
+    "expiresAtMs": 1788905554671,
+    "attemptClaims": 2,
+    "actualProviderDispatches": 1,
+    "lastRecordedError": "providers_deferred",
+    "jobDueAtMs": 1788905593964,
+    "runtimeNextCognitionAtMs": 1788905713964
+  },
+  "actualFirstDispatch": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "recordedAtMs": 1788904655612,
+    "providerDetailCode": "invalid_cognition_payload",
+    "domainCode": "invalid_society:invalid_record_choice",
+    "usage": {
+      "inputTokens": 5893,
+      "outputTokens": 269
+    },
+    "charged": true
+  },
+  "lastWake": {
+    "atMs": 1788905533964,
+    "preflightReadyAtMs": 1788905533963,
+    "providers": [
+      {
+        "provider": "workers-ai",
+        "model": "@cf/openai/gpt-oss-120b",
+        "maximum": {
+          "requests": 1,
+          "inputTokens": 23906,
+          "outputTokens": 1024,
+          "neurons": 831
+        },
+        "readyAtMs": 1788905728891,
+        "estimatedCost": 113,
+        "remaining": 1393,
+        "estimatedOpportunities": 5,
+        "dispatched": 0
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "maximum": {
+          "requests": 1,
+          "inputTokens": 5946,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "readyAtMs": 1788906749030,
+        "estimatedCost": 5598.666666666667,
+        "remaining": 183204,
+        "estimatedOpportunities": 32,
+        "dispatched": 0
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "maximum": {
+          "requests": 1,
+          "inputTokens": 5946,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "readyAtMs": 1788905533963,
+        "estimatedCost": 5945.25,
+        "remaining": 74292,
+        "estimatedOpportunities": 12,
+        "dispatched": 1
+      }
+    ],
+    "remainingUntilContextExpiryMs": 20707,
+    "tenSecondCommitMargin": true,
+    "routeDeadlineAtMs": 1788905544671,
+    "availableRequestWindowMs": 10707,
+    "requiredRequestWindowMs": 45000,
+    "result": {
+      "status": "deferred",
+      "retryAtMs": 1788905593964,
+      "reasons": [
+        {
+          "ok": false,
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "attemptId": "habitat-canonical:mind:N:13:94:g:3:groq:openai%2Fgpt-oss-20b:2",
+          "kind": "rejected",
+          "retryable": true,
+          "detailCode": "route_time_budget",
+          "latencyMs": 0,
+          "retryAtMs": 1788905593964
+        }
+      ]
+    },
+    "providerInvocationStarted": false,
+    "quotaReservationCreated": false,
+    "sqlWriteAttemptsInRouteReplay": 0
+  },
+  "consequences": {
+    "secondClaimPublishedBeforeRouteGuard": true,
+    "worldRevision227IsAttemptPublication": true,
+    "doesNotRepresentAppliedNResponse": true,
+    "lastAttemptAtMs": 1788905533964,
+    "lastSuccessAtMs": 1788887766807,
+    "thirtyMinuteFailureBackoffAtMs": 1788907333964,
+    "contextAlreadyExpiredAtPost": true,
+    "expectedNextWakeRetiresExpiredContext": true,
+    "expectedNextWakeIsNotAnObservedEvent": true
+  },
+  "unrelated120BFailure": {
+    "atMs": 1788904296313,
+    "attemptId": "habitat-canonical:mind:C:16:93:g:3:groq:openai%2Fgpt-oss-120b:1",
+    "model": "openai/gpt-oss-120b",
+    "belongsToN94": false
+  },
+  "conclusion": "The final providers_deferred is an exact route_time_budget deferral, not provider exhaustion and not a new inference failure. The route correctly refused I/O with only10707 ms available. A scheduler/preclaim gap allowed a paced retry to claim the world with less than55000 ms of context life; it then recorded another attempt and deferred past expiry despite having no legal request window.",
+  "minimalProposedCorrection": "Before claim/markSocietyAttempt, require remaining context lifetime to cover the45s provider timeout plus10s commit margin, using fresh time after awaited tokenization. Retire/reprepare an unusable context without another failure attempt; retain the same rule when deciding a future paced retry. Keep the router deadline guard authoritative.",
+  "validations": {
+    "originalRetrySystemAndFeedbackUserHashesMatched": true,
+    "realTokenizerUsed": true,
+    "realQuotaAndRouterReadOnlyReproduction": true,
+    "resultAttemptAndRetryAtMatchPersisted": true,
+    "networkAttempts": 0,
+    "readQueries": 70
+  },
+  "limitations": [
+    "No model call or production mutation was made. The post-state is used only to reproduce the already recorded final routing decision; no later retirement or successful retry is claimed.",
+    "The initial model response was refused by the society validator; this audit does not repair it or evaluate its private semantic content.",
+    "The expired context is still listed as deferred until the next natural wake; provider guards prevent late execution. The issue is unnecessary claim/backoff and misleading interim state, not unaccounted spending."
+  ]
+}

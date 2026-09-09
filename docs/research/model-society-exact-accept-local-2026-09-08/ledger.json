@@ -1,0 +1,3231 @@
+{
+  "config": {
+    "policy": {
+      "maxCalls": 1,
+      "maxOutputTokens": 1024,
+      "timeoutMs": 120000,
+      "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+      "sequence": 43,
+      "nowMs": 1788825643000
+    },
+    "source": [
+      {
+        "path": "package.json",
+        "sha256": "fad76024308399e9681dce8a36d32d50cbc6442cfc4de966bb5fbacf806dcb55"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "03af0997568d17db7048c52941ba924985827c7e763dee12d196a0f7a3e0658b"
+      },
+      {
+        "path": "scripts/benchmark-society-models.mjs",
+        "sha256": "353314dc2bce86eabdfe8ce1fefbab72535f560b23e7e6c4557054d881cba4c0"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime-v6.mjs",
+        "sha256": "2fcbe7dcc58bd8efe0ab5e50ddfa34c8ee0ea90509bc32ac8b599ce82c1fdae0"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime-v7-local.mjs",
+        "sha256": "dbc96850d2720b30d437558b6e461d5e59d184214cf3ad75e548547bb8439d0f"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime.mjs",
+        "sha256": "005d44072b9f43b9be62ced55f4e17811f5002235ff0df10abd020af49b99f1d"
+      },
+      {
+        "path": "src/lib/habitat/agency.ts",
+        "sha256": "2dd4cfe731271ff7bffb414878d5bf5734ed5ed108908577dab19bfb2fde57c4"
+      },
+      {
+        "path": "src/lib/habitat/axes.ts",
+        "sha256": "cd74388ccd7f4d2f9af2d45a130dc825cacaad4d685fcfa0f7e56bac41e5fbd9"
+      },
+      {
+        "path": "src/lib/habitat/bitmap-codec.ts",
+        "sha256": "4fc39555204830e98ee585474f82e6696e5a5140f0f6db82ed5d39438836eada"
+      },
+      {
+        "path": "src/lib/habitat/engine/economy.ts",
+        "sha256": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8"
+      },
+      {
+        "path": "src/lib/habitat/engine/knowledge.ts",
+        "sha256": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14"
+      },
+      {
+        "path": "src/lib/habitat/engine/state.ts",
+        "sha256": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8"
+      },
+      {
+        "path": "src/lib/habitat/engine/tick.ts",
+        "sha256": "4bc9068d99f84ef8f45af3783f4872cde109e162ea26cb7f71b7af1897be93cb"
+      },
+      {
+        "path": "src/lib/habitat/engine/verbs.ts",
+        "sha256": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3"
+      },
+      {
+        "path": "src/lib/habitat/generated/rooms.json",
+        "sha256": "d7d9631c820a8321e5db00cdbb85a069dd72611312f3aecc20173cde4e54e208"
+      },
+      {
+        "path": "src/lib/habitat/graph.ts",
+        "sha256": "ffa22d815347a48c307d5dc22dc53755fd3d07267a976f8933dddee698ca77b0"
+      },
+      {
+        "path": "src/lib/habitat/grid.ts",
+        "sha256": "f1d005f71327df39c047e2e9625da451fd5e04ac59ff47f3ca62fd592c584cd1"
+      },
+      {
+        "path": "src/lib/habitat/journal.ts",
+        "sha256": "b1ea6f4230404ec9d5084a0036912a382a61723bbf68a26791aac0d6749fb470"
+      },
+      {
+        "path": "src/lib/habitat/live.ts",
+        "sha256": "b43c3d095801fb14e7e9658b39dcda00a80ef6566b6299429014cb0de7e6c8fc"
+      },
+      {
+        "path": "src/lib/habitat/navigation.ts",
+        "sha256": "6078a44b9520163bdf1014b08ef0d950206aa7db4e59ac1503d8b81c12b6a3f7"
+      },
+      {
+        "path": "src/lib/habitat/observer-camera.ts",
+        "sha256": "2f2d9cc048756b5dffde9ad01ff4e28329a50e8fdb08111aca6dbd5d56a5c048"
+      },
+      {
+        "path": "src/lib/habitat/observer-matrix.ts",
+        "sha256": "26da0f7e03bca8d076649eda071261b2237070032dad39f69285274a37600a27"
+      },
+      {
+        "path": "src/lib/habitat/observer-preferences.ts",
+        "sha256": "8cf50c24deaccf47eeb22e5570f3348a55682f3b62942851db198eb7c1737073"
+      },
+      {
+        "path": "src/lib/habitat/passages.ts",
+        "sha256": "63203b2b2e1d099ec760f8c069efb9676317693006a83126e6c3dc1be216cb1a"
+      },
+      {
+        "path": "src/lib/habitat/portraits.ts",
+        "sha256": "b717c55fc544ec643d6dfb437e40a59a92dffbf2dba197da121acb5262b54754"
+      },
+      {
+        "path": "src/lib/habitat/random.ts",
+        "sha256": "e18394c5735036e93d0bf001a1b2a1d95ab1255484e84a79bd8ceb77e2d17c33"
+      },
+      {
+        "path": "src/lib/habitat/residents.ts",
+        "sha256": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29"
+      },
+      {
+        "path": "src/lib/habitat/room-art.ts",
+        "sha256": "217bb8023ecce49099e18c78e39f8d7599f989becc88820243f92e6bda865124"
+      },
+      {
+        "path": "src/lib/habitat/room-motion.ts",
+        "sha256": "3b456066b93d9016a62ee039936a714284ac36f43b993c42c99f4903a5a2c99f"
+      },
+      {
+        "path": "src/lib/habitat/rooms.ts",
+        "sha256": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57"
+      },
+      {
+        "path": "src/lib/habitat/section.ts",
+        "sha256": "ed6147c44affe83c8f00d64ffab216aa2dd9dd8bd3879085596300a7abdff7c6"
+      },
+      {
+        "path": "src/lib/habitat/snapshot.ts",
+        "sha256": "a3569e0ce59798859a38445ea45998864072dcf737ac151d7df38a3c24b027e4"
+      },
+      {
+        "path": "src/lib/habitat/society.ts",
+        "sha256": "90d6e2046a3151deb4e0b3f943b2727bbd8946cf5a495f641687c6415aaca13a"
+      },
+      {
+        "path": "src/lib/habitat/society/appraisal.ts",
+        "sha256": "f946f0accaece3c460d3a6e5fe884aa4797e2fccfc403ea17fcdbaa25a37ea7b"
+      },
+      {
+        "path": "src/lib/habitat/society/capabilities.ts",
+        "sha256": "d63a161cf3fb4f0baa754e2c71f1d310fb6cac9ab56353586be6bb2f86c7283a"
+      },
+      {
+        "path": "src/lib/habitat/society/choice.ts",
+        "sha256": "2fd3e01f5a890d641ef6c22a16eb38f1ad515a1500b3f9f2cc049263cdf2b579"
+      },
+      {
+        "path": "src/lib/habitat/society/economy.ts",
+        "sha256": "a654dca715bdc163e792115c0bdafb48177bdbee2e0fc74ad3d588873504802a"
+      },
+      {
+        "path": "src/lib/habitat/society/index.ts",
+        "sha256": "2c03abec435c3936a49e83031ae9b7d0a56d74872dff6640c63c45ee3229a626"
+      },
+      {
+        "path": "src/lib/habitat/society/instructions.ts",
+        "sha256": "b1af62bfd77c5f98d72191394d467581c0225a1dcf82a149d311992c8cc56491"
+      },
+      {
+        "path": "src/lib/habitat/society/money.ts",
+        "sha256": "923226735ffaadfdeb4fecf6ef6418b08257285c3eebf8a56941ceefe4684b8a"
+      },
+      {
+        "path": "src/lib/habitat/society/physical.ts",
+        "sha256": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae"
+      },
+      {
+        "path": "src/lib/habitat/society/public.ts",
+        "sha256": "d33553d696de531b063761ebada83299541a11d1fbf8d7c68ec93481a3aade5a"
+      },
+      {
+        "path": "src/lib/habitat/society/schema.ts",
+        "sha256": "3de39ade3487159388a378681a4f1fdcd89b3e78bef4ebf5dc1405fb04adb6e1"
+      },
+      {
+        "path": "src/lib/habitat/society/state.ts",
+        "sha256": "bcc7ddf0baf53d24d146214dc7e6e578aefa01b0778b08cc672fe92aa1414bc3"
+      },
+      {
+        "path": "src/lib/habitat/society/turn.ts",
+        "sha256": "d43378d30fb0d40586b5bce3434a26bc5e7a086709255ca0c57438cb46e67f4b"
+      },
+      {
+        "path": "src/lib/habitat/society/types.ts",
+        "sha256": "c7029b821a40ccf1ef99a9d309a5556e9eb3e51b539a7259c7062e38550fa1ed"
+      },
+      {
+        "path": "src/lib/habitat/tiles.ts",
+        "sha256": "1ad438260ca82edf4a60d950f54026314b3a7d82dc9c449f2dbb675d5097a2a7"
+      },
+      {
+        "path": "src/lib/habitat/useHabitatLive.ts",
+        "sha256": "37cf4e65d2fe4ff69c349d0edeb878dcd0837f4f2963dbfbc110313a4195089e"
+      },
+      {
+        "path": "src/lib/habitat/useObserverPresence.ts",
+        "sha256": "896d46511296a53ea2557ddd5419d4730d661a23c681577283447aea2cb3e77c"
+      },
+      {
+        "path": "src/lib/habitat/weave.ts",
+        "sha256": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5"
+      },
+      {
+        "path": "workers/habitat-runtime/package.json",
+        "sha256": "3b3c0a1f715373d4329886ed03713760da783373d10b555100d1089d095b7b4f"
+      },
+      {
+        "path": "workers/habitat-runtime/src/contracts.ts",
+        "sha256": "148065684e7bc17653f137025db1e7dd29e850de2d83e1c2b84fc876e97eb3c8"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/deadline.ts",
+        "sha256": "2d97949eeb8c0ed829e171147f27782bdfa48fd1e408d33d7f6fa62d486f357c"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+        "sha256": "9851210b2af31b0df81fc97f6dbf124848420cb9acbab8e4daf863cc048a1dd9"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+        "sha256": "99b665861f1371d034149d689667619df1fed7ca5a059da43ebb7cf853d9d554"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq.ts",
+        "sha256": "207b756310183a2a3ebb759a0e8fe13f84ffc8a5e3c1bab8d7f945958cdc74b1"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/router.ts",
+        "sha256": "6276e39c8c46f56a0cda30a17ee34e5a8a71643ba47a7826979af1e40cca9a4b"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "1d0f1f1d0d8fe6a92e3b4a1b1c6c775b580a8974a1a25bda41017857e9de42ce"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/tiktoken-wasm.d.ts",
+        "sha256": "18aafdd5703deffb3dbb9ffc63d06487d26d93ae9450eed8c0f26c19d024829d"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+        "sha256": "8eebc8d8eb919864facbb0e7ebe81e2b8e9c35af900602037943b7a240150b7e"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "b1965b2db42d421d89dac357d293e7a1f7a4a32a81128f725b5094026174bb5b"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "6600858e5627853169af5f3e6111284ad75d3465574517a428bf3d916c63da9e"
+      }
+    ],
+    "scripts": [
+      {
+        "path": "scripts/benchmark-society-exact-accept-local.mjs",
+        "sha256": "7fee834bdfabef13217068b1041a44ea00e7612781f35fdf85dd875fd7eff8e8"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime-v7-local.mjs",
+        "sha256": "dbc96850d2720b30d437558b6e461d5e59d184214cf3ad75e548547bb8439d0f"
+      },
+      {
+        "path": "scripts/benchmark-society-frozen-v7.mjs",
+        "sha256": "f5679a5ac476cef2c0017eff2c0773aca478ba9bb9d1e5c81bb5d292eca4b3c8"
+      },
+      {
+        "path": "scripts/benchmark-society-models.mjs",
+        "sha256": "353314dc2bce86eabdfe8ce1fefbab72535f560b23e7e6c4557054d881cba4c0"
+      }
+    ],
+    "model": {
+      "id": "Qwen3.6-35B-A3B-4bit",
+      "path": "/Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit",
+      "serverVersion": "0.6.4"
+    },
+    "modelProvenance": {
+      "priorLedger": "docs/research/model-society-local-identity-probe-2026-09-08/ledger.json",
+      "priorLedgerSha256": "63a6689ba7e3769ce12446c5b71cbef05aa460fd805a77815e68e683faa82913",
+      "observedFiles": [
+        {
+          "name": "config.json",
+          "bytes": 23591,
+          "sha256": "a822a9e48b0aafbe3144ec37d4fb067e178ed96615ce6e4420b3149893cc5767",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187434,
+          "mtimeMs": 1788165114629.523,
+          "ctimeMs": 1788165114631.0522
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 215755,
+          "sha256": "0b28df60e33753a14e816d3b31577ae2c93884c58430a4a6de6ae9ea483842ea",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187454,
+          "mtimeMs": 1788165114984.4336,
+          "ctimeMs": 1788165114985.5857
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 19989343,
+          "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187451,
+          "mtimeMs": 1788165125229.013,
+          "ctimeMs": 1788165125233.735
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 1139,
+          "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187461,
+          "mtimeMs": 1788165115363.8599,
+          "ctimeMs": 1788165115364.9897
+        },
+        {
+          "name": "chat_template.jinja",
+          "bytes": 7764,
+          "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187433,
+          "mtimeMs": 1788165114630.6135,
+          "ctimeMs": 1788165114632.6008
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "bytes": 5288196018,
+          "sha256": "09f3e6ecb0b7af6e6a38bc8169a134c821b0924c2679b2bb8f4426ad38d032b8",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187401,
+          "mtimeMs": 1788165841580.9795,
+          "ctimeMs": 1788165841594.548
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "bytes": 5368472749,
+          "sha256": "31dcdb1c49eebdb1505bd14e3cb33f9cf900bd2546b638f2464694ae763a033f",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187402,
+          "mtimeMs": 1788165819526.8687,
+          "ctimeMs": 1788165819532.365
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "bytes": 5368324139,
+          "sha256": "3e66de06a1f03dade16a612a368cfce4a4c9caa4efd7d28185454384082cec03",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187449,
+          "mtimeMs": 1788165784016.4958,
+          "ctimeMs": 1788165784022.8752
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "bytes": 4377211365,
+          "sha256": "a5d0cf03519c26f8b506df6b0ba60526e5c08c8cea22d0c21ce92950e58a5422",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187450,
+          "mtimeMs": 1788165685653.631,
+          "ctimeMs": 1788165685662.1985
+        }
+      ],
+      "serverSources": [
+        {
+          "name": "cli.py",
+          "sha256": "5b746dd262f91dcbcd367fbeca9a9739df08a206f7e9eb67947bc2b0fd4a10ae"
+        },
+        {
+          "name": "server.py",
+          "sha256": "fdffe13f58a66c88a7517c04e2dbbfd35085f5e3ff8de2f68352c73a4570e767"
+        },
+        {
+          "name": "settings.py",
+          "sha256": "d39c18519a4dd0e164e0bfe6baeb44e65a5dddb8edc8edf1bbdb1a841db3934f"
+        },
+        {
+          "name": "api/openai_models.py",
+          "sha256": "d358ac77bc3fa41a94c4dac7aa59f3e57be9efe2f0f166ca553161143e2484f7"
+        }
+      ],
+      "serverVersion": "0.6.4",
+      "limitation": "Four weight hashes are inherited from the preceding measured local run. Current size/inode/mtime/ctime guard this batch; the weight bytes were not rehashed."
+    },
+    "captureSha256": "9a4b15e3f57653c65c3cc8a0b61ca48052a0dc9419143cde67ee172e4be18567",
+    "sourceLedgerSha256": "9c709f622c23edd6a7c715966769a322b974372f0595c29ebd1b546b065198c2",
+    "beforeHash": "4dbd76b98bee426bc46795fa1ef4c7466a5fc21b5e8f8bad7f0a9e8ed39d68f4",
+    "jobSha256": "4c6fff7c94f1b03eaaa4470dddc28bc3384ed3fb31a1b96c954e39ed591efb32"
+  },
+  "binding": "3e1a299825fda69d2fe898c6185027c73e50d170e3d977f602ab1e848988c7b2",
+  "entries": [
+    {
+      "kind": "cognition",
+      "id": "isolated-exact-accept-continuation:mind:L:7:43:g:0",
+      "job": {
+        "id": "isolated-exact-accept-continuation:mind:L:7:43:g:0",
+        "actor": "L",
+        "stage": "exact_continuation",
+        "index": 0,
+        "nowMs": 1788825643000,
+        "turn": {
+          "id": "L:7:43",
+          "actor": "L",
+          "mindRevision": 7,
+          "sequence": 43,
+          "generation": 0,
+          "preparedAtMs": 1788825643000,
+          "expiresAtMs": 1788826543000,
+          "conversation": {
+            "id": "conversation:41",
+            "revision": 5,
+            "turn": 5
+          },
+          "evidenceIds": [
+            "world:100:1",
+            "memory:65",
+            "memory:44",
+            "memory:57",
+            "memory:61",
+            "turn:42",
+            "turn:51",
+            "turn:55",
+            "turn:59",
+            "turn:63",
+            "offer:66"
+          ],
+          "prompt": "You are Lior Ben-Ari (L). Speak and choose in the first person as Lior Ben-Ari.\nAvailable recipients: J=Juno Petrakis\nCurrent information:\n{\"self\":{\"id\":\"L\",\"name\":\"Lior Ben-Ari\",\"room\":\"hold\",\"was\":\"Sold things; never the same thing twice\",\"duty\":\"Salvage\",\"voice\":\"Fast, flattering, changes the subject with a compliment. Tells the same three stories. Goes quiet and precise when he is actually working.\",\"wants\":\"To be the one who is owed for once, in a way he would deny.\",\"fears\":\"Being seen clearly by somebody whose opinion he cannot deflect.\",\"condition\":{\"rested\":67,\"fed\":74,\"well\":78,\"safe\":57,\"accompanied\":63},\"cells\":8,\"maxSpendableCells\":8},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"people\":[\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\"],\"contacts\":[{\"id\":\"J\",\"name\":\"Juno Petrakis\",\"duty\":\"The Workshops power bay\"},{\"id\":\"P\",\"name\":\"Pilar Ocaña\",\"duty\":\"The kitchen\"},{\"id\":\"Q\",\"name\":\"Quim Bassols\",\"duty\":\"The workshops\"},{\"id\":\"T\",\"name\":\"Tomás Iriarte\",\"duty\":\"Reckoning\"}]},\"ownProject\":{\"goal\":\"Help Juno repair the maintenance system.\",\"why\":\"Juno has the materials and cells, and I have the duty to assist.\",\"status\":\"active\",\"visibility\":\"private\",\"steps\":[{\"id\":\"step:50\",\"intent\":{\"actor\":\"L\",\"verb\":\"repair\"},\"at\":\"workshops\",\"status\":\"pending\"}]},\"memories\":[{\"id\":\"memory:65\",\"kind\":\"claim\",\"text\":\"J: I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.\",\"refs\":[\"turn:63\"]},{\"id\":\"memory:44\",\"kind\":\"claim\",\"text\":\"J: I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?\",\"refs\":[\"turn:42\"]},{\"id\":\"memory:57\",\"kind\":\"claim\",\"text\":\"J: Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?\",\"refs\":[\"turn:55\"]},{\"id\":\"memory:61\",\"kind\":\"claim\",\"text\":\"L: I'm on my way to the power bay now. Let's get that maintenance fixed.\",\"refs\":[\"turn:59\"]}],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[{\"id\":\"J\",\"held\":[30,26,20,8,14,10]}]},\"conversation\":{\"id\":\"conversation:41\",\"nextSpeaker\":\"L\",\"turnsLeft\":11,\"transcript\":[{\"id\":\"turn:42\",\"speaker\":\"J\",\"text\":\"I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?\"},{\"id\":\"turn:51\",\"speaker\":\"L\",\"text\":\"I’m free. Let’s get that maintenance fixed.\"},{\"id\":\"turn:55\",\"speaker\":\"J\",\"text\":\"Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?\"},{\"id\":\"turn:59\",\"speaker\":\"L\",\"text\":\"I'm on my way to the power bay now. Let's get that maintenance fixed.\"},{\"id\":\"turn:63\",\"speaker\":\"J\",\"text\":\"I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.\"}]},\"openOffers\":[{\"id\":\"offer:66\",\"proposer\":\"J\",\"counterpart\":\"L\",\"terms\":{\"kind\":\"work\",\"worker\":\"L\",\"payer\":\"J\",\"cells\":0,\"verb\":\"repair\",\"room\":\"workshops\",\"units\":1,\"dueWatch\":403},\"expiresAtWatch\":402}],\"affordances\":{\"workExamples\":{\"columns\":[\"verb\",\"at\",\"available\",\"needs\",\"produces\"],\"rows\":[[\"grow\",\"garden\",true,{\"water\":2},{\"produce\":16}],[\"cook\",\"kitchen\",true,{\"produce\":4,\"water\":1},{\"meals\":8}],[\"filter_water\",\"well\",true,{},{\"water\":24}],[\"dig\",\"face\",true,{\"water\":1},{\"materials\":4}],[\"repair\",\"workshops\",true,{\"materials\":1,\"cells\":2},{\"maintenance\":8}]]}},\"omitted\":{\"memories\":1,\"contacts\":20}}",
+          "promptBytes": 3820,
+          "contextOverflow": false
+        },
+        "job": {
+          "schemaVersion": 1,
+          "jobId": "isolated-exact-accept-continuation:mind:L:7:43:g:0",
+          "habitatId": "isolated-exact-accept-continuation",
+          "origin": {
+            "kind": "alarm",
+            "runId": "society:43"
+          },
+          "cause": {
+            "worldRevision": 0,
+            "simTime": {
+              "day": 100,
+              "minute": 0
+            }
+          },
+          "kind": "society_turn",
+          "subjects": [
+            {
+              "kind": "resident",
+              "id": "L"
+            }
+          ],
+          "pressure": 0.04,
+          "createdAtMs": 1788825643000,
+          "prompt": {
+            "system": "You decide only for the resident named in self. This is not a story to continue. The user JSON is your available information.\n\nChoose a small purpose from your own wants and situation. If ownProject is null, create project with a concrete goal and next step. A social purpose can have steps:[] while awaiting a reply; do not add unrelated physical work. Keep a useful project unless new evidence gives a reason to revise it. A message alone does not persist a project. Writing a plan never completes its goal.\n\nUse supplied state and personal knowledge. A transcript or memory marked claim establishes only what someone said; interpretation is opinion. Missing details are unknown. A person's duty does not tell you their current location. Do not invent measurements, faults, places, objects, actions already done, promises or consent. You may propose something new in the future. Ask about an uncertainty instead of asserting an imagined result.\n\nUse self.voice for tone and rhythm, not phrases to copy or biography to announce. Speak in English as yourself to the actual other person; never address them with your own name. Your first available opportunity includes a message, without having to disclose a private purpose. If conversation is null, nobody has asked you anything: initiate a relevant contact. Otherwise answer the actual last speaker on your turn, without repeating their sentence or your earlier reply. Use one or two short, complete sentences. Ask one relevant question or propose one concrete next step.\n\nReturn only the requested JSON. Omit unchanged or unnecessary fields. Reflection is optional: add it only for a useful interpretation supported by supplied reference IDs. An ID is not evidence for an invented observation.\n\nAppraisal is optional. If the latest message changes how you regard its speaker, choose one offered axis, a small change and the actual received-turn reference, with your reason. It changes only your own view, never their feelings. Omit it when nothing changed. A request, friendly phrase or promise is not proof of compliance or consent.\n\nA step produces only its defined engine effects. If no offered capability achieves your purpose, use steps:[] and pursue a concrete discussion in a message. No physical capability writes a manuscript or medical protocol, performs a consultation or invents knowledge. accrue_labor_credit and accrue_two_labor_credits do only that; labour credits are later allocation weight, not spendable cells. walk_room_and_log_visit records a visit, not sensor readings. log_stock_register records store totals and the working-room register, only for A. filter_water produces water at Well; clean_space elsewhere does not. The recipe table gives actual resource costs and yields; repair can consume cells. Use only offered capabilities and places. Speech works across rooms: do not add travel or labour to stand in for a conversation. One action per watch: at means travel and action together; go.room is travel only; repay.target is a person. Historic action records may use old names and are not additional available choices.\n\nDeal is optional. To propose a concrete transfer, loan or work commitment that serves your purpose, use deal, including first contact. Words alone do not schedule work or move cells. Ordinary discussion needs no deal. Include a message to the other participant. Omit close to keep the exchange open; close:true cannot accompany a deal. Acceptance requires a separate accept with the actual offerId. Choose one deal: transfer give/ask, loan lend/borrow, work work/hire, or accept/reject an actual incoming offerId. For work, role:work means you work and the other person pays; role:hire means you pay and the other person works. Cells is the total payment for all units; choose the offered verb and room. The engine determines both parties and absolute dates; never output raw offer/respond fields. New offers expire after two watches. Acceptance keeps the exact existing terms. If an incoming offer already matches the terms you want, accept its exact offerId. A new matching proposal replaces the old offer; it does not accept it. Counterpropose only when you want different terms. Respect spending bounds; cells use at most two decimals and work may be voluntary (0 cells). A proposal is not consent, execution or payment.",
+            "user": "You are Lior Ben-Ari (L). Speak and choose in the first person as Lior Ben-Ari.\nAvailable recipients: J=Juno Petrakis\nCurrent information:\n{\"self\":{\"id\":\"L\",\"name\":\"Lior Ben-Ari\",\"room\":\"hold\",\"was\":\"Sold things; never the same thing twice\",\"duty\":\"Salvage\",\"voice\":\"Fast, flattering, changes the subject with a compliment. Tells the same three stories. Goes quiet and precise when he is actually working.\",\"wants\":\"To be the one who is owed for once, in a way he would deny.\",\"fears\":\"Being seen clearly by somebody whose opinion he cannot deflect.\",\"condition\":{\"rested\":67,\"fed\":74,\"well\":78,\"safe\":57,\"accompanied\":63},\"cells\":8,\"maxSpendableCells\":8},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"people\":[\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\"],\"contacts\":[{\"id\":\"J\",\"name\":\"Juno Petrakis\",\"duty\":\"The Workshops power bay\"},{\"id\":\"P\",\"name\":\"Pilar Ocaña\",\"duty\":\"The kitchen\"},{\"id\":\"Q\",\"name\":\"Quim Bassols\",\"duty\":\"The workshops\"},{\"id\":\"T\",\"name\":\"Tomás Iriarte\",\"duty\":\"Reckoning\"}]},\"ownProject\":{\"goal\":\"Help Juno repair the maintenance system.\",\"why\":\"Juno has the materials and cells, and I have the duty to assist.\",\"status\":\"active\",\"visibility\":\"private\",\"steps\":[{\"id\":\"step:50\",\"intent\":{\"actor\":\"L\",\"verb\":\"repair\"},\"at\":\"workshops\",\"status\":\"pending\"}]},\"memories\":[{\"id\":\"memory:65\",\"kind\":\"claim\",\"text\":\"J: I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.\",\"refs\":[\"turn:63\"]},{\"id\":\"memory:44\",\"kind\":\"claim\",\"text\":\"J: I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?\",\"refs\":[\"turn:42\"]},{\"id\":\"memory:57\",\"kind\":\"claim\",\"text\":\"J: Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?\",\"refs\":[\"turn:55\"]},{\"id\":\"memory:61\",\"kind\":\"claim\",\"text\":\"L: I'm on my way to the power bay now. Let's get that maintenance fixed.\",\"refs\":[\"turn:59\"]}],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[{\"id\":\"J\",\"held\":[30,26,20,8,14,10]}]},\"conversation\":{\"id\":\"conversation:41\",\"nextSpeaker\":\"L\",\"turnsLeft\":11,\"transcript\":[{\"id\":\"turn:42\",\"speaker\":\"J\",\"text\":\"I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?\"},{\"id\":\"turn:51\",\"speaker\":\"L\",\"text\":\"I’m free. Let’s get that maintenance fixed.\"},{\"id\":\"turn:55\",\"speaker\":\"J\",\"text\":\"Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?\"},{\"id\":\"turn:59\",\"speaker\":\"L\",\"text\":\"I'm on my way to the power bay now. Let's get that maintenance fixed.\"},{\"id\":\"turn:63\",\"speaker\":\"J\",\"text\":\"I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.\"}]},\"openOffers\":[{\"id\":\"offer:66\",\"proposer\":\"J\",\"counterpart\":\"L\",\"terms\":{\"kind\":\"work\",\"worker\":\"L\",\"payer\":\"J\",\"cells\":0,\"verb\":\"repair\",\"room\":\"workshops\",\"units\":1,\"dueWatch\":403},\"expiresAtWatch\":402}],\"affordances\":{\"workExamples\":{\"columns\":[\"verb\",\"at\",\"available\",\"needs\",\"produces\"],\"rows\":[[\"grow\",\"garden\",true,{\"water\":2},{\"produce\":16}],[\"cook\",\"kitchen\",true,{\"produce\":4,\"water\":1},{\"meals\":8}],[\"filter_water\",\"well\",true,{},{\"water\":24}],[\"dig\",\"face\",true,{\"water\":1},{\"materials\":4}],[\"repair\",\"workshops\",true,{\"materials\":1,\"cells\":2},{\"maintenance\":8}]]}},\"omitted\":{\"memories\":1,\"contacts\":20}}"
+          },
+          "outputContract": {
+            "name": "society_turn",
+            "version": 4,
+            "schemaHash": "sha256:a1fae5ee91be6d7e9a1cdf5c38b6e4eccf9612ea7ae434ddd98aaf412e9fedf3",
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "$ref": "#/$defs/choice_project"
+                },
+                "reflection": {
+                  "$ref": "#/$defs/choice_reflection"
+                },
+                "message": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "enum": [
+                        "J"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "close": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "to",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "deal": {
+                  "$ref": "#/$defs/choice_deal"
+                },
+                "appraisal": {
+                  "$ref": "#/$defs/choice_appraisal"
+                }
+              },
+              "additionalProperties": false,
+              "minProperties": 1,
+              "$defs": {
+                "room": {
+                  "enum": [
+                    "bridge",
+                    "dock",
+                    "longwalk",
+                    "cabin1",
+                    "cabin2",
+                    "cabin3",
+                    "cabin4",
+                    "cabin5",
+                    "hold",
+                    "infirmary",
+                    "camp",
+                    "garden",
+                    "sheltergate",
+                    "graveyard",
+                    "yard",
+                    "common",
+                    "administration",
+                    "dispatch",
+                    "archive",
+                    "records",
+                    "study",
+                    "sparebedroom",
+                    "parlour",
+                    "projection",
+                    "winter",
+                    "library",
+                    "grandbedroom",
+                    "salon",
+                    "hearth",
+                    "maintenance",
+                    "kitchen",
+                    "servicecounter",
+                    "maindiner",
+                    "sodabar",
+                    "stalls",
+                    "washroom",
+                    "row",
+                    "games",
+                    "dig1",
+                    "dig2",
+                    "dig3",
+                    "dig4",
+                    "dig5",
+                    "dig6",
+                    "workshops",
+                    "well",
+                    "face"
+                  ]
+                },
+                "person": {
+                  "enum": [
+                    "L",
+                    "J"
+                  ]
+                },
+                "nonWellRoom": {
+                  "enum": [
+                    "bridge",
+                    "dock",
+                    "longwalk",
+                    "cabin1",
+                    "cabin2",
+                    "cabin3",
+                    "cabin4",
+                    "cabin5",
+                    "hold",
+                    "infirmary",
+                    "camp",
+                    "garden",
+                    "sheltergate",
+                    "graveyard",
+                    "yard",
+                    "common",
+                    "administration",
+                    "dispatch",
+                    "archive",
+                    "records",
+                    "study",
+                    "sparebedroom",
+                    "parlour",
+                    "projection",
+                    "winter",
+                    "library",
+                    "grandbedroom",
+                    "salon",
+                    "hearth",
+                    "maintenance",
+                    "kitchen",
+                    "servicecounter",
+                    "maindiner",
+                    "sodabar",
+                    "stalls",
+                    "washroom",
+                    "row",
+                    "games",
+                    "dig1",
+                    "dig2",
+                    "dig3",
+                    "dig4",
+                    "dig5",
+                    "dig6",
+                    "workshops",
+                    "face"
+                  ]
+                },
+                "choice_project": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "mode": {
+                          "const": "replace"
+                        },
+                        "goal": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "why": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 180
+                        },
+                        "visibility": {
+                          "enum": [
+                            "public",
+                            "private"
+                          ]
+                        },
+                        "steps": {
+                          "type": "array",
+                          "maxItems": 6,
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "enum": [
+                                      "rest",
+                                      "sleep",
+                                      "drink",
+                                      "accrue_labor_credit",
+                                      "walk_room_and_log_visit",
+                                      "repair"
+                                    ]
+                                  },
+                                  "at": {
+                                    "$ref": "#/$defs/room"
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "filter_water"
+                                  },
+                                  "at": {
+                                    "const": "well"
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "clean_space"
+                                  },
+                                  "at": {
+                                    "$ref": "#/$defs/nonWellRoom"
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "eat"
+                                  },
+                                  "at": {
+                                    "enum": [
+                                      "common"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "wash"
+                                  },
+                                  "at": {
+                                    "enum": [
+                                      "well",
+                                      "infirmary",
+                                      "washroom"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "dig"
+                                  },
+                                  "at": {
+                                    "enum": [
+                                      "face"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "grow"
+                                  },
+                                  "at": {
+                                    "enum": [
+                                      "garden"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "cook"
+                                  },
+                                  "at": {
+                                    "enum": [
+                                      "common",
+                                      "kitchen"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "accrue_two_labor_credits"
+                                  },
+                                  "at": {
+                                    "enum": [
+                                      "workshops"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "at"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "verb": {
+                                    "const": "go"
+                                  },
+                                  "room": {
+                                    "$ref": "#/$defs/room"
+                                  }
+                                },
+                                "required": [
+                                  "verb",
+                                  "room"
+                                ],
+                                "additionalProperties": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "mode",
+                        "goal",
+                        "why",
+                        "visibility",
+                        "steps"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "mode": {
+                          "const": "abandon"
+                        },
+                        "why": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 180
+                        }
+                      },
+                      "required": [
+                        "mode",
+                        "why"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                },
+                "choice_reflection": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "refs": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "items": {
+                        "enum": [
+                          "world:100:1",
+                          "memory:65",
+                          "memory:44",
+                          "memory:57",
+                          "memory:61",
+                          "turn:42",
+                          "turn:51",
+                          "turn:55",
+                          "turn:59",
+                          "turn:63",
+                          "offer:66"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "refs"
+                  ],
+                  "additionalProperties": false
+                },
+                "choice_message": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "enum": [
+                        "J"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "close": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "to",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "choice_deal": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "transfer"
+                        },
+                        "direction": {
+                          "enum": [
+                            "give",
+                            "ask"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0.01,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "direction",
+                        "cells"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "loan"
+                        },
+                        "direction": {
+                          "enum": [
+                            "lend",
+                            "borrow"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0.01,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "dueInDays": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 30
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "direction",
+                        "cells",
+                        "dueInDays"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "enum": [
+                            "accrue_labor_credit",
+                            "walk_room_and_log_visit",
+                            "repair"
+                          ]
+                        },
+                        "room": {
+                          "$ref": "#/$defs/room"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "const": "filter_water"
+                        },
+                        "room": {
+                          "const": "well"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "const": "clean_space"
+                        },
+                        "room": {
+                          "$ref": "#/$defs/nonWellRoom"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "const": "dig"
+                        },
+                        "room": {
+                          "enum": [
+                            "face"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "const": "grow"
+                        },
+                        "room": {
+                          "enum": [
+                            "garden"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "const": "cook"
+                        },
+                        "room": {
+                          "enum": [
+                            "common",
+                            "kitchen"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "const": "work"
+                        },
+                        "role": {
+                          "enum": [
+                            "work",
+                            "hire"
+                          ]
+                        },
+                        "cells": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000,
+                          "multipleOf": 0.01
+                        },
+                        "units": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        },
+                        "slackWatches": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 11
+                        },
+                        "verb": {
+                          "const": "accrue_two_labor_credits"
+                        },
+                        "room": {
+                          "enum": [
+                            "workshops"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "role",
+                        "cells",
+                        "units",
+                        "slackWatches",
+                        "verb",
+                        "room"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "enum": [
+                            "accept",
+                            "reject"
+                          ]
+                        },
+                        "offerId": {
+                          "enum": [
+                            "offer:66"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "offerId"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ],
+                  "description": "Choose one deal. Requires a message to your counterpart; omitted close keeps it open, while close:true cannot accompany a deal. New offers expire after 2 watches; a proposal does not accept any existing offer."
+                },
+                "choice_appraisal": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "axis",
+                    "delta",
+                    "ref",
+                    "why"
+                  ],
+                  "properties": {
+                    "axis": {
+                      "enum": [
+                        "trust",
+                        "affection",
+                        "admiration",
+                        "resentment"
+                      ]
+                    },
+                    "delta": {
+                      "type": "integer",
+                      "enum": [
+                        -1,
+                        1
+                      ]
+                    },
+                    "ref": {
+                      "const": "turn:63"
+                    },
+                    "why": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    }
+                  },
+                  "description": "Optional private interpretation of the latest received message. Change only one of your own feelings toward its speaker by one point; omission changes none. Speech is not proof or consent."
+                }
+              },
+              "required": [
+                "message"
+              ],
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "project": {
+                      "$ref": "#/$defs/choice_project"
+                    },
+                    "reflection": {
+                      "$ref": "#/$defs/choice_reflection"
+                    },
+                    "message": {
+                      "$ref": "#/$defs/choice_message"
+                    },
+                    "appraisal": {
+                      "$ref": "#/$defs/choice_appraisal"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "minProperties": 1,
+                  "required": [
+                    "message"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "project": {
+                      "$ref": "#/$defs/choice_project"
+                    },
+                    "reflection": {
+                      "$ref": "#/$defs/choice_reflection"
+                    },
+                    "message": {
+                      "type": "object",
+                      "properties": {
+                        "to": {
+                          "enum": [
+                            "J"
+                          ]
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 300
+                        },
+                        "close": {
+                          "const": false
+                        }
+                      },
+                      "required": [
+                        "to",
+                        "text"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "deal": {
+                      "$ref": "#/$defs/choice_deal"
+                    },
+                    "appraisal": {
+                      "$ref": "#/$defs/choice_appraisal"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "minProperties": 1,
+                  "required": [
+                    "message",
+                    "deal"
+                  ]
+                }
+              ]
+            }
+          },
+          "maxOutputTokens": 1024
+        },
+        "payload": {
+          "model": "Qwen3.6-35B-A3B-4bit",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You decide only for the resident named in self. This is not a story to continue. The user JSON is your available information.\n\nChoose a small purpose from your own wants and situation. If ownProject is null, create project with a concrete goal and next step. A social purpose can have steps:[] while awaiting a reply; do not add unrelated physical work. Keep a useful project unless new evidence gives a reason to revise it. A message alone does not persist a project. Writing a plan never completes its goal.\n\nUse supplied state and personal knowledge. A transcript or memory marked claim establishes only what someone said; interpretation is opinion. Missing details are unknown. A person's duty does not tell you their current location. Do not invent measurements, faults, places, objects, actions already done, promises or consent. You may propose something new in the future. Ask about an uncertainty instead of asserting an imagined result.\n\nUse self.voice for tone and rhythm, not phrases to copy or biography to announce. Speak in English as yourself to the actual other person; never address them with your own name. Your first available opportunity includes a message, without having to disclose a private purpose. If conversation is null, nobody has asked you anything: initiate a relevant contact. Otherwise answer the actual last speaker on your turn, without repeating their sentence or your earlier reply. Use one or two short, complete sentences. Ask one relevant question or propose one concrete next step.\n\nReturn only the requested JSON. Omit unchanged or unnecessary fields. Reflection is optional: add it only for a useful interpretation supported by supplied reference IDs. An ID is not evidence for an invented observation.\n\nAppraisal is optional. If the latest message changes how you regard its speaker, choose one offered axis, a small change and the actual received-turn reference, with your reason. It changes only your own view, never their feelings. Omit it when nothing changed. A request, friendly phrase or promise is not proof of compliance or consent.\n\nA step produces only its defined engine effects. If no offered capability achieves your purpose, use steps:[] and pursue a concrete discussion in a message. No physical capability writes a manuscript or medical protocol, performs a consultation or invents knowledge. accrue_labor_credit and accrue_two_labor_credits do only that; labour credits are later allocation weight, not spendable cells. walk_room_and_log_visit records a visit, not sensor readings. log_stock_register records store totals and the working-room register, only for A. filter_water produces water at Well; clean_space elsewhere does not. The recipe table gives actual resource costs and yields; repair can consume cells. Use only offered capabilities and places. Speech works across rooms: do not add travel or labour to stand in for a conversation. One action per watch: at means travel and action together; go.room is travel only; repay.target is a person. Historic action records may use old names and are not additional available choices.\n\nDeal is optional. To propose a concrete transfer, loan or work commitment that serves your purpose, use deal, including first contact. Words alone do not schedule work or move cells. Ordinary discussion needs no deal. Include a message to the other participant. Omit close to keep the exchange open; close:true cannot accompany a deal. Acceptance requires a separate accept with the actual offerId. Choose one deal: transfer give/ask, loan lend/borrow, work work/hire, or accept/reject an actual incoming offerId. For work, role:work means you work and the other person pays; role:hire means you pay and the other person works. Cells is the total payment for all units; choose the offered verb and room. The engine determines both parties and absolute dates; never output raw offer/respond fields. New offers expire after two watches. Acceptance keeps the exact existing terms. If an incoming offer already matches the terms you want, accept its exact offerId. A new matching proposal replaces the old offer; it does not accept it. Counterpropose only when you want different terms. Respect spending bounds; cells use at most two decimals and work may be voluntary (0 cells). A proposal is not consent, execution or payment."
+            },
+            {
+              "role": "user",
+              "content": "You are Lior Ben-Ari (L). Speak and choose in the first person as Lior Ben-Ari.\nAvailable recipients: J=Juno Petrakis\nCurrent information:\n{\"self\":{\"id\":\"L\",\"name\":\"Lior Ben-Ari\",\"room\":\"hold\",\"was\":\"Sold things; never the same thing twice\",\"duty\":\"Salvage\",\"voice\":\"Fast, flattering, changes the subject with a compliment. Tells the same three stories. Goes quiet and precise when he is actually working.\",\"wants\":\"To be the one who is owed for once, in a way he would deny.\",\"fears\":\"Being seen clearly by somebody whose opinion he cannot deflect.\",\"condition\":{\"rested\":67,\"fed\":74,\"well\":78,\"safe\":57,\"accompanied\":63},\"cells\":8,\"maxSpendableCells\":8},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"people\":[\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\"],\"contacts\":[{\"id\":\"J\",\"name\":\"Juno Petrakis\",\"duty\":\"The Workshops power bay\"},{\"id\":\"P\",\"name\":\"Pilar Ocaña\",\"duty\":\"The kitchen\"},{\"id\":\"Q\",\"name\":\"Quim Bassols\",\"duty\":\"The workshops\"},{\"id\":\"T\",\"name\":\"Tomás Iriarte\",\"duty\":\"Reckoning\"}]},\"ownProject\":{\"goal\":\"Help Juno repair the maintenance system.\",\"why\":\"Juno has the materials and cells, and I have the duty to assist.\",\"status\":\"active\",\"visibility\":\"private\",\"steps\":[{\"id\":\"step:50\",\"intent\":{\"actor\":\"L\",\"verb\":\"repair\"},\"at\":\"workshops\",\"status\":\"pending\"}]},\"memories\":[{\"id\":\"memory:65\",\"kind\":\"claim\",\"text\":\"J: I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.\",\"refs\":[\"turn:63\"]},{\"id\":\"memory:44\",\"kind\":\"claim\",\"text\":\"J: I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?\",\"refs\":[\"turn:42\"]},{\"id\":\"memory:57\",\"kind\":\"claim\",\"text\":\"J: Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?\",\"refs\":[\"turn:55\"]},{\"id\":\"memory:61\",\"kind\":\"claim\",\"text\":\"L: I'm on my way to the power bay now. Let's get that maintenance fixed.\",\"refs\":[\"turn:59\"]}],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[{\"id\":\"J\",\"held\":[30,26,20,8,14,10]}]},\"conversation\":{\"id\":\"conversation:41\",\"nextSpeaker\":\"L\",\"turnsLeft\":11,\"transcript\":[{\"id\":\"turn:42\",\"speaker\":\"J\",\"text\":\"I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?\"},{\"id\":\"turn:51\",\"speaker\":\"L\",\"text\":\"I’m free. Let’s get that maintenance fixed.\"},{\"id\":\"turn:55\",\"speaker\":\"J\",\"text\":\"Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?\"},{\"id\":\"turn:59\",\"speaker\":\"L\",\"text\":\"I'm on my way to the power bay now. Let's get that maintenance fixed.\"},{\"id\":\"turn:63\",\"speaker\":\"J\",\"text\":\"I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.\"}]},\"openOffers\":[{\"id\":\"offer:66\",\"proposer\":\"J\",\"counterpart\":\"L\",\"terms\":{\"kind\":\"work\",\"worker\":\"L\",\"payer\":\"J\",\"cells\":0,\"verb\":\"repair\",\"room\":\"workshops\",\"units\":1,\"dueWatch\":403},\"expiresAtWatch\":402}],\"affordances\":{\"workExamples\":{\"columns\":[\"verb\",\"at\",\"available\",\"needs\",\"produces\"],\"rows\":[[\"grow\",\"garden\",true,{\"water\":2},{\"produce\":16}],[\"cook\",\"kitchen\",true,{\"produce\":4,\"water\":1},{\"meals\":8}],[\"filter_water\",\"well\",true,{},{\"water\":24}],[\"dig\",\"face\",true,{\"water\":1},{\"materials\":4}],[\"repair\",\"workshops\",true,{\"materials\":1,\"cells\":2},{\"maintenance\":8}]]}},\"omitted\":{\"memories\":1,\"contacts\":20}}"
+            }
+          ],
+          "temperature": 0.3,
+          "seed": 3757734122,
+          "stream": false,
+          "max_tokens": 1024,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          },
+          "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+              "name": "society_turn",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "project": {
+                    "$ref": "#/$defs/choice_project"
+                  },
+                  "reflection": {
+                    "$ref": "#/$defs/choice_reflection"
+                  },
+                  "message": {
+                    "type": "object",
+                    "properties": {
+                      "to": {
+                        "enum": [
+                          "J"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 300
+                      },
+                      "close": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "to",
+                      "text"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "deal": {
+                    "$ref": "#/$defs/choice_deal"
+                  },
+                  "appraisal": {
+                    "$ref": "#/$defs/choice_appraisal"
+                  }
+                },
+                "additionalProperties": false,
+                "minProperties": 1,
+                "$defs": {
+                  "room": {
+                    "enum": [
+                      "bridge",
+                      "dock",
+                      "longwalk",
+                      "cabin1",
+                      "cabin2",
+                      "cabin3",
+                      "cabin4",
+                      "cabin5",
+                      "hold",
+                      "infirmary",
+                      "camp",
+                      "garden",
+                      "sheltergate",
+                      "graveyard",
+                      "yard",
+                      "common",
+                      "administration",
+                      "dispatch",
+                      "archive",
+                      "records",
+                      "study",
+                      "sparebedroom",
+                      "parlour",
+                      "projection",
+                      "winter",
+                      "library",
+                      "grandbedroom",
+                      "salon",
+                      "hearth",
+                      "maintenance",
+                      "kitchen",
+                      "servicecounter",
+                      "maindiner",
+                      "sodabar",
+                      "stalls",
+                      "washroom",
+                      "row",
+                      "games",
+                      "dig1",
+                      "dig2",
+                      "dig3",
+                      "dig4",
+                      "dig5",
+                      "dig6",
+                      "workshops",
+                      "well",
+                      "face"
+                    ]
+                  },
+                  "person": {
+                    "enum": [
+                      "L",
+                      "J"
+                    ]
+                  },
+                  "nonWellRoom": {
+                    "enum": [
+                      "bridge",
+                      "dock",
+                      "longwalk",
+                      "cabin1",
+                      "cabin2",
+                      "cabin3",
+                      "cabin4",
+                      "cabin5",
+                      "hold",
+                      "infirmary",
+                      "camp",
+                      "garden",
+                      "sheltergate",
+                      "graveyard",
+                      "yard",
+                      "common",
+                      "administration",
+                      "dispatch",
+                      "archive",
+                      "records",
+                      "study",
+                      "sparebedroom",
+                      "parlour",
+                      "projection",
+                      "winter",
+                      "library",
+                      "grandbedroom",
+                      "salon",
+                      "hearth",
+                      "maintenance",
+                      "kitchen",
+                      "servicecounter",
+                      "maindiner",
+                      "sodabar",
+                      "stalls",
+                      "washroom",
+                      "row",
+                      "games",
+                      "dig1",
+                      "dig2",
+                      "dig3",
+                      "dig4",
+                      "dig5",
+                      "dig6",
+                      "workshops",
+                      "face"
+                    ]
+                  },
+                  "choice_project": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "mode": {
+                            "const": "replace"
+                          },
+                          "goal": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 160
+                          },
+                          "why": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 180
+                          },
+                          "visibility": {
+                            "enum": [
+                              "public",
+                              "private"
+                            ]
+                          },
+                          "steps": {
+                            "type": "array",
+                            "maxItems": 6,
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "enum": [
+                                        "rest",
+                                        "sleep",
+                                        "drink",
+                                        "accrue_labor_credit",
+                                        "walk_room_and_log_visit",
+                                        "repair"
+                                      ]
+                                    },
+                                    "at": {
+                                      "$ref": "#/$defs/room"
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "filter_water"
+                                    },
+                                    "at": {
+                                      "const": "well"
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "clean_space"
+                                    },
+                                    "at": {
+                                      "$ref": "#/$defs/nonWellRoom"
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "eat"
+                                    },
+                                    "at": {
+                                      "enum": [
+                                        "common"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "wash"
+                                    },
+                                    "at": {
+                                      "enum": [
+                                        "well",
+                                        "infirmary",
+                                        "washroom"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "dig"
+                                    },
+                                    "at": {
+                                      "enum": [
+                                        "face"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "grow"
+                                    },
+                                    "at": {
+                                      "enum": [
+                                        "garden"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "cook"
+                                    },
+                                    "at": {
+                                      "enum": [
+                                        "common",
+                                        "kitchen"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "accrue_two_labor_credits"
+                                    },
+                                    "at": {
+                                      "enum": [
+                                        "workshops"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "at"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "verb": {
+                                      "const": "go"
+                                    },
+                                    "room": {
+                                      "$ref": "#/$defs/room"
+                                    }
+                                  },
+                                  "required": [
+                                    "verb",
+                                    "room"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "mode",
+                          "goal",
+                          "why",
+                          "visibility",
+                          "steps"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "mode": {
+                            "const": "abandon"
+                          },
+                          "why": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 180
+                          }
+                        },
+                        "required": [
+                          "mode",
+                          "why"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "choice_reflection": {
+                    "type": "object",
+                    "properties": {
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 240
+                      },
+                      "refs": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 6,
+                        "items": {
+                          "enum": [
+                            "world:100:1",
+                            "memory:65",
+                            "memory:44",
+                            "memory:57",
+                            "memory:61",
+                            "turn:42",
+                            "turn:51",
+                            "turn:55",
+                            "turn:59",
+                            "turn:63",
+                            "offer:66"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "text",
+                      "refs"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "choice_message": {
+                    "type": "object",
+                    "properties": {
+                      "to": {
+                        "enum": [
+                          "J"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 300
+                      },
+                      "close": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "to",
+                      "text"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "choice_deal": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "transfer"
+                          },
+                          "direction": {
+                            "enum": [
+                              "give",
+                              "ask"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0.01,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "direction",
+                          "cells"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "loan"
+                          },
+                          "direction": {
+                            "enum": [
+                              "lend",
+                              "borrow"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0.01,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "dueInDays": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 30
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "direction",
+                          "cells",
+                          "dueInDays"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "enum": [
+                              "accrue_labor_credit",
+                              "walk_room_and_log_visit",
+                              "repair"
+                            ]
+                          },
+                          "room": {
+                            "$ref": "#/$defs/room"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "const": "filter_water"
+                          },
+                          "room": {
+                            "const": "well"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "const": "clean_space"
+                          },
+                          "room": {
+                            "$ref": "#/$defs/nonWellRoom"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "const": "dig"
+                          },
+                          "room": {
+                            "enum": [
+                              "face"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "const": "grow"
+                          },
+                          "room": {
+                            "enum": [
+                              "garden"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "const": "cook"
+                          },
+                          "room": {
+                            "enum": [
+                              "common",
+                              "kitchen"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "const": "work"
+                          },
+                          "role": {
+                            "enum": [
+                              "work",
+                              "hire"
+                            ]
+                          },
+                          "cells": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000,
+                            "multipleOf": 0.01
+                          },
+                          "units": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 4
+                          },
+                          "slackWatches": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 11
+                          },
+                          "verb": {
+                            "const": "accrue_two_labor_credits"
+                          },
+                          "room": {
+                            "enum": [
+                              "workshops"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "role",
+                          "cells",
+                          "units",
+                          "slackWatches",
+                          "verb",
+                          "room"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "enum": [
+                              "accept",
+                              "reject"
+                            ]
+                          },
+                          "offerId": {
+                            "enum": [
+                              "offer:66"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "offerId"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ],
+                    "description": "Choose one deal. Requires a message to your counterpart; omitted close keeps it open, while close:true cannot accompany a deal. New offers expire after 2 watches; a proposal does not accept any existing offer."
+                  },
+                  "choice_appraisal": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "axis",
+                      "delta",
+                      "ref",
+                      "why"
+                    ],
+                    "properties": {
+                      "axis": {
+                        "enum": [
+                          "trust",
+                          "affection",
+                          "admiration",
+                          "resentment"
+                        ]
+                      },
+                      "delta": {
+                        "type": "integer",
+                        "enum": [
+                          -1,
+                          1
+                        ]
+                      },
+                      "ref": {
+                        "const": "turn:63"
+                      },
+                      "why": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 180
+                      }
+                    },
+                    "description": "Optional private interpretation of the latest received message. Change only one of your own feelings toward its speaker by one point; omission changes none. Speech is not proof or consent."
+                  }
+                },
+                "required": [
+                  "message"
+                ],
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "project": {
+                        "$ref": "#/$defs/choice_project"
+                      },
+                      "reflection": {
+                        "$ref": "#/$defs/choice_reflection"
+                      },
+                      "message": {
+                        "$ref": "#/$defs/choice_message"
+                      },
+                      "appraisal": {
+                        "$ref": "#/$defs/choice_appraisal"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "minProperties": 1,
+                    "required": [
+                      "message"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "project": {
+                        "$ref": "#/$defs/choice_project"
+                      },
+                      "reflection": {
+                        "$ref": "#/$defs/choice_reflection"
+                      },
+                      "message": {
+                        "type": "object",
+                        "properties": {
+                          "to": {
+                            "enum": [
+                              "J"
+                            ]
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 300
+                          },
+                          "close": {
+                            "const": false
+                          }
+                        },
+                        "required": [
+                          "to",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "deal": {
+                        "$ref": "#/$defs/choice_deal"
+                      },
+                      "appraisal": {
+                        "$ref": "#/$defs/choice_appraisal"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "minProperties": 1,
+                    "required": [
+                      "message",
+                      "deal"
+                    ]
+                  }
+                ]
+              },
+              "strict": true
+            }
+          }
+        },
+        "reservedCalls": 1,
+        "outputTokenLimit": 1024,
+        "beforeHash": "4dbd76b98bee426bc46795fa1ef4c7466a5fc21b5e8f8bad7f0a9e8ed39d68f4",
+        "promptBytes": 18255
+      },
+      "state": "completed",
+      "reservedCalls": 1,
+      "startedAt": "2026-09-08T15:30:49.952Z",
+      "processSamples": [
+        {
+          "at": "2026-09-08T15:30:49.973Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 145744,
+          "cpuPercent": 0,
+          "cpuTime": "0:01.20",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:50.977Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 9763520,
+          "cpuPercent": 135.5,
+          "cpuTime": "0:02.55",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:52.001Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 13341856,
+          "cpuPercent": 193.1,
+          "cpuTime": "0:04.45",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:52.980Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 9796304,
+          "cpuPercent": 96.8,
+          "cpuTime": "0:05.53",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:53.982Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 5390096,
+          "cpuPercent": 86.6,
+          "cpuTime": "0:06.49",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:54.986Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3179056,
+          "cpuPercent": 87.9,
+          "cpuTime": "0:07.36",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:55.985Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3248976,
+          "cpuPercent": 96.1,
+          "cpuTime": "0:08.32",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:56.988Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3347024,
+          "cpuPercent": 698.9,
+          "cpuTime": "0:13.18",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:57.990Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3403040,
+          "cpuPercent": 790,
+          "cpuTime": "0:21.16",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:30:58.992Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3487392,
+          "cpuPercent": 0,
+          "cpuTime": "0:29.09",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:31:00.003Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3497392,
+          "cpuPercent": 55.8,
+          "cpuTime": "0:29.90",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:31:00.994Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3392336,
+          "cpuPercent": 73.9,
+          "cpuTime": "0:30.40",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:31:01.997Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3397280,
+          "cpuPercent": 96.6,
+          "cpuTime": "0:31.37",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:31:02.999Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3397536,
+          "cpuPercent": 76.4,
+          "cpuTime": "0:32.16",
+          "command": "omlx-server"
+        },
+        {
+          "at": "2026-09-08T15:31:03.462Z",
+          "pid": 33578,
+          "parentPid": 14370,
+          "rssKiB": 3384864,
+          "cpuPercent": 73.4,
+          "cpuTime": "0:32.49",
+          "command": "omlx-server"
+        }
+      ],
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/json",
+        "server": "uvicorn"
+      },
+      "rawResponse": " {\"id\":\"chatcmpl-584b8664\",\"object\":\"chat.completion\",\"created\":1788881463,\"model\":\"Qwen3.6-35B-A3B-4bit\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"message\\\": {\\\"to\\\": \\\"J\\\", \\\"text\\\": \\\"I'm here, ready to work. Let's get this done.\\\"}, \\\"deal\\\": {\\\"kind\\\": \\\"work\\\", \\\"role\\\": \\\"work\\\", \\\"cells\\\": 0, \\\"units\\\": 1, \\\"slackWatches\\\": 0, \\\"verb\\\": \\\"repair\\\", \\\"room\\\": \\\"workshops\\\"}, \\\"appraisal\\\": {\\\"axis\\\": \\\"trust\\\", \\\"delta\\\": 1, \\\"ref\\\": \\\"turn:63\\\", \\\"why\\\": \\\"Juno is eager and prepared, which aligns with my desire to be the one who is owed for once.\\\"}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1998,\"completion_tokens\":176,\"total_tokens\":2174,\"input_tokens\":1998,\"output_tokens\":176,\"prompt_tokens_details\":{\"cached_tokens\":0},\"model_load_duration\":6.03,\"total_time\":4.44}}",
+      "response": {
+        "id": "chatcmpl-584b8664",
+        "object": "chat.completion",
+        "created": 1788881463,
+        "model": "Qwen3.6-35B-A3B-4bit",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"message\": {\"to\": \"J\", \"text\": \"I'm here, ready to work. Let's get this done.\"}, \"deal\": {\"kind\": \"work\", \"role\": \"work\", \"cells\": 0, \"units\": 1, \"slackWatches\": 0, \"verb\": \"repair\", \"room\": \"workshops\"}, \"appraisal\": {\"axis\": \"trust\", \"delta\": 1, \"ref\": \"turn:63\", \"why\": \"Juno is eager and prepared, which aligns with my desire to be the one who is owed for once.\"}}"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1998,
+          "completion_tokens": 176,
+          "total_tokens": 2174,
+          "input_tokens": 1998,
+          "output_tokens": 176,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "model_load_duration": 6.03,
+          "total_time": 4.44
+        }
+      },
+      "receipt": {
+        "output": {
+          "message": {
+            "to": "J",
+            "text": "I'm here, ready to work. Let's get this done."
+          },
+          "deal": {
+            "kind": "work",
+            "role": "work",
+            "cells": 0,
+            "units": 1,
+            "slackWatches": 0,
+            "verb": "repair",
+            "room": "workshops"
+          },
+          "appraisal": {
+            "axis": "trust",
+            "delta": 1,
+            "ref": "turn:63",
+            "why": "Juno is eager and prepared, which aligns with my desire to be the one who is owed for once."
+          }
+        },
+        "receiptCode": null,
+        "usageComplete": true,
+        "exceedsReservation": false,
+        "warning": null,
+        "schemaFallbackWarning": false,
+        "reasoningContent": null
+      },
+      "latencyMs": 13489,
+      "finishedAt": "2026-09-08T15:31:03.462Z",
+      "result": {
+        "application": {
+          "ok": true,
+          "code": "applied",
+          "afterHash": "31194e4160f17e63bdd28592e756224f193cee1dc579a615d48bf8d364acbcee"
+        },
+        "watch": {
+          "plans": {
+            "A": {
+              "stepId": "step:1",
+              "intent": {
+                "actor": "A",
+                "verb": "go",
+                "room": "records"
+              },
+              "at": null
+            },
+            "I": {
+              "stepId": "step:35",
+              "intent": {
+                "actor": "I",
+                "verb": "repair"
+              },
+              "at": "workshops"
+            },
+            "L": {
+              "stepId": "step:50",
+              "intent": {
+                "actor": "L",
+                "verb": "repair"
+              },
+              "at": "workshops"
+            }
+          },
+          "observations": [
+            {
+              "actor": "H",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "H"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "common"
+            },
+            {
+              "actor": "C",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "inspect",
+                "actor": "C"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "infirmary",
+                  "who": [
+                    "C"
+                  ],
+                  "text": "The Infirmary was walked through and looked over.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "infirmary"
+            },
+            {
+              "actor": "X",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "dig",
+                "actor": "X"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "face",
+                  "who": [
+                    "X"
+                  ],
+                  "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "face"
+            },
+            {
+              "actor": "S",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "S"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "common"
+            },
+            {
+              "actor": "R",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "R"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "hold"
+            },
+            {
+              "actor": "I",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "I",
+                "verb": "repair"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "workshops",
+                  "who": [
+                    "I"
+                  ],
+                  "text": "Iris repaired The Workshops; 1 material and 2 charge cells used.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "workshops",
+              "stepId": "step:35"
+            },
+            {
+              "actor": "D",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "D"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "dock"
+            },
+            {
+              "actor": "W",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "charge",
+                "actor": "W"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "workshops"
+            },
+            {
+              "actor": "F",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "dig",
+                "actor": "F"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "face",
+                  "who": [
+                    "F"
+                  ],
+                  "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "face"
+            },
+            {
+              "actor": "U",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "inspect",
+                "actor": "U"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "infirmary",
+                  "who": [
+                    "U"
+                  ],
+                  "text": "The Infirmary was walked through and looked over.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "infirmary"
+            },
+            {
+              "actor": "T",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "T"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "common"
+            },
+            {
+              "actor": "G",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "G"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "longwalk"
+            },
+            {
+              "actor": "N",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "N",
+                "verb": "observe"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "infirmary"
+            },
+            {
+              "actor": "B",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "B"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "hold"
+            },
+            {
+              "actor": "A",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "A",
+                "verb": "go",
+                "room": "records"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "records",
+              "stepId": "step:1"
+            },
+            {
+              "actor": "V",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "grow",
+                "actor": "V"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "garden",
+                  "who": [
+                    "V"
+                  ],
+                  "text": "Vero harvested 16 produce; 2 water used.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "garden"
+            },
+            {
+              "actor": "O",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "O",
+                "verb": "observe"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "well"
+            },
+            {
+              "actor": "Q",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "charge",
+                "actor": "Q"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "workshops"
+            },
+            {
+              "actor": "J",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "J",
+                "verb": "observe"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "workshops"
+            },
+            {
+              "actor": "Y",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "dig",
+                "actor": "Y"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "face",
+                  "who": [
+                    "Y"
+                  ],
+                  "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "face"
+            },
+            {
+              "actor": "L",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "L",
+                "verb": "repair"
+              },
+              "outcome": {
+                "ok": true,
+                "happening": {
+                  "room": "workshops",
+                  "who": [
+                    "L"
+                  ],
+                  "text": "Lior repaired The Workshops; 1 material and 2 charge cells used.",
+                  "kind": "work"
+                }
+              },
+              "actualRoom": "workshops",
+              "stepId": "step:50"
+            },
+            {
+              "actor": "P",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "P"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "common"
+            },
+            {
+              "actor": "K",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "K"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "dispatch"
+            },
+            {
+              "actor": "M",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "verb": "work",
+                "actor": "M"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "common"
+            },
+            {
+              "actor": "E",
+              "day": 100,
+              "watch": 1,
+              "intent": {
+                "actor": "E",
+                "verb": "observe"
+              },
+              "outcome": {
+                "ok": true
+              },
+              "actualRoom": "common"
+            }
+          ],
+          "beforeAgreements": [],
+          "afterAgreements": [],
+          "beforeAccounts": {
+            "treasury": 0,
+            "maintenance": 90,
+            "cells:A": 15,
+            "cells:B": 8,
+            "cells:C": 8,
+            "cells:D": 15,
+            "cells:E": 10,
+            "cells:F": 13,
+            "cells:G": 17,
+            "cells:H": 8,
+            "cells:I": 11,
+            "cells:J": 15,
+            "cells:K": 12,
+            "cells:L": 8,
+            "cells:M": 17,
+            "cells:N": 17,
+            "cells:O": 15,
+            "cells:P": 16,
+            "cells:Q": 10,
+            "cells:R": 17,
+            "cells:S": 17,
+            "cells:T": 10,
+            "cells:U": 13,
+            "cells:V": 8,
+            "cells:W": 13,
+            "cells:X": 12,
+            "cells:Y": 10,
+            "credits:A": 0,
+            "credits:B": 0,
+            "credits:C": 0,
+            "credits:D": 0,
+            "credits:E": 0,
+            "credits:F": 0,
+            "credits:G": 0,
+            "credits:H": 0,
+            "credits:I": 0,
+            "credits:J": 0,
+            "credits:K": 0,
+            "credits:L": 0,
+            "credits:M": 0,
+            "credits:N": 0,
+            "credits:O": 0,
+            "credits:P": 0,
+            "credits:Q": 0,
+            "credits:R": 0,
+            "credits:S": 0,
+            "credits:T": 0,
+            "credits:U": 0,
+            "credits:V": 0,
+            "credits:W": 0,
+            "credits:X": 0,
+            "credits:Y": 0,
+            "stock:produce": 60,
+            "stock:meals": 100,
+            "stock:water": 250,
+            "stock:materials": 16,
+            "ledger:initialCells": 315,
+            "ledger:minted": 0,
+            "ledger:burned": 0,
+            "ledger:leaked": 0
+          },
+          "afterAccounts": {
+            "treasury": 0,
+            "maintenance": 100,
+            "cells:A": 15,
+            "cells:B": 8,
+            "cells:C": 8,
+            "cells:D": 15,
+            "cells:E": 10,
+            "cells:F": 13,
+            "cells:G": 17,
+            "cells:H": 8,
+            "cells:I": 9,
+            "cells:J": 15,
+            "cells:K": 12,
+            "cells:L": 6,
+            "cells:M": 17,
+            "cells:N": 17,
+            "cells:O": 15,
+            "cells:P": 16,
+            "cells:Q": 10,
+            "cells:R": 17,
+            "cells:S": 17,
+            "cells:T": 10,
+            "cells:U": 13,
+            "cells:V": 8,
+            "cells:W": 13,
+            "cells:X": 12,
+            "cells:Y": 10,
+            "credits:A": 0,
+            "credits:B": 1,
+            "credits:C": 1,
+            "credits:D": 1,
+            "credits:E": 0,
+            "credits:F": 2,
+            "credits:G": 1,
+            "credits:H": 1,
+            "credits:I": 2,
+            "credits:J": 0,
+            "credits:K": 1,
+            "credits:L": 2,
+            "credits:M": 1,
+            "credits:N": 0,
+            "credits:O": 0,
+            "credits:P": 1,
+            "credits:Q": 2,
+            "credits:R": 1,
+            "credits:S": 1,
+            "credits:T": 1,
+            "credits:U": 1,
+            "credits:V": 2,
+            "credits:W": 2,
+            "credits:X": 2,
+            "credits:Y": 2,
+            "stock:produce": 76,
+            "stock:meals": 100,
+            "stock:water": 245,
+            "stock:materials": 26,
+            "ledger:initialCells": 315,
+            "ledger:minted": 0,
+            "ledger:burned": 4,
+            "ledger:leaked": 0
+          }
+        },
+        "finalHash": "abc17686a1fcc9affb144abee6b1dc1953160990cdb04f04a33f29d4d16d31ba"
+      }
+    }
+  ]
+}

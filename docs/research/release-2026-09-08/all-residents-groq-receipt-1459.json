@@ -1,0 +1,88 @@
+{
+  "format": "villa-live-groq-receipt-v1",
+  "scope": "Read-only persisted receipt evidence; no HTTP or inference. Private output text is deliberately excluded.",
+  "rawBackupSha256": "de798f994de96ddc4a9a7a38473f01a45cd49468720602dde8f08b40653da3f5",
+  "capturedAtMs": 1788879541848,
+  "worldRevision": 102,
+  "job": {
+    "id": "habitat-canonical:mind:W:0:32:g:3",
+    "actor": "W",
+    "sequence": 32,
+    "protocolVersion": 3,
+    "status": "applied",
+    "jobAttemptOrdinal": 1,
+    "resolvedAtMs": 1788878746457,
+    "outputJsonSha256": "1f86e461431e6f72ab395dc4d8a0e43f601e494d82907f0914de124e318f92e1",
+    "originalSchemaAcceptsOutput": true,
+    "originalSchemaHashMatchesContent": true,
+    "inputIsCompacted": true,
+    "exactInputReconstructed": false,
+    "messageEmitted": false,
+    "proposalEmitted": false,
+    "projectStepCount": 0,
+    "hasPublicCommit": true
+  },
+  "attempts": [
+    {
+      "attemptId": "habitat-canonical:mind:W:0:32:g:3:workers-ai:1",
+      "provider": "workers-ai",
+      "model": "@cf/openai/gpt-oss-120b",
+      "ok": false,
+      "kind": "invalid-response",
+      "detailCode": "output_truncated",
+      "latencyMs": 13764,
+      "recordedAtMs": 1788878746457,
+      "reservation": {
+        "state": "settled",
+        "createdAtMs": 1788878731780,
+        "dispatchedAtMs": 1788878731780,
+        "settledAtMs": 1788878745544,
+        "maximum": {
+          "inputTokens": 10218,
+          "outputTokens": 1024,
+          "neurons": 395
+        },
+        "usageConfirmed": true,
+        "actual": {
+          "requests": 1,
+          "inputTokens": 1524,
+          "outputTokens": 1024,
+          "neurons": 119
+        }
+      }
+    },
+    {
+      "attemptId": "habitat-canonical:mind:W:0:32:g:3:groq:1",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "ok": true,
+      "kind": null,
+      "detailCode": null,
+      "latencyMs": 913,
+      "recordedAtMs": 1788878746457,
+      "reservation": {
+        "state": "settled",
+        "createdAtMs": 1788878745544,
+        "dispatchedAtMs": 1788878745544,
+        "settledAtMs": 1788878746457,
+        "maximum": {
+          "inputTokens": 2464,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "usageConfirmed": true,
+        "actual": {
+          "requests": 1,
+          "inputTokens": 2425,
+          "outputTokens": 129,
+          "neurons": 0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "This proves one persisted protocol-3 fallback, not protocol-4 compatibility or sustained quality.",
+    "The truncated primary raw HTTP text is not retained by this recovery; its rejection code and confirmed usage are retained.",
+    "No private project purpose or raw model response is published."
+  ]
+}

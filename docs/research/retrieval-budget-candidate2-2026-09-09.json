@@ -1,0 +1,172 @@
+{
+  "format": "villa-retrieval-budget-v1",
+  "label": "candidate2",
+  "capturedAt": "2026-09-08T23:03:40.088Z",
+  "sourceRevision": 235,
+  "backupSha256": "ea98c4238c57e1df3c84616ef228e89a00315973907ee1da36c3b1b4b9bea36a",
+  "summaries": [
+    {
+      "version": 6,
+      "count": 25,
+      "range": [
+        5202,
+        7553
+      ],
+      "sum": 157130,
+      "over8000": [],
+      "maxPayloadBytes": 24333,
+      "cfReservedNeurons": 18597
+    },
+    {
+      "version": 7,
+      "count": 25,
+      "range": [
+        5501,
+        7924
+      ],
+      "sum": 165104,
+      "over8000": [],
+      "maxPayloadBytes": 26072,
+      "cfReservedNeurons": 19842
+    }
+  ],
+  "deltas": [
+    {
+      "actor": "A",
+      "extraTokens": 299
+    },
+    {
+      "actor": "B",
+      "extraTokens": 369
+    },
+    {
+      "actor": "C",
+      "extraTokens": 370
+    },
+    {
+      "actor": "D",
+      "extraTokens": 299
+    },
+    {
+      "actor": "E",
+      "extraTokens": 299
+    },
+    {
+      "actor": "F",
+      "extraTokens": 299
+    },
+    {
+      "actor": "G",
+      "extraTokens": 299
+    },
+    {
+      "actor": "H",
+      "extraTokens": 370
+    },
+    {
+      "actor": "I",
+      "extraTokens": 299
+    },
+    {
+      "actor": "J",
+      "extraTokens": 299
+    },
+    {
+      "actor": "K",
+      "extraTokens": 299
+    },
+    {
+      "actor": "L",
+      "extraTokens": 299
+    },
+    {
+      "actor": "M",
+      "extraTokens": 371
+    },
+    {
+      "actor": "N",
+      "extraTokens": 299
+    },
+    {
+      "actor": "O",
+      "extraTokens": 299
+    },
+    {
+      "actor": "P",
+      "extraTokens": 299
+    },
+    {
+      "actor": "Q",
+      "extraTokens": 299
+    },
+    {
+      "actor": "R",
+      "extraTokens": 299
+    },
+    {
+      "actor": "S",
+      "extraTokens": 368
+    },
+    {
+      "actor": "T",
+      "extraTokens": 299
+    },
+    {
+      "actor": "U",
+      "extraTokens": 375
+    },
+    {
+      "actor": "V",
+      "extraTokens": 299
+    },
+    {
+      "actor": "W",
+      "extraTokens": 369
+    },
+    {
+      "actor": "X",
+      "extraTokens": 299
+    },
+    {
+      "actor": "Y",
+      "extraTokens": 299
+    }
+  ],
+  "networkCalls": 0,
+  "sourceStateUnchanged": true,
+  "sources": [
+    {
+      "path": "src/lib/habitat/society/records.ts",
+      "sha256": "b1bccc05a3c932399d0fe83ec50558ba4ea72ef5bf2dc8276524dba16e9a3076"
+    },
+    {
+      "path": "src/lib/habitat/society/record-choice.ts",
+      "sha256": "51472ca62b1c187ac8d3b6ca9a2aa10451984b814f38bf5a33fd15dc79cecfc4"
+    },
+    {
+      "path": "src/lib/habitat/society/record-retrieval.ts",
+      "sha256": "8cfd2504ec20f309612c0202e06ce2422fc84f84cd81ba93d330861c83cc7ec7"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-choice.ts",
+      "sha256": "0a99d75f83b3f342d6a85bb00cd3c189be2977d75595cf9b99ddb3fe34d68866"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-instructions.ts",
+      "sha256": "b76f5a902ca27b1b72d814d41aa2be1ddc1b578243a2f3dd91edec8632e5c71f"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-state.ts",
+      "sha256": "29f4af2100e94ae0d724c5b49ec328f57c05c685cd5478b6d83ba569945a3bdb"
+    },
+    {
+      "path": "src/lib/habitat/society/schema.ts",
+      "sha256": "02ef6b145b03080ca2b749435c5c83ab22cfe1b4d6fef23578fc2f62b6e1af91"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "85e305243bd0bc0189894f5e80b2d16fc1403cba228358fa6d293daf41912e14"
+    }
+  ],
+  "scriptSha256": "77e7e84cb2310f4f44582e23e1ef8fbe255bd21cca7a8ddbf1938305826efac1"
+}

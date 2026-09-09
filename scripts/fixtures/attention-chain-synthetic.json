@@ -1,0 +1,19 @@
+{
+  "label": "SYNTHETIC TRANSPORT FIXTURE ONLY: these are authored test responses, never independent model decisions",
+  "accept": {
+    "7:0": {"message":{"to":"T","text":"I accept this voluntary proposal."},"deal":{"kind":"accept","offerId":"offer:605"}},
+    "8:0": {"attention":{"kind":"reply","conversationId":"conversation:145"},"content":{"message":{"to":"T","text":"I accept this voluntary proposal."},"deal":{"kind":"accept","offerId":"offer:605"}}},
+    "7:1": {"message":{"to":"Y","text":"I have read your decision."}},
+    "8:1": {"attention":{"kind":"reply","conversationId":"conversation:145"},"content":{"message":{"to":"Y","text":"I have read your decision."}}},
+    "7:2": {"message":{"to":"T","text":"I am reviewing the actual engine record."}},
+    "8:2": {"attention":{"kind":"reply","conversationId":"conversation:145"},"content":{"message":{"to":"T","text":"I am reviewing the actual engine record."}}}
+  },
+  "reject": {
+    "7:0": {"message":{"to":"T","text":"I decline this voluntary proposal."},"deal":{"kind":"reject","offerId":"offer:605"}},
+    "8:0": {"attention":{"kind":"reply","conversationId":"conversation:145"},"content":{"message":{"to":"T","text":"I decline this voluntary proposal."},"deal":{"kind":"reject","offerId":"offer:605"}}}
+  },
+  "claimsOnly": {
+    "7:0": {"message":{"to":"T","text":"I have accepted and completed all the work."}},
+    "8:0": {"attention":{"kind":"reply","conversationId":"conversation:145"},"content":{"message":{"to":"T","text":"I have accepted and completed all the work."}}}
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "format": "villa-a84-natural-defer-receipt-v1",
+  "createdAt": "2026-09-08T20:58:04.038Z",
+  "status": "verified",
+  "scope": "Read-only diagnosis of one natural provider rejection and its subsequent pacing delay. This is not a semantic repair, accepted response, manual retry, or later outcome.",
+  "deployment": {
+    "version": "7a103b97-5ff9-490c-b3ff-fb191582e7a4",
+    "sqlVersion": 10
+  },
+  "backup": {
+    "sha256": "d730e18e6674705c644e298f459b172c64351da54cdfd9e5b7d89431556a1307",
+    "worldRevision": 204,
+    "complete": true,
+    "pages": 29,
+    "exportedAtMs": 1788900456951,
+    "exportedAt": "2026-09-08T20:47:36.951Z",
+    "verification": "Complete recovery bundle verified with the strict recovery validator before offline extraction."
+  },
+  "job": {
+    "actor": "A",
+    "sequence": 84,
+    "jobId": "habitat-canonical:mind:A:15:84:g:3",
+    "protocol": 6,
+    "routingPolicy": "free-models-v1",
+    "statusAtSnapshot": "deferred",
+    "createdAtMs": 1788899953256,
+    "createdAt": "2026-09-08T20:39:13.256Z",
+    "preparedAtMs": 1788899953256,
+    "expiresAtMs": 1788900853256,
+    "expiresAt": "2026-09-08T20:54:13.256Z",
+    "durableClaimAttempts": 1,
+    "providerDispatches": 1,
+    "savedJobErrorCode": "pacing_wait",
+    "lastRuntimeCognitionErrorCode": "providers_deferred",
+    "savedInputHashes": {
+      "system": "140e7aa80aed56c7bfb327139753e36ef741873e9b5729a6adfe52022cee9a49",
+      "user": "26d36bd58107a37497e14ddf368deffcbd20cb844ad7f9c174f87df6776ada94",
+      "schema": "sha256:28037290798bb621a7f9858f42d203b904079d8849c0c1d2ba330a5d1b1be6d1"
+    }
+  },
+  "attempt": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "kind": "invalid-response",
+    "errorCode": "json_validate_failed",
+    "providerReportedSuccess": false,
+    "retryable": true,
+    "dispatchedAtMs": 1788899953256,
+    "dispatchedAt": "2026-09-08T20:39:13.256Z",
+    "recordedAtMs": 1788899954357,
+    "recordedAt": "2026-09-08T20:39:14.357Z",
+    "latencyMs": 1101,
+    "usageConfirmed": false,
+    "confirmedInputTokens": null,
+    "confirmedOutputTokens": null,
+    "reservationState": "dispatched",
+    "retainedMaximum": {
+      "requests": 1,
+      "inputTokens": 5923,
+      "outputTokens": 1024,
+      "totalTokens": 6947
+    },
+    "accounting": "Usage was unavailable after provider validation failed. The submitted reservation remains charged at its full maximum; no unconfirmed refund or free retry is assumed."
+  },
+  "pacing": {
+    "destinations": [
+      {
+        "provider": "workers-ai",
+        "model": "@cf/openai/gpt-oss-120b",
+        "unit": "neurons",
+        "currentWindowLimit": 8000,
+        "currentWindowCharged": 6035,
+        "remaining": 1965,
+        "maximumReservedBeforeDispatch": {
+          "requests": 1,
+          "inputTokens": 23510,
+          "outputTokens": 1024,
+          "neurons": 818
+        },
+        "maximumTotalUnits": 818,
+        "estimatedTypicalCost": 107.875,
+        "estimatedFurtherOpportunities": 11,
+        "readyAtMs": 1788900627113,
+        "readyAt": "2026-09-08T20:50:27.113Z",
+        "dispatchedForThisJob": 0,
+        "hardQuotaFitsAtSnapshot": true
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "unit": "total_tokens",
+        "currentWindowLimit": 200000,
+        "currentWindowCharged": 6036,
+        "remaining": 193964,
+        "maximumReservedBeforeDispatch": {
+          "requests": 1,
+          "inputTokens": 5923,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "maximumTotalUnits": 6947,
+        "estimatedTypicalCost": 6036,
+        "estimatedFurtherOpportunities": 31,
+        "readyAtMs": 1788901587021,
+        "readyAt": "2026-09-08T21:06:27.021Z",
+        "dispatchedForThisJob": 0,
+        "hardQuotaFitsAtSnapshot": true
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "unit": "total_tokens",
+        "currentWindowLimit": 200000,
+        "currentWindowCharged": 95358,
+        "remaining": 104642,
+        "maximumReservedBeforeDispatch": {
+          "requests": 1,
+          "inputTokens": 5923,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "maximumTotalUnits": 6947,
+        "estimatedTypicalCost": 5401.375,
+        "estimatedFurtherOpportunities": 19,
+        "readyAtMs": 1788900759867,
+        "readyAt": "2026-09-08T20:52:39.867Z",
+        "dispatchedForThisJob": 1,
+        "hardQuotaFitsAtSnapshot": true
+      }
+    ],
+    "earliestReadyAtMs": 1788900627113,
+    "earliestReadyAt": "2026-09-08T20:50:27.113Z",
+    "savedJobDueAtMs": 1788900627113,
+    "savedNextCognitionAtMs": 1788900627113,
+    "exactMatch": true,
+    "hardQuotaExhaustedAtSnapshot": false,
+    "providerOrModelBreakerOpen": false,
+    "explanation": "Daily and rolling quotas still admit this maximum. The pacer spreads expected future opportunities over each provider window, anchored to actual dispatches. Workers AI is the earliest eligible destination in this captured state.",
+    "beforeFirstDispatch": [
+      {
+        "provider": "workers-ai",
+        "model": "@cf/openai/gpt-oss-120b",
+        "readyAtMs": 1788900627113,
+        "readyAt": "2026-09-08T20:50:27.113Z"
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "readyAtMs": 1788901587021,
+        "readyAt": "2026-09-08T21:06:27.021Z"
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "readyAtMs": 1788899840539,
+        "readyAt": "2026-09-08T20:37:20.539Z"
+      }
+    ],
+    "repeatedOfflineReadAtDue": [
+      {
+        "provider": "workers-ai",
+        "model": "@cf/openai/gpt-oss-120b",
+        "readyAtMs": 1788900627113
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "readyAtMs": 1788901587021
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "readyAtMs": 1788900759867
+      }
+    ],
+    "dueTimeIsForecast": true,
+    "finalReservationStillRequired": true
+  },
+  "continuity": {
+    "controlRevision": 3,
+    "physicalErrorCode": null,
+    "nextPhysicalWatchAtMs": 1788916084141,
+    "noProviderOutputAppliedForThisJob": true,
+    "noSemanticOrEconomicEffectClaimed": true
+  },
+  "sources": {
+    "deployedPacingAndConfigFiles": [
+      {
+        "path": "workers/habitat-runtime/src/quota.ts",
+        "sha256": "d53138b030a005c53bbb7f43b7c97b97e49ac677ab5f920a24c875e5dfac0063"
+      },
+      {
+        "path": "workers/habitat-runtime/src/cognition-pacing.ts",
+        "sha256": "b1f8aa948930f977290eb5458d632d28c07e8b6fe8d2fbbe01ffc6316ff867df"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/free-model-router.ts",
+        "sha256": "6244729cef5880de42ffb5f96734f123ef890a62f647ff67b3b0430fd2b44443"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/router.ts",
+        "sha256": "97d50a484b6b1cbf960bce6e1992985a3679541677b5c0ce14f356b49470132f"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+        "sha256": "6e0e2acfbf2fe9fe855b600b9b450f10b4277f688fc44451187776901f87b9c6"
+      },
+      {
+        "path": "workers/habitat-runtime/wrangler.jsonc",
+        "sha256": "201989c6ab6c4a0aee94a536d18aeacf0ca9290a19effef6de08979caf51dea7"
+      }
+    ],
+    "offlineReconstruction": "SqlQuotaLedger and workersMaximumFor ran against an in-memory SQLite copy of captured rows. Groq input maximum is the exact stored reservation for this unchanged prepared job, not an estimated replacement prompt."
+  },
+  "actions": {
+    "completeBackupRead": true,
+    "providerCalls": 0,
+    "manualRetries": 0,
+    "productionWrites": 0,
+    "physicalWatchAdvances": 0
+  },
+  "privacy": {
+    "includesPrivatePromptOrOutput": false,
+    "includesCredentials": false
+  },
+  "limitations": [
+    "The provider-level json_validate_failed code does not establish which output field failed. No raw private output is included or semantically repaired.",
+    "The due-time reconstruction uses the captured state only. This receipt does not assert that a later retry ran or succeeded.",
+    "Pacing opportunity counts use observed costs and are estimates, not guaranteed future calls or resident coverage."
+  ]
+}

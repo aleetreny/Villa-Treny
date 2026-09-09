@@ -1,0 +1,253 @@
+{
+  "scope": "Exact frozen V7 B/reply0 and L/initial11, local Qwen with reasoning enabled and4096 combined output tokens. No cloud or production writes; no physical watch.",
+  "limitation": "Only two isolated comparisons.4096 reasoning+answer tokens are not equivalent to cloud1024. Local availability requires the Mac awake. Zero provider API fee does not mean zero hardware/time cost. No sustained autonomy claim.",
+  "humanReview": "pending",
+  "binding": "d7d8f85fb4e670fed5fd06994fa7512967f96b3a89f419c8eb1243fd6d111c8f",
+  "newCalls": 2,
+  "halted": null,
+  "attempts": 2,
+  "server": {
+    "pid": 14483,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions"
+  },
+  "memoryMeasurement": "ps RSS is sampled process residency, not a complete Metal/unified-memory footprint or guaranteed peak; CPU is a sampled process statistic.",
+  "rows": [
+    {
+      "actor": "B",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1579,
+        "completion_tokens": 138,
+        "total_tokens": 1717,
+        "input_tokens": 1579,
+        "output_tokens": 138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.92
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 2943,
+      "maxSampledRssKiB": 2566688,
+      "maxSampledCpuPercent": 73.8,
+      "output": {
+        "message": {
+          "to": "C",
+          "text": "Oh, absolutely, Cato! I'd be happy to help with that. Let me just check the current protocols and I'll get that drafted for you right away. Just give me a moment, okay?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:12",
+          "why": "Cato's request for written criteria shows a focus on safety and procedure, which aligns with my duty and desire to be useful."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "8b63ec2e6df2ab789b95386b55477e0ac0c720a7007525b2e852468d31e6defb",
+        "project": {
+          "id": "project:6",
+          "goal": "Consult Cato Lindqvist about the infirmary status",
+          "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "revision": 3,
+            "nextSpeaker": "C",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "index": 1,
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              },
+              {
+                "id": "turn:106",
+                "index": 2,
+                "speaker": "B",
+                "text": "Oh, absolutely, Cato! I'd be happy to help with that. Let me just check the current protocols and I'll get that drafted for you right away. Just give me a moment, okay?",
+                "atMs": 1788825626001
+              }
+            ],
+            "appraisedThrough": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "BC",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "71ff67e12aa5ac73875233192d9cbd720b9c223070452e7be7ea339de200d3dd",
+        "balanceChanges": []
+      },
+      "error": null
+    },
+    {
+      "actor": "L",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1454,
+        "completion_tokens": 131,
+        "total_tokens": 1585,
+        "input_tokens": 1454,
+        "output_tokens": 131,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.48
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 2500,
+      "maxSampledRssKiB": 2566688,
+      "maxSampledCpuPercent": 73.9,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Assist Juno with maintenance repair at the power bay",
+          "why": "Juno has materials and cells, needs help with repair, and I have a desire to be owed.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "go",
+              "room": "workshops"
+            },
+            {
+              "verb": "repair",
+              "at": "workshops"
+            }
+          ]
+        },
+        "message": {
+          "to": "J",
+          "text": "I'm free, Juno. I'll swing by the power bay and get that maintenance fixed for you."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "0f528f3306b4f418b4c6c6dad9854221d4f88b45ecf5c17f396ef66ebc9388c0",
+        "project": {
+          "id": "project:49",
+          "goal": "Assist Juno with maintenance repair at the power bay",
+          "why": "Juno has materials and cells, needs help with repair, and I have a desire to be owed.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825612001,
+          "steps": [
+            {
+              "id": "step:50",
+              "intent": {
+                "actor": "L",
+                "verb": "go",
+                "room": "workshops"
+              },
+              "at": null,
+              "status": "pending",
+              "evidenceId": null
+            },
+            {
+              "id": "step:51",
+              "intent": {
+                "actor": "L",
+                "verb": "repair"
+              },
+              "at": "workshops",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:41",
+            "participants": [
+              "J",
+              "L"
+            ],
+            "revision": 2,
+            "nextSpeaker": "J",
+            "status": "open",
+            "createdAtMs": 1788825610001,
+            "expiresAtMs": 1788912010001,
+            "turns": [
+              {
+                "id": "turn:42",
+                "index": 0,
+                "speaker": "J",
+                "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+                "atMs": 1788825610001
+              },
+              {
+                "id": "turn:52",
+                "index": 1,
+                "speaker": "L",
+                "text": "I'm free, Juno. I'll swing by the power bay and get that maintenance fixed for you.",
+                "atMs": 1788825612001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "9f86f07e50fd14f5763a21623ced3d2b7405c4b14c89650dc4e24c62d8073239",
+        "balanceChanges": []
+      },
+      "error": null
+    }
+  ]
+}

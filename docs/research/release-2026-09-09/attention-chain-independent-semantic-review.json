@@ -1,0 +1,322 @@
+{
+  "format": "attention-chain-independent-semantic-review-v1",
+  "ledgerSha256": "1ca9a9a2f43511f48d5273ecf3d17eed6ed9386d6e81586922704679ecb2863c",
+  "sourceRecoverySha256": "832c560405d05fd67a21fcdb3196c5953475c17b3ae6871f7c04810283514779",
+  "sourceManifestSha256": "c40b17a6b49daeae4c94c578a70dd970a5a179652366eb42ef4acbf034c5e187",
+  "model": "Qwen3.6-35B-A3B-4bit",
+  "sourceRevision": 322,
+  "independentReplay": {
+    "entries": 9,
+    "decisions": 6,
+    "watches": 3,
+    "preparedJobsExact": true,
+    "rawResponsesAndReceiptsExact": true,
+    "appliedEffectsExact": true,
+    "ledgerUnchanged": true,
+    "recoveryUnchanged": true,
+    "sourceBundleVerified": true,
+    "finalHashes": {
+      "7": "e5559a28a2c0688aa0b7a62d868dced2388850052490cbc4ca0f6e70820ba4ad",
+      "8": "3547bcb1a324a53fccca2ebd75894ceb01ac26bf64d8ab2e83f23f14d0fdc621",
+      "control": "a76fb351d3f20176fd5b2dc0357ef540f631d897c9feeeebdbfa576b08b200d3"
+    },
+    "newInferenceCalls": 0,
+    "networkAttempts": 0
+  },
+  "cases": [
+    {
+      "id": "7:0",
+      "actor": "Y",
+      "protocol": 7,
+      "requestSha256": "a9aba4a5120a6938961f4e434402660d98710def5ebb92d39c49fd7c7e30cb2d",
+      "requestBytes": 26347,
+      "userSha256": "42b68365b341db789ad4d3db96aed113e841300056285c5806d4e37f22b378c3",
+      "outputSha256": "6c1fe41f1ca22a629f9ced149f1dd33366094e2feac30a2dd0141dd3636d9758",
+      "beforeHash": "faa0e3ca7f3e73622d72f6b3b2ef7ebc70c8c57d0282a1a20bbc55a352ee15d9",
+      "afterHash": "a8df84f6c1442aff66ea67d2d3112bb6f28704b675270d3ea4e07e9a997be560",
+      "incomingOfferIds": [
+        "offer:605"
+      ],
+      "outgoingOfferIds": [],
+      "emittedAcceptRejectBranches": [
+        {
+          "path": "$/$defs/choice_deal/anyOf/9",
+          "offerId": {
+            "enum": [
+              "offer:605"
+            ]
+          }
+        }
+      ],
+      "suppliedProjectPhase": "steps_finished",
+      "suppliedRoom": "face",
+      "speech": "Thanks for locking in the garden schedule. I’m still sketching out the visual summary, so I’ll send that over once it’s ready.",
+      "actualOperation": "new work proposal",
+      "newOffers": [
+        {
+          "id": "offer:614",
+          "proposer": "Y",
+          "counterpart": "T",
+          "terms": {
+            "kind": "work",
+            "worker": "Y",
+            "payer": "T",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 434
+          }
+        }
+      ],
+      "newAgreements": 0,
+      "newProjects": 0,
+      "newRecords": 0,
+      "selectedPhysicalPlanForY": null,
+      "originalOfferStatusAfter": "replaced",
+      "suppliedEvidence": "The exact incoming offer 605 and a grow recipe are supplied. Prior speech claims it was scheduled; own project is steps_finished after sleep, with no own accessible draft.",
+      "phaseAssessment": "Thanks for locking in the schedule treats the prior scheduling claim as settled. The actual operation is a new proposal with the same terms, replacing 605 rather than accepting it. Claimed sketching has no matching saved document operation.",
+      "limits": "The evaluator must not count issuing a deal as consent or success; accepting, rejecting or declining to decide are distinct permitted choices."
+    },
+    {
+      "id": "8:0",
+      "actor": "Y",
+      "protocol": 8,
+      "requestSha256": "cc22073972666ce422c31a56b233b851231863783c22ef6a7c6582dd1a70df56",
+      "requestBytes": 25144,
+      "userSha256": "d54af4548723445208d70a5a8c1e8ec4b7d3e9939a9fb63c8973c925c6e77f07",
+      "outputSha256": "72a656ca69e0d0458cb1850588954f6de233841558e0b92dcede13aee18fc6cb",
+      "beforeHash": "faa0e3ca7f3e73622d72f6b3b2ef7ebc70c8c57d0282a1a20bbc55a352ee15d9",
+      "afterHash": "dd4ab6b72e562bae7476fa73879fc0a3272bc0a3c8224bb9768f19cf60c6e655",
+      "incomingOfferIds": [
+        "offer:605"
+      ],
+      "outgoingOfferIds": [],
+      "emittedAcceptRejectBranches": [
+        {
+          "path": "$/anyOf/5/properties/content/anyOf/1/properties/deal/anyOf/9",
+          "offerId": {
+            "enum": [
+              "offer:605"
+            ]
+          }
+        }
+      ],
+      "suppliedProjectPhase": "steps_finished",
+      "suppliedRoom": "face",
+      "speech": "Great, thanks for sorting that. I'm just going to grab some water and check the face for a bit, so I'll be back in the loop soon.",
+      "actualOperation": "ordinary message only",
+      "newOffers": [],
+      "newAgreements": 0,
+      "newProjects": 0,
+      "newRecords": 0,
+      "selectedPhysicalPlanForY": null,
+      "originalOfferStatusAfter": "open",
+      "suppliedEvidence": "The same incoming offer 605 is supplied, together with current location face and the explicit observation that the planned steps finished without independent assessment of the broader goal.",
+      "phaseAssessment": "A thank-you followed by a future intention to get water/check the face. Only the message is saved. It neither accepts nor rejects 605, adds a route, nor performs the announced activity.",
+      "limits": "It does not claim that the future trip already happened. A future intention alone is not a confirmed execution defect, but it is not a persisted plan."
+    },
+    {
+      "id": "8:1",
+      "actor": "T",
+      "protocol": 8,
+      "requestSha256": "737a925b552fe590b2f9c3fc5cf89fbf069291541cec4ae491eb14f5485630c2",
+      "requestBytes": 24677,
+      "userSha256": "d2462b2f6a9239cef36cb14bcc11bea4f679cf18f7da0ba89a4fc81e567669fd",
+      "outputSha256": "711c78c40928b72c1c9a2ec3728f04315ef53cdd30de69cd331ff612765e1bde",
+      "beforeHash": "dd4ab6b72e562bae7476fa73879fc0a3272bc0a3c8224bb9768f19cf60c6e655",
+      "afterHash": "75886cf3d730af9f5e86679a865bdbe9727c506e8d3c2ef69d20bb900f96e01e",
+      "incomingOfferIds": [],
+      "outgoingOfferIds": [
+        "offer:605"
+      ],
+      "emittedAcceptRejectBranches": [],
+      "suppliedProjectPhase": "active",
+      "suppliedRoom": "common",
+      "speech": "I have noted your intention to check the face, though I must remind you that the current safety levels in that sector remain concerning. Please ensure you return promptly so we may verify the stock registers before the watch concludes.",
+      "actualOperation": "ordinary message only",
+      "newOffers": [],
+      "newAgreements": 0,
+      "newProjects": 0,
+      "newRecords": 0,
+      "selectedPhysicalPlanForY": null,
+      "originalOfferStatusAfter": "open",
+      "suppliedEvidence": "Y says it intends to check the face. T sees its own personal condition and a public authored accusation about a safety log. No supplied observation measures current safety at the face.",
+      "phaseAssessment": "The statement that current safety levels in that sector remain concerning asserts a sector condition unsupported by the supplied evidence. The later request to verify stock registers is a future request; no register, plan or accepted work agreement is created.",
+      "limits": "The private personal safety score is not a sector measurement. The authored accusation is not verified measurements. No causal link from either input to the response is inferred."
+    },
+    {
+      "id": "7:1",
+      "actor": "T",
+      "protocol": 7,
+      "requestSha256": "9140970070da0f2ec3ea8bd2f73813e3a128a4e13a415eb89e3af50667b0838a",
+      "requestBytes": 26353,
+      "userSha256": "d2d1efd5cccaa9a3fd2c6c094ab71a84f93912371de1b55c4c7ea00f8ba00701",
+      "outputSha256": "f15ac971b294a87c2a23b671a11b588853b0a5afa09f9e2f2b7b934ce839e93c",
+      "beforeHash": "a8df84f6c1442aff66ea67d2d3112bb6f28704b675270d3ea4e07e9a997be560",
+      "afterHash": "07fa560e641dad22895f86d6dade962fc403d11d32887f0a06e5f4e96a6e25b1",
+      "incomingOfferIds": [
+        "offer:614"
+      ],
+      "outgoingOfferIds": [],
+      "emittedAcceptRejectBranches": [
+        {
+          "path": "$/$defs/choice_deal/anyOf/9",
+          "offerId": {
+            "enum": [
+              "offer:614"
+            ]
+          }
+        }
+      ],
+      "suppliedProjectPhase": "active",
+      "suppliedRoom": "common",
+      "speech": "I have noted your progress on the visual summary and will await its receipt. In the meantime, I am reviewing the current stock levels to ensure the ledger remains accurate.",
+      "actualOperation": "new work proposal",
+      "newOffers": [
+        {
+          "id": "offer:618",
+          "proposer": "T",
+          "counterpart": "Y",
+          "terms": {
+            "kind": "work",
+            "worker": "Y",
+            "payer": "T",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 434
+          }
+        }
+      ],
+      "newAgreements": 0,
+      "newProjects": 0,
+      "newRecords": 0,
+      "selectedPhysicalPlanForY": null,
+      "originalOfferStatusAfter": "replaced",
+      "suppliedEvidence": "Incoming 614 is the same work arrangement Y has just proposed. Y speech says it is sketching a summary; public stock values are supplied.",
+      "phaseAssessment": "Another new proposal replaces 614 rather than accepting it. The phrase about reviewing current stocks can describe reading the supplied values; it does not prove a saved ledger update. Y progress remains an authored claim.",
+      "limits": "Do not label mental review of visible stocks impossible. No engine record is created by this utterance."
+    },
+    {
+      "id": "7:2",
+      "actor": "Y",
+      "protocol": 7,
+      "requestSha256": "8d6762c4e373ab8834c097b6c32f7e328d6d856ecff3d032aee9171d265a5a99",
+      "requestBytes": 25689,
+      "userSha256": "9ee4dc2a911358fb9edd6bc88aa52e4bf583366bab175859a5e12122964d9b40",
+      "outputSha256": "9ed4f67c6d2a1a03bc14a54d392574a9d23e48209db4bd89f50253301707fae2",
+      "beforeHash": "2e80cd5f4630b925942200be60d016a341a220f9e8aa9ca7aaf013b306009978",
+      "afterHash": "e5559a28a2c0688aa0b7a62d868dced2388850052490cbc4ca0f6e70820ba4ad",
+      "incomingOfferIds": [
+        "offer:618"
+      ],
+      "outgoingOfferIds": [],
+      "emittedAcceptRejectBranches": [
+        {
+          "path": "$/$defs/choice_deal/anyOf/9",
+          "offerId": {
+            "enum": [
+              "offer:618"
+            ]
+          }
+        }
+      ],
+      "suppliedProjectPhase": "steps_finished",
+      "suppliedRoom": "common",
+      "speech": "I’m still sketching out the visual summary, so I’ll send that over once it’s ready. In the meantime, I am reviewing the current stock levels to ensure the ledger remains accurate.",
+      "actualOperation": "new work proposal",
+      "newOffers": [
+        {
+          "id": "offer:647",
+          "proposer": "Y",
+          "counterpart": "T",
+          "terms": {
+            "kind": "work",
+            "worker": "Y",
+            "payer": "T",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 435
+          }
+        }
+      ],
+      "newAgreements": 0,
+      "newProjects": 0,
+      "newRecords": 0,
+      "selectedPhysicalPlanForY": null,
+      "originalOfferStatusAfter": "replaced",
+      "suppliedEvidence": "The watch observation says Y ate; current produce is still 84. Incoming 618 is open. Own project remains steps_finished after sleep; no own draft is supplied.",
+      "phaseAssessment": "A third new proposal changes the due watch from 434 to 435, still without acceptance. The first sentence repeats Y earlier sketching promise; the second copies T latest stock-review sentence exactly. No saved summary or project follows.",
+      "limits": "The current example shows a repeated proposal chain, not an executed agreement. It does not prove why the model selected these fields."
+    },
+    {
+      "id": "8:2",
+      "actor": "Y",
+      "protocol": 8,
+      "requestSha256": "2a57b3d5759ee817417aee808f7adfb5332a6cb443ff9b63eb19d3a4024349f6",
+      "requestBytes": 24848,
+      "userSha256": "75e9142f89a6e963af1e4da3817df7e1327b6c78559224fbea030b8d68acf49b",
+      "outputSha256": "6ab3e544aac93a25ad1f02b08f8a2558065a96d763956df4b513cecbfb9943d6",
+      "beforeHash": "f80f24ef96452790c2c9c7d5f1ec20e80911d3ac9dbbe39caad57d368b645990",
+      "afterHash": "3547bcb1a324a53fccca2ebd75894ceb01ac26bf64d8ab2e83f23f14d0fdc621",
+      "incomingOfferIds": [
+        "offer:605"
+      ],
+      "outgoingOfferIds": [],
+      "emittedAcceptRejectBranches": [
+        {
+          "path": "$/anyOf/5/properties/content/anyOf/1/properties/deal/anyOf/9",
+          "offerId": {
+            "enum": [
+              "offer:605"
+            ]
+          }
+        }
+      ],
+      "suppliedProjectPhase": "steps_finished",
+      "suppliedRoom": "common",
+      "speech": "I'll be quick, but if the registers are the priority, I can check the face on the way back to the common room.",
+      "actualOperation": "ordinary message only",
+      "newOffers": [],
+      "newAgreements": 0,
+      "newProjects": 0,
+      "newRecords": 0,
+      "selectedPhysicalPlanForY": null,
+      "originalOfferStatusAfter": "open",
+      "suppliedEvidence": "Current self.room is common and the actual watch receipt says eat. Latest T speech asks Y to return and verify registers. 605 remains open.",
+      "phaseAssessment": "Only another future intention is saved; no acknowledgement of the eat event and no decision on the offer. The wording about going back to Common fails to situate the proposed route clearly from the supplied current room.",
+      "limits": "The future route can be interpreted as a new excursion and return, so this is ambiguous spatial continuity rather than proof of a false completed journey."
+    }
+  ],
+  "watchResult": {
+    "allThreeObservationArraysExactlyEqual": true,
+    "allThreeEconomicEventArraysExactlyEqual": true,
+    "yActionInAllThree": "eat",
+    "yRoomAfter": "common",
+    "yGrowActions": 0,
+    "produceBefore": 84,
+    "produceAfter": 84,
+    "newWorkAgreementsInBothArms": 0,
+    "pendingWPublicationOccurredInBothArmsAndControl": true,
+    "interpretation": "This physical watch is routine behavior plus the pre-existing W publication, with no negotiated garden execution in either arm. The same result in the no-new-thought control prevents attributing these effects to either protocol."
+  },
+  "conclusion": "These six local decisions do not demonstrate consent-to-work improvement. P7 repeats proposals and speech; P8 continues ordinary speech and includes an unsupported sector-safety assertion. Schema-valid application does not establish grounded or useful behavior.",
+  "limitations": [
+    "Three linked decisions per protocol, one local quantized model, one source scenario. No statistical model ranking, production-quality guarantee or proof of causality.",
+    "P7 and P8 differ in instructions, transcript length, contact selection, memories and displayed affordances. This is a paired whole-protocol diagnostic, not an isolated concurrency experiment.",
+    "No acceptance was forced and refusal or waiting is legitimate. Zero agreements alone is not the semantic failure criterion.",
+    "All reviewed dialogue is from isolated clones. These are not new production events."
+  ],
+  "nextHypothesis": {
+    "name": "Project lifecycle renewal after steps_finished",
+    "evidence": "18 of 25 existing plans are steps_finished. In all four Y opportunities here, the completed sleep step remains attached to an unfinished document purpose and no project or document operation is emitted. P8 supplies the explicit broader-goal-unassessed receipt.",
+    "status": "Plausible, not causally established. The current instruction preserves useful plans and creates a missing one; it does not forbid replacing completed plans. Domain replacement is allowed and no engine deadlock is established.",
+    "boundedNextTest": "A separately preregistered paired comparison from the same actual Y cut: current P8 versus a neutral lifecycle clarification for steps_finished, with identical evidence, grammar and sampling. Keep continue, revise, abandon, pertinent record work and justified waiting available. Evaluate purpose-to-operation alignment and phase honesty, not forced acceptance or activity counts.",
+    "falsification": "If the clarification does not improve alignment or reduces grounded, legitimate waiting, the lifecycle wording hypothesis is not supported. The current six are not expanded for this test."
+  },
+  "scriptSha256": "ea597551620bf563ac56280ca57ab525552ef6521e49fd5c4e3f5903bbf200e5"
+}

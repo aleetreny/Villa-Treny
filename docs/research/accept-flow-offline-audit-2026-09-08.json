@@ -1,0 +1,346 @@
+{
+  "format": "villa-accept-flow-offline-audit-v1",
+  "recordedAt": "2026-09-08T16:01:41.864Z",
+  "scope": "Public synthetic final-dialogue fixtures only. Counterfactual acceptances run in separate clones; they were never model responses or production events.",
+  "environment": {
+    "node": "v24.19.0",
+    "zod": "4.4.3",
+    "xgrammar": "0.2.3"
+  },
+  "references": [
+    {
+      "path": "docs/research/model-society-final-dialogue-local-2026-09-08/ledger.json",
+      "sha256": "3909056eda1bba5a269baab7a8a9032f34644f4e5005e5ff175fbc3dd6a723aa"
+    },
+    {
+      "path": "docs/research/model-society-final-dialogue-local-2026-09-08/source-scene.json",
+      "sha256": "94498c7b7249bd94da1322b0baf88a430d7a03beb1c98181b88e94ba9962f32e"
+    },
+    {
+      "path": "docs/research/model-society-final-dialogue-local-2026-09-08/source-bundle.json",
+      "sha256": "3c9836e2440554ed4785d2735f2893c8c36f3bad227b577e750481771d0c8b02"
+    },
+    {
+      "path": "docs/research/model-society-final-dialogue-local-2026-09-08/report.json",
+      "sha256": "8b57f97888a46929749695da7235b3fd74c4a89b212d11c976a3f11e1db601fe"
+    }
+  ],
+  "hashMethod": "SHA256 of file bytes for files; JSON.stringify with Map represented as {$map:[...entries]} for saved job/state objects.",
+  "authority": {
+    "archivedSourceFiles": 62,
+    "bundleVerifiedAgainstLedger": true,
+    "currentDifferencesOnly": [
+      "package.json",
+      "src/lib/habitat/society/instructions.ts",
+      "workers/habitat-runtime/src/society-scheduler.ts"
+    ],
+    "dependenciesUnchanged": true,
+    "explanation": "Application code matches the archived bundle. Only later prompt-production guidance and package scripts differ; validation uses each exact stored schema and PreparedTurn, without regenerating the prompt."
+  },
+  "isolation": {
+    "httpRequests": 0,
+    "modelCalls": 0,
+    "productionDataRead": false,
+    "productionWrites": 0,
+    "sourceLedgerUnchanged": true
+  },
+  "cases": [
+    {
+      "job": {
+        "id": "isolated-final-dialogue:mind:J:9:44:g:0",
+        "actor": "J",
+        "sequence": 44,
+        "protocol": 4,
+        "savedJobSha256": "40c2dfd6e9faecf7693049a77ac27907e89eb28d890337299f497985b8ab85bb",
+        "envelopeSha256": "693ef24828af8be8bf79f2bd46ee2a33d90831d323061155a2fc977571208a9d",
+        "preparedTurnSha256": "bbf97e83fe2a919c2493950efce0cac90e0e257102efd325d0ecb4d27d3dbfe3",
+        "requestPayloadSha256": "e20db17e4e240f094d568f0e2abf7e6a71550a6e487e84fd3566694616656010",
+        "jsonSchemaSha256": "9a20280fb78f00b7a873b2851bf8bf4222e823188c0cea4f1e335c8944bf9f1a",
+        "rawResponseSha256": "1e73417ddc8e2e7fb3927d3f3c10f629bda3450361a585bd8e00a54a3994267f",
+        "decodedOutputSha256": "39d8a56dfafff53654b2b992fa76cb69c304ab2c2723509c798beb22469aa18b",
+        "beforeSceneSha256": "31194e4160f17e63bdd28592e756224f193cee1dc579a615d48bf8d364acbcee"
+      },
+      "incoming": {
+        "id": "offer:70",
+        "proposer": "L",
+        "counterpart": "J",
+        "terms": {
+          "kind": "work",
+          "worker": "L",
+          "payer": "J",
+          "cells": 0,
+          "verb": "repair",
+          "room": "workshops",
+          "units": 1,
+          "dueWatch": 401
+        },
+        "visibleInUser": true,
+        "inEvidenceIds": true,
+        "offeredAcceptIds": [
+          "offer:70"
+        ],
+        "storedRequestSchemaMatchesEnvelope": true
+      },
+      "actualResponse": {
+        "dealKind": "work",
+        "outputDeal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 1,
+          "verb": "repair",
+          "room": "workshops"
+        },
+        "createdOffer": "offer:75",
+        "canonicalTerms": {
+          "kind": "work",
+          "worker": "L",
+          "payer": "J",
+          "cells": 0,
+          "verb": "repair",
+          "room": "workshops",
+          "units": 1,
+          "dueWatch": 402
+        },
+        "termsEqualIncoming": false,
+        "agreements": 0,
+        "code": "applied",
+        "afterSceneSha256": "16edd9e65e952f00e4462ece7c39bbaea0067f437d6251d923f0075ac1e9d947",
+        "replayedAfterHashMatchesRecorded": true,
+        "rawOutputMatchesReceipt": true,
+        "xgrammarAccepted": true
+      },
+      "counterfactualAcceptance": {
+        "syntheticOutput": {
+          "message": {
+            "to": "L",
+            "text": "I accept the existing offer."
+          },
+          "deal": {
+            "kind": "accept",
+            "offerId": "offer:70"
+          }
+        },
+        "schemaAccepted": true,
+        "coreCode": "applied",
+        "agreementOfferId": "offer:70",
+        "termsEqualIncoming": true,
+        "afterSceneSha256": "ffbe2e117c1a59d4d2d6003be8cac95bed4bda9e3a737b348427f9beb2410e94",
+        "replayCode": "already_applied",
+        "replayStateUnchanged": true,
+        "replayWorldUnchanged": true,
+        "sourceSceneUnchanged": true,
+        "xgrammarAccepted": true
+      },
+      "invalidId": {
+        "offerId": "offer:missing",
+        "schemaAccepted": false,
+        "xgrammarAccepted": false
+      }
+    },
+    {
+      "job": {
+        "id": "isolated-final-dialogue:mind:L:11:45:g:0",
+        "actor": "L",
+        "sequence": 45,
+        "protocol": 4,
+        "savedJobSha256": "28968bbd9746b856f8dda6e611c50b69eba9d648d532fb8af036ec71375a6220",
+        "envelopeSha256": "61652c0257ab6ae15a16e6f08d97bde072b48c5e58fb1be0350e0c1972dbe11d",
+        "preparedTurnSha256": "e8a58ac9a77293955c660d0d435e3b3cb6b67f1ae6ae3b7f4c5aca2ff8c14081",
+        "requestPayloadSha256": "542c3e5f8524a8ed54c4d5d36932d3412e6ed923d48771f067de3ccc6396c531",
+        "jsonSchemaSha256": "31a016828a4762b1498a9d96600e85dbdd60620912a1c2e1b3b23f29d2a47a2b",
+        "rawResponseSha256": "75912d9a356b200097650b44697e2223dcc4ce444bd62f41b266be2745e7c317",
+        "decodedOutputSha256": "6e9b025bd87570554b0ea9c68556cac3c23c925cab204aa88db146916e25e5de",
+        "beforeSceneSha256": "16edd9e65e952f00e4462ece7c39bbaea0067f437d6251d923f0075ac1e9d947"
+      },
+      "incoming": {
+        "id": "offer:75",
+        "proposer": "J",
+        "counterpart": "L",
+        "terms": {
+          "kind": "work",
+          "worker": "L",
+          "payer": "J",
+          "cells": 0,
+          "verb": "repair",
+          "room": "workshops",
+          "units": 1,
+          "dueWatch": 402
+        },
+        "visibleInUser": true,
+        "inEvidenceIds": true,
+        "offeredAcceptIds": [
+          "offer:75"
+        ],
+        "storedRequestSchemaMatchesEnvelope": true
+      },
+      "actualResponse": {
+        "dealKind": "work",
+        "outputDeal": {
+          "kind": "work",
+          "role": "work",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 0,
+          "verb": "repair",
+          "room": "workshops"
+        },
+        "createdOffer": "offer:79",
+        "canonicalTerms": {
+          "kind": "work",
+          "worker": "L",
+          "payer": "J",
+          "cells": 0,
+          "verb": "repair",
+          "room": "workshops",
+          "units": 1,
+          "dueWatch": 401
+        },
+        "termsEqualIncoming": false,
+        "agreements": 0,
+        "code": "applied",
+        "afterSceneSha256": "56345f03016006ebbec31b8ebb459c5bd6282ffdf613a5747792764d7ceb6de6",
+        "replayedAfterHashMatchesRecorded": true,
+        "rawOutputMatchesReceipt": true,
+        "xgrammarAccepted": true
+      },
+      "counterfactualAcceptance": {
+        "syntheticOutput": {
+          "message": {
+            "to": "J",
+            "text": "I accept the existing offer."
+          },
+          "deal": {
+            "kind": "accept",
+            "offerId": "offer:75"
+          }
+        },
+        "schemaAccepted": true,
+        "coreCode": "applied",
+        "agreementOfferId": "offer:75",
+        "termsEqualIncoming": true,
+        "afterSceneSha256": "05e7aacab7f54d8cc12943c4b38d892cc38c91884bfd9b65b7be2917440ecc99",
+        "replayCode": "already_applied",
+        "replayStateUnchanged": true,
+        "replayWorldUnchanged": true,
+        "sourceSceneUnchanged": true,
+        "xgrammarAccepted": true
+      },
+      "invalidId": {
+        "offerId": "offer:missing",
+        "schemaAccepted": false,
+        "xgrammarAccepted": false
+      }
+    },
+    {
+      "job": {
+        "id": "isolated-final-dialogue:mind:J:12:46:g:0",
+        "actor": "J",
+        "sequence": 46,
+        "protocol": 4,
+        "savedJobSha256": "55d75dd554f6aa8019fbae93c451e54f71f6f5d952714e1a1de16a6f4b33aef1",
+        "envelopeSha256": "488fc75d23d6b8fc2e17132480215b944c79d2085c156b59d029f489d037d9a2",
+        "preparedTurnSha256": "b329ca0abf62fc06e264fea7614f5790a4d296e846c401deeb99f500356217e5",
+        "requestPayloadSha256": "b78b46aa0f1cc7b6faeb01979329021d488108aef6d01bc96202ee7e77265832",
+        "jsonSchemaSha256": "ed7c4fd6ef5fd08c58d115d68b0cfbbad7fca25d13998e9c0e629b7817ed2bf3",
+        "rawResponseSha256": "bafa9bfb04775ec6f9d2ffab408ba99778ee722ca4b4915c0610e9f503f02de3",
+        "decodedOutputSha256": "1d1e641487526fe2a68156e5c42d8093f7c3e63d8fe7f9821ea60d7fa6f392da",
+        "beforeSceneSha256": "56345f03016006ebbec31b8ebb459c5bd6282ffdf613a5747792764d7ceb6de6"
+      },
+      "incoming": {
+        "id": "offer:79",
+        "proposer": "L",
+        "counterpart": "J",
+        "terms": {
+          "kind": "work",
+          "worker": "L",
+          "payer": "J",
+          "cells": 0,
+          "verb": "repair",
+          "room": "workshops",
+          "units": 1,
+          "dueWatch": 401
+        },
+        "visibleInUser": true,
+        "inEvidenceIds": true,
+        "offeredAcceptIds": [
+          "offer:79"
+        ],
+        "storedRequestSchemaMatchesEnvelope": true
+      },
+      "actualResponse": {
+        "dealKind": "work",
+        "outputDeal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 0,
+          "verb": "repair",
+          "room": "workshops"
+        },
+        "createdOffer": "offer:83",
+        "canonicalTerms": {
+          "kind": "work",
+          "worker": "L",
+          "payer": "J",
+          "cells": 0,
+          "verb": "repair",
+          "room": "workshops",
+          "units": 1,
+          "dueWatch": 401
+        },
+        "termsEqualIncoming": true,
+        "agreements": 0,
+        "code": "applied",
+        "afterSceneSha256": "3e1e1d8e4ae9291b309f0cc7ce94dc1e02f036cd300f21ef63ba3758eb631a3e",
+        "replayedAfterHashMatchesRecorded": true,
+        "rawOutputMatchesReceipt": true,
+        "xgrammarAccepted": true
+      },
+      "counterfactualAcceptance": {
+        "syntheticOutput": {
+          "message": {
+            "to": "L",
+            "text": "I accept the existing offer."
+          },
+          "deal": {
+            "kind": "accept",
+            "offerId": "offer:79"
+          }
+        },
+        "schemaAccepted": true,
+        "coreCode": "applied",
+        "agreementOfferId": "offer:79",
+        "termsEqualIncoming": true,
+        "afterSceneSha256": "4cdc3ee9b971b6c9c5d42431167393758967509207947e285eafe4b540d7f249",
+        "replayCode": "already_applied",
+        "replayStateUnchanged": true,
+        "replayWorldUnchanged": true,
+        "sourceSceneUnchanged": true,
+        "xgrammarAccepted": true
+      },
+      "invalidId": {
+        "offerId": "offer:missing",
+        "schemaAccepted": false,
+        "xgrammarAccepted": false
+      }
+    }
+  ],
+  "grammarCheck": {
+    "method": "Installed native XGrammar Grammar.from_json_schema(strict_mode=True), terminated string matching on the exact stored schemas. No tokenizer or model loaded.",
+    "samplesSha256": "d0e2e9005c6cae5f8dd47df1d7a5cd454ff0cd5c57210603202b74bd1ceb23d5",
+    "cases": 3,
+    "validCounterfactualAcceptances": 3,
+    "validOriginalResponses": 3,
+    "rejectedInventedOfferIds": 3
+  },
+  "conclusion": "No inaccessible accept branch, missing incoming offer ID, inverted work roles or altered acceptance terms was found in these three fixtures. The third model response restates the incoming terms as a new work proposal; it is not an acceptance.",
+  "limitations": [
+    "Synthetic counterfactual acceptances are audit inputs, not model outcomes or production agreements.",
+    "The first two original proposals change the deadline and are legitimate counteroffers; only the third repeats identical terms.",
+    "String grammar membership does not measure model preference, generation quality or cloud-provider implementation.",
+    "This evidence contains no production state or private prompt text and establishes no population-wide negotiation quality."
+  ]
+}

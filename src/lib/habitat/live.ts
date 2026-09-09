@@ -1,3 +1,6 @@
+import { isArchivedSpeech, type ArchivedSpeech } from './archive-message';
+import { isPublicRecordsView } from './public-records';
+import type { PublicRecordPublication } from './society/record-types';
 // The public edge of the habitat.
 //
 // A network response is untrusted even when it came from our own Worker. Keep
@@ -9,6 +12,7 @@ import { RESIDENTS, type ResidentId } from './residents';
 import { isWalkable } from './grid';
 import { AXES, type Edge } from './weave';
 import { isSocietySnapshot, type SocietySnapshot } from './society';
+import { isAgencySnapshot, isCognitionStatus, type AgencySnapshot, type CognitionStatus } from './agency';
 import type {
   HabitatSnapshot,
   PersonState,
@@ -146,6 +150,7 @@ export type ObserverState = {
   snapshot: HabitatSnapshot;
   relationships: readonly Edge[];
   society?: SocietySnapshot;
+  agency?: AgencySnapshot;
 };
 
 export type ArchiveEntry = RecordEntry & {
@@ -154,6 +159,8 @@ export type ArchiveEntry = RecordEntry & {
   kind: 'work' | 'need' | 'meeting' | 'power' | 'note';
   /** Original historical room name; the canonical `room` is its present alias. */
   sourceRoom?: string;
+  /** Provenance of a recorded society utterance; not verification of its content. */
+  speech?: ArchivedSpeech;
 };
 
 export type RuntimeStatus = {
@@ -168,6 +175,7 @@ export type RuntimeStatus = {
   simTime: { day: number; minute: number };
   nextWatchAtMs: number | null;
   lastRun: { runId: string; committedAtMs: number } | null;
+  cognition?: CognitionStatus;
   providers: {
     recentAttempts: Array<{
       provider: string; ok: boolean; kind?: string; detailCode?: string | null;
@@ -177,11 +185,12 @@ export type RuntimeStatus = {
 };
 
 export function isObserverState(value: unknown): value is ObserverState {
-  if (!isObject(value) || !hasExactly(value, ['worldRevision', 'snapshot', 'relationships', ...(Object.hasOwn(value, 'society') ? ['society'] : [])])
+  if (!isObject(value) || !hasExactly(value, ['worldRevision', 'snapshot', 'relationships', ...(Object.hasOwn(value, 'society') ? ['society'] : []), ...(Object.hasOwn(value, 'agency') ? ['agency'] : [])])
     || !Number.isInteger(value.worldRevision) || (value.worldRevision as number) < 0
     || !isHabitatSnapshot(value.snapshot) || !Array.isArray(value.relationships)
     || value.relationships.length !== RESIDENTS.length * (RESIDENTS.length - 1)
-    || (Object.hasOwn(value, 'society') && !isSocietySnapshot(value.society))) return false;
+    || (Object.hasOwn(value, 'society') && !isSocietySnapshot(value.society))
+    || (Object.hasOwn(value, 'agency') && !isAgencySnapshot(value.agency))) return false;
   const pairs = new Set<string>();
   return value.relationships.every((edge: unknown) => {
     if (!isObject(edge) || !hasExactly(edge, ['from', 'to', 'axes', 'bonded', 'latent'])
@@ -211,6 +220,7 @@ function isRuntimeStatus(value: unknown): value is RuntimeStatus {
     && (value.nextWatchAtMs === null || typeof value.nextWatchAtMs === 'number')
     && (value.lastRun === null || (isObject(value.lastRun)
       && typeof value.lastRun.runId === 'string' && typeof value.lastRun.committedAtMs === 'number'))
+    && (value.cognition === undefined || isCognitionStatus(value.cognition))
     && isObject(value.providers) && Array.isArray(value.providers.recentAttempts)
     && value.providers.recentAttempts.every((attempt: unknown) => isObject(attempt)
       && typeof attempt.provider === 'string' && typeof attempt.ok === 'boolean'
@@ -228,6 +238,26 @@ async function publicRead(base: string, path: string, options: HabitatFetchOptio
   });
   if (!result.ok) throw new Error(`The habitat is not responding (${result.status}).`);
   return result.json() as Promise<unknown>;
+}
+
+export type RecordArchivePage = { entries: PublicRecordPublication[]; nextCursor: number | null };
+
+/** Optional archive pages are requested by the observer, never by its polling
+ * clock. The archive contains only publications explicitly made public. */
+export async function fetchHabitatRecords(base: string,
+  options: HabitatFetchOptions & { before?: number; limit?: number } = {}): Promise<RecordArchivePage> {
+  const limit = options.limit ?? 20;
+  if (!Number.isSafeInteger(limit) || limit < 1 || limit > 40
+    || (options.before !== undefined && (!Number.isSafeInteger(options.before) || options.before < 1))) throw new RangeError('Invalid written-record page');
+  const value = await publicRead(base, `/v1/records?limit=${limit}${options.before === undefined ? '' : `&before=${options.before}`}`, options);
+  if (!isObject(value) || !hasExactly(value, ['entries', 'nextCursor'])
+    || !Array.isArray(value.entries) || value.entries.length > limit
+    || !isPublicRecordsView({ publications: value.entries, offers: [], agreements: [] })
+    || !(value.nextCursor === null || (typeof value.nextCursor === 'number' && Number.isSafeInteger(value.nextCursor)
+      && value.nextCursor > 0 && (options.before === undefined || value.nextCursor < options.before)))) {
+    throw new Error('The writing archive could not be read.');
+  }
+  return value as RecordArchivePage;
 }
 
 export async function fetchHabitatObserver(base: string, options: HabitatFetchOptions = {}): Promise<ObserverState> {
@@ -272,7 +302,8 @@ export async function fetchHabitatArchive(
       && entry.day === day && Number.isInteger(entry.watch) && (entry.watch as number) >= 1
       && (entry.watch as number) <= 4
       && ['work', 'need', 'meeting', 'power', 'note'].includes(entry.kind as string)
-      && (entry.sourceRoom === undefined || typeof entry.sourceRoom === 'string'))) {
+      && (entry.sourceRoom === undefined || typeof entry.sourceRoom === 'string')
+      && (entry.speech === undefined || isArchivedSpeech(entry.speech, entry as ArchiveEntry)))) {
     throw new Error('The journal for that day could not be read.');
   }
   return value.entries as ArchiveEntry[];

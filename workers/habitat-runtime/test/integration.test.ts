@@ -19,7 +19,7 @@ describe('habitat runtime Worker', () => {
     const response = await exports.default.fetch('https://habitat.test/v1/status');
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
-      schemaVersion: 6,
+      schemaVersion: 12,
       habitatId: 'habitat-canonical',
       residentCapacity: 25,
       mode: 'paused',
@@ -60,6 +60,21 @@ describe('habitat runtime Worker', () => {
     await expect(response.json()).resolves.toMatchObject({ day: 100, entries: [] });
   });
 
+  it('answers conditional world reads without advancing the world or starting thoughts', async () => {
+    const stub = env.HABITAT_WORLD.getByName(env.HABITAT_ID);
+    const before = await stub.getWorldRevision();
+    for (const path of ['snapshot', 'observer']) {
+      const fresh = await exports.default.fetch(`https://habitat.test/v1/${path}`);
+      const tag = fresh.headers.get('etag')!;
+      const unchanged = await exports.default.fetch(`https://habitat.test/v1/${path}`, { headers: { 'if-none-match': tag } });
+      expect(unchanged.status).toBe(304); expect(await unchanged.text()).toBe('');
+      expect(unchanged.headers.get('etag')).toBe(tag);
+    }
+    expect(await stub.getWorldRevision()).toBe(before);
+    const status = await stub.getStatus() as unknown as { queue: { counts: Record<string, number> } };
+    expect(status.queue.counts).toEqual({});
+  });
+
   it('does not expose admin operations without a configured secret', async () => {
     const response = await exports.default.fetch('https://habitat.test/v1/admin/resume', {
       method: 'POST',
@@ -80,7 +95,7 @@ describe('habitat runtime Worker', () => {
     await runInDurableObject(stub, (_instance, state) => {
       for (const provider of ['workers-ai', 'groq']) state.storage.sql.exec(
         'INSERT OR REPLACE INTO provider_breakers VALUES (?, ?, ?, ?, ?)',
-        provider, Date.now() + 86_400_000, 'test-provider-offline', 1, Date.now(),
+        provider, Date.now() + 86_400_000, 'authentication', 1, Date.now(),
       );
     });
     const command = { commandId: 'check-idempotency-0001', issuedAtMs: Date.now() };
@@ -144,7 +159,7 @@ describe('habitat runtime Worker', () => {
     await stub.pause({ commandId: 'pause-alarm-test', issuedAtMs: Date.now() });
   });
 
-  it('waits for an active cognition lease instead of applying a premature fallback', async () => {
+  it('keeps the physical clock independent of an old cognition lease', async () => {
     const stub = env.HABITAT_WORLD.getByName('active-cognition-lease-test');
     const resumed = await stub.resume({
       commandId: 'resume-active-cognition-lease-test',
@@ -200,10 +215,10 @@ describe('habitat runtime Worker', () => {
       nextWake: { dueAtMs: number; reason: string } | null;
       queue: { counts: Record<string, number> };
     };
-    expect(status.worldRevision).toBe(0);
-    expect(status.lastRun).toBeNull();
+    expect(status.worldRevision).toBe(1);
+    expect(status.lastRun).not.toBeNull();
     expect(status.queue.counts.running).toBe(1);
-    expect(status.nextWake).toMatchObject({ dueAtMs: leaseAtMs, reason: 'retry' });
+    expect(status.nextWake?.reason).toBe('clock');
     await stub.pause({
       commandId: 'pause-active-cognition-lease-test',
       issuedAtMs: Date.now(),
@@ -238,8 +253,8 @@ describe('habitat runtime Worker', () => {
     };
     expect(status.worldRevision).toBe(1);
     expect(status.simTime).toEqual({ day: 100, minute: 360 });
-    expect(status.lastRun?.runId).toBe('habitat-canonical:world:0:watch');
-    expect(status.queue.counts.dead).toBe(1);
+    expect(status.lastRun?.runId).toBe('habitat-canonical:physical:100:1');
+    expect(status.queue.counts).toEqual({});
     const snapshot = await stub.getSnapshot();
     expect(snapshot.snapshot.people).toHaveLength(25);
     expect(snapshot.snapshot.rooms).toHaveLength(48);

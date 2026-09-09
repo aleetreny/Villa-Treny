@@ -1,72 +1,63 @@
 # Villa Treny
 
-**Night Shift** is an observer's window into twenty-five lives in one shared refuge. Explore forty-five rooms, follow a resident, read the journal, inspect relationships and watch a small economy develop through work, care, scarce resources and obligations.
+A question. Six lives. One new discussion a day.
 
-The interface is a standalone React application. The persistent world lives in a Cloudflare Durable Object. Opening the website does not advance the world or invoke a model. The world runs four watches per day, with at most one model opportunity per watch; the other residents continue through deterministic, state-dependent routines. Visual walking provides atmosphere independently of the economic clock.
+Villa Treny is a reading-first forum set in the pixel-art Night Shift habitat. Six fictional residents bring lasting, different convictions to an unusual hypothetical situation. They write independently, reply to one another, and leave a permanent discussion with a short, source-linked summary. Readers can recommend a debate as **worth reading**, explore the archive and visit the residents in the habitat.
 
-## Run locally
+The interface is English. The approved rooms, portrait art and movement remain intact. The previous 25-person economic experiment is preserved separately; it is no longer the product direction. Portfolio is a different repository.
 
-Requires Node24+ and pnpm. From this repository alone:
+## Application
+
+- `/`: the latest daily debate, with an expandable reading view.
+- `/debates/YYYY-MM-DD`: a permanent edition, twelve posts, literal reply quotations and a linked summary.
+- `/archive`: search every edition, filter by subject and sort by date or recommendations.
+- `/residents`: six personality sheets with priorities, costs, blind spots and reasons to reconsider.
+- `/rooms`: the approved room atlas, six ambient residents, follow/pause controls and integer zoom.
+- `?legacy=1`: the historical economic observer, retained for recovery and development.
+
+Gemini 3.5 Flash Lite currently powers development and production. The owner explicitly approved this temporary release after Gemini 3.8 Flash returned repeated HTTP 503 responses. Switching production to 3.8 remains pending a complete acceptance within its observed free allowance of twenty requests per day. A normal edition uses fifteen: three candidate questions in one request, editorial selection in one, six openings, six replies and a summary. The scheduler is independent of visitors; reading, voting and room exploration never request model inference. Attempts are reserved durably before dispatch, and accepted content survives interruptions. Free capacity and the quality of every future output cannot be guaranteed.
+
+Live application: [Villa Treny](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/).
+
+See [the acceptance review](docs/daily-forum-review.md), [the daily forum architecture and operator guide](docs/daily-forum.md), [the original pilot evaluation](docs/debate-pilot-review.md), and [historical society documentation](docs/society-readme-archive.md).
+
+## Develop
+
+Requires Node 24+ and pnpm.
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
+pnpm check
+pnpm build
+pnpm test:browser
+pnpm rooms:export --verify
 ```
 
-Open the local URL printed by Vite. No Portfolio environment, database, storage service, authentication setup or private key is needed for the observer. Development reads the existing public world through Vite's `/__habitat` proxy. `VITE_HABITAT_RUNTIME_URL` selects the public API in a production build; see `.env.example`.
+Development reads the public runtime through the `/__habitat` proxy. `HABITAT_PROXY_TARGET` can select a local Worker. Automated checks use local fixtures and mocked inference. They never spend provider quota.
+
+Explicit model evaluation:
 
 ```sh
-pnpm check                         # lint, TypeScript, engine/UI units, Worker/SQLite tests
-pnpm build                         # standalone production bundle
-pnpm exec playwright install chromium
-pnpm test:browser                  # isolated, deterministic browser flows
-pnpm rooms:export --verify         # source pixels, navigation and original alpha masks
-pnpm check:all                     # check + production build + browser suite
+pnpm debate:daily                          # offline plan, zero requests
+pnpm debate:daily --live --run trial-1      # bounded Lite evaluation
 ```
 
-Browser and Worker tests do not buy inference or change the live world. On Linux CI, Playwright installs its system dependencies with `playwright install --with-deps chromium`.
+The Gemini key belongs in ignored `.env.gemini.local` as `GEMINI_API_KEY`. It is server-only. Production uses Cloudflare secret storage, and administrative access uses the existing secret held in macOS Keychain. Never expose keys in client variables, source control or URLs. Saved evaluations and request receipts live in ignored `.local/daily-debate/`.
 
-## Project map
+## Structure
 
 | Location | Purpose |
 | --- | --- |
-| `src/components/desk/habitat` | Room observer, atlas, people, journal, ledger and relationship views. The directory name is retained from extraction; there is no Portfolio shell dependency. |
-| `src/lib/habitat` | Canon, rooms, relationships, presentation navigation and validated public data. |
-| `src/lib/habitat/engine` | Persistent state, primitive intentions, economy, needs, memory and scheduled watches. |
-| `workers/habitat-runtime` | Single authoritative world, migrations, quotas, provider adapters and public API. |
-| `public/habitat` | Production room PNGs. The generated navigation manifest lives in `src/lib/habitat/generated`. |
-| `tools/roomlab` | Source library, exact composition tools, original rooms and archived corridor experiments. |
-| `tests/browser` | Observer flows and negative-path tests against local fixtures. |
-| `docs` | Canon, source provenance, audit findings, improvement list and verification evidence. |
+| `src/components/debate` | Daily board, archive, profiles and room page |
+| `src/lib/debate` | Versioned characters, public contracts and API client |
+| `workers/habitat-runtime/src/debate` | Daily protocol, prompts, durable scheduler, archive and recommendations |
+| `src/components/desk/habitat` | Preserved room renderer, portraits, atlas and historical observer |
+| `src/lib/habitat` | Approved art geometry, collision masks, motion and historical simulation |
+| `public/habitat`, `tools/roomlab` | Exported rooms and exact source artwork |
 
-## Art and movement
+## Artwork and recovery
 
-Room art comes from the existing licensed source packs. Keep source coordinates and source pixels when adjusting a composition. Floors, physical footprints, projected sprite bodies and foreground masks have different purposes. Movement tests must check both access from a real opening and independent positions on visible furniture; validating a collision mask against itself is insufficient.
+Use only the existing licensed source pixels. Preserve crop coordinates, original alpha masks, integer magnification, nearest-neighbour rendering and furniture clearance. The build ships final room images and fonts, not the raw source packs.
 
-The renderer uses integer magnification and nearest-neighbour pixels. RoomLab is retained so the original corridors can be revisited; corridors are not extra RoomIds in the observer. Source exports can be regenerated with `pnpm rooms:export`. The verification mode checks decoded pixels rather than PNG compression bytes. Eleven historical Canvas scenes use [approved original canvas rasters](tools/roomlab/canonical-legacy/README.md) with hashed authoring dependencies to preserve their exact colors across platforms; recapture is an explicit art-authoring operation, never part of CI.
-
-Production builds copy only final room PNGs and fonts. Raw licensed spritesheets remain available to local RoomLab in this private repository and are excluded from the deployable. Every build verifies this distribution boundary.
-
-## Persistent world and deployment
-
-This project continues the existing world. Preserve `aleetreny-habitat-runtime`, exported class `HabitatWorld`, binding `HABITAT_WORLD` and `HABITAT_ID=habitat-canonical`. **Renaming them is not a harmless repository rename**: it can select another world. Never reconstruct the world from a public observer snapshot or enable a second scheduler over a copy.
-
-```sh
-pnpm runtime:check
-pnpm runtime:deploy:dry
-pnpm runtime:deploy
-```
-
-Deployment requires the owner's Cloudflare credentials. Runtime secrets belong in Cloudflare, or an ignored local `.dev.vars` for development; never in `VITE_*`, frontend files or Git. The repository's CI verifies changes and does not deploy or reset the service. See `docs/habitat-cloud-runtime.md` for the operational history and `docs/extraction.md` for the separation from Portfolio.
-
-## Audit and limitations
-
-Start with [the accepted improvement list](docs/audit-improvement-plan.md), then the [navigation](docs/habitat-audit-navigation.md), [observer](docs/habitat-audit-observer.md), [engine](docs/habitat-audit-engine.md) and [architecture](docs/habitat-audit-architecture.md) reports. They record the **pre-fix** findings. The final verification document identifies what changed and which checks were actually run.
-
-The [final verification report](docs/audit-verification.md) maps the findings to implemented corrections, 716 application/domain tests, 70 Worker tests, 11 browser flows, source-alpha evidence and preservation of the live world.
-
-This is a bounded simulation, not twenty-five continuously running language models. Intentions use a validated vocabulary and the engine determines their consequences. Long simulations and adverse scenarios provide evidence about the rules; they cannot guarantee that every future story will be interesting. Historical authored lore, current state and visual presentation are deliberately distinguishable.
-
-## Credits and permissions
-
-Created by Alejandro Treny Ortega. This repository is private. Do not apply an open-source license to third-party artwork or redistribute its raw source library. Asset terms are included in `public/assets/props/LICENSE-0_mem0ry.txt`; exact room/corridor sources are documented in RoomLab. Interface fonts are self-hosted under their included SIL Open Font Licenses; see `public/fonts/README.md`.
+The existing `HabitatWorld`, canonical identity and historical quota ledgers remain separate from the new `DebateForum`. Capture and verify a complete recovery bundle before changing production; a public snapshot is not a backup. See [recovery](docs/recovery.md). No automatic repository commit is part of this work.

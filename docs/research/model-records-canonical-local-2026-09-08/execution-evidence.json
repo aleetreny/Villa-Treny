@@ -1,0 +1,143 @@
+{
+  "recordedAt": "2026-09-08T18:17:45.769183+00:00",
+  "ownedServerPid": 49185,
+  "ownedToolSession": 35610,
+  "serverStopped": true,
+  "stopSignal": "SIGTERM",
+  "port8018Listener": false,
+  "userServer8000Pid": 29617,
+  "userServerUntouchedAndListening": true,
+  "command": [
+    "/Users/alejandrotreny/.omlx/bin/omlx",
+    "serve",
+    "--base-path",
+    "/tmp/villa-omlx-records-20260908",
+    "--model-dir",
+    "/Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8018",
+    "--max-concurrent-requests",
+    "1",
+    "--memory-guard",
+    "safe",
+    "--no-cache",
+    "--no-hf-cache",
+    "--log-level",
+    "info"
+  ],
+  "completedRequests": 10,
+  "startedAt": "2026-09-08T18:15:12.129Z",
+  "finishedAt": "2026-09-08T18:15:54.400Z",
+  "ledgerSha256": "4adf58b3ab325254d86aac9079469fc4352e341db4feaf951e32dd0cf84ee0ea",
+  "localResearchCallsCumulative": 149,
+  "cloudResearchNeuronsConservative": 1852,
+  "cloudCallsThisEvaluation": 0,
+  "replayHttpRequests": 0,
+  "replayBranchHashesMatch": true,
+  "perCallUsage": [
+    {
+      "pair": "CN",
+      "actor": "C",
+      "usage": {
+        "prompt_tokens": 2619,
+        "completion_tokens": 182,
+        "total_tokens": 2801
+      },
+      "latencyMs": 13614
+    },
+    {
+      "pair": "AU",
+      "actor": "U",
+      "usage": {
+        "prompt_tokens": 2638,
+        "completion_tokens": 87,
+        "total_tokens": 2725
+      },
+      "latencyMs": 2462
+    },
+    {
+      "pair": "AU",
+      "actor": "A",
+      "usage": {
+        "prompt_tokens": 2766,
+        "completion_tokens": 201,
+        "total_tokens": 2967
+      },
+      "latencyMs": 4004
+    },
+    {
+      "pair": "AU",
+      "actor": "U",
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 91,
+        "total_tokens": 2762
+      },
+      "latencyMs": 2527
+    },
+    {
+      "pair": "BK",
+      "actor": "K",
+      "usage": {
+        "prompt_tokens": 2632,
+        "completion_tokens": 97,
+        "total_tokens": 2729
+      },
+      "latencyMs": 2613
+    },
+    {
+      "pair": "BK",
+      "actor": "B",
+      "usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 155,
+        "total_tokens": 2794
+      },
+      "latencyMs": 3349
+    },
+    {
+      "pair": "BK",
+      "actor": "K",
+      "usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 152,
+        "total_tokens": 2791
+      },
+      "latencyMs": 3316
+    },
+    {
+      "pair": "TY",
+      "actor": "T",
+      "usage": {
+        "prompt_tokens": 2650,
+        "completion_tokens": 132,
+        "total_tokens": 2782
+      },
+      "latencyMs": 3070
+    },
+    {
+      "pair": "TY",
+      "actor": "Y",
+      "usage": {
+        "prompt_tokens": 2650,
+        "completion_tokens": 142,
+        "total_tokens": 2792
+      },
+      "latencyMs": 3213
+    },
+    {
+      "pair": "TY",
+      "actor": "T",
+      "usage": {
+        "prompt_tokens": 2713,
+        "completion_tokens": 129,
+        "total_tokens": 2842
+      },
+      "latencyMs": 3060
+    }
+  ],
+  "ownedToolExitCode": 1,
+  "shutdownEvidence": "SIGTERM issued to owned PID49185; Uvicorn logged Application shutdown complete and Finished server process; listener8018 absent afterwards."
+}

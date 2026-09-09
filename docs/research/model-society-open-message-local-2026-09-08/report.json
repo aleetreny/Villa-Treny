@@ -1,0 +1,2559 @@
+{
+  "scope": "Matched cases retain exact V7 state and USER; currentP4 SYSTEM and corrected schema both change. Replies are newly derived, no forced deals or acceptance.",
+  "limits": "Three isolated matched cases, up to three actual alternating replies only in L, one conditional physical watch in L. No sustained-autonomy claim or inference of consent.",
+  "humanReview": "pending",
+  "binding": "be53c4c9fb95773274bea8a1ee0035789903ff6d1e000facdf44529d88ef4979",
+  "newCalls": 6,
+  "halted": null,
+  "rows": [
+    {
+      "actor": "G",
+      "stage": "matched",
+      "state": "completed",
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Provide hull integrity data to Dima.",
+          "why": "Dima needs the data for his dock safety verification.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "D",
+          "text": "Inspection complete. Hull integrity is nominal. The data is yours."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "4f32ff5d257b8e6d07718b7f54511dd3ccd1aa9d0e47accf8ec64f13e722bbd6"
+      },
+      "usage": {
+        "prompt_tokens": 1542,
+        "completion_tokens": 108,
+        "total_tokens": 1650,
+        "input_tokens": 1542,
+        "output_tokens": 108,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 6.84,
+        "total_time": 3.12
+      },
+      "latencyMs": 12125,
+      "warning": null
+    },
+    {
+      "actor": "L",
+      "stage": "matched",
+      "state": "completed",
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Help Juno repair the maintenance system.",
+          "why": "Juno has the materials and cells, and I have the duty to assist.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "repair",
+              "at": "workshops"
+            }
+          ]
+        },
+        "message": {
+          "to": "J",
+          "text": "I’m free. Let’s get that maintenance fixed."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 1,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "fb8e1408d0891f68b2dde02197bbfbb2e3fda701ea70832987d30ab7a3dd3913"
+      },
+      "usage": {
+        "prompt_tokens": 1509,
+        "completion_tokens": 204,
+        "total_tokens": 1713,
+        "input_tokens": 1509,
+        "output_tokens": 204,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.34
+      },
+      "latencyMs": 3428,
+      "warning": null
+    },
+    {
+      "actor": "B",
+      "stage": "matched",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "C",
+          "text": "I can certainly help with that, Cato—no problem at all, let me just check the current protocols for you. Would you like me to draft the criteria and send them to your infirmary terminal, or do you have a specific format in mind?"
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 1,
+          "verb": "cook",
+          "room": "kitchen"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "dc3b66d3662648ab0e5c32adaec2e22d5a9dcb63d794201171797a571298e605"
+      },
+      "usage": {
+        "prompt_tokens": 1634,
+        "completion_tokens": 150,
+        "total_tokens": 1784,
+        "input_tokens": 1634,
+        "output_tokens": 150,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.82
+      },
+      "latencyMs": 2921,
+      "warning": null
+    },
+    {
+      "actor": "J",
+      "stage": "derived_reply",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?"
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 2,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "5ff797d09175a853a8ff48c9ac4adf901f77beba32fda59afe10c3b0356abc3a"
+      },
+      "usage": {
+        "prompt_tokens": 1776,
+        "completion_tokens": 121,
+        "total_tokens": 1897,
+        "input_tokens": 1776,
+        "output_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.38
+      },
+      "latencyMs": 2484,
+      "warning": null
+    },
+    {
+      "actor": "L",
+      "stage": "derived_reply",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "J",
+          "text": "I'm on my way to the power bay now. Let's get that maintenance fixed."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "work",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 2,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "3f1183063b35d640cb339da52361a9a06ef499cd2407790f0970da1419a3807b"
+      },
+      "usage": {
+        "prompt_tokens": 1785,
+        "completion_tokens": 114,
+        "total_tokens": 1899,
+        "input_tokens": 1785,
+        "output_tokens": 114,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.31
+      },
+      "latencyMs": 2407,
+      "warning": null
+    },
+    {
+      "actor": "J",
+      "stage": "derived_reply",
+      "state": "completed",
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 2,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "4dbd76b98bee426bc46795fa1ef4c7466a5fc21b5e8f8bad7f0a9e8ed39d68f4"
+      },
+      "usage": {
+        "prompt_tokens": 1935,
+        "completion_tokens": 129,
+        "total_tokens": 2064,
+        "input_tokens": 1935,
+        "output_tokens": 129,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.56
+      },
+      "latencyMs": 2663,
+      "warning": null
+    }
+  ],
+  "watch": {
+    "kind": "watch",
+    "id": "open-message:L:watch",
+    "beforeHash": "4dbd76b98bee426bc46795fa1ef4c7466a5fc21b5e8f8bad7f0a9e8ed39d68f4",
+    "plans": {
+      "A": {
+        "stepId": "step:1",
+        "intent": {
+          "actor": "A",
+          "verb": "go",
+          "room": "records"
+        },
+        "at": null
+      },
+      "I": {
+        "stepId": "step:35",
+        "intent": {
+          "actor": "I",
+          "verb": "repair"
+        },
+        "at": "workshops"
+      },
+      "L": {
+        "stepId": "step:50",
+        "intent": {
+          "actor": "L",
+          "verb": "repair"
+        },
+        "at": "workshops"
+      }
+    },
+    "observations": [
+      {
+        "actor": "H",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "H"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "C",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "inspect",
+          "actor": "C"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "infirmary",
+            "who": [
+              "C"
+            ],
+            "text": "The Infirmary was walked through and looked over.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "infirmary"
+      },
+      {
+        "actor": "X",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "dig",
+          "actor": "X"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "face",
+            "who": [
+              "X"
+            ],
+            "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "face"
+      },
+      {
+        "actor": "S",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "S"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "R",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "R"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "hold"
+      },
+      {
+        "actor": "I",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "I",
+          "verb": "repair"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "workshops",
+            "who": [
+              "I"
+            ],
+            "text": "Iris repaired The Workshops; 1 material and 2 charge cells used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "workshops",
+        "stepId": "step:35"
+      },
+      {
+        "actor": "D",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "D"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "dock"
+      },
+      {
+        "actor": "W",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "charge",
+          "actor": "W"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "workshops"
+      },
+      {
+        "actor": "F",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "dig",
+          "actor": "F"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "face",
+            "who": [
+              "F"
+            ],
+            "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "face"
+      },
+      {
+        "actor": "U",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "inspect",
+          "actor": "U"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "infirmary",
+            "who": [
+              "U"
+            ],
+            "text": "The Infirmary was walked through and looked over.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "infirmary"
+      },
+      {
+        "actor": "T",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "T"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "G",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "G"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "longwalk"
+      },
+      {
+        "actor": "N",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "N",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "infirmary"
+      },
+      {
+        "actor": "B",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "B"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "hold"
+      },
+      {
+        "actor": "A",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "A",
+          "verb": "go",
+          "room": "records"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "records",
+        "stepId": "step:1"
+      },
+      {
+        "actor": "V",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "grow",
+          "actor": "V"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "garden",
+            "who": [
+              "V"
+            ],
+            "text": "Vero harvested 16 produce; 2 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "garden"
+      },
+      {
+        "actor": "O",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "O",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "well"
+      },
+      {
+        "actor": "Q",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "charge",
+          "actor": "Q"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "workshops"
+      },
+      {
+        "actor": "J",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "J",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "workshops"
+      },
+      {
+        "actor": "Y",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "dig",
+          "actor": "Y"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "face",
+            "who": [
+              "Y"
+            ],
+            "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "face"
+      },
+      {
+        "actor": "L",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "L",
+          "verb": "repair"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "workshops",
+            "who": [
+              "L"
+            ],
+            "text": "Lior repaired The Workshops; 1 material and 2 charge cells used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "workshops",
+        "stepId": "step:50"
+      },
+      {
+        "actor": "P",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "P"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "K",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "K"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "dispatch"
+      },
+      {
+        "actor": "M",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "M"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "E",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "E",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      }
+    ],
+    "beforeAccounts": {
+      "treasury": 0,
+      "maintenance": 90,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 11,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 8,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 0,
+      "credits:B": 0,
+      "credits:C": 0,
+      "credits:D": 0,
+      "credits:E": 0,
+      "credits:F": 0,
+      "credits:G": 0,
+      "credits:H": 0,
+      "credits:I": 0,
+      "credits:J": 0,
+      "credits:K": 0,
+      "credits:L": 0,
+      "credits:M": 0,
+      "credits:N": 0,
+      "credits:O": 0,
+      "credits:P": 0,
+      "credits:Q": 0,
+      "credits:R": 0,
+      "credits:S": 0,
+      "credits:T": 0,
+      "credits:U": 0,
+      "credits:V": 0,
+      "credits:W": 0,
+      "credits:X": 0,
+      "credits:Y": 0,
+      "stock:produce": 60,
+      "stock:meals": 100,
+      "stock:water": 250,
+      "stock:materials": 16,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 0,
+      "ledger:leaked": 0
+    },
+    "afterAccounts": {
+      "treasury": 0,
+      "maintenance": 100,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 9,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 6,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 0,
+      "credits:B": 1,
+      "credits:C": 1,
+      "credits:D": 1,
+      "credits:E": 0,
+      "credits:F": 2,
+      "credits:G": 1,
+      "credits:H": 1,
+      "credits:I": 2,
+      "credits:J": 0,
+      "credits:K": 1,
+      "credits:L": 2,
+      "credits:M": 1,
+      "credits:N": 0,
+      "credits:O": 0,
+      "credits:P": 1,
+      "credits:Q": 2,
+      "credits:R": 1,
+      "credits:S": 1,
+      "credits:T": 1,
+      "credits:U": 1,
+      "credits:V": 2,
+      "credits:W": 2,
+      "credits:X": 2,
+      "credits:Y": 2,
+      "stock:produce": 76,
+      "stock:meals": 100,
+      "stock:water": 245,
+      "stock:materials": 26,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 4,
+      "ledger:leaked": 0
+    },
+    "afterHash": "b812215641f31a509f224c72fb87aef166d1737fe259645c2bb035e5963a5fee"
+  },
+  "final": {
+    "G": {
+      "hash": "4f32ff5d257b8e6d07718b7f54511dd3ccd1aa9d0e47accf8ec64f13e722bbd6",
+      "publicSociety": {
+        "version": 1,
+        "revision": 14,
+        "startedAtMs": 1788825600000,
+        "residents": [
+          {
+            "id": "A",
+            "lastAttemptAtMs": 1788825601000,
+            "lastSuccessAtMs": 1788825601001,
+            "project": {
+              "id": "project:0",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "B",
+            "lastAttemptAtMs": 1788825602000,
+            "lastSuccessAtMs": 1788825602001,
+            "project": {
+              "id": "project:6",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "C",
+            "lastAttemptAtMs": 1788825603000,
+            "lastSuccessAtMs": 1788825603001,
+            "project": {
+              "id": "project:11",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "D",
+            "lastAttemptAtMs": 1788825604000,
+            "lastSuccessAtMs": 1788825604001,
+            "project": {
+              "id": "project:15",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "E",
+            "lastAttemptAtMs": 1788825605000,
+            "lastSuccessAtMs": 1788825605001,
+            "project": {
+              "id": "project:20",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "F",
+            "lastAttemptAtMs": 1788825606000,
+            "lastSuccessAtMs": 1788825606001,
+            "project": {
+              "id": "project:25",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "G",
+            "lastAttemptAtMs": 1788825607000,
+            "lastSuccessAtMs": 1788825607001,
+            "project": {
+              "id": "project:30",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "H",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "I",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "J",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "K",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "L",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "M",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "N",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "O",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "P",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "Q",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "R",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "S",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "T",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "U",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "V",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "W",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "X",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "Y",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          }
+        ],
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "A",
+              "U"
+            ],
+            "status": "open",
+            "nextSpeaker": "U",
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "speaker": "A",
+                "text": "Ulla, do you remember the quiet of the school library? I am thinking of writing something, but I have never once said so aloud. Would you like to hear it?",
+                "atMs": 1788825601001
+              }
+            ]
+          },
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "status": "open",
+            "nextSpeaker": "B",
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              }
+            ]
+          },
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "status": "open",
+            "nextSpeaker": "D",
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "speaker": "D",
+                "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+                "atMs": 1788825604001
+              },
+              {
+                "id": "turn:31",
+                "speaker": "G",
+                "text": "Inspection complete. Hull integrity is nominal. The data is yours.",
+                "atMs": 1788825607001
+              }
+            ]
+          },
+          {
+            "id": "conversation:21",
+            "participants": [
+              "E",
+              "H"
+            ],
+            "status": "open",
+            "nextSpeaker": "H",
+            "expiresAtMs": 1788912005001,
+            "turns": [
+              {
+                "id": "turn:22",
+                "speaker": "E",
+                "text": "Halim, I need to discuss the current work roster. My allocation duties require me to ensure the schedule aligns with our actual capacity and needs. Are you available for a brief meeting?",
+                "atMs": 1788825605001
+              }
+            ]
+          },
+          {
+            "id": "conversation:26",
+            "participants": [
+              "F",
+              "M"
+            ],
+            "status": "open",
+            "nextSpeaker": "M",
+            "expiresAtMs": 1788912006001,
+            "turns": [
+              {
+                "id": "turn:27",
+                "speaker": "F",
+                "text": "I was just thinking about how I used to shuttle messages between you and everyone else back in the day. It’s funny how those little threads hold the whole tapestry together, isn't it? Do you still keep those old notes, or did you finally let them go?",
+                "atMs": 1788825606001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "coverage": {
+          "total": 25,
+          "neverThought": 18,
+          "waitingForReply": [
+            "U",
+            "B",
+            "D",
+            "H",
+            "M"
+          ]
+        }
+      },
+      "offers": [],
+      "agreements": [],
+      "accounts": {
+        "treasury": 0,
+        "maintenance": 90,
+        "cells:A": 15,
+        "cells:B": 8,
+        "cells:C": 8,
+        "cells:D": 15,
+        "cells:E": 10,
+        "cells:F": 13,
+        "cells:G": 17,
+        "cells:H": 8,
+        "cells:I": 11,
+        "cells:J": 15,
+        "cells:K": 12,
+        "cells:L": 8,
+        "cells:M": 17,
+        "cells:N": 17,
+        "cells:O": 15,
+        "cells:P": 16,
+        "cells:Q": 10,
+        "cells:R": 17,
+        "cells:S": 17,
+        "cells:T": 10,
+        "cells:U": 13,
+        "cells:V": 8,
+        "cells:W": 13,
+        "cells:X": 12,
+        "cells:Y": 10,
+        "credits:A": 0,
+        "credits:B": 0,
+        "credits:C": 0,
+        "credits:D": 0,
+        "credits:E": 0,
+        "credits:F": 0,
+        "credits:G": 0,
+        "credits:H": 0,
+        "credits:I": 0,
+        "credits:J": 0,
+        "credits:K": 0,
+        "credits:L": 0,
+        "credits:M": 0,
+        "credits:N": 0,
+        "credits:O": 0,
+        "credits:P": 0,
+        "credits:Q": 0,
+        "credits:R": 0,
+        "credits:S": 0,
+        "credits:T": 0,
+        "credits:U": 0,
+        "credits:V": 0,
+        "credits:W": 0,
+        "credits:X": 0,
+        "credits:Y": 0,
+        "stock:produce": 60,
+        "stock:meals": 100,
+        "stock:water": 250,
+        "stock:materials": 16,
+        "ledger:initialCells": 315,
+        "ledger:minted": 0,
+        "ledger:burned": 0,
+        "ledger:leaked": 0
+      }
+    },
+    "L": {
+      "hash": "b812215641f31a509f224c72fb87aef166d1737fe259645c2bb035e5963a5fee",
+      "publicSociety": {
+        "version": 1,
+        "revision": 30,
+        "startedAtMs": 1788825600000,
+        "residents": [
+          {
+            "id": "A",
+            "lastAttemptAtMs": 1788825601000,
+            "lastSuccessAtMs": 1788825601001,
+            "project": {
+              "id": "project:0",
+              "visibility": "private",
+              "goal": null,
+              "status": "steps_finished",
+              "completedSteps": 1,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "B",
+            "lastAttemptAtMs": 1788825602000,
+            "lastSuccessAtMs": 1788825602001,
+            "project": {
+              "id": "project:6",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "C",
+            "lastAttemptAtMs": 1788825603000,
+            "lastSuccessAtMs": 1788825603001,
+            "project": {
+              "id": "project:11",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "D",
+            "lastAttemptAtMs": 1788825604000,
+            "lastSuccessAtMs": 1788825604001,
+            "project": {
+              "id": "project:15",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "E",
+            "lastAttemptAtMs": 1788825605000,
+            "lastSuccessAtMs": 1788825605001,
+            "project": {
+              "id": "project:20",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "F",
+            "lastAttemptAtMs": 1788825606000,
+            "lastSuccessAtMs": 1788825606001,
+            "project": {
+              "id": "project:25",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "G",
+            "lastAttemptAtMs": 1788825607000,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "H",
+            "lastAttemptAtMs": 1788825608000,
+            "lastSuccessAtMs": 1788825608001,
+            "project": {
+              "id": "project:30",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "I",
+            "lastAttemptAtMs": 1788825609000,
+            "lastSuccessAtMs": 1788825609001,
+            "project": {
+              "id": "project:34",
+              "visibility": "private",
+              "goal": null,
+              "status": "steps_finished",
+              "completedSteps": 1,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "J",
+            "lastAttemptAtMs": 1788825642000,
+            "lastSuccessAtMs": 1788825642001,
+            "project": {
+              "id": "project:40",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "K",
+            "lastAttemptAtMs": 1788825611000,
+            "lastSuccessAtMs": 1788825611001,
+            "project": {
+              "id": "project:45",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "L",
+            "lastAttemptAtMs": 1788825641000,
+            "lastSuccessAtMs": 1788825641001,
+            "project": {
+              "id": "project:49",
+              "visibility": "private",
+              "goal": null,
+              "status": "steps_finished",
+              "completedSteps": 1,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "M",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "N",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "O",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "P",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "Q",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "R",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "S",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "T",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "U",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "V",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "W",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "X",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "Y",
+            "lastAttemptAtMs": null,
+            "lastSuccessAtMs": null,
+            "project": null
+          }
+        ],
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "A",
+              "U"
+            ],
+            "status": "open",
+            "nextSpeaker": "U",
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "speaker": "A",
+                "text": "Ulla, do you remember the quiet of the school library? I am thinking of writing something, but I have never once said so aloud. Would you like to hear it?",
+                "atMs": 1788825601001
+              }
+            ]
+          },
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "status": "open",
+            "nextSpeaker": "B",
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              }
+            ]
+          },
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "status": "open",
+            "nextSpeaker": "G",
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "speaker": "D",
+                "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+                "atMs": 1788825604001
+              }
+            ]
+          },
+          {
+            "id": "conversation:21",
+            "participants": [
+              "E",
+              "H"
+            ],
+            "status": "open",
+            "nextSpeaker": "E",
+            "expiresAtMs": 1788912005001,
+            "turns": [
+              {
+                "id": "turn:22",
+                "speaker": "E",
+                "text": "Halim, I need to discuss the current work roster. My allocation duties require me to ensure the schedule aligns with our actual capacity and needs. Are you available for a brief meeting?",
+                "atMs": 1788825605001
+              },
+              {
+                "id": "turn:31",
+                "speaker": "H",
+                "text": "The roster is under review. A meeting was requested to ensure alignment with actual capacity. When is the schedule suitable for discussion?",
+                "atMs": 1788825608001
+              }
+            ]
+          },
+          {
+            "id": "conversation:26",
+            "participants": [
+              "F",
+              "M"
+            ],
+            "status": "open",
+            "nextSpeaker": "M",
+            "expiresAtMs": 1788912006001,
+            "turns": [
+              {
+                "id": "turn:27",
+                "speaker": "F",
+                "text": "I was just thinking about how I used to shuttle messages between you and everyone else back in the day. It’s funny how those little threads hold the whole tapestry together, isn't it? Do you still keep those old notes, or did you finally let them go?",
+                "atMs": 1788825606001
+              }
+            ]
+          },
+          {
+            "id": "conversation:36",
+            "participants": [
+              "I",
+              "K"
+            ],
+            "status": "open",
+            "nextSpeaker": "I",
+            "expiresAtMs": 1788912009001,
+            "turns": [
+              {
+                "id": "turn:37",
+                "speaker": "I",
+                "text": "I'm heading to the workshops to run a repair cycle. Do you have any pending comms checks that need to happen first?",
+                "atMs": 1788825609001
+              },
+              {
+                "id": "turn:46",
+                "speaker": "K",
+                "text": "I have a recording of the ventilation hum from last night; it has a strange rhythmic dip. Would you be willing to listen to it with me?",
+                "atMs": 1788825611001
+              }
+            ]
+          },
+          {
+            "id": "conversation:41",
+            "participants": [
+              "J",
+              "L"
+            ],
+            "status": "open",
+            "nextSpeaker": "L",
+            "expiresAtMs": 1788912010001,
+            "turns": [
+              {
+                "id": "turn:42",
+                "speaker": "J",
+                "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+                "atMs": 1788825610001
+              },
+              {
+                "id": "turn:51",
+                "speaker": "L",
+                "text": "I’m free. Let’s get that maintenance fixed.",
+                "atMs": 1788825612001
+              },
+              {
+                "id": "turn:55",
+                "speaker": "J",
+                "text": "Good. I have the materials and cells ready at the power bay. Are you coming over to start the repair now?",
+                "atMs": 1788825640001
+              },
+              {
+                "id": "turn:59",
+                "speaker": "L",
+                "text": "I'm on my way to the power bay now. Let's get that maintenance fixed.",
+                "atMs": 1788825641001
+              },
+              {
+                "id": "turn:63",
+                "speaker": "J",
+                "text": "I'm here at the power bay with the materials and cells ready. Since you're on your way, let's start the repair immediately to get the maintenance up.",
+                "atMs": 1788825642001
+              }
+            ]
+          }
+        ],
+        "offers": [
+          {
+            "id": "offer:54",
+            "conversationId": "conversation:41",
+            "proposer": "L",
+            "counterpart": "J",
+            "terms": {
+              "kind": "work",
+              "worker": "J",
+              "payer": "L",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 402
+            },
+            "status": "replaced",
+            "expiresAtWatch": 402,
+            "replaces": null
+          },
+          {
+            "id": "offer:58",
+            "conversationId": "conversation:41",
+            "proposer": "J",
+            "counterpart": "L",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 403
+            },
+            "status": "replaced",
+            "expiresAtWatch": 402,
+            "replaces": null
+          },
+          {
+            "id": "offer:62",
+            "conversationId": "conversation:41",
+            "proposer": "L",
+            "counterpart": "J",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 403
+            },
+            "status": "replaced",
+            "expiresAtWatch": 402,
+            "replaces": null
+          },
+          {
+            "id": "offer:66",
+            "conversationId": "conversation:41",
+            "proposer": "J",
+            "counterpart": "L",
+            "terms": {
+              "kind": "work",
+              "worker": "L",
+              "payer": "J",
+              "cells": 0,
+              "verb": "repair",
+              "room": "workshops",
+              "units": 1,
+              "dueWatch": 403
+            },
+            "status": "open",
+            "expiresAtWatch": 402,
+            "replaces": null
+          }
+        ],
+        "agreements": [],
+        "coverage": {
+          "total": 25,
+          "neverThought": 14,
+          "waitingForReply": [
+            "U",
+            "B",
+            "G",
+            "E",
+            "M",
+            "I",
+            "L"
+          ]
+        }
+      },
+      "offers": [
+        {
+          "id": "offer:54",
+          "conversationId": "conversation:41",
+          "proposer": "L",
+          "counterpart": "J",
+          "terms": {
+            "kind": "work",
+            "worker": "J",
+            "payer": "L",
+            "cells": 0,
+            "verb": "repair",
+            "room": "workshops",
+            "units": 1,
+            "dueWatch": 402
+          },
+          "status": "replaced",
+          "replaces": null,
+          "createdAtMs": 1788825612001,
+          "expiresAtWatch": 402,
+          "acceptedAtMs": null
+        },
+        {
+          "id": "offer:58",
+          "conversationId": "conversation:41",
+          "proposer": "J",
+          "counterpart": "L",
+          "terms": {
+            "kind": "work",
+            "worker": "L",
+            "payer": "J",
+            "cells": 0,
+            "verb": "repair",
+            "room": "workshops",
+            "units": 1,
+            "dueWatch": 403
+          },
+          "status": "replaced",
+          "replaces": null,
+          "createdAtMs": 1788825640001,
+          "expiresAtWatch": 402,
+          "acceptedAtMs": null
+        },
+        {
+          "id": "offer:62",
+          "conversationId": "conversation:41",
+          "proposer": "L",
+          "counterpart": "J",
+          "terms": {
+            "kind": "work",
+            "worker": "L",
+            "payer": "J",
+            "cells": 0,
+            "verb": "repair",
+            "room": "workshops",
+            "units": 1,
+            "dueWatch": 403
+          },
+          "status": "replaced",
+          "replaces": null,
+          "createdAtMs": 1788825641001,
+          "expiresAtWatch": 402,
+          "acceptedAtMs": null
+        },
+        {
+          "id": "offer:66",
+          "conversationId": "conversation:41",
+          "proposer": "J",
+          "counterpart": "L",
+          "terms": {
+            "kind": "work",
+            "worker": "L",
+            "payer": "J",
+            "cells": 0,
+            "verb": "repair",
+            "room": "workshops",
+            "units": 1,
+            "dueWatch": 403
+          },
+          "status": "open",
+          "replaces": null,
+          "createdAtMs": 1788825642001,
+          "expiresAtWatch": 402,
+          "acceptedAtMs": null
+        }
+      ],
+      "agreements": [],
+      "accounts": {
+        "treasury": 0,
+        "maintenance": 100,
+        "cells:A": 15,
+        "cells:B": 8,
+        "cells:C": 8,
+        "cells:D": 15,
+        "cells:E": 10,
+        "cells:F": 13,
+        "cells:G": 17,
+        "cells:H": 8,
+        "cells:I": 9,
+        "cells:J": 15,
+        "cells:K": 12,
+        "cells:L": 6,
+        "cells:M": 17,
+        "cells:N": 17,
+        "cells:O": 15,
+        "cells:P": 16,
+        "cells:Q": 10,
+        "cells:R": 17,
+        "cells:S": 17,
+        "cells:T": 10,
+        "cells:U": 13,
+        "cells:V": 8,
+        "cells:W": 13,
+        "cells:X": 12,
+        "cells:Y": 10,
+        "credits:A": 0,
+        "credits:B": 1,
+        "credits:C": 1,
+        "credits:D": 1,
+        "credits:E": 0,
+        "credits:F": 2,
+        "credits:G": 1,
+        "credits:H": 1,
+        "credits:I": 2,
+        "credits:J": 0,
+        "credits:K": 1,
+        "credits:L": 2,
+        "credits:M": 1,
+        "credits:N": 0,
+        "credits:O": 0,
+        "credits:P": 1,
+        "credits:Q": 2,
+        "credits:R": 1,
+        "credits:S": 1,
+        "credits:T": 1,
+        "credits:U": 1,
+        "credits:V": 2,
+        "credits:W": 2,
+        "credits:X": 2,
+        "credits:Y": 2,
+        "stock:produce": 76,
+        "stock:meals": 100,
+        "stock:water": 245,
+        "stock:materials": 26,
+        "ledger:initialCells": 315,
+        "ledger:minted": 0,
+        "ledger:burned": 4,
+        "ledger:leaked": 0
+      }
+    },
+    "B": {
+      "hash": "dc3b66d3662648ab0e5c32adaec2e22d5a9dcb63d794201171797a571298e605",
+      "publicSociety": {
+        "version": 1,
+        "revision": 49,
+        "startedAtMs": 1788825600000,
+        "residents": [
+          {
+            "id": "A",
+            "lastAttemptAtMs": 1788825601000,
+            "lastSuccessAtMs": 1788825601001,
+            "project": {
+              "id": "project:0",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "B",
+            "lastAttemptAtMs": 1788825626000,
+            "lastSuccessAtMs": 1788825626001,
+            "project": {
+              "id": "project:6",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "C",
+            "lastAttemptAtMs": 1788825603000,
+            "lastSuccessAtMs": 1788825603001,
+            "project": {
+              "id": "project:11",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "D",
+            "lastAttemptAtMs": 1788825604000,
+            "lastSuccessAtMs": 1788825604001,
+            "project": {
+              "id": "project:15",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "E",
+            "lastAttemptAtMs": 1788825605000,
+            "lastSuccessAtMs": 1788825605001,
+            "project": {
+              "id": "project:20",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "F",
+            "lastAttemptAtMs": 1788825606000,
+            "lastSuccessAtMs": 1788825606001,
+            "project": {
+              "id": "project:25",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "G",
+            "lastAttemptAtMs": 1788825607000,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "H",
+            "lastAttemptAtMs": 1788825608000,
+            "lastSuccessAtMs": 1788825608001,
+            "project": {
+              "id": "project:30",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "I",
+            "lastAttemptAtMs": 1788825609000,
+            "lastSuccessAtMs": 1788825609001,
+            "project": {
+              "id": "project:34",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "J",
+            "lastAttemptAtMs": 1788825610000,
+            "lastSuccessAtMs": 1788825610001,
+            "project": {
+              "id": "project:40",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "K",
+            "lastAttemptAtMs": 1788825611000,
+            "lastSuccessAtMs": 1788825611001,
+            "project": {
+              "id": "project:45",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "L",
+            "lastAttemptAtMs": 1788825612000,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "M",
+            "lastAttemptAtMs": 1788825613000,
+            "lastSuccessAtMs": 1788825613001,
+            "project": {
+              "id": "project:49",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "N",
+            "lastAttemptAtMs": 1788825614000,
+            "lastSuccessAtMs": 1788825614001,
+            "project": {
+              "id": "project:54",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 2
+            }
+          },
+          {
+            "id": "O",
+            "lastAttemptAtMs": 1788825615000,
+            "lastSuccessAtMs": 1788825615001,
+            "project": {
+              "id": "project:61",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "P",
+            "lastAttemptAtMs": 1788825616000,
+            "lastSuccessAtMs": 1788825616001,
+            "project": {
+              "id": "project:66",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "Q",
+            "lastAttemptAtMs": 1788825617000,
+            "lastSuccessAtMs": 1788825617001,
+            "project": {
+              "id": "project:71",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "R",
+            "lastAttemptAtMs": 1788825618000,
+            "lastSuccessAtMs": 1788825618001,
+            "project": {
+              "id": "project:75",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "S",
+            "lastAttemptAtMs": 1788825619000,
+            "lastSuccessAtMs": 1788825619001,
+            "project": {
+              "id": "project:80",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "T",
+            "lastAttemptAtMs": 1788825620000,
+            "lastSuccessAtMs": null,
+            "project": null
+          },
+          {
+            "id": "U",
+            "lastAttemptAtMs": 1788825621000,
+            "lastSuccessAtMs": 1788825621001,
+            "project": {
+              "id": "project:85",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "V",
+            "lastAttemptAtMs": 1788825622000,
+            "lastSuccessAtMs": 1788825622001,
+            "project": {
+              "id": "project:89",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "W",
+            "lastAttemptAtMs": 1788825623000,
+            "lastSuccessAtMs": 1788825623001,
+            "project": {
+              "id": "project:95",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          },
+          {
+            "id": "X",
+            "lastAttemptAtMs": 1788825624000,
+            "lastSuccessAtMs": 1788825624001,
+            "project": {
+              "id": "project:99",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 1
+            }
+          },
+          {
+            "id": "Y",
+            "lastAttemptAtMs": 1788825625000,
+            "lastSuccessAtMs": 1788825625001,
+            "project": {
+              "id": "project:104",
+              "visibility": "private",
+              "goal": null,
+              "status": "active",
+              "completedSteps": 0,
+              "totalSteps": 0
+            }
+          }
+        ],
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "A",
+              "U"
+            ],
+            "status": "open",
+            "nextSpeaker": "A",
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "speaker": "A",
+                "text": "Ulla, do you remember the quiet of the school library? I am thinking of writing something, but I have never once said so aloud. Would you like to hear it?",
+                "atMs": 1788825601001
+              },
+              {
+                "id": "turn:86",
+                "speaker": "U",
+                "text": "The library was quiet, but I’m not. Tell me what you’ve written.",
+                "atMs": 1788825621001
+              }
+            ]
+          },
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "status": "open",
+            "nextSpeaker": "C",
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              },
+              {
+                "id": "turn:106",
+                "speaker": "B",
+                "text": "I can certainly help with that, Cato—no problem at all, let me just check the current protocols for you. Would you like me to draft the criteria and send them to your infirmary terminal, or do you have a specific format in mind?",
+                "atMs": 1788825626001
+              }
+            ]
+          },
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "status": "open",
+            "nextSpeaker": "G",
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "speaker": "D",
+                "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+                "atMs": 1788825604001
+              }
+            ]
+          },
+          {
+            "id": "conversation:21",
+            "participants": [
+              "E",
+              "H"
+            ],
+            "status": "open",
+            "nextSpeaker": "E",
+            "expiresAtMs": 1788912005001,
+            "turns": [
+              {
+                "id": "turn:22",
+                "speaker": "E",
+                "text": "Halim, I need to discuss the current work roster. My allocation duties require me to ensure the schedule aligns with our actual capacity and needs. Are you available for a brief meeting?",
+                "atMs": 1788825605001
+              },
+              {
+                "id": "turn:31",
+                "speaker": "H",
+                "text": "The roster is under review. A meeting was requested to ensure alignment with actual capacity. When is the schedule suitable for discussion?",
+                "atMs": 1788825608001
+              }
+            ]
+          },
+          {
+            "id": "conversation:26",
+            "participants": [
+              "F",
+              "M"
+            ],
+            "status": "open",
+            "nextSpeaker": "F",
+            "expiresAtMs": 1788912006001,
+            "turns": [
+              {
+                "id": "turn:27",
+                "speaker": "F",
+                "text": "I was just thinking about how I used to shuttle messages between you and everyone else back in the day. It’s funny how those little threads hold the whole tapestry together, isn't it? Do you still keep those old notes, or did you finally let them go?",
+                "atMs": 1788825606001
+              },
+              {
+                "id": "turn:50",
+                "speaker": "M",
+                "text": "Now then, Ferran, I keep them all, for they are the only map we have to how we got here. Do you think it is time we sat down properly to discuss what those threads mean for our next move?",
+                "atMs": 1788825613001
+              }
+            ]
+          },
+          {
+            "id": "conversation:36",
+            "participants": [
+              "I",
+              "K"
+            ],
+            "status": "open",
+            "nextSpeaker": "I",
+            "expiresAtMs": 1788912009001,
+            "turns": [
+              {
+                "id": "turn:37",
+                "speaker": "I",
+                "text": "I'm heading to the workshops to run a repair cycle. Do you have any pending comms checks that need to happen first?",
+                "atMs": 1788825609001
+              },
+              {
+                "id": "turn:46",
+                "speaker": "K",
+                "text": "I have a recording of the ventilation hum from last night; it has a strange rhythmic dip. Would you be willing to listen to it with me?",
+                "atMs": 1788825611001
+              }
+            ]
+          },
+          {
+            "id": "conversation:41",
+            "participants": [
+              "J",
+              "L"
+            ],
+            "status": "open",
+            "nextSpeaker": "L",
+            "expiresAtMs": 1788912010001,
+            "turns": [
+              {
+                "id": "turn:42",
+                "speaker": "J",
+                "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+                "atMs": 1788825610001
+              }
+            ]
+          },
+          {
+            "id": "conversation:57",
+            "participants": [
+              "N",
+              "O"
+            ],
+            "status": "open",
+            "nextSpeaker": "N",
+            "expiresAtMs": 1788912014001,
+            "turns": [
+              {
+                "id": "turn:58",
+                "speaker": "N",
+                "text": "I'm heading to the infirmary to check on Cato. How are you holding up at the Well today?",
+                "atMs": 1788825614001
+              },
+              {
+                "id": "turn:63",
+                "speaker": "O",
+                "text": "I'm fine. Cato's a priority, but the water needs filtering now.",
+                "atMs": 1788825615001
+              }
+            ]
+          },
+          {
+            "id": "conversation:67",
+            "participants": [
+              "P",
+              "Q"
+            ],
+            "status": "open",
+            "nextSpeaker": "P",
+            "expiresAtMs": 1788912016001,
+            "turns": [
+              {
+                "id": "turn:68",
+                "speaker": "P",
+                "text": "Quim, hijo. The oven is warm and the flour is waiting. Come by the kitchen when you can; I have something to show you.",
+                "atMs": 1788825616001
+              },
+              {
+                "id": "turn:72",
+                "speaker": "Q",
+                "text": "Pilar, I’m coming by the kitchen. What is it you wanted to show me?",
+                "atMs": 1788825617001
+              }
+            ]
+          },
+          {
+            "id": "conversation:76",
+            "participants": [
+              "R",
+              "T"
+            ],
+            "status": "open",
+            "nextSpeaker": "T",
+            "expiresAtMs": 1788912018001,
+            "turns": [
+              {
+                "id": "turn:77",
+                "speaker": "R",
+                "text": "I am checking the hold inventory to ensure the records match the physical stock. Do you have time to review the current counts with me?",
+                "atMs": 1788825618001
+              }
+            ]
+          },
+          {
+            "id": "conversation:81",
+            "participants": [
+              "S",
+              "X"
+            ],
+            "status": "open",
+            "nextSpeaker": "S",
+            "expiresAtMs": 1788912019001,
+            "turns": [
+              {
+                "id": "turn:82",
+                "speaker": "S",
+                "text": "The excavation site is dry. I am not. Do you need a hand with the digging, or just the quiet?",
+                "atMs": 1788825619001
+              },
+              {
+                "id": "turn:101",
+                "speaker": "X",
+                "text": "The ground here is hard, but it yields. I don't need a hand, just the quiet you offered. I'll handle the water consumption.",
+                "atMs": 1788825624001
+              }
+            ]
+          },
+          {
+            "id": "conversation:91",
+            "participants": [
+              "V",
+              "W"
+            ],
+            "status": "open",
+            "nextSpeaker": "V",
+            "expiresAtMs": 1788912022001,
+            "turns": [
+              {
+                "id": "turn:92",
+                "speaker": "V",
+                "text": "I'm getting hungry, Wen. I'm planting trays in the garden right now. Are you watching the power grid, or just staring at the walls?",
+                "atMs": 1788825622001
+              },
+              {
+                "id": "turn:96",
+                "speaker": "W",
+                "text": "I am watching the grid. It is stable.",
+                "atMs": 1788825623001
+              }
+            ]
+          }
+        ],
+        "offers": [
+          {
+            "id": "offer:109",
+            "conversationId": "conversation:7",
+            "proposer": "B",
+            "counterpart": "C",
+            "terms": {
+              "kind": "work",
+              "worker": "C",
+              "payer": "B",
+              "cells": 0,
+              "verb": "cook",
+              "room": "kitchen",
+              "units": 1,
+              "dueWatch": 402
+            },
+            "status": "open",
+            "expiresAtWatch": 402,
+            "replaces": null
+          }
+        ],
+        "agreements": [],
+        "coverage": {
+          "total": 25,
+          "neverThought": 3,
+          "waitingForReply": [
+            "A",
+            "C",
+            "G",
+            "E",
+            "F",
+            "I",
+            "L",
+            "N",
+            "P",
+            "T",
+            "S",
+            "V"
+          ]
+        }
+      },
+      "offers": [
+        {
+          "id": "offer:109",
+          "conversationId": "conversation:7",
+          "proposer": "B",
+          "counterpart": "C",
+          "terms": {
+            "kind": "work",
+            "worker": "C",
+            "payer": "B",
+            "cells": 0,
+            "verb": "cook",
+            "room": "kitchen",
+            "units": 1,
+            "dueWatch": 402
+          },
+          "status": "open",
+          "replaces": null,
+          "createdAtMs": 1788825626001,
+          "expiresAtWatch": 402,
+          "acceptedAtMs": null
+        }
+      ],
+      "agreements": [],
+      "accounts": {
+        "treasury": 0,
+        "maintenance": 90,
+        "cells:A": 15,
+        "cells:B": 8,
+        "cells:C": 8,
+        "cells:D": 15,
+        "cells:E": 10,
+        "cells:F": 13,
+        "cells:G": 17,
+        "cells:H": 8,
+        "cells:I": 11,
+        "cells:J": 15,
+        "cells:K": 12,
+        "cells:L": 8,
+        "cells:M": 17,
+        "cells:N": 17,
+        "cells:O": 15,
+        "cells:P": 16,
+        "cells:Q": 10,
+        "cells:R": 17,
+        "cells:S": 17,
+        "cells:T": 10,
+        "cells:U": 13,
+        "cells:V": 8,
+        "cells:W": 13,
+        "cells:X": 12,
+        "cells:Y": 10,
+        "credits:A": 0,
+        "credits:B": 0,
+        "credits:C": 0,
+        "credits:D": 0,
+        "credits:E": 0,
+        "credits:F": 0,
+        "credits:G": 0,
+        "credits:H": 0,
+        "credits:I": 0,
+        "credits:J": 0,
+        "credits:K": 0,
+        "credits:L": 0,
+        "credits:M": 0,
+        "credits:N": 0,
+        "credits:O": 0,
+        "credits:P": 0,
+        "credits:Q": 0,
+        "credits:R": 0,
+        "credits:S": 0,
+        "credits:T": 0,
+        "credits:U": 0,
+        "credits:V": 0,
+        "credits:W": 0,
+        "credits:X": 0,
+        "credits:Y": 0,
+        "stock:produce": 60,
+        "stock:meals": 100,
+        "stock:water": 250,
+        "stock:materials": 16,
+        "ledger:initialCells": 315,
+        "ledger:minted": 0,
+        "ledger:burned": 0,
+        "ledger:leaked": 0
+      }
+    }
+  }
+}

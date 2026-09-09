@@ -1,0 +1,185 @@
+{
+  "scope": "Two independent GENESIS decisions; no production mutation or physical watch. Syntax/domain acceptance are not semantic quality.",
+  "humanReview": "pending",
+  "binding": "c6e933dfc97f27d513a6002d43d609894b7580e849a5e7b3d20cd7b79abdae63",
+  "attempts": 2,
+  "accountedNeurons": 18,
+  "maxNeurons": 150,
+  "stopped": null,
+  "rows": [
+    {
+      "id": "protocol-v2:dynamic:A",
+      "actor": "A",
+      "variant": "production-dynamic",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 791,
+        "completion_tokens": 130,
+        "total_tokens": 921,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.61976432800293
+      },
+      "error": null,
+      "output": {
+        "message": {
+          "text": "What is the best way to begin writing something?",
+          "to": "U"
+        },
+        "project": {
+          "goal": "To write something",
+          "mode": "replace",
+          "steps": [],
+          "visibility": "private",
+          "why": "To fulfill a long-held desire without external pressure."
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1",
+            "world:100:1",
+            "world:100:1"
+          ],
+          "text": "The desire to write has been present but unspoken. How to translate this into action?"
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "project": {
+          "id": "project:0",
+          "goal": "To write something",
+          "why": "To fulfill a long-held desire without external pressure.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825601001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "A",
+              "U"
+            ],
+            "revision": 1,
+            "nextSpeaker": "U",
+            "status": "open",
+            "createdAtMs": 1788825601001,
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "index": 0,
+                "speaker": "A",
+                "text": "What is the best way to begin writing something?",
+                "atMs": 1788825601001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 8,
+      "latencyMs": 2194
+    },
+    {
+      "id": "protocol-v2:dynamic:B",
+      "actor": "B",
+      "variant": "production-dynamic",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 734,
+        "completion_tokens": 200,
+        "total_tokens": 934,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 9.489397048950195
+      },
+      "error": null,
+      "output": {
+        "message": {
+          "text": "I'm sorry, but I don't know what you're referring to. Could you please clarify what you need me to be consulted about?",
+          "to": "A"
+        },
+        "project": {
+          "goal": "To be consulted about something once.",
+          "mode": "replace",
+          "steps": [],
+          "visibility": "public",
+          "why": "Ama Oyelaran is in charge of Records and might have information about any ongoing projects or decisions that require consultation."
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1",
+            "world:100:1",
+            "world:100:1"
+          ],
+          "text": "Bex is trying to fulfill her want of being consulted about something once. She is reaching out to Ama Oyelaran, who is in charge of Records, hoping that there might be some information or project that requires consultation."
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "project": {
+          "id": "project:0",
+          "goal": "To be consulted about something once.",
+          "why": "Ama Oyelaran is in charge of Records and might have information about any ongoing projects or decisions that require consultation.",
+          "visibility": "public",
+          "status": "active",
+          "createdAtMs": 1788825601001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "B",
+              "A"
+            ],
+            "revision": 1,
+            "nextSpeaker": "A",
+            "status": "open",
+            "createdAtMs": 1788825601001,
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "index": 0,
+                "speaker": "B",
+                "text": "I'm sorry, but I don't know what you're referring to. Could you please clarify what you need me to be consulted about?",
+                "atMs": 1788825601001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 10,
+      "latencyMs": 1890
+    }
+  ]
+}

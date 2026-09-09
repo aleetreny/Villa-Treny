@@ -1,0 +1,111 @@
+{
+  "format": "villa-retrieval-release-validation-v1",
+  "version": "caf46bd8-1bda-40f6-a1f3-b60dfe420375",
+  "previousVersion": "f51806c8-c8a8-4586-8ea1-4e122c1d10e4",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "applicationTests": 1019,
+    "workerTests": 355,
+    "nodeTests": 62,
+    "browserTests": 21,
+    "browserRooms": 45,
+    "hostingTests": 6,
+    "hostingExternalCalls": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "roomPngs": 46,
+    "dryDeploy": true,
+    "frozenSourceFiles": 302
+  },
+  "nativeBrowser": {
+    "reviewedAfterRelease": false,
+    "reason": "CUA reports Mac locked; user asked to unlock. Automated browser tests are fresh and passed.",
+    "pending": true
+  },
+  "logEvidence": {
+    "check": {
+      "sha256": "761d041fc9d1b4b8a31df5c8cfe7152136ee8d43bf116c9221b53d735ab326a3",
+      "bytes": 10283
+    },
+    "build": {
+      "sha256": "f1006ceb34177c5d18033c9fb89d8cda6b8f68b43812222166c9c84376aacc17",
+      "bytes": 876
+    },
+    "dry": {
+      "sha256": "6d081ef48418a1cabb47e6c198be9b4618f25d9b2ee8abbd275a5c57072c0f0f",
+      "bytes": 1854
+    },
+    "browser": {
+      "sha256": "ad27ec5c02a9889dccde453f64cfbfa68f8654c10375b8c56fcd2a4d1a569ffd",
+      "bytes": 4830
+    },
+    "hosting": {
+      "sha256": "9db97d048b52031ec5848af782f8329bde5d6db2fdc7482d2930e593928ec1c0",
+      "bytes": 792
+    },
+    "deploy": {
+      "sha256": "1b782026c22261f64a202a8e6bef9ea771c94f8befe3c1449cecaeea528c921e",
+      "bytes": 2194
+    }
+  },
+  "sourceManifest": "retrieval-source-manifest.json",
+  "sourceBundleSha256": "d11e7dd6feda80b9427262228a444f204e19e956afc16bc623705d6d60250a14",
+  "continuity": {
+    "verified": true,
+    "state": "verified by exact offline migration plus natural cognition replay",
+    "immediatePost": {
+      "verified": false,
+      "observedBeforeSqlVersion": 10,
+      "observedAfterSqlVersion": 10,
+      "observedBeforeSocietyVersion": 2,
+      "observedAfterSocietyVersion": 2,
+      "beforeWorldRevision": 245,
+      "afterWorldRevision": 245,
+      "checks": 660,
+      "passed": 651,
+      "failed": 9,
+      "interpretation": "The immediate post-deployment capture contains the unchanged previous schema; it does not certify SQL11 migration. The original failure is preserved privately. Expected-version labels in that first verifier are not observed metadata."
+    },
+    "propagatedPost": {
+      "worldRevision": 247,
+      "schemaVersion": 11,
+      "societyVersion": 3,
+      "strictMigrationOnlyComparison": {
+        "checks": 660,
+        "failed": 22,
+        "reason": "one natural cognition advanced the world revision; preserved separately"
+      },
+      "exactReplay": {
+        "tables": 26,
+        "beforeRows": 1750,
+        "afterRows": 1761,
+        "allRowsColumnsRowidsExact": true,
+        "priorJobsAndContextsExact": true,
+        "physicalClockAndControlExact": true,
+        "networkRequests": 0,
+        "inferenceCalls": 0
+      }
+    },
+    "proof": "retrieval-natural-continuity-receipt.json"
+  },
+  "liveStatus": "retrieval-propagated-live-status.json",
+  "budget": "../retrieval-budget-final-2026-09-09.json",
+  "retainedStress": "../retrieval-retained-stress-2026-09-09.json",
+  "newResearchInferenceCalls": 0,
+  "semanticQualityProven": false,
+  "limitations": [
+    "Only retained authorized revisions are searchable; evicted unpublished drafts are not restored.",
+    "Search is a bounded literal phrase matcher, not semantic search.",
+    "Search/read use normal model opportunities; no hidden additional inference.",
+    "A new incoming message invalidates an in-flight lookup through mind revision; no conversation state is consumed.",
+    "Full future contexts or augmented retry feedback can still exceed the Groq limit and must use existing admission/fallback.",
+    "Schema feedback describes structural errors only, not unsupported factual claims.",
+    "Main JavaScript bundle size warning remains."
+  ],
+  "commitOrPush": false,
+  "firstPostLiveStatus": "retrieval-live-status.json",
+  "semanticEvaluationPlan": "../authorized-retrieval-semantic-evaluation-plan-2026-09-09.md",
+  "currentSourcesMatchFrozenCount": 302,
+  "semanticEvaluationEligibility": "../retrieval-evaluation-eligibility-2026-09-09.json"
+}

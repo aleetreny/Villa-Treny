@@ -1,0 +1,53 @@
+{
+  "scope": "Read-only native XGrammar0.2.3 grammar membership using exact issued schemas. No model, tokenizer model, server or HTTP. Alternative samples remove fields for language diagnostics only; they are not applied decisions.",
+  "rows": [
+    {
+      "case": "BK-A",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "BK-B",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "CN-B",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "CN-A",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "IO-A",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "IO-B",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "GQ-B",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    },
+    {
+      "case": "GQ-A",
+      "original": true,
+      "withoutDeal": true,
+      "withoutDealAndClose": true
+    }
+  ]
+}

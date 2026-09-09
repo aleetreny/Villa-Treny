@@ -1,0 +1,153 @@
+{
+  "scope": "Synthetic mechanical checks only. Human review is pending; this is not a model quality ranking.",
+  "attemptsReserved": 12,
+  "conservativeReservedNeurons": 536,
+  "accountedNeurons": 122,
+  "maxNeurons": 1000,
+  "results": [
+    {
+      "id": "synthetic-v1:qwen:protect-reserve",
+      "state": "completed",
+      "latencyMs": 1314,
+      "mechanicalFailures": [
+        "scenario_stance",
+        "feasible_amount"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:qwen:revise-after-broken-promise",
+      "state": "completed",
+      "latencyMs": 1203,
+      "mechanicalFailures": [
+        "scenario_stance"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:qwen:proposal-is-not-execution",
+      "state": "completed",
+      "latencyMs": 890,
+      "mechanicalFailures": [
+        "scenario_action"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:qwen:persistent-project-and-voice",
+      "state": "completed",
+      "latencyMs": 1455,
+      "mechanicalFailures": [
+        "scenario_stance"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:granite:protect-reserve",
+      "state": "completed",
+      "latencyMs": 2889,
+      "mechanicalFailures": [
+        "scenario_stance",
+        "feasible_amount"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:granite:revise-after-broken-promise",
+      "state": "completed",
+      "latencyMs": 3346,
+      "mechanicalFailures": [
+        "scenario_stance",
+        "scenario_action",
+        "known_counterparty",
+        "relevant_evidence"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:granite:proposal-is-not-execution",
+      "state": "completed",
+      "latencyMs": 3175,
+      "mechanicalFailures": [
+        "scenario_action"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:granite:persistent-project-and-voice",
+      "state": "completed",
+      "latencyMs": 3708,
+      "mechanicalFailures": [
+        "scenario_stance",
+        "known_counterparty",
+        "only_known_unique_evidence",
+        "relevant_evidence"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:glm:protect-reserve",
+      "state": "completed",
+      "latencyMs": 6971,
+      "mechanicalFailures": [
+        "output_fields",
+        "output_truncated"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:glm:revise-after-broken-promise",
+      "state": "completed",
+      "latencyMs": 7109,
+      "mechanicalFailures": [
+        "output_fields",
+        "output_truncated"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:glm:proposal-is-not-execution",
+      "state": "completed",
+      "latencyMs": 6602,
+      "mechanicalFailures": [
+        "output_fields",
+        "output_truncated"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v1:glm:persistent-project-and-voice",
+      "state": "completed",
+      "latencyMs": 9176,
+      "mechanicalFailures": [
+        "output_fields",
+        "output_truncated"
+      ],
+      "humanReview": "pending",
+      "usageComplete": true,
+      "errorCode": null
+    }
+  ]
+}

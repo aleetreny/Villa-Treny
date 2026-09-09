@@ -1,0 +1,320 @@
+{
+  "capturedAt": "2026-09-08T21:08:45.243Z",
+  "version": "af8bb409-387b-45eb-be9e-849163fc3536",
+  "health": {
+    "ok": true,
+    "service": "habitat-runtime",
+    "groqConfigured": true
+  },
+  "status": {
+    "schemaVersion": 10,
+    "storage": {
+      "bytes": 3682304,
+      "perObjectFreeLimitBytes": 1000000000
+    },
+    "worldCodecVersion": 4,
+    "habitatId": "habitat-canonical",
+    "residentCapacity": 25,
+    "mode": "running",
+    "pauseReason": null,
+    "health": "healthy",
+    "overdueByMs": 0,
+    "lastSuccessfulWatchAtMs": 1788894484142,
+    "worldRevision": 212,
+    "controlRevision": 3,
+    "simTime": {
+      "day": 107,
+      "minute": 1080
+    },
+    "lastRun": {
+      "runId": "habitat-canonical:physical:107:3",
+      "committedAtMs": 1788894484142
+    },
+    "nextWatchAtMs": 1788916084141,
+    "cognition": {
+      "health": "healthy",
+      "successfulLastWatch": 25,
+      "total": 25,
+      "neverThought": 0,
+      "lastErrorCode": null,
+      "lastSuccessfulThoughtAtMs": 1788901683450,
+      "nextOpportunityAtMs": 1788901861957,
+      "pendingResidents": [],
+      "waitingForReply": [
+        "U",
+        "B",
+        "N",
+        "H",
+        "E",
+        "F",
+        "G",
+        "I",
+        "J",
+        "P",
+        "R",
+        "Y"
+      ]
+    },
+    "nextWake": {
+      "generation": 160,
+      "dueAtMs": 1788901861957,
+      "reason": "clock",
+      "installedAtMs": 1788901861957
+    },
+    "queue": {
+      "scope": "active",
+      "counts": {},
+      "oldestDueAtMs": null
+    },
+    "providers": {
+      "day": "2026-09-08",
+      "resetAtMs": 1788912000000,
+      "usage": [
+        {
+          "provider": "groq",
+          "requests": 22,
+          "input_tokens": 107593,
+          "output_tokens": 5809,
+          "neurons": 0
+        },
+        {
+          "provider": "workers-ai",
+          "requests": 75,
+          "input_tokens": 148709,
+          "output_tokens": 24403,
+          "neurons": 6260
+        }
+      ],
+      "reserved": [
+        {
+          "provider": "groq",
+          "requests": 22,
+          "input_tokens": 107593,
+          "output_tokens": 5809,
+          "neurons": 0
+        },
+        {
+          "provider": "workers-ai",
+          "requests": 75,
+          "input_tokens": 148709,
+          "output_tokens": 24403,
+          "neurons": 6260
+        }
+      ],
+      "actual": [
+        {
+          "provider": "groq",
+          "requests": 19,
+          "input_tokens": 89972,
+          "output_tokens": 3377,
+          "neurons": 0
+        },
+        {
+          "provider": "workers-ai",
+          "requests": 74,
+          "input_tokens": 142840,
+          "output_tokens": 24019,
+          "neurons": 6221
+        }
+      ],
+      "breakers": [
+        {
+          "provider": "groq",
+          "open_until_ms": 0,
+          "reason": null,
+          "failure_streak": 0
+        },
+        {
+          "provider": "workers-ai",
+          "open_until_ms": 0,
+          "reason": null,
+          "failure_streak": 0
+        }
+      ],
+      "modelBreakers": [
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "open_until_ms": 0,
+          "reason": null,
+          "failure_streak": 0
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "open_until_ms": 0,
+          "reason": null,
+          "failure_streak": 0
+        }
+      ],
+      "modelWindows": {
+        "openai/gpt-oss-20b": {
+          "provider": "groq",
+          "scope": "rolling-model",
+          "limits": {
+            "minuteRequests": 30,
+            "minuteTokens": 8000,
+            "dayRequests": 1000,
+            "dayTokens": 200000
+          },
+          "minute": {
+            "requests": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "neurons": 0
+          },
+          "day": {
+            "requests": 20,
+            "input_tokens": 95816,
+            "output_tokens": 5483,
+            "neurons": 0
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "provider": "groq",
+          "scope": "rolling-model",
+          "limits": {
+            "minuteRequests": 30,
+            "minuteTokens": 8000,
+            "dayRequests": 1000,
+            "dayTokens": 200000
+          },
+          "minute": {
+            "requests": 1,
+            "input_tokens": 5940,
+            "output_tokens": 127,
+            "neurons": 0
+          },
+          "day": {
+            "requests": 2,
+            "input_tokens": 11777,
+            "output_tokens": 326,
+            "neurons": 0
+          }
+        }
+      },
+      "windows": {
+        "workers-ai": {
+          "scope": "utc-day-with-pending-carry",
+          "usage": {
+            "requests": 75,
+            "input_tokens": 148709,
+            "output_tokens": 24403,
+            "neurons": 6260
+          }
+        },
+        "groq": {
+          "scope": "provider-total-informational",
+          "minute": {
+            "requests": 1,
+            "input_tokens": 5940,
+            "output_tokens": 127,
+            "neurons": 0
+          },
+          "day": {
+            "requests": 22,
+            "input_tokens": 107593,
+            "output_tokens": 5809,
+            "neurons": 0
+          }
+        }
+      },
+      "configured": {
+        "workersAI": true,
+        "groq": true,
+        "groq120B": true
+      },
+      "recentAttempts": [
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 1493,
+          "recordedAtMs": 1788901683450
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 7620,
+          "recordedAtMs": 1788901509577
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 807,
+          "recordedAtMs": 1788900807926
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 6192,
+          "recordedAtMs": 1788900633309
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "ok": false,
+          "kind": "invalid-response",
+          "retryable": true,
+          "retryAtMs": null,
+          "detailCode": "json_validate_failed",
+          "latencyMs": 1101,
+          "recordedAtMs": 1788899954357
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 8074,
+          "recordedAtMs": 1788899601288
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 1603,
+          "recordedAtMs": 1788899068574
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 1664,
+          "recordedAtMs": 1788898888633
+        }
+      ]
+    },
+    "lastErrorCode": null
+  }
+}

@@ -1,0 +1,1573 @@
+{
+  "format": "villa-progress-system-token-audit-v1",
+  "measuredAt": "2026-09-08T20:49:06.167Z",
+  "scope": "Offline P6 preparation size comparison for every resident at the same verified revision199. No model/network requests, no job persistence or selection simulation. Old/new SYSTEM differ; the USER and schema of each paired measurement are identical.",
+  "checkpoint": {
+    "worldRevision": 199,
+    "schemaVersion": 10,
+    "exportedAtMs": 1788898916648,
+    "backupSha256": "82cdd88b6e4acfbb083289cfad6e732974049d2680a5977505b0b327bef138d7",
+    "worldDay": 107,
+    "worldWatch": 4,
+    "sequence": 82,
+    "generation": 3
+  },
+  "historicalSystem": {
+    "exactOld7aSourceBundleMatched": true,
+    "bundleSha256": "ffa202b1f69b471a93ab8de2df25b9abf4445752210a1cd1df2ac614640b23d3",
+    "fileSha256": "8bf88540d85151ef8b94bbd06315f67160207c4b0b2ae82ee78bbc308ce68896"
+  },
+  "source": {
+    "analyzerManifestSha256": "a69b5649466d3c21cf43687e7279352d06200a4f10c8a37881c25a364646920f",
+    "files": [
+      {
+        "path": "src/lib/habitat/society/record-instructions.ts",
+        "sha256": "ef8341c3cd1b9b54c0da242c69412f2b75310bd5d7602def16ba2df5379fd8df"
+      },
+      {
+        "path": "src/lib/habitat/society/instructions.ts",
+        "sha256": "2492fa357702571edb9c84c22a9ff50e471c9c6df8ef771af8e3dd48534c3e7f"
+      },
+      {
+        "path": "src/lib/habitat/society/record-choice.ts",
+        "sha256": "ecfd7fcc14df136503be2918dc80b4e625b983c9248eec09680bf7454248d725"
+      },
+      {
+        "path": "src/lib/habitat/society/closing-turn.ts",
+        "sha256": "efa5bd2339c2c37534e1a61ba6423d8d54701a4b845b332e6d6b2ba19b244e61"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "d311e1236f49ed1916ad55c6238e6c2bb8c4c4e4885c860f0e944a8ca73e92bf"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+        "sha256": "a49a0f09f3d3072bc4c6bcd6dde2669610d216f8de5cd09b4598ca9466898f19"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+        "sha256": "6823567f80d64db0156fe74726b43d4e0984a659c965db638c33c5a1d2e31c32"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "6306da59c7870562263e6a4f3e9a6ab003685945b52fa029eb4d724d5aa8f30c"
+      }
+    ],
+    "scriptSha256": "71835de00f46208ed816d803d75030034f1df03de78c690072ba547450ca8884"
+  },
+  "tokenizer": {
+    "packageVersion": "1.0.22",
+    "node": "v24.19.0",
+    "ranksSha256": "df53e1a5f146e33a1b144d12ad9d685ee1b54dbc8b0950791ed45c933b119dc1",
+    "wasmSha256": "870fa4e0d8fe30a02b4703b2c4e24e7a8d99dcf6a1e8416c14b239f52a2eed55",
+    "ordinaryEncoding": true,
+    "totalLimit": 32000,
+    "componentLimit": 24000,
+    "framingAllowance": 128,
+    "maximumOutput": 1024,
+    "noTruncation": true,
+    "implementation": "Production tokenizer and estimator bodies transpiled by installed TypeScript; imports supplied by installed Node tiktoken WASM and exact known-model/UTF-8 helper semantics."
+  },
+  "systems": [
+    {
+      "name": "before",
+      "utf8Bytes": 6654,
+      "ordinaryTokens": 1259,
+      "sha256": "140e7aa80aed56c7bfb327139753e36ef741873e9b5729a6adfe52022cee9a49"
+    },
+    {
+      "name": "after",
+      "utf8Bytes": 7589,
+      "ordinaryTokens": 1435,
+      "sha256": "26961cf2c1f9f12ff652d94f78efdeff3baafec5cb7779c54642438204758c8d"
+    }
+  ],
+  "systemDelta": {
+    "bytes": 935,
+    "tokens": 176
+  },
+  "receivedClosureCount": 0,
+  "summary": {
+    "before": {
+      "fit8000": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y"
+      ],
+      "rejectedForRequestSize": [],
+      "ordinaryEncoded": 25,
+      "fallback": 0,
+      "reservedMin": 5203,
+      "reservedMax": 7324,
+      "authoredBytesMin": 16386,
+      "authoredBytesMax": 23785
+    },
+    "after": {
+      "fit8000": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y"
+      ],
+      "rejectedForRequestSize": [],
+      "ordinaryEncoded": 25,
+      "fallback": 0,
+      "reservedMin": 5379,
+      "reservedMax": 7500,
+      "authoredBytesMin": 17321,
+      "authoredBytesMax": 24720
+    }
+  },
+  "rows": [
+    {
+      "actor": "A",
+      "userSha256": "26d36bd58107a37497e14ddf368deffcbd20cb844ad7f9c174f87df6776ada94",
+      "schemaSha256": "28037290798bb621a7f9858f42d203b904079d8849c0c1d2ba330a5d1b1be6d1",
+      "userBytes": 4717,
+      "schemaBytes": 11100,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4717,
+            11100
+          ],
+          "authoredBytes": 22471,
+          "ordinaryTokensByComponent": [
+            1259,
+            1418,
+            3118
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5923,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6947,
+          "requestFits8000": true,
+          "remainingOf8000": 1053,
+          "fullByteFallbackInputTokens": 22601,
+          "encodingWallMs": 2.987124999999992,
+          "encodingCpuUs": 3639
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4717,
+            11100
+          ],
+          "authoredBytes": 23406,
+          "ordinaryTokensByComponent": [
+            1435,
+            1418,
+            3118
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6099,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7123,
+          "requestFits8000": true,
+          "remainingOf8000": 877,
+          "fullByteFallbackInputTokens": 23536,
+          "encodingWallMs": 2.403415999999993,
+          "encodingCpuUs": 2403
+        }
+      ]
+    },
+    {
+      "actor": "B",
+      "userSha256": "16c0b977bb8e1e0f48b08147350e3469cc7772991a73d5771aecd4e85478774b",
+      "schemaSha256": "297970ea9ce6dc5fcc95e359ad538af482ff8a59149ab753c74c5c7753cb8b9e",
+      "userBytes": 5030,
+      "schemaBytes": 12101,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            5030,
+            12101
+          ],
+          "authoredBytes": 23785,
+          "ordinaryTokensByComponent": [
+            1259,
+            1464,
+            3449
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6300,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7324,
+          "requestFits8000": true,
+          "remainingOf8000": 676,
+          "fullByteFallbackInputTokens": 23915,
+          "encodingWallMs": 2.668416000000036,
+          "encodingCpuUs": 3203
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            5030,
+            12101
+          ],
+          "authoredBytes": 24720,
+          "ordinaryTokensByComponent": [
+            1435,
+            1464,
+            3449
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6476,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7500,
+          "requestFits8000": true,
+          "remainingOf8000": 500,
+          "fullByteFallbackInputTokens": 24850,
+          "encodingWallMs": 2.5621250000000373,
+          "encodingCpuUs": 2563
+        }
+      ]
+    },
+    {
+      "actor": "C",
+      "userSha256": "75ea8a5f9f01b22408bb94ef9b2fa444297ed711d51e15210d9399e14950a601",
+      "schemaSha256": "a6ec16db29a542d43d3431d5488ea1d31e0a78830c0ca57ee5d59e4842ecc872",
+      "userBytes": 4695,
+      "schemaBytes": 5496,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4695,
+            5496
+          ],
+          "authoredBytes": 16845,
+          "ordinaryTokensByComponent": [
+            1259,
+            1319,
+            1540
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4246,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5270,
+          "requestFits8000": true,
+          "remainingOf8000": 2730,
+          "fullByteFallbackInputTokens": 16975,
+          "encodingWallMs": 1.8088750000000005,
+          "encodingCpuUs": 1846
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4695,
+            5496
+          ],
+          "authoredBytes": 17780,
+          "ordinaryTokensByComponent": [
+            1435,
+            1319,
+            1540
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4422,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5446,
+          "requestFits8000": true,
+          "remainingOf8000": 2554,
+          "fullByteFallbackInputTokens": 17910,
+          "encodingWallMs": 1.92349999999999,
+          "encodingCpuUs": 1924
+        }
+      ]
+    },
+    {
+      "actor": "D",
+      "userSha256": "21fff04226a6b6394ab4b1d66a130ad41a6670c20c772fd2f0972e3230ee1add",
+      "schemaSha256": "7decfed0c08f2eb492dbe104f46007b66ee83e6a503878e3c082fac4fc7eba18",
+      "userBytes": 4777,
+      "schemaBytes": 10987,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4777,
+            10987
+          ],
+          "authoredBytes": 22418,
+          "ordinaryTokensByComponent": [
+            1259,
+            1319,
+            3078
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5784,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6808,
+          "requestFits8000": true,
+          "remainingOf8000": 1192,
+          "fullByteFallbackInputTokens": 22548,
+          "encodingWallMs": 2.583250000000021,
+          "encodingCpuUs": 2583
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4777,
+            10987
+          ],
+          "authoredBytes": 23353,
+          "ordinaryTokensByComponent": [
+            1435,
+            1319,
+            3078
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5960,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6984,
+          "requestFits8000": true,
+          "remainingOf8000": 1016,
+          "fullByteFallbackInputTokens": 23483,
+          "encodingWallMs": 2.4168750000000045,
+          "encodingCpuUs": 2417
+        }
+      ]
+    },
+    {
+      "actor": "E",
+      "userSha256": "d963abc6356a58a58ac9dd1a1de0f362c50a7f78c95ba7617fefbb70b3f75b8b",
+      "schemaSha256": "c857e74d226ac821615ef502d074b0c088664bfee20d7c7a8250feeec1c336f1",
+      "userBytes": 4661,
+      "schemaBytes": 11051,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4661,
+            11051
+          ],
+          "authoredBytes": 22366,
+          "ordinaryTokensByComponent": [
+            1259,
+            1342,
+            3094
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5823,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6847,
+          "requestFits8000": true,
+          "remainingOf8000": 1153,
+          "fullByteFallbackInputTokens": 22496,
+          "encodingWallMs": 2.3788330000000997,
+          "encodingCpuUs": 2379
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4661,
+            11051
+          ],
+          "authoredBytes": 23301,
+          "ordinaryTokensByComponent": [
+            1435,
+            1342,
+            3094
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5999,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7023,
+          "requestFits8000": true,
+          "remainingOf8000": 977,
+          "fullByteFallbackInputTokens": 23431,
+          "encodingWallMs": 2.3969159999999192,
+          "encodingCpuUs": 2390
+        }
+      ]
+    },
+    {
+      "actor": "F",
+      "userSha256": "571b0347ff44c247c3b5c140c62ae8b8811a065b6d251d04d7962d9622009bc0",
+      "schemaSha256": "2229fb2847c21ba9400b7976149467b29aab7eedbde135041db7cdd3c7cbefd8",
+      "userBytes": 4770,
+      "schemaBytes": 11134,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4770,
+            11134
+          ],
+          "authoredBytes": 22558,
+          "ordinaryTokensByComponent": [
+            1259,
+            1404,
+            3138
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5929,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6953,
+          "requestFits8000": true,
+          "remainingOf8000": 1047,
+          "fullByteFallbackInputTokens": 22688,
+          "encodingWallMs": 2.411375000000021,
+          "encodingCpuUs": 2411
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4770,
+            11134
+          ],
+          "authoredBytes": 23493,
+          "ordinaryTokensByComponent": [
+            1435,
+            1404,
+            3138
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6105,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7129,
+          "requestFits8000": true,
+          "remainingOf8000": 871,
+          "fullByteFallbackInputTokens": 23623,
+          "encodingWallMs": 2.4121249999999463,
+          "encodingCpuUs": 2412
+        }
+      ]
+    },
+    {
+      "actor": "G",
+      "userSha256": "c44b1d0a08f5da1d403ab0e382596a6a26736bbb592c3bab0533b42ddbfe8113",
+      "schemaSha256": "26d4e76829ac08c50808c6a9e99ff8a0282e6d125fc911745d3bf97f9ed15a44",
+      "userBytes": 4397,
+      "schemaBytes": 10998,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4397,
+            10998
+          ],
+          "authoredBytes": 22049,
+          "ordinaryTokensByComponent": [
+            1259,
+            1256,
+            3066
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5709,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6733,
+          "requestFits8000": true,
+          "remainingOf8000": 1267,
+          "fullByteFallbackInputTokens": 22179,
+          "encodingWallMs": 2.381791000000021,
+          "encodingCpuUs": 2373
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4397,
+            10998
+          ],
+          "authoredBytes": 22984,
+          "ordinaryTokensByComponent": [
+            1435,
+            1256,
+            3066
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5885,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6909,
+          "requestFits8000": true,
+          "remainingOf8000": 1091,
+          "fullByteFallbackInputTokens": 23114,
+          "encodingWallMs": 2.3361660000000484,
+          "encodingCpuUs": 2336
+        }
+      ]
+    },
+    {
+      "actor": "H",
+      "userSha256": "6289eea4679caf594175f8edb7bab191edc00309a0157903fc7cd92ba245a8ff",
+      "schemaSha256": "a33709fe5b687957144ff9f12a8dc8da7cfaf9826e2c62136cee06ae798baf46",
+      "userBytes": 5049,
+      "schemaBytes": 6502,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            5049,
+            6502
+          ],
+          "authoredBytes": 18205,
+          "ordinaryTokensByComponent": [
+            1259,
+            1321,
+            1852
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4560,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5584,
+          "requestFits8000": true,
+          "remainingOf8000": 2416,
+          "fullByteFallbackInputTokens": 18335,
+          "encodingWallMs": 1.9336669999999003,
+          "encodingCpuUs": 3251
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            5049,
+            6502
+          ],
+          "authoredBytes": 19140,
+          "ordinaryTokensByComponent": [
+            1435,
+            1321,
+            1852
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4736,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5760,
+          "requestFits8000": true,
+          "remainingOf8000": 2240,
+          "fullByteFallbackInputTokens": 19270,
+          "encodingWallMs": 1.880207999999925,
+          "encodingCpuUs": 1880
+        }
+      ]
+    },
+    {
+      "actor": "I",
+      "userSha256": "c74701244fa6bd45718a991acc3653b33ad5c691ad37f2e28933df66684b1752",
+      "schemaSha256": "b8f7a87c492ecbefec7f551cbc51fdc57161d312650354147444e0827679323b",
+      "userBytes": 4640,
+      "schemaBytes": 11080,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4640,
+            11080
+          ],
+          "authoredBytes": 22374,
+          "ordinaryTokensByComponent": [
+            1259,
+            1401,
+            3118
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5906,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6930,
+          "requestFits8000": true,
+          "remainingOf8000": 1070,
+          "fullByteFallbackInputTokens": 22504,
+          "encodingWallMs": 2.4437500000000227,
+          "encodingCpuUs": 2587
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4640,
+            11080
+          ],
+          "authoredBytes": 23309,
+          "ordinaryTokensByComponent": [
+            1435,
+            1401,
+            3118
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6082,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7106,
+          "requestFits8000": true,
+          "remainingOf8000": 894,
+          "fullByteFallbackInputTokens": 23439,
+          "encodingWallMs": 2.3542919999999867,
+          "encodingCpuUs": 2353
+        }
+      ]
+    },
+    {
+      "actor": "J",
+      "userSha256": "e87e01738fab9cfb198a8ee149dd904400e689c56b54bd5a95fe9789b76f6b80",
+      "schemaSha256": "e143d56be3caa4d12186136e1b0e69ad9d7ba98c83d687bfd105e90739ddbbf3",
+      "userBytes": 4711,
+      "schemaBytes": 5627,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4711,
+            5627
+          ],
+          "authoredBytes": 16992,
+          "ordinaryTokensByComponent": [
+            1259,
+            1412,
+            1592
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4391,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5415,
+          "requestFits8000": true,
+          "remainingOf8000": 2585,
+          "fullByteFallbackInputTokens": 17122,
+          "encodingWallMs": 1.8317089999999325,
+          "encodingCpuUs": 1832
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4711,
+            5627
+          ],
+          "authoredBytes": 17927,
+          "ordinaryTokensByComponent": [
+            1435,
+            1412,
+            1592
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4567,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5591,
+          "requestFits8000": true,
+          "remainingOf8000": 2409,
+          "fullByteFallbackInputTokens": 18057,
+          "encodingWallMs": 1.8212919999999713,
+          "encodingCpuUs": 1821
+        }
+      ]
+    },
+    {
+      "actor": "K",
+      "userSha256": "81978f742ebf03afce8ec95951f2bedecb069af908d76bd62b6c63e604d57234",
+      "schemaSha256": "1bc6da38b4e73edf335ea63712392e73a79494b858b9b37443e3f235441678a7",
+      "userBytes": 4775,
+      "schemaBytes": 5562,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4775,
+            5562
+          ],
+          "authoredBytes": 16991,
+          "ordinaryTokensByComponent": [
+            1259,
+            1379,
+            1584
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4350,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5374,
+          "requestFits8000": true,
+          "remainingOf8000": 2626,
+          "fullByteFallbackInputTokens": 17121,
+          "encodingWallMs": 1.774499999999989,
+          "encodingCpuUs": 1775
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4775,
+            5562
+          ],
+          "authoredBytes": 17926,
+          "ordinaryTokensByComponent": [
+            1435,
+            1379,
+            1584
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4526,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5550,
+          "requestFits8000": true,
+          "remainingOf8000": 2450,
+          "fullByteFallbackInputTokens": 18056,
+          "encodingWallMs": 1.7879580000000033,
+          "encodingCpuUs": 1788
+        }
+      ]
+    },
+    {
+      "actor": "L",
+      "userSha256": "8467d26259da4cbdb1ca5c56c935ecb0d1bf9ce5ec0ca0c578e5b5af9a0de937",
+      "schemaSha256": "2f579670d78ea4c1978532b9f3ff0926e940822bc26433ac88879580319ce7ac",
+      "userBytes": 4709,
+      "schemaBytes": 5527,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4709,
+            5527
+          ],
+          "authoredBytes": 16890,
+          "ordinaryTokensByComponent": [
+            1259,
+            1364,
+            1554
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4305,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5329,
+          "requestFits8000": true,
+          "remainingOf8000": 2671,
+          "fullByteFallbackInputTokens": 17020,
+          "encodingWallMs": 1.7567920000000186,
+          "encodingCpuUs": 1758
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4709,
+            5527
+          ],
+          "authoredBytes": 17825,
+          "ordinaryTokensByComponent": [
+            1435,
+            1364,
+            1554
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4481,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5505,
+          "requestFits8000": true,
+          "remainingOf8000": 2495,
+          "fullByteFallbackInputTokens": 17955,
+          "encodingWallMs": 1.8246669999999767,
+          "encodingCpuUs": 1825
+        }
+      ]
+    },
+    {
+      "actor": "M",
+      "userSha256": "d281aa4ac55e8b5f4c9909cd461b554b46522d30d198de29499a4f70a7e2a2c9",
+      "schemaSha256": "8f7014532d5778821f381af367225e7ae78a3448e436f511e5bf6df240cec433",
+      "userBytes": 4775,
+      "schemaBytes": 5557,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4775,
+            5557
+          ],
+          "authoredBytes": 16986,
+          "ordinaryTokensByComponent": [
+            1259,
+            1422,
+            1580
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4389,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5413,
+          "requestFits8000": true,
+          "remainingOf8000": 2587,
+          "fullByteFallbackInputTokens": 17116,
+          "encodingWallMs": 1.9030829999999241,
+          "encodingCpuUs": 2294
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4775,
+            5557
+          ],
+          "authoredBytes": 17921,
+          "ordinaryTokensByComponent": [
+            1435,
+            1422,
+            1580
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4565,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5589,
+          "requestFits8000": true,
+          "remainingOf8000": 2411,
+          "fullByteFallbackInputTokens": 18051,
+          "encodingWallMs": 1.8136670000000095,
+          "encodingCpuUs": 1814
+        }
+      ]
+    },
+    {
+      "actor": "N",
+      "userSha256": "ce6f6399ada27ad66c06f36f37fce1fe9dc40cc2d58b0fec5871cdd51a4d66a0",
+      "schemaSha256": "afbfb75ae7d9ac39160bcc186692e235b14d8d9c25bac5d3e19f3215512dfe71",
+      "userBytes": 4764,
+      "schemaBytes": 10999,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4764,
+            10999
+          ],
+          "authoredBytes": 22417,
+          "ordinaryTokensByComponent": [
+            1259,
+            1362,
+            3080
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5829,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6853,
+          "requestFits8000": true,
+          "remainingOf8000": 1147,
+          "fullByteFallbackInputTokens": 22547,
+          "encodingWallMs": 2.405416999999943,
+          "encodingCpuUs": 2406
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4764,
+            10999
+          ],
+          "authoredBytes": 23352,
+          "ordinaryTokensByComponent": [
+            1435,
+            1362,
+            3080
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6005,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7029,
+          "requestFits8000": true,
+          "remainingOf8000": 971,
+          "fullByteFallbackInputTokens": 23482,
+          "encodingWallMs": 2.5332499999999527,
+          "encodingCpuUs": 2534
+        }
+      ]
+    },
+    {
+      "actor": "O",
+      "userSha256": "0963b786b16ad2531396fbc64526f741c44bc3b044b75cc87f94ad9420df52e6",
+      "schemaSha256": "3e71190481ef6f49619825c031ce02c3d3c4e994776f5ac52132b059da5573fe",
+      "userBytes": 4635,
+      "schemaBytes": 5619,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4635,
+            5619
+          ],
+          "authoredBytes": 16908,
+          "ordinaryTokensByComponent": [
+            1259,
+            1434,
+            1606
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4427,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5451,
+          "requestFits8000": true,
+          "remainingOf8000": 2549,
+          "fullByteFallbackInputTokens": 17038,
+          "encodingWallMs": 1.9971669999999904,
+          "encodingCpuUs": 2089
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4635,
+            5619
+          ],
+          "authoredBytes": 17843,
+          "ordinaryTokensByComponent": [
+            1435,
+            1434,
+            1606
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4603,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5627,
+          "requestFits8000": true,
+          "remainingOf8000": 2373,
+          "fullByteFallbackInputTokens": 17973,
+          "encodingWallMs": 1.9055419999999685,
+          "encodingCpuUs": 1905
+        }
+      ]
+    },
+    {
+      "actor": "P",
+      "userSha256": "3f0230be496aebb5a97f6548f54babba4c13221c456e3d53fe338fd7e26bce75",
+      "schemaSha256": "5156e2d5825964f814ac63992342bcc6607e56de7b645f2c4e74757cbbd54c7e",
+      "userBytes": 4666,
+      "schemaBytes": 5532,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4666,
+            5532
+          ],
+          "authoredBytes": 16852,
+          "ordinaryTokensByComponent": [
+            1259,
+            1447,
+            1560
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4394,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5418,
+          "requestFits8000": true,
+          "remainingOf8000": 2582,
+          "fullByteFallbackInputTokens": 16982,
+          "encodingWallMs": 1.9002500000000282,
+          "encodingCpuUs": 1899
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4666,
+            5532
+          ],
+          "authoredBytes": 17787,
+          "ordinaryTokensByComponent": [
+            1435,
+            1447,
+            1560
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4570,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5594,
+          "requestFits8000": true,
+          "remainingOf8000": 2406,
+          "fullByteFallbackInputTokens": 17917,
+          "encodingWallMs": 1.8027499999999463,
+          "encodingCpuUs": 1803
+        }
+      ]
+    },
+    {
+      "actor": "Q",
+      "userSha256": "50b13988510dc205bf2457f1fbc22233600047ebd7d8305b4d4687c447e726a1",
+      "schemaSha256": "f5fe722bc18440dae63264a03c1e13e6582bfeae3855cd589aaa688ca45002cb",
+      "userBytes": 4636,
+      "schemaBytes": 5620,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4636,
+            5620
+          ],
+          "authoredBytes": 16910,
+          "ordinaryTokensByComponent": [
+            1259,
+            1402,
+            1602
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4391,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5415,
+          "requestFits8000": true,
+          "remainingOf8000": 2585,
+          "fullByteFallbackInputTokens": 17040,
+          "encodingWallMs": 2.1306670000000167,
+          "encodingCpuUs": 3379
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4636,
+            5620
+          ],
+          "authoredBytes": 17845,
+          "ordinaryTokensByComponent": [
+            1435,
+            1402,
+            1602
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4567,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5591,
+          "requestFits8000": true,
+          "remainingOf8000": 2409,
+          "fullByteFallbackInputTokens": 17975,
+          "encodingWallMs": 1.880292000000054,
+          "encodingCpuUs": 1880
+        }
+      ]
+    },
+    {
+      "actor": "R",
+      "userSha256": "ca124426f345376d8e0ec5548034c349ee3a9a83a58ac6197cdb027f6083f933",
+      "schemaSha256": "25ecef3ecdfa6fa1646a493a5b2d89f9fe4c840e8b4fd756ca25963b3eed77c6",
+      "userBytes": 4176,
+      "schemaBytes": 10961,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4176,
+            10961
+          ],
+          "authoredBytes": 21791,
+          "ordinaryTokensByComponent": [
+            1259,
+            1193,
+            3048
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5628,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6652,
+          "requestFits8000": true,
+          "remainingOf8000": 1348,
+          "fullByteFallbackInputTokens": 21921,
+          "encodingWallMs": 2.5159580000000688,
+          "encodingCpuUs": 3058
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4176,
+            10961
+          ],
+          "authoredBytes": 22726,
+          "ordinaryTokensByComponent": [
+            1435,
+            1193,
+            3048
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5804,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6828,
+          "requestFits8000": true,
+          "remainingOf8000": 1172,
+          "fullByteFallbackInputTokens": 22856,
+          "encodingWallMs": 2.3007499999999936,
+          "encodingCpuUs": 2379
+        }
+      ]
+    },
+    {
+      "actor": "S",
+      "userSha256": "5e19f9ff3a48a8b35d65a41bf5e18fd2783ed4b7d30a457025b63cdfd1096ef6",
+      "schemaSha256": "d74236262ad1fbe8f055291e4c2cd693e01fddd72d2ad29ad7a2f04baa936e95",
+      "userBytes": 4577,
+      "schemaBytes": 5477,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4577,
+            5477
+          ],
+          "authoredBytes": 16708,
+          "ordinaryTokensByComponent": [
+            1259,
+            1306,
+            1518
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4211,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5235,
+          "requestFits8000": true,
+          "remainingOf8000": 2765,
+          "fullByteFallbackInputTokens": 16838,
+          "encodingWallMs": 1.7917919999999867,
+          "encodingCpuUs": 1792
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4577,
+            5477
+          ],
+          "authoredBytes": 17643,
+          "ordinaryTokensByComponent": [
+            1435,
+            1306,
+            1518
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4387,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5411,
+          "requestFits8000": true,
+          "remainingOf8000": 2589,
+          "fullByteFallbackInputTokens": 17773,
+          "encodingWallMs": 1.8361250000000382,
+          "encodingCpuUs": 1827
+        }
+      ]
+    },
+    {
+      "actor": "T",
+      "userSha256": "a3daf2c67f7087e36d8fdae48a02b5382720b058b05c0adfaf8889f45b6c27ce",
+      "schemaSha256": "a11411e8f3802ee57c1c6f844fb3de816d16fd2d41a70cb691afc6757a7bf43d",
+      "userBytes": 4624,
+      "schemaBytes": 5532,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4624,
+            5532
+          ],
+          "authoredBytes": 16810,
+          "ordinaryTokensByComponent": [
+            1259,
+            1388,
+            1568
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4343,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5367,
+          "requestFits8000": true,
+          "remainingOf8000": 2633,
+          "fullByteFallbackInputTokens": 16940,
+          "encodingWallMs": 2.0767080000000533,
+          "encodingCpuUs": 2071
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4624,
+            5532
+          ],
+          "authoredBytes": 17745,
+          "ordinaryTokensByComponent": [
+            1435,
+            1388,
+            1568
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4519,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5543,
+          "requestFits8000": true,
+          "remainingOf8000": 2457,
+          "fullByteFallbackInputTokens": 17875,
+          "encodingWallMs": 1.9547089999999798,
+          "encodingCpuUs": 1954
+        }
+      ]
+    },
+    {
+      "actor": "U",
+      "userSha256": "58484d8c9c979a4c1afaa28b78b6013b69e69997d0769cba9cfca73b49cbd837",
+      "schemaSha256": "ae28894690be54ab878792e0859fcb622fe6682ddd56fc9fa6b935ac24fb04dd",
+      "userBytes": 5077,
+      "schemaBytes": 6574,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            5077,
+            6574
+          ],
+          "authoredBytes": 18305,
+          "ordinaryTokensByComponent": [
+            1259,
+            1475,
+            1906
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4768,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5792,
+          "requestFits8000": true,
+          "remainingOf8000": 2208,
+          "fullByteFallbackInputTokens": 18435,
+          "encodingWallMs": 2.1008749999999736,
+          "encodingCpuUs": 2102
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            5077,
+            6574
+          ],
+          "authoredBytes": 19240,
+          "ordinaryTokensByComponent": [
+            1435,
+            1475,
+            1906
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4944,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5968,
+          "requestFits8000": true,
+          "remainingOf8000": 2032,
+          "fullByteFallbackInputTokens": 19370,
+          "encodingWallMs": 2.1081669999999804,
+          "encodingCpuUs": 2108
+        }
+      ]
+    },
+    {
+      "actor": "V",
+      "userSha256": "264fc60b39c789e5d45dade0dd183de4cecbbb8d110d7e776d4c73f97d481022",
+      "schemaSha256": "09cb80c9a27b734dc02842a9cdbd205dc9d700f221195b56f587fd313a63d8eb",
+      "userBytes": 4547,
+      "schemaBytes": 11046,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4547,
+            11046
+          ],
+          "authoredBytes": 22247,
+          "ordinaryTokensByComponent": [
+            1259,
+            1393,
+            3096
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5876,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6900,
+          "requestFits8000": true,
+          "remainingOf8000": 1100,
+          "fullByteFallbackInputTokens": 22377,
+          "encodingWallMs": 2.4807080000000497,
+          "encodingCpuUs": 2716
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4547,
+            11046
+          ],
+          "authoredBytes": 23182,
+          "ordinaryTokensByComponent": [
+            1435,
+            1393,
+            3096
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6052,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7076,
+          "requestFits8000": true,
+          "remainingOf8000": 924,
+          "fullByteFallbackInputTokens": 23312,
+          "encodingWallMs": 2.4912919999999303,
+          "encodingCpuUs": 2492
+        }
+      ]
+    },
+    {
+      "actor": "W",
+      "userSha256": "a6e3240dbf47c5b7dc45e4038f3aae0e1b1770d75b775a555554aee60623cc79",
+      "schemaSha256": "01214f14d5867de732f35c767cca66f458305719210501f6a7203be7ac121b90",
+      "userBytes": 3772,
+      "schemaBytes": 5960,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            3772,
+            5960
+          ],
+          "authoredBytes": 16386,
+          "ordinaryTokensByComponent": [
+            1259,
+            1115,
+            1677
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4179,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5203,
+          "requestFits8000": true,
+          "remainingOf8000": 2797,
+          "fullByteFallbackInputTokens": 16516,
+          "encodingWallMs": 1.946957999999995,
+          "encodingCpuUs": 1946
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            3772,
+            5960
+          ],
+          "authoredBytes": 17321,
+          "ordinaryTokensByComponent": [
+            1435,
+            1115,
+            1677
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 4355,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 5379,
+          "requestFits8000": true,
+          "remainingOf8000": 2621,
+          "fullByteFallbackInputTokens": 17451,
+          "encodingWallMs": 1.6805000000000518,
+          "encodingCpuUs": 1680
+        }
+      ]
+    },
+    {
+      "actor": "X",
+      "userSha256": "7b9fb52ed70c96a620713a13682a66c9cee501a104d50ff50f465e1cf1d7725a",
+      "schemaSha256": "2c7409a6649c797c7fe0878aa75fef7797bb48f8211db7db6850a733589db57c",
+      "userBytes": 4497,
+      "schemaBytes": 11104,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4497,
+            11104
+          ],
+          "authoredBytes": 22255,
+          "ordinaryTokensByComponent": [
+            1259,
+            1359,
+            3126
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5872,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6896,
+          "requestFits8000": true,
+          "remainingOf8000": 1104,
+          "fullByteFallbackInputTokens": 22385,
+          "encodingWallMs": 2.3232080000000224,
+          "encodingCpuUs": 2323
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4497,
+            11104
+          ],
+          "authoredBytes": 23190,
+          "ordinaryTokensByComponent": [
+            1435,
+            1359,
+            3126
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6048,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7072,
+          "requestFits8000": true,
+          "remainingOf8000": 928,
+          "fullByteFallbackInputTokens": 23320,
+          "encodingWallMs": 2.3527910000000247,
+          "encodingCpuUs": 2353
+        }
+      ]
+    },
+    {
+      "actor": "Y",
+      "userSha256": "b31ba89e4c0a0cbe4ef9f96655a8f6c95c6d2f07332739eb0f09575a012e27d8",
+      "schemaSha256": "36bf60b7699f6ea0153e9c45a1f1af55d155cfe2934949973601411841b08c82",
+      "userBytes": 4715,
+      "schemaBytes": 11041,
+      "contextOverflow": false,
+      "variants": [
+        {
+          "name": "before",
+          "componentBytes": [
+            6654,
+            4715,
+            11041
+          ],
+          "authoredBytes": 22410,
+          "ordinaryTokensByComponent": [
+            1259,
+            1361,
+            3090
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 5838,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 6862,
+          "requestFits8000": true,
+          "remainingOf8000": 1138,
+          "fullByteFallbackInputTokens": 22540,
+          "encodingWallMs": 2.3741670000000568,
+          "encodingCpuUs": 2374
+        },
+        {
+          "name": "after",
+          "componentBytes": [
+            7589,
+            4715,
+            11041
+          ],
+          "authoredBytes": 23345,
+          "ordinaryTokensByComponent": [
+            1435,
+            1361,
+            3090
+          ],
+          "accounting": "ordinary_plus_128",
+          "estimatedInputTokens": 6014,
+          "maxOutputTokens": 1024,
+          "reservedTokens": 7038,
+          "requestFits8000": true,
+          "remainingOf8000": 962,
+          "fullByteFallbackInputTokens": 23475,
+          "encodingWallMs": 2.427208000000064,
+          "encodingCpuUs": 2428
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Current source preparation at a historic complete world state is a size probe, not the exact issuance of 25 actual saved jobs or an assertion that all residents are eligible at once.",
+    "The exact ordinary component counts plus128framing allowance are not an exact Groq server prompt measurement.",
+    "Fit under8000 means one request fits that model minute ceiling with an otherwise available window; reservations, rolling TPM/RPM/RPD/TPD, pacing, failures and other viewers/jobs remain separate constraints.",
+    "Node CPU/wall measurements are local evidence, not a Cloudflare CPU guarantee.",
+    "No private SYSTEM/USER context, draft text, goals or memories are included in this metadata."
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "format": "villa-retrieval-natural-continuity-receipt-v1",
+  "status": "verified-by-exact-offline-replay",
+  "auditedAt": "2026-09-08T23:27:24.659Z",
+  "deployment": {
+    "version": "caf46bd8-1bda-40f6-a1f3-b60dfe420375",
+    "sourceBundleSha256": "d11e7dd6feda80b9427262228a444f204e19e956afc16bc623705d6d60250a14",
+    "sourceFiles": 302,
+    "sourceManifest": "retrieval-source-manifest.json"
+  },
+  "scope": "The initial post-deploy cut still held the complete old state. The later complete cut contains the SQL11 migration and exactly one natural cognition. All 26 canonical tables are reconstructed, without activity exclusions.",
+  "cuts": [
+    {
+      "role": "pre",
+      "backupSha256": "49922464190e390f3d8bc871e635fe45a5e8e26b28d88b01c4d3c992f3063bc7",
+      "revision": 245,
+      "exportedAtMs": 1788909364829,
+      "pages": 30,
+      "schemaVersion": 10,
+      "societyVersion": 2,
+      "rows": 1750
+    },
+    {
+      "role": "immediate-post-old-state",
+      "backupSha256": "3343843cd58533357b453d84c2b8255e000aab444f7cf98b9c48ac96a02d8c1b",
+      "revision": 245,
+      "exportedAtMs": 1788909439149,
+      "pages": 30,
+      "schemaVersion": 10,
+      "societyVersion": 2,
+      "rows": 1750
+    },
+    {
+      "role": "post-propagated-with-natural-turn",
+      "backupSha256": "af118f8fea4e2b6ffdc902efcc770c96ecfd7e283f80eff5a061582cdf15b273",
+      "revision": 247,
+      "exportedAtMs": 1788909779380,
+      "pages": 30,
+      "schemaVersion": 11,
+      "societyVersion": 3,
+      "rows": 1761
+    }
+  ],
+  "preservedStrictFailures": [
+    {
+      "kind": "expected-migration-not-yet-in-captured-state",
+      "checks": 660,
+      "failedChecks": 9,
+      "all26TablesAndCheckpointIdenticalToPre": true,
+      "note": "The original failed receipt retained expected version labels 11/3 in its header; actual data was SQL10/Society2. Its failure checks and table hashes are preserved."
+    },
+    {
+      "kind": "migration-only-comparison-rejects-natural-activity",
+      "checks": 660,
+      "failedChecks": 22
+    }
+  ],
+  "migration": {
+    "version": 11,
+    "atMs": 1788909513362,
+    "actualFunction": "HabitatWorld.migrateToV11",
+    "oldSocietyFieldsPreservedBeforeNaturalTurn": true,
+    "exactCodec2BackupAndChecksumAdded": true,
+    "retrievalCursorsInitializedEmpty": 25,
+    "storedHistoricalCheckpointsUnchanged": true
+  },
+  "naturalCognition": {
+    "actor": "H",
+    "sequence": 104,
+    "jobId": "habitat-canonical:mind:H:18:104:g:3",
+    "protocolVersion": 7,
+    "status": "applied",
+    "createdAtMs": 1788909630996,
+    "recordedAtMs": 1788909632053,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "latencyMs": 1057,
+    "attemptCount": 1,
+    "outputFields": [
+      "message"
+    ],
+    "effects": {
+      "newPublicMessages": 1,
+      "recordsUnchanged": true,
+      "recordCountsBefore": {
+        "drafts": 7,
+        "shares": 0,
+        "intents": 0,
+        "offers": 0,
+        "agreements": 0,
+        "publications": 0
+      },
+      "recordCountsAfter": {
+        "drafts": 7,
+        "shares": 0,
+        "intents": 0,
+        "offers": 0,
+        "agreements": 0,
+        "publications": 0
+      },
+      "retrievalCursorsStillEmpty": true,
+      "physicalWatchAdvanced": false
+    },
+    "usage": {
+      "inputTokens": 6486,
+      "outputTokens": 111,
+      "neurons": 0,
+      "confirmed": true
+    },
+    "reservation": {
+      "maximumInputTokens": 6519,
+      "maximumOutputTokens": 1024,
+      "model": "openai/gpt-oss-120b",
+      "finalState": "settled"
+    }
+  },
+  "exactVerification": {
+    "tables": 26,
+    "allTablesRowsColumnsAndRowidsExact": true,
+    "sourceMatchedBeforeAndAfter": true,
+    "jobAndPreparedEnvelopeExact": true,
+    "systemSha256": "3fc3b72a2958bc5504ff3bb90ed3e77016c9ff59573cc11210917d95604826a9",
+    "userSha256": "d619aa4ff1907606065927dbd2b768e55f2f85cea4ce735e1ad2479d0825ab11",
+    "preparedSha256": "d619aa4ff1907606065927dbd2b768e55f2f85cea4ce735e1ad2479d0825ab11",
+    "schemaSha256": "e8c707cf348460adad59e8d0b2d99045c05bef7766c19f74ad6216711a731d32",
+    "immutableSavedInputsPreserved": true,
+    "duplicateDomainNoOp": true,
+    "duplicateSqlNoOp": true,
+    "localSqlCalls": 304,
+    "runtimeChangedFields": [
+      "world_revision",
+      "alarm_generation",
+      "next_alarm_at_ms",
+      "next_cognition_at_ms"
+    ],
+    "physicalClockControlFieldsExact": true,
+    "worldStateJsonUnchanged": true,
+    "tableProof": [
+      {
+        "table": "runtime_meta",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "e580a27977d1ecb94266c7de4f5e26d9a76299af6b48c8c6cc0e267ee6080ce0",
+        "observedSha256": "7e5489d3f9d48ec76aeaa1bb7c66982090a3d938d36ea855363f92e47e074e64",
+        "replayedSha256": "7e5489d3f9d48ec76aeaa1bb7c66982090a3d938d36ea855363f92e47e074e64"
+      },
+      {
+        "table": "world_state",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "f2c2be5a91165089db789bd5652ae383362783eaaee9a8a518ea42d6cf6a8816",
+        "observedSha256": "f77351150ae541c850d681bfd90ff48cbcd65189111c3f4672edd95771dfc4ca",
+        "replayedSha256": "f77351150ae541c850d681bfd90ff48cbcd65189111c3f4672edd95771dfc4ca"
+      },
+      {
+        "table": "watch_runs",
+        "beforeRows": 30,
+        "afterRows": 30,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "observedSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "replayedSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf"
+      },
+      {
+        "table": "cognition_jobs",
+        "beforeRows": 133,
+        "afterRows": 134,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "36e1e864e6620261d47bf8a7b1579d6fbc2d3fb7bc208e117a3cbb432b454835",
+        "observedSha256": "f7626148d8500c8a67e698c173664300f3149243f0312aae4d2f8af750946899",
+        "replayedSha256": "f7626148d8500c8a67e698c173664300f3149243f0312aae4d2f8af750946899"
+      },
+      {
+        "table": "provider_attempts",
+        "beforeRows": 159,
+        "afterRows": 160,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "40a93ee7273099930c875ba964147bf76b8e8fdb3a0755fe75affd129b68fc76",
+        "observedSha256": "f07e5b9ac29e565692265558e74938fb212521fb0216e60947a6e650c859bfd8",
+        "replayedSha256": "f07e5b9ac29e565692265558e74938fb212521fb0216e60947a6e650c859bfd8"
+      },
+      {
+        "table": "happenings",
+        "beforeRows": 297,
+        "afterRows": 298,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "64e6e683ec35f52bac46d8019bab421f6f15f5b90d79e877b74317fec5624a48",
+        "observedSha256": "e4689e173fc6201b97a5ae7d689db1558eaa2bccb5bfe7cf6583cd767d49eb34",
+        "replayedSha256": "e4689e173fc6201b97a5ae7d689db1558eaa2bccb5bfe7cf6583cd767d49eb34"
+      },
+      {
+        "table": "happening_people",
+        "beforeRows": 508,
+        "afterRows": 510,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "369e7a5380e9fdce7417558c7f4a471a9cf65e4b12bc0dc516cc50b15643b6e2",
+        "observedSha256": "860515bbbcb3f337779ef5c7ed986240921d95e9850ab6d3761ac63739901b39",
+        "replayedSha256": "860515bbbcb3f337779ef5c7ed986240921d95e9850ab6d3761ac63739901b39"
+      },
+      {
+        "table": "economic_events",
+        "beforeRows": 55,
+        "afterRows": 55,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "observedSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "replayedSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99"
+      },
+      {
+        "table": "world_checkpoints",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "observedSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "replayedSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a"
+      },
+      {
+        "table": "world_layout_backups",
+        "beforeRows": 3,
+        "afterRows": 3,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "observedSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "replayedSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57"
+      },
+      {
+        "table": "_sql_schema_migrations",
+        "beforeRows": 10,
+        "afterRows": 11,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "4543b60831f47801032215770a20395493615c7c49a585c2bbbf46f57d2e2b07",
+        "observedSha256": "3edb41c5af8dda8f38a3212b9882e48ea4ce7b7a93f2ebac976ddac7a57c4a0e",
+        "replayedSha256": "3edb41c5af8dda8f38a3212b9882e48ea4ce7b7a93f2ebac976ddac7a57c4a0e"
+      },
+      {
+        "table": "quota_reservations",
+        "beforeRows": 161,
+        "afterRows": 162,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "28695d6032ee4b5f5ea85ff38fa90eb98010f4365dcbc507c7c8c3fdf3810dd6",
+        "observedSha256": "0244153abe4f3845a2726c01bb6bfa505c35c6cdbe493c4ca1e9c276d9259e31",
+        "replayedSha256": "0244153abe4f3845a2726c01bb6bfa505c35c6cdbe493c4ca1e9c276d9259e31"
+      },
+      {
+        "table": "provider_usage_daily",
+        "beforeRows": 14,
+        "afterRows": 14,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "948fc989785c66e8013bfafafec5ef88a830aae2fd2b4d7fb2a7c31d119e5137",
+        "observedSha256": "4656b21cc46407cb62974cfc669a8e1fb43bcd6e86c87ea1a99975c0e0f3e64a",
+        "replayedSha256": "4656b21cc46407cb62974cfc669a8e1fb43bcd6e86c87ea1a99975c0e0f3e64a"
+      },
+      {
+        "table": "provider_breakers",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "2a228bce185abf1ebacabf8d0fc78436f7decfec0007aba3d6b7ccb1f4e53d94",
+        "observedSha256": "2a228bce185abf1ebacabf8d0fc78436f7decfec0007aba3d6b7ccb1f4e53d94",
+        "replayedSha256": "2a228bce185abf1ebacabf8d0fc78436f7decfec0007aba3d6b7ccb1f4e53d94"
+      },
+      {
+        "table": "alarm_runs",
+        "beforeRows": 0,
+        "afterRows": 0,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "observedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "replayedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "table": "admin_commands",
+        "beforeRows": 9,
+        "afterRows": 9,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "observedSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "replayedSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5"
+      },
+      {
+        "table": "runtime_events",
+        "beforeRows": 148,
+        "afterRows": 149,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "567a5354213b6f1f50368f6b9b6e203bba768e8c9ea59bca4f384653d5dc2c31",
+        "observedSha256": "75c7b35047d753caeeca75c55686c0ea27189927c2b5ffab7039d7fffaac2829",
+        "replayedSha256": "75c7b35047d753caeeca75c55686c0ea27189927c2b5ffab7039d7fffaac2829"
+      },
+      {
+        "table": "society_state",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "b731c95b60139794f418521ca29fa12ab923a2c1c303f69990c3638c84d5d2e4",
+        "observedSha256": "ac07cabdbb991fa9b2f6b2750a01ccf82b554a72c4bcaf8bc2ac28f5e023e09f",
+        "replayedSha256": "ac07cabdbb991fa9b2f6b2750a01ccf82b554a72c4bcaf8bc2ac28f5e023e09f"
+      },
+      {
+        "table": "cognition_contexts",
+        "beforeRows": 103,
+        "afterRows": 104,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "b29279038e0936c8fd55daf98b4d144d1357383e940fd7f00fa8606749efdbb7",
+        "observedSha256": "74bfedb2232bb57b3e839a875c134979b29ba8a1b3a90ee89bb0eae1639c290e",
+        "replayedSha256": "74bfedb2232bb57b3e839a875c134979b29ba8a1b3a90ee89bb0eae1639c290e"
+      },
+      {
+        "table": "physical_runs",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "observedSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "replayedSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26"
+      },
+      {
+        "table": "society_events",
+        "beforeRows": 101,
+        "afterRows": 102,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "2e138aad7ad3591a9e11c14617d036d02b4f8f6554c87875e7372fc0b770484b",
+        "observedSha256": "f4cc016d4297e9264d334b71a0dd9907c08ad822af9077d0a7e2638d024fc323",
+        "replayedSha256": "f4cc016d4297e9264d334b71a0dd9907c08ad822af9077d0a7e2638d024fc323"
+      },
+      {
+        "table": "society_layout_backups",
+        "beforeRows": 1,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+        "observedSha256": "89007f2d6ed3b99658c187e49bb5e39cf806d98c6d48f3d6864fba28e4b95ab9",
+        "replayedSha256": "89007f2d6ed3b99658c187e49bb5e39cf806d98c6d48f3d6864fba28e4b95ab9"
+      },
+      {
+        "table": "authored_publications",
+        "beforeRows": 0,
+        "afterRows": 0,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "observedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "replayedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "table": "provider_rejections",
+        "beforeRows": 7,
+        "afterRows": 7,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "1953a116c161ec211ab48e20d1d4cfd0a1656adb13297e466bdc60070278ce5c",
+        "observedSha256": "1953a116c161ec211ab48e20d1d4cfd0a1656adb13297e466bdc60070278ce5c",
+        "replayedSha256": "1953a116c161ec211ab48e20d1d4cfd0a1656adb13297e466bdc60070278ce5c"
+      },
+      {
+        "table": "quota_model_migration",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "observedSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "replayedSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe"
+      },
+      {
+        "table": "provider_model_breakers",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "532f70cefa82e40e0ef73e1930e5105d5f723da00e6b3cd7b961bdb9b05cc54e",
+        "observedSha256": "dc1dc26ad9c311bc8687d76ef39ffdf212c5d4c673ac9982e02e1230ffb657e7",
+        "replayedSha256": "dc1dc26ad9c311bc8687d76ef39ffdf212c5d4c673ac9982e02e1230ffb657e7"
+      }
+    ]
+  },
+  "evidence": {
+    "privateReplaySha256": "2ad67157cdc180f5bbad7f71d8ad786bf7c9ea5ab25acaee0cb313c4387b2f4d",
+    "privateEvidenceMode": 384,
+    "scriptSha256": "3e4d1aca35bc9cb34b31d2b3f2030b4511451caf46f2f69ce81c797e9d3e0932",
+    "actualMigrationOfflineRehearsalPassed": true
+  },
+  "execution": {
+    "externalNetworkRequests": 0,
+    "inferenceCalls": 0,
+    "simulatedProviderReceipts": 1,
+    "localScheduledWakesReplayed": 1,
+    "physicalWorldAdvances": 0,
+    "productionWrites": 0
+  },
+  "limitations": [
+    "The failed immediate cut establishes that it still contained the old schema; release propagation is a possible explanation, not a proven causal diagnosis.",
+    "The saved output and usage were wrapped in a synthetic local HTTP response. This verifies deterministic accounting and effects, not the original provider response bytes, latency, or service behavior.",
+    "The successful P7 output contains only a message. It does not demonstrate actual private retrieval, record publication, improved semantics, or better dialogue quality.",
+    "Recovery exposes all canonical data rows, not remote sqlite_master or every platform-internal table."
+  ],
+  "privacy": {
+    "containsPrivateProseOrPromptValues": false
+  }
+}

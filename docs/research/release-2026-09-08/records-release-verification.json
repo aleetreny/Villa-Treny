@@ -1,0 +1,106 @@
+{
+  "version": "fafe7049-098d-4e42-ae35-0ff65054d988",
+  "canonicalUrl": "https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/",
+  "verifiedAt": "2026-09-08T18:50:03.371Z",
+  "identity": {
+    "worker": "aleetreny-habitat-runtime",
+    "class": "HabitatWorld",
+    "binding": "HABITAT_WORLD",
+    "habitat": "habitat-canonical"
+  },
+  "schemaVersion": 9,
+  "worldCodecVersion": 4,
+  "societyCodecVersion": 2,
+  "autonomousProtocolVersion": 6,
+  "savedProtocolReaders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "limits": {
+    "cloudflareDailyNeurons": 8000,
+    "groqRollingDayTotalTokens": 150000,
+    "groqMinuteTokens": 6000,
+    "groqMinuteRequests": 10,
+    "groqDayRequests": 200,
+    "maxOutputTokens": 1024
+  },
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "application": {
+      "tests": 949,
+      "files": 51
+    },
+    "worker": {
+      "tests": 248,
+      "files": 26
+    },
+    "node": 48,
+    "browser": 21,
+    "offlineHosting": 6,
+    "build": true,
+    "dryDeploy": true,
+    "completeMigrationContinuity": true
+  },
+  "browser": {
+    "surface": "native Codex in-app browser, tab17, after user unlocked Mac",
+    "connection": "Connected; World running; Thoughts active",
+    "room": "The Common",
+    "magnification": 4,
+    "visualScreenshotReviewed": true,
+    "livesWritingsCount": 0,
+    "commissionsProposed": 0,
+    "commissionsAccepted": 0,
+    "archiveResult": "Start of the public writing archive reached",
+    "scope": "Observed release UI and empty archive. Future authored content rendering is covered by isolated browser tests, not yet witnessed in production."
+  },
+  "build": {
+    "frontendJS": "assets/index-DPD7blQQ.js",
+    "frontendCSS": "assets/index-D0hoVXdy.css",
+    "deployableFiles": 59,
+    "roomPNGsIncludingSealedBreach": 46,
+    "workerKiB": 4365.8,
+    "workerGzipKiB": 1711.46,
+    "startupMs": 83,
+    "warnings": [
+      "Vite frontend chunk exceeds500kB; build succeeded"
+    ]
+  },
+  "continuity": "sql9-migration-continuity.json",
+  "sourceManifest": "records-source-manifest.json",
+  "logs": [
+    {
+      "kind": "final-check",
+      "sha256": "71ade15e6680f754dd154a9d1ce780c903c2a347fef395409b905127cef20c28"
+    },
+    {
+      "kind": "build",
+      "sha256": "abdc68b98456831525cfeaad1ef72dffedaff845f4c7f57436dfdf29d778023e"
+    },
+    {
+      "kind": "dry",
+      "sha256": "8bd5e5025b16d80840c303681626d3535800f904bff2625b1218f744e2a61dbe"
+    },
+    {
+      "kind": "hosting",
+      "sha256": "5efe90a857d02ef9d1b640f22f272eabc5b445b4ec13a47e557a7a368a1bfdc9"
+    },
+    {
+      "kind": "deploy",
+      "sha256": "4472cb523f788afcaf87cb7022053be6b165ca97b0e5b129aafaef37af93f0fc"
+    }
+  ],
+  "limitations": [
+    "No P6 autonomous outcome observed at this release cut.",
+    "Local Qwen P6 evaluation retained:10 requests,9applied,1rejection,1private draft,0publications,0commissions,0publication payments.",
+    "Schema correctness and deterministic tests do not establish semantic usefulness or consent.",
+    "A new historical Spanish spoken message remains untranslated in the observer; English instructions are not a language guarantee.",
+    "SQL9/Society2 require a compatible reader on rollback; an old SQL8 binary alone is insufficient."
+  ],
+  "gitCommitOrPush": false,
+  "portfolioChanged": false
+}

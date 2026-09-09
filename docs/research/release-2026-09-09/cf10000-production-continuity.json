@@ -1,0 +1,577 @@
+{
+  "format": "villa-cf10000-release-continuity-summary-v1",
+  "scope": "Sanitized release configuration and exact canonical state comparison; no billing or account identity metadata.",
+  "deployment": {
+    "version": "f50c0b1a-163b-42c0-995f-5374d695a4a1",
+    "createdAt": "2026-09-09T11:58:23.100233Z",
+    "workersAiDailyNeuronsLimit": 10000,
+    "protocol": 8,
+    "sqlSchema": 12,
+    "societyCodec": 4,
+    "publicSocietyDto": 2,
+    "otherPlainConfiguration": "unchanged in coordinator comparison"
+  },
+  "validation": {
+    "applicationTests": 1077,
+    "workerTests": 377,
+    "nodeTests": 62,
+    "browserChecks": 21,
+    "hostingChecks": 6,
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "dryDeploy": "passed",
+    "preexistingWarning": "936.8 KB output chunk",
+    "sourceFiles": 319,
+    "sourceBundleSha256": "78413f3d1a6674af69888c1c9981dfd2e5b2871e84789bceb4ff460dcff0d42a",
+    "attribution": "Coordinator release validation; state comparison independently audited."
+  },
+  "continuity": {
+    "status": "passed",
+    "auditedAt": "2026-09-09T11:59:58.344Z",
+    "checks": [
+      {
+        "code": "both_complete_backups_verified",
+        "passed": true
+      },
+      {
+        "code": "26_canonical_tables",
+        "passed": true
+      },
+      {
+        "code": "exact_source_table_set",
+        "passed": true
+      },
+      {
+        "code": "exact_target_table_set",
+        "passed": true
+      },
+      {
+        "code": "sql12_required",
+        "passed": true
+      },
+      {
+        "code": "one_society_row",
+        "passed": true
+      },
+      {
+        "code": "society4_required",
+        "passed": true
+      },
+      {
+        "code": "current_reader_accepts_society4",
+        "passed": true
+      },
+      {
+        "code": "reader_preserves_all_existing_society_fields",
+        "passed": true
+      },
+      {
+        "code": "sql12_required",
+        "passed": true
+      },
+      {
+        "code": "one_society_row",
+        "passed": true
+      },
+      {
+        "code": "society4_required",
+        "passed": true
+      },
+      {
+        "code": "current_reader_accepts_society4",
+        "passed": true
+      },
+      {
+        "code": "reader_preserves_all_existing_society_fields",
+        "passed": true
+      },
+      {
+        "code": "same_export_format",
+        "passed": true
+      },
+      {
+        "code": "same_habitat",
+        "passed": true
+      },
+      {
+        "code": "capture_order",
+        "passed": true
+      },
+      {
+        "code": "all_nontransport_core_fields_exact",
+        "passed": true
+      },
+      {
+        "code": "checkpoint_bytes_rules_hash_and_revision_exact",
+        "passed": true
+      },
+      {
+        "code": "checkpoint_rules12_required",
+        "passed": true
+      },
+      {
+        "code": "same_world_publication_revision",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_rows_rowids_and_columns_exact",
+        "passed": true
+      },
+      {
+        "code": "all_clocks_mode_control_errors_exact",
+        "passed": true
+      },
+      {
+        "code": "physical_state_and_metadata_exact",
+        "passed": true
+      },
+      {
+        "code": "all_minds_records_attention_and_society_bytes_exact",
+        "passed": true
+      },
+      {
+        "code": "no_sql_migration_or_marker_change",
+        "passed": true
+      },
+      {
+        "code": "no_new_society_migration_archive",
+        "passed": true
+      },
+      {
+        "code": "no_new_world_migration_archive",
+        "passed": true
+      },
+      {
+        "code": "all_confirmed_and_ambiguous_reservations_exact",
+        "passed": true
+      },
+      {
+        "code": "all_usage_caches_exact",
+        "passed": true
+      },
+      {
+        "code": "all_provider_attempts_exact",
+        "passed": true
+      },
+      {
+        "code": "all_provider_breakers_exact",
+        "passed": true
+      },
+      {
+        "code": "all_model_breakers_exact",
+        "passed": true
+      },
+      {
+        "code": "all_quota_migration_records_exact",
+        "passed": true
+      },
+      {
+        "code": "all_saved_jobs_statuses_outputs_and_prompts_exact",
+        "passed": true
+      },
+      {
+        "code": "all_saved_contexts_exact",
+        "passed": true
+      },
+      {
+        "code": "all_historical_checkpoints_exact",
+        "passed": true
+      },
+      {
+        "code": "backup_bytes_unchanged",
+        "passed": true
+      },
+      {
+        "code": "backup_mtime_unchanged",
+        "passed": true
+      },
+      {
+        "code": "backup_bytes_unchanged",
+        "passed": true
+      },
+      {
+        "code": "backup_mtime_unchanged",
+        "passed": true
+      },
+      {
+        "code": "no_network_attempts",
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "canonical": {
+      "tables": 26,
+      "beforeRows": 2118,
+      "afterRows": 2118,
+      "beforeRevision": 326,
+      "afterRevision": 326,
+      "day": 108,
+      "watch": 2,
+      "residents": 25,
+      "relationships": 600,
+      "worldStateSha256": "e9dec091a8d8457234c75efa19f445285a9a6b875562183ed44d7241ebe8ab9b",
+      "societyStateSha256": "de4554794cf52a7963eb0201429d6253132abcef8bfcfa03223cc1971aa4a9ab",
+      "beforeReservations": 203,
+      "afterReservations": 203,
+      "beforeUnconfirmedReservations": 56,
+      "afterUnconfirmedReservations": 56,
+      "beforeJobStatuses": {
+        "pending": 0,
+        "deferred": 0,
+        "running": 0,
+        "resolved": 0,
+        "applied": 155,
+        "rejected": 0,
+        "expired": 0
+      },
+      "afterJobStatuses": {
+        "pending": 0,
+        "deferred": 0,
+        "running": 0,
+        "resolved": 0,
+        "applied": 155,
+        "rejected": 0,
+        "expired": 0
+      }
+    },
+    "tables": [
+      {
+        "table": "runtime_meta",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "beforeSha256": "2a3599102552cdaf176331379d269babfd937d7884bd6f1ecb6eda0c4227a515",
+        "afterSha256": "2a3599102552cdaf176331379d269babfd937d7884bd6f1ecb6eda0c4227a515",
+        "exact": true
+      },
+      {
+        "table": "world_state",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "beforeSha256": "12efbad1dcb222661cb9beafc182491e9a0e48e4aa1a533e5ceee22c7f83aabc",
+        "afterSha256": "12efbad1dcb222661cb9beafc182491e9a0e48e4aa1a533e5ceee22c7f83aabc",
+        "exact": true
+      },
+      {
+        "table": "watch_runs",
+        "beforeRows": 30,
+        "afterRows": 30,
+        "beforeSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "afterSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "exact": true
+      },
+      {
+        "table": "cognition_jobs",
+        "beforeRows": 171,
+        "afterRows": 171,
+        "beforeSha256": "872ebe01d31cd05f720a3d78cbfefd1e1d94267ee2224eba6db165d2bedd5da9",
+        "afterSha256": "872ebe01d31cd05f720a3d78cbfefd1e1d94267ee2224eba6db165d2bedd5da9",
+        "exact": true
+      },
+      {
+        "table": "provider_attempts",
+        "beforeRows": 201,
+        "afterRows": 201,
+        "beforeSha256": "7570c9582383282810ddb0b346c50a043d8657f823cd033dda29fae40da4b3ee",
+        "afterSha256": "7570c9582383282810ddb0b346c50a043d8657f823cd033dda29fae40da4b3ee",
+        "exact": true
+      },
+      {
+        "table": "happenings",
+        "beforeRows": 332,
+        "afterRows": 332,
+        "beforeSha256": "c76b52ffe2bf5c8795b224f0f87e27448ec2a242fdd27932526a56a97a1cf1f1",
+        "afterSha256": "c76b52ffe2bf5c8795b224f0f87e27448ec2a242fdd27932526a56a97a1cf1f1",
+        "exact": true
+      },
+      {
+        "table": "happening_people",
+        "beforeRows": 569,
+        "afterRows": 569,
+        "beforeSha256": "35f02ca8d377f66ef9e497a77aa265a05479ac1e6e6f8fd1fafaf25099ae1eee",
+        "afterSha256": "35f02ca8d377f66ef9e497a77aa265a05479ac1e6e6f8fd1fafaf25099ae1eee",
+        "exact": true
+      },
+      {
+        "table": "economic_events",
+        "beforeRows": 79,
+        "afterRows": 79,
+        "beforeSha256": "cbd4a6f3fe6e5d8bcc17ec87e49662d2bf230ea46ae9ac2786d92b6308d36be4",
+        "afterSha256": "cbd4a6f3fe6e5d8bcc17ec87e49662d2bf230ea46ae9ac2786d92b6308d36be4",
+        "exact": true
+      },
+      {
+        "table": "world_checkpoints",
+        "beforeRows": 3,
+        "afterRows": 3,
+        "beforeSha256": "223ec5c2e39ebccb100e982374da51ac3bd3b9dd8ec473cbecbc22882559a17d",
+        "afterSha256": "223ec5c2e39ebccb100e982374da51ac3bd3b9dd8ec473cbecbc22882559a17d",
+        "exact": true
+      },
+      {
+        "table": "world_layout_backups",
+        "beforeRows": 3,
+        "afterRows": 3,
+        "beforeSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "afterSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "exact": true
+      },
+      {
+        "table": "_sql_schema_migrations",
+        "beforeRows": 12,
+        "afterRows": 12,
+        "beforeSha256": "3c47658254210e4e066304fe97489795405cb41483dc7c3f3958caa3c2829912",
+        "afterSha256": "3c47658254210e4e066304fe97489795405cb41483dc7c3f3958caa3c2829912",
+        "exact": true
+      },
+      {
+        "table": "quota_reservations",
+        "beforeRows": 203,
+        "afterRows": 203,
+        "beforeSha256": "154c0cdb5bc05bf4df4070c1516ee3adab6b98313707da001c7867f74e8f62b6",
+        "afterSha256": "154c0cdb5bc05bf4df4070c1516ee3adab6b98313707da001c7867f74e8f62b6",
+        "exact": true
+      },
+      {
+        "table": "provider_usage_daily",
+        "beforeRows": 16,
+        "afterRows": 16,
+        "beforeSha256": "45c4d70a84237fe9604b8709cab8df566195144cb76752cf428e6c4141f9bf98",
+        "afterSha256": "45c4d70a84237fe9604b8709cab8df566195144cb76752cf428e6c4141f9bf98",
+        "exact": true
+      },
+      {
+        "table": "provider_breakers",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "beforeSha256": "8580222213168b13a02361aae35b70f4b073e94c0eb8048945bed58f20d8d84e",
+        "afterSha256": "8580222213168b13a02361aae35b70f4b073e94c0eb8048945bed58f20d8d84e",
+        "exact": true
+      },
+      {
+        "table": "alarm_runs",
+        "beforeRows": 0,
+        "afterRows": 0,
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "afterSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "exact": true
+      },
+      {
+        "table": "admin_commands",
+        "beforeRows": 9,
+        "afterRows": 9,
+        "beforeSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "afterSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "exact": true
+      },
+      {
+        "table": "runtime_events",
+        "beforeRows": 187,
+        "afterRows": 187,
+        "beforeSha256": "7b9268ee22ebfbfd754df292986eb1a5fae8cc8e291f29d7b5515e32a090bc4f",
+        "afterSha256": "7b9268ee22ebfbfd754df292986eb1a5fae8cc8e291f29d7b5515e32a090bc4f",
+        "exact": true
+      },
+      {
+        "table": "society_state",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "beforeSha256": "3902013a640575e71a68142d75f323bc056c5d3354f2749da712e9640b21a34d",
+        "afterSha256": "3902013a640575e71a68142d75f323bc056c5d3354f2749da712e9640b21a34d",
+        "exact": true
+      },
+      {
+        "table": "cognition_contexts",
+        "beforeRows": 141,
+        "afterRows": 141,
+        "beforeSha256": "82321f36522ed8cd0f136ee3973517cd9a5b757ee6c2bfba752f5abf0b278196",
+        "afterSha256": "82321f36522ed8cd0f136ee3973517cd9a5b757ee6c2bfba752f5abf0b278196",
+        "exact": true
+      },
+      {
+        "table": "physical_runs",
+        "beforeRows": 3,
+        "afterRows": 3,
+        "beforeSha256": "7cfe866a4839e67fa2a91c54acf1f823d1314a5a6340b69072f0e24acee287db",
+        "afterSha256": "7cfe866a4839e67fa2a91c54acf1f823d1314a5a6340b69072f0e24acee287db",
+        "exact": true
+      },
+      {
+        "table": "society_events",
+        "beforeRows": 138,
+        "afterRows": 138,
+        "beforeSha256": "4f555dbb6467299e29d965ae70ae3ca1bbc6d2b8d2c4fe8aa47a0ef252baf6ad",
+        "afterSha256": "4f555dbb6467299e29d965ae70ae3ca1bbc6d2b8d2c4fe8aa47a0ef252baf6ad",
+        "exact": true
+      },
+      {
+        "table": "society_layout_backups",
+        "beforeRows": 3,
+        "afterRows": 3,
+        "beforeSha256": "f5a42ec9ba050f0564aaa48ac1922a9c40fe7cc08a429968951db23751ce2515",
+        "afterSha256": "f5a42ec9ba050f0564aaa48ac1922a9c40fe7cc08a429968951db23751ce2515",
+        "exact": true
+      },
+      {
+        "table": "authored_publications",
+        "beforeRows": 0,
+        "afterRows": 0,
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "afterSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "exact": true
+      },
+      {
+        "table": "provider_rejections",
+        "beforeRows": 10,
+        "afterRows": 10,
+        "beforeSha256": "900d0f6db365d69aa671b3d1bf85cbf392123b70d4768bb4ef724ff6f054ea32",
+        "afterSha256": "900d0f6db365d69aa671b3d1bf85cbf392123b70d4768bb4ef724ff6f054ea32",
+        "exact": true
+      },
+      {
+        "table": "quota_model_migration",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "beforeSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "afterSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "exact": true
+      },
+      {
+        "table": "provider_model_breakers",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "beforeSha256": "5001667fcfacde19705d2c27599f3df132dc0bfb2e7890a4fa2a80567a7f82cb",
+        "afterSha256": "5001667fcfacde19705d2c27599f3df132dc0bfb2e7890a4fa2a80567a7f82cb",
+        "exact": true
+      }
+    ],
+    "comparisonActions": {
+      "networkAttempts": 0,
+      "providerCalls": 0,
+      "productionWrites": 0,
+      "worldAdvances": 0
+    },
+    "limitations": [
+      "Backup transport timestamps, cut IDs, pagination and checksums may differ only after independent complete-export verification.",
+      "Recovery backups do not prove the remote CF limit, executable identity or sqlite_master/index inventory. Inspect deployment configuration separately.",
+      "No active quota, ambiguous reservation, job or deadline is excluded, refunded, repriced, reset or advanced."
+    ]
+  },
+  "provenance": {
+    "privateContinuityReceiptSha256": "b645185dee10e1cb4c6cdba9eac133f6c1c35899cd77a95789c2f1ddd4a3e0be",
+    "deployedVersionReceiptSha256": "150928458ebfec9db149e5ee0acd4b435f8e3e22c0c964767ca078f8755c4502",
+    "beforeCompleteBackup": {
+      "sha256": "4a1f4b38a215aa2413daf63ca94f2d35ad1a61d39df719b29a898a492f433296",
+      "exportedAtMs": 1788955057400,
+      "pages": 33
+    },
+    "afterCompleteBackup": {
+      "sha256": "01bf2b3d53c3ca434d8006b6392b119c5408afcacb767529e91d01c879b2890b",
+      "exportedAtMs": 1788955125690,
+      "pages": 33
+    },
+    "analyzerSourceManifestSha256": "6f98d238d3645126f46722631a10ebec5e899d893f44adda0570717cbcddbe74",
+    "comparisonScriptSha256": "f7fc69afac0f56dc28d27d4a2c3e7ccef791f249c6b1a2cc8e4761a4f422fa35"
+  },
+  "interpretation": "The configuration readback establishes the deployed 10,000-neuron guard. The independent backup comparison preserves every canonical row and column at revision 326. Neither demonstrates semantic improvement or refunds ambiguous provider usage."
+}

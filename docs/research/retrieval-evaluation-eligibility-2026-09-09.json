@@ -1,0 +1,261 @@
+{
+  "format": "villa-retrieval-evaluation-eligibility-v1",
+  "capturedAt": "2026-09-08T23:29:33.827Z",
+  "source": {
+    "manifest": "release-2026-09-09/retrieval-source-manifest.json",
+    "fileCount": 302,
+    "sourceBundleSha256": "d11e7dd6feda80b9427262228a444f204e19e956afc16bc623705d6d60250a14",
+    "sourceManifestSha256": "221e3015343e8ac39d0ae44bde59e14811d6f57ef6824e21ede4ca061a6404b6",
+    "allSourceBytesVerifiedBeforeAndAfter": true
+  },
+  "backup": {
+    "sha256": "af118f8fea4e2b6ffdc902efcc770c96ecfd7e283f80eff5a061582cdf15b273",
+    "worldRevision": 247,
+    "exportedAtMs": 1788909779380,
+    "completeVerificationPassed": true,
+    "pageCount": 30,
+    "bytesAndMtimeUnchanged": true
+  },
+  "procedure": {
+    "protocolVersion": 6,
+    "preparations": 25,
+    "preparationTimeMs": 1788909779380,
+    "sequence": 105,
+    "existingStateOnly": true,
+    "stateAndWorldUnchanged": true,
+    "noAuthoredRecordsAdded": true,
+    "noTextHiddenOrTruncated": true,
+    "networkRequests": 0,
+    "networkGuards": [
+      "fetch",
+      "http",
+      "https",
+      "net.Socket.connect",
+      "tls.connect"
+    ],
+    "modelRequests": 0,
+    "scriptSha256": "9d244b7d96bf05342470bc6a55eee7f86ba93d449decd9a688c54c1f12af5eac",
+    "privateEvidenceSha256": "dcc0a1034236e2aa0c00e996c85423423231e0ba38ff58aea5b51c1f6cc5e7dc"
+  },
+  "totals": {
+    "retainedDrafts": 7,
+    "residents": 25,
+    "residentsWithAuthorizedDrafts": 7,
+    "residentsWithMissingAuthorizedDrafts": 0,
+    "missingAuthorizedDrafts": 0
+  },
+  "residents": [
+    {
+      "actor": "A",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "B",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "C",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "D",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "E",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "F",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "G",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "H",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "I",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "J",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "K",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "L",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "M",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "N",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "O",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "P",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "Q",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "R",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "S",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "T",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "U",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "V",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "W",
+      "authorizedRetainedDrafts": 1,
+      "completeDraftsSupplied": 1,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "X",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    },
+    {
+      "actor": "Y",
+      "authorizedRetainedDrafts": 0,
+      "completeDraftsSupplied": 0,
+      "reportedOmittedDrafts": 0,
+      "independentlyMissingDrafts": 0,
+      "suppliedBodiesMatchAuthorizedSource": true
+    }
+  ],
+  "eligibility": {
+    "eligible": false,
+    "classification": "not_evaluable_at_this_cut",
+    "reason": "Every currently authorized retained draft is already supplied completely by P6. No real omitted-record access case exists in this cut.",
+    "relevanceJudgmentRequired": false,
+    "syntheticAlphaBetaIsNotProductionEvidence": true
+  },
+  "limits": [
+    "This is an offline access-eligibility check, not an inference, semantic score or evidence of autonomous lookup.",
+    "No private titles, bodies, reference IDs, queries, focus bindings or complete prompts are included in this public receipt.",
+    "A later complete cut can have different eligibility; this receipt schedules no monitoring or inference."
+  ]
+}

@@ -1,0 +1,611 @@
+{
+  "version": 1,
+  "scope": "Offline reconstruction and assistant semantic audit; no provider calls, no human evaluation.",
+  "beforeBackupSha256": "21454faccf2b16412a3f276b5a050b04cc1d53ecbec18a88c33c93c3b6d174b6",
+  "afterBackupSha256": "64c3425133e4f928378ec4f2ed24eba4174592b03363531c71e122314557ad88",
+  "sourceModules": [
+    {
+      "path": "scripts/review-first-live-turns.mjs",
+      "sha256": "f415670a6a2fb166829a9eb5cdaa5a6f89c5b2e092f0a55ab4a02010d40c50d5"
+    },
+    {
+      "path": "src/lib/habitat/engine/economy.ts",
+      "sha256": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8"
+    },
+    {
+      "path": "src/lib/habitat/engine/knowledge.ts",
+      "sha256": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14"
+    },
+    {
+      "path": "src/lib/habitat/engine/state.ts",
+      "sha256": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8"
+    },
+    {
+      "path": "src/lib/habitat/engine/tick.ts",
+      "sha256": "4bc9068d99f84ef8f45af3783f4872cde109e162ea26cb7f71b7af1897be93cb"
+    },
+    {
+      "path": "src/lib/habitat/engine/verbs.ts",
+      "sha256": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3"
+    },
+    {
+      "path": "src/lib/habitat/residents.ts",
+      "sha256": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29"
+    },
+    {
+      "path": "src/lib/habitat/rooms.ts",
+      "sha256": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57"
+    },
+    {
+      "path": "src/lib/habitat/society/appraisal.ts",
+      "sha256": "f946f0accaece3c460d3a6e5fe884aa4797e2fccfc403ea17fcdbaa25a37ea7b"
+    },
+    {
+      "path": "src/lib/habitat/society/capabilities.ts",
+      "sha256": "d8a2437937fd325af6004a8db7c637ca1f7fabecc1062aeb26a3594e013e67e1"
+    },
+    {
+      "path": "src/lib/habitat/society/choice.ts",
+      "sha256": "e9f80ebec5a46f993f7da89ede002a746ff7413cdca4a745bf37a2e9743dad0a"
+    },
+    {
+      "path": "src/lib/habitat/society/economy.ts",
+      "sha256": "a654dca715bdc163e792115c0bdafb48177bdbee2e0fc74ad3d588873504802a"
+    },
+    {
+      "path": "src/lib/habitat/society/index.ts",
+      "sha256": "9a49fab8d73b165b130f2988a8b1178d2034f4918092b7bd975be70588465946"
+    },
+    {
+      "path": "src/lib/habitat/society/instructions.ts",
+      "sha256": "77783451cfcf8a5939f8e1ae8d33bc2d1577ad3f53f71be2d20410177ea9cd91"
+    },
+    {
+      "path": "src/lib/habitat/society/money.ts",
+      "sha256": "923226735ffaadfdeb4fecf6ef6418b08257285c3eebf8a56941ceefe4684b8a"
+    },
+    {
+      "path": "src/lib/habitat/society/physical.ts",
+      "sha256": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae"
+    },
+    {
+      "path": "src/lib/habitat/society/public.ts",
+      "sha256": "d33553d696de531b063761ebada83299541a11d1fbf8d7c68ec93481a3aade5a"
+    },
+    {
+      "path": "src/lib/habitat/society/schema.ts",
+      "sha256": "3de39ade3487159388a378681a4f1fdcd89b3e78bef4ebf5dc1405fb04adb6e1"
+    },
+    {
+      "path": "src/lib/habitat/society/state.ts",
+      "sha256": "bcc7ddf0baf53d24d146214dc7e6e578aefa01b0778b08cc672fe92aa1414bc3"
+    },
+    {
+      "path": "src/lib/habitat/society/turn.ts",
+      "sha256": "d43378d30fb0d40586b5bce3434a26bc5e7a086709255ca0c57438cb46e67f4b"
+    },
+    {
+      "path": "src/lib/habitat/society/types.ts",
+      "sha256": "c7029b821a40ccf1ef99a9d309a5556e9eb3e51b539a7259c7062e38550fa1ed"
+    },
+    {
+      "path": "src/lib/habitat/weave.ts",
+      "sha256": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5"
+    },
+    {
+      "path": "workers/habitat-runtime/src/checkpoint.ts",
+      "sha256": "114d43b44a474a7ef560f195d4581475baa56ff7785327fa9e4e20a8ec96bdfd"
+    },
+    {
+      "path": "workers/habitat-runtime/src/contracts.ts",
+      "sha256": "148065684e7bc17653f137025db1e7dd29e850de2d83e1c2b84fc876e97eb3c8"
+    },
+    {
+      "path": "workers/habitat-runtime/src/domain.ts",
+      "sha256": "a0523ad945e440c86aec54251c4e114ef9a328f8ed0f848cc8b4dd4f25d8768e"
+    },
+    {
+      "path": "workers/habitat-runtime/src/recovery.ts",
+      "sha256": "c782edce746c6e14c8636d585d17362e78e0f7b93c0c29d15d513e0a0e8f0e00"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-protocol.ts",
+      "sha256": "00bb9ae2587ff775148f59bb5cff2a8584506b301d9fa5e54d27e4170ed9c714"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "f96038e79c059305421c2b8dc1b13907b342328077fea7333f53158374798340"
+    }
+  ],
+  "promptsMatched": 33,
+  "promptsChecked": 33,
+  "allPromptHashesMatch": true,
+  "evidenceMatches": 11,
+  "turnsChecked": 11,
+  "finalPublicProjectionSha256": "4037f6eb74a051608ef6cc0a6e85c416253adf3710953ffe3bfbc979f648b001",
+  "savedPublicProjectionSha256": "4037f6eb74a051608ef6cc0a6e85c416253adf3710953ffe3bfbc979f648b001",
+  "finalPublicProjectionMatches": true,
+  "physicalRunsSinceMigration": 0,
+  "physicalTime": {
+    "before": {
+      "day": 107,
+      "watch": 3
+    },
+    "after": {
+      "day": 107,
+      "watch": 3
+    }
+  },
+  "offers": 0,
+  "agreements": 0,
+  "publicConversationCount": 6,
+  "bilateralConversations": 3,
+  "successfulResidents": 9,
+  "turns": [
+    {
+      "sequence": 1,
+      "actor": "A",
+      "jobId": "habitat-canonical:mind:A:0:1:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "b22895561da32cf18b3e2c639e1155034339c50e287c71c15595c8cb236c4957",
+          "actual": "b22895561da32cf18b3e2c639e1155034339c50e287c71c15595c8cb236c4957",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "b22895561da32cf18b3e2c639e1155034339c50e287c71c15595c8cb236c4957",
+          "actual": "b22895561da32cf18b3e2c639e1155034339c50e287c71c15595c8cb236c4957",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "6ad1bc4cf50eb29af9ee9b72674f48e1cd38d2bd53fa7349340dbfe0a670d478",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": true,
+      "changedCurrentSchemaPaths": [],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788873160826,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 2,
+      "actor": "B",
+      "jobId": "habitat-canonical:mind:B:0:2:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "a3612f5645b4390ae33aa8b20b6379bc904dd89d441c5a208b4046bfb43a7533",
+          "actual": "a3612f5645b4390ae33aa8b20b6379bc904dd89d441c5a208b4046bfb43a7533",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "a3612f5645b4390ae33aa8b20b6379bc904dd89d441c5a208b4046bfb43a7533",
+          "actual": "a3612f5645b4390ae33aa8b20b6379bc904dd89d441c5a208b4046bfb43a7533",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "2b31cb224e486e7d14d8e7b676ea25d0624524a20c62bfeaf060eddab0fc0245",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": true,
+      "changedCurrentSchemaPaths": [],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788873339160,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 3,
+      "actor": "U",
+      "jobId": "habitat-canonical:mind:U:1:3:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "77dd883cb274039df3afe8d3b7e4eb80a4321f5f75fbf117cb2f5e5196bf593d",
+          "actual": "77dd883cb274039df3afe8d3b7e4eb80a4321f5f75fbf117cb2f5e5196bf593d",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "77dd883cb274039df3afe8d3b7e4eb80a4321f5f75fbf117cb2f5e5196bf593d",
+          "actual": "77dd883cb274039df3afe8d3b7e4eb80a4321f5f75fbf117cb2f5e5196bf593d",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "5b02abcf57d5367baf77b396187ffa338281b229910cc689dec4a94ed9d1c56f",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": false,
+      "changedCurrentSchemaPaths": [
+        "/properties/project/type",
+        "/properties/project/properties",
+        "/properties/project/required",
+        "/properties/project/additionalProperties",
+        "/properties/project/$ref",
+        "/properties/reflection/type",
+        "/properties/reflection/properties",
+        "/properties/reflection/required",
+        "/properties/reflection/additionalProperties",
+        "/properties/reflection/$ref",
+        "/properties/deal/anyOf",
+        "/properties/deal/description",
+        "/properties/deal/$ref",
+        "/properties/appraisal/type",
+        "/properties/appraisal/additionalProperties",
+        "/properties/appraisal/required",
+        "/properties/appraisal/properties",
+        "/properties/appraisal/description",
+        "/properties/appraisal/$ref",
+        "/$defs/choice_project",
+        "/$defs/choice_reflection",
+        "/$defs/choice_message",
+        "/$defs/choice_deal",
+        "/$defs/choice_appraisal",
+        "/anyOf"
+      ],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788873515967,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 4,
+      "actor": "C",
+      "jobId": "habitat-canonical:mind:C:0:4:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "57e86e547432b003637a99c5e64559badc4ce46a5974c0aba708c3e79fc18427",
+          "actual": "57e86e547432b003637a99c5e64559badc4ce46a5974c0aba708c3e79fc18427",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "57e86e547432b003637a99c5e64559badc4ce46a5974c0aba708c3e79fc18427",
+          "actual": "57e86e547432b003637a99c5e64559badc4ce46a5974c0aba708c3e79fc18427",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "3164a1ec9565be6ac9de0764ebdbe5a8c1fb9d3cde8194657601ad94f039bf2f",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": true,
+      "changedCurrentSchemaPaths": [],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788873699272,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 5,
+      "actor": "K",
+      "jobId": "habitat-canonical:mind:K:1:5:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "5d3ea6d9170aaa5ebf4d0007d3221a13f47b6c15c5a8adaa8bbe0b26ca4edd79",
+          "actual": "5d3ea6d9170aaa5ebf4d0007d3221a13f47b6c15c5a8adaa8bbe0b26ca4edd79",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "5d3ea6d9170aaa5ebf4d0007d3221a13f47b6c15c5a8adaa8bbe0b26ca4edd79",
+          "actual": "5d3ea6d9170aaa5ebf4d0007d3221a13f47b6c15c5a8adaa8bbe0b26ca4edd79",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "f327fd33b9485bd17cec02ec81a55f5ab6985b33541461b0936a545122a1ae90",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": false,
+      "changedCurrentSchemaPaths": [
+        "/properties/project/type",
+        "/properties/project/properties",
+        "/properties/project/required",
+        "/properties/project/additionalProperties",
+        "/properties/project/$ref",
+        "/properties/reflection/type",
+        "/properties/reflection/properties",
+        "/properties/reflection/required",
+        "/properties/reflection/additionalProperties",
+        "/properties/reflection/$ref",
+        "/properties/deal/anyOf",
+        "/properties/deal/description",
+        "/properties/deal/$ref",
+        "/properties/appraisal/type",
+        "/properties/appraisal/additionalProperties",
+        "/properties/appraisal/required",
+        "/properties/appraisal/properties",
+        "/properties/appraisal/description",
+        "/properties/appraisal/$ref",
+        "/$defs/choice_project",
+        "/$defs/choice_reflection",
+        "/$defs/choice_message",
+        "/$defs/choice_deal",
+        "/$defs/choice_appraisal",
+        "/anyOf"
+      ],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788873877826,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 6,
+      "actor": "D",
+      "jobId": "habitat-canonical:mind:D:0:6:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "d1565828ff0f23af4ac8da5c5cd0a79c048ba63f9d90b6e6568153a1c7a57bb3",
+          "actual": "d1565828ff0f23af4ac8da5c5cd0a79c048ba63f9d90b6e6568153a1c7a57bb3",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "d1565828ff0f23af4ac8da5c5cd0a79c048ba63f9d90b6e6568153a1c7a57bb3",
+          "actual": "d1565828ff0f23af4ac8da5c5cd0a79c048ba63f9d90b6e6568153a1c7a57bb3",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "2c45a98a8e92451d0d33bd21b0ece4b58dfec09458bd1cc3e96257f0705f883c",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": true,
+      "changedCurrentSchemaPaths": [],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788874057822,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 7,
+      "actor": "A",
+      "jobId": "habitat-canonical:mind:A:3:7:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "6124c46822f2abc04ebc8850dedc26792c58152858c064450b03b0db47292d06",
+          "actual": "6124c46822f2abc04ebc8850dedc26792c58152858c064450b03b0db47292d06",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "6124c46822f2abc04ebc8850dedc26792c58152858c064450b03b0db47292d06",
+          "actual": "6124c46822f2abc04ebc8850dedc26792c58152858c064450b03b0db47292d06",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "cda3c3f61d4c39864622904800160bdecdee5ba6e027bffdbbe7240d6db9d351",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": false,
+      "changedCurrentSchemaPaths": [
+        "/properties/project/anyOf",
+        "/properties/project/$ref",
+        "/properties/reflection/type",
+        "/properties/reflection/properties",
+        "/properties/reflection/required",
+        "/properties/reflection/additionalProperties",
+        "/properties/reflection/$ref",
+        "/properties/deal/anyOf",
+        "/properties/deal/description",
+        "/properties/deal/$ref",
+        "/properties/appraisal/type",
+        "/properties/appraisal/additionalProperties",
+        "/properties/appraisal/required",
+        "/properties/appraisal/properties",
+        "/properties/appraisal/description",
+        "/properties/appraisal/$ref",
+        "/$defs/choice_project",
+        "/$defs/choice_reflection",
+        "/$defs/choice_message",
+        "/$defs/choice_deal",
+        "/$defs/choice_appraisal",
+        "/anyOf"
+      ],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788874237138,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 8,
+      "actor": "E",
+      "jobId": "habitat-canonical:mind:E:0:8:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "ee17c3da5742d6833822db707fbbcd82016742f6faa5ea1c9564dbd2909f118d",
+          "actual": "ee17c3da5742d6833822db707fbbcd82016742f6faa5ea1c9564dbd2909f118d",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "ee17c3da5742d6833822db707fbbcd82016742f6faa5ea1c9564dbd2909f118d",
+          "actual": "ee17c3da5742d6833822db707fbbcd82016742f6faa5ea1c9564dbd2909f118d",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "99c6cd0cfa316cf0e452d226d436250740dc5c41e947b296142611c376aaa892",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": true,
+      "changedCurrentSchemaPaths": [],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788874419830,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 9,
+      "actor": "N",
+      "jobId": "habitat-canonical:mind:N:1:9:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "528ea6edaed1331027352dcfc560805c3caa539d3b751f22c7b2a98f59dd4efd",
+          "actual": "528ea6edaed1331027352dcfc560805c3caa539d3b751f22c7b2a98f59dd4efd",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "528ea6edaed1331027352dcfc560805c3caa539d3b751f22c7b2a98f59dd4efd",
+          "actual": "528ea6edaed1331027352dcfc560805c3caa539d3b751f22c7b2a98f59dd4efd",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "b5c6228af19d4ed36ccf14c3a108bddcced50ed85dc404e00f8db8ec7412a1d3",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": false,
+      "changedCurrentSchemaPaths": [
+        "/properties/project/type",
+        "/properties/project/properties",
+        "/properties/project/required",
+        "/properties/project/additionalProperties",
+        "/properties/project/$ref",
+        "/properties/reflection/type",
+        "/properties/reflection/properties",
+        "/properties/reflection/required",
+        "/properties/reflection/additionalProperties",
+        "/properties/reflection/$ref",
+        "/properties/deal/anyOf",
+        "/properties/deal/description",
+        "/properties/deal/$ref",
+        "/properties/appraisal/type",
+        "/properties/appraisal/additionalProperties",
+        "/properties/appraisal/required",
+        "/properties/appraisal/properties",
+        "/properties/appraisal/description",
+        "/properties/appraisal/$ref",
+        "/$defs/choice_project",
+        "/$defs/choice_reflection",
+        "/$defs/choice_message",
+        "/$defs/choice_deal",
+        "/$defs/choice_appraisal",
+        "/anyOf"
+      ],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788874600567,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 10,
+      "actor": "F",
+      "jobId": "habitat-canonical:mind:F:0:10:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "e55b695dd9fcfffbbdc0e788a41366dd28a9353777d1540e43fd5b97041b9932",
+          "actual": "e55b695dd9fcfffbbdc0e788a41366dd28a9353777d1540e43fd5b97041b9932",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "e55b695dd9fcfffbbdc0e788a41366dd28a9353777d1540e43fd5b97041b9932",
+          "actual": "e55b695dd9fcfffbbdc0e788a41366dd28a9353777d1540e43fd5b97041b9932",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "f908875d554758db3a56add9a15769d53c8a0c160761bac6ab7b867d4b387453",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": true,
+      "changedCurrentSchemaPaths": [],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788874778148,
+      "replayCode": "applied"
+    },
+    {
+      "sequence": 11,
+      "actor": "B",
+      "jobId": "habitat-canonical:mind:B:3:11:g:3",
+      "hashes": {
+        "system": {
+          "expected": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "actual": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4",
+          "matches": true
+        },
+        "user": {
+          "expected": "aba4e17392bdb20761bcebc39f505b509b0d34e80fc976819c386e035825638e",
+          "actual": "aba4e17392bdb20761bcebc39f505b509b0d34e80fc976819c386e035825638e",
+          "matches": true
+        },
+        "prepared": {
+          "expected": "aba4e17392bdb20761bcebc39f505b509b0d34e80fc976819c386e035825638e",
+          "actual": "aba4e17392bdb20761bcebc39f505b509b0d34e80fc976819c386e035825638e",
+          "matches": true
+        }
+      },
+      "evidenceIdsMatch": true,
+      "originalSchemaSha256": "e4c2caf0c6bb1a587f4a6374e4c5a1d240326c1a740347b4ea681f10e63c13ff",
+      "originalSchemaHashMatchesContent": true,
+      "originalSchemaAcceptsOutput": true,
+      "currentSchemaMatchesOriginal": false,
+      "changedCurrentSchemaPaths": [
+        "/properties/project/anyOf",
+        "/properties/project/$ref",
+        "/properties/reflection/type",
+        "/properties/reflection/properties",
+        "/properties/reflection/required",
+        "/properties/reflection/additionalProperties",
+        "/properties/reflection/$ref",
+        "/properties/deal/anyOf",
+        "/properties/deal/description",
+        "/properties/deal/$ref",
+        "/properties/appraisal/type",
+        "/properties/appraisal/additionalProperties",
+        "/properties/appraisal/required",
+        "/properties/appraisal/properties",
+        "/properties/appraisal/description",
+        "/properties/appraisal/$ref",
+        "/$defs/choice_project",
+        "/$defs/choice_reflection",
+        "/$defs/choice_message",
+        "/$defs/choice_deal",
+        "/$defs/choice_appraisal",
+        "/anyOf"
+      ],
+      "publicMessagePresent": true,
+      "appliedAtMs": 1788874956841,
+      "replayCode": "applied"
+    }
+  ]
+}

@@ -1,0 +1,3743 @@
+{
+  "scope": "Isolated GENESIS using actual capability protocol3, scheduler and physical engine. Local Qwen only.",
+  "limits": "One watch, at most37 calls. No production SQL, alarms, cloud requests or sustained autonomy claim. Virtual time is fixed. Schema/domain acceptance is not semantic success.",
+  "humanReview": {
+    "status": "pending",
+    "questions": [
+      "Does each voice keep its own identity, knowledge and purpose?",
+      "Does each reply respond to the actual preceding message without inventing facts?",
+      "Do chosen capabilities actually advance the stated purpose?",
+      "Did a real counterpart accept any precise terms, and did recorded work cause payment? Zero is a result.",
+      "Do projects retain or revise their purpose after actual physical observations?"
+    ]
+  },
+  "binding": "b292aba018ed5ad33596d9bf6c99617634797e9c98855e149579fe0b11405e7e",
+  "halted": null,
+  "attemptCount": 37,
+  "newCalls": 37,
+  "maxCalls": 37,
+  "schemaFallbackWarnings": 0,
+  "incompleteUsageResponses": 0,
+  "acceptedDecisionCount": 37,
+  "residents": [
+    {
+      "id": "A",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "B",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "C",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "D",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "E",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "F",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "G",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "H",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "I",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "J",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "K",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "L",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "M",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "N",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "O",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "P",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "Q",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "R",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "S",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "T",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "U",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "V",
+      "initialOpportunity": true,
+      "attempts": 2,
+      "accepted": 2
+    },
+    {
+      "id": "W",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "X",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    },
+    {
+      "id": "Y",
+      "initialOpportunity": true,
+      "attempts": 1,
+      "accepted": 1
+    }
+  ],
+  "rows": [
+    {
+      "id": "isolated-society-runtime-v7-local:mind:A:0:0:g:0",
+      "actor": "A",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9764,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Write a short piece of fiction.",
+          "why": "I have always wanted to write something, but I have never said so aloud.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "go",
+              "room": "records"
+            }
+          ]
+        },
+        "message": {
+          "to": "U",
+          "text": "Ulla, do you remember the quiet of the school library? I am thinking of writing something, but I have never once said so aloud. Would you like to hear it?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "8017e1f10be68552310c976fe296082a104a91d60e632131de2d0c6dd4e7bf5a",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1417,
+        "completion_tokens": 157,
+        "total_tokens": 1574,
+        "input_tokens": 1417,
+        "output_tokens": 157,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 6.95,
+        "total_time": 3.95
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 13072,
+      "maxSampledRssKiB": 8842960
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:B:0:1:g:0",
+      "actor": "B",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9586,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Consult Cato Lindqvist about the infirmary status",
+          "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "C",
+          "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "c432761f03c97af9f6d127dde7fa4deb7cf692e6a8f974d5c0cde0031c1de966",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1392,
+        "completion_tokens": 159,
+        "total_tokens": 1551,
+        "input_tokens": 1392,
+        "output_tokens": 159,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.86
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2901,
+      "maxSampledRssKiB": 2750144
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:C:1:2:g:0",
+      "actor": "C",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15527,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Establish written criteria for waking a resident.",
+          "why": "I need these criteria documented before they are needed.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "B",
+          "text": "I need the criteria for waking a resident written down. Do you have time to draft them?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "e90d71378e74ed7a3b09fee65111d9479d235fe7ca5242246ca8098a0f7e6900",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1468,
+        "completion_tokens": 110,
+        "total_tokens": 1578,
+        "input_tokens": 1468,
+        "output_tokens": 110,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.29
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2375,
+      "maxSampledRssKiB": 2816256
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:D:0:3:g:0",
+      "actor": "D",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9730,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Verify hull integrity reports with Gita Raman to ensure no structural faults are being buried.",
+          "why": "Halim buried a previous report; I need to confirm the hull status independently.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "G",
+          "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "f7a80df5871c4d2ec1b0e92d7e0fa03c1e6f387c49b654094924a5d97366906f",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1429,
+        "completion_tokens": 130,
+        "total_tokens": 1559,
+        "input_tokens": 1429,
+        "output_tokens": 130,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.49
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2537,
+      "maxSampledRssKiB": 2857856
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:E:0:4:g:0",
+      "actor": "E",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 10165,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Establish a dialogue with Halim Zoubir regarding the work roster.",
+          "why": "Halim's duty is 'The work roster', and my duty is 'Allocation and disputes'. A conversation is the most direct way to address potential misalignments or needs.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "H",
+          "text": "Halim, I need to discuss the current work roster. My allocation duties require me to ensure the schedule aligns with our actual capacity and needs. Are you available for a brief meeting?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "ad0764e9f13cff84a3ac1f99576fc04cbc0a84d783e8df4b70200f7ae7e502bd",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1506,
+        "completion_tokens": 160,
+        "total_tokens": 1666,
+        "input_tokens": 1506,
+        "output_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.93
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2966,
+      "maxSampledRssKiB": 2899248
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:F:0:5:g:0",
+      "actor": "F",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9937,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Connect with Mara Osei to leverage past messaging history.",
+          "why": "Ferran wants to be the centre of attention, and Mara is a known contact.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "M",
+          "text": "I was just thinking about how I used to shuttle messages between you and everyone else back in the day. It’s funny how those little threads hold the whole tapestry together, isn't it? Do you still keep those old notes, or did you finally let them go?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "f4430efe707dcc7c475175e2234c6269c754e683a0a80bd551d2bb5cadbe002c",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1456,
+        "completion_tokens": 156,
+        "total_tokens": 1612,
+        "input_tokens": 1456,
+        "output_tokens": 156,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.83
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2873,
+      "maxSampledRssKiB": 2940208
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:G:1:6:g:0",
+      "actor": "G",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15743,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Provide hull integrity data to Dima.",
+          "why": "Dima requested inspection data as dock safety officer.",
+          "visibility": "public",
+          "steps": []
+        },
+        "message": {
+          "to": "D",
+          "text": "Inspection complete. Hull integrity is nominal. No structural anomalies detected."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:17",
+          "why": "Dima is performing his duty correctly by requesting verification."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "886b36c1984fe7c1749fa3b8b5e8b745bd31009f057ef59aa0dc44291520e00b",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1489,
+        "completion_tokens": 160,
+        "total_tokens": 1649,
+        "input_tokens": 1489,
+        "output_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.88
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2967,
+      "maxSampledRssKiB": 3004272
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:H:1:7:g:0",
+      "actor": "H",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15692,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Confirm the work roster is fair.",
+          "why": "It was decided that the roster must align with capacity.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "E",
+          "text": "The roster is under review. A meeting was requested to ensure alignment with actual capacity. When is the schedule suitable for discussion?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "6e1269a2e3b8d13d8150a99c70a56e7003c8183d7205fa2e5ee1b782577de98c",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1473,
+        "completion_tokens": 116,
+        "total_tokens": 1589,
+        "input_tokens": 1473,
+        "output_tokens": 116,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.28
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2369,
+      "maxSampledRssKiB": 3066304
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:I:0:8:g:0",
+      "actor": "I",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9670,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Repair the maintenance systems to stabilize the reactor.",
+          "why": "Reactor is at 0.94 and maintenance is low; repair consumes cells and materials but yields maintenance.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "repair",
+              "at": "workshops"
+            }
+          ]
+        },
+        "message": {
+          "to": "K",
+          "text": "I'm heading to the workshops to run a repair cycle. Do you have any pending comms checks that need to happen first?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "809213e94901a4abb90b6f45ca5a9156db5bc7b13a417bd4fd0e9e350c95afc6",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1389,
+        "completion_tokens": 157,
+        "total_tokens": 1546,
+        "input_tokens": 1389,
+        "output_tokens": 157,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.77
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2811,
+      "maxSampledRssKiB": 3107296
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:J:0:9:g:0",
+      "actor": "J",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 10017,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Repair the power bay to secure my key.",
+          "why": "I need to prove I can keep the key before someone takes it away.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "L",
+          "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "e2360e4373636479512e6490d3a0d1cc16a8214d0508a22abb4d3fc200269d66",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1463,
+        "completion_tokens": 139,
+        "total_tokens": 1602,
+        "input_tokens": 1463,
+        "output_tokens": 139,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.6
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2636,
+      "maxSampledRssKiB": 3151296
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:K:1:10:g:0",
+      "actor": "K",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15307,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Ask Iris to listen to a sound sample.",
+          "why": "I want somebody to ask to hear one.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "I",
+          "text": "I'm here, Iris. I have a recording that needs ears. Are you free to listen?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "63cf49f99bedc5d7015d97a2d8aced8462daf269b48523d641b38f7c5f51ed35",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1397,
+        "completion_tokens": 111,
+        "total_tokens": 1508,
+        "input_tokens": 1397,
+        "output_tokens": 111,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.18
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2272,
+      "maxSampledRssKiB": 3212976
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:L:1:11:g:0",
+      "actor": "L",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15523,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Help Juno repair the maintenance system.",
+          "why": "Juno has the materials and cells, and I want to be the one who is owed.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "J",
+          "text": "I'm free, Juno. I'd be happy to lend a hand with the repair. Shall we get started?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:47",
+          "why": "Juno's direct request for assistance suggests a level of trust in my capability."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "793367576be556e014a8544bcc3e342ed4568fd0dcf84f862a0cf60ccb7c04f7",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1456,
+        "completion_tokens": 185,
+        "total_tokens": 1641,
+        "input_tokens": 1456,
+        "output_tokens": 185,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.37
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 3459,
+      "maxSampledRssKiB": 3275648
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:M:1:12:g:0",
+      "actor": "M",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15795,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Establish a proper table and manners in the Common.",
+          "why": "Ferran’s comment about 'threads' and 'tapestry' highlights the social fabric we are maintaining; a table is a physical anchor for those connections.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "F",
+          "text": "Now then, Ferran, I keep them all, for they are the only map we have to how we got here. Do you think it is time we sat down properly to discuss what those threads mean for our next move?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:27",
+          "why": "He frames his past service as essential connectivity rather than just labor, which aligns with my desire for meaningful connection."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "b45c9625a8ea496e625ad0a06359dee48c5527a4e942a35019f6eab4770a2c4f",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1504,
+        "completion_tokens": 226,
+        "total_tokens": 1730,
+        "input_tokens": 1504,
+        "output_tokens": 226,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.9
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 3986,
+      "maxSampledRssKiB": 3342432
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:N:0:13:g:0",
+      "actor": "N",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9650,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Check on Cato Lindqvist's condition and offer support.",
+          "why": "Cato is in the infirmary, which is my duty, and we have a professional history.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "go",
+              "room": "infirmary"
+            },
+            {
+              "verb": "sleep",
+              "at": "infirmary"
+            }
+          ]
+        },
+        "message": {
+          "to": "O",
+          "text": "I'm heading to the infirmary to check on Cato. How are you holding up at the Well today?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "cf6b244d6c0d58c4e12490dc62d8bc2a8aa4f9f69b47fc438fc9acd2ccb69199",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1383,
+        "completion_tokens": 186,
+        "total_tokens": 1569,
+        "input_tokens": 1383,
+        "output_tokens": 186,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.17
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 3210,
+      "maxSampledRssKiB": 3382000
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:O:1:14:g:0",
+      "actor": "O",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15438,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Ensure water supply stability",
+          "why": "Stock is low (250) and maintenance is critical (90).",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "filter_water",
+              "at": "well"
+            }
+          ]
+        },
+        "message": {
+          "to": "N",
+          "text": "I'm managing. The pumps are quiet, but I can filter by hand if they fail. How is Cato?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "19a56c214cfc530b7a9a73848856478ac85d6e4b71da01526621d8a26eba0099",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1449,
+        "completion_tokens": 145,
+        "total_tokens": 1594,
+        "input_tokens": 1449,
+        "output_tokens": 145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.61
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2691,
+      "maxSampledRssKiB": 3444208
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:P:0:15:g:0",
+      "actor": "P",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9740,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Teach Quim to bake bread before he leaves.",
+          "why": "It is what I want to do, and he is the only one currently listed in contacts who works in the workshops and might need sustenance or skills.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "Q",
+          "text": "Quim, hijo. The oven is warm and the flour is waiting. Come by the kitchen when you can; I have something to show you."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "1d2329aca40ad1709ada391871607f42654359c241df76c78dbff0e9d56c055c",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1392,
+        "completion_tokens": 147,
+        "total_tokens": 1539,
+        "input_tokens": 1392,
+        "output_tokens": 147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.62
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2663,
+      "maxSampledRssKiB": 3486016
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:Q:1:16:g:0",
+      "actor": "Q",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15606,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Visit Pilar in the kitchen to see what she has to show me.",
+          "why": "Pilar invited me to the kitchen, and I want to see what it is.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "P",
+          "text": "Pilar, I’m coming by the kitchen now. What have you got for me?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "6b1806dfcc2f0d2ce1e55cd2438ff0c85a58613ddc96641494ee36906e337f6b",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1464,
+        "completion_tokens": 124,
+        "total_tokens": 1588,
+        "input_tokens": 1464,
+        "output_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.35
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2432,
+      "maxSampledRssKiB": 3550368
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:R:0:17:g:0",
+      "actor": "R",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9216,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Verify the current inventory counts in the hold.",
+          "why": "My duty is to ensure the inventory is correct, and I have no other projects.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "T",
+          "text": "I am checking the hold inventory to ensure the records match the physical stock. Do you have time to review the current counts with me?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "f4335d84ef11e63070bbab64a3c711adbae4adb5f9a78b611f0f1eff77a336f7",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1277,
+        "completion_tokens": 126,
+        "total_tokens": 1403,
+        "input_tokens": 1277,
+        "output_tokens": 126,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.3
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2339,
+      "maxSampledRssKiB": 3591680
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:S:0:18:g:0",
+      "actor": "S",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9759,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Find a way to be useful to Xan.",
+          "why": "Xan is an Excavation worker. Sten taught him to swim. Sten wants to be needed.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "X",
+          "text": "The excavation site is dry. I am not. Do you need a hand with the digging, or just the quiet?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "d0df5d81651eeac19f698a8d45ac9473242dedcf6bceb5a6ba6844d4008926af",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1396,
+        "completion_tokens": 132,
+        "total_tokens": 1528,
+        "input_tokens": 1396,
+        "output_tokens": 132,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.46
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2498,
+      "maxSampledRssKiB": 3633184
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:T:1:19:g:0",
+      "actor": "T",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15393,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Verify hold inventory accuracy",
+          "why": "Reva Sandoval has requested a review of the hold inventory to ensure records match physical stock.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "R",
+          "text": "I am available to review the current counts with you. Please let me know when you are ready to begin the verification process."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "d601abbd0529101075bd68001523fcb7fe88e2a30703acdf54fbf5b7c4a69225",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1417,
+        "completion_tokens": 122,
+        "total_tokens": 1539,
+        "input_tokens": 1417,
+        "output_tokens": 122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.29
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2381,
+      "maxSampledRssKiB": 3697216
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:U:1:20:g:0",
+      "actor": "U",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15600,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Hear what Ama wants to write.",
+          "why": "She asked directly; ignoring it wastes the moment.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "A",
+          "text": "The library was quiet, but I’m not. Tell me what you’ve written."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "590ddaff639381069a622336b698367a23b7ff546af4c158037a8c5cc15b3bad",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1475,
+        "completion_tokens": 110,
+        "total_tokens": 1585,
+        "input_tokens": 1475,
+        "output_tokens": 110,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.16
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2245,
+      "maxSampledRssKiB": 3760576
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:V:0:21:g:0",
+      "actor": "V",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9504,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Grow food in the garden to sustain the hydroponics duty.",
+          "why": "I need produce to cook meals and keep the reactor running, but I'm tired of waiting for others to handle the basics.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "grow",
+              "at": "garden"
+            }
+          ]
+        },
+        "message": {
+          "to": "W",
+          "text": "I'm getting hungry, Wen. I'm planting trays in the garden right now. Are you watching the power grid, or just staring at the walls?"
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "5763559aff0069f7fc139628c6c32dfb6d7e0634c103ac0e9a7b79e8074875d2",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1326,
+        "completion_tokens": 168,
+        "total_tokens": 1494,
+        "input_tokens": 1326,
+        "output_tokens": 168,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.86
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2902,
+      "maxSampledRssKiB": 3801728
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:W:1:22:g:0",
+      "actor": "W",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15868,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Say one true difficult thing out loud before he dies.",
+          "why": "This is his primary want.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "V",
+          "text": "I am watching the grid. It is stable."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "665bf6abeba51d7a2b7c0e8b5c3eacf4758a856a56261706d9d2c564eb8701a3",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1529,
+        "completion_tokens": 101,
+        "total_tokens": 1630,
+        "input_tokens": 1529,
+        "output_tokens": 101,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.03
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2121,
+      "maxSampledRssKiB": 3867440
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:X:1:23:g:0",
+      "actor": "X",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 15566,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Dig at the face to produce materials.",
+          "why": "I need materials, and the site is dry enough for it.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "dig",
+              "at": "face"
+            }
+          ]
+        },
+        "message": {
+          "to": "S",
+          "text": "I can handle the digging. The dryness helps, but my back’s been at me since Tuesday, so I’ll take the quiet."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "ae35f9edbab21e5799f0547aa9090a2899c2f6bfcbfb9d2b92ef5cf3db6c83bb",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1459,
+        "completion_tokens": 147,
+        "total_tokens": 1606,
+        "input_tokens": 1459,
+        "output_tokens": 147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.61
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2698,
+      "maxSampledRssKiB": 3930240
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:Y:0:24:g:0",
+      "actor": "Y",
+      "stage": "initial",
+      "state": "completed",
+      "promptBytes": 9243,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Dig materials to support maintenance.",
+          "why": "I have no duty, but I need to matter. Digging produces materials, which the reactor needs to stay above 0.94. It uses water, which I have plenty of (250).",
+          "visibility": "private",
+          "steps": []
+        },
+        "reflection": {
+          "text": "I am currently in the 'face' room. The 'dig' work example is available 'at' face. I have 10 cells, which is enough to cover the water cost (1) and potentially labor if needed, though dig seems to just consume water. I should just do it.",
+          "refs": [
+            "fact:skill:dig"
+          ]
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "35cd63ded4c0df8d11ebbb882f8153b3549f8b29a7da8528b6e41becbccac103",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1312,
+        "completion_tokens": 196,
+        "total_tokens": 1508,
+        "input_tokens": 1312,
+        "output_tokens": 196,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.27
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 3301,
+      "maxSampledRssKiB": 3961888
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:B:3:25:g:0",
+      "actor": "B",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16218,
+      "output": {
+        "message": {
+          "to": "C",
+          "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:12",
+          "why": "Cato is asking for a concrete task rather than just resting, which suggests engagement."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "2b1c126b60b62ea8d2eea3b0f0d9400134c389c2040ae73f1dd20db01a3b3f6a",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1581,
+        "completion_tokens": 115,
+        "total_tokens": 1696,
+        "input_tokens": 1581,
+        "output_tokens": 115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.24
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2337,
+      "maxSampledRssKiB": 4035424
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:D:3:26:g:0",
+      "actor": "D",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16132,
+      "output": {
+        "message": {
+          "to": "G",
+          "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:31",
+          "why": "Gita's report is nominal, which aligns with my desire for an uneventful period, reducing immediate suspicion."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "58d096d9b4e29c213bae5e6d6ee54b8761029b1bec4cd8a4fb721a0ea14fd7fb",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1532,
+        "completion_tokens": 116,
+        "total_tokens": 1648,
+        "input_tokens": 1532,
+        "output_tokens": 116,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.26
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2358,
+      "maxSampledRssKiB": 4110384
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:E:3:27:g:0",
+      "actor": "E",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 17069,
+      "output": {
+        "message": {
+          "to": "H",
+          "text": "The roster is under review, so let’s finalize the alignment now. I am in the common room and can meet whenever you are ready."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:36",
+          "why": "Halim’s proactive request for a meeting suggests a willingness to cooperate rather than just enforce rules."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "9af6070925c0f7af61c5fe6ebb0d3d3aaa9053ce43445c42906c5abb5a6f7ffb",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1727,
+        "completion_tokens": 116,
+        "total_tokens": 1843,
+        "input_tokens": 1727,
+        "output_tokens": 116,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.31
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2410,
+      "maxSampledRssKiB": 4186384
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:I:3:28:g:0",
+      "actor": "I",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16217,
+      "output": {
+        "message": {
+          "to": "K",
+          "text": "I have the recording. Play it."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:51",
+          "why": "K initiated contact with a specific request, confirming reliability."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "4aa4df72009b4e23435d23975c6f222983769ee07fb2d8199037df53aebad02d",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1568,
+        "completion_tokens": 89,
+        "total_tokens": 1657,
+        "input_tokens": 1568,
+        "output_tokens": 89,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 1.93
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2024,
+      "maxSampledRssKiB": 4260000
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:J:3:29:g:0",
+      "actor": "J",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16685,
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "Let's start. I'll handle the components; you monitor the output."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:55",
+          "why": "Lior confirmed availability and willingness to assist, reinforcing my trust in their reliability for this task."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "21837fdfad330e0ad38922f1b9ea04a6799add6e103a70287cb0a207c5e1839f",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1683,
+        "completion_tokens": 104,
+        "total_tokens": 1787,
+        "input_tokens": 1683,
+        "output_tokens": 104,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.15
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2249,
+      "maxSampledRssKiB": 4332608
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:F:3:30:g:0",
+      "actor": "F",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16788,
+      "output": {
+        "message": {
+          "to": "M",
+          "text": "I suppose the map is only as useful as the hands that hold it, but I’d rather hear your theory than guess at the destination. Shall we grab a meal and compare notes?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:60",
+          "why": "Mara's willingness to discuss the 'threads' suggests she values our shared history, reinforcing my trust in her reliability."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "a40450d7fd39ad26c8e7e9e10419665c5bf66b982e78bde0433473ca09a5b0ec",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1699,
+        "completion_tokens": 131,
+        "total_tokens": 1830,
+        "input_tokens": 1699,
+        "output_tokens": 131,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.54
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2638,
+      "maxSampledRssKiB": 4409216
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:N:3:31:g:0",
+      "actor": "N",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16453,
+      "output": {
+        "message": {
+          "to": "O",
+          "text": "Cato is resting, though his condition requires close monitoring. I appreciate your offer to handle manual filtration if the pumps fail; knowing the Well is covered helps me focus here."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:73",
+          "why": "Osvald's reliable status at the Well reduces my anxiety about resource stability, allowing me to focus on Cato."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "d1a9ae6ec500767581c7a962b50120431f61ed5b263ad288eb9ab8aee7f75d72",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1654,
+        "completion_tokens": 129,
+        "total_tokens": 1783,
+        "input_tokens": 1654,
+        "output_tokens": 129,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.51
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2604,
+      "maxSampledRssKiB": 4483040
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:P:3:32:g:0",
+      "actor": "P",
+      "stage": "reply",
+      "state": "completed",
+      "promptBytes": 16215,
+      "output": {
+        "message": {
+          "to": "Q",
+          "text": "Good, hijo. Bring your hands. We start with the flour."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:82",
+          "why": "He came when I asked, which shows he respects the kitchen."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "055419c44d0d849edbeb86c52d8cd973739180bb727abc8ddee7e582852453b1",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1583,
+        "completion_tokens": 96,
+        "total_tokens": 1679,
+        "input_tokens": 1583,
+        "output_tokens": 96,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 1.98
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2074,
+      "maxSampledRssKiB": 4557456
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:R:4:33:g:0",
+      "actor": "R",
+      "stage": "replan",
+      "state": "completed",
+      "promptBytes": 16268,
+      "output": {
+        "message": {
+          "to": "T",
+          "text": "I am ready to begin. Shall we start with the produce stock?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:96",
+          "why": "Tomás has confirmed availability, reinforcing reliability."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "1f2dc7006bf50aa23c57e420705ae3c89cc230e0901a6c47d02cd89f8ed3da85",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1572,
+        "completion_tokens": 93,
+        "total_tokens": 1665,
+        "input_tokens": 1572,
+        "output_tokens": 93,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 1.98
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2083,
+      "maxSampledRssKiB": 4631696
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:A:5:34:g:0",
+      "actor": "A",
+      "stage": "replan",
+      "state": "completed",
+      "promptBytes": 16673,
+      "output": {
+        "message": {
+          "to": "U",
+          "text": "The ink is dry, but the words remain unfinished. I have the draft, yet I lack the courage to read it aloud. Will you sit with me in the records room while I do?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:100",
+          "why": "Ulla's direct request for the writing suggests a willingness to engage with my private work, reinforcing my trust in her discretion."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "25a481ad9131d0e31f17e8e3cd1e2328e7119fdc7fa1f90e3b664ff4b8a2beb1",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1672,
+        "completion_tokens": 135,
+        "total_tokens": 1807,
+        "input_tokens": 1672,
+        "output_tokens": 135,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.55
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2642,
+      "maxSampledRssKiB": 4707408
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:V:5:35:g:0",
+      "actor": "V",
+      "stage": "replan",
+      "state": "completed",
+      "promptBytes": 16678,
+      "output": {
+        "message": {
+          "to": "W",
+          "text": "Stable is boring, Wen. My garden is fed, but my stomach isn't. Are you going to help me cook, or just keep staring at the lights?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": -1,
+          "ref": "turn:110",
+          "why": "Wen's response was dismissive and unhelpful, reinforcing his lack of engagement with my needs."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "68b014a1f84e7301069627e748a28de5b9b78a791557d21bf52343e4b8f63e42",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1682,
+        "completion_tokens": 126,
+        "total_tokens": 1808,
+        "input_tokens": 1682,
+        "output_tokens": 126,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.7
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2798,
+      "maxSampledRssKiB": 4780256
+    },
+    {
+      "id": "isolated-society-runtime-v7-local:mind:C:5:36:g:0",
+      "actor": "C",
+      "stage": "replan",
+      "state": "completed",
+      "promptBytes": 16825,
+      "output": {
+        "message": {
+          "to": "B",
+          "text": "Any loss of consciousness lasting more than five minutes. Any vital signs outside the established safe range. Draft the list. I will review it."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:120",
+          "why": "Bex offered specific help regarding the protocol, which aligns with my need for documentation."
+        }
+      },
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "91f8b0dac7c2f9c99932022c1c6836a5fa19de7c5f9ebca2bd341ef2a316a800",
+        "balanceChanges": []
+      },
+      "usage": {
+        "prompt_tokens": 1714,
+        "completion_tokens": 116,
+        "total_tokens": 1830,
+        "input_tokens": 1714,
+        "output_tokens": 116,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.57
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "error": null,
+      "latencyMs": 2665,
+      "maxSampledRssKiB": 4855360
+    }
+  ],
+  "physicalWatchCount": 1,
+  "observations": [
+    {
+      "actor": "H",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "H"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "C",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "inspect",
+        "actor": "C"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "C"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary"
+    },
+    {
+      "actor": "X",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "X",
+        "verb": "dig"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "X"
+          ],
+          "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face",
+      "stepId": "step:114"
+    },
+    {
+      "actor": "S",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "S"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "R",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "R"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "I",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "I",
+        "verb": "repair"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "workshops",
+          "who": [
+            "I"
+          ],
+          "text": "Iris repaired The Workshops; 1 material and 2 charge cells used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "workshops",
+      "stepId": "step:40"
+    },
+    {
+      "actor": "D",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "D"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "dock"
+    },
+    {
+      "actor": "W",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "W"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "F",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "F"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "F"
+          ],
+          "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "U",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "inspect",
+        "actor": "U"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "U"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary"
+    },
+    {
+      "actor": "T",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "T"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "G",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "G"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "longwalk"
+    },
+    {
+      "actor": "N",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "N",
+        "verb": "go",
+        "room": "infirmary"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "infirmary",
+      "stepId": "step:65"
+    },
+    {
+      "actor": "B",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "B",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "A",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "A",
+        "verb": "go",
+        "room": "records"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "records",
+      "stepId": "step:1"
+    },
+    {
+      "actor": "V",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "V",
+        "verb": "grow"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "garden",
+          "who": [
+            "V"
+          ],
+          "text": "Vero harvested 16 produce; 2 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "garden",
+      "stepId": "step:104"
+    },
+    {
+      "actor": "O",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "O",
+        "verb": "clean"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "well",
+          "who": [
+            "O"
+          ],
+          "text": "Osvald filtered 24 water at the well.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "well",
+      "stepId": "step:72"
+    },
+    {
+      "actor": "Q",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "Q"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "J",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "J",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "Y",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "Y"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "Y"
+          ],
+          "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "L",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "L"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "P",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "P",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "K",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "K"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "dispatch"
+    },
+    {
+      "actor": "M",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "M"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "E",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "E"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    }
+  ],
+  "memoryMeasurement": "ps RSS is sampled residency, not a complete Metal/unified-memory footprint or guaranteed peak.",
+  "final": {
+    "day": 100,
+    "watch": 2,
+    "hash": "91f8b0dac7c2f9c99932022c1c6836a5fa19de7c5f9ebca2bd341ef2a316a800",
+    "publicSociety": {
+      "version": 1,
+      "revision": 75,
+      "startedAtMs": 1788825600000,
+      "residents": [
+        {
+          "id": "A",
+          "lastAttemptAtMs": 1788825635000,
+          "lastSuccessAtMs": 1788825635001,
+          "project": {
+            "id": "project:0",
+            "visibility": "private",
+            "goal": null,
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "B",
+          "lastAttemptAtMs": 1788825626000,
+          "lastSuccessAtMs": 1788825626001,
+          "project": {
+            "id": "project:6",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "C",
+          "lastAttemptAtMs": 1788825637000,
+          "lastSuccessAtMs": 1788825637001,
+          "project": {
+            "id": "project:11",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "D",
+          "lastAttemptAtMs": 1788825627000,
+          "lastSuccessAtMs": 1788825627001,
+          "project": {
+            "id": "project:15",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "E",
+          "lastAttemptAtMs": 1788825628000,
+          "lastSuccessAtMs": 1788825628001,
+          "project": {
+            "id": "project:20",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "F",
+          "lastAttemptAtMs": 1788825631000,
+          "lastSuccessAtMs": 1788825631001,
+          "project": {
+            "id": "project:25",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "G",
+          "lastAttemptAtMs": 1788825607000,
+          "lastSuccessAtMs": 1788825607001,
+          "project": {
+            "id": "project:30",
+            "visibility": "public",
+            "goal": "Provide hull integrity data to Dima.",
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "H",
+          "lastAttemptAtMs": 1788825608000,
+          "lastSuccessAtMs": 1788825608001,
+          "project": {
+            "id": "project:35",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "I",
+          "lastAttemptAtMs": 1788825629000,
+          "lastSuccessAtMs": 1788825629001,
+          "project": {
+            "id": "project:39",
+            "visibility": "private",
+            "goal": null,
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "J",
+          "lastAttemptAtMs": 1788825630000,
+          "lastSuccessAtMs": 1788825630001,
+          "project": {
+            "id": "project:45",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "K",
+          "lastAttemptAtMs": 1788825611000,
+          "lastSuccessAtMs": 1788825611001,
+          "project": {
+            "id": "project:50",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "L",
+          "lastAttemptAtMs": 1788825612000,
+          "lastSuccessAtMs": 1788825612001,
+          "project": {
+            "id": "project:54",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "M",
+          "lastAttemptAtMs": 1788825613000,
+          "lastSuccessAtMs": 1788825613001,
+          "project": {
+            "id": "project:59",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "N",
+          "lastAttemptAtMs": 1788825632000,
+          "lastSuccessAtMs": 1788825632001,
+          "project": {
+            "id": "project:64",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 1,
+            "totalSteps": 2
+          }
+        },
+        {
+          "id": "O",
+          "lastAttemptAtMs": 1788825615000,
+          "lastSuccessAtMs": 1788825615001,
+          "project": {
+            "id": "project:71",
+            "visibility": "private",
+            "goal": null,
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "P",
+          "lastAttemptAtMs": 1788825633000,
+          "lastSuccessAtMs": 1788825633001,
+          "project": {
+            "id": "project:76",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "Q",
+          "lastAttemptAtMs": 1788825617000,
+          "lastSuccessAtMs": 1788825617001,
+          "project": {
+            "id": "project:81",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "R",
+          "lastAttemptAtMs": 1788825634000,
+          "lastSuccessAtMs": 1788825634001,
+          "project": {
+            "id": "project:85",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "S",
+          "lastAttemptAtMs": 1788825619000,
+          "lastSuccessAtMs": 1788825619001,
+          "project": {
+            "id": "project:90",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "T",
+          "lastAttemptAtMs": 1788825620000,
+          "lastSuccessAtMs": 1788825620001,
+          "project": {
+            "id": "project:95",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "U",
+          "lastAttemptAtMs": 1788825621000,
+          "lastSuccessAtMs": 1788825621001,
+          "project": {
+            "id": "project:99",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "V",
+          "lastAttemptAtMs": 1788825636000,
+          "lastSuccessAtMs": 1788825636001,
+          "project": {
+            "id": "project:103",
+            "visibility": "private",
+            "goal": null,
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "W",
+          "lastAttemptAtMs": 1788825623000,
+          "lastSuccessAtMs": 1788825623001,
+          "project": {
+            "id": "project:109",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "X",
+          "lastAttemptAtMs": 1788825624000,
+          "lastSuccessAtMs": 1788825624001,
+          "project": {
+            "id": "project:113",
+            "visibility": "private",
+            "goal": null,
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "Y",
+          "lastAttemptAtMs": 1788825625000,
+          "lastSuccessAtMs": 1788825625001,
+          "project": {
+            "id": "project:118",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        }
+      ],
+      "conversations": [
+        {
+          "id": "conversation:2",
+          "participants": [
+            "A",
+            "U"
+          ],
+          "status": "open",
+          "nextSpeaker": "U",
+          "expiresAtMs": 1788912001001,
+          "turns": [
+            {
+              "id": "turn:3",
+              "speaker": "A",
+              "text": "Ulla, do you remember the quiet of the school library? I am thinking of writing something, but I have never once said so aloud. Would you like to hear it?",
+              "atMs": 1788825601001
+            },
+            {
+              "id": "turn:100",
+              "speaker": "U",
+              "text": "The library was quiet, but I’m not. Tell me what you’ve written.",
+              "atMs": 1788825621001
+            },
+            {
+              "id": "turn:186",
+              "speaker": "A",
+              "text": "The ink is dry, but the words remain unfinished. I have the draft, yet I lack the courage to read it aloud. Will you sit with me in the records room while I do?",
+              "atMs": 1788825635001
+            }
+          ]
+        },
+        {
+          "id": "conversation:7",
+          "participants": [
+            "B",
+            "C"
+          ],
+          "status": "open",
+          "nextSpeaker": "B",
+          "expiresAtMs": 1788912002001,
+          "turns": [
+            {
+              "id": "turn:8",
+              "speaker": "B",
+              "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+              "atMs": 1788825602001
+            },
+            {
+              "id": "turn:12",
+              "speaker": "C",
+              "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+              "atMs": 1788825603001
+            },
+            {
+              "id": "turn:120",
+              "speaker": "B",
+              "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?",
+              "atMs": 1788825626001
+            },
+            {
+              "id": "turn:194",
+              "speaker": "C",
+              "text": "Any loss of consciousness lasting more than five minutes. Any vital signs outside the established safe range. Draft the list. I will review it.",
+              "atMs": 1788825637001
+            }
+          ]
+        },
+        {
+          "id": "conversation:16",
+          "participants": [
+            "D",
+            "G"
+          ],
+          "status": "open",
+          "nextSpeaker": "G",
+          "expiresAtMs": 1788912004001,
+          "turns": [
+            {
+              "id": "turn:17",
+              "speaker": "D",
+              "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+              "atMs": 1788825604001
+            },
+            {
+              "id": "turn:31",
+              "speaker": "G",
+              "text": "Inspection complete. Hull integrity is nominal. No structural anomalies detected.",
+              "atMs": 1788825607001
+            },
+            {
+              "id": "turn:124",
+              "speaker": "D",
+              "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+              "atMs": 1788825627001
+            }
+          ]
+        },
+        {
+          "id": "conversation:21",
+          "participants": [
+            "E",
+            "H"
+          ],
+          "status": "open",
+          "nextSpeaker": "H",
+          "expiresAtMs": 1788912005001,
+          "turns": [
+            {
+              "id": "turn:22",
+              "speaker": "E",
+              "text": "Halim, I need to discuss the current work roster. My allocation duties require me to ensure the schedule aligns with our actual capacity and needs. Are you available for a brief meeting?",
+              "atMs": 1788825605001
+            },
+            {
+              "id": "turn:36",
+              "speaker": "H",
+              "text": "The roster is under review. A meeting was requested to ensure alignment with actual capacity. When is the schedule suitable for discussion?",
+              "atMs": 1788825608001
+            },
+            {
+              "id": "turn:128",
+              "speaker": "E",
+              "text": "The roster is under review, so let’s finalize the alignment now. I am in the common room and can meet whenever you are ready.",
+              "atMs": 1788825628001
+            }
+          ]
+        },
+        {
+          "id": "conversation:26",
+          "participants": [
+            "F",
+            "M"
+          ],
+          "status": "open",
+          "nextSpeaker": "M",
+          "expiresAtMs": 1788912006001,
+          "turns": [
+            {
+              "id": "turn:27",
+              "speaker": "F",
+              "text": "I was just thinking about how I used to shuttle messages between you and everyone else back in the day. It’s funny how those little threads hold the whole tapestry together, isn't it? Do you still keep those old notes, or did you finally let them go?",
+              "atMs": 1788825606001
+            },
+            {
+              "id": "turn:60",
+              "speaker": "M",
+              "text": "Now then, Ferran, I keep them all, for they are the only map we have to how we got here. Do you think it is time we sat down properly to discuss what those threads mean for our next move?",
+              "atMs": 1788825613001
+            },
+            {
+              "id": "turn:140",
+              "speaker": "F",
+              "text": "I suppose the map is only as useful as the hands that hold it, but I’d rather hear your theory than guess at the destination. Shall we grab a meal and compare notes?",
+              "atMs": 1788825631001
+            }
+          ]
+        },
+        {
+          "id": "conversation:41",
+          "participants": [
+            "I",
+            "K"
+          ],
+          "status": "open",
+          "nextSpeaker": "K",
+          "expiresAtMs": 1788912009001,
+          "turns": [
+            {
+              "id": "turn:42",
+              "speaker": "I",
+              "text": "I'm heading to the workshops to run a repair cycle. Do you have any pending comms checks that need to happen first?",
+              "atMs": 1788825609001
+            },
+            {
+              "id": "turn:51",
+              "speaker": "K",
+              "text": "I'm here, Iris. I have a recording that needs ears. Are you free to listen?",
+              "atMs": 1788825611001
+            },
+            {
+              "id": "turn:132",
+              "speaker": "I",
+              "text": "I have the recording. Play it.",
+              "atMs": 1788825629001
+            }
+          ]
+        },
+        {
+          "id": "conversation:46",
+          "participants": [
+            "J",
+            "L"
+          ],
+          "status": "open",
+          "nextSpeaker": "L",
+          "expiresAtMs": 1788912010001,
+          "turns": [
+            {
+              "id": "turn:47",
+              "speaker": "J",
+              "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+              "atMs": 1788825610001
+            },
+            {
+              "id": "turn:55",
+              "speaker": "L",
+              "text": "I'm free, Juno. I'd be happy to lend a hand with the repair. Shall we get started?",
+              "atMs": 1788825612001
+            },
+            {
+              "id": "turn:136",
+              "speaker": "J",
+              "text": "Let's start. I'll handle the components; you monitor the output.",
+              "atMs": 1788825630001
+            }
+          ]
+        },
+        {
+          "id": "conversation:67",
+          "participants": [
+            "N",
+            "O"
+          ],
+          "status": "open",
+          "nextSpeaker": "O",
+          "expiresAtMs": 1788912014001,
+          "turns": [
+            {
+              "id": "turn:68",
+              "speaker": "N",
+              "text": "I'm heading to the infirmary to check on Cato. How are you holding up at the Well today?",
+              "atMs": 1788825614001
+            },
+            {
+              "id": "turn:73",
+              "speaker": "O",
+              "text": "I'm managing. The pumps are quiet, but I can filter by hand if they fail. How is Cato?",
+              "atMs": 1788825615001
+            },
+            {
+              "id": "turn:144",
+              "speaker": "N",
+              "text": "Cato is resting, though his condition requires close monitoring. I appreciate your offer to handle manual filtration if the pumps fail; knowing the Well is covered helps me focus here.",
+              "atMs": 1788825632001
+            }
+          ]
+        },
+        {
+          "id": "conversation:77",
+          "participants": [
+            "P",
+            "Q"
+          ],
+          "status": "open",
+          "nextSpeaker": "Q",
+          "expiresAtMs": 1788912016001,
+          "turns": [
+            {
+              "id": "turn:78",
+              "speaker": "P",
+              "text": "Quim, hijo. The oven is warm and the flour is waiting. Come by the kitchen when you can; I have something to show you.",
+              "atMs": 1788825616001
+            },
+            {
+              "id": "turn:82",
+              "speaker": "Q",
+              "text": "Pilar, I’m coming by the kitchen now. What have you got for me?",
+              "atMs": 1788825617001
+            },
+            {
+              "id": "turn:148",
+              "speaker": "P",
+              "text": "Good, hijo. Bring your hands. We start with the flour.",
+              "atMs": 1788825633001
+            }
+          ]
+        },
+        {
+          "id": "conversation:86",
+          "participants": [
+            "R",
+            "T"
+          ],
+          "status": "open",
+          "nextSpeaker": "T",
+          "expiresAtMs": 1788912018001,
+          "turns": [
+            {
+              "id": "turn:87",
+              "speaker": "R",
+              "text": "I am checking the hold inventory to ensure the records match the physical stock. Do you have time to review the current counts with me?",
+              "atMs": 1788825618001
+            },
+            {
+              "id": "turn:96",
+              "speaker": "T",
+              "text": "I am available to review the current counts with you. Please let me know when you are ready to begin the verification process.",
+              "atMs": 1788825620001
+            },
+            {
+              "id": "turn:182",
+              "speaker": "R",
+              "text": "I am ready to begin. Shall we start with the produce stock?",
+              "atMs": 1788825634001
+            }
+          ]
+        },
+        {
+          "id": "conversation:91",
+          "participants": [
+            "S",
+            "X"
+          ],
+          "status": "open",
+          "nextSpeaker": "S",
+          "expiresAtMs": 1788912019001,
+          "turns": [
+            {
+              "id": "turn:92",
+              "speaker": "S",
+              "text": "The excavation site is dry. I am not. Do you need a hand with the digging, or just the quiet?",
+              "atMs": 1788825619001
+            },
+            {
+              "id": "turn:115",
+              "speaker": "X",
+              "text": "I can handle the digging. The dryness helps, but my back’s been at me since Tuesday, so I’ll take the quiet.",
+              "atMs": 1788825624001
+            }
+          ]
+        },
+        {
+          "id": "conversation:105",
+          "participants": [
+            "V",
+            "W"
+          ],
+          "status": "open",
+          "nextSpeaker": "W",
+          "expiresAtMs": 1788912022001,
+          "turns": [
+            {
+              "id": "turn:106",
+              "speaker": "V",
+              "text": "I'm getting hungry, Wen. I'm planting trays in the garden right now. Are you watching the power grid, or just staring at the walls?",
+              "atMs": 1788825622001
+            },
+            {
+              "id": "turn:110",
+              "speaker": "W",
+              "text": "I am watching the grid. It is stable.",
+              "atMs": 1788825623001
+            },
+            {
+              "id": "turn:190",
+              "speaker": "V",
+              "text": "Stable is boring, Wen. My garden is fed, but my stomach isn't. Are you going to help me cook, or just keep staring at the lights?",
+              "atMs": 1788825636001
+            }
+          ]
+        }
+      ],
+      "offers": [],
+      "agreements": [],
+      "coverage": {
+        "total": 25,
+        "neverThought": 0,
+        "waitingForReply": [
+          "U",
+          "B",
+          "G",
+          "H",
+          "M",
+          "K",
+          "L",
+          "O",
+          "Q",
+          "T",
+          "S",
+          "W"
+        ]
+      }
+    },
+    "accounts": {
+      "treasury": 0,
+      "maintenance": 98,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 9,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 8,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 0,
+      "credits:B": 0,
+      "credits:C": 1,
+      "credits:D": 1,
+      "credits:E": 1,
+      "credits:F": 2,
+      "credits:G": 1,
+      "credits:H": 1,
+      "credits:I": 2,
+      "credits:J": 0,
+      "credits:K": 1,
+      "credits:L": 1,
+      "credits:M": 1,
+      "credits:N": 0,
+      "credits:O": 1,
+      "credits:P": 0,
+      "credits:Q": 2,
+      "credits:R": 1,
+      "credits:S": 1,
+      "credits:T": 1,
+      "credits:U": 1,
+      "credits:V": 2,
+      "credits:W": 2,
+      "credits:X": 2,
+      "credits:Y": 2,
+      "stock:produce": 76,
+      "stock:meals": 100,
+      "stock:water": 269,
+      "stock:materials": 27,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 2,
+      "ledger:leaked": 0
+    },
+    "agreements": [],
+    "offers": [],
+    "projects": {
+      "A": {
+        "id": "project:0",
+        "goal": "Write a short piece of fiction.",
+        "why": "I have always wanted to write something, but I have never said so aloud.",
+        "visibility": "private",
+        "status": "completed",
+        "createdAtMs": 1788825601001,
+        "steps": [
+          {
+            "id": "step:1",
+            "intent": {
+              "actor": "A",
+              "verb": "go",
+              "room": "records"
+            },
+            "at": null,
+            "status": "done",
+            "evidenceId": "memory:168"
+          }
+        ]
+      },
+      "B": {
+        "id": "project:6",
+        "goal": "Consult Cato Lindqvist about the infirmary status",
+        "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825602001,
+        "steps": []
+      },
+      "C": {
+        "id": "project:11",
+        "goal": "Establish written criteria for waking a resident.",
+        "why": "I need these criteria documented before they are needed.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825603001,
+        "steps": []
+      },
+      "D": {
+        "id": "project:15",
+        "goal": "Verify hull integrity reports with Gita Raman to ensure no structural faults are being buried.",
+        "why": "Halim buried a previous report; I need to confirm the hull status independently.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825604001,
+        "steps": []
+      },
+      "E": {
+        "id": "project:20",
+        "goal": "Establish a dialogue with Halim Zoubir regarding the work roster.",
+        "why": "Halim's duty is 'The work roster', and my duty is 'Allocation and disputes'. A conversation is the most direct way to address potential misalignments or needs.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825605001,
+        "steps": []
+      },
+      "F": {
+        "id": "project:25",
+        "goal": "Connect with Mara Osei to leverage past messaging history.",
+        "why": "Ferran wants to be the centre of attention, and Mara is a known contact.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825606001,
+        "steps": []
+      },
+      "G": {
+        "id": "project:30",
+        "goal": "Provide hull integrity data to Dima.",
+        "why": "Dima requested inspection data as dock safety officer.",
+        "visibility": "public",
+        "status": "active",
+        "createdAtMs": 1788825607001,
+        "steps": []
+      },
+      "H": {
+        "id": "project:35",
+        "goal": "Confirm the work roster is fair.",
+        "why": "It was decided that the roster must align with capacity.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825608001,
+        "steps": []
+      },
+      "I": {
+        "id": "project:39",
+        "goal": "Repair the maintenance systems to stabilize the reactor.",
+        "why": "Reactor is at 0.94 and maintenance is low; repair consumes cells and materials but yields maintenance.",
+        "visibility": "private",
+        "status": "completed",
+        "createdAtMs": 1788825609001,
+        "steps": [
+          {
+            "id": "step:40",
+            "intent": {
+              "actor": "I",
+              "verb": "repair"
+            },
+            "at": "workshops",
+            "status": "done",
+            "evidenceId": "memory:158"
+          }
+        ]
+      },
+      "J": {
+        "id": "project:45",
+        "goal": "Repair the power bay to secure my key.",
+        "why": "I need to prove I can keep the key before someone takes it away.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825610001,
+        "steps": []
+      },
+      "K": {
+        "id": "project:50",
+        "goal": "Ask Iris to listen to a sound sample.",
+        "why": "I want somebody to ask to hear one.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825611001,
+        "steps": []
+      },
+      "L": {
+        "id": "project:54",
+        "goal": "Help Juno repair the maintenance system.",
+        "why": "Juno has the materials and cells, and I want to be the one who is owed.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825612001,
+        "steps": []
+      },
+      "M": {
+        "id": "project:59",
+        "goal": "Establish a proper table and manners in the Common.",
+        "why": "Ferran’s comment about 'threads' and 'tapestry' highlights the social fabric we are maintaining; a table is a physical anchor for those connections.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825613001,
+        "steps": []
+      },
+      "N": {
+        "id": "project:64",
+        "goal": "Check on Cato Lindqvist's condition and offer support.",
+        "why": "Cato is in the infirmary, which is my duty, and we have a professional history.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825614001,
+        "steps": [
+          {
+            "id": "step:65",
+            "intent": {
+              "actor": "N",
+              "verb": "go",
+              "room": "infirmary"
+            },
+            "at": null,
+            "status": "done",
+            "evidenceId": "memory:166"
+          },
+          {
+            "id": "step:66",
+            "intent": {
+              "actor": "N",
+              "verb": "sleep"
+            },
+            "at": "infirmary",
+            "status": "pending",
+            "evidenceId": null
+          }
+        ]
+      },
+      "O": {
+        "id": "project:71",
+        "goal": "Ensure water supply stability",
+        "why": "Stock is low (250) and maintenance is critical (90).",
+        "visibility": "private",
+        "status": "completed",
+        "createdAtMs": 1788825615001,
+        "steps": [
+          {
+            "id": "step:72",
+            "intent": {
+              "actor": "O",
+              "verb": "clean"
+            },
+            "at": "well",
+            "status": "done",
+            "evidenceId": "memory:172"
+          }
+        ]
+      },
+      "P": {
+        "id": "project:76",
+        "goal": "Teach Quim to bake bread before he leaves.",
+        "why": "It is what I want to do, and he is the only one currently listed in contacts who works in the workshops and might need sustenance or skills.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825616001,
+        "steps": []
+      },
+      "Q": {
+        "id": "project:81",
+        "goal": "Visit Pilar in the kitchen to see what she has to show me.",
+        "why": "Pilar invited me to the kitchen, and I want to see what it is.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825617001,
+        "steps": []
+      },
+      "R": {
+        "id": "project:85",
+        "goal": "Verify the current inventory counts in the hold.",
+        "why": "My duty is to ensure the inventory is correct, and I have no other projects.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825618001,
+        "steps": []
+      },
+      "S": {
+        "id": "project:90",
+        "goal": "Find a way to be useful to Xan.",
+        "why": "Xan is an Excavation worker. Sten taught him to swim. Sten wants to be needed.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825619001,
+        "steps": []
+      },
+      "T": {
+        "id": "project:95",
+        "goal": "Verify hold inventory accuracy",
+        "why": "Reva Sandoval has requested a review of the hold inventory to ensure records match physical stock.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825620001,
+        "steps": []
+      },
+      "U": {
+        "id": "project:99",
+        "goal": "Hear what Ama wants to write.",
+        "why": "She asked directly; ignoring it wastes the moment.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825621001,
+        "steps": []
+      },
+      "V": {
+        "id": "project:103",
+        "goal": "Grow food in the garden to sustain the hydroponics duty.",
+        "why": "I need produce to cook meals and keep the reactor running, but I'm tired of waiting for others to handle the basics.",
+        "visibility": "private",
+        "status": "completed",
+        "createdAtMs": 1788825622001,
+        "steps": [
+          {
+            "id": "step:104",
+            "intent": {
+              "actor": "V",
+              "verb": "grow"
+            },
+            "at": "garden",
+            "status": "done",
+            "evidenceId": "memory:170"
+          }
+        ]
+      },
+      "W": {
+        "id": "project:109",
+        "goal": "Say one true difficult thing out loud before he dies.",
+        "why": "This is his primary want.",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825623001,
+        "steps": []
+      },
+      "X": {
+        "id": "project:113",
+        "goal": "Dig at the face to produce materials.",
+        "why": "I need materials, and the site is dry enough for it.",
+        "visibility": "private",
+        "status": "completed",
+        "createdAtMs": 1788825624001,
+        "steps": [
+          {
+            "id": "step:114",
+            "intent": {
+              "actor": "X",
+              "verb": "dig"
+            },
+            "at": "face",
+            "status": "done",
+            "evidenceId": "memory:154"
+          }
+        ]
+      },
+      "Y": {
+        "id": "project:118",
+        "goal": "Dig materials to support maintenance.",
+        "why": "I have no duty, but I need to matter. Digging produces materials, which the reactor needs to stay above 0.94. It uses water, which I have plenty of (250).",
+        "visibility": "private",
+        "status": "active",
+        "createdAtMs": 1788825625001,
+        "steps": []
+      }
+    },
+    "balances": {
+      "A": 15,
+      "B": 8,
+      "C": 8,
+      "D": 15,
+      "E": 10,
+      "F": 13,
+      "G": 17,
+      "H": 8,
+      "I": 9,
+      "J": 15,
+      "K": 12,
+      "L": 8,
+      "M": 17,
+      "N": 17,
+      "O": 15,
+      "P": 16,
+      "Q": 10,
+      "R": 17,
+      "S": 17,
+      "T": 10,
+      "U": 13,
+      "V": 8,
+      "W": 13,
+      "X": 12,
+      "Y": 10
+    },
+    "stock": {
+      "produce": 76,
+      "meals": 100,
+      "water": 269,
+      "materials": 27
+    },
+    "economicEvents": [
+      {
+        "sequence": 0,
+        "day": 100,
+        "watch": 1,
+        "actor": "H",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:H",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 1,
+        "day": 100,
+        "watch": 1,
+        "actor": "C",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:C",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 2,
+        "day": 100,
+        "watch": 1,
+        "actor": "X",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:X",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ]
+      },
+      {
+        "sequence": 3,
+        "day": 100,
+        "watch": 1,
+        "actor": "S",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:S",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "S",
+          "H"
+        ]
+      },
+      {
+        "sequence": 4,
+        "day": 100,
+        "watch": 1,
+        "actor": "R",
+        "room": "hold",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:R",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 5,
+        "day": 100,
+        "watch": 1,
+        "actor": "I",
+        "room": "workshops",
+        "action": "repair",
+        "entries": [
+          {
+            "account": "maintenance",
+            "delta": 8
+          },
+          {
+            "account": "cells:I",
+            "delta": -2
+          },
+          {
+            "account": "credits:I",
+            "delta": 2
+          },
+          {
+            "account": "stock:materials",
+            "delta": -1
+          },
+          {
+            "account": "ledger:burned",
+            "delta": 2
+          }
+        ]
+      },
+      {
+        "sequence": 6,
+        "day": 100,
+        "watch": 1,
+        "actor": "D",
+        "room": "dock",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:D",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 7,
+        "day": 100,
+        "watch": 1,
+        "actor": "W",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:W",
+            "delta": 2
+          }
+        ]
+      },
+      {
+        "sequence": 8,
+        "day": 100,
+        "watch": 1,
+        "actor": "F",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:F",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ],
+        "companions": [
+          "F",
+          "X"
+        ]
+      },
+      {
+        "sequence": 9,
+        "day": 100,
+        "watch": 1,
+        "actor": "U",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:U",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "U",
+          "C"
+        ]
+      },
+      {
+        "sequence": 10,
+        "day": 100,
+        "watch": 1,
+        "actor": "T",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:T",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 11,
+        "day": 100,
+        "watch": 1,
+        "actor": "G",
+        "room": "longwalk",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:G",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 12,
+        "day": 100,
+        "watch": 1,
+        "actor": "V",
+        "room": "garden",
+        "action": "grow",
+        "entries": [
+          {
+            "account": "credits:V",
+            "delta": 2
+          },
+          {
+            "account": "stock:produce",
+            "delta": 16
+          },
+          {
+            "account": "stock:water",
+            "delta": -2
+          }
+        ]
+      },
+      {
+        "sequence": 13,
+        "day": 100,
+        "watch": 1,
+        "actor": "O",
+        "room": "well",
+        "action": "clean",
+        "entries": [
+          {
+            "account": "credits:O",
+            "delta": 1
+          },
+          {
+            "account": "stock:water",
+            "delta": 24
+          }
+        ]
+      },
+      {
+        "sequence": 14,
+        "day": 100,
+        "watch": 1,
+        "actor": "Q",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:Q",
+            "delta": 2
+          }
+        ],
+        "companions": [
+          "Q",
+          "W"
+        ]
+      },
+      {
+        "sequence": 15,
+        "day": 100,
+        "watch": 1,
+        "actor": "Y",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:Y",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ]
+      },
+      {
+        "sequence": 16,
+        "day": 100,
+        "watch": 1,
+        "actor": "L",
+        "room": "hold",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:L",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "L",
+          "R"
+        ]
+      },
+      {
+        "sequence": 17,
+        "day": 100,
+        "watch": 1,
+        "actor": "K",
+        "room": "dispatch",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:K",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 18,
+        "day": 100,
+        "watch": 1,
+        "actor": "M",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:M",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "M",
+          "T"
+        ]
+      },
+      {
+        "sequence": 19,
+        "day": 100,
+        "watch": 1,
+        "actor": "E",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:E",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "record": [
+      {
+        "room": "infirmary",
+        "who": [
+          "C"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 21
+      },
+      {
+        "room": "face",
+        "who": [
+          "X"
+        ],
+        "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 35
+      },
+      {
+        "room": "workshops",
+        "who": [
+          "I"
+        ],
+        "text": "Iris repaired The Workshops; 1 material and 2 charge cells used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 76
+      },
+      {
+        "room": "face",
+        "who": [
+          "F"
+        ],
+        "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 116
+      },
+      {
+        "room": "infirmary",
+        "who": [
+          "U"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 130
+      },
+      {
+        "room": "garden",
+        "who": [
+          "V"
+        ],
+        "text": "Vero harvested 16 produce; 2 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 212
+      },
+      {
+        "room": "well",
+        "who": [
+          "O"
+        ],
+        "text": "Osvald filtered 24 water at the well.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 225
+      },
+      {
+        "room": "face",
+        "who": [
+          "Y"
+        ],
+        "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 266
+      }
+    ]
+  }
+}

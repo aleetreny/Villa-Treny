@@ -1,0 +1,76 @@
+{
+  "format": "villa-groq-dual-release-validation-v1",
+  "capturedAt": "2026-09-08T20:14:13.872Z",
+  "version": "13ba0a43-f0e2-45b5-bf38-524faf16b5fb",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "nodeTests": 48,
+    "appTests": 949,
+    "workerTests": 301,
+    "hostingTests": 6,
+    "hostingExternalRequests": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "rooms": 46,
+    "dryDeploy": true
+  },
+  "logEvidence": {
+    "check": {
+      "sha256": "8184b3ba724f7177d78d4fe03a18ee8a2ec98b5ada8c0212724bc9c2d26fbcff",
+      "bytes": 8498
+    },
+    "build": {
+      "sha256": "7680d826ff3af9f664272287332eb68ffaa6393d826e5eeda8fbd05e2d13bef9",
+      "bytes": 876
+    },
+    "dry": {
+      "sha256": "03e9c8ec1438fe4a0ececfb5ee63f55eedb740af0d416f2dfe6d8fc2e7d2c2ec",
+      "bytes": 1854
+    },
+    "hosting": {
+      "sha256": "4b7907a71d46bdc451145fc6c89dc18e6891425f02f871d733d1dab7bc1be77d",
+      "bytes": 792
+    },
+    "deploy": {
+      "sha256": "73a1a3f495a79ed54936ce8be59815ef6a966ced7abd7237ade5a2c815f2ec0b",
+      "bytes": 2194
+    }
+  },
+  "sourceFileCount": 194,
+  "browser": {
+    "url": "https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/",
+    "nativeReview": true,
+    "room": "The Common",
+    "integerMagnification": 4,
+    "visible": [
+      "Room atlas",
+      "Room artwork and resident figures",
+      "English journal",
+      "Connected and world running",
+      "Thoughts delayed"
+    ]
+  },
+  "limits": {
+    "cloudflareDailyNeurons": 8000,
+    "groqModels": [
+      "openai/gpt-oss-120b",
+      "openai/gpt-oss-20b"
+    ],
+    "groqPerModel": {
+      "rpm": 30,
+      "rpd": 1000,
+      "tpm": 8000,
+      "tpd": 200000
+    }
+  },
+  "limitations": [
+    "The pre-existing invalid_record_choice failure leaves cognition degraded while a retry is pending. Physical world remains healthy.",
+    "No natural120B result is established at the release cut.",
+    "128-token Groq framing allowance is provisional.",
+    "No publication or paid authored commission is established by this release.",
+    "SQL recovery bundles do not expose live index metadata.",
+    "Vite retains a large-main-chunk warning; this server release changes no room art or UI bundle."
+  ],
+  "commitOrPush": false
+}

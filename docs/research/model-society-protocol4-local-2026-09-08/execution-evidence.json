@@ -1,0 +1,86 @@
+{
+  "recordedAt": "2026-09-08T14:46:01.165062+00:00",
+  "scope": "Isolated GENESIS fixture, local inference only. No production or cloud request.",
+  "command": [
+    "/Users/alejandrotreny/.omlx/bin/omlx",
+    "serve",
+    "--base-path",
+    "/tmp/villa-omlx-protocol4-20260908",
+    "--model-dir",
+    "/Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8018",
+    "--max-concurrent-requests",
+    "1",
+    "--memory-guard",
+    "safe",
+    "--no-cache",
+    "--no-hf-cache",
+    "--log-level",
+    "info"
+  ],
+  "harnessCommand": [
+    "node",
+    "scripts/benchmark-society-runtime-v7-local.mjs",
+    "--run",
+    "--out",
+    "/Users/alejandrotreny/Documents/ChatGPT/Villa-Treny/docs/research/model-society-protocol4-local-2026-09-08",
+    "--server-pid",
+    "29047",
+    "--max-new-calls",
+    "37",
+    "--protocol-version",
+    "4"
+  ],
+  "ownedServerPid": 29047,
+  "ownedToolSession": 84189,
+  "serverStopped": true,
+  "stopSignal": "SIGTERM",
+  "serverExitCode": 143,
+  "verification": "PID29047 absent and no listener on8018 after completion; user PID29617 still listened on127.0.0.1:8000.",
+  "userProcessModified": false,
+  "serverLogSha256": "40ad45393e00ced428746559b9a5cbe4c6296f94c32faca9b1ee088f4921ed1b",
+  "sourceBundleSha256": "7059b64e168e2dc3a1bfeed76d135a9d466ec80b4581149267650d552ad44667",
+  "modelProvenance": "Four weight hashes inherited from the preceding full local measurement. Size/inode/mtime/ctime checked; metadata and server source bytes hashed. Weight bytes were not rehashed.",
+  "changedSinceGrammarLocal": [
+    {
+      "path": "scripts/benchmark-society-runtime-v7-local.mjs",
+      "sha256": "dbc96850d2720b30d437558b6e461d5e59d184214cf3ad75e548547bb8439d0f"
+    },
+    {
+      "path": "src/lib/habitat/society/capabilities.ts",
+      "sha256": "fce6b85268206fff7f82bb2d906a8a7e269e8794d5076c3e626f9ae4246ed639"
+    },
+    {
+      "path": "src/lib/habitat/society/choice.ts",
+      "sha256": "e10fc74232bfea53678e62a847ffafde732591fcf993ef9e0350d68bd2df23d6"
+    },
+    {
+      "path": "src/lib/habitat/society/index.ts",
+      "sha256": "2c03abec435c3936a49e83031ae9b7d0a56d74872dff6640c63c45ee3229a626"
+    },
+    {
+      "path": "src/lib/habitat/society/instructions.ts",
+      "sha256": "79e5b3db2fde31e126022db8862852e4d8c4ab6829f46c4fb338d33b74670cbe"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/router.ts",
+      "sha256": "7ce0ec2c22089335e3ef36380751824fa607a3eb987b6da534fd482af6ccd4a6"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-protocol.ts",
+      "sha256": "b1965b2db42d421d89dac357d293e7a1f7a4a32a81128f725b5094026174bb5b"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "62e9364ad110584f54d347ca5a767779d5d81a493cb767c70ec856d6dfff56bc"
+    }
+  ],
+  "samplingChanges": [],
+  "schedulerAllocation": "New pacing sources are captured, but this fixture directly schedules25initial+8reply+4review; it does not exercise the production quota allocator, provider leases or alarms.",
+  "cloudRequests": 0,
+  "cloudResearchNeuronsBefore": 1852,
+  "cloudResearchNeuronsAfter": 1852
+}

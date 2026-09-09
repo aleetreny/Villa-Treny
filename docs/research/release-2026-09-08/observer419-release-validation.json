@@ -1,0 +1,81 @@
+{
+  "format": "villa-observer419-release-validation-v1",
+  "capturedAt": "2026-09-08T21:32:59.082Z",
+  "version": "7dd380ef-5c98-4608-9be8-842d31599299",
+  "previousVersion": "af8bb409-387b-45eb-be9e-849163fc3536",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "appTests": 968,
+    "workerTests": 307,
+    "nodeTests": 54,
+    "browserTests": 21,
+    "hostingTests": 6,
+    "hostingExternalCalls": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "rooms": 46,
+    "dryDeploy": true,
+    "sourceFiles": 209
+  },
+  "scope": "Exact-source presentation translation of public turn419 in Lives and Journal. Per-entry watch/minute matching preserves the historical translations. No engine, economic-clock, quota or inference-instruction changes.",
+  "logEvidence": {
+    "full-check": {
+      "sha256": "1faf122844dbbe25f837d31ef694072e776842c24379e938ed9d8a6e34b80694",
+      "bytes": 9251
+    },
+    "build": {
+      "sha256": "c40e103ea4deaedb467cd59e57d7b7953500d18047c510af5694a8f56fb91a09",
+      "bytes": 876
+    },
+    "browser": {
+      "sha256": "9b703b36c0ddaa18a80a680a34f70f407b20a8354d8a1fa234137cdc2e8b8bce",
+      "bytes": 4829
+    },
+    "dry": {
+      "sha256": "6e006c5c9b06d77ff52daa05370ec1e9b056256edbcffa59de69e3fad8a6dd52",
+      "bytes": 1854
+    },
+    "hosting": {
+      "sha256": "c2046e948cdadc144a7a4b9ce98001f7f66200b03b224309a86c2243313dd991",
+      "bytes": 789
+    },
+    "deploy": {
+      "sha256": "c8e65b9a1eb91bba5f4fc7c6f0bdacb8e04a046a483f4705322b3f3046b97682",
+      "bytes": 2418
+    }
+  },
+  "sourceManifest": "observer419-source-manifest.json",
+  "sourceBundleSha256": "c0a61f3bc43cfef56a5e35156bd33da463cd8025877f47e4b272ecb157cc5016",
+  "browserReview": {
+    "surface": "Existing native tab17, public production URL",
+    "reloadedAfterDeployment": true,
+    "journal": {
+      "day": 107,
+      "watch": 4,
+      "displayTime": "18:00",
+      "room": "The Kitchen",
+      "speaker": "Vero",
+      "translationVisible": true,
+      "label": "English translation"
+    },
+    "lives": {
+      "filter": "Vero Castel",
+      "displayTime": "8 Sept, 23:08 CEST",
+      "translationVisible": true,
+      "label": "English translation",
+      "outcomeLabelVisible": true
+    },
+    "leftOpen": "The Common / Journal",
+    "delivered": true
+  },
+  "limitations": [
+    "Translation is an observer presentation correction; original history and future model evidence retain the original message.",
+    "The translated flour claim is not verified as an economic event.",
+    "This does not guarantee that future model messages will be English.",
+    "Strict frozen continuity comparison failed because one natural job advanced revision216 to218; its failure is preserved and requires a separate exact activity reconciliation.",
+    "The broader eight-response progress experiment remains negative, and no paid authored-work chain is established.",
+    "Build retains the main-bundle size warning."
+  ],
+  "commitOrPush": false
+}

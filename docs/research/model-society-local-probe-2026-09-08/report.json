@@ -1,0 +1,191 @@
+{
+  "scope": "Two exact V6 B/C contexts, local Qwen only. No production or cloud calls, no physical watch, no sustained cognition claim.",
+  "humanReview": "pending",
+  "binding": "b9a786ed43f333c72db105d23fbfdaa96203ca1db6beba1e8c13c15f4cfd0a8d",
+  "newCalls": 2,
+  "halted": null,
+  "server": {
+    "pid": 14483,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions"
+  },
+  "memoryMeasurement": "ps RSS is sampled process residency, not a complete Metal/unified-memory footprint or a guaranteed peak. CPU percentage is ps recent CPU, not a benchmark.",
+  "rows": [
+    {
+      "actor": "B",
+      "state": "completed",
+      "httpStatus": 200,
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 1107,
+        "completion_tokens": 167,
+        "total_tokens": 1274,
+        "input_tokens": 1107,
+        "output_tokens": 167,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 7.65,
+        "total_time": 5.74
+      },
+      "latencyMs": 16016,
+      "maxSampledRssKiB": 3582896,
+      "maxSampledCpuPercent": 796.3,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "aa0897fe85259b25d52ff5f8db1a60d0d33ee778ca8e3b264dcf1c01c7717f61",
+        "project": {
+          "id": "project:6",
+          "goal": "Check water levels in the well",
+          "why": "To ensure inventory accuracy for the Stores duty.",
+          "visibility": "public",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": [
+            {
+              "id": "step:7",
+              "intent": {
+                "actor": "B",
+                "verb": "inspect"
+              },
+              "at": "well",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:8",
+            "participants": [
+              "B",
+              "K"
+            ],
+            "revision": 1,
+            "nextSpeaker": "K",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:9",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Kes, sorry to bother you! I was just wondering if you could let me know when the next inventory check is scheduled? I want to make sure I'm fully prepared. No problem if it's already done, I just like to be organized!",
+                "atMs": 1788825602001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": []
+      },
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Check water levels in the well",
+          "why": "To ensure inventory accuracy for the Stores duty.",
+          "visibility": "public",
+          "steps": [
+            {
+              "verb": "inspect",
+              "at": "well"
+            }
+          ]
+        },
+        "message": {
+          "to": "K",
+          "text": "Hi Kes, sorry to bother you! I was just wondering if you could let me know when the next inventory check is scheduled? I want to make sure I'm fully prepared. No problem if it's already done, I just like to be organized!"
+        }
+      },
+      "error": null
+    },
+    {
+      "actor": "C",
+      "state": "completed",
+      "httpStatus": 200,
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 1161,
+        "completion_tokens": 165,
+        "total_tokens": 1326,
+        "input_tokens": 1161,
+        "output_tokens": 165,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.97
+      },
+      "latencyMs": 3011,
+      "maxSampledRssKiB": 1276112,
+      "maxSampledCpuPercent": 68.5,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "b9c3e852730f2989f344e22918c8830acaf73c649cb3b0fcba4d59890f89b929",
+        "project": {
+          "id": "project:11",
+          "goal": "Draft the criteria for waking a patient.",
+          "why": "I need these written down before they are needed. No one else is sitting down to write them.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825603001,
+          "steps": [
+            {
+              "id": "step:12",
+              "intent": {
+                "actor": "C",
+                "verb": "work"
+              },
+              "at": "infirmary",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:13",
+            "participants": [
+              "C",
+              "N"
+            ],
+            "revision": 1,
+            "nextSpeaker": "N",
+            "status": "open",
+            "createdAtMs": 1788825603001,
+            "expiresAtMs": 1788912003001,
+            "turns": [
+              {
+                "id": "turn:14",
+                "index": 0,
+                "speaker": "C",
+                "text": "The criteria for waking a patient must be written down. I am starting the draft. Do you have specific clinical thresholds you want included, or shall I propose the baseline metrics?",
+                "atMs": 1788825603001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": []
+      },
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Draft the criteria for waking a patient.",
+          "why": "I need these written down before they are needed. No one else is sitting down to write them.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "work",
+              "at": "infirmary"
+            }
+          ]
+        },
+        "message": {
+          "to": "N",
+          "text": "The criteria for waking a patient must be written down. I am starting the draft. Do you have specific clinical thresholds you want included, or shall I propose the baseline metrics?"
+        }
+      },
+      "error": null
+    }
+  ]
+}

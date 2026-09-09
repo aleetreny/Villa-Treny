@@ -1,0 +1,354 @@
+{
+  "scope": "Six independent GENESIS decisions; no production mutation or physical watch. Syntax/domain acceptance are not semantic quality.",
+  "humanReview": "pending",
+  "binding": "875c2baf29183f2a10b597715ecebb6beaa3c01004d742f5028ea585d1074eda",
+  "attempts": 6,
+  "accountedNeurons": 52,
+  "maxNeurons": 350,
+  "stopped": null,
+  "rows": [
+    {
+      "id": "format-v1:wire:A",
+      "actor": "A",
+      "variant": "wire",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1191,
+        "completion_tokens": 114,
+        "total_tokens": 1305,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 8.982000350952148
+      },
+      "error": null,
+      "output": {
+        "project": {
+          "mode": "abandon",
+          "why": "No clear path to authorship"
+        },
+        "reflection": {
+          "text": "The desire to write remains, but the means are obscured by the demands of survival and the constraints of the environment. The presence of others complicates the pursuit of a personal goal, as their needs and histories intertwine with my own. The physical actions required for survival do not align with the mental labor of creation. Without a clear plan or resource, the project must be abandoned.",
+          "refs": []
+        },
+        "respond": {
+          "offerId": "",
+          "decision": "reject"
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "invalid_response",
+        "project": null,
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 9,
+      "latencyMs": 1950
+    },
+    {
+      "id": "format-v1:wire:B",
+      "actor": "B",
+      "variant": "wire",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1128,
+        "completion_tokens": 59,
+        "total_tokens": 1187,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.0145392417907715
+      },
+      "error": null,
+      "output": {
+        "project": {
+          "mode": "abandon",
+          "why": "No clear path to being consulted as intended."
+        },
+        "reflection": {
+          "text": "No clear path to being consulted as intended.",
+          "refs": [
+            "world:100:1"
+          ]
+        },
+        "respond": {
+          "offerId": "none",
+          "decision": "reject"
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "agreement_needs_open_message",
+        "project": null,
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 8,
+      "latencyMs": 907
+    },
+    {
+      "id": "format-v1:full:A",
+      "actor": "A",
+      "variant": "full",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 76,
+        "total_tokens": 1220,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.606603622436523
+      },
+      "error": null,
+      "output": {
+        "project": {
+          "mode": "abandon",
+          "why": "No clear path to writing without external validation."
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1"
+          ],
+          "text": "The desire to write remains, but the fear of relying on others' words persists. Without a defined plan, progress is impossible."
+        },
+        "respond": {
+          "decision": "reject",
+          "offerId": "none"
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "agreement_needs_open_message",
+        "project": null,
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 8,
+      "latencyMs": 1521
+    },
+    {
+      "id": "format-v1:full:B",
+      "actor": "B",
+      "variant": "full",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1081,
+        "completion_tokens": 80,
+        "total_tokens": 1161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.437154293060303
+      },
+      "error": null,
+      "output": {
+        "project": {
+          "mode": "abandon",
+          "why": "No actionable goal identified. All options require resources or steps not aligned with current priorities or conditions."
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1"
+          ],
+          "text": "Assessed available actions and resources. No clear path forward that matches current needs or capabilities."
+        },
+        "respond": {
+          "decision": "reject",
+          "offerId": ":none:"
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "agreement_needs_open_message",
+        "project": null,
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 8,
+      "latencyMs": 1666
+    },
+    {
+      "id": "format-v1:json-object:A",
+      "actor": "A",
+      "variant": "json-object",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1234,
+        "completion_tokens": 189,
+        "total_tokens": 1423,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.46646499633789
+      },
+      "error": null,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Write a short story about the library's history",
+          "why": "To create something original and personal",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "inspect",
+              "at": "library"
+            },
+            {
+              "verb": "note",
+              "target": "old books"
+            },
+            {
+              "verb": "write",
+              "at": "study"
+            }
+          ]
+        },
+        "reflection": {
+          "text": "The library holds memories of the past. I need to uncover its history through observation and documentation.",
+          "refs": [
+            "world:100:1"
+          ]
+        },
+        "message": {
+          "to": "B",
+          "text": "I need to inspect the library and note its contents. Would you like to join me?",
+          "close": false
+        },
+        "offer": {
+          "terms": {
+            "kind": "work",
+            "worker": "A",
+            "payer": "B",
+            "cells": 1.5,
+            "verb": "inspect",
+            "room": "library",
+            "units": 1
+          },
+          "expiresInWatches": 1,
+          "replaces": false
+        },
+        "respond": {
+          "offerId": "offer:1",
+          "decision": "accept"
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "invalid_response",
+        "project": null,
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 12,
+      "latencyMs": 1654
+    },
+    {
+      "id": "format-v1:json-object:B",
+      "actor": "B",
+      "variant": "json-object",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1171,
+        "completion_tokens": 50,
+        "total_tokens": 1221,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 6.939123153686523
+      },
+      "error": null,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "To be consulted about something once",
+          "why": "To fulfill the want of being consulted",
+          "visibility": "public",
+          "steps": [
+            {
+              "verb": "message",
+              "at": "bridge",
+              "target": "A"
+            }
+          ]
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "invalid_response",
+        "project": null,
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      },
+      "accountedNeurons": 7,
+      "latencyMs": 799
+    }
+  ]
+}

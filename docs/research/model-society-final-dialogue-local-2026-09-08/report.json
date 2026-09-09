@@ -1,0 +1,846 @@
+{
+  "scope": "Final fixed up-to-three replies J/L/J from exact offer70 scene. No instruction, schema, sampling-policy or core change. Early stop on accepted/rejected offer, invalid response or closed conversation; one physical watch.",
+  "humanReview": "pending",
+  "newCalls": 3,
+  "stopped": null,
+  "rows": [
+    {
+      "actor": "J",
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "I have the materials and cells ready at the power bay. Since you're here, let's start the repair immediately to get the maintenance up."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 1,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "state": "completed",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "16edd9e65e952f00e4462ece7c39bbaea0067f437d6251d923f0075ac1e9d947"
+      },
+      "usage": {
+        "prompt_tokens": 2099,
+        "completion_tokens": 125,
+        "total_tokens": 2224,
+        "input_tokens": 2099,
+        "output_tokens": 125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 4.78,
+        "total_time": 3.56
+      },
+      "latencyMs": 11551,
+      "warning": null
+    },
+    {
+      "actor": "L",
+      "output": {
+        "message": {
+          "to": "J",
+          "text": "I'm ready when you are. Shall we open the deal for the repair?"
+        },
+        "deal": {
+          "kind": "work",
+          "role": "work",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 0,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "state": "completed",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "56345f03016006ebbec31b8ebb459c5bd6282ffdf613a5747792764d7ceb6de6"
+      },
+      "usage": {
+        "prompt_tokens": 2028,
+        "completion_tokens": 112,
+        "total_tokens": 2140,
+        "input_tokens": 2028,
+        "output_tokens": 112,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.33
+      },
+      "latencyMs": 2436,
+      "warning": null
+    },
+    {
+      "actor": "J",
+      "output": {
+        "message": {
+          "to": "L",
+          "text": "Yes, let's open the deal. I accept the terms for one unit of repair at the workshops for 0 cells."
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 0,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "state": "completed",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "3e1e1d8e4ae9291b309f0cc7ce94dc1e02f036cd300f21ef63ba3758eb631a3e"
+      },
+      "usage": {
+        "prompt_tokens": 2084,
+        "completion_tokens": 121,
+        "total_tokens": 2205,
+        "input_tokens": 2084,
+        "output_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.54
+      },
+      "latencyMs": 2635,
+      "warning": null
+    }
+  ],
+  "watch": {
+    "kind": "watch",
+    "id": "final-dialogue:watch",
+    "beforeHash": "3e1e1d8e4ae9291b309f0cc7ce94dc1e02f036cd300f21ef63ba3758eb631a3e",
+    "plans": {
+      "A": {
+        "stepId": "step:1",
+        "intent": {
+          "actor": "A",
+          "verb": "go",
+          "room": "records"
+        },
+        "at": null
+      },
+      "I": {
+        "stepId": "step:35",
+        "intent": {
+          "actor": "I",
+          "verb": "repair"
+        },
+        "at": "workshops"
+      },
+      "L": {
+        "stepId": "step:50",
+        "intent": {
+          "actor": "L",
+          "verb": "repair"
+        },
+        "at": "workshops"
+      }
+    },
+    "observations": [
+      {
+        "actor": "H",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "H"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "C",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "inspect",
+          "actor": "C"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "infirmary",
+            "who": [
+              "C"
+            ],
+            "text": "The Infirmary was walked through and looked over.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "infirmary"
+      },
+      {
+        "actor": "X",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "dig",
+          "actor": "X"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "face",
+            "who": [
+              "X"
+            ],
+            "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "face"
+      },
+      {
+        "actor": "S",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "S"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "R",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "R"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "hold"
+      },
+      {
+        "actor": "I",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "I",
+          "verb": "repair"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "workshops",
+            "who": [
+              "I"
+            ],
+            "text": "Iris repaired The Workshops; 1 material and 2 charge cells used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "workshops",
+        "stepId": "step:35"
+      },
+      {
+        "actor": "D",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "D"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "dock"
+      },
+      {
+        "actor": "W",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "charge",
+          "actor": "W"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "workshops"
+      },
+      {
+        "actor": "F",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "dig",
+          "actor": "F"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "face",
+            "who": [
+              "F"
+            ],
+            "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "face"
+      },
+      {
+        "actor": "U",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "inspect",
+          "actor": "U"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "infirmary",
+            "who": [
+              "U"
+            ],
+            "text": "The Infirmary was walked through and looked over.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "infirmary"
+      },
+      {
+        "actor": "T",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "T"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "G",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "G"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "longwalk"
+      },
+      {
+        "actor": "N",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "N",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "infirmary"
+      },
+      {
+        "actor": "B",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "B"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "hold"
+      },
+      {
+        "actor": "A",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "A",
+          "verb": "go",
+          "room": "records"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "records",
+        "stepId": "step:1"
+      },
+      {
+        "actor": "V",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "grow",
+          "actor": "V"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "garden",
+            "who": [
+              "V"
+            ],
+            "text": "Vero harvested 16 produce; 2 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "garden"
+      },
+      {
+        "actor": "O",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "O",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "well"
+      },
+      {
+        "actor": "Q",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "charge",
+          "actor": "Q"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "workshops"
+      },
+      {
+        "actor": "J",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "J",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "workshops"
+      },
+      {
+        "actor": "Y",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "dig",
+          "actor": "Y"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "face",
+            "who": [
+              "Y"
+            ],
+            "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "face"
+      },
+      {
+        "actor": "L",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "L",
+          "verb": "repair"
+        },
+        "outcome": {
+          "ok": true,
+          "happening": {
+            "room": "workshops",
+            "who": [
+              "L"
+            ],
+            "text": "Lior repaired The Workshops; 1 material and 2 charge cells used.",
+            "kind": "work"
+          }
+        },
+        "actualRoom": "workshops",
+        "stepId": "step:50"
+      },
+      {
+        "actor": "P",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "P"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "K",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "K"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "dispatch"
+      },
+      {
+        "actor": "M",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "verb": "work",
+          "actor": "M"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      },
+      {
+        "actor": "E",
+        "day": 100,
+        "watch": 1,
+        "intent": {
+          "actor": "E",
+          "verb": "observe"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "actualRoom": "common"
+      }
+    ],
+    "beforeAccounts": {
+      "treasury": 0,
+      "maintenance": 90,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 11,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 8,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 0,
+      "credits:B": 0,
+      "credits:C": 0,
+      "credits:D": 0,
+      "credits:E": 0,
+      "credits:F": 0,
+      "credits:G": 0,
+      "credits:H": 0,
+      "credits:I": 0,
+      "credits:J": 0,
+      "credits:K": 0,
+      "credits:L": 0,
+      "credits:M": 0,
+      "credits:N": 0,
+      "credits:O": 0,
+      "credits:P": 0,
+      "credits:Q": 0,
+      "credits:R": 0,
+      "credits:S": 0,
+      "credits:T": 0,
+      "credits:U": 0,
+      "credits:V": 0,
+      "credits:W": 0,
+      "credits:X": 0,
+      "credits:Y": 0,
+      "stock:produce": 60,
+      "stock:meals": 100,
+      "stock:water": 250,
+      "stock:materials": 16,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 0,
+      "ledger:leaked": 0
+    },
+    "afterAccounts": {
+      "treasury": 0,
+      "maintenance": 100,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 9,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 6,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 0,
+      "credits:B": 1,
+      "credits:C": 1,
+      "credits:D": 1,
+      "credits:E": 0,
+      "credits:F": 2,
+      "credits:G": 1,
+      "credits:H": 1,
+      "credits:I": 2,
+      "credits:J": 0,
+      "credits:K": 1,
+      "credits:L": 2,
+      "credits:M": 1,
+      "credits:N": 0,
+      "credits:O": 0,
+      "credits:P": 1,
+      "credits:Q": 2,
+      "credits:R": 1,
+      "credits:S": 1,
+      "credits:T": 1,
+      "credits:U": 1,
+      "credits:V": 2,
+      "credits:W": 2,
+      "credits:X": 2,
+      "credits:Y": 2,
+      "stock:produce": 76,
+      "stock:meals": 100,
+      "stock:water": 245,
+      "stock:materials": 26,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 4,
+      "ledger:leaked": 0
+    },
+    "beforeAgreements": [],
+    "afterAgreements": [],
+    "afterHash": "0d0dc708fffcd12d2bee8e5064aac3c2d55bc0ac780c172fb85e6699b4c6bf1d"
+  },
+  "offers": [
+    {
+      "id": "offer:54",
+      "conversationId": "conversation:41",
+      "proposer": "L",
+      "counterpart": "J",
+      "terms": {
+        "kind": "work",
+        "worker": "J",
+        "payer": "L",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 402
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825612001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:58",
+      "conversationId": "conversation:41",
+      "proposer": "J",
+      "counterpart": "L",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 403
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825640001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:62",
+      "conversationId": "conversation:41",
+      "proposer": "L",
+      "counterpart": "J",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 403
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825641001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:66",
+      "conversationId": "conversation:41",
+      "proposer": "J",
+      "counterpart": "L",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 403
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825642001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:70",
+      "conversationId": "conversation:41",
+      "proposer": "L",
+      "counterpart": "J",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 401
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825643001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:75",
+      "conversationId": "conversation:41",
+      "proposer": "J",
+      "counterpart": "L",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 402
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825644001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:79",
+      "conversationId": "conversation:41",
+      "proposer": "L",
+      "counterpart": "J",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 401
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825645001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:83",
+      "conversationId": "conversation:41",
+      "proposer": "J",
+      "counterpart": "L",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 401
+      },
+      "status": "open",
+      "replaces": null,
+      "createdAtMs": 1788825646001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    }
+  ],
+  "agreements": [],
+  "finalHash": "0d0dc708fffcd12d2bee8e5064aac3c2d55bc0ac780c172fb85e6699b4c6bf1d"
+}

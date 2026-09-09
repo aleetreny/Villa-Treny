@@ -1,0 +1,78 @@
+{
+  "format": "villa-evidence-layout-local-execution-v1",
+  "archivedAt": "2026-09-08T22:13:09.930464+00:00",
+  "sourceRevision": 199,
+  "localModel": "Qwen3.6-35B-A3B-4bit",
+  "serverVersion": "oMLX 0.6.4",
+  "localRequests": 8,
+  "localInputTokens": 22999,
+  "localOutputTokens": 1066,
+  "localTokens": 24065,
+  "cumulativeLocalResearchRequests": 165,
+  "cloudResearchNeurons": 1852,
+  "cloudResearchBudget": 2000,
+  "newCloudRequests": 0,
+  "productionWrites": 0,
+  "server": {
+    "ownedPid": 70454,
+    "port": 8018,
+    "concurrency": 1,
+    "stopped": true,
+    "termination": "SIGTERM; application shutdown complete; process exit143",
+    "userPort8000Touched": false,
+    "thinking": false,
+    "cacheEnabled": false,
+    "payloadByteLimit": 32000
+  },
+  "replayReceipt": "replay-receipt.json",
+  "semanticReview": "../evidence-layout-semantic-review-2026-09-08.md",
+  "sourcesAndEvidence": [
+    {
+      "name": "ledger.json",
+      "bytes": 1002431,
+      "sha256": "e7fe969eb0a118cab0bfaf1d258f8cb2c5f45ad9b1130a0210eb4c09e3f468a7"
+    },
+    {
+      "name": "private-cases.json",
+      "bytes": 2060155,
+      "sha256": "9c86d694b95c80919c0cd75cb777a4a80f0569cae28830b419ebef12ec9616d7"
+    },
+    {
+      "name": "public-plan.json",
+      "bytes": 9239,
+      "sha256": "ef98c8a51d295aab85c784900b4e48124cadadfbeb4813d1be957f292e591b06"
+    },
+    {
+      "name": "public-report.json",
+      "bytes": 17875,
+      "sha256": "067e8642b32048800496d353fd40e58039eadd7f7f4c0c584d49610d3f88ba09"
+    },
+    {
+      "name": "source-bundle.json",
+      "bytes": 2222973,
+      "sha256": "5027ca77a6f715a023f8325f56991228be3ec42332860badbfda809407f461da"
+    },
+    {
+      "name": "villa-audit-evidence-layout-replay-20260909.mjs",
+      "bytes": 9013,
+      "sha256": "eb3a4cd9ebff90f2b7ca4e06cd1354cf0310ef90220ba7c077330ad449ba79bc"
+    },
+    {
+      "name": "villa-evidence-layout-run.log",
+      "bytes": 17875,
+      "sha256": "067e8642b32048800496d353fd40e58039eadd7f7f4c0c584d49610d3f88ba09"
+    },
+    {
+      "name": "villa-evidence-layout-server.log",
+      "bytes": 11687,
+      "sha256": "9bb766f1cdb436cd28d530302f0aa94d838eea2db52879c69cf84fb649b45fac"
+    }
+  ],
+  "limitations": [
+    "Four fixed pairs and eight one-turn local responses; no autonomous continuation or physical watch.",
+    "Model-reported local usage is not cloud usage.",
+    "First response includes cold-start latency; no throughput comparison is claimed.",
+    "Mixed semantic outcomes do not justify selecting experimental layout B for production."
+  ],
+  "privateEvidenceOutsideGit": true
+}

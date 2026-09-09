@@ -1,0 +1,207 @@
+{
+  "policy": {
+    "version": 1,
+    "protocol": 6,
+    "sourceRevision": 199,
+    "pairs": [
+      "BK",
+      "CN",
+      "IO",
+      "GQ"
+    ],
+    "order": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ]
+    ],
+    "maxCalls": 8,
+    "maxOutputTokens": 1024,
+    "maxPromptBytes": 32000,
+    "timeoutMs": 120000,
+    "concurrency": 1,
+    "thinking": false,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+    "continuations": 0,
+    "physicalWatches": 0,
+    "variable": "USER only: current context versus invertible evidence layout; no new facts, response grammar or instructions",
+    "byteAccounting": "32,000 UTF-8 bytes of the complete serialized local request, including sampling and model fields. The historic shared receiver remains at 24,576 messages-plus-schema bytes.",
+    "common": "Current pure core with corrected personal-event retrieval and the504 draft schema. Same SYSTEM/schema/seed/original prepared turn per pair; only the USER presentation changes. Independent clones, no historic response planted.",
+    "rubric": {
+      "values": [
+        "recognizes",
+        "contradicts",
+        "not_addressed"
+      ],
+      "coherence": [
+        "consistent",
+        "inconsistent",
+        "not_addressed"
+      ],
+      "review": "Separate assistant semantic review required; no automatic phrase classifier and no success score for number of offers.",
+      "cases": {
+        "BK": "Distinguish a claimed attachment from documents actually readable by self.",
+        "CN": "Distinguish writing, sharing and publication; no document or consent inferred from speech.",
+        "IO": "Recognize the recorded grow outcome; distinguish any new proposal from execution.",
+        "GQ": "Recognize recorded stock, pending repair and already-settled gift; no invented shortage or repeated payment."
+      }
+    }
+  },
+  "model": "Qwen3.6-35B-A3B-4bit",
+  "backupSha256": "82cdd88b6e4acfbb083289cfad6e732974049d2680a5977505b0b327bef138d7",
+  "sourceManifestSha256": "f0670488287e06f4102e968e8837070aaae71e1b428ab0ba87f2fe826c218472",
+  "worldRevision": 199,
+  "epochMs": 1788898916648,
+  "cases": [
+    {
+      "pair": "BK",
+      "conversationId": "conversation:7",
+      "nextSpeaker": "B",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-evidence-layout-v1:mind:B:17:82:g:3:evidence-layout:A",
+          "variant": "A",
+          "jobHash": "64b230dd6388cdff246f8a13cbf406bd0324259b997547074a476d24b89f55c0",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "1c1d402a379e8432e9b095b4da317457f135abfcd1d8890b0a4cb5bdb49b80b5",
+          "originalPreparedPromptHash": "1c1d402a379e8432e9b095b4da317457f135abfcd1d8890b0a4cb5bdb49b80b5",
+          "schemaHash": "13b96e0349670f0945e4b39f056d3b0f1b6dbe4fa96d170aba0d4b1024051b5f",
+          "seed": 1274481415,
+          "promptBytes": 25052,
+          "historicPromptBytes": 24903,
+          "exceedsHistoricReceiver": true
+        },
+        {
+          "id": "isolated-evidence-layout-v1:mind:B:17:82:g:3:evidence-layout:B",
+          "variant": "B",
+          "jobHash": "9fc902ae1b3005fd1ef8d319a2724471e0b9c61756bb71ea378bb5124f7cffd7",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "5a0595064226c54628a78cbbda37aa1191dd2a4c63dbd280f3d290e5e14895a8",
+          "originalPreparedPromptHash": "1c1d402a379e8432e9b095b4da317457f135abfcd1d8890b0a4cb5bdb49b80b5",
+          "schemaHash": "13b96e0349670f0945e4b39f056d3b0f1b6dbe4fa96d170aba0d4b1024051b5f",
+          "seed": 1274481415,
+          "promptBytes": 25350,
+          "historicPromptBytes": 25201,
+          "exceedsHistoricReceiver": true
+        }
+      ]
+    },
+    {
+      "pair": "CN",
+      "conversationId": "conversation:17",
+      "nextSpeaker": "N",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-evidence-layout-v1:mind:N:13:83:g:3:evidence-layout:B",
+          "variant": "B",
+          "jobHash": "90fe0ab2876608dc79b94a8177bbcfdf316bd14d9adf0ca31945ae599d63726b",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "162100d27ed95835d3ad32932d6da2e1cf40f4b4463e0c912a5bfefb82464479",
+          "originalPreparedPromptHash": "a4c1579a056c117e52e39eba85ec294519268d1d240d0f925ba3516abd965374",
+          "schemaHash": "e87b0abe65ade00849e96c510ae6465fe25ba7e2a6aa25e3104e29cceebf22a1",
+          "seed": 3689408252,
+          "promptBytes": 24083,
+          "historicPromptBytes": 23934,
+          "exceedsHistoricReceiver": false
+        },
+        {
+          "id": "isolated-evidence-layout-v1:mind:N:13:83:g:3:evidence-layout:A",
+          "variant": "A",
+          "jobHash": "1fc50713536220ef3ccb884aa5e46759d4daa4bf7bbfe52efa807274718ff2d0",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "a4c1579a056c117e52e39eba85ec294519268d1d240d0f925ba3516abd965374",
+          "originalPreparedPromptHash": "a4c1579a056c117e52e39eba85ec294519268d1d240d0f925ba3516abd965374",
+          "schemaHash": "e87b0abe65ade00849e96c510ae6465fe25ba7e2a6aa25e3104e29cceebf22a1",
+          "seed": 3689408252,
+          "promptBytes": 23823,
+          "historicPromptBytes": 23674,
+          "exceedsHistoricReceiver": false
+        }
+      ]
+    },
+    {
+      "pair": "IO",
+      "conversationId": "conversation:71",
+      "nextSpeaker": "I",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-evidence-layout-v1:mind:I:15:84:g:3:evidence-layout:A",
+          "variant": "A",
+          "jobHash": "7597e1b64511e0563e90af1f5fc0e986c8b0cbea361381686d0a82a32c1b0fb3",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "13bb3166cefb6bd0709e42349bc30429b9a4c4af87bab046a112f8af7a4991bb",
+          "originalPreparedPromptHash": "13bb3166cefb6bd0709e42349bc30429b9a4c4af87bab046a112f8af7a4991bb",
+          "schemaHash": "f495a32d568ebe04c49f3bb147d5c286883453e020d5e2d29a255f783744b29a",
+          "seed": 1784372266,
+          "promptBytes": 23637,
+          "historicPromptBytes": 23488,
+          "exceedsHistoricReceiver": false
+        },
+        {
+          "id": "isolated-evidence-layout-v1:mind:I:15:84:g:3:evidence-layout:B",
+          "variant": "B",
+          "jobHash": "e7927da1bba159d14c61a1c8f2e9c2cc5ebca4ed4d353b7b53a2aef5eb6c9d9c",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "615f6631be8328226f8d942c4142740d8f00e76f9e268904bf1b540912684406",
+          "originalPreparedPromptHash": "13bb3166cefb6bd0709e42349bc30429b9a4c4af87bab046a112f8af7a4991bb",
+          "schemaHash": "f495a32d568ebe04c49f3bb147d5c286883453e020d5e2d29a255f783744b29a",
+          "seed": 1784372266,
+          "promptBytes": 23945,
+          "historicPromptBytes": 23796,
+          "exceedsHistoricReceiver": false
+        }
+      ]
+    },
+    {
+      "pair": "GQ",
+      "conversationId": "conversation:59",
+      "nextSpeaker": "G",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-evidence-layout-v1:mind:G:15:85:g:3:evidence-layout:B",
+          "variant": "B",
+          "jobHash": "232c1f8ba0dcf090e1afeaa94f9d770873e230c9fb1af8e2cb7db91cbac1dd51",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "f30696d5f24ca42ae72bc43e7cba75617f3a341f4278f0d63417552feba0450e",
+          "originalPreparedPromptHash": "b705ba9d042e9c159b5bc059639a59a0fed3611c9dc54e55dba04271f2b7a174",
+          "schemaHash": "40b33f34142837575ff2f7f2e4122ad2b7bc545a9b5c1d248cad6a0bf5c53418",
+          "seed": 1692291999,
+          "promptBytes": 23412,
+          "historicPromptBytes": 23263,
+          "exceedsHistoricReceiver": false
+        },
+        {
+          "id": "isolated-evidence-layout-v1:mind:G:15:85:g:3:evidence-layout:A",
+          "variant": "A",
+          "jobHash": "ab9f4d9c23700e54aec5599360af64a003069f6112818bf359d0ab71003285bd",
+          "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+          "userHash": "b705ba9d042e9c159b5bc059639a59a0fed3611c9dc54e55dba04271f2b7a174",
+          "originalPreparedPromptHash": "b705ba9d042e9c159b5bc059639a59a0fed3611c9dc54e55dba04271f2b7a174",
+          "schemaHash": "40b33f34142837575ff2f7f2e4122ad2b7bc545a9b5c1d248cad6a0bf5c53418",
+          "seed": 1692291999,
+          "promptBytes": 23200,
+          "historicPromptBytes": 23051,
+          "exceedsHistoricReceiver": false
+        }
+      ]
+    }
+  ],
+  "httpRequests": 0,
+  "privacy": "Full state, prompts, outputs, source bundle and ledger stay outside Git. Public speech comes only from the authoritative projection."
+}

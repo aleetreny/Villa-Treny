@@ -1,0 +1,63 @@
+{
+  "format": "villa-groq-free-account-readback-v1",
+  "verifiedAt": "2026-09-08T19:14:30.322Z",
+  "source": "Authenticated native Groq console, read and operated through CUA after the user signed in.",
+  "project": "habitat-prod",
+  "currentPlan": {
+    "name": "Free",
+    "displayedPrice": "$0",
+    "currentPlanButton": true
+  },
+  "organizationModels": {
+    "openai/gpt-oss-20b": {
+      "rpm": 30,
+      "rpd": 1000,
+      "tpm": 8000,
+      "tpd": 200000
+    },
+    "openai/gpt-oss-120b": {
+      "rpm": 30,
+      "rpd": 1000,
+      "tpm": 8000,
+      "tpd": 200000
+    }
+  },
+  "projectAllowedModels": [
+    "openai/gpt-oss-20b"
+  ],
+  "projectLimits": {
+    "before": {
+      "rpm": 10,
+      "rpd": 200,
+      "tpm": 6000,
+      "tpd": 150000
+    },
+    "after": {
+      "rpm": 30,
+      "rpd": 1000,
+      "tpm": 8000,
+      "tpd": 200000
+    },
+    "action": "Filled four Configure Model Limits fields, saved once, and read the resulting project table."
+  },
+  "pages": {
+    "organization": "https://console.groq.com/settings/limits",
+    "plan": "https://console.groq.com/settings/billing/plans",
+    "project": "https://console.groq.com/settings/project/limits"
+  },
+  "officialReferences": [
+    "https://console.groq.com/docs/rate-limits",
+    "https://console.groq.com/docs/projects"
+  ],
+  "billingUpgrade": false,
+  "paymentMethodAdded": false,
+  "newCredential": false,
+  "newModelPermission": false,
+  "newProjectOrAccount": false,
+  "limitations": [
+    "This records account/project ceilings; it does not reserve capacity from other organization usage.",
+    "It does not establish whether different models share a pool; only the existing20B model was enabled.",
+    "The runtime still has the older local guards at this capture; an independently verified code release must adopt the new limits.",
+    "No inference was used to verify these settings."
+  ]
+}

@@ -1,0 +1,1191 @@
+{
+  "format": "villa-attention-occupancy-offline-proof-v1",
+  "generatedAt": "2026-09-09T10:31:05.553Z",
+  "source": {
+    "files": 302,
+    "frozenBundleSha256": "d11e7dd6feda80b9427262228a444f204e19e956afc16bc623705d6d60250a14",
+    "executedIsolatedFrozenSource": true,
+    "scriptSha256": "58e76ae7a72635ae2d908102054a9c85d1ffbdebf50842e66b5686ca6ac4233b"
+  },
+  "elapsedNaturalHours": 11.048683888888888,
+  "cuts": [
+    {
+      "backup": {
+        "sha256": "af118f8fea4e2b6ffdc902efcc770c96ecfd7e283f80eff5a061582cdf15b273",
+        "completeVerificationPassed": true,
+        "worldRevision": 247,
+        "exportedAtMs": 1788909779380,
+        "pages": 30,
+        "tables": 26
+      },
+      "population": {
+        "total": 25,
+        "openPairs": 12,
+        "occupied": 24,
+        "withLegalMessage": 12,
+        "legalThirdPartyRecipients": 0
+      },
+      "cognition": {
+        "applied": 102,
+        "publicMessages": 90,
+        "appliedWithMessage": 89,
+        "appliedClosingMessages": 0,
+        "protocolCounts": {
+          "3": 49,
+          "4": 21,
+          "5": 1,
+          "6": 30,
+          "7": 1
+        },
+        "classes": {
+          "message+project": 32,
+          "message+project+reflection": 11,
+          "message": 39,
+          "message+reflection": 5,
+          "project": 2,
+          "appraisal+deal+message": 1,
+          "turn": 1,
+          "deal+message": 1,
+          "record": 4,
+          "reflection": 3,
+          "project+record": 3
+        },
+        "pendingOrRunning": []
+      },
+      "conversations": [
+        {
+          "id": "conversation:2",
+          "participants": [
+            "A",
+            "U"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "U",
+          "createdAtMs": 1788873160826,
+          "expiresAtMs": 1788959560826
+        },
+        {
+          "id": "conversation:7",
+          "participants": [
+            "B",
+            "K"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "K",
+          "createdAtMs": 1788873339160,
+          "expiresAtMs": 1788959739160
+        },
+        {
+          "id": "conversation:17",
+          "participants": [
+            "C",
+            "N"
+          ],
+          "status": "open",
+          "turns": 8,
+          "nextSpeaker": "C",
+          "createdAtMs": 1788873699272,
+          "expiresAtMs": 1788960099272
+        },
+        {
+          "id": "conversation:26",
+          "participants": [
+            "D",
+            "H"
+          ],
+          "status": "open",
+          "turns": 8,
+          "nextSpeaker": "D",
+          "createdAtMs": 1788874057822,
+          "expiresAtMs": 1788960457822
+        },
+        {
+          "id": "conversation:37",
+          "participants": [
+            "E",
+            "L"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "L",
+          "createdAtMs": 1788874419830,
+          "expiresAtMs": 1788960819830
+        },
+        {
+          "id": "conversation:47",
+          "participants": [
+            "F",
+            "M"
+          ],
+          "status": "open",
+          "turns": 7,
+          "nextSpeaker": "M",
+          "createdAtMs": 1788874778148,
+          "expiresAtMs": 1788961178148
+        },
+        {
+          "id": "conversation:59",
+          "participants": [
+            "G",
+            "Q"
+          ],
+          "status": "open",
+          "turns": 7,
+          "nextSpeaker": "Q",
+          "createdAtMs": 1788875144279,
+          "expiresAtMs": 1788961544279
+        },
+        {
+          "id": "conversation:71",
+          "participants": [
+            "I",
+            "O"
+          ],
+          "status": "open",
+          "turns": 7,
+          "nextSpeaker": "O",
+          "createdAtMs": 1788875503717,
+          "expiresAtMs": 1788961903717
+        },
+        {
+          "id": "conversation:84",
+          "participants": [
+            "J",
+            "X"
+          ],
+          "status": "open",
+          "turns": 6,
+          "nextSpeaker": "J",
+          "createdAtMs": 1788875872144,
+          "expiresAtMs": 1788962272144
+        },
+        {
+          "id": "conversation:115",
+          "participants": [
+            "P",
+            "V"
+          ],
+          "status": "open",
+          "turns": 6,
+          "nextSpeaker": "P",
+          "createdAtMs": 1788876943005,
+          "expiresAtMs": 1788963343005
+        },
+        {
+          "id": "conversation:125",
+          "participants": [
+            "R",
+            "S"
+          ],
+          "status": "open",
+          "turns": 7,
+          "nextSpeaker": "S",
+          "createdAtMs": 1788877297010,
+          "expiresAtMs": 1788963697010
+        },
+        {
+          "id": "conversation:145",
+          "participants": [
+            "T",
+            "Y"
+          ],
+          "status": "open",
+          "turns": 7,
+          "nextSpeaker": "Y",
+          "createdAtMs": 1788878017004,
+          "expiresAtMs": 1788964417004
+        }
+      ],
+      "physical": {
+        "committedWatches": 1,
+        "actions": 25,
+        "successful": 25,
+        "plannedExecutions": 18,
+        "plannedSuccessful": 18,
+        "interrupted": 0,
+        "verbs": {
+          "sleep": 8,
+          "cook": 2,
+          "eat": 7,
+          "work": 1,
+          "repair": 3,
+          "dig": 2,
+          "grow": 1,
+          "clean": 1
+        }
+      },
+      "projects": {
+        "total": 25,
+        "active": 13,
+        "completedStepsNotProvenPurpose": 12,
+        "retainedStepsDone": 15
+      },
+      "records": {
+        "retainedDrafts": 7,
+        "shares": 0,
+        "publications": 0,
+        "intents": 0,
+        "documentOffers": 0,
+        "documentAgreements": 0,
+        "retrievalActorsWithChangedCursor": 0,
+        "lookupJobsApplied": 0,
+        "publicationChoices": 0,
+        "intentReceipts": []
+      },
+      "agreements": [
+        {
+          "kind": "transfer",
+          "cells": 2,
+          "status": "fulfilled",
+          "progress": 0
+        }
+      ],
+      "availability": [
+        {
+          "actor": "A",
+          "conversationId": "conversation:2",
+          "counterpart": "U",
+          "nextSpeaker": "U",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "B",
+          "conversationId": "conversation:7",
+          "counterpart": "K",
+          "nextSpeaker": "K",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "C",
+          "conversationId": "conversation:17",
+          "counterpart": "N",
+          "nextSpeaker": "C",
+          "regularRecipients": [
+            "N"
+          ],
+          "closingRecipients": [
+            "N"
+          ]
+        },
+        {
+          "actor": "D",
+          "conversationId": "conversation:26",
+          "counterpart": "H",
+          "nextSpeaker": "D",
+          "regularRecipients": [
+            "H"
+          ],
+          "closingRecipients": [
+            "H"
+          ]
+        },
+        {
+          "actor": "E",
+          "conversationId": "conversation:37",
+          "counterpart": "L",
+          "nextSpeaker": "L",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "F",
+          "conversationId": "conversation:47",
+          "counterpart": "M",
+          "nextSpeaker": "M",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "G",
+          "conversationId": "conversation:59",
+          "counterpart": "Q",
+          "nextSpeaker": "Q",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "H",
+          "conversationId": "conversation:26",
+          "counterpart": "D",
+          "nextSpeaker": "D",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "I",
+          "conversationId": "conversation:71",
+          "counterpart": "O",
+          "nextSpeaker": "O",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "J",
+          "conversationId": "conversation:84",
+          "counterpart": "X",
+          "nextSpeaker": "J",
+          "regularRecipients": [
+            "X"
+          ],
+          "closingRecipients": [
+            "X"
+          ]
+        },
+        {
+          "actor": "K",
+          "conversationId": "conversation:7",
+          "counterpart": "B",
+          "nextSpeaker": "K",
+          "regularRecipients": [
+            "B"
+          ],
+          "closingRecipients": [
+            "B"
+          ]
+        },
+        {
+          "actor": "L",
+          "conversationId": "conversation:37",
+          "counterpart": "E",
+          "nextSpeaker": "L",
+          "regularRecipients": [
+            "E"
+          ],
+          "closingRecipients": [
+            "E"
+          ]
+        },
+        {
+          "actor": "M",
+          "conversationId": "conversation:47",
+          "counterpart": "F",
+          "nextSpeaker": "M",
+          "regularRecipients": [
+            "F"
+          ],
+          "closingRecipients": [
+            "F"
+          ]
+        },
+        {
+          "actor": "N",
+          "conversationId": "conversation:17",
+          "counterpart": "C",
+          "nextSpeaker": "C",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "O",
+          "conversationId": "conversation:71",
+          "counterpart": "I",
+          "nextSpeaker": "O",
+          "regularRecipients": [
+            "I"
+          ],
+          "closingRecipients": [
+            "I"
+          ]
+        },
+        {
+          "actor": "P",
+          "conversationId": "conversation:115",
+          "counterpart": "V",
+          "nextSpeaker": "P",
+          "regularRecipients": [
+            "V"
+          ],
+          "closingRecipients": [
+            "V"
+          ]
+        },
+        {
+          "actor": "Q",
+          "conversationId": "conversation:59",
+          "counterpart": "G",
+          "nextSpeaker": "Q",
+          "regularRecipients": [
+            "G"
+          ],
+          "closingRecipients": [
+            "G"
+          ]
+        },
+        {
+          "actor": "R",
+          "conversationId": "conversation:125",
+          "counterpart": "S",
+          "nextSpeaker": "S",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "S",
+          "conversationId": "conversation:125",
+          "counterpart": "R",
+          "nextSpeaker": "S",
+          "regularRecipients": [
+            "R"
+          ],
+          "closingRecipients": [
+            "R"
+          ]
+        },
+        {
+          "actor": "T",
+          "conversationId": "conversation:145",
+          "counterpart": "Y",
+          "nextSpeaker": "Y",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "U",
+          "conversationId": "conversation:2",
+          "counterpart": "A",
+          "nextSpeaker": "U",
+          "regularRecipients": [
+            "A"
+          ],
+          "closingRecipients": [
+            "A"
+          ]
+        },
+        {
+          "actor": "V",
+          "conversationId": "conversation:115",
+          "counterpart": "P",
+          "nextSpeaker": "P",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "W",
+          "conversationId": null,
+          "counterpart": null,
+          "nextSpeaker": null,
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "X",
+          "conversationId": "conversation:84",
+          "counterpart": "J",
+          "nextSpeaker": "J",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "Y",
+          "conversationId": "conversation:145",
+          "counterpart": "T",
+          "nextSpeaker": "Y",
+          "regularRecipients": [
+            "T"
+          ],
+          "closingRecipients": [
+            "T"
+          ]
+        }
+      ],
+      "waitingChecks": [
+        {
+          "actor": "A",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "B",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "E",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "F",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "G",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "H",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "I",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "N",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "R",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "T",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "V",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "X",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        }
+      ],
+      "stateAndWorldUnchanged": true,
+      "networkRequests": 0,
+      "inferenceCalls": 0
+    },
+    {
+      "backup": {
+        "sha256": "1e06e901431c4e688074057ee2ba99f836dce40ef9e658f7587e6a612ca9b3d9",
+        "completeVerificationPassed": true,
+        "worldRevision": 317,
+        "exportedAtMs": 1788949554642,
+        "pages": 33,
+        "tables": 26
+      },
+      "population": {
+        "total": 25,
+        "openPairs": 12,
+        "occupied": 24,
+        "withLegalMessage": 12,
+        "legalThirdPartyRecipients": 0
+      },
+      "cognition": {
+        "applied": 134,
+        "publicMessages": 112,
+        "appliedWithMessage": 111,
+        "appliedClosingMessages": 0,
+        "protocolCounts": {
+          "3": 49,
+          "4": 21,
+          "5": 1,
+          "6": 30,
+          "7": 33
+        },
+        "classes": {
+          "message+project": 32,
+          "message+project+reflection": 11,
+          "message": 60,
+          "message+reflection": 5,
+          "project": 3,
+          "appraisal+deal+message": 1,
+          "turn": 1,
+          "deal+message": 2,
+          "record": 9,
+          "reflection": 6,
+          "project+record": 3,
+          "record+reflection": 1
+        },
+        "pendingOrRunning": []
+      },
+      "conversations": [
+        {
+          "id": "conversation:2",
+          "participants": [
+            "A",
+            "U"
+          ],
+          "status": "open",
+          "turns": 11,
+          "nextSpeaker": "U",
+          "createdAtMs": 1788873160826,
+          "expiresAtMs": 1788959560826
+        },
+        {
+          "id": "conversation:7",
+          "participants": [
+            "B",
+            "K"
+          ],
+          "status": "open",
+          "turns": 11,
+          "nextSpeaker": "K",
+          "createdAtMs": 1788873339160,
+          "expiresAtMs": 1788959739160
+        },
+        {
+          "id": "conversation:17",
+          "participants": [
+            "C",
+            "N"
+          ],
+          "status": "open",
+          "turns": 10,
+          "nextSpeaker": "C",
+          "createdAtMs": 1788873699272,
+          "expiresAtMs": 1788960099272
+        },
+        {
+          "id": "conversation:26",
+          "participants": [
+            "D",
+            "H"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "H",
+          "createdAtMs": 1788874057822,
+          "expiresAtMs": 1788960457822
+        },
+        {
+          "id": "conversation:37",
+          "participants": [
+            "E",
+            "L"
+          ],
+          "status": "open",
+          "turns": 10,
+          "nextSpeaker": "E",
+          "createdAtMs": 1788874419830,
+          "expiresAtMs": 1788960819830
+        },
+        {
+          "id": "conversation:47",
+          "participants": [
+            "F",
+            "M"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "M",
+          "createdAtMs": 1788874778148,
+          "expiresAtMs": 1788961178148
+        },
+        {
+          "id": "conversation:59",
+          "participants": [
+            "G",
+            "Q"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "Q",
+          "createdAtMs": 1788875144279,
+          "expiresAtMs": 1788961544279
+        },
+        {
+          "id": "conversation:71",
+          "participants": [
+            "I",
+            "O"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "O",
+          "createdAtMs": 1788875503717,
+          "expiresAtMs": 1788961903717
+        },
+        {
+          "id": "conversation:84",
+          "participants": [
+            "J",
+            "X"
+          ],
+          "status": "open",
+          "turns": 8,
+          "nextSpeaker": "J",
+          "createdAtMs": 1788875872144,
+          "expiresAtMs": 1788962272144
+        },
+        {
+          "id": "conversation:115",
+          "participants": [
+            "P",
+            "V"
+          ],
+          "status": "open",
+          "turns": 8,
+          "nextSpeaker": "P",
+          "createdAtMs": 1788876943005,
+          "expiresAtMs": 1788963343005
+        },
+        {
+          "id": "conversation:125",
+          "participants": [
+            "R",
+            "S"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "S",
+          "createdAtMs": 1788877297010,
+          "expiresAtMs": 1788963697010
+        },
+        {
+          "id": "conversation:145",
+          "participants": [
+            "T",
+            "Y"
+          ],
+          "status": "open",
+          "turns": 9,
+          "nextSpeaker": "Y",
+          "createdAtMs": 1788878017004,
+          "expiresAtMs": 1788964417004
+        }
+      ],
+      "physical": {
+        "committedWatches": 3,
+        "actions": 75,
+        "successful": 75,
+        "plannedExecutions": 29,
+        "plannedSuccessful": 29,
+        "interrupted": 0,
+        "verbs": {
+          "sleep": 31,
+          "cook": 2,
+          "eat": 7,
+          "work": 14,
+          "repair": 6,
+          "dig": 4,
+          "grow": 1,
+          "clean": 2,
+          "inspect": 3,
+          "charge": 1,
+          "observe": 3,
+          "go": 1
+        }
+      },
+      "projects": {
+        "total": 25,
+        "active": 7,
+        "completedStepsNotProvenPurpose": 18,
+        "retainedStepsDone": 26
+      },
+      "records": {
+        "retainedDrafts": 13,
+        "shares": 0,
+        "publications": 0,
+        "intents": 1,
+        "documentOffers": 0,
+        "documentAgreements": 0,
+        "retrievalActorsWithChangedCursor": 0,
+        "lookupJobsApplied": 0,
+        "publicationChoices": 1,
+        "intentReceipts": [
+          {
+            "author": "W",
+            "scheduledAtWatch": 433,
+            "earliestWatch": 433,
+            "relevantJobs": [
+              {
+                "actor": "W",
+                "sequence": 132,
+                "resolvedAtMs": 1788946057747,
+                "recordOperation": "draft",
+                "publish": true
+              }
+            ],
+            "latestPhysicalCommittedAtMs": 1788937684142,
+            "choiceOccurredAfterLatestPhysicalWatch": true
+          }
+        ]
+      },
+      "agreements": [
+        {
+          "kind": "transfer",
+          "cells": 2,
+          "status": "fulfilled",
+          "progress": 0
+        }
+      ],
+      "availability": [
+        {
+          "actor": "A",
+          "conversationId": "conversation:2",
+          "counterpart": "U",
+          "nextSpeaker": "U",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "B",
+          "conversationId": "conversation:7",
+          "counterpart": "K",
+          "nextSpeaker": "K",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "C",
+          "conversationId": "conversation:17",
+          "counterpart": "N",
+          "nextSpeaker": "C",
+          "regularRecipients": [
+            "N"
+          ],
+          "closingRecipients": [
+            "N"
+          ]
+        },
+        {
+          "actor": "D",
+          "conversationId": "conversation:26",
+          "counterpart": "H",
+          "nextSpeaker": "H",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "E",
+          "conversationId": "conversation:37",
+          "counterpart": "L",
+          "nextSpeaker": "E",
+          "regularRecipients": [
+            "L"
+          ],
+          "closingRecipients": [
+            "L"
+          ]
+        },
+        {
+          "actor": "F",
+          "conversationId": "conversation:47",
+          "counterpart": "M",
+          "nextSpeaker": "M",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "G",
+          "conversationId": "conversation:59",
+          "counterpart": "Q",
+          "nextSpeaker": "Q",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "H",
+          "conversationId": "conversation:26",
+          "counterpart": "D",
+          "nextSpeaker": "H",
+          "regularRecipients": [
+            "D"
+          ],
+          "closingRecipients": [
+            "D"
+          ]
+        },
+        {
+          "actor": "I",
+          "conversationId": "conversation:71",
+          "counterpart": "O",
+          "nextSpeaker": "O",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "J",
+          "conversationId": "conversation:84",
+          "counterpart": "X",
+          "nextSpeaker": "J",
+          "regularRecipients": [
+            "X"
+          ],
+          "closingRecipients": [
+            "X"
+          ]
+        },
+        {
+          "actor": "K",
+          "conversationId": "conversation:7",
+          "counterpart": "B",
+          "nextSpeaker": "K",
+          "regularRecipients": [
+            "B"
+          ],
+          "closingRecipients": [
+            "B"
+          ]
+        },
+        {
+          "actor": "L",
+          "conversationId": "conversation:37",
+          "counterpart": "E",
+          "nextSpeaker": "E",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "M",
+          "conversationId": "conversation:47",
+          "counterpart": "F",
+          "nextSpeaker": "M",
+          "regularRecipients": [
+            "F"
+          ],
+          "closingRecipients": [
+            "F"
+          ]
+        },
+        {
+          "actor": "N",
+          "conversationId": "conversation:17",
+          "counterpart": "C",
+          "nextSpeaker": "C",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "O",
+          "conversationId": "conversation:71",
+          "counterpart": "I",
+          "nextSpeaker": "O",
+          "regularRecipients": [
+            "I"
+          ],
+          "closingRecipients": [
+            "I"
+          ]
+        },
+        {
+          "actor": "P",
+          "conversationId": "conversation:115",
+          "counterpart": "V",
+          "nextSpeaker": "P",
+          "regularRecipients": [
+            "V"
+          ],
+          "closingRecipients": [
+            "V"
+          ]
+        },
+        {
+          "actor": "Q",
+          "conversationId": "conversation:59",
+          "counterpart": "G",
+          "nextSpeaker": "Q",
+          "regularRecipients": [
+            "G"
+          ],
+          "closingRecipients": [
+            "G"
+          ]
+        },
+        {
+          "actor": "R",
+          "conversationId": "conversation:125",
+          "counterpart": "S",
+          "nextSpeaker": "S",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "S",
+          "conversationId": "conversation:125",
+          "counterpart": "R",
+          "nextSpeaker": "S",
+          "regularRecipients": [
+            "R"
+          ],
+          "closingRecipients": [
+            "R"
+          ]
+        },
+        {
+          "actor": "T",
+          "conversationId": "conversation:145",
+          "counterpart": "Y",
+          "nextSpeaker": "Y",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "U",
+          "conversationId": "conversation:2",
+          "counterpart": "A",
+          "nextSpeaker": "U",
+          "regularRecipients": [
+            "A"
+          ],
+          "closingRecipients": [
+            "A"
+          ]
+        },
+        {
+          "actor": "V",
+          "conversationId": "conversation:115",
+          "counterpart": "P",
+          "nextSpeaker": "P",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "W",
+          "conversationId": null,
+          "counterpart": null,
+          "nextSpeaker": null,
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "X",
+          "conversationId": "conversation:84",
+          "counterpart": "J",
+          "nextSpeaker": "J",
+          "regularRecipients": [],
+          "closingRecipients": []
+        },
+        {
+          "actor": "Y",
+          "conversationId": "conversation:145",
+          "counterpart": "T",
+          "nextSpeaker": "Y",
+          "regularRecipients": [
+            "T"
+          ],
+          "closingRecipients": [
+            "T"
+          ]
+        }
+      ],
+      "waitingChecks": [
+        {
+          "actor": "A",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "B",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "D",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "F",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "G",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "I",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "L",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "N",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "R",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "T",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "V",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        },
+        {
+          "actor": "X",
+          "p7": "invalid_retrieval_choice",
+          "directCore": "unavailable_dialogue_turn",
+          "unsupportedLeave": "invalid_retrieval_choice",
+          "unchanged": true
+        }
+      ],
+      "stateAndWorldUnchanged": true,
+      "networkRequests": 0,
+      "inferenceCalls": 0
+    }
+  ],
+  "scope": "Observed persisted cuts plus synthetic schema/core rejection probes; no inference, world mutation or simulated future watch.",
+  "limits": [
+    "This reproduces access and executed effects, not an autonomous-quality score.",
+    "Retained completed steps differ from historical physical executions because projects can be replaced.",
+    "No private prompts, record bodies, titles, goals, reasons, reflections, or lookup text are published."
+  ],
+  "supersedes": {
+    "receipt": "attention-occupancy-proof-2026-09-09.json",
+    "reason": "The initial diagnostic matched a nonexistent publish kind. Actual publication choices use draft.publish=true or schedule; this version verifies the exact authored draft and corresponding applied job."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "verifiedAt": "2026-09-08T17:11:16.595Z",
+  "beforeExport": "9210b5cfeb02f3427fac57148b9501b4ced8ba1314ecb6d75676b949a03fabfd",
+  "afterExport": "4d5f007789ed5c1facf937ed36cb49bccbd67da2fc97fdefb803085699280574",
+  "jobId": "habitat-canonical:mind:F:7:58:g:3",
+  "actor": "F",
+  "protocol": 5,
+  "status": "applied",
+  "successfulProvider": "workers-ai",
+  "attempts": [
+    {
+      "provider": "workers-ai",
+      "model": "@cf/openai/gpt-oss-120b",
+      "ok": false,
+      "detailCode": "invalid_structured_output",
+      "at": "2026-09-08T16:48:35.693Z",
+      "latencyMs": 5288,
+      "usageConfirmed": true,
+      "usage": {
+        "inputTokens": 2285,
+        "outputTokens": 129,
+        "neurons": 82
+      },
+      "maximum": {
+        "inputTokens": 17778,
+        "outputTokens": 1024,
+        "neurons": 636
+      }
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "ok": false,
+      "detailCode": "invalid_cognition_payload",
+      "at": "2026-09-08T16:58:23.153Z",
+      "latencyMs": 1712,
+      "usageConfirmed": true,
+      "usage": {
+        "inputTokens": 4308,
+        "outputTokens": 763,
+        "neurons": 0
+      },
+      "maximum": {
+        "inputTokens": 4335,
+        "outputTokens": 1024,
+        "neurons": 0
+      }
+    },
+    {
+      "provider": "workers-ai",
+      "model": "@cf/openai/gpt-oss-120b",
+      "ok": true,
+      "detailCode": null,
+      "at": "2026-09-08T17:01:24.060Z",
+      "latencyMs": 2617,
+      "usageConfirmed": true,
+      "usage": {
+        "inputTokens": 2307,
+        "outputTokens": 144,
+        "neurons": 84
+      },
+      "maximum": {
+        "inputTokens": 17896,
+        "outputTokens": 1024,
+        "neurons": 640
+      }
+    }
+  ],
+  "schemaHash": "sha256:ed96498c4a08c80f11e16f9421437214cdbbd545fe26fa292cd47b1761273e99",
+  "outputSha256": "2f9e89657a35d157411e0f66b1ecc8686dbca6679e9d304103addcd2275a52af",
+  "decision": "no_deal",
+  "application": {
+    "worldRevision": 149,
+    "occurredAt": "2026-09-08T17:01:24.060Z",
+    "publicTurns": [
+      {
+        "conversationId": "conversation:47",
+        "participants": [
+          "F",
+          "M"
+        ],
+        "id": "turn:289",
+        "index": 4,
+        "speaker": "F",
+        "text": "Great, Mara—what time should we meet at the face to get that fresh pot brewing before the break?",
+        "atMs": 1788886884060
+      }
+    ],
+    "changedOffers": [],
+    "changedAgreements": []
+  },
+  "physical": {
+    "dayBefore": 107,
+    "dayAfter": 107,
+    "watchBefore": 3,
+    "watchAfter": 3,
+    "watchRunsBefore": 30,
+    "watchRunsAfter": 30,
+    "balanceChanges": [],
+    "cellsBefore": 812.4945824361378,
+    "cellsAfter": 812.4945824361378,
+    "balanceScope": "Resident balances only; treasury excluded."
+  },
+  "limits": [
+    "One real P5 job applied after two rejected provider responses; this is not a reliability estimate.",
+    "Rejected raw responses were not retained; their exact failure cause cannot be reconstructed.",
+    "Only already-public event turns and effects are included. Private project, reflection, prompts and raw outputs are omitted.",
+    "Terminal input compaction means hashes alone do not reconstruct the original full inputs. No physical watch or extra inference was requested."
+  ],
+  "retryFeedback": {
+    "eventSequence": 98,
+    "attempt": 3,
+    "reason": "invalid_society:invalid_ordered_choice",
+    "systemHash": "0d8fdd1dc24d970796bc8ea20ada98945e7c5e7b981378744400bc79b8ce054b",
+    "userHash": "fb294ac521d36c21656eaf45c16c8972c6f04627fa02e4f2c04de6352a44de11",
+    "note": "The recorded retry used the existing refusal feedback appended to USER. It was not an identical-input repetition."
+  }
+}

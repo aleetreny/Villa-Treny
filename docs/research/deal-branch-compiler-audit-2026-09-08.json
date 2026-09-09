@@ -1,0 +1,187 @@
+{
+  "scope": "Offline grammar conversion and ASCII accept_string matcher; not model probabilities, token masks or inference.",
+  "httpRequests": 0,
+  "loadedModelWeights": false,
+  "xgrammarVersion": "0.2.3",
+  "pythonVersion": "3.11.10 (main, Oct 16 2024, 08:56:36) [Clang 18.1.8 ]",
+  "compilerCacheEnabled": false,
+  "sourceFiles": [
+    {
+      "path": "/Applications/oMLX.app/Contents/Resources/omlx/server.py",
+      "sha256": "fdffe13f58a66c88a7517c04e2dbbfd35085f5e3ff8de2f68352c73a4570e767"
+    },
+    {
+      "path": "/Applications/oMLX.app/Contents/Resources/omlx/api/grammar.py",
+      "sha256": "59d1260a5a94db8ed26608d2b3a20fc5d07f39e89553e38365fd1cad260c1281"
+    },
+    {
+      "path": "/Applications/oMLX.app/Contents/Resources/Python/framework-mlx-base/lib/python3.11/site-packages/xgrammar/grammar.py",
+      "sha256": "2569dacde6428b874ba7994f5fd5dc85242c53cce1830a93a31c99f2d02725d7"
+    },
+    {
+      "path": "/Applications/oMLX.app/Contents/Resources/Python/framework-mlx-base/lib/python3.11/site-packages/xgrammar/compiler.py",
+      "sha256": "10c5d1aa8dd1e11c857714e5997a45325e9b218de8e942787826c27eb0211092"
+    }
+  ],
+  "propertyOrderChangedEbnf": [
+    {
+      "variant": "A",
+      "schemaSha256": "8205b032920fa69d21d06d4c25a5dc66845b12872f4214cb4432f6cd34cf62d0",
+      "ebnfSha256": "ae3efe8c86af73e7cf2aefec9dd344b1071fb7b3f208023e9268bdc29f0c474a",
+      "bytes": 38557
+    },
+    {
+      "variant": "B",
+      "schemaSha256": "7eb3267295560c98f73455d0f8e7cf311fa577e4158087d669fb21a81e4a4984",
+      "ebnfSha256": "a5e74ca3d255217a58e37dc3ffe55340988975861f2ea6e5636f75666f7cf1d6",
+      "bytes": 38557
+    }
+  ],
+  "variants": {
+    "current": {
+      "compiled": true,
+      "compileMs": 55.14,
+      "grammarBytes": 161327,
+      "grammarSha256": "e1339a9d29f122193c1ccb9906ae3f9ba9c681a404318826c75e6199bb32322e",
+      "samples": {
+        "omittedCloseDeal": false,
+        "explicitFalseDeal": true,
+        "trueCloseDeal": false,
+        "omittedCloseNoDeal": true,
+        "falseCloseNoDeal": true,
+        "trueCloseNoDeal": true,
+        "nullDeal": false,
+        "nullDealCloseTrue": false,
+        "noMessageDeal": false,
+        "extraTop": false,
+        "extraMessage": false,
+        "negativeCells": false,
+        "selfRecipient": false,
+        "noRequiredProject": false
+      },
+      "prefixes": {
+        "message_omitted_close": true,
+        "message_omitted_close_then_deal": false,
+        "message_false_close_then_deal": true,
+        "message_false_close_then_finish": true,
+        "message_true_close_then_deal": false
+      }
+    },
+    "requiredClose": {
+      "compiled": true,
+      "compileMs": 55.82,
+      "grammarBytes": 161322,
+      "grammarSha256": "f69ffb31d7153ce17e9319910a3998719d237237c134ed1c76e2bc114a55b66f",
+      "samples": {
+        "omittedCloseDeal": false,
+        "explicitFalseDeal": true,
+        "trueCloseDeal": false,
+        "omittedCloseNoDeal": false,
+        "falseCloseNoDeal": true,
+        "trueCloseNoDeal": true,
+        "nullDeal": false,
+        "nullDealCloseTrue": false,
+        "noMessageDeal": false,
+        "extraTop": false,
+        "extraMessage": false,
+        "negativeCells": false,
+        "selfRecipient": false,
+        "noRequiredProject": false
+      },
+      "prefixes": {
+        "message_omitted_close": false,
+        "message_omitted_close_then_deal": false,
+        "message_false_close_then_deal": true,
+        "message_false_close_then_finish": true,
+        "message_true_close_then_deal": false
+      }
+    },
+    "implicitOpen": {
+      "compiled": true,
+      "compileMs": 57.74,
+      "grammarBytes": 161332,
+      "grammarSha256": "c25dc5bf0459531afd6870421e666c4795f49b529e6cc0de8a6742382d1c97c6",
+      "samples": {
+        "omittedCloseDeal": true,
+        "explicitFalseDeal": true,
+        "trueCloseDeal": false,
+        "omittedCloseNoDeal": true,
+        "falseCloseNoDeal": true,
+        "trueCloseNoDeal": true,
+        "nullDeal": false,
+        "nullDealCloseTrue": false,
+        "noMessageDeal": false,
+        "extraTop": false,
+        "extraMessage": false,
+        "negativeCells": false,
+        "selfRecipient": false,
+        "noRequiredProject": false
+      },
+      "prefixes": {
+        "message_omitted_close": true,
+        "message_omitted_close_then_deal": true,
+        "message_false_close_then_deal": true,
+        "message_false_close_then_finish": true,
+        "message_true_close_then_deal": false
+      }
+    },
+    "nullableDeal": {
+      "compiled": true,
+      "compileMs": 55.15,
+      "grammarBytes": 161720,
+      "grammarSha256": "a68ea1cb0416713c7c49062a8dde15b25cf777a3be03f9b37fa40b0953173be9",
+      "samples": {
+        "omittedCloseDeal": false,
+        "explicitFalseDeal": true,
+        "trueCloseDeal": false,
+        "omittedCloseNoDeal": false,
+        "falseCloseNoDeal": false,
+        "trueCloseNoDeal": false,
+        "nullDeal": true,
+        "nullDealCloseTrue": true,
+        "noMessageDeal": false,
+        "extraTop": false,
+        "extraMessage": false,
+        "negativeCells": false,
+        "selfRecipient": false,
+        "noRequiredProject": false
+      },
+      "prefixes": {
+        "message_omitted_close": true,
+        "message_omitted_close_then_deal": true,
+        "message_false_close_then_deal": true,
+        "message_false_close_then_finish": false,
+        "message_true_close_then_deal": true
+      }
+    },
+    "nullableFlat": {
+      "compiled": true,
+      "compileMs": 45.33,
+      "grammarBytes": 141859,
+      "grammarSha256": "bec1d509da3382f9e5775ee42f6cb5323a48cd5deedf1be7376e4af415a76efd",
+      "samples": {
+        "omittedCloseDeal": true,
+        "explicitFalseDeal": true,
+        "trueCloseDeal": true,
+        "omittedCloseNoDeal": false,
+        "falseCloseNoDeal": false,
+        "trueCloseNoDeal": false,
+        "nullDeal": true,
+        "nullDealCloseTrue": true,
+        "noMessageDeal": false,
+        "extraTop": false,
+        "extraMessage": false,
+        "negativeCells": false,
+        "selfRecipient": false,
+        "noRequiredProject": false
+      },
+      "prefixes": {
+        "message_omitted_close": true,
+        "message_omitted_close_then_deal": true,
+        "message_false_close_then_deal": true,
+        "message_false_close_then_finish": false,
+        "message_true_close_then_deal": true
+      }
+    }
+  }
+}

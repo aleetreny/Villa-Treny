@@ -1,0 +1,387 @@
+{
+  "format": "villa-pre-sql10-record-review-v1",
+  "auditedAt": "2026-09-08T20:19:02.179Z",
+  "scope": "Offline review of the last SQL9 cut before dual-Groq routing. No network, inference, forecast watch or live mutation.",
+  "before": {
+    "revision": 182,
+    "backupSha256": "91c5928584991ee083946f02d61b186253cf2f9174b97555898a51c8e8f4b6b5"
+  },
+  "observation": {
+    "revision": 195,
+    "exportedAtMs": 1788898248974,
+    "backupSha256": "1ebb71d66fe05a7a2849097fbc3d363fd17bba863f1452a0016f4617cfb29065",
+    "schemaVersion": 9
+  },
+  "job": {
+    "id": "habitat-canonical:mind:U:16:80:g:3",
+    "actor": "U",
+    "sequence": 80,
+    "protocol": 6,
+    "routingPolicy": null,
+    "status": "deferred",
+    "errorCode": "invalid_society:invalid_record_choice",
+    "createdAtMs": 1788898056153
+  },
+  "diagnostic": {
+    "attemptId": "habitat-canonical:mind:U:16:80:g:3:groq:1",
+    "recordedAtMs": 1788898057107,
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "httpStatus": 200,
+    "code": "invalid_record_choice",
+    "stage": "schema",
+    "phase": "schema_or_decode",
+    "finishReason": "stop",
+    "capturedBytes": 260,
+    "completeCapture": true,
+    "usageConfirmed": true,
+    "usage": {
+      "inputTokens": 4222,
+      "outputTokens": 183,
+      "neurons": 0
+    },
+    "latencyMs": 954
+  },
+  "exactInput": {
+    "savedSystemUserAndPreparedAvailable": true,
+    "systemSha256": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+    "userSha256": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75",
+    "schemaSha256": "0e67029541cafdb1870aab117b1191d2c4f8be07fef0d9b4e1e4c56dba069afe",
+    "candidateSha256": "1571d2a07002d22727c2bcba0569c6c88cdef4ee02f287d2977c8cc81d569c51",
+    "issuedSchemaMatchesStoredJob": true
+  },
+  "cause": {
+    "field": "record.refs[0]",
+    "expected": "An exact supplied reference ID string",
+    "received": "An object with a $ref property",
+    "referencedPublicWorldIdWasSupplied": true,
+    "notUnknownEvidence": true,
+    "notTruncated": true,
+    "originalSchemaRejects": true,
+    "recordOperationParserRejects": true,
+    "adapterCode": "invalid_record_choice",
+    "shapeOnlyOfflineGrammarExampleAccepted": true,
+    "exampleWasNotApplied": true,
+    "classification": "Output shape violates the supplied enum of string IDs. The model may have confused JSON Schema notation with the response data; that mechanism is an inference, not a measured cause."
+  },
+  "grounding": {
+    "publicConversationId": "conversation:2",
+    "publicTermSourceTurns": [
+      "turn:141",
+      "turn:219"
+    ],
+    "termsAlreadyPresentInSuppliedTranscript": true,
+    "actualPaperOrInkTransferProven": false,
+    "economicLoanCreated": false,
+    "statement": "The requested writing refers to existing public dialogue; conversational assent does not create a tracked paper/ink transfer or a cells loan."
+  },
+  "effects": {
+    "rejectionChangedWorldOrSociety": false,
+    "appliedEventForU80": false,
+    "outputPersistedForU80": false,
+    "records": {
+      "drafts": 3,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    },
+    "drafts": [
+      {
+        "id": "record:draft:0",
+        "author": "W",
+        "createdAtMs": 1788894672343,
+        "titleAndTextBytes": 196,
+        "audience": "private",
+        "readerCount": 1,
+        "hashVerified": true
+      },
+      {
+        "id": "record:draft:1",
+        "author": "B",
+        "createdAtMs": 1788895747999,
+        "titleAndTextBytes": 81,
+        "audience": "private",
+        "readerCount": 1,
+        "hashVerified": true
+      },
+      {
+        "id": "record:draft:2",
+        "author": "H",
+        "createdAtMs": 1788896949745,
+        "titleAndTextBytes": 95,
+        "audience": "private",
+        "readerCount": 1,
+        "hashVerified": true
+      }
+    ],
+    "recordArchiveEmpty": true,
+    "allRecordIdentifiersAccountedForByThreeDrafts": true,
+    "publicProjectionEmpty": true,
+    "archivedPublications": 0,
+    "recordCommissions": 0,
+    "recordCommissionPayments": 0,
+    "economicEventsUnchangedSinceRevision182": true,
+    "money": {
+      "total": 872.7893824361378,
+      "expected": 872.7893824361379,
+      "error": -1.1368683772161603e-13,
+      "conserved": true
+    }
+  },
+  "recentDiagnostics": [
+    {
+      "attemptId": "habitat-canonical:mind:W:2:73:g:3:groq:1",
+      "recordedAtMs": 1788894485581,
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "httpStatus": 200,
+      "code": "invalid_record_choice",
+      "stage": "schema",
+      "phase": "schema_or_decode",
+      "finishReason": "stop",
+      "capturedBytes": 586,
+      "completeCapture": true,
+      "usageConfirmed": true,
+      "usage": {
+        "inputTokens": 3687,
+        "outputTokens": 316,
+        "neurons": 0
+      },
+      "latencyMs": 1439
+    },
+    {
+      "attemptId": "habitat-canonical:mind:K:14:79:g:3:groq:1",
+      "recordedAtMs": 1788897295219,
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "httpStatus": 400,
+      "code": "json_validate_failed",
+      "stage": "schema",
+      "phase": "schema_or_decode",
+      "finishReason": null,
+      "capturedBytes": 0,
+      "completeCapture": true,
+      "usageConfirmed": false,
+      "usage": null,
+      "latencyMs": 656
+    },
+    {
+      "attemptId": "habitat-canonical:mind:U:16:80:g:3:groq:1",
+      "recordedAtMs": 1788898057107,
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "httpStatus": 200,
+      "code": "invalid_record_choice",
+      "stage": "schema",
+      "phase": "schema_or_decode",
+      "finishReason": "stop",
+      "capturedBytes": 260,
+      "completeCapture": true,
+      "usageConfirmed": true,
+      "usage": {
+        "inputTokens": 4222,
+        "outputTokens": 183,
+        "neurons": 0
+      },
+      "latencyMs": 954
+    }
+  ],
+  "replay": {
+    "sequences": [
+      {
+        "actor": "I",
+        "sequence": 74,
+        "status": "applied",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "1f6eb2448bbdf6aea5ef7c8a9f2cb13f5e99bd4f114e9c9d6ec35fbd0b56f0f8",
+            "actual": "1f6eb2448bbdf6aea5ef7c8a9f2cb13f5e99bd4f114e9c9d6ec35fbd0b56f0f8"
+          },
+          "prepared": {
+            "expected": "1f6eb2448bbdf6aea5ef7c8a9f2cb13f5e99bd4f114e9c9d6ec35fbd0b56f0f8",
+            "actual": "1f6eb2448bbdf6aea5ef7c8a9f2cb13f5e99bd4f114e9c9d6ec35fbd0b56f0f8"
+          }
+        },
+        "applied": true,
+        "operation": null,
+        "audience": null,
+        "publicationScheduled": false
+      },
+      {
+        "actor": "B",
+        "sequence": 75,
+        "status": "applied",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "719339bf9c6c8f9367159f551a6898b787bf7ddbda0db52e2869bdf1d1184bc4",
+            "actual": "719339bf9c6c8f9367159f551a6898b787bf7ddbda0db52e2869bdf1d1184bc4"
+          },
+          "prepared": {
+            "expected": "719339bf9c6c8f9367159f551a6898b787bf7ddbda0db52e2869bdf1d1184bc4",
+            "actual": "719339bf9c6c8f9367159f551a6898b787bf7ddbda0db52e2869bdf1d1184bc4"
+          }
+        },
+        "applied": true,
+        "operation": "draft",
+        "audience": "private",
+        "publicationScheduled": false
+      },
+      {
+        "actor": "G",
+        "sequence": 76,
+        "status": "applied",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "43ae4984dc80cff5e5ac5e6861a2eb39964348e6ca96f24b2c8e958cf2ccd9ca",
+            "actual": "43ae4984dc80cff5e5ac5e6861a2eb39964348e6ca96f24b2c8e958cf2ccd9ca"
+          },
+          "prepared": {
+            "expected": "43ae4984dc80cff5e5ac5e6861a2eb39964348e6ca96f24b2c8e958cf2ccd9ca",
+            "actual": "43ae4984dc80cff5e5ac5e6861a2eb39964348e6ca96f24b2c8e958cf2ccd9ca"
+          }
+        },
+        "applied": true,
+        "operation": null,
+        "audience": null,
+        "publicationScheduled": false
+      },
+      {
+        "actor": "O",
+        "sequence": 77,
+        "status": "applied",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "e7ad31d228d577db1a6af2b9bb86bb6089f0e89848e978db7391ae2296f20407",
+            "actual": "e7ad31d228d577db1a6af2b9bb86bb6089f0e89848e978db7391ae2296f20407"
+          },
+          "prepared": {
+            "expected": "e7ad31d228d577db1a6af2b9bb86bb6089f0e89848e978db7391ae2296f20407",
+            "actual": "e7ad31d228d577db1a6af2b9bb86bb6089f0e89848e978db7391ae2296f20407"
+          }
+        },
+        "applied": true,
+        "operation": null,
+        "audience": null,
+        "publicationScheduled": false
+      },
+      {
+        "actor": "H",
+        "sequence": 78,
+        "status": "applied",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "d04e9bba361ef7612afc31c997d5a3fe670769db87fabc92056838af67e0dff7",
+            "actual": "d04e9bba361ef7612afc31c997d5a3fe670769db87fabc92056838af67e0dff7"
+          },
+          "prepared": {
+            "expected": "d04e9bba361ef7612afc31c997d5a3fe670769db87fabc92056838af67e0dff7",
+            "actual": "d04e9bba361ef7612afc31c997d5a3fe670769db87fabc92056838af67e0dff7"
+          }
+        },
+        "applied": true,
+        "operation": "draft",
+        "audience": "private",
+        "publicationScheduled": false
+      },
+      {
+        "actor": "K",
+        "sequence": 79,
+        "status": "applied",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "6ee08e84ef704dca595e022cb8d9df06c174cf71cbc4a0b30b67fdaa5ef30760",
+            "actual": "6ee08e84ef704dca595e022cb8d9df06c174cf71cbc4a0b30b67fdaa5ef30760"
+          },
+          "prepared": {
+            "expected": "6ee08e84ef704dca595e022cb8d9df06c174cf71cbc4a0b30b67fdaa5ef30760",
+            "actual": "6ee08e84ef704dca595e022cb8d9df06c174cf71cbc4a0b30b67fdaa5ef30760"
+          }
+        },
+        "applied": true,
+        "operation": null,
+        "audience": null,
+        "publicationScheduled": false
+      },
+      {
+        "actor": "U",
+        "sequence": 80,
+        "status": "deferred",
+        "hashes": {
+          "system": {
+            "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+            "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+          },
+          "user": {
+            "expected": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75",
+            "actual": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75"
+          },
+          "prepared": {
+            "expected": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75",
+            "actual": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75"
+          }
+        },
+        "applied": false
+      }
+    ],
+    "exactFinalSocietyBytes": true,
+    "exactFinalWorldBytes": true,
+    "additionalPhysicalWatches": 0,
+    "retainedHistoricalSystemUsedInsteadOfNewIssuanceDefault": true
+  },
+  "recommendation": "For newly prepared P6 jobs, explicitly show refs as an array of ID strings and state that $ref objects belong to JSON Schema, never response data. Keep old envelopes, strict rejection, diagnostic history and quota unchanged; do not silently unwrap invalid outputs.",
+  "source": {
+    "analyzerManifestSha256": "dc17f41bfc66e3e298e6ff6480175d9b40f40c0872ed69439252d081c0e1bbf7",
+    "additionalFiles": [
+      {
+        "path": "/workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "b60692bea3176c5e33cfb54e887c657db83f686a2140a67d8c2089d40b248bec"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "35d59e4c6cbf8a5c6bb32497fa610fd5503f233510ef5ed5a5d2442841fbe3a9"
+      },
+      {
+        "path": "/src/lib/habitat/society/record-schema.ts",
+        "sha256": "2849742cdedf817ddfeef342fe4fef9e3699a36a59b66e26632b78b4a061cedd"
+      },
+      {
+        "path": "/src/lib/habitat/society/records.ts",
+        "sha256": "6ca3fdb9677cff3500de9d6e214c3472d8495f792d0b351aeb898848d4931161"
+      }
+    ],
+    "scriptSha256": "c45658200413e6380fae85eb6c4fe96ff226916dc9e47b80f51e65a72546807b"
+  },
+  "limits": [
+    "No rejected private draft text, private memory IDs or full prompt is included in this public receipt.",
+    "The K79 provider error captured an empty failed_generation string; its specific semantic failure cannot be reconstructed. K79 later applied only a public message, not a document share/publication.",
+    "Three drafts are persisted attributed writings, not proof of their factual claims, publication, endorsement, paid work or general autonomous reliability.",
+    "The shape-only grammar example was neither sent to a model nor applied to any state.",
+    "This is the pre-deployment revision195 snapshot, not an observation of later SQL10 behavior."
+  ]
+}

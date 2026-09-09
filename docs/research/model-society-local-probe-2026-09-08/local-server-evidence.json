@@ -1,0 +1,65 @@
+{
+  "recordedAt": "2026-09-08T12:01:19.309Z",
+  "server": {
+    "pid": 14483,
+    "execSession": 79292,
+    "listen": "127.0.0.1:8018",
+    "basePath": "/private/tmp/villa-omlx-probe",
+    "healthyAfterFourRequests": true
+  },
+  "physicalMemory": {
+    "command": "vmmap -summary 14483",
+    "lines": [
+      "Date/Time:       2026-09-08 14:01:17.478 +0200",
+      "Physical footprint:         20.4G",
+      "Physical footprint (peak):  21.9G",
+      "IOAccelerator (graphics)          19.4G    19.4G    19.4G      32K       0K    19.4G      64K     1644 "
+    ],
+    "baselineAfterTwoRequests": {
+      "observedAt": "2026-09-08T13:50:59.878+02:00",
+      "physicalFootprint": "20.3G",
+      "peakPhysicalFootprint": "21.6G",
+      "graphicsResidency": "19.4G"
+    },
+    "note": "vmmap physical footprint includes graphics memory that ps RSS omits; these are sampled/post-run observations, not sustained-load capacity."
+  },
+  "modelProvenanceSupplement": {
+    "capturedAfterRequests": true,
+    "reason": "Additional model JSON files potentially used by the local loader; weights, primary config, tokenizer and template already SHA256-bound before dispatch.",
+    "files": [
+      {
+        "name": "configuration.json",
+        "bytes": 58,
+        "sha256": "c1b09db419119513247e9b8b912c4b9897106c9b20c6cada7e107d993c5435eb"
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 202,
+        "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "bytes": 390,
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      },
+      {
+        "name": "processor_config.json",
+        "bytes": 1312,
+        "sha256": "51c5f33646392e0bf1ed3e96be02504da47406c21c6cb86925d8908d1a6c4da7"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "bytes": 385,
+        "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "noDownloadsPerformed": true,
+  "cloudCalls": 0,
+  "localInferenceCalls": 4
+}

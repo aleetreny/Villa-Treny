@@ -1,0 +1,1441 @@
+{
+  "format": "villa-evidence-layout-token-measurement-v1",
+  "status": "experimental_not_integrated_or_deployed",
+  "measuredAt": "2026-09-08T21:57:55.429Z",
+  "scope": "All25 resident contexts from canonical revision218 with the corrected receipt selection. A is current prepared USER; B is renderSocietyEvidenceLayout(A). Same SYSTEM, schema, output cap, actor, time and state. No model inference.",
+  "backupSha256": "73129b31d52efee6307236e6576da9d5f81b8b78bac34526544285359ca35b08",
+  "worldRevision": 218,
+  "models": {
+    "groq": [
+      "openai/gpt-oss-20b",
+      "openai/gpt-oss-120b"
+    ],
+    "sameOrdinaryEncoding": true,
+    "workersAi": "@cf/openai/gpt-oss-120b"
+  },
+  "accounting": {
+    "tokenizer": "Installed tiktoken1.0.22 WASM; o200k_base ordinary ranks, equivalent to o200k_harmony ordinary text",
+    "framingMargin": 128,
+    "outputMaximum": 1024,
+    "groqRequestTokenCeiling": 8000,
+    "sharedStateOrLedgerUpdated": false,
+    "authoritativeQuotaStillRequired": true
+  },
+  "summary": {
+    "A": {
+      "cases": 25,
+      "totalReservedTokens": 156103,
+      "rangeReservedTokens": [
+        5299,
+        7427
+      ],
+      "minimumHeadroomTo8000": 573,
+      "admittedByRequestSize": 25,
+      "byteFallbacks": 0,
+      "totalAuthoredBytes": 500234,
+      "workersAiMaximumTotal": 18488
+    },
+    "B": {
+      "cases": 25,
+      "totalReservedTokens": 157656,
+      "rangeReservedTokens": [
+        5347,
+        7494
+      ],
+      "minimumHeadroomTo8000": 506,
+      "admittedByRequestSize": 25,
+      "byteFallbacks": 0,
+      "totalAuthoredBytes": 506532,
+      "workersAiMaximumTotal": 18710
+    },
+    "allRoundTripsVerified": true,
+    "allIdentityPrefixesExact": true,
+    "allSystemSchemaOutputCapsUnchanged": true,
+    "deltaReservedTokensRange": [
+      45,
+      69
+    ]
+  },
+  "cases": [
+    {
+      "actor": "A",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "e5815c7a520a0b8793c1a59457927c01ca8af9aac22687494ae87d98e9f79ddf",
+      "originalUserSha256": "73d39357b9ee63d7eb93403bc3c434af29f2f4a17028cd5ea82032bd6110b79a",
+      "candidateUserSha256": "72ef7e8543cb91bba0b961228a6d84d000e4b25f4e446fe010d6a3415484e570",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4688,
+          "schema": 5716,
+          "total": 17191
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1408,
+          "schema": 1636,
+          "total": 4330
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4458,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5482,
+        "headroomTo8000": 2518,
+        "conservativeWorkersAiMaximum": 651
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4968,
+          "schema": 5716,
+          "total": 17471
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1477,
+          "schema": 1636,
+          "total": 4399
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4527,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5551,
+        "headroomTo8000": 2449,
+        "conservativeWorkersAiMaximum": 660
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "B",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "13b96e0349670f0945e4b39f056d3b0f1b6dbe4fa96d170aba0d4b1024051b5f",
+      "originalUserSha256": "1c1d402a379e8432e9b095b4da317457f135abfcd1d8890b0a4cb5bdb49b80b5",
+      "candidateUserSha256": "5a0595064226c54628a78cbbda37aa1191dd2a4c63dbd280f3d290e5e14895a8",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5027,
+          "schema": 12247,
+          "total": 24061
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1471,
+          "schema": 3511,
+          "total": 6268
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6396,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7420,
+        "headroomTo8000": 580,
+        "conservativeWorkersAiMaximum": 870
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5297,
+          "schema": 12247,
+          "total": 24331
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1538,
+          "schema": 3511,
+          "total": 6335
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6463,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7487,
+        "headroomTo8000": 513,
+        "conservativeWorkersAiMaximum": 880
+      },
+      "deltaReservedTokens": 67,
+      "deltaBytes": 270
+    },
+    {
+      "actor": "C",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "61b9f5644930ef2b021d242ce27755992e9da3554b87d9fad4ed35804d9e5baa",
+      "originalUserSha256": "b38ee7d14bf24027aa0a2255332c9c97ad5e8566940ad32a013f2a5e6e11a784",
+      "candidateUserSha256": "c4a18d619266787e37719234d9d358dc2ff768b56b98710a9a6e5b17eceeedf5",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4675,
+          "schema": 5635,
+          "total": 17097
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1330,
+          "schema": 1602,
+          "total": 4218
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4346,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5370,
+        "headroomTo8000": 2630,
+        "conservativeWorkersAiMaximum": 647
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4911,
+          "schema": 5635,
+          "total": 17333
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1388,
+          "schema": 1602,
+          "total": 4276
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4404,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5428,
+        "headroomTo8000": 2572,
+        "conservativeWorkersAiMaximum": 655
+      },
+      "deltaReservedTokens": 58,
+      "deltaBytes": 236
+    },
+    {
+      "actor": "D",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "eb7905a0169c6f7b994887fd44191066f96c9066f24bc9739c1fc760062b5dd0",
+      "originalUserSha256": "e7426b86158643d28facec48e0d13dbdbc281f2b096e65ddbcbc4314b35f708e",
+      "candidateUserSha256": "73b0a675a0f520b92caf762d2a5daa7ed23dc6aca0851d45f25e75cdeb835765",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4631,
+          "schema": 5605,
+          "total": 17023
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1310,
+          "schema": 1596,
+          "total": 4192
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4320,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5344,
+        "headroomTo8000": 2656,
+        "conservativeWorkersAiMaximum": 644
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4867,
+          "schema": 5605,
+          "total": 17259
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1368,
+          "schema": 1596,
+          "total": 4250
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4378,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5402,
+        "headroomTo8000": 2598,
+        "conservativeWorkersAiMaximum": 652
+      },
+      "deltaReservedTokens": 58,
+      "deltaBytes": 236
+    },
+    {
+      "actor": "E",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "e8639ba0bb83b17f96d10f68ba8299cd77937b331e5ff270d5cbb6c9f70426a9",
+      "originalUserSha256": "4535e546479198b6c033bcd644caf8afe2e16afbfddee481ab053566edcf88dd",
+      "candidateUserSha256": "fa5aea7de7524cd25abd85991927768c37c54fb9c39578de867f8d243018f52b",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4670,
+          "schema": 5699,
+          "total": 17156
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1339,
+          "schema": 1624,
+          "total": 4249
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4377,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5401,
+        "headroomTo8000": 2599,
+        "conservativeWorkersAiMaximum": 647
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4906,
+          "schema": 5699,
+          "total": 17392
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1397,
+          "schema": 1624,
+          "total": 4307
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4435,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5459,
+        "headroomTo8000": 2541,
+        "conservativeWorkersAiMaximum": 655
+      },
+      "deltaReservedTokens": 58,
+      "deltaBytes": 236
+    },
+    {
+      "actor": "F",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "eb893de5e98c347d5886069da83f03a2b96a3e23e0db6458e3520f1663e79cdb",
+      "originalUserSha256": "7e08f9073adc1f653e8602822870c4ef49ca08be3fc986026f1c0cee3b4a5d04",
+      "candidateUserSha256": "1afbb6dcaeaf4121602fce818cd0fcd10349c6b140e39316bc650dbd609a621c",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4796,
+          "schema": 11271,
+          "total": 22854
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1414,
+          "schema": 3200,
+          "total": 5900
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6028,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7052,
+        "headroomTo8000": 948,
+        "conservativeWorkersAiMaximum": 830
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5076,
+          "schema": 11271,
+          "total": 23134
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1483,
+          "schema": 3200,
+          "total": 5969
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6097,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7121,
+        "headroomTo8000": 879,
+        "conservativeWorkersAiMaximum": 840
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "G",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "40b33f34142837575ff2f7f2e4122ad2b7bc545a9b5c1d248cad6a0bf5c53418",
+      "originalUserSha256": "b705ba9d042e9c159b5bc059639a59a0fed3611c9dc54e55dba04271f2b7a174",
+      "candidateUserSha256": "f30696d5f24ca42ae72bc43e7cba75617f3a341f4278f0d63417552feba0450e",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4359,
+          "schema": 11135,
+          "total": 22281
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1245,
+          "schema": 3128,
+          "total": 5659
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 5787,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 6811,
+        "headroomTo8000": 1189,
+        "conservativeWorkersAiMaximum": 811
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4551,
+          "schema": 11135,
+          "total": 22473
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1292,
+          "schema": 3128,
+          "total": 5706
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 5834,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 6858,
+        "headroomTo8000": 1142,
+        "conservativeWorkersAiMaximum": 818
+      },
+      "deltaReservedTokens": 47,
+      "deltaBytes": 192
+    },
+    {
+      "actor": "H",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "a2f2d1d2215d4224eb9719fcf960c7ed951a96d11727b398c201f2d722bc9c73",
+      "originalUserSha256": "087c58dbd05daaf4e3f99c707b89cc402280d565d86c7168cd6241155649eefd",
+      "candidateUserSha256": "b3e7f6981fec3cf7febab20b71fa7a8a6b83e13d4882f946f2b10ec7c42cf6cb",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5075,
+          "schema": 12173,
+          "total": 24035
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1358,
+          "schema": 3458,
+          "total": 6102
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6230,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7254,
+        "headroomTo8000": 746,
+        "conservativeWorkersAiMaximum": 867
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5257,
+          "schema": 12173,
+          "total": 24217
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1403,
+          "schema": 3458,
+          "total": 6147
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6275,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7299,
+        "headroomTo8000": 701,
+        "conservativeWorkersAiMaximum": 874
+      },
+      "deltaReservedTokens": 45,
+      "deltaBytes": 182
+    },
+    {
+      "actor": "I",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "f495a32d568ebe04c49f3bb147d5c286883453e020d5e2d29a255f783744b29a",
+      "originalUserSha256": "13bb3166cefb6bd0709e42349bc30429b9a4c4af87bab046a112f8af7a4991bb",
+      "candidateUserSha256": "615f6631be8328226f8d942c4142740d8f00e76f9e268904bf1b540912684406",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4684,
+          "schema": 11217,
+          "total": 22688
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1415,
+          "schema": 3180,
+          "total": 5881
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6009,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7033,
+        "headroomTo8000": 967,
+        "conservativeWorkersAiMaximum": 825
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4964,
+          "schema": 11217,
+          "total": 22968
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1484,
+          "schema": 3180,
+          "total": 5950
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6078,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7102,
+        "headroomTo8000": 898,
+        "conservativeWorkersAiMaximum": 835
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "J",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "1915bb3ad833bebdc333c37171dbc167434aae421d2e2bd7fab3f7911198e6a9",
+      "originalUserSha256": "0f0f78443c7e39549eea035a35aa382798453016f14eba329d2726ca9a7977ff",
+      "candidateUserSha256": "17c85d6078c0e030a43f08c9cd99e9aaace96050ffff1fbe9eb25d1369d16a2c",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4773,
+          "schema": 11323,
+          "total": 22883
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1427,
+          "schema": 3210,
+          "total": 5923
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6051,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7075,
+        "headroomTo8000": 925,
+        "conservativeWorkersAiMaximum": 831
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5053,
+          "schema": 11323,
+          "total": 23163
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1496,
+          "schema": 3210,
+          "total": 5992
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6120,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7144,
+        "headroomTo8000": 856,
+        "conservativeWorkersAiMaximum": 841
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "K",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "e8b5c5e4bcfa131fba71892697ddf13a1c7f6d740ffbd593b9c6da3ba1457d80",
+      "originalUserSha256": "79161b405d7106bb5dfa4f81236a81a445b499baed166ccd01b9b816dd873939",
+      "candidateUserSha256": "2f7eceb4cef3d7ea33f581e8d71c6e050c9e92b0370da053d682ba24c046f61f",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4786,
+          "schema": 5699,
+          "total": 17272
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1391,
+          "schema": 1646,
+          "total": 4323
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4451,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5475,
+        "headroomTo8000": 2525,
+        "conservativeWorkersAiMaximum": 652
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5066,
+          "schema": 5699,
+          "total": 17552
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1460,
+          "schema": 1646,
+          "total": 4392
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4520,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5544,
+        "headroomTo8000": 2456,
+        "conservativeWorkersAiMaximum": 662
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "L",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "99e1b229d975bdad46c66aaa9c8d20b402481354af0248e6b4f61d5497c1882f",
+      "originalUserSha256": "5bc09137f511ab34d010107db80e62ad9519bdc7ea2941cf0901196df3327df9",
+      "candidateUserSha256": "1c7f51479f82257789bfda5cc5e999bec439f868fe74985e2f97d7f07c2710c5",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4762,
+          "schema": 11223,
+          "total": 22772
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1395,
+          "schema": 3172,
+          "total": 5853
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 5981,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7005,
+        "headroomTo8000": 995,
+        "conservativeWorkersAiMaximum": 827
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5042,
+          "schema": 11223,
+          "total": 23052
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1464,
+          "schema": 3172,
+          "total": 5922
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6050,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7074,
+        "headroomTo8000": 926,
+        "conservativeWorkersAiMaximum": 837
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "M",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "213187399a21030b3c671abdb7e0dcb4622fc0cf1914d4008d0e0e04b3c33a98",
+      "originalUserSha256": "c9e762823e4cd24215c7dcead881ead6d6a9bce17cca35713ee3eb474a4ff990",
+      "candidateUserSha256": "658b9081e37a93c0d7f261710aca7b9338a2159c1cd3d2e56b850cde431ab447",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4761,
+          "schema": 5696,
+          "total": 17244
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1420,
+          "schema": 1642,
+          "total": 4348
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4476,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5500,
+        "headroomTo8000": 2500,
+        "conservativeWorkersAiMaximum": 652
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5041,
+          "schema": 5696,
+          "total": 17524
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1489,
+          "schema": 1642,
+          "total": 4417
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4545,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5569,
+        "headroomTo8000": 2431,
+        "conservativeWorkersAiMaximum": 662
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "N",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "e87b0abe65ade00849e96c510ae6465fe25ba7e2a6aa25e3104e29cceebf22a1",
+      "originalUserSha256": "a4c1579a056c117e52e39eba85ec294519268d1d240d0f925ba3516abd965374",
+      "candidateUserSha256": "162100d27ed95835d3ad32932d6da2e1cf40f4b4463e0c912a5bfefb82464479",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4856,
+          "schema": 11169,
+          "total": 22812
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1390,
+          "schema": 3154,
+          "total": 5830
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 5958,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 6982,
+        "headroomTo8000": 1018,
+        "conservativeWorkersAiMaximum": 831
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5092,
+          "schema": 11169,
+          "total": 23048
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1448,
+          "schema": 3154,
+          "total": 5888
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6016,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7040,
+        "headroomTo8000": 960,
+        "conservativeWorkersAiMaximum": 839
+      },
+      "deltaReservedTokens": 58,
+      "deltaBytes": 236
+    },
+    {
+      "actor": "O",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "9368077befe2531bf92aaa39fc9b2f3a9f414453d38349508cea9a31220f56dc",
+      "originalUserSha256": "3c753ed9fc469f5b665c9693fd414f1ccfaf16dfbb6c5aaf66c84bac091322aa",
+      "candidateUserSha256": "05240b5ac60ed415573cf09a3cd203c882697d4a6c07b0c00db5ca7d7cb3f626",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4651,
+          "schema": 5756,
+          "total": 17194
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1439,
+          "schema": 1668,
+          "total": 4393
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4521,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5545,
+        "headroomTo8000": 2455,
+        "conservativeWorkersAiMaximum": 651
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4931,
+          "schema": 5756,
+          "total": 17474
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1508,
+          "schema": 1668,
+          "total": 4462
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4590,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5614,
+        "headroomTo8000": 2386,
+        "conservativeWorkersAiMaximum": 661
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "P",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "54002efa5ca0d17a575067e1de8da90589cb98a2c533bb8b51842c9d0fab486a",
+      "originalUserSha256": "d9c855fb2ec083aa9f08e36b079fbdf2d027439f5113411abbe9c0e4a63319ab",
+      "candidateUserSha256": "b179e7f384595b16404af10650604b558e5af33cf381b5378e64abde929d2787",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4821,
+          "schema": 11226,
+          "total": 22834
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1468,
+          "schema": 3178,
+          "total": 5932
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6060,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7084,
+        "headroomTo8000": 916,
+        "conservativeWorkersAiMaximum": 829
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5101,
+          "schema": 11226,
+          "total": 23114
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1537,
+          "schema": 3178,
+          "total": 6001
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6129,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7153,
+        "headroomTo8000": 847,
+        "conservativeWorkersAiMaximum": 839
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "Q",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "30cb29f675495853314458e7c2fbcd3f164f37aa3b32b35e4fcec590b4c745bb",
+      "originalUserSha256": "247c2e5be557f802ed7fd90bec0447e26187ea6463f368b3509affda18d948c9",
+      "candidateUserSha256": "61e89963f9f28fb5868c1645723ac44c0444b79a13c2151d7b7c200f094a378a",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4643,
+          "schema": 5757,
+          "total": 17187
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1405,
+          "schema": 1664,
+          "total": 4355
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4483,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5507,
+        "headroomTo8000": 2493,
+        "conservativeWorkersAiMaximum": 650
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4923,
+          "schema": 5757,
+          "total": 17467
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1474,
+          "schema": 1664,
+          "total": 4424
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4552,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5576,
+        "headroomTo8000": 2424,
+        "conservativeWorkersAiMaximum": 660
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "R",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "db087c95adbc254c2fb720ce024343c4d546ce7a3b6552ed08cf6cf081721976",
+      "originalUserSha256": "b20c1dac686ecc67cd6e07ef4948fc3d170b4f5bc0a8dc44307cc37045e8f559",
+      "candidateUserSha256": "dbf34b5b2a89f8d5e061162ed8fe4c3ac8d7a131ca46a425a3255f30d2c328b2",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4094,
+          "schema": 11098,
+          "total": 21979
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1178,
+          "schema": 3110,
+          "total": 5574
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 5702,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 6726,
+        "headroomTo8000": 1274,
+        "conservativeWorkersAiMaximum": 801
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4286,
+          "schema": 11098,
+          "total": 22171
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1225,
+          "schema": 3110,
+          "total": 5621
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 5749,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 6773,
+        "headroomTo8000": 1227,
+        "conservativeWorkersAiMaximum": 808
+      },
+      "deltaReservedTokens": 47,
+      "deltaBytes": 192
+    },
+    {
+      "actor": "S",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "c882b18f5cb8aed2c006789c8afa514cec81a3619a7791c45670901e33a5eb4c",
+      "originalUserSha256": "1cb063357634d09e77e081157810f0f1207afde2106d9ade71036c7454b6ba8d",
+      "candidateUserSha256": "3213216746a346ddebd5d6eafd453ea36e7e64f4e005dd61633b026f50d5962c",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5142,
+          "schema": 6695,
+          "total": 18624
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1479,
+          "schema": 1939,
+          "total": 4704
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4832,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5856,
+        "headroomTo8000": 2144,
+        "conservativeWorkersAiMaximum": 699
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5368,
+          "schema": 6695,
+          "total": 18850
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1535,
+          "schema": 1939,
+          "total": 4760
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4888,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5912,
+        "headroomTo8000": 2088,
+        "conservativeWorkersAiMaximum": 707
+      },
+      "deltaReservedTokens": 56,
+      "deltaBytes": 226
+    },
+    {
+      "actor": "T",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "88e527f0662ccd36a52238ee99da5a48c69ed0b2bf589b3137ff858acf4e95fa",
+      "originalUserSha256": "d08713bc5a05eb4fe819def7809f088b2a5c4a9fc59f70661df59cc128d536f0",
+      "candidateUserSha256": "5ee2f275fea62230792d1d90390d6100b17d050e8e05241d5b22a0b5d63fe17e",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4721,
+          "schema": 11226,
+          "total": 22734
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1420,
+          "schema": 3186,
+          "total": 5892
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6020,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7044,
+        "headroomTo8000": 956,
+        "conservativeWorkersAiMaximum": 826
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5001,
+          "schema": 11226,
+          "total": 23014
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1489,
+          "schema": 3186,
+          "total": 5961
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6089,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7113,
+        "headroomTo8000": 887,
+        "conservativeWorkersAiMaximum": 835
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "U",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "4bf60a93716544d890526886ec42c671d2355d7d16482cfcdd29c14c4e2beedb",
+      "originalUserSha256": "358bafbf1c402fbde33d6dae02762af07805da7891f091d1137074ab195f0918",
+      "candidateUserSha256": "6d7a5a54f64a3d41ba2db8660ab8fd5c614bfc4c7894f1182090bba66676fbfe",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5016,
+          "schema": 12247,
+          "total": 24050
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1477,
+          "schema": 3512,
+          "total": 6275
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6403,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7427,
+        "headroomTo8000": 573,
+        "conservativeWorkersAiMaximum": 869
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 5286,
+          "schema": 12247,
+          "total": 24320
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1544,
+          "schema": 3512,
+          "total": 6342
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 6470,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 7494,
+        "headroomTo8000": 506,
+        "conservativeWorkersAiMaximum": 879
+      },
+      "deltaReservedTokens": 67,
+      "deltaBytes": 270
+    },
+    {
+      "actor": "V",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "be112acac21cdfe22c6f6d256249f1ba4d78ae40c73e1bd9b7a3b7884ab9219d",
+      "originalUserSha256": "613cdbaed322525498b7de42949d2501673c4004e7f3f418db810ca300c6f8ad",
+      "candidateUserSha256": "5a8e7dfddda24c560343df5850b3a1b71d4d2983d7a9e1c9bde9b21bcf1656f3",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4739,
+          "schema": 5692,
+          "total": 17218
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1431,
+          "schema": 1626,
+          "total": 4343
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4471,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5495,
+        "headroomTo8000": 2505,
+        "conservativeWorkersAiMaximum": 650
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4975,
+          "schema": 5692,
+          "total": 17454
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1489,
+          "schema": 1626,
+          "total": 4401
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4529,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5553,
+        "headroomTo8000": 2447,
+        "conservativeWorkersAiMaximum": 659
+      },
+      "deltaReservedTokens": 58,
+      "deltaBytes": 236
+    },
+    {
+      "actor": "W",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "a46f8edff0bb4d9ae7bad51cef82cd2e4c553499ed4eac33b3de5e695498721f",
+      "originalUserSha256": "3f0b63246008421b920f7602d4c16efa13c173f245d9ca2f6bdb0c79efc446ff",
+      "candidateUserSha256": "a83b03aa1a885c9df6464afa1122407afbd602b53b4525b435d90881cdda2806",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 3797,
+          "schema": 6097,
+          "total": 16681
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1122,
+          "schema": 1739,
+          "total": 4147
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4275,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5299,
+        "headroomTo8000": 2701,
+        "conservativeWorkersAiMaximum": 630
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 3987,
+          "schema": 6097,
+          "total": 16871
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1170,
+          "schema": 1739,
+          "total": 4195
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4323,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5347,
+        "headroomTo8000": 2653,
+        "conservativeWorkersAiMaximum": 636
+      },
+      "deltaReservedTokens": 48,
+      "deltaBytes": 190
+    },
+    {
+      "actor": "X",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "b70f7e9deb47466b7877d52cbc0dde677f06d1901b7f1bb8ce6ca7f4a77b4dea",
+      "originalUserSha256": "48d25bb3ca2f6ca3026f379834bd733bb8c744919c6f0b7865642345c4b8e41c",
+      "candidateUserSha256": "c1d605af5c7a24ed0057f3565072e10085c3ee33ad3c545de7faf0496aa9c3bd",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4600,
+          "schema": 5750,
+          "total": 17137
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1383,
+          "schema": 1656,
+          "total": 4325
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4453,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5477,
+        "headroomTo8000": 2523,
+        "conservativeWorkersAiMaximum": 648
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4880,
+          "schema": 5750,
+          "total": 17417
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1452,
+          "schema": 1656,
+          "total": 4394
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4522,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5546,
+        "headroomTo8000": 2454,
+        "conservativeWorkersAiMaximum": 657
+      },
+      "deltaReservedTokens": 69,
+      "deltaBytes": 280
+    },
+    {
+      "actor": "Y",
+      "verifyLayout": true,
+      "identityAndRecipientPrefixByteExact": true,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaSha256": "589d9c105ef37fe8c6ae10ccdde4519cffe5ef7b3d28ca155f5e617902009d3d",
+      "originalUserSha256": "d860fa9ec2ea0d416e768c8bc8bb19451dfa745e7e3559219705943a186b1c1e",
+      "candidateUserSha256": "470676414eb5e4123cb54eb4daa0daf50f19eb0f6af062de83196b6d6846c8e6",
+      "A": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4753,
+          "schema": 5687,
+          "total": 17227
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1381,
+          "schema": 1620,
+          "total": 4287
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4415,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5439,
+        "headroomTo8000": 2561,
+        "conservativeWorkersAiMaximum": 650
+      },
+      "B": {
+        "authoredBytes": {
+          "system": 6787,
+          "user": 4989,
+          "schema": 5687,
+          "total": 17463
+        },
+        "componentTokens": {
+          "system": 1286,
+          "user": 1439,
+          "schema": 1620,
+          "total": 4345
+        },
+        "usedByteFallback": false,
+        "framingMargin": 128,
+        "reservedInputTokens": 4473,
+        "reservedOutputTokens": 1024,
+        "reservedTotalTokens": 5497,
+        "headroomTo8000": 2503,
+        "conservativeWorkersAiMaximum": 659
+      },
+      "deltaReservedTokens": 58,
+      "deltaBytes": 236
+    }
+  ],
+  "source": [
+    {
+      "path": "src/lib/habitat/society/turn.ts",
+      "sha256": "97a119ebcef0bc1942a0e06862804d9c6e88b6fb0767d83e094c75d0be594a0f"
+    },
+    {
+      "path": "src/lib/habitat/society/evidence-layout.ts",
+      "sha256": "663c0e814d0fb8ebcf58d8c0281d5c6825e1bdaf27a671f8785c510b417c9c0d"
+    },
+    {
+      "path": "src/lib/habitat/society/record-choice.ts",
+      "sha256": "4299a9a8964f9f2103f3c71b90eb4720947b0d3aad99116437f67bfb4f8d7d34"
+    },
+    {
+      "path": "src/lib/habitat/society/record-instructions.ts",
+      "sha256": "c8e3c02dcdbc0a672a03dff79176dc94934423dceb3931c0d40133f868fb36f1"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "d311e1236f49ed1916ad55c6238e6c2bb8c4c4e4885c860f0e944a8ca73e92bf"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+      "sha256": "a49a0f09f3d3072bc4c6bcd6dde2669610d216f8de5cd09b4598ca9466898f19"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+      "sha256": "6823567f80d64db0156fe74726b43d4e0984a659c965db638c33c5a1d2e31c32"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/router.ts",
+      "sha256": "97d50a484b6b1cbf960bce6e1992985a3679541677b5c0ce14f356b49470132f"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+      "sha256": "6e0e2acfbf2fe9fe855b600b9b450f10b4277f688fc44451187776901f87b9c6"
+    }
+  ],
+  "measurementScriptSha256": "3f7717c60f682f8a5230aaa926128e717eb3d0072424ac64e5b4ee8b2e8ba894",
+  "privateMeasurementSha256": "c8eea25c8f34b14d201a05c8dadce46678f586eaf9d30a693891bea734dfd002",
+  "limitations": [
+    "This verifies information preservation and input cost, not model understanding or semantic improvement.",
+    "The128-token provider framing allowance remains provisional; maxima are reservations, not billed actual tokens.",
+    "Size admission alone does not establish current rate-window budget, pacing readiness or an available provider.",
+    "The total of25 counterfactual preparations is not actual consumption or a daily forecast.",
+    "Workers AI figures retain the production byte-conservative mapper; they are not observed neuron costs."
+  ],
+  "actions": {
+    "networkRequests": 0,
+    "inferences": 0,
+    "productionWrites": 0
+  },
+  "privacy": {
+    "noPrivateProseOrPromptsPublished": true
+  }
+}

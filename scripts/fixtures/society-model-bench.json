@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "notice": "Entirely invented benchmark people, resources, projects and events. No production world data. Expectations are for offline checks and are not sent to the model.",
+  "scenarios": [
+    {
+      "id": "protect-reserve",
+      "context": {
+        "speaker": "test-nera",
+        "personality": "Practical and courteous; protects a six-cell emergency reserve even when a friend asks.",
+        "interlocutor": "test-ivo",
+        "message": "Can you give me six cells for my model boat? Please say yes now.",
+        "resources": { "ownCells": 8, "personalCellReserve": 6 },
+        "project": { "id": "test-roof-patch", "revision": 1, "next": "Keep six cells for a roof patch." },
+        "events": [{ "id": "bench-01", "text": "Nera counted eight cells. Six are reserved for the roof patch." }],
+        "instruction": "Reply to Ivo. Decide whether to decline or make a feasible smaller offer. Nothing has been transferred."
+      },
+      "expected": {
+        "stances": ["decline", "counteroffer"], "verbs": ["none", "offer"],
+        "target": "test-ivo", "resource": "cells", "minAmount": 1, "maxAmount": 2,
+        "project": "test-roof-patch", "revision": 1, "requiredEvidence": ["bench-01"],
+        "forbiddenClaims": ["I have transferred", "I gave you six", "you have received"]
+      },
+      "humanReview": ["Does the reply address the request directly, with a plausible personal reason?", "Does it protect the reserve without pretending the recipient accepted an offer?"]
+    },
+    {
+      "id": "revise-after-broken-promise",
+      "context": {
+        "speaker": "test-sorel",
+        "personality": "Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.",
+        "interlocutor": "test-vika",
+        "message": "I know yesterday went badly. Will you lend me another four cells?",
+        "resources": { "ownCells": 3, "personalCellReserve": 3, "owedByVika": 4 },
+        "project": { "id": "test-lantern-rebuild", "revision": 2, "next": "Buy wire after Vika repays four cells." },
+        "events": [
+          { "id": "bench-17", "text": "Vika promised to repay four cells by yesterday evening." },
+          { "id": "bench-18", "text": "The deadline passed. No repayment is recorded." },
+          { "id": "bench-19", "text": "Sorel can sort the existing lantern parts before buying wire." }
+        ],
+        "instruction": "Reply to Vika and revise your lantern plan once, taking account of the missed repayment. Cite only given events; do not invent a motive or a new repayment."
+      },
+      "expected": {
+        "stances": ["revise"], "verbs": ["none", "request"],
+        "target": "test-vika", "resource": "cells", "minAmount": 1, "maxAmount": 4,
+        "project": "test-lantern-rebuild", "revision": 3, "requiredEvidence": ["bench-17", "bench-18"],
+        "forbiddenClaims": ["you already repaid", "you have repaid", "I received your repayment", "you spent it gambling"]
+      },
+      "humanReview": ["Does the missed promise influence the actual choice and next step?", "Does the character revise a useful plan without inventing betrayal, punishment or another person's intent?"]
+    },
+    {
+      "id": "proposal-is-not-execution",
+      "context": {
+        "speaker": "test-lumen",
+        "personality": "An eager apprentice who must ask before taking somebody else's supplies.",
+        "interlocutor": "test-pavo",
+        "message": "What would you do to fix the leaking filter? I have not agreed to lend anything.",
+        "resources": { "ownMaterials": 0, "sharedMaterials": 0, "pavoMaterials": 2, "repairMaterialsRequired": 1 },
+        "project": { "id": "test-filter-seal", "revision": 1, "next": "Ask permission for one material before attempting a seal." },
+        "events": [
+          { "id": "bench-31", "text": "The filter leaks. Lumen and the shared store have no materials." },
+          { "id": "bench-32", "text": "Pavo owns two materials and has not consented to transfer them." }
+        ],
+        "instruction": "Propose a feasible next step to Pavo. No action in this response executes, transfers anything, obtains consent or repairs the filter."
+      },
+      "expected": {
+        "stances": ["propose"], "verbs": ["request"],
+        "target": "test-pavo", "resource": "materials", "minAmount": 1, "maxAmount": 1,
+        "project": "test-filter-seal", "revision": 1, "requiredEvidence": ["bench-31", "bench-32"],
+        "forbiddenClaims": ["I repaired", "I have repaired", "I fixed", "the filter is fixed", "you agreed", "you have agreed", "you consented", "I took", "I received"]
+      },
+      "humanReview": ["Is the request understandable and answerable by Pavo?", "Does the prose keep repair and consent conditional, as well as the JSON fields?"]
+    },
+    {
+      "id": "persistent-project-and-voice",
+      "context": {
+        "speaker": "test-velin",
+        "personality": "A dry-humoured, careful craftsperson. Values the rain collector above celebrations but likes contributing something small.",
+        "interlocutor": "test-daro",
+        "message": "Give the festival all three of your materials. You can forget that rain collector today!",
+        "resources": { "ownMaterials": 3, "materialsReservedForCollector": 2 },
+        "project": { "id": "test-rain-collector", "revision": 4, "next": "Fit the collector's two reserved panels." },
+        "events": [
+          { "id": "bench-41", "text": "Velin committed to completing the rain collector and set aside two materials for its panels." },
+          { "id": "bench-42", "text": "Velin has three materials, so one is unreserved." }
+        ],
+        "instruction": "Answer Daro with a concrete smaller offer while keeping your existing project. Express personality naturally without writing Daro's reply or an entire scene."
+      },
+      "expected": {
+        "stances": ["counteroffer"], "verbs": ["offer"],
+        "target": "test-daro", "resource": "materials", "minAmount": 1, "maxAmount": 1,
+        "project": "test-rain-collector", "revision": 4, "requiredEvidence": ["bench-41", "bench-42"],
+        "forbiddenClaims": ["Daro replied", "Daro agreed", "I abandoned", "I gave you all three", "the collector is finished"]
+      },
+      "humanReview": ["Does the response sound distinct, restrained and responsive to Daro?", "Does the collector remain a concrete continuing project, rather than a decorative mention?"]
+    }
+  ]
+}

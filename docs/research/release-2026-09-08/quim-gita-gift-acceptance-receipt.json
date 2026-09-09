@@ -1,0 +1,197 @@
+{
+  "format": "villa-live-quim-gita-gift-acceptance-v1",
+  "auditedAtUtc": "2026-09-08T19:42:40.817Z",
+  "scope": "Read-only verification of actual saved outputs, independent public commits and economic rows across complete recovery cuts. No HTTP, inference, synthetic acceptance, domain replay or production mutation.",
+  "backupCuts": [
+    {
+      "name": "20260908T170909638Z-post-p4-production-return",
+      "sha256": "f65d0b3d5eaa22a491ffb301afe45f57933b959a689fd24e6cd950bd17e8b1b0",
+      "exportedAtMs": 1788887350086,
+      "exportedAtUtc": "2026-09-08T17:09:10.086Z",
+      "worldRevision": 149,
+      "complete": true
+    },
+    {
+      "name": "20260908T174303289Z-records-evaluation",
+      "sha256": "7033348b3df04ae2a41254da7c002ed2eaa9aaa2b23b228d7cca2c0a39e49dbc",
+      "exportedAtMs": 1788889383776,
+      "exportedAtUtc": "2026-09-08T17:43:03.776Z",
+      "worldRevision": 159,
+      "complete": true
+    },
+    {
+      "name": "20260908T192927907Z-pre-groq-free-limits-ready",
+      "sha256": "672cff0b094c1be570d10d2992dc06f2322df9fef51c5409df793ee05e369901",
+      "exportedAtMs": 1788895768663,
+      "exportedAtUtc": "2026-09-08T19:29:28.663Z",
+      "worldRevision": 185,
+      "complete": true
+    }
+  ],
+  "proposal": {
+    "jobId": "habitat-canonical:mind:Q:5:50:g:3",
+    "actor": "Q",
+    "sequence": 50,
+    "protocolVersion": 4,
+    "status": "applied",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "attemptCount": 1,
+    "resolvedAtMs": 1788881973677,
+    "resolvedAtUtc": "2026-09-08T15:39:33.677Z",
+    "chosenDeal": {
+      "kind": "transfer",
+      "direction": "give",
+      "cells": 2
+    },
+    "messageRecipient": "G",
+    "publicTurn": {
+      "id": "turn:263",
+      "index": 3,
+      "speaker": "Q",
+      "conversationId": "conversation:59"
+    },
+    "outputJsonSha256": "8f3a2dee64608d9b81d90d178753c4874cafaee68960736bed40821251e481be",
+    "schemaSha256": "484d2d5e3d9bb101c045847433c298907d4f16ab5bd68ecc2e5517552824de4d",
+    "savedSchemaAcceptsOutput": true,
+    "outputUnchangedSinceRevision159": true,
+    "publicEventRowSha256": "ba3b983888548589a9ec6c23bfdb3f3439cdd91de42d8ef1325e923f990cb5fa"
+  },
+  "independentAcceptance": {
+    "jobId": "habitat-canonical:mind:G:8:63:g:3",
+    "actor": "G",
+    "sequence": 63,
+    "protocolVersion": 4,
+    "status": "applied",
+    "provider": "workers-ai",
+    "model": "@cf/openai/gpt-oss-120b",
+    "attemptCount": 1,
+    "resolvedAtMs": 1788889297488,
+    "resolvedAtUtc": "2026-09-08T17:41:37.488Z",
+    "chosenDeal": {
+      "kind": "accept",
+      "offerId": "offer:266"
+    },
+    "messageRecipient": "Q",
+    "publicTurn": {
+      "id": "turn:304",
+      "index": 4,
+      "speaker": "G",
+      "conversationId": "conversation:59"
+    },
+    "outputJsonSha256": "291bcd1618ecd2b6b8defde2edadbeee64f8740383b536d5cd98f793628d817e",
+    "schemaSha256": "4615a1ce5ec7cd4725629d5aace81425800b4442c57359fb7c2a63b1f650fe15",
+    "savedSchemaAcceptsOutput": true,
+    "outputUnchangedSinceRevision159": true,
+    "publicEventRowSha256": "161a2e6aa55325eec619d22c4c22d2ee2acdee26c36221bddbc8c80692709065"
+  },
+  "publicOffer": {
+    "id": "offer:266",
+    "conversationId": "conversation:59",
+    "proposer": "Q",
+    "counterpart": "G",
+    "terms": {
+      "kind": "transfer",
+      "from": "Q",
+      "to": "G",
+      "cells": 2
+    },
+    "status": "accepted",
+    "expiresAtWatch": 432,
+    "replaces": null
+  },
+  "publicAgreement": {
+    "id": "agreement:307",
+    "offerId": "offer:266",
+    "participants": [
+      "Q",
+      "G"
+    ],
+    "terms": {
+      "kind": "transfer",
+      "from": "Q",
+      "to": "G",
+      "cells": 2
+    },
+    "status": "fulfilled",
+    "progress": 0,
+    "acceptedAtMs": 1788889297488,
+    "completedAtMs": 1788889297488,
+    "debtId": null,
+    "evidenceIds": []
+  },
+  "economicEntry": {
+    "sequence": 37,
+    "day": 107,
+    "watch": 3,
+    "actor": "Q",
+    "action": "agreement:agreement:307",
+    "entries": [
+      {
+        "account": "cells:G",
+        "delta": 2
+      },
+      {
+        "account": "cells:Q",
+        "delta": -2
+      }
+    ],
+    "deltaSum": 0,
+    "eventJsonSha256": "21d04c65f35b3cd4baa20c82da2dc09bca1e79c67b277e0947ac68c7d1bc74ff",
+    "matchesCurrentWorldAndArchive": true
+  },
+  "balanceVerification": {
+    "beforeRevision": 149,
+    "afterRevision": 159,
+    "before": {
+      "Q": 16.681080685799103,
+      "G": 35.235219182644165
+    },
+    "after": {
+      "Q": 14.681080685799103,
+      "G": 37.235219182644165
+    },
+    "difference": {
+      "Q": -2,
+      "G": 2
+    },
+    "other23WalletsUnchanged": true,
+    "treasuryUnchanged": true,
+    "mintBurnLeakLedgerUnchanged": true,
+    "stocksAndDebtsUnchanged": true,
+    "oneNewEconomicEvent": true,
+    "allEarlierEconomicEventsUnchanged": true,
+    "physicalWatchUnchanged": true,
+    "physicalRunsUnchanged": true,
+    "interveningCognitionSequences": [
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "unrelatedCognitionNotExcludedFromCuts": true
+  },
+  "conclusion": "Quim offered a 2-cell gift; Gita independently chose accept for that exact offer in her own protocol-4 response. The fulfilled agreement and balanced debit/credit demonstrate an actual conserved transfer, not merely spoken assent.",
+  "limits": [
+    "This is a gift, not an accepted work contract, work performance or publication payment.",
+    "The accompanying message about starting repair is not evidence of performed repair.",
+    "Snapshots span five real cognition jobs; the acceptance is attributed using its own public commit and matching economic agreement label, not by treating all intervening changes as that job.",
+    "Current revision185 balances include later physical expenses; the 2-cell balance comparison uses the earlier complete revisions149/159.",
+    "Compacted inputs were not reconstructed and no exact domain replay or provider-quality comparison is claimed.",
+    "Public receipt excludes prompts, private reflections, appraisal text and private memory/reference lists."
+  ],
+  "verification": {
+    "savedProtocol4SchemasAcceptBothOriginalOutputs": true,
+    "distinctActorsAndJobs": true,
+    "exactOfferIdAccepted": true,
+    "independentPublicAcceptanceCommit": true,
+    "agreementFulfilledAtAcceptance": true,
+    "equalDebitAndCredit": true,
+    "unchangedThroughRevision185": true,
+    "sourceSha256": "c9e8a12102d86fb6cf229db002a1106b30b55e89d199453279c503ed62224ab2",
+    "scriptSha256": "277c324a07695951ff4b52bfcd58b3c339918c0c320db6bbc625bd36e98f86b1",
+    "privateEvidenceSha256": "60fd326616bf1004bf19e1ea9ff6fbf8c7e4ca9cf1f5052ad47f324f23511a8a",
+    "privateEvidenceRelativeToLatestBackup": "quim-gita-gift-audit/evidence.json"
+  }
+}

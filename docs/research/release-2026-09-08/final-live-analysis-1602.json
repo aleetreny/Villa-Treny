@@ -1,0 +1,657 @@
+{
+  "format": "villa-society-recovery-analysis-v1",
+  "scope": "Observed persisted recovery cut; no model calls or runtime mutation.",
+  "bundleSha256": "303c80a504f7cbd45cae95b6acbbdba24f3bd026aea5acdc3e56722197e1baec",
+  "sourceSha256": "2af7f6b1ca43096f502454ab3f837bfb61b9a939f52d279cb9a99a4839596f6b",
+  "completeRecovery": true,
+  "capturedAtMs": 1788883332296,
+  "worldRevision": 136,
+  "day": 107,
+  "watch": 3,
+  "societyInitialized": true,
+  "coverage": {
+    "total": 25,
+    "everSucceeded": 25,
+    "neverSucceeded": 0,
+    "residents": [
+      {
+        "id": "A",
+        "appliedJobs": 4,
+        "lastSuccessAtMs": 1788883257359,
+        "lastAttemptAtMs": 1788883252268
+      },
+      {
+        "id": "B",
+        "appliedJobs": 3,
+        "lastSuccessAtMs": 1788879638218,
+        "lastAttemptAtMs": 1788879631794
+      },
+      {
+        "id": "C",
+        "appliedJobs": 3,
+        "lastSuccessAtMs": 1788881436914,
+        "lastAttemptAtMs": 1788881431819
+      },
+      {
+        "id": "D",
+        "appliedJobs": 3,
+        "lastSuccessAtMs": 1788882516591,
+        "lastAttemptAtMs": 1788882511066
+      },
+      {
+        "id": "E",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788878569433,
+        "lastAttemptAtMs": 1788878551777
+      },
+      {
+        "id": "F",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788878919291,
+        "lastAttemptAtMs": 1788878911783
+      },
+      {
+        "id": "G",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788879819981,
+        "lastAttemptAtMs": 1788879811797
+      },
+      {
+        "id": "H",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788880001534,
+        "lastAttemptAtMs": 1788879991801
+      },
+      {
+        "id": "I",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788879462093,
+        "lastAttemptAtMs": 1788879451791
+      },
+      {
+        "id": "J",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788880538019,
+        "lastAttemptAtMs": 1788880531808
+      },
+      {
+        "id": "K",
+        "appliedJobs": 3,
+        "lastSuccessAtMs": 1788881799226,
+        "lastAttemptAtMs": 1788881791823
+      },
+      {
+        "id": "L",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788880897677,
+        "lastAttemptAtMs": 1788880891813
+      },
+      {
+        "id": "M",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788881085643,
+        "lastAttemptAtMs": 1788881071815
+      },
+      {
+        "id": "N",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788879289193,
+        "lastAttemptAtMs": 1788879271789
+      },
+      {
+        "id": "O",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788881620844,
+        "lastAttemptAtMs": 1788881611820
+      },
+      {
+        "id": "P",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788880718892,
+        "lastAttemptAtMs": 1788880711812
+      },
+      {
+        "id": "Q",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788881973677,
+        "lastAttemptAtMs": 1788881971823
+      },
+      {
+        "id": "R",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788880177240,
+        "lastAttemptAtMs": 1788880171803
+      },
+      {
+        "id": "S",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788883073421,
+        "lastAttemptAtMs": 1788883072266
+      },
+      {
+        "id": "T",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788881256510,
+        "lastAttemptAtMs": 1788881251817
+      },
+      {
+        "id": "U",
+        "appliedJobs": 3,
+        "lastSuccessAtMs": 1788880358200,
+        "lastAttemptAtMs": 1788880351806
+      },
+      {
+        "id": "V",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788878376517,
+        "lastAttemptAtMs": 1788878371775
+      },
+      {
+        "id": "W",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788878746457,
+        "lastAttemptAtMs": 1788878731780
+      },
+      {
+        "id": "X",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788878203820,
+        "lastAttemptAtMs": 1788878191772
+      },
+      {
+        "id": "Y",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788879097481,
+        "lastAttemptAtMs": 1788879091787
+      }
+    ]
+  },
+  "cognition": {
+    "allHistoricJobs": 83,
+    "individualSocietyJobs": 53,
+    "statuses": {
+      "pending": 0,
+      "running": 0,
+      "deferred": 0,
+      "resolved": 0,
+      "applied": 53,
+      "dead": 0
+    },
+    "appliedWithPublicCommit": 53,
+    "appliedWithMessages": 52,
+    "appliedWithOfferChanges": 1,
+    "appliedWithAgreementChanges": 0,
+    "interpretation": "Applied means a validated decision was persisted, not that its purpose was useful or fulfilled."
+  },
+  "providers": [
+    {
+      "provider": "workers-ai",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "recordedOutcomes": 16,
+      "successfulProviderResponses": 3,
+      "recordedDispatches": 14,
+      "appliedSocietyJobs": 0,
+      "confirmed": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "unresolved": {
+        "reservations": 14,
+        "inputTokens": 57766,
+        "outputTokens": 2816,
+        "neurons": 361
+      },
+      "chargedInCurrentWindow": {
+        "requests": 2,
+        "inputTokens": 12100,
+        "outputTokens": 768,
+        "neurons": 80
+      }
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "recordedOutcomes": 32,
+      "successfulProviderResponses": 19,
+      "recordedDispatches": 22,
+      "appliedSocietyJobs": 3,
+      "confirmed": {
+        "requests": 3,
+        "inputTokens": 11351,
+        "outputTokens": 395,
+        "neurons": 0
+      },
+      "unresolved": {
+        "reservations": 19,
+        "inputTokens": 67331,
+        "outputTokens": 2688,
+        "neurons": 0
+      },
+      "chargedInCurrentWindow": {
+        "requests": 4,
+        "inputTokens": 17220,
+        "outputTokens": 779,
+        "neurons": 0
+      }
+    },
+    {
+      "provider": "workers-ai",
+      "model": "@cf/openai/gpt-oss-120b",
+      "recordedOutcomes": 51,
+      "successfulProviderResponses": 50,
+      "recordedDispatches": 51,
+      "appliedSocietyJobs": 50,
+      "confirmed": {
+        "requests": 51,
+        "inputTokens": 89240,
+        "outputTokens": 17025,
+        "neurons": 4026
+      },
+      "unresolved": {
+        "reservations": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "chargedInCurrentWindow": {
+        "requests": 51,
+        "inputTokens": 89240,
+        "outputTokens": 17025,
+        "neurons": 4026
+      }
+    },
+    {
+      "provider": "workers-ai",
+      "model": "unknown",
+      "recordedOutcomes": 0,
+      "successfulProviderResponses": 0,
+      "recordedDispatches": 16,
+      "appliedSocietyJobs": 0,
+      "confirmed": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "unresolved": {
+        "reservations": 16,
+        "inputTokens": 52706,
+        "outputTokens": 2048,
+        "neurons": 316
+      },
+      "chargedInCurrentWindow": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      }
+    }
+  ],
+  "conversations": {
+    "retainedCurrent": 12,
+    "archivedAndCurrent": 12,
+    "bilateral": 12,
+    "uniquePublicMessages": 52,
+    "currentStatuses": {
+      "open": 12,
+      "closed": 0,
+      "expired": 0
+    }
+  },
+  "offers": {
+    "scope": "Current bounded society state",
+    "total": 1,
+    "statuses": {
+      "open": 1,
+      "accepted": 0,
+      "rejected": 0,
+      "replaced": 0,
+      "expired": 0
+    },
+    "history": {
+      "archivedAndCurrent": 1,
+      "latestKnownStatuses": {
+        "open": 1,
+        "accepted": 0,
+        "rejected": 0,
+        "replaced": 0,
+        "expired": 0
+      },
+      "historyCaveat": "Evicted entries retain their last archived status; it is not a current active obligation."
+    }
+  },
+  "agreements": {
+    "scope": "Current bounded society state",
+    "total": 0,
+    "statuses": {
+      "active": 0,
+      "payment_due": 0,
+      "fulfilled": 0,
+      "breached": 0
+    },
+    "history": {
+      "archivedAndCurrent": 0,
+      "latestKnownStatuses": {
+        "active": 0,
+        "payment_due": 0,
+        "fulfilled": 0,
+        "breached": 0
+      },
+      "historyCaveat": "Evicted entries retain their last archived status; it is not a current active obligation."
+    }
+  },
+  "plans": {
+    "currentProjects": 25,
+    "active": 25,
+    "activePurposesWithoutPhysicalSteps": 10,
+    "stepsFinishedNotGoalsProven": 0,
+    "steps": {
+      "pending": 23,
+      "done": 0,
+      "failed": 0
+    },
+    "eligibleNextActions": 15
+  },
+  "physical": {
+    "scope": "Retained physical_runs only; older watch_runs are not reconstructed as individual outcomes.",
+    "committedWatches": 0,
+    "actions": 0,
+    "distinctActors": 0,
+    "successful": 0,
+    "refused": 0,
+    "plannedExecutions": 0,
+    "plannedSuccessful": 0,
+    "plannedInterrupted": 0,
+    "routineExecutions": 0,
+    "verbs": {
+      "go": 0,
+      "rest": 0,
+      "sleep": 0,
+      "eat": 0,
+      "drink": 0,
+      "wash": 0,
+      "work": 0,
+      "dig": 0,
+      "grow": 0,
+      "cook": 0,
+      "clean": 0,
+      "inspect": 0,
+      "repair": 0,
+      "charge": 0,
+      "observe": 0,
+      "note": 0,
+      "repay": 0
+    },
+    "otherVerbCount": 0
+  },
+  "economy": {
+    "stock": {
+      "produce": 76,
+      "meals": 100,
+      "water": 240,
+      "materials": 21
+    },
+    "maintenance": 100,
+    "money": {
+      "initial": 828.4872291863744,
+      "minted": 72,
+      "burned": 11,
+      "leaked": 10.697846750236494,
+      "wallets": 812.4945824361378,
+      "treasury": 66.29480000000004,
+      "total": 878.7893824361378,
+      "expected": 878.7893824361379,
+      "difference": -1.1368683772161603e-13,
+      "conserved": true,
+      "nonnegative": true
+    },
+    "history": {
+      "retainedEvents": 37,
+      "completeSequenceFromEconomyStart": true,
+      "nonconservingEvents": 0,
+      "negotiatedWorkPaymentEvents": 0,
+      "negotiatedWorkCellsTransferred": 0,
+      "agreementTransferOrLoanEvents": 0
+    },
+    "debts": {
+      "retained": 0,
+      "statuses": {
+        "open": 0,
+        "paid": 0,
+        "overdue": 0
+      },
+      "remainingCells": 0
+    }
+  },
+  "publicMessages": [
+    {
+      "id": "turn:172",
+      "conversationId": "conversation:145",
+      "participants": [
+        "T",
+        "Y"
+      ],
+      "speaker": "Y",
+      "text": "Produce: 76, Meals: 100, Water: 240. Anything else you need for the ledger?",
+      "atMs": 1788879097481
+    },
+    {
+      "id": "turn:183",
+      "conversationId": "conversation:17",
+      "participants": [
+        "C",
+        "N"
+      ],
+      "speaker": "N",
+      "text": "Thank you, Cato. I'll begin drafting the waking criteria now—are there any particular points you want emphasized?",
+      "atMs": 1788879289193
+    },
+    {
+      "id": "turn:190",
+      "conversationId": "conversation:71",
+      "participants": [
+        "I",
+        "O"
+      ],
+      "speaker": "I",
+      "text": "I need them as soon as possible, so I can start planting today.",
+      "atMs": 1788879462093
+    },
+    {
+      "id": "turn:197",
+      "conversationId": "conversation:7",
+      "participants": [
+        "B",
+        "K"
+      ],
+      "speaker": "B",
+      "text": "No problem at all, could you send over the garden status update now?",
+      "atMs": 1788879638218
+    },
+    {
+      "id": "turn:201",
+      "conversationId": "conversation:59",
+      "participants": [
+        "G",
+        "Q"
+      ],
+      "speaker": "G",
+      "text": "I'll take the repair shift; could you transfer the cells you mentioned?",
+      "atMs": 1788879819981
+    },
+    {
+      "id": "turn:207",
+      "conversationId": "conversation:26",
+      "participants": [
+        "D",
+        "H"
+      ],
+      "speaker": "H",
+      "text": "One would appreciate receiving confirmation that the work roster is being applied fairly before the scheduled review. Could that be provided at your earliest convenience?",
+      "atMs": 1788880001534
+    },
+    {
+      "id": "turn:213",
+      "conversationId": "conversation:125",
+      "participants": [
+        "R",
+        "S"
+      ],
+      "speaker": "R",
+      "text": "Thank you. Could Bex verify that the recorded totals for produce and meals match these figures?",
+      "atMs": 1788880177240
+    },
+    {
+      "id": "turn:219",
+      "conversationId": "conversation:2",
+      "participants": [
+        "A",
+        "U"
+      ],
+      "speaker": "U",
+      "text": "Take the ten sheets and the vial, I'll note it now—just make sure they're back by tomorrow. Need anything else from the records?",
+      "atMs": 1788880358200
+    },
+    {
+      "id": "turn:223",
+      "conversationId": "conversation:84",
+      "participants": [
+        "J",
+        "X"
+      ],
+      "speaker": "J",
+      "text": "I haven't heard anything either; should we go ask Quim together to see if the key's been cleared?",
+      "atMs": 1788880538019
+    },
+    {
+      "id": "turn:227",
+      "conversationId": "conversation:115",
+      "participants": [
+        "P",
+        "V"
+      ],
+      "speaker": "P",
+      "text": "¡Vamos, Vero, hijita! Poné la harina y el agua, y yo te enseño a amasar con ritmo, ¿listita?",
+      "atMs": 1788880718892
+    },
+    {
+      "id": "turn:233",
+      "conversationId": "conversation:37",
+      "participants": [
+        "E",
+        "L"
+      ],
+      "speaker": "L",
+      "text": "Edda, consider it done—I'll move an extra unit of water to the garden right away. Anything else on your mind?",
+      "atMs": 1788880897677
+    },
+    {
+      "id": "turn:237",
+      "conversationId": "conversation:47",
+      "participants": [
+        "F",
+        "M"
+      ],
+      "speaker": "M",
+      "text": "Tomorrow morning at the face sounds perfect—I'll be there with a fresh pot waiting for our break.",
+      "atMs": 1788881085643
+    },
+    {
+      "id": "turn:240",
+      "conversationId": "conversation:145",
+      "participants": [
+        "T",
+        "Y"
+      ],
+      "speaker": "T",
+      "text": "Thank you, Yara; the ledger now balances with the current stock. Do you anticipate any changes to produce, meals, or water in the next watch?",
+      "atMs": 1788881256510
+    },
+    {
+      "id": "turn:246",
+      "conversationId": "conversation:17",
+      "participants": [
+        "C",
+        "N"
+      ],
+      "speaker": "C",
+      "text": "Emphasize minimum consciousness level, vital signs thresholds, and contraindications for waking. Begin drafting now.",
+      "atMs": 1788881436914
+    },
+    {
+      "id": "turn:253",
+      "conversationId": "conversation:71",
+      "participants": [
+        "I",
+        "O"
+      ],
+      "speaker": "O",
+      "text": "Aye, the 2 water units and a material are set aside. Grab 'em now and get planting.",
+      "atMs": 1788881620844
+    },
+    {
+      "id": "turn:260",
+      "conversationId": "conversation:7",
+      "participants": [
+        "B",
+        "K"
+      ],
+      "speaker": "K",
+      "text": "Sending the garden status update now; the latest workshop logs are attached as well. Let me know if you need anything else.",
+      "atMs": 1788881799226
+    },
+    {
+      "id": "turn:263",
+      "conversationId": "conversation:59",
+      "participants": [
+        "G",
+        "Q"
+      ],
+      "speaker": "Q",
+      "text": "Sure, here are 2 cells to keep the workshops running while you handle the repair shift.",
+      "atMs": 1788881973677
+    },
+    {
+      "id": "turn:268",
+      "conversationId": "conversation:26",
+      "participants": [
+        "D",
+        "H"
+      ],
+      "speaker": "D",
+      "text": "I have reviewed the work roster and can confirm that it is being applied fairly, which reduces the risk of oversight during the upcoming structural review. Shall I forward the detailed log to you now?",
+      "atMs": 1788882516591
+    },
+    {
+      "id": "turn:271",
+      "conversationId": "conversation:125",
+      "participants": [
+        "R",
+        "S"
+      ],
+      "speaker": "S",
+      "text": "Could you let me know if I can help with a task today?",
+      "atMs": 1788883073421
+    },
+    {
+      "id": "turn:274",
+      "conversationId": "conversation:2",
+      "participants": [
+        "A",
+        "U"
+      ],
+      "speaker": "A",
+      "text": "Ulla, should I record the paper and ink loan in the records before I leave?",
+      "atMs": 1788883257359
+    }
+  ],
+  "limitations": [
+    "Public messages are communicated claims, not verified facts.",
+    "Current mind/project/offer arrays are bounded; archived counts are labelled separately.",
+    "No private project goals, reasons, reflections, model inputs or raw outputs are printed.",
+    "A recorded dispatch can have an unknown transport outcome; only confirmed usage authorizes a quota refund.",
+    "No autonomous quality score can be inferred from acceptance or balances alone."
+  ]
+}

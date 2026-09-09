@@ -1,0 +1,1391 @@
+{
+  "format": "villa-retained-retrieval-stress-v1",
+  "synthetic": true,
+  "date": "2026-09-08T23:10:11.649Z",
+  "construction": {
+    "domainDraftOperations": 256,
+    "legalContentBytesPerDraft": 600,
+    "authors": 25,
+    "audience": "public",
+    "references": [],
+    "publications": 0,
+    "agreements": 0,
+    "economyChanged": false,
+    "sourceFixtureSha256": "f16875e55f94433f963a72731114bd451ed0211f2460cc25abe70cc670ae7003",
+    "successfulExplicitP7Operations": [
+      "search",
+      "read"
+    ],
+    "stateCodecValid": true
+  },
+  "limitations": [
+    "Synthetic legal working set, not production state or a quality/inference test.",
+    "Local preparation/tokenizer wall time is not a Workers CPU guarantee; the first tokenizer measurement includes initialization.",
+    "Groq counts ordinary text plus provisional 128 framing and 1024 reserved output; not exact provider/server usage.",
+    "Fit is for each constructed prompt. Active offers, commitments, larger plans and future contexts can still exceed the quota."
+  ],
+  "networkCalls": 0,
+  "sources": [
+    {
+      "path": "src/lib/habitat/society/retrieval-choice.ts",
+      "sha256": "b559a482ab28ed06dba90f4a68ce5559bfb9fef96a0c4696d65554f2f1015205"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-instructions.ts",
+      "sha256": "2c8e3b3a2770c363240bc39f2227538cdd4a8f5e169a92224a52960c8f5e889c"
+    },
+    {
+      "path": "src/lib/habitat/society/record-retrieval.ts",
+      "sha256": "8cfd2504ec20f309612c0202e06ce2422fc84f84cd81ba93d330861c83cc7ec7"
+    },
+    {
+      "path": "src/lib/habitat/society/records.ts",
+      "sha256": "b1bccc05a3c932399d0fe83ec50558ba4ea72ef5bf2dc8276524dba16e9a3076"
+    },
+    {
+      "path": "src/lib/habitat/society/record-choice.ts",
+      "sha256": "51472ca62b1c187ac8d3b6ca9a2aa10451984b814f38bf5a33fd15dc79cecfc4"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "11fc659e5d599f228a62c6a77f5eed71034678f5ec5ebb2053dfa3a9562360d1"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+      "sha256": "6823567f80d64db0156fe74726b43d4e0984a659c965db638c33c5a1d2e31c32"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+      "sha256": "a49a0f09f3d3072bc4c6bcd6dde2669610d216f8de5cd09b4598ca9466898f19"
+    }
+  ],
+  "scriptSha256": "c8e7c6a1b499da6f9739d4ba613828186044a3df7fff3f2098a49ea1c1dfa029",
+  "rows": [
+    {
+      "label": "full-retained-browse",
+      "actor": "A",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4102,
+        11510
+      ],
+      "totalBytes": 22399,
+      "inputTokens": 5837,
+      "reservedTokens": 6861,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23162,
+        "outputTokens": 1024,
+        "neurons": 807
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 6.364791999999966,
+      "tokenizeMs": 66.30908399999998
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "A",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4730,
+        12433
+      ],
+      "totalBytes": 24383,
+      "inputTokens": 6333,
+      "reservedTokens": 7357,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25206,
+        "outputTokens": 1024,
+        "neurons": 872
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 6.5958329999999705,
+      "tokenizeMs": 3.0042079999999487
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "B",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        3849,
+        11489
+      ],
+      "totalBytes": 22125,
+      "inputTokens": 5780,
+      "reservedTokens": 6804,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 22862,
+        "outputTokens": 1024,
+        "neurons": 798
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.9364160000000084,
+      "tokenizeMs": 2.52216599999997
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "B",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4477,
+        12412
+      ],
+      "totalBytes": 24109,
+      "inputTokens": 6268,
+      "reservedTokens": 7292,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 24906,
+        "outputTokens": 1024,
+        "neurons": 863
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.57970899999998,
+      "tokenizeMs": 2.7074589999999716
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "C",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4045,
+        11489
+      ],
+      "totalBytes": 22321,
+      "inputTokens": 5830,
+      "reservedTokens": 6854,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23074,
+        "outputTokens": 1024,
+        "neurons": 804
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.569125000000099,
+      "tokenizeMs": 2.5
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "C",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4673,
+        12412
+      ],
+      "totalBytes": 24305,
+      "inputTokens": 6314,
+      "reservedTokens": 7338,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25118,
+        "outputTokens": 1024,
+        "neurons": 870
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.695500000000038,
+      "tokenizeMs": 2.680084000000079
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "D",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4023,
+        11489
+      ],
+      "totalBytes": 22299,
+      "inputTokens": 5815,
+      "reservedTokens": 6839,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23045,
+        "outputTokens": 1024,
+        "neurons": 804
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.7312090000000353,
+      "tokenizeMs": 2.673541
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "D",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4651,
+        12412
+      ],
+      "totalBytes": 24283,
+      "inputTokens": 6305,
+      "reservedTokens": 7329,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25089,
+        "outputTokens": 1024,
+        "neurons": 869
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 4.333250000000021,
+      "tokenizeMs": 2.9066249999999627
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "E",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4484,
+        12151
+      ],
+      "totalBytes": 23422,
+      "inputTokens": 6145,
+      "reservedTokens": 7169,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 24185,
+        "outputTokens": 1024,
+        "neurons": 840
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.8519999999999754,
+      "tokenizeMs": 2.7722909999999956
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "E",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        5112,
+        13074
+      ],
+      "totalBytes": 25406,
+      "inputTokens": 6636,
+      "reservedTokens": 7660,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 26229,
+        "outputTokens": 1024,
+        "neurons": 905
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.426207999999974,
+      "tokenizeMs": 2.855666999999926
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "F",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4283,
+        11506
+      ],
+      "totalBytes": 22576,
+      "inputTokens": 5897,
+      "reservedTokens": 6921,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23353,
+        "outputTokens": 1024,
+        "neurons": 813
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.455084000000056,
+      "tokenizeMs": 2.585458000000017
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "F",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4911,
+        12429
+      ],
+      "totalBytes": 24560,
+      "inputTokens": 6395,
+      "reservedTokens": 7419,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25397,
+        "outputTokens": 1024,
+        "neurons": 878
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.3896250000000236,
+      "tokenizeMs": 2.7682499999999663
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "G",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4335,
+        12097
+      ],
+      "totalBytes": 23219,
+      "inputTokens": 6091,
+      "reservedTokens": 7115,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23988,
+        "outputTokens": 1024,
+        "neurons": 834
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.5185000000000173,
+      "tokenizeMs": 2.6348749999999654
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "G",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4963,
+        13020
+      ],
+      "totalBytes": 25203,
+      "inputTokens": 6586,
+      "reservedTokens": 7610,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 26032,
+        "outputTokens": 1024,
+        "neurons": 899
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.3958750000000464,
+      "tokenizeMs": 2.9030420000000277
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "H",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4444,
+        11507
+      ],
+      "totalBytes": 22738,
+      "inputTokens": 5917,
+      "reservedTokens": 6941,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23521,
+        "outputTokens": 1024,
+        "neurons": 819
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.7310830000000124,
+      "tokenizeMs": 2.599790999999982
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "H",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        5072,
+        12430
+      ],
+      "totalBytes": 24722,
+      "inputTokens": 6403,
+      "reservedTokens": 7427,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25565,
+        "outputTokens": 1024,
+        "neurons": 884
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.3567500000000337,
+      "tokenizeMs": 2.779166999999916
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "I",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4072,
+        11489
+      ],
+      "totalBytes": 22348,
+      "inputTokens": 5831,
+      "reservedTokens": 6855,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23103,
+        "outputTokens": 1024,
+        "neurons": 805
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4447920000000067,
+      "tokenizeMs": 2.5089159999999993
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "I",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4700,
+        12412
+      ],
+      "totalBytes": 24332,
+      "inputTokens": 6321,
+      "reservedTokens": 7345,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25147,
+        "outputTokens": 1024,
+        "neurons": 870
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.269916999999964,
+      "tokenizeMs": 2.766458000000057
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "J",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4445,
+        12157
+      ],
+      "totalBytes": 23389,
+      "inputTokens": 6139,
+      "reservedTokens": 7163,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 24162,
+        "outputTokens": 1024,
+        "neurons": 839
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4296249999999873,
+      "tokenizeMs": 2.6387909999999692
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "J",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        5073,
+        13080
+      ],
+      "totalBytes": 25373,
+      "inputTokens": 6628,
+      "reservedTokens": 7652,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 26206,
+        "outputTokens": 1024,
+        "neurons": 904
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.267417000000023,
+      "tokenizeMs": 2.866290999999933
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "K",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        3945,
+        11489
+      ],
+      "totalBytes": 22221,
+      "inputTokens": 5804,
+      "reservedTokens": 6828,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 22975,
+        "outputTokens": 1024,
+        "neurons": 801
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.435457999999926,
+      "tokenizeMs": 2.4685839999999644
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "K",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4573,
+        12412
+      ],
+      "totalBytes": 24205,
+      "inputTokens": 6293,
+      "reservedTokens": 7317,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25019,
+        "outputTokens": 1024,
+        "neurons": 866
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.1379590000000235,
+      "tokenizeMs": 2.7470830000000888
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "L",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        3943,
+        11489
+      ],
+      "totalBytes": 22219,
+      "inputTokens": 5802,
+      "reservedTokens": 6826,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 22966,
+        "outputTokens": 1024,
+        "neurons": 801
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.417500000000018,
+      "tokenizeMs": 2.5358750000000327
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "L",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4571,
+        12412
+      ],
+      "totalBytes": 24203,
+      "inputTokens": 6291,
+      "reservedTokens": 7315,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25010,
+        "outputTokens": 1024,
+        "neurons": 866
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.541208000000097,
+      "tokenizeMs": 2.7610839999999826
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "M",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4215,
+        11489
+      ],
+      "totalBytes": 22491,
+      "inputTokens": 5872,
+      "reservedTokens": 6896,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23262,
+        "outputTokens": 1024,
+        "neurons": 810
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.3840419999999085,
+      "tokenizeMs": 2.5435829999998987
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "M",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4843,
+        12412
+      ],
+      "totalBytes": 24475,
+      "inputTokens": 6360,
+      "reservedTokens": 7384,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25306,
+        "outputTokens": 1024,
+        "neurons": 876
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.1942920000000186,
+      "tokenizeMs": 2.824707999999987
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "N",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4129,
+        12097
+      ],
+      "totalBytes": 23013,
+      "inputTokens": 6046,
+      "reservedTokens": 7070,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23774,
+        "outputTokens": 1024,
+        "neurons": 827
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.524291999999946,
+      "tokenizeMs": 2.653833000000077
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "N",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4757,
+        13020
+      ],
+      "totalBytes": 24997,
+      "inputTokens": 6536,
+      "reservedTokens": 7560,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25818,
+        "outputTokens": 1024,
+        "neurons": 892
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.239167000000066,
+      "tokenizeMs": 2.835124999999948
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "O",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4152,
+        11508
+      ],
+      "totalBytes": 22447,
+      "inputTokens": 5869,
+      "reservedTokens": 6893,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23213,
+        "outputTokens": 1024,
+        "neurons": 809
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.3796250000000327,
+      "tokenizeMs": 2.605291999999963
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "O",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4780,
+        12431
+      ],
+      "totalBytes": 24431,
+      "inputTokens": 6355,
+      "reservedTokens": 7379,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25257,
+        "outputTokens": 1024,
+        "neurons": 874
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.353083999999967,
+      "tokenizeMs": 2.84112499999992
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "P",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4293,
+        11489
+      ],
+      "totalBytes": 22569,
+      "inputTokens": 5872,
+      "reservedTokens": 6896,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23332,
+        "outputTokens": 1024,
+        "neurons": 813
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4449999999999363,
+      "tokenizeMs": 2.5491250000000036
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "P",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4921,
+        12412
+      ],
+      "totalBytes": 24553,
+      "inputTokens": 6362,
+      "reservedTokens": 7386,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25376,
+        "outputTokens": 1024,
+        "neurons": 878
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.4941669999999476,
+      "tokenizeMs": 2.7611249999999927
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "Q",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4320,
+        11509
+      ],
+      "totalBytes": 22616,
+      "inputTokens": 5878,
+      "reservedTokens": 6902,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23393,
+        "outputTokens": 1024,
+        "neurons": 815
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.5362499999999955,
+      "tokenizeMs": 2.595625000000041
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "Q",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4948,
+        12432
+      ],
+      "totalBytes": 24600,
+      "inputTokens": 6369,
+      "reservedTokens": 7393,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25437,
+        "outputTokens": 1024,
+        "neurons": 880
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.1327499999999873,
+      "tokenizeMs": 2.7239999999999327
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "R",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        3798,
+        11489
+      ],
+      "totalBytes": 22074,
+      "inputTokens": 5764,
+      "reservedTokens": 6788,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 22809,
+        "outputTokens": 1024,
+        "neurons": 796
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4544590000000426,
+      "tokenizeMs": 2.4445839999999635
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "R",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4426,
+        12412
+      ],
+      "totalBytes": 24058,
+      "inputTokens": 6252,
+      "reservedTokens": 7276,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 24853,
+        "outputTokens": 1024,
+        "neurons": 861
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.1365420000000768,
+      "tokenizeMs": 2.697040999999899
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "S",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4353,
+        12097
+      ],
+      "totalBytes": 23237,
+      "inputTokens": 6100,
+      "reservedTokens": 7124,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 24003,
+        "outputTokens": 1024,
+        "neurons": 834
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.3711250000000064,
+      "tokenizeMs": 2.6277919999999995
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "S",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4981,
+        13020
+      ],
+      "totalBytes": 25221,
+      "inputTokens": 6590,
+      "reservedTokens": 7614,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 26047,
+        "outputTokens": 1024,
+        "neurons": 899
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.130333000000064,
+      "tokenizeMs": 2.8629159999999274
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "T",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4019,
+        11489
+      ],
+      "totalBytes": 22295,
+      "inputTokens": 5836,
+      "reservedTokens": 6860,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23050,
+        "outputTokens": 1024,
+        "neurons": 804
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4440830000000915,
+      "tokenizeMs": 2.5270830000000615
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "T",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4647,
+        12412
+      ],
+      "totalBytes": 24279,
+      "inputTokens": 6326,
+      "reservedTokens": 7350,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25094,
+        "outputTokens": 1024,
+        "neurons": 869
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.55337499999996,
+      "tokenizeMs": 2.735082999999804
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "U",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4119,
+        11489
+      ],
+      "totalBytes": 22395,
+      "inputTokens": 5838,
+      "reservedTokens": 6862,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23147,
+        "outputTokens": 1024,
+        "neurons": 807
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.3126669999999194,
+      "tokenizeMs": 2.5348750000000564
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "U",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4747,
+        12412
+      ],
+      "totalBytes": 24379,
+      "inputTokens": 6326,
+      "reservedTokens": 7350,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25191,
+        "outputTokens": 1024,
+        "neurons": 872
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.1636250000001382,
+      "tokenizeMs": 2.703292000000147
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "V",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4135,
+        11507
+      ],
+      "totalBytes": 22429,
+      "inputTokens": 5859,
+      "reservedTokens": 6883,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23198,
+        "outputTokens": 1024,
+        "neurons": 808
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.337833000000046,
+      "tokenizeMs": 2.3999169999999594
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "V",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4763,
+        12430
+      ],
+      "totalBytes": 24413,
+      "inputTokens": 6350,
+      "reservedTokens": 7374,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25242,
+        "outputTokens": 1024,
+        "neurons": 873
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.0505419999999503,
+      "tokenizeMs": 2.682499999999891
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "W",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4365,
+        12157
+      ],
+      "totalBytes": 23309,
+      "inputTokens": 6126,
+      "reservedTokens": 7150,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 24080,
+        "outputTokens": 1024,
+        "neurons": 836
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4447500000001128,
+      "tokenizeMs": 2.64058399999999
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "W",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4993,
+        13080
+      ],
+      "totalBytes": 25293,
+      "inputTokens": 6620,
+      "reservedTokens": 7644,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 26124,
+        "outputTokens": 1024,
+        "neurons": 902
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.2307919999998376,
+      "tokenizeMs": 2.9080830000000333
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "X",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4126,
+        11506
+      ],
+      "totalBytes": 22419,
+      "inputTokens": 5845,
+      "reservedTokens": 6869,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23184,
+        "outputTokens": 1024,
+        "neurons": 808
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.4113749999999072,
+      "tokenizeMs": 2.5310000000001764
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "X",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4754,
+        12429
+      ],
+      "totalBytes": 24403,
+      "inputTokens": 6333,
+      "reservedTokens": 7357,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25228,
+        "outputTokens": 1024,
+        "neurons": 873
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.7993329999999332,
+      "tokenizeMs": 2.736750000000029
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "Y",
+      "version": 6,
+      "componentBytes": [
+        6787,
+        4119,
+        11506
+      ],
+      "totalBytes": 22412,
+      "inputTokens": 5843,
+      "reservedTokens": 6867,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": null,
+      "catalogueEntries": null,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 23171,
+        "outputTokens": 1024,
+        "neurons": 808
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 2.3363749999998618,
+      "tokenizeMs": 2.5511249999999563
+    },
+    {
+      "label": "full-retained-browse",
+      "actor": "Y",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        4747,
+        12429
+      ],
+      "totalBytes": 24396,
+      "inputTokens": 6333,
+      "reservedTokens": 7357,
+      "fitsGroq8000": true,
+      "completeDrafts": 2,
+      "catalogueTotal": 256,
+      "catalogueEntries": 3,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 25215,
+        "outputTokens": 1024,
+        "neurons": 873
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.1129170000001523,
+      "tokenizeMs": 2.7368329999999332
+    },
+    {
+      "label": "old-owned-focus-delivered",
+      "actor": "A",
+      "version": 7,
+      "componentBytes": [
+        7220,
+        5307,
+        13300
+      ],
+      "totalBytes": 25827,
+      "inputTokens": 6707,
+      "reservedTokens": 7731,
+      "fitsGroq8000": true,
+      "completeDrafts": 3,
+      "catalogueTotal": 1,
+      "catalogueEntries": 1,
+      "cfMaximum": {
+        "requests": 1,
+        "inputTokens": 26666,
+        "outputTokens": 1024,
+        "neurons": 919
+      },
+      "tokenizerBounded": true,
+      "prepareMs": 3.3689999999999145,
+      "tokenizeMs": 3.1575829999999314
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "format": "villa-reviewed-public-dialogue-translation-v1",
+  "status": "Presentation translation of one already-public message; source records remain unchanged.",
+  "retrievedAtUtc": "2026-09-08T16:50:37.305334+00:00",
+  "observerRevision": 146,
+  "sources": [
+    {
+      "url": "https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/v1/observer",
+      "responseSha256": "9b6cf24888c0cb38c41b5e7ab36cb65f37092c2821aa44ed2fff173006411b84"
+    },
+    {
+      "url": "https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/v1/archive?day=107",
+      "responseSha256": "39317ad7008c2663f4d1beb61445f122ce3fce82bc12a1b80eb823781c060e1e"
+    }
+  ],
+  "scope": "Only the matched public turn and its public Journal copy. No private prompts or inferred events.",
+  "limitation": "English instructions guide model output; they do not guarantee compliance. This translation preserves the claim and is not evidence that ingredients moved or bread was made. Journal exposes the turn ID and simulation clock, but not the real-world atMs timestamp.",
+  "label": "English translation",
+  "entries": [
+    {
+      "conversationId": "conversation:115",
+      "turnId": "turn:280",
+      "speaker": "V",
+      "atMs": 1788884706557,
+      "sourceLanguage": "es",
+      "targetLanguage": "en",
+      "sourceText": "¡Dale, Pilar! Pasá la harina y el agua, y decime la proporción que le da ritmo al pan, que quiero que mi horno sea una fiesta, no solo una metáfora.",
+      "sourceTextSha256": "697b6ffff38d3c835417752f69bcfcda85677150194ac264633a7ef653acde5e",
+      "translation": "All right, Pilar! Pass the flour and water, and tell me the ratio that gives the bread its rhythm; I want my oven to be a celebration, not just a metaphor.",
+      "label": "English translation",
+      "journal": {
+        "day": 107,
+        "watch": 3,
+        "minute": 720,
+        "room": "garden",
+        "who": [
+          "P",
+          "V"
+        ],
+        "kind": "meeting",
+        "speech": {
+          "speaker": "V",
+          "turnId": "turn:280"
+        },
+        "sourceText": "V: ¡Dale, Pilar! Pasá la harina y el agua, y decime la proporción que le da ritmo al pan, que quiero que mi horno sea una fiesta, no solo una metáfora.",
+        "sourceTextSha256": "14920d40bbb8cdd593db35c901acfc75c054f7d3e008949281248b8590fa5482",
+        "translation": "V: All right, Pilar! Pass the flour and water, and tell me the ratio that gives the bread its rhythm; I want my oven to be a celebration, not just a metaphor."
+      }
+    }
+  ]
+}

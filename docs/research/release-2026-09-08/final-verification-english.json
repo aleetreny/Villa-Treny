@@ -1,0 +1,62 @@
+{
+  "version": "8a40a2ed-9d9a-4a0e-bb70-ad0e67ba3f6b",
+  "canonicalUrl": "https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/",
+  "schemaVersion": 8,
+  "protocolVersion": 4,
+  "checks": {
+    "application": {
+      "tests": 868,
+      "files": 41
+    },
+    "worker": {
+      "tests": 220,
+      "files": 20
+    },
+    "node": 39,
+    "browser": 19,
+    "offlineHosting": 6,
+    "pdfRenderer": 6,
+    "lint": true,
+    "typecheck": true,
+    "build": true,
+    "dryDeploy": true,
+    "gitDiffCheck": true
+  },
+  "browserVisual": {
+    "surface": "published canonical observer",
+    "journalEnglishTranslations": 3,
+    "livesEnglishTranslations": 3,
+    "sourceArt": "Common at integer4x",
+    "connection": "Connected; World running; Thoughts active"
+  },
+  "build": {
+    "deployableFiles": 59,
+    "roomPngsIncludingSealedBreach": 46,
+    "frontendJSBytesReportedKB": 917.87,
+    "frontendJSGzipKB": 150.79,
+    "workerKiB": 4265.86,
+    "workerGzipKiB": 1688.92,
+    "warnings": [
+      "Vite frontend chunk exceeds500kB; build succeeded"
+    ]
+  },
+  "sourceSha256": {
+    "package.json": "87a944a2e06d8c72d88f49f1b11e4530b9b7ec13e6935c07e572293a6551a5e0",
+    "pnpm-lock.yaml": "03af0997568d17db7048c52941ba924985827c7e763dee12d196a0f7a3e0658b",
+    "src/lib/habitat/society/instructions.ts": "3369aca5186db243fd562d40371adbb6842562eef6775e3443a738ed87adff39",
+    "workers/habitat-runtime/src/society-scheduler.ts": "ca7548238c67c51e40857e193580f73c85bdedc2a6b6c4fe9eece35d270b9d58",
+    "src/lib/habitat/public-message-translation.ts": "005fe73860713cbff2aa29053f4bcbe3f03b1edc8b25a2f9a2e637811ef606c2",
+    "src/components/desk/habitat/AgencyNotebook.tsx": "625fec74f2934f90ba00e3687bc833db02ccce12cc2dc462bc2ffce7c73053d9",
+    "src/components/desk/habitat/HabitatView.tsx": "59f5f4163c7c471a93b80a5c4073cf756a6f4c31ae071424fae1269802161751",
+    "workers/habitat-runtime/wrangler.jsonc": "80cfb6103275f2fef47e0b8f675e3a81df327e9fcdbca20692775f729b312637"
+  },
+  "continuityEvidence": "english-release-continuity.json",
+  "liveObservation": "final-live-analysis-1602.json",
+  "limitations": [
+    "No accepted model-generated agreement/payment demonstrated at this cut.",
+    "Local checks do not invoke real inference.",
+    "Pacing/account capacity and semantic quality are not guaranteed by passing unit tests."
+  ],
+  "gitCommitOrPush": false,
+  "portfolioChanged": false
+}

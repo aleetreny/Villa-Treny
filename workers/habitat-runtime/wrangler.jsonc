@@ -3,17 +3,35 @@
   "name": "aleetreny-habitat-runtime",
   "main": "src/index.ts",
   "compatibility_date": "2026-08-31",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "workers_dev": true,
+  "assets": {
+    "directory": "../../dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/v1",
+      "/v1/*",
+      "/health",
+      "/health/*"
+    ]
+  },
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1
   },
   "secrets": {
-    "required": ["ADMIN_TOKEN", "GROQ_API_KEY"]
+    "required": [
+      "ADMIN_TOKEN",
+      "GROQ_API_KEY",
+      "GEMINI_API_KEY"
+    ]
   },
   "triggers": {
-    "crons": ["7 * * * *"]
+    "crons": [
+      "7 * * * *"
+    ]
   },
   "ai": {
     "binding": "AI"
@@ -23,11 +41,19 @@
       {
         "name": "HABITAT_WORLD",
         "class_name": "HabitatWorld"
+      },
+      {
+        "name": "DEBATE_FORUM",
+        "class_name": "DebateForum"
       }
     ]
   },
   "exports": {
     "HabitatWorld": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    },
+    "DebateForum": {
       "type": "durable-object",
       "storage": "sqlite"
     }
@@ -37,9 +63,11 @@
     "PUBLIC_ORIGIN": "https://aleetreny.github.io",
     "TICK_INTERVAL_MS": "21600000",
     "MAX_COGNITIONS_PER_ALARM": "1",
-    "WORKERS_AI_MODEL": "@cf/qwen/qwen3-30b-a3b-fp8",
-    "WORKERS_AI_DAILY_NEURONS_LIMIT": "8000",
+    "WORKERS_AI_MODEL": "@cf/openai/gpt-oss-120b",
+    "WORKERS_AI_DAILY_NEURONS_LIMIT": "10000",
     "GROQ_MODEL": "openai/gpt-oss-20b",
-    "GROQ_DAILY_TOTAL_TOKENS_LIMIT": "150000"
+    "GROQ_DAILY_TOTAL_TOKENS_LIMIT": "200000",
+    "GROQ_120B_ENABLED": "true",
+    "GROQ_120B_DAILY_TOTAL_TOKENS_LIMIT": "200000"
   }
 }

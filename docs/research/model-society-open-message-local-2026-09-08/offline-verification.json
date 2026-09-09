@@ -1,0 +1,600 @@
+{
+  "verifiedAt": "2026-09-08T15:23:28.101Z",
+  "httpRequests": 0,
+  "newCalls": 0,
+  "halted": null,
+  "ledgerSha256": "9c709f622c23edd6a7c715966769a322b974372f0595c29ebd1b546b065198c2",
+  "reportSha256": "d5fc89ef301d8fe614849b3074a084c84eaf08e787d6906b0c2e9cd31d105609",
+  "sourceBundleSha256": "c5be8d9c95f0abe871013b7dd8d4d3efe771a1ee55de94bc33ffa6179c40013e",
+  "probeSourceBundleSha256": "755352b638e1e6f863aaf4c11208067490a26aa6aabcc58a9b2695108e2f5334",
+  "finalHashes": {
+    "G": "4f32ff5d257b8e6d07718b7f54511dd3ccd1aa9d0e47accf8ec64f13e722bbd6",
+    "L": "b812215641f31a509f224c72fb87aef166d1737fe259645c2bb035e5963a5fee",
+    "B": "dc3b66d3662648ab0e5c32adaec2e22d5a9dcb63d794201171797a571298e605"
+  },
+  "totals": {
+    "input": 10181,
+    "output": 826,
+    "latencyMs": 26028
+  },
+  "maxRssKiB": 10276336,
+  "rows": [
+    {
+      "actor": "G",
+      "stage": "matched",
+      "payloadSha256": "8807de46056924836196e09b5fd0f67f33a79a694bc936dc5a563a1a7b644f9e",
+      "rawResponseSha256": "5cda287fbe11fb9d9644cbd673ba13ecf7c285beb4e7f325b22392b7378a9283",
+      "startedAt": "2026-09-08T15:21:26.516Z",
+      "finishedAt": "2026-09-08T15:21:38.652Z",
+      "warning": null,
+      "code": "applied"
+    },
+    {
+      "actor": "L",
+      "stage": "matched",
+      "payloadSha256": "9f76f00e27315867d86b19eb8c1704554c59590df0f5edd37dd4dd7a475611af",
+      "rawResponseSha256": "718f49ef82081c3a890128ff1fb964b9544ef901384647db9de2a862d1e09b00",
+      "startedAt": "2026-09-08T15:21:38.751Z",
+      "finishedAt": "2026-09-08T15:21:42.193Z",
+      "warning": null,
+      "code": "applied"
+    },
+    {
+      "actor": "B",
+      "stage": "matched",
+      "payloadSha256": "57137989cdd17d76bb596b216f6cccd478549f70123a2d4e8a613c9e8f99d7ad",
+      "rawResponseSha256": "168efab0f169cc8358eaaa8d5e49616092c7f153ff5dc0c775ee86a6e6b98434",
+      "startedAt": "2026-09-08T15:21:42.295Z",
+      "finishedAt": "2026-09-08T15:21:45.228Z",
+      "warning": null,
+      "code": "applied"
+    },
+    {
+      "actor": "J",
+      "stage": "derived_reply",
+      "payloadSha256": "8c76b59be7221783586e7b88bd8eb9ee3d2bd2bba457cee41c77e09bf3fdd9dc",
+      "rawResponseSha256": "f73bfdad9abef85245b6efc4b447c3bccfe8271d1fcbe21445ed0647688adff9",
+      "startedAt": "2026-09-08T15:21:45.326Z",
+      "finishedAt": "2026-09-08T15:21:47.822Z",
+      "warning": null,
+      "code": "applied"
+    },
+    {
+      "actor": "L",
+      "stage": "derived_reply",
+      "payloadSha256": "9abc5082bf490800ee783606ba1496d3b60b0901dc42f22f7ffb686a94826cbd",
+      "rawResponseSha256": "cb57ff16c5050a9e21f3dc3fd2eadbb997451cd7eafd5d05f9a95e0a1e666f88",
+      "startedAt": "2026-09-08T15:21:47.922Z",
+      "finishedAt": "2026-09-08T15:21:50.340Z",
+      "warning": null,
+      "code": "applied"
+    },
+    {
+      "actor": "J",
+      "stage": "derived_reply",
+      "payloadSha256": "5d0ca52a0acc91eb825c7d457c2b838478e0b1933fad2fd76785e7632c749a94",
+      "rawResponseSha256": "ff210ed2503d73707d4dfe035b04d018eaad8a2209e0b50bf1b014bbae752715",
+      "startedAt": "2026-09-08T15:21:50.433Z",
+      "finishedAt": "2026-09-08T15:21:53.109Z",
+      "warning": null,
+      "code": "applied"
+    }
+  ],
+  "newOffersL": [
+    {
+      "id": "offer:54",
+      "conversationId": "conversation:41",
+      "proposer": "L",
+      "counterpart": "J",
+      "terms": {
+        "kind": "work",
+        "worker": "J",
+        "payer": "L",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 402
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825612001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:58",
+      "conversationId": "conversation:41",
+      "proposer": "J",
+      "counterpart": "L",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 403
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825640001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:62",
+      "conversationId": "conversation:41",
+      "proposer": "L",
+      "counterpart": "J",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 403
+      },
+      "status": "replaced",
+      "replaces": null,
+      "createdAtMs": 1788825641001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    },
+    {
+      "id": "offer:66",
+      "conversationId": "conversation:41",
+      "proposer": "J",
+      "counterpart": "L",
+      "terms": {
+        "kind": "work",
+        "worker": "L",
+        "payer": "J",
+        "cells": 0,
+        "verb": "repair",
+        "room": "workshops",
+        "units": 1,
+        "dueWatch": 403
+      },
+      "status": "open",
+      "replaces": null,
+      "createdAtMs": 1788825642001,
+      "expiresAtWatch": 402,
+      "acceptedAtMs": null
+    }
+  ],
+  "newAgreementsL": [],
+  "physical": [
+    {
+      "actor": "H",
+      "intent": {
+        "verb": "work",
+        "actor": "H"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "C",
+      "intent": {
+        "verb": "inspect",
+        "actor": "C"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "C"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "X",
+      "intent": {
+        "verb": "dig",
+        "actor": "X"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "X"
+          ],
+          "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "S",
+      "intent": {
+        "verb": "work",
+        "actor": "S"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "R",
+      "intent": {
+        "verb": "work",
+        "actor": "R"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "I",
+      "intent": {
+        "actor": "I",
+        "verb": "repair"
+      },
+      "stepId": "step:35",
+      "inheritedPlan": true,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "workshops",
+          "who": [
+            "I"
+          ],
+          "text": "Iris repaired The Workshops; 1 material and 2 charge cells used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "D",
+      "intent": {
+        "verb": "work",
+        "actor": "D"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "W",
+      "intent": {
+        "verb": "charge",
+        "actor": "W"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "F",
+      "intent": {
+        "verb": "dig",
+        "actor": "F"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "F"
+          ],
+          "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "U",
+      "intent": {
+        "verb": "inspect",
+        "actor": "U"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "U"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "T",
+      "intent": {
+        "verb": "work",
+        "actor": "T"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "G",
+      "intent": {
+        "verb": "work",
+        "actor": "G"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "N",
+      "intent": {
+        "actor": "N",
+        "verb": "observe"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "B",
+      "intent": {
+        "verb": "work",
+        "actor": "B"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "A",
+      "intent": {
+        "actor": "A",
+        "verb": "go",
+        "room": "records"
+      },
+      "stepId": "step:1",
+      "inheritedPlan": true,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "V",
+      "intent": {
+        "verb": "grow",
+        "actor": "V"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "garden",
+          "who": [
+            "V"
+          ],
+          "text": "Vero harvested 16 produce; 2 water used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "O",
+      "intent": {
+        "actor": "O",
+        "verb": "observe"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "Q",
+      "intent": {
+        "verb": "charge",
+        "actor": "Q"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "J",
+      "intent": {
+        "actor": "J",
+        "verb": "observe"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "Y",
+      "intent": {
+        "verb": "dig",
+        "actor": "Y"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "Y"
+          ],
+          "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "L",
+      "intent": {
+        "actor": "L",
+        "verb": "repair"
+      },
+      "stepId": "step:50",
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "workshops",
+          "who": [
+            "L"
+          ],
+          "text": "Lior repaired The Workshops; 1 material and 2 charge cells used.",
+          "kind": "work"
+        }
+      }
+    },
+    {
+      "actor": "P",
+      "intent": {
+        "verb": "work",
+        "actor": "P"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "K",
+      "intent": {
+        "verb": "work",
+        "actor": "K"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "M",
+      "intent": {
+        "verb": "work",
+        "actor": "M"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    },
+    {
+      "actor": "E",
+      "intent": {
+        "actor": "E",
+        "verb": "observe"
+      },
+      "stepId": null,
+      "inheritedPlan": false,
+      "outcome": {
+        "ok": true
+      }
+    }
+  ],
+  "accounts": {
+    "treasury": 0,
+    "maintenance": 100,
+    "cells:A": 15,
+    "cells:B": 8,
+    "cells:C": 8,
+    "cells:D": 15,
+    "cells:E": 10,
+    "cells:F": 13,
+    "cells:G": 17,
+    "cells:H": 8,
+    "cells:I": 9,
+    "cells:J": 15,
+    "cells:K": 12,
+    "cells:L": 6,
+    "cells:M": 17,
+    "cells:N": 17,
+    "cells:O": 15,
+    "cells:P": 16,
+    "cells:Q": 10,
+    "cells:R": 17,
+    "cells:S": 17,
+    "cells:T": 10,
+    "cells:U": 13,
+    "cells:V": 8,
+    "cells:W": 13,
+    "cells:X": 12,
+    "cells:Y": 10,
+    "credits:A": 0,
+    "credits:B": 1,
+    "credits:C": 1,
+    "credits:D": 1,
+    "credits:E": 0,
+    "credits:F": 2,
+    "credits:G": 1,
+    "credits:H": 1,
+    "credits:I": 2,
+    "credits:J": 0,
+    "credits:K": 1,
+    "credits:L": 2,
+    "credits:M": 1,
+    "credits:N": 0,
+    "credits:O": 0,
+    "credits:P": 1,
+    "credits:Q": 2,
+    "credits:R": 1,
+    "credits:S": 1,
+    "credits:T": 1,
+    "credits:U": 1,
+    "credits:V": 2,
+    "credits:W": 2,
+    "credits:X": 2,
+    "credits:Y": 2,
+    "stock:produce": 76,
+    "stock:meals": 100,
+    "stock:water": 245,
+    "stock:materials": 26,
+    "ledger:initialCells": 315,
+    "ledger:minted": 0,
+    "ledger:burned": 4,
+    "ledger:leaked": 0
+  },
+  "contradiction": "All six supplied schemas retained the earlier advisory deal description Requires a message to the counterpart with close:false. Their authoritative P4 grammar and SYSTEM allowed omission. Discovered after all six completed; no results were changed."
+}

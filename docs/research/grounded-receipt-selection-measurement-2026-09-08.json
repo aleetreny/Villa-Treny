@@ -1,0 +1,628 @@
+{
+  "format": "villa-grounded-receipt-selection-v1",
+  "status": "offline_retrieval_verified_not_deployed",
+  "createdAt": "2026-09-08T21:56:09.775Z",
+  "revision": 218,
+  "backupSha256": "73129b31d52efee6307236e6576da9d5f81b8b78bac34526544285359ca35b08",
+  "scope": "25 complete P6 preparations at one fixed canonical cut, before/after only turn.ts changes. No output sampling, clock advancement, or state mutation.",
+  "retrieval": {
+    "residents": 25,
+    "beforeWithOwnPhysicalReceipt": 2,
+    "afterWithOwnPhysicalReceipt": 25,
+    "beforeBodyDuplicateLoss": 8,
+    "afterBodyDuplicateLoss": 0,
+    "afterMissingLatestObservationAnyKind": 4,
+    "maxVisibleMemories": 4,
+    "stepReceiptLinks": 16
+  },
+  "accounting": {
+    "method": "Real installed tiktoken1.0.22 WASM ordinary full SYSTEM+USER+schema tokens, plus provisional128 framing tokens and1024 reserved output tokens. Workers AI uses the actual conservative byte-based request mapper.",
+    "groqModel": "openai/gpt-oss-20b",
+    "sameTokenEncodingFor120B": true,
+    "workersAiModel": "@cf/openai/gpt-oss-120b",
+    "outputMaximum": 1024,
+    "groqCeiling": 8000,
+    "groqTotalBefore": 156159,
+    "groqTotalAfter": 156103,
+    "workersAiMaximumTotalBefore": 18506,
+    "workersAiMaximumTotalAfter": 18488,
+    "allCasesWithinGroqMinuteCap": true,
+    "actualUsageOrForecast": false
+  },
+  "cases": [
+    {
+      "actor": "A",
+      "before": {
+        "groqReserved": 5495,
+        "workersAiMaximumNeurons": 652,
+        "userSha256": "a438dd52b9587c5a97e87bf8fe07eee16073292361162101a5c10bbd4797ab81"
+      },
+      "after": {
+        "groqReserved": 5482,
+        "workersAiMaximumNeurons": 651,
+        "userSha256": "73d39357b9ee63d7eb93403bc3c434af29f2f4a17028cd5ea82032bd6110b79a",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -13,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "197ade6265f4d1bc337a64af2cdfb944ad3138c3885cac198db81725844e3b3d",
+      "schemaAfterSha256": "e5815c7a520a0b8793c1a59457927c01ca8af9aac22687494ae87d98e9f79ddf"
+    },
+    {
+      "actor": "B",
+      "before": {
+        "groqReserved": 7420,
+        "workersAiMaximumNeurons": 871,
+        "userSha256": "a3d9abe367326083f0f474d89b21b8bb47142c7819b35b794e790c63531a893a"
+      },
+      "after": {
+        "groqReserved": 7420,
+        "workersAiMaximumNeurons": 870,
+        "userSha256": "1c1d402a379e8432e9b095b4da317457f135abfcd1d8890b0a4cb5bdb49b80b5",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 0,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "698a8c7d2b544ff6eaa9b57d93a14f92f56691daeee51c89ed42a94cf7ebd35f",
+      "schemaAfterSha256": "13b96e0349670f0945e4b39f056d3b0f1b6dbe4fa96d170aba0d4b1024051b5f"
+    },
+    {
+      "actor": "C",
+      "before": {
+        "groqReserved": 5366,
+        "workersAiMaximumNeurons": 648,
+        "userSha256": "bfe380d726073a567fef0c1cd7a5c245cb48a6d5c9e95418c6a47b6f63135d90"
+      },
+      "after": {
+        "groqReserved": 5370,
+        "workersAiMaximumNeurons": 647,
+        "userSha256": "b38ee7d14bf24027aa0a2255332c9c97ad5e8566940ad32a013f2a5e6e11a784",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 4,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "f88e1c7904b2f3a6142ad2bb3670aa2ea43d7272ae7673593d845448dd9cbb6c",
+      "schemaAfterSha256": "61b9f5644930ef2b021d242ce27755992e9da3554b87d9fad4ed35804d9e5baa"
+    },
+    {
+      "actor": "D",
+      "before": {
+        "groqReserved": 5353,
+        "workersAiMaximumNeurons": 647,
+        "userSha256": "97ae525d32c3b3fde5c862f1ff2d0298ab550492be0a1327f43ad60db733d568"
+      },
+      "after": {
+        "groqReserved": 5344,
+        "workersAiMaximumNeurons": 644,
+        "userSha256": "e7426b86158643d28facec48e0d13dbdbc281f2b096e65ddbcbc4314b35f708e",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -9,
+      "deltaWorkersAiMaximumNeurons": -3,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "7ac61e51be2440924553432d2cbbeadb1bee68e113105015b92160fc9f27b38e",
+      "schemaAfterSha256": "eb7905a0169c6f7b994887fd44191066f96c9066f24bc9739c1fc760062b5dd0"
+    },
+    {
+      "actor": "E",
+      "before": {
+        "groqReserved": 5430,
+        "workersAiMaximumNeurons": 650,
+        "userSha256": "2e8cdffa03a7ee849d4004785a54fb7817bc3bd69a205aa96d1145ca9aa15270"
+      },
+      "after": {
+        "groqReserved": 5401,
+        "workersAiMaximumNeurons": 647,
+        "userSha256": "4535e546479198b6c033bcd644caf8afe2e16afbfddee481ab053566edcf88dd",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": -29,
+      "deltaWorkersAiMaximumNeurons": -3,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "997eb3d809350ff28637352e48cbd608a81aaac096de13d90ddecf5988df8042",
+      "schemaAfterSha256": "e8639ba0bb83b17f96d10f68ba8299cd77937b331e5ff270d5cbb6c9f70426a9"
+    },
+    {
+      "actor": "F",
+      "before": {
+        "groqReserved": 7049,
+        "workersAiMaximumNeurons": 830,
+        "userSha256": "8c5afc20db2a8a386873723f234d02c5ded9a95cef4a40dfbaf50c86e6ba29f5"
+      },
+      "after": {
+        "groqReserved": 7052,
+        "workersAiMaximumNeurons": 830,
+        "userSha256": "7e08f9073adc1f653e8602822870c4ef49ca08be3fc986026f1c0cee3b4a5d04",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 3,
+      "deltaWorkersAiMaximumNeurons": 0,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "2453c9e8ae25c82820f2f13dac5edc5fe49be18a77d1452ba2bf0997f8054319",
+      "schemaAfterSha256": "eb893de5e98c347d5886069da83f03a2b96a3e23e0db6458e3520f1663e79cdb"
+    },
+    {
+      "actor": "G",
+      "before": {
+        "groqReserved": 6829,
+        "workersAiMaximumNeurons": 813,
+        "userSha256": "a319adeabc2fb752f37703519c737061aa7a3221b6e5fa2a0bdf600ff1ac26b0"
+      },
+      "after": {
+        "groqReserved": 6811,
+        "workersAiMaximumNeurons": 811,
+        "userSha256": "b705ba9d042e9c159b5bc059639a59a0fed3611c9dc54e55dba04271f2b7a174",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": -18,
+      "deltaWorkersAiMaximumNeurons": -2,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "03d1937c3324510ecfc8617b393f3bb33b76c4368fe33a483f31c3895d07bccd",
+      "schemaAfterSha256": "40b33f34142837575ff2f7f2e4122ad2b7bc545a9b5c1d248cad6a0bf5c53418"
+    },
+    {
+      "actor": "H",
+      "before": {
+        "groqReserved": 7247,
+        "workersAiMaximumNeurons": 868,
+        "userSha256": "9e6238aaa26fbdd39a9fd7e3f199fb7341ea0e78e01f088f34c2c5cdd37ddf44"
+      },
+      "after": {
+        "groqReserved": 7254,
+        "workersAiMaximumNeurons": 867,
+        "userSha256": "087c58dbd05daaf4e3f99c707b89cc402280d565d86c7168cd6241155649eefd",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": 7,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "1a02370ce5b6f9e21a95a862cc2cd297b0d1ab40f2ca8f6a0481f9de2673f9be",
+      "schemaAfterSha256": "a2f2d1d2215d4224eb9719fcf960c7ed951a96d11727b398c201f2d722bc9c73"
+    },
+    {
+      "actor": "I",
+      "before": {
+        "groqReserved": 7026,
+        "workersAiMaximumNeurons": 824,
+        "userSha256": "135861cfc94d2b3a7f683c0e10b1e1d71da56407392c31cedbe7cd785fd962b1"
+      },
+      "after": {
+        "groqReserved": 7033,
+        "workersAiMaximumNeurons": 825,
+        "userSha256": "13bb3166cefb6bd0709e42349bc30429b9a4c4af87bab046a112f8af7a4991bb",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 7,
+      "deltaWorkersAiMaximumNeurons": 1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "3378f5612f896589b0ef7220c7f63fe76e83bacf9563bcb78482ffebd4180f00",
+      "schemaAfterSha256": "f495a32d568ebe04c49f3bb147d5c286883453e020d5e2d29a255f783744b29a"
+    },
+    {
+      "actor": "J",
+      "before": {
+        "groqReserved": 7083,
+        "workersAiMaximumNeurons": 832,
+        "userSha256": "5677c30cfabca6dc7a3f729f582d48cbe382be80624db2225f0f9e9d560be633"
+      },
+      "after": {
+        "groqReserved": 7075,
+        "workersAiMaximumNeurons": 831,
+        "userSha256": "0f0f78443c7e39549eea035a35aa382798453016f14eba329d2726ca9a7977ff",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": -8,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "acae17bf02fa96c076c0b94757e83a732680f4306cb05b4ab7cc70f2cfa5328b",
+      "schemaAfterSha256": "1915bb3ad833bebdc333c37171dbc167434aae421d2e2bd7fab3f7911198e6a9"
+    },
+    {
+      "actor": "K",
+      "before": {
+        "groqReserved": 5470,
+        "workersAiMaximumNeurons": 653,
+        "userSha256": "e17a078fb2feee84c363d2151738ffc9396ed744cf7ade9942018e89538d79f5"
+      },
+      "after": {
+        "groqReserved": 5475,
+        "workersAiMaximumNeurons": 652,
+        "userSha256": "79161b405d7106bb5dfa4f81236a81a445b499baed166ccd01b9b816dd873939",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 5,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "9383bfba81fc126803c0ce86512dd1446d0a6d333119b70efe9aefab548e96c5",
+      "schemaAfterSha256": "e8b5c5e4bcfa131fba71892697ddf13a1c7f6d740ffbd593b9c6da3ba1457d80"
+    },
+    {
+      "actor": "L",
+      "before": {
+        "groqReserved": 7000,
+        "workersAiMaximumNeurons": 828,
+        "userSha256": "c3696e44496c9f05cdb1f5ff8ed538eb09c2ecea8dd6cc70b445b9d1fe54f61b"
+      },
+      "after": {
+        "groqReserved": 7005,
+        "workersAiMaximumNeurons": 827,
+        "userSha256": "5bc09137f511ab34d010107db80e62ad9519bdc7ea2941cf0901196df3327df9",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 5,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "48b739a7e880ae33c7661015356065b21a9a6db056cfdb88fa2ea29b6d4f3e5d",
+      "schemaAfterSha256": "99e1b229d975bdad46c66aaa9c8d20b402481354af0248e6b4f61d5497c1882f"
+    },
+    {
+      "actor": "M",
+      "before": {
+        "groqReserved": 5509,
+        "workersAiMaximumNeurons": 653,
+        "userSha256": "a63f9a40cf7b967b596619a173b3005440a796bcc540e0a9ba013e5eb8fad531"
+      },
+      "after": {
+        "groqReserved": 5500,
+        "workersAiMaximumNeurons": 652,
+        "userSha256": "c9e762823e4cd24215c7dcead881ead6d6a9bce17cca35713ee3eb474a4ff990",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -9,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "23fbe19d868bdb5e42eb789750eda1ef998e63f2864b5996df4505cbf9bce755",
+      "schemaAfterSha256": "213187399a21030b3c671abdb7e0dcb4622fc0cf1914d4008d0e0e04b3c33a98"
+    },
+    {
+      "actor": "N",
+      "before": {
+        "groqReserved": 6949,
+        "workersAiMaximumNeurons": 827,
+        "userSha256": "4b647539bc71bbaee39b96ecdf95bd7b732c90689ee3ffbc0e5840898ff83869"
+      },
+      "after": {
+        "groqReserved": 6982,
+        "workersAiMaximumNeurons": 831,
+        "userSha256": "a4c1579a056c117e52e39eba85ec294519268d1d240d0f925ba3516abd965374",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 33,
+      "deltaWorkersAiMaximumNeurons": 4,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "df468d4cb2f0fa2fa523c85be96b70991e71ee133257ed291e3b74a035bfea9b",
+      "schemaAfterSha256": "e87b0abe65ade00849e96c510ae6465fe25ba7e2a6aa25e3104e29cceebf22a1"
+    },
+    {
+      "actor": "O",
+      "before": {
+        "groqReserved": 5547,
+        "workersAiMaximumNeurons": 651,
+        "userSha256": "adb0983c9bfee61e67e37e074a82422f6f0faeac66d6e7bc7d5cdeffbb7a2a3f"
+      },
+      "after": {
+        "groqReserved": 5545,
+        "workersAiMaximumNeurons": 651,
+        "userSha256": "3c753ed9fc469f5b665c9693fd414f1ccfaf16dfbb6c5aaf66c84bac091322aa",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -2,
+      "deltaWorkersAiMaximumNeurons": 0,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "1859778ee2b5042dcc7d9d24bfa91df2144e1fac2659a99a427457c3c2fb69e4",
+      "schemaAfterSha256": "9368077befe2531bf92aaa39fc9b2f3a9f414453d38349508cea9a31220f56dc"
+    },
+    {
+      "actor": "P",
+      "before": {
+        "groqReserved": 7087,
+        "workersAiMaximumNeurons": 830,
+        "userSha256": "a96bc2489ae3f1e05922913d5026f55125c23e493944aa656a72c94a5c4a889c"
+      },
+      "after": {
+        "groqReserved": 7084,
+        "workersAiMaximumNeurons": 829,
+        "userSha256": "d9c855fb2ec083aa9f08e36b079fbdf2d027439f5113411abbe9c0e4a63319ab",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -3,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "e291aa8f1f57b59d7eefd43684b18bd635a9786fccc4330bffce430bf29925b9",
+      "schemaAfterSha256": "54002efa5ca0d17a575067e1de8da90589cb98a2c533bb8b51842c9d0fab486a"
+    },
+    {
+      "actor": "Q",
+      "before": {
+        "groqReserved": 5511,
+        "workersAiMaximumNeurons": 651,
+        "userSha256": "6dfd63e1dc3b307e53761ac329efa1bdafdbabd2159cb44f82a81a54600fef92"
+      },
+      "after": {
+        "groqReserved": 5507,
+        "workersAiMaximumNeurons": 650,
+        "userSha256": "247c2e5be557f802ed7fd90bec0447e26187ea6463f368b3509affda18d948c9",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": -4,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "95e8fcf5763a824eba2da5794faaefb5d03925d9b235fe74216e08135ed48ff8",
+      "schemaAfterSha256": "30cb29f675495853314458e7c2fbcd3f164f37aa3b32b35e4fcec590b4c745bb"
+    },
+    {
+      "actor": "R",
+      "before": {
+        "groqReserved": 6748,
+        "workersAiMaximumNeurons": 804,
+        "userSha256": "0cff76988ed51cc17d16f7045ed26579b4c254c996b3a69f1071d7324b6ef3b2"
+      },
+      "after": {
+        "groqReserved": 6726,
+        "workersAiMaximumNeurons": 801,
+        "userSha256": "b20c1dac686ecc67cd6e07ef4948fc3d170b4f5bc0a8dc44307cc37045e8f559",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -22,
+      "deltaWorkersAiMaximumNeurons": -3,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "3c6ef6a0dcc1101628e16ad8a3d3940f41450f8877bb9f76f52c8b4e556fecf3",
+      "schemaAfterSha256": "db087c95adbc254c2fb720ce024343c4d546ce7a3b6552ed08cf6cf081721976"
+    },
+    {
+      "actor": "S",
+      "before": {
+        "groqReserved": 5858,
+        "workersAiMaximumNeurons": 699,
+        "userSha256": "b4dc7aea82135bc4f116bc135699e4092a21f44d57d6771b487cd1da024fd0b9"
+      },
+      "after": {
+        "groqReserved": 5856,
+        "workersAiMaximumNeurons": 699,
+        "userSha256": "1cb063357634d09e77e081157810f0f1207afde2106d9ade71036c7454b6ba8d",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": -2,
+      "deltaWorkersAiMaximumNeurons": 0,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "bd53ff983709e862be63e60b955aa55e8245420a3a0ba57be1f24dda46c0040a",
+      "schemaAfterSha256": "c882b18f5cb8aed2c006789c8afa514cec81a3619a7791c45670901e33a5eb4c"
+    },
+    {
+      "actor": "T",
+      "before": {
+        "groqReserved": 7048,
+        "workersAiMaximumNeurons": 826,
+        "userSha256": "6a94602c7ffa15ea1a3b14aa62161fba018d523f62ad57aeaa72fd1867a82c8b"
+      },
+      "after": {
+        "groqReserved": 7044,
+        "workersAiMaximumNeurons": 826,
+        "userSha256": "d08713bc5a05eb4fe819def7809f088b2a5c4a9fc59f70661df59cc128d536f0",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": -4,
+      "deltaWorkersAiMaximumNeurons": 0,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "fb011c5feb5ce5a2c25048869caa79cae50456121dee2f40cce4d97e6431f287",
+      "schemaAfterSha256": "88e527f0662ccd36a52238ee99da5a48c69ed0b2bf589b3137ff858acf4e95fa"
+    },
+    {
+      "actor": "U",
+      "before": {
+        "groqReserved": 7429,
+        "workersAiMaximumNeurons": 871,
+        "userSha256": "a5e3e1aef25210158f25658b9d625b86c49d21d0f72d2e27449b0ecfb9686e44"
+      },
+      "after": {
+        "groqReserved": 7427,
+        "workersAiMaximumNeurons": 869,
+        "userSha256": "358bafbf1c402fbde33d6dae02762af07805da7891f091d1137074ab195f0918",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -2,
+      "deltaWorkersAiMaximumNeurons": -2,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "b56f2b8f4e92b4bc6ef87d7528be5de9b08c03751ed69004e68a60cb5d21bcad",
+      "schemaAfterSha256": "4bf60a93716544d890526886ec42c671d2355d7d16482cfcdd29c14c4e2beedb"
+    },
+    {
+      "actor": "V",
+      "before": {
+        "groqReserved": 5486,
+        "workersAiMaximumNeurons": 649,
+        "userSha256": "e07e1b9812096c5a68d242b9d68f590a8d036ae44e739d573e53c259dff46476"
+      },
+      "after": {
+        "groqReserved": 5495,
+        "workersAiMaximumNeurons": 650,
+        "userSha256": "613cdbaed322525498b7de42949d2501673c4004e7f3f418db810ca300c6f8ad",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": 9,
+      "deltaWorkersAiMaximumNeurons": 1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "e6d31f14172a2a88ab0d71a16128fc46ca0ed57a604f355e5d86f72c4bfba8cf",
+      "schemaAfterSha256": "be112acac21cdfe22c6f6d256249f1ba4d78ae40c73e1bd9b7a3b7884ab9219d"
+    },
+    {
+      "actor": "W",
+      "before": {
+        "groqReserved": 5299,
+        "workersAiMaximumNeurons": 630,
+        "userSha256": "f0ce45f8ff7fb9efc2c5371ff1b4135912b8e77b5d3807998700159fff29a5a8"
+      },
+      "after": {
+        "groqReserved": 5299,
+        "workersAiMaximumNeurons": 630,
+        "userSha256": "3f0b63246008421b920f7602d4c16efa13c173f245d9ca2f6bdb0c79efc446ff",
+        "memories": 2,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": 0,
+      "deltaWorkersAiMaximumNeurons": 0,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "8785c3f72d7f7cc6b1128357cee874d75790561a4dc0053aaa52bc1f8db55c66",
+      "schemaAfterSha256": "a46f8edff0bb4d9ae7bad51cef82cd2e4c553499ed4eac33b3de5e695498721f"
+    },
+    {
+      "actor": "X",
+      "before": {
+        "groqReserved": 5477,
+        "workersAiMaximumNeurons": 648,
+        "userSha256": "805d30d5938f06e718ebeb812c1ea80ffeb88fcaa9ca9924c718a8603a2584df"
+      },
+      "after": {
+        "groqReserved": 5477,
+        "workersAiMaximumNeurons": 648,
+        "userSha256": "48d25bb3ca2f6ca3026f379834bd733bb8c744919c6f0b7865642345c4b8e41c",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 0
+      },
+      "deltaGroqReserved": 0,
+      "deltaWorkersAiMaximumNeurons": 0,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "c8863d3a038c2112db069056055910ad847527b0b9aa6a9a1a3a59a349ffd2f3",
+      "schemaAfterSha256": "b70f7e9deb47466b7877d52cbc0dde677f06d1901b7f1bb8ce6ca7f4a77b4dea"
+    },
+    {
+      "actor": "Y",
+      "before": {
+        "groqReserved": 5443,
+        "workersAiMaximumNeurons": 651,
+        "userSha256": "cab990507327664ec75880d07c1c32a608396119167d61eb0e197df96cafba52"
+      },
+      "after": {
+        "groqReserved": 5439,
+        "workersAiMaximumNeurons": 650,
+        "userSha256": "d860fa9ec2ea0d416e768c8bc8bb19451dfa745e7e3559219705943a186b1c1e",
+        "memories": 4,
+        "visibleOwnPhysicalReceipts": 1,
+        "stepReceiptLinks": 1
+      },
+      "deltaGroqReserved": -4,
+      "deltaWorkersAiMaximumNeurons": -1,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "schemaBeforeSha256": "481d8ff0b463b635573e452c187a0dcb08d370a1468c1674b2c19e0310ee0b1d",
+      "schemaAfterSha256": "589d9c105ef37fe8c6ae10ccdde4519cffe5ef7b3d28ca155f5e617902009d3d"
+    }
+  ],
+  "sources": {
+    "before": [
+      {
+        "path": "src/lib/habitat/society/turn.ts",
+        "sha256": "31e3de49d9ef50d4ec5505869910c74cb6e702e4436671bd93c7c9249312d328"
+      },
+      {
+        "path": "src/lib/habitat/society/record-choice.ts",
+        "sha256": "4299a9a8964f9f2103f3c71b90eb4720947b0d3aad99116437f67bfb4f8d7d34"
+      },
+      {
+        "path": "src/lib/habitat/society/record-instructions.ts",
+        "sha256": "c8e3c02dcdbc0a672a03dff79176dc94934423dceb3931c0d40133f868fb36f1"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "d311e1236f49ed1916ad55c6238e6c2bb8c4c4e4885c860f0e944a8ca73e92bf"
+      }
+    ],
+    "after": [
+      {
+        "path": "src/lib/habitat/society/turn.ts",
+        "sha256": "97a119ebcef0bc1942a0e06862804d9c6e88b6fb0767d83e094c75d0be594a0f"
+      },
+      {
+        "path": "src/lib/habitat/society/record-choice.ts",
+        "sha256": "4299a9a8964f9f2103f3c71b90eb4720947b0d3aad99116437f67bfb4f8d7d34"
+      },
+      {
+        "path": "src/lib/habitat/society/record-instructions.ts",
+        "sha256": "c8e3c02dcdbc0a672a03dff79176dc94934423dceb3931c0d40133f868fb36f1"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "d311e1236f49ed1916ad55c6238e6c2bb8c4c4e4885c860f0e944a8ca73e92bf"
+      }
+    ],
+    "changedProducerSources": [
+      "src/lib/habitat/society/turn.ts"
+    ],
+    "measurementScriptSha256": "e80c92ddb1a65587f63f306fa4beaa7aa2f4f9eaa315f7584065167809291019",
+    "beforePrivateEvidenceSha256": "800c641576365cfd12e578d1c047b874eeb0392ee67ce32d808540dc2e9b5680",
+    "afterPrivateEvidenceSha256": "d7967602992fa69c0c02615a624f29669922b56d21c1c91e540edf8e58d6aa95"
+  },
+  "checks": {
+    "newRetrievalTests": 8,
+    "allSocietyTests": 232,
+    "societyFiles": 25,
+    "workerTargetedTests": 28,
+    "workerFiles": 4,
+    "appTypecheck": true,
+    "workerTypecheck": true,
+    "targetedEslint": true
+  },
+  "limitations": [
+    "This repairs a demonstrated retrieval/deduplication defect; no model response has been evaluated after it.",
+    "The earlier eight-case negative instruction comparison already supplied decisive facts in several cases; this correction cannot be presented as a cure for those failures.",
+    "At most two existing receipts are reserved within four memories. Other history remains bounded; four actors still omit their latest observation of some other kind.",
+    "The framing128 allowance is provisional, and conservative Workers AI maxima are not actual neuron usage. Summing25 case budgets is not a daily consumption forecast.",
+    "Previously saved jobs, private access, consent, state, quotas and physical clocks are unchanged."
+  ],
+  "actions": {
+    "networkRequests": 0,
+    "inferences": 0,
+    "productionWrites": 0
+  },
+  "privacy": {
+    "noPrivateProseOrPromptsPublished": true
+  }
+}

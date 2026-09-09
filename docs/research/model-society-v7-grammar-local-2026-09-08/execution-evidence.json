@@ -1,0 +1,72 @@
+{
+  "recordedAt": "2026-09-08T14:00:40.561Z",
+  "scope": "Local isolated fixture; no cloud or production request.",
+  "command": [
+    "/Users/alejandrotreny/.omlx/bin/omlx",
+    "serve",
+    "--base-path",
+    "/tmp/villa-omlx-grammar-20260908",
+    "--model-dir",
+    "/Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8018",
+    "--max-concurrent-requests",
+    "1",
+    "--memory-guard",
+    "safe",
+    "--no-cache",
+    "--no-hf-cache",
+    "--log-level",
+    "info"
+  ],
+  "harnessCommand": [
+    "node",
+    "scripts/benchmark-society-runtime-v7-local.mjs",
+    "--run",
+    "--out",
+    "/Users/alejandrotreny/Documents/ChatGPT/Villa-Treny/docs/research/model-society-v7-grammar-local-2026-09-08",
+    "--server-pid",
+    "26381",
+    "--max-new-calls",
+    "37"
+  ],
+  "ownedServerPid": 26381,
+  "ownedToolSession": 14032,
+  "serverStopped": true,
+  "stopSignal": "SIGTERM",
+  "serverExitCode": 143,
+  "verification": "PID 26381 absent and no listener on 8018 after completion; existing PID 29617 still listened on 127.0.0.1:8000.",
+  "userProcessModified": false,
+  "serverLogSha256": "f126a066a3c5c92ef6e5b805d22c901626c9fcde3c3c4a15a0bef894de21185b",
+  "sourceBundleSha256": "32677a0ad85965fe5d6d6c8bd093bdd6a0093565e0c5efe889b1d4be7b87adac",
+  "modelProvenance": "Four weight hashes are inherited from the preceding measured local run. Current size/inode/mtime/ctime guard this batch; the weight bytes were not rehashed.",
+  "changedSinceOriginalV7": [
+    {
+      "path": "package.json",
+      "sha256": "09039e545bbbb3d236fe8644e7e9f0ee07851be124e76b143617fe7b5ac4f6e7"
+    },
+    {
+      "path": "src/lib/habitat/society/capabilities.ts",
+      "sha256": "d8a2437937fd325af6004a8db7c637ca1f7fabecc1062aeb26a3594e013e67e1"
+    },
+    {
+      "path": "src/lib/habitat/society/turn.ts",
+      "sha256": "d43378d30fb0d40586b5bce3434a26bc5e7a086709255ca0c57438cb46e67f4b"
+    },
+    {
+      "path": "workers/habitat-runtime/src/contracts.ts",
+      "sha256": "148065684e7bc17653f137025db1e7dd29e850de2d83e1c2b84fc876e97eb3c8"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "557628b02b113b3a0a4b873c6dd00afe48ea5a81bd80ecfaa4a7eb453eb828dd"
+    }
+  ],
+  "instructionAndSamplingChangesMadeForThisRun": [],
+  "schedulerAllocation": "This run used the captured earlier scheduler, before the subsequently planned quota-sharing change. The fixture directly schedules all 25 initial turns, eight actual replies and four reviews; it does not exercise production provider quota allocation.",
+  "cloudResearchNeuronsBefore": 1852,
+  "cloudResearchNeuronsAfter": 1852,
+  "cloudRequests": 0
+}

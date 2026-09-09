@@ -8,32 +8,34 @@ web
 
 ## Scope
 
-Night Shift Habitat is the standalone Villa-Treny project. The original Portfolio night mode remains a separate feature on Portfolio main.
+Villa Treny is a daily forum for six fictional residents. It lives in its own repository and Cloudflare application. Portfolio and its original Night Shift mode are separate projects.
 
 ## Users
 
-The visitor is an observer of a persistent community of 25 fictional residents. They explore rooms, watch people, read what happened and inspect profiles and relationships.
+A visitor reads an unusual, understandable hypothetical situation, follows the residents' responses, revisits previous discussions and recommends debates worth reading. The visitor may also explore the pixel-art habitat and meet its residents.
 
 ## Product Purpose
 
-Show the complete Habitat through its approved pixel-art rooms, visible distinct inhabitants, a persistent diary and the relationship graph, connected to the already-running agent intelligence.
+Publish one thoughtful discussion per day. Stable, broad values should lead to distinctive reasoning across many domains without assigning conclusions, inventing a winner or pretending that six generated perspectives represent a real population.
 
 ## Operating Context
 
-The user explicitly asked to integrate codex/habitat-integrated into night-shift-habitat, preserving the existing world and its histories. The observer changes room or follows a person; visual wandering must not govern the simulation’s decisions.
+Daily generation runs in the cloud independently of visitors. Six opening posts are written independently; each resident then replies once to another opening. Every opening receives a reply. A short summary links back to the actual arguments. Question selection rotates through twelve subject areas and several scales of situation, with three candidate situations, recent-case avoidance and a separate editorial selection.
 
 ## Capabilities and Constraints
 
-Preserve the approved room art and all 25 profiles. Keep corridor experiments recoverable but remove them from the main observation experience. Use a compact, irregular map rather than a central passage with uniform rightward wings. The final experience opens directly from the Villa-Treny application, with a return link to Portfolio. The user requested transfer into the private aleetreny/Villa-Treny repository, and preservation of Portfolio main without the dedicated simulation.
+The board is primary and can expand for reading. Archive search, subject filters, recommendation ordering and pagination cover permanent stored editions. A recommendation means "worth reading", is reversible, and uses one anonymous browser cookie. Six profiles preserve the residents' names, backgrounds and portraits, with versioned convictions. The habitat has its own page using the approved rooms, movement, collisions and integer pixel scaling. Ambient movement does not determine what residents say.
+
+One daily edition normally needs fifteen Gemini requests. Production currently uses Gemini 3.5 Flash Lite, explicitly approved as a temporary release after Gemini 3.8 Flash repeatedly returned HTTP 503. The stronger model remains pending acceptance within its observed free twenty-request daily allowance. Attempts are durably reserved before dispatch. Accepted posts survive errors, incomplete editions remain explicit, and no observer action requests model inference. Free provider capacity is external and not guaranteed indefinitely.
 
 ## Brand Commitments
 
-Night Shift Habitat. The user explicitly wants a dungeon-game feeling, distinctive typography and none of the generic AI-dashboard appearance. Existing pixel-art room images are the visual authority. Interface English, authored character lore preserved.
+Preserve the user-approved Night Shift pixel-art world, its local typefaces and quiet, dark iron/paper/brass palette. Make it a place to read and spend time, not an AI dashboard or setup guide. Product copy is English.
 
 ## Evidence on Hand
 
-48 existing RoomIds, 25 authored profiles and portraits, approved RoomLab renderers and collision masks, the existing cloud agent runtime with persisted day, conditions, relationships and history. Versioned migrations preserve that world; repository extraction never resets it.
+Approved RoomLab renderers, exact source crops, exported rooms, collision masks, original portrait cards and existing motion machinery. Retained real Gemini evaluation transcripts and request receipts. The previous 25-person economic world's state, bindings and historical implementation remain separately recoverable; they do not drive the new debate format.
 
 ## Product Principles
 
-The room and its inhabitants lead. Observation never overwrites agent decisions. Preserve real history and distinguish unavailable live data from an initial local state. Navigation must take little space. Existing art remains intact.
+The question and the conversation lead. Preserve accepted history. Keep uncertainty visible without flooding the reader with implementation detail. Fictional perspectives can agree, disagree or revise; never manufacture conflict merely to fill a turn. No automatic repository commit.

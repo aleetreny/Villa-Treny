@@ -1,0 +1,385 @@
+{
+  "newCalls": 8,
+  "stopped": "all_eight_cases_processed",
+  "results": [
+    {
+      "pair": "BK",
+      "variant": "A",
+      "actor": "B",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "53b42f51c36480b7718c1890023e32d4efb47277db032746e854a1e3e47f1b21",
+        "messages": [
+          {
+            "conversationId": "conversation:7",
+            "id": "turn:408",
+            "speaker": "B",
+            "text": "Thanks for sending those over, Kes. I’ve got everything I need for now, so no further action is required on my end.",
+            "atMs": 1788898916650
+          }
+        ],
+        "physicalWatches": 0,
+        "operations": {
+          "drafts": 0,
+          "shares": 0,
+          "publications": 0,
+          "recordOffers": 0,
+          "recordAgreements": 0,
+          "offers": 1,
+          "agreements": 0,
+          "conversationsClosed": 0,
+          "economicEvents": 0
+        }
+      }
+    },
+    {
+      "pair": "BK",
+      "variant": "B",
+      "actor": "B",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "bb08711b279dc0326a6e7d5caadc66b97b99218106ce38533ca165765ae8e489",
+        "messages": [
+          {
+            "conversationId": "conversation:7",
+            "id": "turn:408",
+            "speaker": "B",
+            "text": "Thanks for sending those over. I really appreciate you keeping me in the loop.",
+            "atMs": 1788898916650
+          }
+        ],
+        "physicalWatches": 0,
+        "operations": {
+          "drafts": 0,
+          "shares": 0,
+          "publications": 0,
+          "recordOffers": 0,
+          "recordAgreements": 0,
+          "offers": 1,
+          "agreements": 0,
+          "conversationsClosed": 0,
+          "economicEvents": 0
+        }
+      }
+    },
+    {
+      "pair": "CN",
+      "variant": "B",
+      "actor": "N",
+      "application": {
+        "ok": false,
+        "code": "record_content_too_large",
+        "afterHash": "93288ca565097eec7b0971e64d038a88947c802ef1cfb30344b3a0faf0fec694",
+        "messages": [],
+        "operations": {},
+        "physicalWatches": 0
+      }
+    },
+    {
+      "pair": "CN",
+      "variant": "A",
+      "actor": "N",
+      "application": {
+        "ok": false,
+        "code": "record_content_too_large",
+        "afterHash": "93288ca565097eec7b0971e64d038a88947c802ef1cfb30344b3a0faf0fec694",
+        "messages": [],
+        "operations": {},
+        "physicalWatches": 0
+      }
+    },
+    {
+      "pair": "IO",
+      "variant": "A",
+      "actor": "I",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "36e16c64ff0f3b43c6f71246cdf701a47accbd51e1965b01981982dd0d0be46e",
+        "messages": [
+          {
+            "conversationId": "conversation:71",
+            "id": "turn:408",
+            "speaker": "I",
+            "text": "The garden is ready. I am using the reserved resources to grow produce now.",
+            "atMs": 1788898916650
+          }
+        ],
+        "physicalWatches": 0,
+        "operations": {
+          "drafts": 0,
+          "shares": 0,
+          "publications": 0,
+          "recordOffers": 0,
+          "recordAgreements": 0,
+          "offers": 1,
+          "agreements": 0,
+          "conversationsClosed": 0,
+          "economicEvents": 0
+        }
+      }
+    },
+    {
+      "pair": "IO",
+      "variant": "B",
+      "actor": "I",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "9f1fd73d5e266dc4d8e9d3ac8c15a81015b03eda699044e2132389ef597b3d7c",
+        "messages": [
+          {
+            "conversationId": "conversation:71",
+            "id": "turn:408",
+            "speaker": "I",
+            "text": "I have the resources. I am starting the grow operation now.",
+            "atMs": 1788898916650
+          }
+        ],
+        "physicalWatches": 0,
+        "operations": {
+          "drafts": 0,
+          "shares": 0,
+          "publications": 0,
+          "recordOffers": 0,
+          "recordAgreements": 0,
+          "offers": 1,
+          "agreements": 0,
+          "conversationsClosed": 0,
+          "economicEvents": 0
+        }
+      }
+    },
+    {
+      "pair": "GQ",
+      "variant": "B",
+      "actor": "G",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "e1c0a19018e1ac32e90cf8af18db6bf9ed168cc9509b5a73765d6679d64295fb",
+        "messages": [
+          {
+            "conversationId": "conversation:59",
+            "id": "turn:408",
+            "speaker": "G",
+            "text": "Materials are depleted. I need 1 unit to proceed with the repair.",
+            "atMs": 1788898916650
+          }
+        ],
+        "physicalWatches": 0,
+        "operations": {
+          "drafts": 0,
+          "shares": 0,
+          "publications": 0,
+          "recordOffers": 0,
+          "recordAgreements": 0,
+          "offers": 1,
+          "agreements": 0,
+          "conversationsClosed": 0,
+          "economicEvents": 0
+        }
+      }
+    },
+    {
+      "pair": "GQ",
+      "variant": "A",
+      "actor": "G",
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "e1c0a19018e1ac32e90cf8af18db6bf9ed168cc9509b5a73765d6679d64295fb",
+        "messages": [
+          {
+            "conversationId": "conversation:59",
+            "id": "turn:408",
+            "speaker": "G",
+            "text": "Materials are depleted. I need 1 unit to proceed with the repair.",
+            "atMs": 1788898916650
+          }
+        ],
+        "physicalWatches": 0,
+        "operations": {
+          "drafts": 0,
+          "shares": 0,
+          "publications": 0,
+          "recordOffers": 0,
+          "recordAgreements": 0,
+          "offers": 1,
+          "agreements": 0,
+          "conversationsClosed": 0,
+          "economicEvents": 0
+        }
+      }
+    }
+  ],
+  "policy": {
+    "version": 1,
+    "protocol": 6,
+    "sourceRevision": 199,
+    "pairs": [
+      "BK",
+      "CN",
+      "IO",
+      "GQ"
+    ],
+    "order": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ]
+    ],
+    "maxCalls": 8,
+    "maxOutputTokens": 1024,
+    "maxPromptBytes": 32000,
+    "timeoutMs": 120000,
+    "concurrency": 1,
+    "thinking": false,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+    "continuations": 0,
+    "physicalWatches": 0,
+    "variable": "SYSTEM only: exact 7a reference guidance versus progress guidance",
+    "byteAccounting": "32,000 UTF-8 bytes of the complete serialized local request, including sampling and model fields. The historic shared receiver remains at 24,576 messages-plus-schema bytes.",
+    "common": "Current pure core, one prepared USER/schema/seed per pair, isolated clone per response. No historic output is planted."
+  },
+  "productionWrites": 0,
+  "cloudRequests": 0,
+  "physicalWatches": 0,
+  "usage": [
+    {
+      "pair": "BK",
+      "variant": "A",
+      "actor": "B",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 2908,
+        "completion_tokens": 147,
+        "total_tokens": 3055
+      },
+      "latencyMs": 16096
+    },
+    {
+      "pair": "BK",
+      "variant": "B",
+      "actor": "B",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 3085,
+        "completion_tokens": 134,
+        "total_tokens": 3219
+      },
+      "latencyMs": 3429
+    },
+    {
+      "pair": "CN",
+      "variant": "B",
+      "actor": "N",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 2960,
+        "completion_tokens": 314,
+        "total_tokens": 3274
+      },
+      "latencyMs": 6179
+    },
+    {
+      "pair": "CN",
+      "variant": "A",
+      "actor": "N",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 2783,
+        "completion_tokens": 291,
+        "total_tokens": 3074
+      },
+      "latencyMs": 5796
+    },
+    {
+      "pair": "IO",
+      "variant": "A",
+      "actor": "I",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 2857,
+        "completion_tokens": 112,
+        "total_tokens": 2969
+      },
+      "latencyMs": 3011
+    },
+    {
+      "pair": "IO",
+      "variant": "B",
+      "actor": "I",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 3034,
+        "completion_tokens": 169,
+        "total_tokens": 3203
+      },
+      "latencyMs": 3624
+    },
+    {
+      "pair": "GQ",
+      "variant": "B",
+      "actor": "G",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 2850,
+        "completion_tokens": 76,
+        "total_tokens": 2926
+      },
+      "latencyMs": 2459
+    },
+    {
+      "pair": "GQ",
+      "variant": "A",
+      "actor": "G",
+      "state": "completed",
+      "reservedCalls": 1,
+      "modelMatched": true,
+      "usageComplete": true,
+      "tokens": {
+        "prompt_tokens": 2673,
+        "completion_tokens": 76,
+        "total_tokens": 2749
+      },
+      "latencyMs": 2296
+    }
+  ],
+  "privateEvidenceRetained": true
+}

@@ -1,0 +1,255 @@
+{
+  "format": "villa-first-p6-physical-watch-v1",
+  "verifiedAt": "2026-09-08T19:12:12.468Z",
+  "scope": "Exact offline reproduction of one already-observed natural production watch; no provider calls or additional production watch.",
+  "before": {
+    "sha256": "3421cf65e5a7eeedd25b842188e07a135d70595d6ca14ff0a6ede268bf873818",
+    "revision": 177,
+    "day": 107,
+    "watch": 3
+  },
+  "after": {
+    "sha256": "6be18aaf98d3d0d6607cfef023b9fd28cc9ef63a68f4b658ba6097b1c87d862a",
+    "revision": 179,
+    "day": 107,
+    "watch": 4
+  },
+  "run": {
+    "id": "habitat-canonical:physical:107:3",
+    "committedAtMs": 1788894484142,
+    "expectedDueAtMs": 1788894484141
+  },
+  "checks": {
+    "all25ResidentsOneSlot": true,
+    "exactObservationsReplay": true,
+    "exactPhysicalWorldReplay": true,
+    "noExtraPublicationSlot": true,
+    "conservedMoney": true
+  },
+  "actions": [
+    {
+      "actor": "Y",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "B",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "V",
+      "kind": "physical",
+      "verb": "cook",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "W",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    },
+    {
+      "actor": "L",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "X",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    },
+    {
+      "actor": "S",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "E",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    },
+    {
+      "actor": "R",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "A",
+      "kind": "physical",
+      "verb": "work",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "D",
+      "kind": "physical",
+      "verb": "repair",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "G",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    },
+    {
+      "actor": "H",
+      "kind": "physical",
+      "verb": "repair",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "N",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "F",
+      "kind": "physical",
+      "verb": "dig",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "Q",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    },
+    {
+      "actor": "M",
+      "kind": "physical",
+      "verb": "dig",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "T",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    },
+    {
+      "actor": "U",
+      "kind": "physical",
+      "verb": "repair",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "K",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "C",
+      "kind": "physical",
+      "verb": "sleep",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "P",
+      "kind": "physical",
+      "verb": "cook",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "I",
+      "kind": "physical",
+      "verb": "grow",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "O",
+      "kind": "physical",
+      "verb": "clean",
+      "ok": true,
+      "planned": true,
+      "interrupted": false
+    },
+    {
+      "actor": "J",
+      "kind": "physical",
+      "verb": "eat",
+      "ok": true,
+      "planned": false,
+      "interrupted": false
+    }
+  ],
+  "money": {
+    "before": {
+      "held": 878.7893824361378,
+      "initial": 828.4872291863744,
+      "minted": 72,
+      "burned": 11,
+      "leaked": 10.697846750236494,
+      "conserved": true
+    },
+    "after": {
+      "held": 872.7893824361378,
+      "initial": 828.4872291863744,
+      "minted": 72,
+      "burned": 17,
+      "leaked": 10.697846750236494,
+      "conserved": true
+    }
+  },
+  "publicationActions": 0,
+  "limits": [
+    "No record was scheduled before this watch; this cannot establish autonomous publication.",
+    "A planned physical action is not proof that its wider prose goal was achieved.",
+    "The subsequent rejected Wen cognition is audited separately and did not create a physical action."
+  ]
+}

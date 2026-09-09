@@ -1,0 +1,427 @@
+{
+  "mode": "offline",
+  "httpRequests": 0,
+  "config": {
+    "policy": {
+      "version": 1,
+      "protocol": 4,
+      "maxCalls": 6,
+      "matchedActors": [
+        "G",
+        "L",
+        "B"
+      ],
+      "replyBranch": "L",
+      "maxReplies": 3,
+      "maxOutputTokens": 1024,
+      "timeoutMs": 120000,
+      "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+      "epochMs": 1788825600000,
+      "generation": 0
+    },
+    "source": [
+      {
+        "path": "package.json",
+        "sha256": "6373112858a9d77d6c7490274f01b2713da0bc92abcc1d5dfacde417ca79ba30"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "03af0997568d17db7048c52941ba924985827c7e763dee12d196a0f7a3e0658b"
+      },
+      {
+        "path": "scripts/benchmark-society-models.mjs",
+        "sha256": "353314dc2bce86eabdfe8ce1fefbab72535f560b23e7e6c4557054d881cba4c0"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime-v6.mjs",
+        "sha256": "2fcbe7dcc58bd8efe0ab5e50ddfa34c8ee0ea90509bc32ac8b599ce82c1fdae0"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime-v7-local.mjs",
+        "sha256": "dbc96850d2720b30d437558b6e461d5e59d184214cf3ad75e548547bb8439d0f"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime.mjs",
+        "sha256": "005d44072b9f43b9be62ced55f4e17811f5002235ff0df10abd020af49b99f1d"
+      },
+      {
+        "path": "src/lib/habitat/agency.ts",
+        "sha256": "2dd4cfe731271ff7bffb414878d5bf5734ed5ed108908577dab19bfb2fde57c4"
+      },
+      {
+        "path": "src/lib/habitat/axes.ts",
+        "sha256": "cd74388ccd7f4d2f9af2d45a130dc825cacaad4d685fcfa0f7e56bac41e5fbd9"
+      },
+      {
+        "path": "src/lib/habitat/bitmap-codec.ts",
+        "sha256": "4fc39555204830e98ee585474f82e6696e5a5140f0f6db82ed5d39438836eada"
+      },
+      {
+        "path": "src/lib/habitat/engine/economy.ts",
+        "sha256": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8"
+      },
+      {
+        "path": "src/lib/habitat/engine/knowledge.ts",
+        "sha256": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14"
+      },
+      {
+        "path": "src/lib/habitat/engine/state.ts",
+        "sha256": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8"
+      },
+      {
+        "path": "src/lib/habitat/engine/tick.ts",
+        "sha256": "4bc9068d99f84ef8f45af3783f4872cde109e162ea26cb7f71b7af1897be93cb"
+      },
+      {
+        "path": "src/lib/habitat/engine/verbs.ts",
+        "sha256": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3"
+      },
+      {
+        "path": "src/lib/habitat/generated/rooms.json",
+        "sha256": "d7d9631c820a8321e5db00cdbb85a069dd72611312f3aecc20173cde4e54e208"
+      },
+      {
+        "path": "src/lib/habitat/graph.ts",
+        "sha256": "ffa22d815347a48c307d5dc22dc53755fd3d07267a976f8933dddee698ca77b0"
+      },
+      {
+        "path": "src/lib/habitat/grid.ts",
+        "sha256": "f1d005f71327df39c047e2e9625da451fd5e04ac59ff47f3ca62fd592c584cd1"
+      },
+      {
+        "path": "src/lib/habitat/journal.ts",
+        "sha256": "b1ea6f4230404ec9d5084a0036912a382a61723bbf68a26791aac0d6749fb470"
+      },
+      {
+        "path": "src/lib/habitat/live.ts",
+        "sha256": "b43c3d095801fb14e7e9658b39dcda00a80ef6566b6299429014cb0de7e6c8fc"
+      },
+      {
+        "path": "src/lib/habitat/navigation.ts",
+        "sha256": "6078a44b9520163bdf1014b08ef0d950206aa7db4e59ac1503d8b81c12b6a3f7"
+      },
+      {
+        "path": "src/lib/habitat/observer-camera.ts",
+        "sha256": "2f2d9cc048756b5dffde9ad01ff4e28329a50e8fdb08111aca6dbd5d56a5c048"
+      },
+      {
+        "path": "src/lib/habitat/observer-matrix.ts",
+        "sha256": "26da0f7e03bca8d076649eda071261b2237070032dad39f69285274a37600a27"
+      },
+      {
+        "path": "src/lib/habitat/observer-preferences.ts",
+        "sha256": "8cf50c24deaccf47eeb22e5570f3348a55682f3b62942851db198eb7c1737073"
+      },
+      {
+        "path": "src/lib/habitat/passages.ts",
+        "sha256": "63203b2b2e1d099ec760f8c069efb9676317693006a83126e6c3dc1be216cb1a"
+      },
+      {
+        "path": "src/lib/habitat/portraits.ts",
+        "sha256": "b717c55fc544ec643d6dfb437e40a59a92dffbf2dba197da121acb5262b54754"
+      },
+      {
+        "path": "src/lib/habitat/random.ts",
+        "sha256": "e18394c5735036e93d0bf001a1b2a1d95ab1255484e84a79bd8ceb77e2d17c33"
+      },
+      {
+        "path": "src/lib/habitat/residents.ts",
+        "sha256": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29"
+      },
+      {
+        "path": "src/lib/habitat/room-art.ts",
+        "sha256": "217bb8023ecce49099e18c78e39f8d7599f989becc88820243f92e6bda865124"
+      },
+      {
+        "path": "src/lib/habitat/room-motion.ts",
+        "sha256": "3b456066b93d9016a62ee039936a714284ac36f43b993c42c99f4903a5a2c99f"
+      },
+      {
+        "path": "src/lib/habitat/rooms.ts",
+        "sha256": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57"
+      },
+      {
+        "path": "src/lib/habitat/section.ts",
+        "sha256": "ed6147c44affe83c8f00d64ffab216aa2dd9dd8bd3879085596300a7abdff7c6"
+      },
+      {
+        "path": "src/lib/habitat/snapshot.ts",
+        "sha256": "a3569e0ce59798859a38445ea45998864072dcf737ac151d7df38a3c24b027e4"
+      },
+      {
+        "path": "src/lib/habitat/society.ts",
+        "sha256": "90d6e2046a3151deb4e0b3f943b2727bbd8946cf5a495f641687c6415aaca13a"
+      },
+      {
+        "path": "src/lib/habitat/society/appraisal.ts",
+        "sha256": "f946f0accaece3c460d3a6e5fe884aa4797e2fccfc403ea17fcdbaa25a37ea7b"
+      },
+      {
+        "path": "src/lib/habitat/society/capabilities.ts",
+        "sha256": "d63a161cf3fb4f0baa754e2c71f1d310fb6cac9ab56353586be6bb2f86c7283a"
+      },
+      {
+        "path": "src/lib/habitat/society/choice.ts",
+        "sha256": "8c255e9d1c490d1561036fcc6a3204eb89009439212a3604fa890a1344e45b7b"
+      },
+      {
+        "path": "src/lib/habitat/society/economy.ts",
+        "sha256": "a654dca715bdc163e792115c0bdafb48177bdbee2e0fc74ad3d588873504802a"
+      },
+      {
+        "path": "src/lib/habitat/society/index.ts",
+        "sha256": "2c03abec435c3936a49e83031ae9b7d0a56d74872dff6640c63c45ee3229a626"
+      },
+      {
+        "path": "src/lib/habitat/society/instructions.ts",
+        "sha256": "5faf18d5a5fee50f0ceca032e29edd739bcf78945b82eefcbc20f6cc17c6f6ea"
+      },
+      {
+        "path": "src/lib/habitat/society/money.ts",
+        "sha256": "923226735ffaadfdeb4fecf6ef6418b08257285c3eebf8a56941ceefe4684b8a"
+      },
+      {
+        "path": "src/lib/habitat/society/physical.ts",
+        "sha256": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae"
+      },
+      {
+        "path": "src/lib/habitat/society/public.ts",
+        "sha256": "d33553d696de531b063761ebada83299541a11d1fbf8d7c68ec93481a3aade5a"
+      },
+      {
+        "path": "src/lib/habitat/society/schema.ts",
+        "sha256": "3de39ade3487159388a378681a4f1fdcd89b3e78bef4ebf5dc1405fb04adb6e1"
+      },
+      {
+        "path": "src/lib/habitat/society/state.ts",
+        "sha256": "bcc7ddf0baf53d24d146214dc7e6e578aefa01b0778b08cc672fe92aa1414bc3"
+      },
+      {
+        "path": "src/lib/habitat/society/turn.ts",
+        "sha256": "d43378d30fb0d40586b5bce3434a26bc5e7a086709255ca0c57438cb46e67f4b"
+      },
+      {
+        "path": "src/lib/habitat/society/types.ts",
+        "sha256": "c7029b821a40ccf1ef99a9d309a5556e9eb3e51b539a7259c7062e38550fa1ed"
+      },
+      {
+        "path": "src/lib/habitat/tiles.ts",
+        "sha256": "1ad438260ca82edf4a60d950f54026314b3a7d82dc9c449f2dbb675d5097a2a7"
+      },
+      {
+        "path": "src/lib/habitat/useHabitatLive.ts",
+        "sha256": "37cf4e65d2fe4ff69c349d0edeb878dcd0837f4f2963dbfbc110313a4195089e"
+      },
+      {
+        "path": "src/lib/habitat/useObserverPresence.ts",
+        "sha256": "896d46511296a53ea2557ddd5419d4730d661a23c681577283447aea2cb3e77c"
+      },
+      {
+        "path": "src/lib/habitat/weave.ts",
+        "sha256": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5"
+      },
+      {
+        "path": "workers/habitat-runtime/package.json",
+        "sha256": "3b3c0a1f715373d4329886ed03713760da783373d10b555100d1089d095b7b4f"
+      },
+      {
+        "path": "workers/habitat-runtime/src/contracts.ts",
+        "sha256": "148065684e7bc17653f137025db1e7dd29e850de2d83e1c2b84fc876e97eb3c8"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/deadline.ts",
+        "sha256": "2d97949eeb8c0ed829e171147f27782bdfa48fd1e408d33d7f6fa62d486f357c"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+        "sha256": "9851210b2af31b0df81fc97f6dbf124848420cb9acbab8e4daf863cc048a1dd9"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+        "sha256": "99b665861f1371d034149d689667619df1fed7ca5a059da43ebb7cf853d9d554"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq.ts",
+        "sha256": "207b756310183a2a3ebb759a0e8fe13f84ffc8a5e3c1bab8d7f945958cdc74b1"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/router.ts",
+        "sha256": "6276e39c8c46f56a0cda30a17ee34e5a8a71643ba47a7826979af1e40cca9a4b"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "1d0f1f1d0d8fe6a92e3b4a1b1c6c775b580a8974a1a25bda41017857e9de42ce"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/tiktoken-wasm.d.ts",
+        "sha256": "18aafdd5703deffb3dbb9ffc63d06487d26d93ae9450eed8c0f26c19d024829d"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+        "sha256": "8eebc8d8eb919864facbb0e7ebe81e2b8e9c35af900602037943b7a240150b7e"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "b1965b2db42d421d89dac357d293e7a1f7a4a32a81128f725b5094026174bb5b"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "6600858e5627853169af5f3e6111284ad75d3465574517a428bf3d916c63da9e"
+      }
+    ],
+    "frozen": {
+      "sourceBundleSha256": "f9073d2546197690f8fd0d5391dd2ed2826f9675e0990873f776f8dd9faf5817",
+      "referenceLedgerSha256": "5c522aa859f7d06f157166126436f1f7f834baa32a449a67e7590f2be6e0b42b",
+      "sourceFileCount": 62,
+      "dependencies": {
+        "vite": "8.2.0",
+        "zod": "4.4.3"
+      }
+    },
+    "scripts": [
+      {
+        "path": "scripts/benchmark-society-open-message-local.mjs",
+        "sha256": "4dadd2d1979df3a498069ad9409bba54d49b77ae4035add56a4a0d66af8def20"
+      },
+      {
+        "path": "scripts/benchmark-society-v7-deal-order-local.mjs",
+        "sha256": "d222f49f66870abb8115223bd4ef26c17e21e2e6da278f694be4d84066cb77a8"
+      },
+      {
+        "path": "scripts/benchmark-society-frozen-v7.mjs",
+        "sha256": "f5679a5ac476cef2c0017eff2c0773aca478ba9bb9d1e5c81bb5d292eca4b3c8"
+      },
+      {
+        "path": "scripts/benchmark-society-models.mjs",
+        "sha256": "353314dc2bce86eabdfe8ce1fefbab72535f560b23e7e6c4557054d881cba4c0"
+      }
+    ],
+    "model": {
+      "id": "Qwen3.6-35B-A3B-4bit",
+      "path": "/Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit",
+      "serverVersion": "0.6.4"
+    },
+    "modelProvenance": {
+      "priorLedger": "docs/research/model-society-local-identity-probe-2026-09-08/ledger.json",
+      "priorLedgerSha256": "63a6689ba7e3769ce12446c5b71cbef05aa460fd805a77815e68e683faa82913",
+      "observedFiles": [
+        {
+          "name": "config.json",
+          "bytes": 23591,
+          "sha256": "a822a9e48b0aafbe3144ec37d4fb067e178ed96615ce6e4420b3149893cc5767",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187434,
+          "mtimeMs": 1788165114629.523,
+          "ctimeMs": 1788165114631.0522
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 215755,
+          "sha256": "0b28df60e33753a14e816d3b31577ae2c93884c58430a4a6de6ae9ea483842ea",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187454,
+          "mtimeMs": 1788165114984.4336,
+          "ctimeMs": 1788165114985.5857
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 19989343,
+          "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187451,
+          "mtimeMs": 1788165125229.013,
+          "ctimeMs": 1788165125233.735
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 1139,
+          "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187461,
+          "mtimeMs": 1788165115363.8599,
+          "ctimeMs": 1788165115364.9897
+        },
+        {
+          "name": "chat_template.jinja",
+          "bytes": 7764,
+          "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+          "sha256Basis": "fresh_full_hash",
+          "inode": 9187433,
+          "mtimeMs": 1788165114630.6135,
+          "ctimeMs": 1788165114632.6008
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "bytes": 5288196018,
+          "sha256": "09f3e6ecb0b7af6e6a38bc8169a134c821b0924c2679b2bb8f4426ad38d032b8",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187401,
+          "mtimeMs": 1788165841580.9795,
+          "ctimeMs": 1788165841594.548
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "bytes": 5368472749,
+          "sha256": "31dcdb1c49eebdb1505bd14e3cb33f9cf900bd2546b638f2464694ae763a033f",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187402,
+          "mtimeMs": 1788165819526.8687,
+          "ctimeMs": 1788165819532.365
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "bytes": 5368324139,
+          "sha256": "3e66de06a1f03dade16a612a368cfce4a4c9caa4efd7d28185454384082cec03",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187449,
+          "mtimeMs": 1788165784016.4958,
+          "ctimeMs": 1788165784022.8752
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "bytes": 4377211365,
+          "sha256": "a5d0cf03519c26f8b506df6b0ba60526e5c08c8cea22d0c21ce92950e58a5422",
+          "sha256Basis": "inherited_prior_full_hash_not_rehashed",
+          "inode": 9187450,
+          "mtimeMs": 1788165685653.631,
+          "ctimeMs": 1788165685662.1985
+        }
+      ],
+      "serverSources": [
+        {
+          "name": "cli.py",
+          "sha256": "5b746dd262f91dcbcd367fbeca9a9739df08a206f7e9eb67947bc2b0fd4a10ae"
+        },
+        {
+          "name": "server.py",
+          "sha256": "fdffe13f58a66c88a7517c04e2dbbfd35085f5e3ff8de2f68352c73a4570e767"
+        },
+        {
+          "name": "settings.py",
+          "sha256": "d39c18519a4dd0e164e0bfe6baeb44e65a5dddb8edc8edf1bbdb1a841db3934f"
+        },
+        {
+          "name": "api/openai_models.py",
+          "sha256": "d358ac77bc3fa41a94c4dac7aa59f3e57be9efe2f0f166ca553161143e2484f7"
+        }
+      ],
+      "serverVersion": "0.6.4",
+      "limitation": "Four weight hashes are inherited from the preceding measured local run. Current size/inode/mtime/ctime guard this batch; the weight bytes were not rehashed."
+    },
+    "intervention": "Matched cases retain exact V7 state and USER; currentP4 SYSTEM and corrected schema both change. Replies are newly derived, no forced deals or acceptance.",
+    "jobs": [
+      {
+        "id": "open-message:matched:isolated-society-runtime-v7-local:mind:G:1:6:g:0",
+        "sha256": "1561883fd6271dc6189c7e7dc3ef6a387f8e0d369691b4d199ea2d765b488cdb"
+      },
+      {
+        "id": "open-message:matched:isolated-society-runtime-v7-local:mind:L:1:11:g:0",
+        "sha256": "88dd76f86e912bf24eb8ea47569d6b0f6c43e9f01f89a9f90f7c71e423ac03a0"
+      },
+      {
+        "id": "open-message:matched:isolated-society-runtime-v7-local:mind:B:3:25:g:0",
+        "sha256": "7a596b8964ca055c2821db8659efd97c55713ba7e8df9f0a6c38e4464f3fc74d"
+      }
+    ]
+  }
+}

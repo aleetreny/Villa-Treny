@@ -1,0 +1,81 @@
+{
+  "format": "villa-receipt-selection-release-validation-v1",
+  "capturedAt": "2026-09-08T22:15:02.831Z",
+  "version": "5443a27b-ca4f-4b69-9d77-3017977ed969",
+  "previousVersion": "7dd380ef-5c98-4608-9be8-842d31599299",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "appTests": 981,
+    "workerTests": 307,
+    "nodeTests": 62,
+    "browserTests": 21,
+    "hostingTests": 6,
+    "hostingExternalCalls": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "rooms": 46,
+    "dryDeploy": true,
+    "sourceFiles": 214,
+    "strictContinuity": 473
+  },
+  "scope": "Reserve retained physical and step evidence within four selected memories, deduplicate personal history only against visible observations, and expose a step evidenceId only when that observation is actually visible. Experimental evidence layout is not selected by production.",
+  "logEvidence": {
+    "full-check": {
+      "sha256": "e6c9fb4bc0a4ca0036394a9808183178ed34f070dbfeeaba67effc34db5441af",
+      "bytes": 10273
+    },
+    "build": {
+      "sha256": "02e2a11dd902fe21ccb0e647d6a1faa3e8fabdcbaeff9c8e21ebc6ac4feb93f1",
+      "bytes": 876
+    },
+    "browser": {
+      "sha256": "c701c7565cfd198dff51d59f0ea13451b6e274105d3d5dd1884197117777d680",
+      "bytes": 4832
+    },
+    "dry": {
+      "sha256": "d3b03f126c536c64493c5e19d8a8dcd389add64fdf3fc3fd354cdb974778b502",
+      "bytes": 1746
+    },
+    "hosting": {
+      "sha256": "bbb6ef027e7071e3ec9280fbba32e7fa5c3fef4e53e7a5d40d89dbc2ec0e549b",
+      "bytes": 791
+    },
+    "deploy": {
+      "sha256": "1409be6620c5bd2001c2722a794456818c094058adcdf4b8f0309650b1dacbb6",
+      "bytes": 2194
+    }
+  },
+  "sourceManifest": "receipt-selection-source-manifest.json",
+  "sourceBundleSha256": "3c83895ca2b2a2e0e5253f502bede8ef8b72fcc03aeaa9a3ef7f5ebf8cd6ef4d",
+  "continuity": "receipt-selection-release-continuity.json",
+  "liveStatus": "receipt-selection-live-status.json",
+  "browserReview": {
+    "surface": "Existing native tab19, public production URL",
+    "reloadedAfterDeployment": true,
+    "commonIntegerScale": 4,
+    "journalClaimLabelVisible": true,
+    "livesOutcomeLabelVisible": true,
+    "privateRecordsNotPublished": true,
+    "worldRunning": true,
+    "cognitionBadge": "Thoughts delayed",
+    "leftOpen": "The Common / Lives",
+    "delivered": true
+  },
+  "experiment": {
+    "localRequests": 8,
+    "reportedLocalTokens": 24065,
+    "newCloudRequests": 0,
+    "layoutSelected": false,
+    "semanticReview": "../evidence-layout-semantic-review-2026-09-08.md",
+    "mechanicalReplay": "../model-evidence-layout-local-2026-09-08/replay-receipt.json"
+  },
+  "limitations": [
+    "Receipt coverage is proven against a retained cut, not a guarantee of model understanding or narrative quality.",
+    "The four-pair evidence-layout comparison is mixed; the renderer remains unselected.",
+    "At this cut cognition is delayed, with a previously saved Noor job; exact offline diagnosis is separate.",
+    "No paid authored-work chain is demonstrated; the broader autonomy goal remains open.",
+    "The main JavaScript bundle still emits a size warning."
+  ],
+  "commitOrPush": false
+}

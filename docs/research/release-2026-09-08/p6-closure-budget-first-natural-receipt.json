@@ -1,0 +1,229 @@
+{
+  "format": "villa-p6-closure-budget-first-natural-v1",
+  "auditedAt": "2026-09-08T21:16:16.298Z",
+  "status": "verified",
+  "deployment": "af8bb409-387b-45eb-be9e-849163fc3536",
+  "scope": "Exact offline reconstruction and replay of both natural jobs between the complete post-release cut and one fresh observation. No inference, manual retry or simulated physical watch.",
+  "baseline": {
+    "revision": 210,
+    "backupSha256": "111d7b6a94729e83b1b2db83613653a592d6211d4db8b6c761c85c89ecd0c291",
+    "exportedAtMs": 1788901673694,
+    "pages": 30
+  },
+  "observation": {
+    "revision": 214,
+    "backupSha256": "6651e479e35228404138900027aacdd0ca161023354dbe6de626da5922a9aa93",
+    "exportedAtMs": 1788901941449,
+    "pages": 30
+  },
+  "jobs": [
+    {
+      "id": "habitat-canonical:mind:V:9:87:g:3",
+      "actor": "V",
+      "sequence": 87,
+      "status": "applied",
+      "protocol": 6,
+      "routingPolicy": "free-models-v1",
+      "createdAtMs": 1788901681957,
+      "appliedAtMs": 1788901683450,
+      "appliedRevision": 212,
+      "prompt": {
+        "hashes": {
+          "system": {
+            "saved": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+            "rebuilt": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04"
+          },
+          "user": {
+            "saved": "5824c065edb16695fc346366eaf24f0a815b6293422bfe6fa8dc2f662280f6e8",
+            "rebuilt": "5824c065edb16695fc346366eaf24f0a815b6293422bfe6fa8dc2f662280f6e8"
+          },
+          "prepared": {
+            "saved": "5824c065edb16695fc346366eaf24f0a815b6293422bfe6fa8dc2f662280f6e8",
+            "rebuilt": "5824c065edb16695fc346366eaf24f0a815b6293422bfe6fa8dc2f662280f6e8"
+          }
+        },
+        "systemMatchesCurrentMinimalGuide": true,
+        "preparedMetadataMatches": true,
+        "schemaMatches": true,
+        "schemaSha256": "4cd50381a53974c80bf5e17c4a06b34b50cf198eeb1482805a3607e07c1bb4d4",
+        "draftTextMaxLength": 504,
+        "draftBranchBounds": [
+          {
+            "title": 96,
+            "text": 504
+          },
+          {
+            "title": 96,
+            "text": 504
+          },
+          {
+            "title": 96,
+            "text": 504
+          }
+        ],
+        "receivedClosurePresent": false
+      },
+      "provider": {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "dispatches": 1,
+        "rejections": 0,
+        "usageConfirmed": true,
+        "usage": {
+          "inputTokens": 5940,
+          "outputTokens": 127,
+          "neurons": 0
+        },
+        "maximum": {
+          "inputTokens": 5972,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "latencyMs": 1493
+      },
+      "effects": {
+        "fields": [
+          "message"
+        ],
+        "publicMessage": {
+          "conversationId": "conversation:115",
+          "id": "turn:419",
+          "from": "V",
+          "to": "P",
+          "text": "¡Pilar, la harina ya está en la mesa, pero ¿qué tal si me das una pista de la temperatura ideal para que la masa se levante como una fiesta?",
+          "textSha256": "5d30c9d7d09ccebfcb6e3eec3721acd07b92b3ba6b20c2fbc8d84cadd3741bbb",
+          "archived": true
+        },
+        "closed": false,
+        "recordOperation": null,
+        "duplicateNoOp": true
+      }
+    },
+    {
+      "id": "habitat-canonical:mind:Y:10:88:g:3",
+      "actor": "Y",
+      "sequence": 88,
+      "status": "applied",
+      "protocol": 6,
+      "routingPolicy": "free-models-v1",
+      "createdAtMs": 1788901861958,
+      "appliedAtMs": 1788901863085,
+      "appliedRevision": 214,
+      "prompt": {
+        "hashes": {
+          "system": {
+            "saved": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+            "rebuilt": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04"
+          },
+          "user": {
+            "saved": "c0f70c83d3c5514003dcc59e7f105dee5dbf95c0873505287fd0e898c9ee7873",
+            "rebuilt": "c0f70c83d3c5514003dcc59e7f105dee5dbf95c0873505287fd0e898c9ee7873"
+          },
+          "prepared": {
+            "saved": "c0f70c83d3c5514003dcc59e7f105dee5dbf95c0873505287fd0e898c9ee7873",
+            "rebuilt": "c0f70c83d3c5514003dcc59e7f105dee5dbf95c0873505287fd0e898c9ee7873"
+          }
+        },
+        "systemMatchesCurrentMinimalGuide": true,
+        "preparedMetadataMatches": true,
+        "schemaMatches": true,
+        "schemaSha256": "b750778b0747cc4c367a23bc1a664953913918da9c384c4b80e9dcd7941c98cb",
+        "draftTextMaxLength": 504,
+        "draftBranchBounds": [
+          {
+            "title": 96,
+            "text": 504
+          },
+          {
+            "title": 96,
+            "text": 504
+          },
+          {
+            "title": 96,
+            "text": 504
+          }
+        ],
+        "receivedClosurePresent": false
+      },
+      "provider": {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "dispatches": 1,
+        "rejections": 0,
+        "usageConfirmed": true,
+        "usage": {
+          "inputTokens": 5902,
+          "outputTokens": 119,
+          "neurons": 0
+        },
+        "maximum": {
+          "inputTokens": 5934,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "latencyMs": 1127
+      },
+      "effects": {
+        "fields": [
+          "message"
+        ],
+        "publicMessage": {
+          "conversationId": "conversation:145",
+          "id": "turn:422",
+          "from": "Y",
+          "to": "T",
+          "text": "Sure thing, Tomás. I’ll start tending the garden tomorrow and keep an eye on the produce boost. Let me know if there’s anything else I should log.",
+          "textSha256": "4a96b0c3487a31d465bd9475b4e9807c9cdac350cca8892b0d413d0b6514ed45",
+          "archived": true
+        },
+        "closed": false,
+        "recordOperation": null,
+        "duplicateNoOp": true
+      }
+    }
+  ],
+  "replay": {
+    "allNewJobsIncluded": true,
+    "oldJobsUnchanged": true,
+    "wholeRevisionDeltaExplained": true,
+    "societyStateJsonMatchesExactly": true,
+    "worldStateJsonMatchesExactly": true,
+    "societyStateSha256": "701ff2c2816d0819edac7b0b13c74342849da88d4b105d6c172388bda80701e6",
+    "worldStateSha256": "d64142eaac0ad3301c58a41d05846ed899193d140fa09d9d95bb3e6099f5ccab",
+    "noNewPhysicalRuns": true,
+    "noNewEconomicEvents": true,
+    "recordsUnchanged": true,
+    "controlAndPhysicalClockUnchanged": true,
+    "checksPassed": 680
+  },
+  "quality": {
+    "v87PublicMessageLanguage": "Spanish",
+    "y88PublicMessageLanguage": "English",
+    "englishInstructionNotReliablyFollowed": true,
+    "neitherOutputClosedConversation": true,
+    "neitherOutputCreatedOrSharedDocument": true,
+    "interpretation": "Protocol delivery and legal application are verified. V87 still replied in Spanish; neither job exercised closure or drafting. Their wording does not prove the narrated materials, future actions or document access."
+  },
+  "source": {
+    "releaseManifestSha256": "cbd6a72e4a412c6202674f5d09d143b7d66994ea1761889fd99cf9d4c5db4b7f",
+    "filesMatched": 200,
+    "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+    "scriptSha256": "efc3887df67cfd286db77daed3d21db66154647f7f4170feb021a5e20e718268"
+  },
+  "actions": {
+    "oneCompleteBackupCapture": true,
+    "providerCalls": 0,
+    "manualRetries": 0,
+    "productionWrites": 0,
+    "physicalWatchAdvances": 0
+  },
+  "privacy": {
+    "privatePromptsReflectionsDraftsExcluded": true,
+    "publicSpeechIsVerbatimAlreadyPublished": true
+  },
+  "limitations": [
+    "Two applied messages do not demonstrate a semantic fix, improved document production or successful conversation closure.",
+    "The new 504-character grammar was present but neither response authored a draft; Unicode byte safety remains a separate domain check.",
+    "The in-memory replay verifies society and world effects, not a second execution of provider calls or the complete SQL scheduler bookkeeping."
+  ]
+}

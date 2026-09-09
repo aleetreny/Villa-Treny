@@ -1,0 +1,232 @@
+{
+  "scope": "Two exact V6 contexts; GPT-OSS120B low reasoning with1024 output. No injected state or physical watch. Not a statistical model ranking.",
+  "humanReview": "pending",
+  "binding": "bd1d16451c5721807fd09bdb2defe481a138168bf732bbbdb48f55a54cd8231c",
+  "newCalls": 1,
+  "halted": null,
+  "accountedNeurons": 116,
+  "maxNeurons": 300,
+  "baselines": [
+    {
+      "actor": "B",
+      "beforeHash": "8f2fc4c9ba00ef9998fa175afbb947d6eafc6ccb460b718e75889af3c3d8d893",
+      "baselineOutput": {
+        "message": {
+          "text": "Oh, hello! Sorry, I didn't realize anyone was nearby. I was just... well, I was thinking about the inventory levels. No problem at all, I can just check the logs if you need me to! Actually, since I'm already looking at the stock, would you mind if I asked your opinion on whether we should focus on'",
+          "to": "K"
+        },
+        "project": {
+          "goal": "Establish a consultative role in inventory management",
+          "mode": "replace",
+          "steps": [],
+          "visibility": "private",
+          "why": "Bex wants to be consulted. Initiating contact with Communications (K) to seek an opinion on stock priorities to fulfill her want."
+        }
+      },
+      "baselineApplication": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "f42b69895d555c63410ac28cfb8cc67d07fc80903d43b76a9bb108a402bf35f8",
+        "balanceChanges": []
+      }
+    },
+    {
+      "actor": "C",
+      "beforeHash": "f42b69895d555c63410ac28cfb8cc67d07fc80903d43b76a9bb108a402bf35f8",
+      "baselineOutput": {
+        "message": {
+          "text": "Noor. I need the criteria for waking a patient documented. We cannot rely on verbal consensus during an emergency.",
+          "to": "N"
+        },
+        "project": {
+          "goal": "Establish written protocols for patient awakening.",
+          "mode": "replace",
+          "steps": [
+            {
+              "at": "infirmary",
+              "verb": "work"
+            }
+          ],
+          "visibility": "private",
+          "why": "The lack of written protocols is a risk to clinical judgment. I will attempt to get Noor to commit these to paper."
+        }
+      },
+      "baselineApplication": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "5ed931cd1c64385c81ed664649084bdd9add583656ee7811af373fe42c67d782",
+        "balanceChanges": []
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "oss-probe-v1:isolated-society-runtime-v6:mind:B:0:1:g:0",
+      "actor": "B",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1133,
+        "completion_tokens": 340,
+        "total_tokens": 1473,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 59.231605529785156
+      },
+      "output": {
+        "message": {
+          "text": "Hi Bex, could you let me know which inventory item you think we should focus on restocking next?",
+          "to": "C"
+        },
+        "project": {
+          "goal": "Determine Bex's priority for inventory restocking",
+          "mode": "replace",
+          "steps": [
+            {
+              "at": "hold",
+              "verb": "observe"
+            }
+          ],
+          "visibility": "private",
+          "why": "Bex wants to be consulted once; asking her priority aligns with her wants and helps inventory planning."
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "75da27d9739f7638f6f62d7b1307cc96e9af069b8c7d8559fcf0751816807f88",
+        "project": {
+          "id": "project:6",
+          "goal": "Determine Bex's priority for inventory restocking",
+          "why": "Bex wants to be consulted once; asking her priority aligns with her wants and helps inventory planning.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": [
+            {
+              "id": "step:7",
+              "intent": {
+                "actor": "B",
+                "verb": "observe"
+              },
+              "at": "hold",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:8",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "revision": 1,
+            "nextSpeaker": "C",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:9",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Bex, could you let me know which inventory item you think we should focus on restocking next?",
+                "atMs": 1788825602001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": []
+      },
+      "error": null,
+      "accountedNeurons": 60,
+      "latencyMs": 8301
+    },
+    {
+      "id": "oss-probe-v1:isolated-society-runtime-v6:mind:C:0:2:g:0",
+      "actor": "C",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1183,
+        "completion_tokens": 266,
+        "total_tokens": 1449,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 55.77705383300781
+      },
+      "output": {
+        "message": {
+          "text": "Noor, I need the criteria for waking patients documented before they're needed. Please write them down now.",
+          "to": "N"
+        },
+        "project": {
+          "goal": "Document criteria for waking patients before they are needed",
+          "mode": "replace",
+          "steps": [
+            {
+              "at": "infirmary",
+              "verb": "observe"
+            }
+          ],
+          "visibility": "private",
+          "why": "Ensures consistent, unbiased decisions without sentiment influencing judgement"
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "41500ff4f3da16bf91858802fd8b97a5e9b86e1b33fef074d8edfe76047cb026",
+        "project": {
+          "id": "project:11",
+          "goal": "Document criteria for waking patients before they are needed",
+          "why": "Ensures consistent, unbiased decisions without sentiment influencing judgement",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825603001,
+          "steps": [
+            {
+              "id": "step:12",
+              "intent": {
+                "actor": "C",
+                "verb": "observe"
+              },
+              "at": "infirmary",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:13",
+            "participants": [
+              "C",
+              "N"
+            ],
+            "revision": 1,
+            "nextSpeaker": "N",
+            "status": "open",
+            "createdAtMs": 1788825603001,
+            "expiresAtMs": 1788912003001,
+            "turns": [
+              {
+                "id": "turn:14",
+                "index": 0,
+                "speaker": "C",
+                "text": "Noor, I need the criteria for waking patients documented before they're needed. Please write them down now.",
+                "atMs": 1788825603001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": []
+      },
+      "error": null,
+      "accountedNeurons": 56,
+      "latencyMs": 5312
+    }
+  ]
+}

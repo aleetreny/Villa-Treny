@@ -1,0 +1,555 @@
+{
+  "format": "villa-sql10-offline-migration-receipt-v1",
+  "auditedAt": "2026-09-08T20:03:55.943Z",
+  "status": "passed",
+  "scope": "Offline rehearsal on a verified complete production backup; not a production migration or authorization to infer.",
+  "baseline": {
+    "revision": 185,
+    "schemaVersion": 9,
+    "exportedAtMs": 1788895768663,
+    "pages": 25,
+    "tableCount": 24,
+    "recoverySha256": "672cff0b094c1be570d10d2992dc06f2322df9fef51c5409df793ee05e369901",
+    "sourceBundleSha256": "02f07709cadb5539c4bba0b9667773641b86101275a57aeb67184e3db1f45eff",
+    "frozenSql9SourceSha256": "0e329458c7c558c2818346ce7d5404546dac61bd2b942903742ec345179b7cb3"
+  },
+  "execution": {
+    "database": "isolated node:sqlite in memory",
+    "schema": "Exact CREATE TABLE, ADD COLUMN and CREATE INDEX statements extracted from hashed SQL9 source",
+    "restore": "Actual strict recoveryRestorePlan/restoreRecoveryBundle, all pages",
+    "migration": "Actual migrateQuotaModels plus migration10 marker in one local SQL transaction",
+    "quotaComparison": "Actual frozen SQL9 ledger and current SQL10 ledger evaluated at the identical backup timestamp; no reserve, dispatch, settle, decision or physical step.",
+    "productionCalls": 0,
+    "providerCalls": 0,
+    "networkAttempts": 0
+  },
+  "migration": {
+    "sourceVersion": 9,
+    "targetVersion": 10,
+    "legacyReservationRowid": 129,
+    "historicalReservations": 129,
+    "historicalGroqReservations": 32,
+    "allHistoricalModelsRemainNull": true,
+    "newGroq120Reservations": 0,
+    "oldTableCount": 24,
+    "newTableCount": 26,
+    "tableChecks": [
+      {
+        "table": "runtime_meta",
+        "rows": 1,
+        "oldColumns": [
+          "singleton",
+          "mode",
+          "pause_reason",
+          "resident_capacity",
+          "world_revision",
+          "control_revision",
+          "sim_day",
+          "sim_minute",
+          "alarm_generation",
+          "next_alarm_at_ms",
+          "next_alarm_reason",
+          "last_committed_run_id",
+          "last_committed_at_ms",
+          "last_error_code",
+          "next_watch_at_ms",
+          "next_cognition_at_ms",
+          "last_cognition_error_code"
+        ],
+        "beforeSha256": "488b6dd1a0b275a5b63293f231a98af1b09c96be0f271e37a2f4349a854489f1",
+        "afterOldColumnsSha256": "488b6dd1a0b275a5b63293f231a98af1b09c96be0f271e37a2f4349a854489f1",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "world_state",
+        "rows": 1,
+        "oldColumns": [
+          "singleton",
+          "codec_version",
+          "world_revision",
+          "state_json",
+          "updated_at_ms"
+        ],
+        "beforeSha256": "55d7de9438020a8bd3766ba7c9ee931b451daf1d88f9e6a116e599bf7dc19180",
+        "afterOldColumnsSha256": "55d7de9438020a8bd3766ba7c9ee931b451daf1d88f9e6a116e599bf7dc19180",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "watch_runs",
+        "rows": 30,
+        "oldColumns": [
+          "run_id",
+          "cause_world_revision",
+          "sim_day",
+          "sim_watch",
+          "control_revision",
+          "subject_id",
+          "cognition_job_id",
+          "phase",
+          "decision_source",
+          "decision_json",
+          "due_at_ms",
+          "committed_at_ms",
+          "error_code"
+        ],
+        "beforeSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "afterOldColumnsSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "cognition_jobs",
+        "rows": 105,
+        "oldColumns": [
+          "job_id",
+          "envelope_json",
+          "status",
+          "pressure",
+          "created_at_ms",
+          "due_at_ms",
+          "attempts",
+          "lease_expires_at_ms",
+          "provider",
+          "model",
+          "output_json",
+          "resolved_at_ms",
+          "error_code"
+        ],
+        "beforeSha256": "3cd310fa863f53e2c516ede242a6392530994a9f0f232cb51aa1c73702df0087",
+        "afterOldColumnsSha256": "3cd310fa863f53e2c516ede242a6392530994a9f0f232cb51aa1c73702df0087",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "provider_attempts",
+        "rows": 125,
+        "oldColumns": [
+          "attempt_id",
+          "provider",
+          "model",
+          "ok",
+          "kind",
+          "retryable",
+          "retry_at_ms",
+          "detail_code",
+          "latency_ms",
+          "recorded_at_ms"
+        ],
+        "beforeSha256": "085845a55d894f908e73ac0e96a85519b96e2035390654731c9a618dbae97329",
+        "afterOldColumnsSha256": "085845a55d894f908e73ac0e96a85519b96e2035390654731c9a618dbae97329",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "happenings",
+        "rows": 279,
+        "oldColumns": [
+          "sequence",
+          "happening_id",
+          "world_revision",
+          "day",
+          "watch",
+          "minute",
+          "room_id",
+          "who_json",
+          "text",
+          "kind",
+          "committed_at_ms"
+        ],
+        "beforeSha256": "77381cca93e6adde8d2bca0dd017cf2812d85d29164a88fd030362de5db525a3",
+        "afterOldColumnsSha256": "77381cca93e6adde8d2bca0dd017cf2812d85d29164a88fd030362de5db525a3",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "happening_people",
+        "rows": 472,
+        "oldColumns": [
+          "happening_id",
+          "resident_id"
+        ],
+        "beforeSha256": "d35669d7ebc75fb0b1b61e806c48e451baa04c5953aec84b181d14e3e496b4c5",
+        "afterOldColumnsSha256": "d35669d7ebc75fb0b1b61e806c48e451baa04c5953aec84b181d14e3e496b4c5",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "economic_events",
+        "rows": 55,
+        "oldColumns": [
+          "sequence",
+          "world_revision",
+          "day",
+          "watch",
+          "event_json"
+        ],
+        "beforeSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "afterOldColumnsSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "world_checkpoints",
+        "rows": 2,
+        "oldColumns": [
+          "world_revision",
+          "codec_version",
+          "rules_version",
+          "sha256",
+          "state_json",
+          "created_at_ms"
+        ],
+        "beforeSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "afterOldColumnsSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "world_layout_backups",
+        "rows": 3,
+        "oldColumns": [
+          "migration",
+          "world_revision",
+          "codec_version",
+          "state_json",
+          "archived_at_ms"
+        ],
+        "beforeSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "afterOldColumnsSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "_sql_schema_migrations",
+        "rows": 9,
+        "oldColumns": [
+          "version",
+          "applied_at_ms"
+        ],
+        "beforeSha256": "13b5c87d2fb24b37e77ea123ee73ba7a2002974b8d3a6e0dd615a446639e4caf",
+        "afterOldColumnsSha256": "13b5c87d2fb24b37e77ea123ee73ba7a2002974b8d3a6e0dd615a446639e4caf",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "quota_reservations",
+        "rows": 129,
+        "oldColumns": [
+          "reservation_id",
+          "provider",
+          "day",
+          "state",
+          "max_requests",
+          "max_input_tokens",
+          "max_output_tokens",
+          "max_neurons",
+          "actual_requests",
+          "actual_input_tokens",
+          "actual_output_tokens",
+          "actual_neurons",
+          "created_at_ms",
+          "dispatched_at_ms",
+          "settled_at_ms",
+          "usage_confirmed"
+        ],
+        "beforeSha256": "11da6ca4a1b0a454c99eac4b5083ab9041875eaa831aa7bf8cb34d1c16de69b8",
+        "afterOldColumnsSha256": "11da6ca4a1b0a454c99eac4b5083ab9041875eaa831aa7bf8cb34d1c16de69b8",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "provider_usage_daily",
+        "rows": 14,
+        "oldColumns": [
+          "day",
+          "provider",
+          "requests",
+          "input_tokens",
+          "output_tokens",
+          "neurons",
+          "actual_requests",
+          "actual_input_tokens",
+          "actual_output_tokens",
+          "actual_neurons"
+        ],
+        "beforeSha256": "6f7d7a623baa1b4850871d0f0dd6b3a4db71e0b6913a31f297406b5081ba9e12",
+        "afterOldColumnsSha256": "6f7d7a623baa1b4850871d0f0dd6b3a4db71e0b6913a31f297406b5081ba9e12",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "provider_breakers",
+        "rows": 2,
+        "oldColumns": [
+          "provider",
+          "open_until_ms",
+          "reason",
+          "failure_streak",
+          "updated_at_ms"
+        ],
+        "beforeSha256": "a3e7044ad0a8cfc613e22890343a24b9cbc17b8b4973ba23daebc65da3eb1fef",
+        "afterOldColumnsSha256": "a3e7044ad0a8cfc613e22890343a24b9cbc17b8b4973ba23daebc65da3eb1fef",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "alarm_runs",
+        "rows": 0,
+        "oldColumns": [],
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "afterOldColumnsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "admin_commands",
+        "rows": 9,
+        "oldColumns": [
+          "command_id",
+          "kind",
+          "issued_at_ms",
+          "response_json"
+        ],
+        "beforeSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "afterOldColumnsSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "runtime_events",
+        "rows": 118,
+        "oldColumns": [
+          "sequence",
+          "type",
+          "occurred_at_ms",
+          "detail_json"
+        ],
+        "beforeSha256": "c8c054c1a5ea4c22156a8d3760a43da327d5ce7ac150b39088605eb743b7284f",
+        "afterOldColumnsSha256": "c8c054c1a5ea4c22156a8d3760a43da327d5ce7ac150b39088605eb743b7284f",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "society_state",
+        "rows": 1,
+        "oldColumns": [
+          "singleton",
+          "codec_version",
+          "revision",
+          "state_json",
+          "updated_at_ms",
+          "archived_record_next_id"
+        ],
+        "beforeSha256": "bacb29ffbeb3b6b7605d7a5f7fb8b91326d2058a8e9b79bdc7081ba416a775ed",
+        "afterOldColumnsSha256": "bacb29ffbeb3b6b7605d7a5f7fb8b91326d2058a8e9b79bdc7081ba416a775ed",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "cognition_contexts",
+        "rows": 75,
+        "oldColumns": [
+          "sequence",
+          "job_id",
+          "actor",
+          "prepared_json",
+          "generation"
+        ],
+        "beforeSha256": "d6c3787a918d7c38697c973db8f8c14cf481eccb890684633d5580c338e73852",
+        "afterOldColumnsSha256": "d6c3787a918d7c38697c973db8f8c14cf481eccb890684633d5580c338e73852",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "physical_runs",
+        "rows": 1,
+        "oldColumns": [
+          "run_id",
+          "sim_day",
+          "sim_watch",
+          "due_at_ms",
+          "world_revision",
+          "committed_at_ms",
+          "actions_json"
+        ],
+        "beforeSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "afterOldColumnsSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "society_events",
+        "rows": 75,
+        "oldColumns": [
+          "sequence",
+          "world_revision",
+          "occurred_at_ms",
+          "job_id",
+          "actor",
+          "event_json"
+        ],
+        "beforeSha256": "4a66b185b4fab9c053b183f5684807c8814d74eb8d7283f0c8aa91d8b733cda1",
+        "afterOldColumnsSha256": "4a66b185b4fab9c053b183f5684807c8814d74eb8d7283f0c8aa91d8b733cda1",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "society_layout_backups",
+        "rows": 1,
+        "oldColumns": [
+          "migration_version",
+          "codec_version",
+          "revision",
+          "state_json",
+          "sha256",
+          "created_at_ms"
+        ],
+        "beforeSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+        "afterOldColumnsSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "authored_publications",
+        "rows": 0,
+        "oldColumns": [],
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "afterOldColumnsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "allOldValuesAndRowidsIdentical": true
+      },
+      {
+        "table": "provider_rejections",
+        "rows": 1,
+        "oldColumns": [
+          "sequence",
+          "attempt_id",
+          "recorded_at_ms",
+          "diagnostic_json",
+          "byte_count"
+        ],
+        "beforeSha256": "6bfb28cf48905dcacac0d1b8b0299c7d4872681d1663669af1d9063993aefbfb",
+        "afterOldColumnsSha256": "6bfb28cf48905dcacac0d1b8b0299c7d4872681d1663669af1d9063993aefbfb",
+        "allOldValuesAndRowidsIdentical": true
+      }
+    ],
+    "additiveOnly": [
+      "quota_reservations.model NULL on existing rows",
+      "quota_model_migration boundary row",
+      "provider_model_breakers with exact legacy20B non-auth guard copy",
+      "quota_provider_model_activity_idx",
+      "SQL migration10 marker"
+    ]
+  },
+  "continuity": {
+    "worldStateJsonExact": true,
+    "societyStateJsonExact": true,
+    "runtimeMetaEveryColumnExact": true,
+    "oldHistoryAndQuotasExact": true,
+    "worldStateSha256": "73cf2a42e4197eb38d6406c436855b616827743ebf855916887e8c293ef85608",
+    "societyStateSha256": "5e42e2c7fb560267c785fba8179ac53087d995556e949e77b1f9539fed40334d",
+    "runtimeMetaSha256": "488b6dd1a0b275a5b63293f231a98af1b09c96be0f271e37a2f4349a854489f1",
+    "day": 107,
+    "watch": 4,
+    "worldRevision": 185,
+    "controlRevision": 3,
+    "nextPhysicalWatchAtMs": 1788916084141,
+    "nextCognitionAtMs": 1788895926480,
+    "residentCount": 25,
+    "relationshipCount": 600,
+    "recordCounts": {
+      "drafts": 2,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    }
+  },
+  "charges": {
+    "atMs": 1788895768663,
+    "workersAIUnchanged": true,
+    "groq20Unchanged": true,
+    "groq120Zero": true,
+    "workersAI": {
+      "requests": 68,
+      "input_tokens": 130137,
+      "output_tokens": 21639,
+      "neurons": 5477
+    },
+    "groq20": {
+      "provider": "groq",
+      "scope": "rolling-model",
+      "limits": {
+        "minuteRequests": 30,
+        "minuteTokens": 8000,
+        "dayRequests": 1000,
+        "dayTokens": 200000
+      },
+      "minute": {
+        "requests": 1,
+        "input_tokens": 4216,
+        "output_tokens": 152,
+        "neurons": 0
+      },
+      "day": {
+        "requests": 14,
+        "input_tokens": 62359,
+        "output_tokens": 3002,
+        "neurons": 0
+      }
+    },
+    "groq120": {
+      "provider": "groq",
+      "scope": "rolling-model",
+      "limits": {
+        "minuteRequests": 30,
+        "minuteTokens": 8000,
+        "dayRequests": 1000,
+        "dayTokens": 200000
+      },
+      "minute": {
+        "requests": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "neurons": 0
+      },
+      "day": {
+        "requests": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "neurons": 0
+      }
+    }
+  },
+  "recovery": {
+    "oldSql9StillVerified": true,
+    "migratedSql10StrictVerified": true,
+    "migratedPages": 27,
+    "migratedTableCount": 26,
+    "everyMigratedRowMatches": true,
+    "localRecoverySha256": "34767b9162134a0e5b9e6f91ab426cce4f8561f25a2845717fba47e592ee43e7"
+  },
+  "sources": {
+    "currentFiles": [
+      {
+        "path": "workers/habitat-runtime/src/quota.ts",
+        "sha256": "d53138b030a005c53bbb7f43b7c97b97e49ac677ab5f920a24c875e5dfac0063"
+      },
+      {
+        "path": "workers/habitat-runtime/src/quota-migration.ts",
+        "sha256": "b20850be0b61490e799193a9181a13446d1a3ec94e5b91db270e79d543a76606"
+      },
+      {
+        "path": "workers/habitat-runtime/src/recovery.ts",
+        "sha256": "578d8f84226013ff18d48192633be0c14fcd96af2852c90eb434ad289cdcda04"
+      },
+      {
+        "path": "workers/habitat-runtime/src/checkpoint.ts",
+        "sha256": "f406a91f5dfc846e6bcae2862aef3b40bc07c62fb92018f58b32ca651d939a92"
+      },
+      {
+        "path": "workers/habitat-runtime/src/contracts.ts",
+        "sha256": "2f357b8eb36112282ca8e908872e733dc4cea951f00ea084315756201c2d1b50"
+      },
+      {
+        "path": "workers/habitat-runtime/src/cognition-pacing.ts",
+        "sha256": "b1f8aa948930f977290eb5458d632d28c07e8b6fe8d2fbbe01ffc6316ff867df"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "6306da59c7870562263e6a4f3e9a6ab003685945b52fa029eb4d724d5aa8f30c"
+      }
+    ],
+    "analyzerManifestSha256": "88de0cf09eda9360ff0557e486d45364d4c9e198f8bcce666d00804f1e2117f8",
+    "scriptSha256": "948fbd4797d1f2b974d60beb410ed130f76facebfeb8cc21427a5cad22113f64"
+  },
+  "privacy": {
+    "productionInputsAndDraftTextKeptOutsideRepository": true,
+    "publicReceiptContainsOnlyMetadataCountsAndHashes": true
+  },
+  "limitations": [
+    "This local rehearsal does not deploy SQL10 or enable the additional Groq model.",
+    "SQLite schema and all canonical data are restored from the full backup; Cloudflare-specific SQL billing and alarm behavior are covered by separate isolated Worker tests.",
+    "The frozen SQL9 quota source recorded with the backup includes the verified20B limit update; the comparison asserts charged amounts and time windows, not the configuration that was active at capture."
+  ]
+}

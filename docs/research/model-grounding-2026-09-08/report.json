@@ -1,0 +1,155 @@
+{
+  "scope": "Synthetic interface/mechanical checks. Not an unaided arithmetic test, semantic evaluation, autonomy proof or model quality ranking. Lexical claim flags require contextual review.",
+  "assistantSemanticReview": "not_performed_by_this_harness",
+  "humanReview": "not_performed_by_this_harness",
+  "attemptsReserved": 8,
+  "conservativeReservedNeurons": 514,
+  "accountedNeurons": 63,
+  "maxNeurons": 1000,
+  "results": [
+    {
+      "id": "synthetic-v2:qwen:protect-reserve",
+      "state": "completed",
+      "latencyMs": 2171,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 594,
+        "completion_tokens": 99,
+        "total_tokens": 693,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.764003753662109
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:qwen:revise-after-broken-promise",
+      "state": "completed",
+      "latencyMs": 1704,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 845,
+        "completion_tokens": 112,
+        "total_tokens": 957,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.320945739746094
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:qwen:proposal-is-not-execution",
+      "state": "completed",
+      "latencyMs": 2069,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 601,
+        "completion_tokens": 98,
+        "total_tokens": 699,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.765900611877441
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:qwen:persistent-project-and-voice",
+      "state": "completed",
+      "latencyMs": 1777,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 631,
+        "completion_tokens": 87,
+        "total_tokens": 718,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.569416046142578
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:glm:revise-after-broken-promise",
+      "state": "completed",
+      "latencyMs": 5307,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 815,
+        "completion_tokens": 99,
+        "total_tokens": 914,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 8.0861
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:glm:proposal-is-not-execution",
+      "state": "completed",
+      "latencyMs": 6601,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 578,
+        "completion_tokens": 100,
+        "total_tokens": 678,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 6.819
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:gemma:revise-after-broken-promise",
+      "state": "completed",
+      "latencyMs": 3106,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 852,
+        "completion_tokens": 117,
+        "total_tokens": 969,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 10.936363220214844
+      },
+      "errorCode": null
+    },
+    {
+      "id": "synthetic-v2:gemma:proposal-is-not-execution",
+      "state": "completed",
+      "latencyMs": 3240,
+      "mechanicalFailures": [],
+      "finishReason": "stop",
+      "usageComplete": true,
+      "usage": {
+        "prompt_tokens": 606,
+        "completion_tokens": 150,
+        "total_tokens": 756,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 9.600000381469727
+      },
+      "errorCode": null
+    }
+  ]
+}

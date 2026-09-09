@@ -1,0 +1,152 @@
+{
+  "scope": "Offline physical continuity with no plans or model calls, not an autonomy demonstration.",
+  "results": [
+    {
+      "seed": 1,
+      "days": 365,
+      "cognitionCalls": 0,
+      "elapsedMs": 2799,
+      "maxMoneyError": 1.4210854715202004e-12,
+      "stock": {
+        "produce": 44,
+        "meals": 70,
+        "water": 110,
+        "materials": 31
+      },
+      "finalPopulationMinima": {
+        "fed": 46,
+        "rested": 95,
+        "well": 44.00000000000059,
+        "safe": 46,
+        "accompanied": 30
+      },
+      "memories": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "societyBytes": 114044,
+      "automaticLoans": 0
+    },
+    {
+      "seed": 7,
+      "days": 365,
+      "cognitionCalls": 0,
+      "elapsedMs": 2671,
+      "maxMoneyError": 6.565414878423326e-12,
+      "stock": {
+        "produce": 60,
+        "meals": 70,
+        "water": 106,
+        "materials": 28
+      },
+      "finalPopulationMinima": {
+        "fed": 46,
+        "rested": 95,
+        "well": 43.00000000000022,
+        "safe": 44,
+        "accompanied": 30
+      },
+      "memories": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "societyBytes": 114035,
+      "automaticLoans": 0
+    },
+    {
+      "seed": 23,
+      "days": 365,
+      "cognitionCalls": 0,
+      "elapsedMs": 2686,
+      "maxMoneyError": 3.126388037344441e-12,
+      "stock": {
+        "produce": 60,
+        "meals": 69,
+        "water": 129,
+        "materials": 29
+      },
+      "finalPopulationMinima": {
+        "fed": 46,
+        "rested": 95,
+        "well": 44.00000000000059,
+        "safe": 45,
+        "accompanied": 34
+      },
+      "memories": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "societyBytes": 113896,
+      "automaticLoans": 0
+    }
+  ]
+}

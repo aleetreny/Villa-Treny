@@ -1,0 +1,126 @@
+{
+  "auditedAt": "2026-09-08T19:12:41.254Z",
+  "scope": "Exact private diagnostic and offline reproduction of the first rejected P6 answer after the natural physical watch. No model call, production mutation or future-watch forecast.",
+  "baseline": {
+    "revision": 177,
+    "exportedAtMs": 1788893903256,
+    "backupSha256": "92800851e979ac6d52a4c02abea15d2ebfb6027d82d61c2459457fb12237825a"
+  },
+  "observation": {
+    "revision": 179,
+    "exportedAtMs": 1788894527457,
+    "backupSha256": "6be18aaf98d3d0d6607cfef023b9fd28cc9ef63a68f4b658ba6097b1c87d862a"
+  },
+  "job": {
+    "id": "habitat-canonical:mind:W:2:73:g:3",
+    "actor": "W",
+    "sequence": 73,
+    "protocol": 6,
+    "status": "deferred",
+    "errorCode": "invalid_society:invalid_record_choice",
+    "createdAtMs": 1788894484142
+  },
+  "diagnostic": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "stage": "schema",
+    "phase": "schema_or_decode",
+    "code": "invalid_record_choice",
+    "finishReason": "stop",
+    "completeCapture": true,
+    "captureBytes": 586,
+    "candidateSha256": "22d43bc0a93b09ca3b27207e715780b2b514bdcc27c843d74c88295b32620a52",
+    "schemaSha256": "5a03a5c7df55c0c24d12012c0771b085d4fa9000a8a1f3d4fba77d9f240470f8",
+    "systemSha256": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+    "userSha256": "d415b9dc10279daef5cbb98997e67228b4333d0fee9da77b8400dd1740ea0585",
+    "savedSchemaMatchesCapture": true,
+    "savedSchemaAcceptsCandidate": false
+  },
+  "confirmedCause": {
+    "operation": "draft",
+    "requestedAudience": "public",
+    "privateReferenceCount": 1,
+    "unknownReferenceCount": 0,
+    "summary": "The answer requested a public draft while citing one supplied private reference. The public-draft branch permits only supplied public references.",
+    "classification": "Model answer violates an explicit privacy constraint; issued schema and domain independently reject the same combination.",
+    "domainDirectCode": "private_reference",
+    "adapterCode": "invalid_record_choice",
+    "notAParserFailure": true,
+    "notTruncated": true
+  },
+  "accounting": {
+    "usageConfirmed": true,
+    "usage": {
+      "inputTokens": 3687,
+      "outputTokens": 316,
+      "neurons": 0
+    },
+    "maximum": {
+      "inputTokens": 3719,
+      "outputTokens": 1024,
+      "neurons": 0
+    },
+    "latencyMs": 1439,
+    "chargeRecordedDespiteRejection": true
+  },
+  "replay": {
+    "physicalRunId": "habitat-canonical:physical:107:3",
+    "physicalObservationsMatchExactly": true,
+    "physicalWorldMatchesExactly": true,
+    "completeJobAndPreparedTurnMatchExactly": true,
+    "actualProviderPromptHashesMatch": true,
+    "postPhysicalPlusAttemptSocietyMatchesExactly": true,
+    "adapterRejectsWithoutEffects": true,
+    "domainRejectsWithoutEffects": true
+  },
+  "effects": {
+    "newAppliedSocietyEvent": false,
+    "records": {
+      "drafts": 0,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    },
+    "newPublication": false,
+    "newRecordPayment": false,
+    "privateDraftExposed": false
+  },
+  "source": {
+    "analyzerManifestSha256": "c9e8a12102d86fb6cf229db002a1106b30b55e89d199453279c503ed62224ab2",
+    "additionalFiles": [
+      {
+        "path": "/workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "a13087e711d0f953bb6357587b4a417b5ddd7f31049cd94dbae1ed634d52b6c3"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "35d59e4c6cbf8a5c6bb32497fa610fd5503f233510ef5ed5a5d2442841fbe3a9"
+      },
+      {
+        "path": "/src/lib/habitat/society/record-watch.ts",
+        "sha256": "618e554836097c57f5a71d1ce1596a04b925c1a64aa47dce2c4f13c782ff6705"
+      },
+      {
+        "path": "/src/lib/habitat/society/records.ts",
+        "sha256": "6ca3fdb9677cff3500de9d6e214c3472d8495f792d0b351aeb898848d4931161"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/habitat-world.ts",
+        "sha256": "0e329458c7c558c2818346ce7d5404546dac61bd2b942903742ec345179b7cb3"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "6306da59c7870562263e6a4f3e9a6ab003685945b52fa029eb4d724d5aa8f30c"
+      }
+    ],
+    "scriptSha256": "5d18e6162c3ececc3522c8e5d5ad5dede2a48603486bb0c146279d65d1d135ac"
+  },
+  "limits": [
+    "This identifies one rejected answer. It does not establish why the provider generated it or the rate of this failure.",
+    "A syntactically valid JSON answer is not proof of adherence to the supplied JSON Schema.",
+    "The exact private reference and private generated prose remain only in the private recovery/audit files.",
+    "No corrective counterfactual was accepted and no input, response, permission or live state was altered."
+  ]
+}

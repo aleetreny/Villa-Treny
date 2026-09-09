@@ -60,6 +60,9 @@ importers:
 
   workers/habitat-runtime:
     dependencies:
+      tiktoken:
+        specifier: 1.0.22
+        version: 1.0.22
       zod:
         specifier: 4.4.3
         version: 4.4.3
@@ -1344,6 +1347,9 @@ packages:
   supports-color@10.2.2:
     resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
     engines: {node: '>=18'}
+
+  tiktoken@1.0.22:
+    resolution: {integrity: sha512-PKvy1rVF1RibfF3JlXBSP0Jrcw2uq3yXdgcEXtKTYn3QJ/cBRBHDnrJ5jHky+MENZ6DIPwNUGWpkVx+7joCpNA==}
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -2670,6 +2676,8 @@ snapshots:
   std-env@4.2.0: {}
 
   supports-color@10.2.2: {}
+
+  tiktoken@1.0.22: {}
 
   tinybench@2.9.0: {}
 

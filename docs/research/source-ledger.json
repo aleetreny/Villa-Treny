@@ -1,0 +1,557 @@
+{
+  "scope": "Primary documentary evidence; repository artifacts contain the separate original measurements and assistant reviews.",
+  "sourceDocument": "docs/research/report-source.md",
+  "sourceSha256": "644f95ffe316493ad91cef50dfe0effa5c8e9d27fd48025854dbed21042312cc",
+  "sources": [
+    {
+      "title": "Cloudflare: precios, actualizado 28-8-2026",
+      "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Catálogo Granite",
+      "url": "https://developers.cloudflare.com/workers-ai/models/granite-4.0-h-micro/",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "catálogo Qwen",
+      "url": "https://developers.cloudflare.com/workers-ai/models/qwen3-30b-a3b-fp8/",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "GPT-OSS 120B",
+      "url": "https://developers.cloudflare.com/workers-ai/models/gpt-oss-120b/",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Groq: límites",
+      "url": "https://console.groq.com/docs/rate-limits",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "ámbito de proyectos",
+      "url": "https://console.groq.com/docs/projects",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Caché Groq",
+      "url": "https://console.groq.com/docs/prompt-caching",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "caché Workers AI",
+      "url": "https://developers.cloudflare.com/workers-ai/features/prompt-caching/",
+      "accessed": "2026-09-08",
+      "claimSection": "Capacidad gratuita que podemos contabilizar",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Mistral: plan Free",
+      "url": "https://mistral.ai/pricing/",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "suscripciones",
+      "url": "https://docs.mistral.ai/admin/billing-usage/subscriptions",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "términos europeos 7-8-2026",
+      "url": "https://legal.mistral.ai/terms/eu-consumers-terms-of-service/",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "términos adicionales 5-8-2026",
+      "url": "https://legal.mistral.ai/terms/additional-terms/",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "OpenRouter: precios",
+      "url": "https://openrouter.ai/pricing",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "guía oficial 12-6-2026",
+      "url": "https://openrouter.ai/blog/tutorials/how-to-get-the-lowest-cost-llm-inference-on-openrouter/",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "restricción de precio",
+      "url": "https://openrouter.ai/docs/guides/routing/provider-selection#max-price",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "oMLX 0.6.4",
+      "url": "https://github.com/jundot/omlx/tree/v0.6.4",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "modelo MLX",
+      "url": "https://huggingface.co/mlx-community/Qwen3.6-35B-A3B-4bit",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Cerebras",
+      "url": "https://www.cerebras.ai/pricing",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Fireworks",
+      "url": "https://docs.fireworks.ai/faq-new/billing-pricing/what-happens-when-i-finish-my-1-dollar-credit",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Together",
+      "url": "https://docs.together.ai/docs/billing-credits",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Hugging Face",
+      "url": "https://huggingface.co/docs/inference-providers/pricing",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Cohere",
+      "url": "https://docs.cohere.com/docs/going-live",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "NVIDIA",
+      "url": "https://docs.api.nvidia.com/nim/docs/product",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "retirada GitHub",
+      "url": "https://github.blog/changelog/2026-07-30-github-models-is-now-retired/",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "términos Gemini",
+      "url": "https://ai.google.dev/gemini-api/terms",
+      "accessed": "2026-09-08",
+      "claimSection": "Alternativas: qué aporta cada una",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Artículo y ablaciones",
+      "url": "https://arxiv.org/html/2304.03442v2",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Arquitectura revisada",
+      "url": "https://arxiv.org/html/2502.08691v2",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "marco ACL Industry 2025",
+      "url": "https://aclanthology.org/2025.acl-industry.94/",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Artículo",
+      "url": "https://arxiv.org/html/2312.03664v1",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "SOTOPIA",
+      "url": "https://arxiv.org/abs/2310.11667",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "SOTOPIA-PI, ACL 2024",
+      "url": "https://arxiv.org/html/2403.08715v3",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Comparación y límites",
+      "url": "https://arxiv.org/html/2403.05020v4",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Cooperate or Collapse, métodos y apéndice D",
+      "url": "https://arxiv.org/html/2404.16698v4",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Método y apéndice B",
+      "url": "https://arxiv.org/html/2506.05555",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Artículo final",
+      "url": "https://arxiv.org/html/2310.10436v4",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Métodos y limitaciones",
+      "url": "https://arxiv.org/html/2604.11721v2",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Versión 5",
+      "url": "https://arxiv.org/html/2411.11581v5",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Publicación ACL",
+      "url": "https://aclanthology.org/2026.acl-long.569/",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Estudio",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12077490/",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "crítica",
+      "url": "https://arxiv.org/html/2505.23796v1",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "respuesta",
+      "url": "https://arxiv.org/html/2506.18600v1",
+      "accessed": "2026-09-08",
+      "claimSection": "Qué demuestra la investigación de sociedades",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Tokenizador GPT-OSS",
+      "url": "https://github.com/openai/gpt-oss/blob/main/gpt_oss/tokenizer.py",
+      "accessed": "2026-09-08",
+      "claimSection": "Límites operativos y siguiente decisión",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "implementación tiktoken",
+      "url": "https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py",
+      "accessed": "2026-09-08",
+      "claimSection": "Límites operativos y siguiente decisión",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "adaptación WASM utilizada",
+      "url": "https://github.com/dqbd/tiktoken#cloudflare-workers",
+      "accessed": "2026-09-08",
+      "claimSection": "Límites operativos y siguiente decisión",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Workers: precios",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "accessed": "2026-09-08",
+      "claimSection": "Límites operativos y siguiente decisión",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "Durable Objects: precios",
+      "url": "https://developers.cloudflare.com/durable-objects/platform/pricing/",
+      "accessed": "2026-09-08",
+      "claimSection": "Límites operativos y siguiente decisión",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    },
+    {
+      "title": "límites de almacenamiento",
+      "url": "https://developers.cloudflare.com/durable-objects/platform/limits/",
+      "accessed": "2026-09-08",
+      "claimSection": "Límites operativos y siguiente decisión",
+      "class": "primary",
+      "publicationOrUpdateDate": "As identified in linked source and report text; absent dates are not inferred"
+    }
+  ],
+  "repositoryArtifacts": [
+    {
+      "title": "PDF, fuente, referencias y revisión de las 16:02",
+      "path": "output/pdf/checkpoint-2026-09-08-1602/manifest.json"
+    },
+    {
+      "title": "lectura y configuración de la cuenta",
+      "path": "docs/research/groq-free-account-readback-2026-09-08.json"
+    },
+    {
+      "title": "continuidad del despliegue",
+      "path": "docs/research/release-2026-09-08/groq-free-release-continuity.json"
+    },
+    {
+      "title": "revisión local V7",
+      "path": "docs/research/model-society-v7-local-2026-09-08/review.md"
+    },
+    {
+      "title": "Comparación OSS con V7",
+      "path": "docs/research/model-society-v7-oss-probe-2026-09-08/review.md"
+    },
+    {
+      "title": "Revisión del parámetro local",
+      "path": "docs/research/model-society-v7-local-reasoning-probe-2026-09-08/review.md"
+    },
+    {
+      "title": "Prueba de continuidad",
+      "path": "docs/research/release-2026-09-08/migration-continuity.json"
+    },
+    {
+      "title": "Revisión de las once decisiones",
+      "path": "docs/research/release-2026-09-08/first-live-turns-review.md"
+    },
+    {
+      "title": "prueba reproducible",
+      "path": "docs/research/release-2026-09-08/first-live-turns-proof-v4-reader.json"
+    },
+    {
+      "title": "Análisis de la recuperación",
+      "path": "docs/research/release-2026-09-08/first-live-analysis-1343.json"
+    },
+    {
+      "title": "estado público posterior",
+      "path": "docs/research/release-2026-09-08/live-status-1425.json"
+    },
+    {
+      "title": "Estado con los 25 habitantes",
+      "path": "docs/research/release-2026-09-08/live-status-all-residents-1457.json"
+    },
+    {
+      "title": "Comparación de orden",
+      "path": "docs/research/model-society-v7-deal-order-local-2026-09-08/review.md"
+    },
+    {
+      "title": "pasada con condición de acuerdo",
+      "path": "docs/research/model-society-v7-grammar-local-2026-09-08/review.md"
+    },
+    {
+      "title": "pasada de propuestas iniciales",
+      "path": "docs/research/model-society-protocol4-local-2026-09-08/review.md"
+    },
+    {
+      "title": "Auditoría de gramática y alternativas",
+      "path": "docs/research/deal-branch-recommendation-2026-09-08.md"
+    },
+    {
+      "title": "Seis propuestas y réplicas",
+      "path": "docs/research/model-society-open-message-local-2026-09-08/review.md"
+    },
+    {
+      "title": "aclaración de aceptación",
+      "path": "docs/research/model-society-exact-accept-local-2026-09-08/review.md"
+    },
+    {
+      "title": "tres réplicas finales",
+      "path": "docs/research/model-society-final-dialogue-local-2026-09-08/review.md"
+    },
+    {
+      "title": "Auditoría de la ruta de aceptación",
+      "path": "docs/research/accept-flow-offline-audit-2026-09-08.md"
+    },
+    {
+      "title": "Continuidad de SQL8",
+      "path": "docs/research/release-2026-09-08/sql8-migration-continuity.json"
+    },
+    {
+      "title": "Recibo, oferta y saldos",
+      "path": "docs/research/release-2026-09-08/first-protocol4-groq-receipt-1542.json"
+    },
+    {
+      "title": "Aceptación y asiento del regalo",
+      "path": "docs/research/release-2026-09-08/quim-gita-gift-acceptance-receipt.json"
+    },
+    {
+      "title": "Comparación y límites",
+      "path": "docs/research/model-society-ordered-choice-local-2026-09-08/review.md"
+    },
+    {
+      "title": "Arquitectura y límites",
+      "path": "docs/society-architecture.md"
+    },
+    {
+      "title": "Revisión local P6",
+      "path": "docs/research/records-protocol6-local-review-2026-09-08.md"
+    },
+    {
+      "title": "Mediciones y corrección",
+      "path": "docs/research/records-protocol6-release-measurements-2026-09-08.md"
+    },
+    {
+      "title": "Continuidad SQL9",
+      "path": "docs/research/release-2026-09-08/sql9-migration-continuity.json"
+    },
+    {
+      "title": "identidad y publicación",
+      "path": "docs/research/release-2026-09-08/records-release-verification.json"
+    },
+    {
+      "title": "Recibo de C72",
+      "path": "docs/research/release-2026-09-08/first-protocol6-live-receipt.json"
+    },
+    {
+      "title": "Guardia real y conservación",
+      "path": "docs/research/release-2026-09-08/first-protocol6-physical-watch.json"
+    },
+    {
+      "title": "Recibo del rechazo",
+      "path": "docs/research/release-2026-09-08/first-protocol6-rejection-receipt.json"
+    },
+    {
+      "title": "Borrador real de W73 y replay",
+      "path": "docs/research/release-2026-09-08/protocol6-w73-retry-success-receipt.json"
+    },
+    {
+      "title": "Implementación de diagnósticos",
+      "path": "docs/research/rejected-response-diagnostics-2026-09-08.md"
+    },
+    {
+      "title": "Regla y reproducción de la cadencia",
+      "path": "docs/research/cognition-pacing-2026-09-08.md"
+    },
+    {
+      "title": "Decisión de proveedor y cálculo reproducible",
+      "path": "docs/research/provider-release-decision-2026-09-08.md"
+    },
+    {
+      "title": "Medición final con instrucciones inglesas",
+      "path": "docs/research/cognition-pacing-measurements-english-2026-09-08.json"
+    },
+    {
+      "title": "Regresión exacta y mediciones",
+      "path": "docs/research/groq-tokenizer-bound-2026-09-08.md"
+    },
+    {
+      "title": "Medición SQL y límites de la estimación",
+      "path": "docs/research/observer-sql-capacity-2026-09-08.md"
+    },
+    {
+      "title": "Cuarto mensaje",
+      "path": "docs/research/release-2026-09-08/public-dialogue-translation-turn-280.json"
+    },
+    {
+      "title": "quinto mensaje",
+      "path": "docs/research/release-2026-09-08/public-dialogue-translation-turn-324.json"
+    },
+    {
+      "title": "Continuidad de las 16:02",
+      "path": "docs/research/release-2026-09-08/english-release-continuity.json"
+    },
+    {
+      "title": "estado al corte",
+      "path": "docs/research/release-2026-09-08/groq-free-live-status.json"
+    }
+  ]
+}

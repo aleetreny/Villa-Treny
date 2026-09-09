@@ -102,7 +102,8 @@ export function useHabitatLive() {
   }, [currentDay]);
 
   return {
-    snapshot: world?.snapshot ?? null, relationships: world?.relationships ?? [], society: world?.society ?? null,
+    base,
+    snapshot: world?.snapshot ?? null, relationships: world?.relationships ?? [], society: world?.society ?? null, agency: world?.agency ?? null,
     status, statusError, connection, lastConnectedAt, error, refresh, archiveDay, setArchiveDay,
     archive: archiveResult?.day === archiveDay ? archiveResult.entries : [],
     archiveLoading, archiveError,

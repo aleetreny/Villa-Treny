@@ -1,0 +1,32 @@
+{
+  "format": "villa-report-historical-checkpoint-v1",
+  "checkpoint": "2026-09-08T16:02:00Z",
+  "description": "Exact preserved PDF, Markdown, source ledger and QA before the SQL9/P6 update. Read-only files; no history rewritten.",
+  "pages": 12,
+  "files": [
+    {
+      "file": "villa-treny-investigacion.pdf",
+      "originalRepositoryPath": "output/pdf/villa-treny-investigacion.pdf",
+      "bytes": 131392,
+      "sha256": "a613525ced4a3c2d7cf38698e96a90f1fdef1beb751b313c544e3cffc566bca7"
+    },
+    {
+      "file": "report-source.md",
+      "originalRepositoryPath": "docs/research/report-source.md",
+      "bytes": 43752,
+      "sha256": "f7adafe1283fbf50d8dd99aa04cdbff72852669048f86c2d9f3546a03a130eaa"
+    },
+    {
+      "file": "source-ledger.json",
+      "originalRepositoryPath": "docs/research/source-ledger.json",
+      "bytes": 20290,
+      "sha256": "f904d088d686ac40f965d1aac177bc7f94678585345d7d196106c17758143bce"
+    },
+    {
+      "file": "qa.json",
+      "originalRepositoryPath": "tmp/pdfs/qa.json",
+      "bytes": 1519,
+      "sha256": "79a84d7408c3296ef7bb185bb8d04b6d5b96530cdd319cfc7216ca320b21ca2f"
+    }
+  ]
+}

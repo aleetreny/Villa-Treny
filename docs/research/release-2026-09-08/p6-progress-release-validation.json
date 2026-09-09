@@ -1,0 +1,61 @@
+{
+  "format": "villa-p6-progress-release-validation-v1",
+  "capturedAt": "2026-09-08T21:08:45.243Z",
+  "version": "af8bb409-387b-45eb-be9e-849163fc3536",
+  "previousVersion": "7a103b97-5ff9-490c-b3ff-fb191582e7a4",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "appTests": 968,
+    "workerTests": 307,
+    "nodeTests": 54,
+    "hostingTests": 6,
+    "hostingExternalCalls": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "rooms": 46,
+    "dryDeploy": true,
+    "continuityChecks": 443
+  },
+  "scope": "Latest received closure remains visible and eligible for one review. New draft contracts reserve 96 title characters and 504 body characters within unchanged UTF-8 domain limits; an explicit prepared-context marker preserves older saved contracts. Live instructions only explain receivedClosure; the broader negative progress candidate is not selected.",
+  "logEvidence": {
+    "full-check": {
+      "sha256": "e4ed1c4809fcca9e8ca0703866a356848579b0d363f50d3064a1cf50e00cbcc2",
+      "bytes": 9143
+    },
+    "build": {
+      "sha256": "1f965665fed7bfddd42689ae965bde45921a6fd85fb5aaa93479c93ea7e110f4",
+      "bytes": 877
+    },
+    "dry": {
+      "sha256": "6e006c5c9b06d77ff52daa05370ec1e9b056256edbcffa59de69e3fad8a6dd52",
+      "bytes": 1854
+    },
+    "hosting": {
+      "sha256": "257dd2bf928970fd949713893056425ba56acb5a42e31142ff8f9e679eb9b661",
+      "bytes": 792
+    },
+    "deploy": {
+      "sha256": "86aa9f7ac1a997eb9447f4c437d53d6c0d11ee8b80f741ba5d306bfd3bd82408",
+      "bytes": 2194
+    }
+  },
+  "modelEvaluation": {
+    "localRequests": 8,
+    "applied": 6,
+    "rejected": 2,
+    "newCloudRequests": 0,
+    "physicalWatches": 0,
+    "localTokens": 24469,
+    "cumulativeLocalCalls": 157,
+    "reference": "../model-progress-local-2026-09-08/public-report.json"
+  },
+  "limitations": [
+    "No demonstrated semantic improvement from the broader candidate; unsupported claims persist in the local sample.",
+    "The local comparison predates the draft-input budget correction and does not prove its real-model success.",
+    "Character bounds do not fully enforce UTF-8 byte bounds; canonical validation remains authoritative.",
+    "No authored publication or paid authored commission is established.",
+    "128-token Groq framing allowance remains provisional."
+  ],
+  "commitOrPush": false
+}

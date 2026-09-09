@@ -1,0 +1,85 @@
+{
+  "input": ".local/daily-debate/official-v6-space-2026-09-16/public.json",
+  "evidence": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "surface": "board",
+      "screenshot": ".impeccable/review/desktop.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "surface": "archive",
+      "screenshot": ".impeccable/review/desktop-archive.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "surface": "profiles",
+      "screenshot": ".impeccable/review/desktop-profiles.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "surface": "rooms",
+      "screenshot": ".impeccable/review/desktop-rooms.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "surface": "board",
+      "screenshot": ".impeccable/review/mobile.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "surface": "archive",
+      "screenshot": ".impeccable/review/mobile-archive.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "surface": "profiles",
+      "screenshot": ".impeccable/review/mobile-profiles.png",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "surface": "rooms",
+      "screenshot": ".impeccable/review/mobile-rooms.png",
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

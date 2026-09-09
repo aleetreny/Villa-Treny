@@ -1,0 +1,1564 @@
+{
+  "config": {
+    "policy": {
+      "version": 2,
+      "maxCalls": 2,
+      "maxNeurons": 150,
+      "maxPromptBytes": 6500,
+      "maxOutputTokens": 768,
+      "templateTokens": 2048,
+      "timeoutMs": 45000,
+      "seed": 91,
+      "epochMs": 1788825600000
+    },
+    "model": {
+      "id": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "inputRate": 4625,
+      "outputRate": 30475
+    },
+    "instruction": "Production dynamic protocol, unchanged.",
+    "accountHash": "876b5b0f65fb3cfe60efd0ea163e170c58903d4b5db18ea307ef3ccd754434cf",
+    "sources": [
+      {
+        "path": "package.json",
+        "sha256": "2eec37d7c3c50168a5dee2ec58b69b8ec140302201aa6f86efba6a60a6c2c7b0"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "41a5ac2881769dd9a02881c832728c69754337208c16d1048781ed46c8163c69"
+      },
+      {
+        "path": "scripts/benchmark-society-models.mjs",
+        "sha256": "353314dc2bce86eabdfe8ce1fefbab72535f560b23e7e6c4557054d881cba4c0"
+      },
+      {
+        "path": "scripts/benchmark-society-runtime.mjs",
+        "sha256": "005d44072b9f43b9be62ced55f4e17811f5002235ff0df10abd020af49b99f1d"
+      },
+      {
+        "path": "src/lib/habitat/agency.ts",
+        "sha256": "2dd4cfe731271ff7bffb414878d5bf5734ed5ed108908577dab19bfb2fde57c4"
+      },
+      {
+        "path": "src/lib/habitat/axes.ts",
+        "sha256": "cd74388ccd7f4d2f9af2d45a130dc825cacaad4d685fcfa0f7e56bac41e5fbd9"
+      },
+      {
+        "path": "src/lib/habitat/bitmap-codec.ts",
+        "sha256": "4fc39555204830e98ee585474f82e6696e5a5140f0f6db82ed5d39438836eada"
+      },
+      {
+        "path": "src/lib/habitat/engine/economy.ts",
+        "sha256": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8"
+      },
+      {
+        "path": "src/lib/habitat/engine/knowledge.ts",
+        "sha256": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14"
+      },
+      {
+        "path": "src/lib/habitat/engine/state.ts",
+        "sha256": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8"
+      },
+      {
+        "path": "src/lib/habitat/engine/tick.ts",
+        "sha256": "4bc9068d99f84ef8f45af3783f4872cde109e162ea26cb7f71b7af1897be93cb"
+      },
+      {
+        "path": "src/lib/habitat/engine/verbs.ts",
+        "sha256": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3"
+      },
+      {
+        "path": "src/lib/habitat/generated/rooms.json",
+        "sha256": "d7d9631c820a8321e5db00cdbb85a069dd72611312f3aecc20173cde4e54e208"
+      },
+      {
+        "path": "src/lib/habitat/graph.ts",
+        "sha256": "ffa22d815347a48c307d5dc22dc53755fd3d07267a976f8933dddee698ca77b0"
+      },
+      {
+        "path": "src/lib/habitat/grid.ts",
+        "sha256": "f1d005f71327df39c047e2e9625da451fd5e04ac59ff47f3ca62fd592c584cd1"
+      },
+      {
+        "path": "src/lib/habitat/journal.ts",
+        "sha256": "b1ea6f4230404ec9d5084a0036912a382a61723bbf68a26791aac0d6749fb470"
+      },
+      {
+        "path": "src/lib/habitat/live.ts",
+        "sha256": "b43c3d095801fb14e7e9658b39dcda00a80ef6566b6299429014cb0de7e6c8fc"
+      },
+      {
+        "path": "src/lib/habitat/navigation.ts",
+        "sha256": "6078a44b9520163bdf1014b08ef0d950206aa7db4e59ac1503d8b81c12b6a3f7"
+      },
+      {
+        "path": "src/lib/habitat/observer-camera.ts",
+        "sha256": "2f2d9cc048756b5dffde9ad01ff4e28329a50e8fdb08111aca6dbd5d56a5c048"
+      },
+      {
+        "path": "src/lib/habitat/observer-matrix.ts",
+        "sha256": "26da0f7e03bca8d076649eda071261b2237070032dad39f69285274a37600a27"
+      },
+      {
+        "path": "src/lib/habitat/observer-preferences.ts",
+        "sha256": "8cf50c24deaccf47eeb22e5570f3348a55682f3b62942851db198eb7c1737073"
+      },
+      {
+        "path": "src/lib/habitat/passages.ts",
+        "sha256": "63203b2b2e1d099ec760f8c069efb9676317693006a83126e6c3dc1be216cb1a"
+      },
+      {
+        "path": "src/lib/habitat/portraits.ts",
+        "sha256": "b717c55fc544ec643d6dfb437e40a59a92dffbf2dba197da121acb5262b54754"
+      },
+      {
+        "path": "src/lib/habitat/random.ts",
+        "sha256": "e18394c5735036e93d0bf001a1b2a1d95ab1255484e84a79bd8ceb77e2d17c33"
+      },
+      {
+        "path": "src/lib/habitat/residents.ts",
+        "sha256": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29"
+      },
+      {
+        "path": "src/lib/habitat/room-art.ts",
+        "sha256": "217bb8023ecce49099e18c78e39f8d7599f989becc88820243f92e6bda865124"
+      },
+      {
+        "path": "src/lib/habitat/room-motion.ts",
+        "sha256": "3b456066b93d9016a62ee039936a714284ac36f43b993c42c99f4903a5a2c99f"
+      },
+      {
+        "path": "src/lib/habitat/rooms.ts",
+        "sha256": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57"
+      },
+      {
+        "path": "src/lib/habitat/section.ts",
+        "sha256": "ed6147c44affe83c8f00d64ffab216aa2dd9dd8bd3879085596300a7abdff7c6"
+      },
+      {
+        "path": "src/lib/habitat/snapshot.ts",
+        "sha256": "a3569e0ce59798859a38445ea45998864072dcf737ac151d7df38a3c24b027e4"
+      },
+      {
+        "path": "src/lib/habitat/society.ts",
+        "sha256": "90d6e2046a3151deb4e0b3f943b2727bbd8946cf5a495f641687c6415aaca13a"
+      },
+      {
+        "path": "src/lib/habitat/society/economy.ts",
+        "sha256": "b071bc8d148f258c0e90c4e61f844d2bf28d0d4846f1048b7592759313872d99"
+      },
+      {
+        "path": "src/lib/habitat/society/index.ts",
+        "sha256": "2fbe58e6e95a094b2486a384604966ebd55809d1a298fb918f77b11608343228"
+      },
+      {
+        "path": "src/lib/habitat/society/physical.ts",
+        "sha256": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae"
+      },
+      {
+        "path": "src/lib/habitat/society/public.ts",
+        "sha256": "d33553d696de531b063761ebada83299541a11d1fbf8d7c68ec93481a3aade5a"
+      },
+      {
+        "path": "src/lib/habitat/society/schema.ts",
+        "sha256": "05aa7eb1011b285cfdd34128c1750f0f64410b9d9f6a1876561338d0feaa4c52"
+      },
+      {
+        "path": "src/lib/habitat/society/state.ts",
+        "sha256": "bcc7ddf0baf53d24d146214dc7e6e578aefa01b0778b08cc672fe92aa1414bc3"
+      },
+      {
+        "path": "src/lib/habitat/society/turn.ts",
+        "sha256": "1e6e8d55c2e5b93f4fe74339475f953e81a0d655ab4ac84a4e30ca1519f71a9e"
+      },
+      {
+        "path": "src/lib/habitat/society/types.ts",
+        "sha256": "037bf9b332334902624b8724b9494572a05c160deec2e22c098449b112bc56d3"
+      },
+      {
+        "path": "src/lib/habitat/tiles.ts",
+        "sha256": "1ad438260ca82edf4a60d950f54026314b3a7d82dc9c449f2dbb675d5097a2a7"
+      },
+      {
+        "path": "src/lib/habitat/useHabitatLive.ts",
+        "sha256": "37cf4e65d2fe4ff69c349d0edeb878dcd0837f4f2963dbfbc110313a4195089e"
+      },
+      {
+        "path": "src/lib/habitat/useObserverPresence.ts",
+        "sha256": "896d46511296a53ea2557ddd5419d4730d661a23c681577283447aea2cb3e77c"
+      },
+      {
+        "path": "src/lib/habitat/weave.ts",
+        "sha256": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5"
+      },
+      {
+        "path": "workers/habitat-runtime/src/contracts.ts",
+        "sha256": "851fdba5a532051181bde3bb0d6c4ae2b3a8c517ca47055f6531a432d9b0f0cd"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/deadline.ts",
+        "sha256": "2d97949eeb8c0ed829e171147f27782bdfa48fd1e408d33d7f6fa62d486f357c"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/groq.ts",
+        "sha256": "1587df8b5b2164d3d1ff7f4556eaac84bb1553cfcd16ac718e3020c8cdf705f4"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/router.ts",
+        "sha256": "2434a80f7f5799262ea72c89f4c2267dc70363ac3500a02332d244abe8d31545"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/shared.ts",
+        "sha256": "4ec5cee932bfa45855905b644c433d57b22605c68da7b45bf2942382f6a8fd27"
+      },
+      {
+        "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+        "sha256": "361cca4b9182f9f82904cf30b23e9678d3dc67c3793e009d4ba3a7dead39891d"
+      },
+      {
+        "path": "workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "dfdd81b6e8b76f9af0dd0dad0e352d8aae6b65cea3966c65500c6ef632121fe2"
+      }
+    ],
+    "diagnosticHash": "cc14b212af10e208cbab67b48d0eecc12b0fcde6010b7de4f4d7c908b33bf5e2",
+    "jobs": [
+      {
+        "id": "protocol-v2:dynamic:A",
+        "hash": "995577d14c81082c627c3fc4b601700b8be0a17cd20091240c0cecea452de135"
+      },
+      {
+        "id": "protocol-v2:dynamic:B",
+        "hash": "5508ccc51f3361d2db177b0e399f2de68625329969ce3aeaf98bbba14d891cf5"
+      }
+    ]
+  },
+  "binding": "c6e933dfc97f27d513a6002d43d609894b7580e849a5e7b3d20cd7b79abdae63",
+  "attempts": [
+    {
+      "id": "protocol-v2:dynamic:A",
+      "job": {
+        "id": "protocol-v2:dynamic:A",
+        "actor": "A",
+        "variant": "production-dynamic",
+        "turn": {
+          "id": "A:0:0",
+          "actor": "A",
+          "mindRevision": 0,
+          "sequence": 0,
+          "generation": 0,
+          "preparedAtMs": 1788825601000,
+          "expiresAtMs": 1788826501000,
+          "conversation": null,
+          "evidenceIds": [
+            "world:100:1"
+          ],
+          "prompt": "You are SELF. Choose a concrete next step toward your wants or answer the actual last message. Start a purpose if none exists; keep useful plans. JSON: OMIT unused/unchanged fields. Social purposes may use steps:[]. Message is speech, never a physical verb. Schema gives allowed IDs/fields. Others' words are claims; no invented outcomes or consent. Offer/respond requires message with close:false; never both. Work cells=total after all units. One action/watch: at=travel before action; go.room=destination; repay.target=person. Public goals/messages are visible; why is private. English, concise.\n{\"self\":{\"id\":\"A\",\"name\":\"Ama Oyelaran\",\"was\":\"Ran a small press; printed other people's books\",\"duty\":\"Records\",\"voice\":\"Precise, bookish, asks questions instead of making statements. Notices objects before people. Never uses an intensifier.\",\"wants\":\"To write something, and has never once said so aloud.\",\"fears\":\"Having spent a life on other people's words.\",\"condition\":{\"rested\":79,\"fed\":62,\"well\":95,\"safe\":67,\"accompanied\":53},\"cells\":15,\"maxSpendableCells\":15},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"contacts\":[{\"id\":\"U\",\"name\":\"Ulla Nyholm\",\"duty\":\"The infirmary, second\"},{\"id\":\"X\",\"name\":\"Xan Moreira\",\"duty\":\"Excavation\"},{\"id\":\"P\",\"name\":\"Pilar Ocaña\",\"duty\":\"The kitchen\"},{\"id\":\"H\",\"name\":\"Halim Zoubir\",\"duty\":\"The work roster\"}]},\"ownProject\":null,\"ownKnowledge\":[],\"sharedHistory\":[{\"other\":\"U\",\"history\":\"Schoolmates who are fond of one another.\"},{\"other\":\"X\",\"history\":\"Grew up on the same street.\"},{\"other\":\"P\",\"history\":\"Originally from the same region; recognised their accents in the first week after the crash.\"}],\"memories\":[],\"ownHistory\":[],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[]},\"conversation\":null,\"openOffers\":[],\"commitments\":[],\"receivables\":[],\"affordances\":{\"verbMeaning\":\"note=write a record; inspect=check equipment; observe=watch surroundings; work=posted duty; charge=reactor cells. Never write/message/repairreactor as verbs.\",\"agreements\":\"transfer, loan, work; cells are exact, at most two decimals; work may be voluntary (0 cells)\",\"workExamples\":[{\"verb\":\"grow\",\"at\":\"garden\",\"available\":true,\"needs\":{\"water\":2},\"produces\":{\"produce\":16}},{\"verb\":\"cook\",\"at\":\"kitchen\",\"available\":true,\"needs\":{\"produce\":4,\"water\":1},\"produces\":{\"meals\":8}},{\"verb\":\"clean\",\"at\":\"well\",\"available\":true,\"needs\":{},\"produces\":{\"water\":24}},{\"verb\":\"dig\",\"at\":\"face\",\"available\":true,\"needs\":{\"water\":1},\"produces\":{\"materials\":4}},{\"verb\":\"repair\",\"at\":\"workshops\",\"available\":true,\"needs\":{\"materials\":1,\"cells\":2},\"produces\":{\"maintenance\":8}}],\"repayments\":[]},\"omitted\":{\"contacts\":20}}",
+          "promptBytes": 2805,
+          "contextOverflow": false
+        },
+        "job": {
+          "schemaVersion": 1,
+          "jobId": "isolated-society-protocol-v2:mind:A:0:0:g:0",
+          "habitatId": "isolated-society-protocol-v2",
+          "origin": {
+            "kind": "alarm",
+            "runId": "society:0"
+          },
+          "cause": {
+            "worldRevision": 0,
+            "simTime": {
+              "day": 100,
+              "minute": 0
+            }
+          },
+          "kind": "society_turn",
+          "subjects": [
+            {
+              "kind": "resident",
+              "id": "A"
+            }
+          ],
+          "pressure": 0.09,
+          "createdAtMs": 1788825601000,
+          "prompt": {
+            "system": "Choose for yourself. Return JSON matching the schema, with only the fields you actually need.",
+            "user": "You are SELF. Choose a concrete next step toward your wants or answer the actual last message. Start a purpose if none exists; keep useful plans. JSON: OMIT unused/unchanged fields. Social purposes may use steps:[]. Message is speech, never a physical verb. Schema gives allowed IDs/fields. Others' words are claims; no invented outcomes or consent. Offer/respond requires message with close:false; never both. Work cells=total after all units. One action/watch: at=travel before action; go.room=destination; repay.target=person. Public goals/messages are visible; why is private. English, concise.\n{\"self\":{\"id\":\"A\",\"name\":\"Ama Oyelaran\",\"was\":\"Ran a small press; printed other people's books\",\"duty\":\"Records\",\"voice\":\"Precise, bookish, asks questions instead of making statements. Notices objects before people. Never uses an intensifier.\",\"wants\":\"To write something, and has never once said so aloud.\",\"fears\":\"Having spent a life on other people's words.\",\"condition\":{\"rested\":79,\"fed\":62,\"well\":95,\"safe\":67,\"accompanied\":53},\"cells\":15,\"maxSpendableCells\":15},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"contacts\":[{\"id\":\"U\",\"name\":\"Ulla Nyholm\",\"duty\":\"The infirmary, second\"},{\"id\":\"X\",\"name\":\"Xan Moreira\",\"duty\":\"Excavation\"},{\"id\":\"P\",\"name\":\"Pilar Ocaña\",\"duty\":\"The kitchen\"},{\"id\":\"H\",\"name\":\"Halim Zoubir\",\"duty\":\"The work roster\"}]},\"ownProject\":null,\"ownKnowledge\":[],\"sharedHistory\":[{\"other\":\"U\",\"history\":\"Schoolmates who are fond of one another.\"},{\"other\":\"X\",\"history\":\"Grew up on the same street.\"},{\"other\":\"P\",\"history\":\"Originally from the same region; recognised their accents in the first week after the crash.\"}],\"memories\":[],\"ownHistory\":[],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[]},\"conversation\":null,\"openOffers\":[],\"commitments\":[],\"receivables\":[],\"affordances\":{\"verbMeaning\":\"note=write a record; inspect=check equipment; observe=watch surroundings; work=posted duty; charge=reactor cells. Never write/message/repairreactor as verbs.\",\"agreements\":\"transfer, loan, work; cells are exact, at most two decimals; work may be voluntary (0 cells)\",\"workExamples\":[{\"verb\":\"grow\",\"at\":\"garden\",\"available\":true,\"needs\":{\"water\":2},\"produces\":{\"produce\":16}},{\"verb\":\"cook\",\"at\":\"kitchen\",\"available\":true,\"needs\":{\"produce\":4,\"water\":1},\"produces\":{\"meals\":8}},{\"verb\":\"clean\",\"at\":\"well\",\"available\":true,\"needs\":{},\"produces\":{\"water\":24}},{\"verb\":\"dig\",\"at\":\"face\",\"available\":true,\"needs\":{\"water\":1},\"produces\":{\"materials\":4}},{\"verb\":\"repair\",\"at\":\"workshops\",\"available\":true,\"needs\":{\"materials\":1,\"cells\":2},\"produces\":{\"maintenance\":8}}],\"repayments\":[]},\"omitted\":{\"contacts\":20}}"
+          },
+          "outputContract": {
+            "name": "society_turn",
+            "version": 1,
+            "schemaHash": "sha256:e6bae6a88ba8a80f3bcd4ab7d7b6e76b3a351eb848d04c9e3b06314c4fd40c45",
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "mode": {
+                      "const": "replace"
+                    },
+                    "goal": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "why": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    },
+                    "visibility": {
+                      "enum": [
+                        "public",
+                        "private"
+                      ]
+                    },
+                    "steps": {
+                      "type": "array",
+                      "maxItems": 6,
+                      "items": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "enum": [
+                                  "rest",
+                                  "sleep",
+                                  "eat",
+                                  "drink",
+                                  "wash",
+                                  "work",
+                                  "dig",
+                                  "grow",
+                                  "cook",
+                                  "clean",
+                                  "inspect",
+                                  "repair",
+                                  "charge",
+                                  "observe",
+                                  "note"
+                                ]
+                              },
+                              "at": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "const": "go"
+                              },
+                              "room": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb",
+                              "room"
+                            ],
+                            "additionalProperties": false
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "goal",
+                    "why",
+                    "visibility",
+                    "steps"
+                  ],
+                  "additionalProperties": false
+                },
+                "reflection": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "refs": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "items": {
+                        "enum": [
+                          "world:100:1"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "refs"
+                  ],
+                  "additionalProperties": false
+                },
+                "message": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "enum": [
+                        "B",
+                        "C",
+                        "D",
+                        "E",
+                        "F",
+                        "G",
+                        "H",
+                        "I",
+                        "J",
+                        "K",
+                        "L",
+                        "M",
+                        "N",
+                        "O",
+                        "P",
+                        "Q",
+                        "R",
+                        "S",
+                        "T",
+                        "U",
+                        "V",
+                        "W",
+                        "X",
+                        "Y"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "close": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "to",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "minProperties": 1,
+              "$defs": {
+                "room": {
+                  "enum": [
+                    "bridge",
+                    "dock",
+                    "longwalk",
+                    "cabin1",
+                    "cabin2",
+                    "cabin3",
+                    "cabin4",
+                    "cabin5",
+                    "hold",
+                    "infirmary",
+                    "camp",
+                    "garden",
+                    "sheltergate",
+                    "graveyard",
+                    "yard",
+                    "common",
+                    "administration",
+                    "dispatch",
+                    "archive",
+                    "records",
+                    "study",
+                    "sparebedroom",
+                    "parlour",
+                    "projection",
+                    "winter",
+                    "library",
+                    "grandbedroom",
+                    "salon",
+                    "hearth",
+                    "maintenance",
+                    "kitchen",
+                    "servicecounter",
+                    "maindiner",
+                    "sodabar",
+                    "stalls",
+                    "washroom",
+                    "row",
+                    "games",
+                    "dig1",
+                    "dig2",
+                    "dig3",
+                    "dig4",
+                    "dig5",
+                    "dig6",
+                    "workshops",
+                    "well",
+                    "face"
+                  ]
+                }
+              }
+            }
+          },
+          "maxOutputTokens": 768
+        },
+        "payload": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Choose for yourself. Return JSON matching the schema, with only the fields you actually need."
+            },
+            {
+              "role": "user",
+              "content": "You are SELF. Choose a concrete next step toward your wants or answer the actual last message. Start a purpose if none exists; keep useful plans. JSON: OMIT unused/unchanged fields. Social purposes may use steps:[]. Message is speech, never a physical verb. Schema gives allowed IDs/fields. Others' words are claims; no invented outcomes or consent. Offer/respond requires message with close:false; never both. Work cells=total after all units. One action/watch: at=travel before action; go.room=destination; repay.target=person. Public goals/messages are visible; why is private. English, concise.\n{\"self\":{\"id\":\"A\",\"name\":\"Ama Oyelaran\",\"was\":\"Ran a small press; printed other people's books\",\"duty\":\"Records\",\"voice\":\"Precise, bookish, asks questions instead of making statements. Notices objects before people. Never uses an intensifier.\",\"wants\":\"To write something, and has never once said so aloud.\",\"fears\":\"Having spent a life on other people's words.\",\"condition\":{\"rested\":79,\"fed\":62,\"well\":95,\"safe\":67,\"accompanied\":53},\"cells\":15,\"maxSpendableCells\":15},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"contacts\":[{\"id\":\"U\",\"name\":\"Ulla Nyholm\",\"duty\":\"The infirmary, second\"},{\"id\":\"X\",\"name\":\"Xan Moreira\",\"duty\":\"Excavation\"},{\"id\":\"P\",\"name\":\"Pilar Ocaña\",\"duty\":\"The kitchen\"},{\"id\":\"H\",\"name\":\"Halim Zoubir\",\"duty\":\"The work roster\"}]},\"ownProject\":null,\"ownKnowledge\":[],\"sharedHistory\":[{\"other\":\"U\",\"history\":\"Schoolmates who are fond of one another.\"},{\"other\":\"X\",\"history\":\"Grew up on the same street.\"},{\"other\":\"P\",\"history\":\"Originally from the same region; recognised their accents in the first week after the crash.\"}],\"memories\":[],\"ownHistory\":[],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[]},\"conversation\":null,\"openOffers\":[],\"commitments\":[],\"receivables\":[],\"affordances\":{\"verbMeaning\":\"note=write a record; inspect=check equipment; observe=watch surroundings; work=posted duty; charge=reactor cells. Never write/message/repairreactor as verbs.\",\"agreements\":\"transfer, loan, work; cells are exact, at most two decimals; work may be voluntary (0 cells)\",\"workExamples\":[{\"verb\":\"grow\",\"at\":\"garden\",\"available\":true,\"needs\":{\"water\":2},\"produces\":{\"produce\":16}},{\"verb\":\"cook\",\"at\":\"kitchen\",\"available\":true,\"needs\":{\"produce\":4,\"water\":1},\"produces\":{\"meals\":8}},{\"verb\":\"clean\",\"at\":\"well\",\"available\":true,\"needs\":{},\"produces\":{\"water\":24}},{\"verb\":\"dig\",\"at\":\"face\",\"available\":true,\"needs\":{\"water\":1},\"produces\":{\"materials\":4}},{\"verb\":\"repair\",\"at\":\"workshops\",\"available\":true,\"needs\":{\"materials\":1,\"cells\":2},\"produces\":{\"maintenance\":8}}],\"repayments\":[]},\"omitted\":{\"contacts\":20}}\n/no_think"
+            }
+          ],
+          "max_tokens": 768,
+          "temperature": 0.3,
+          "seed": 3234649151,
+          "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "mode": {
+                      "const": "replace"
+                    },
+                    "goal": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "why": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    },
+                    "visibility": {
+                      "enum": [
+                        "public",
+                        "private"
+                      ]
+                    },
+                    "steps": {
+                      "type": "array",
+                      "maxItems": 6,
+                      "items": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "enum": [
+                                  "rest",
+                                  "sleep",
+                                  "eat",
+                                  "drink",
+                                  "wash",
+                                  "work",
+                                  "dig",
+                                  "grow",
+                                  "cook",
+                                  "clean",
+                                  "inspect",
+                                  "repair",
+                                  "charge",
+                                  "observe",
+                                  "note"
+                                ]
+                              },
+                              "at": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "const": "go"
+                              },
+                              "room": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb",
+                              "room"
+                            ],
+                            "additionalProperties": false
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "goal",
+                    "why",
+                    "visibility",
+                    "steps"
+                  ],
+                  "additionalProperties": false
+                },
+                "reflection": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "refs": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "items": {
+                        "enum": [
+                          "world:100:1"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "refs"
+                  ],
+                  "additionalProperties": false
+                },
+                "message": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "enum": [
+                        "B",
+                        "C",
+                        "D",
+                        "E",
+                        "F",
+                        "G",
+                        "H",
+                        "I",
+                        "J",
+                        "K",
+                        "L",
+                        "M",
+                        "N",
+                        "O",
+                        "P",
+                        "Q",
+                        "R",
+                        "S",
+                        "T",
+                        "U",
+                        "V",
+                        "W",
+                        "X",
+                        "Y"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "close": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "to",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "minProperties": 1,
+              "$defs": {
+                "room": {
+                  "enum": [
+                    "bridge",
+                    "dock",
+                    "longwalk",
+                    "cabin1",
+                    "cabin2",
+                    "cabin3",
+                    "cabin4",
+                    "cabin5",
+                    "hold",
+                    "infirmary",
+                    "camp",
+                    "garden",
+                    "sheltergate",
+                    "graveyard",
+                    "yard",
+                    "common",
+                    "administration",
+                    "dispatch",
+                    "archive",
+                    "records",
+                    "study",
+                    "sparebedroom",
+                    "parlour",
+                    "projection",
+                    "winter",
+                    "library",
+                    "grandbedroom",
+                    "salon",
+                    "hearth",
+                    "maintenance",
+                    "kitchen",
+                    "servicecounter",
+                    "maindiner",
+                    "sodabar",
+                    "stalls",
+                    "washroom",
+                    "row",
+                    "games",
+                    "dig1",
+                    "dig2",
+                    "dig3",
+                    "dig4",
+                    "dig5",
+                    "dig6",
+                    "workshops",
+                    "well",
+                    "face"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "promptBytes": 5179,
+        "reservedInputTokens": 7227,
+        "reservedNeurons": 57
+      },
+      "state": "completed",
+      "startedAt": "2026-09-08T10:07:40.685Z",
+      "accountedNeurons": 8,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"message\":{\"text\":\"What is the best way to begin writing something?\",\"to\":\"U\"},\"project\":{\"goal\":\"To write something\",\"mode\":\"replace\",\"steps\":[],\"visibility\":\"private\",\"why\":\"To fulfill a long-held desire without external pressure.\"},\"reflection\":{\"refs\":[\n\n\"world:100:1\",\"world:100:1\",\"world:100:1\"],\"text\":\"The desire to write has been present but unspoken. How to translate this into action?\"}}",
+              "function_call": null,
+              "reasoning": "\n\n",
+              "reasoning_content": "\n\n",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1788862061,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-1a63d9d7-4b80-42bf-a97c-2ce8d9195e51",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "response": {
+          "message": {
+            "text": "What is the best way to begin writing something?",
+            "to": "U"
+          },
+          "project": {
+            "goal": "To write something",
+            "mode": "replace",
+            "steps": [],
+            "visibility": "private",
+            "why": "To fulfill a long-held desire without external pressure."
+          },
+          "reflection": {
+            "refs": [
+              "world:100:1",
+              "world:100:1",
+              "world:100:1"
+            ],
+            "text": "The desire to write has been present but unspoken. How to translate this into action?"
+          }
+        },
+        "service_tier": null,
+        "tool_calls": [],
+        "usage": {
+          "prompt_tokens": 791,
+          "completion_tokens": 130,
+          "total_tokens": 921,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 7.61976432800293
+        }
+      },
+      "receipt": {
+        "complete": true,
+        "exceedsReservation": false,
+        "estimatedNeuronsFromReportedTokens": 8,
+        "accountedNeurons": 8,
+        "accounting": "estimated_from_complete_reported_usage",
+        "output": {
+          "message": {
+            "text": "What is the best way to begin writing something?",
+            "to": "U"
+          },
+          "project": {
+            "goal": "To write something",
+            "mode": "replace",
+            "steps": [],
+            "visibility": "private",
+            "why": "To fulfill a long-held desire without external pressure."
+          },
+          "reflection": {
+            "refs": [
+              "world:100:1",
+              "world:100:1",
+              "world:100:1"
+            ],
+            "text": "The desire to write has been present but unspoken. How to translate this into action?"
+          }
+        },
+        "code": null
+      },
+      "latencyMs": 2194,
+      "finishedAt": "2026-09-08T10:07:42.887Z",
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "project": {
+          "id": "project:0",
+          "goal": "To write something",
+          "why": "To fulfill a long-held desire without external pressure.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825601001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "A",
+              "U"
+            ],
+            "revision": 1,
+            "nextSpeaker": "U",
+            "status": "open",
+            "createdAtMs": 1788825601001,
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "index": 0,
+                "speaker": "A",
+                "text": "What is the best way to begin writing something?",
+                "atMs": 1788825601001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      }
+    },
+    {
+      "id": "protocol-v2:dynamic:B",
+      "job": {
+        "id": "protocol-v2:dynamic:B",
+        "actor": "B",
+        "variant": "production-dynamic",
+        "turn": {
+          "id": "B:0:1",
+          "actor": "B",
+          "mindRevision": 0,
+          "sequence": 1,
+          "generation": 0,
+          "preparedAtMs": 1788825601000,
+          "expiresAtMs": 1788826501000,
+          "conversation": null,
+          "evidenceIds": [
+            "world:100:1"
+          ],
+          "prompt": "You are SELF. Choose a concrete next step toward your wants or answer the actual last message. Start a purpose if none exists; keep useful plans. JSON: OMIT unused/unchanged fields. Social purposes may use steps:[]. Message is speech, never a physical verb. Schema gives allowed IDs/fields. Others' words are claims; no invented outcomes or consent. Offer/respond requires message with close:false; never both. Work cells=total after all units. One action/watch: at=travel before action; go.room=destination; repay.target=person. Public goals/messages are visible; why is private. English, concise.\n{\"self\":{\"id\":\"B\",\"name\":\"Bex Ferreira\",\"was\":\"Booking agent\",\"duty\":\"Stores and inventory\",\"voice\":\"Quick, over-apologetic, service language that has become personality — no problem at all, let me just check that for you. Fills silences.\",\"wants\":\"To be consulted about something once.\",\"fears\":\"Not being taken seriously, which makes her agree too fast.\",\"condition\":{\"rested\":72,\"fed\":70,\"well\":95,\"safe\":61,\"accompanied\":61},\"cells\":8,\"maxSpendableCells\":8},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"contacts\":[{\"id\":\"H\",\"name\":\"Halim Zoubir\",\"duty\":\"The work roster\"},{\"id\":\"K\",\"name\":\"Kes Amankwah\",\"duty\":\"Communications\"},{\"id\":\"A\",\"name\":\"Ama Oyelaran\",\"duty\":\"Records\"},{\"id\":\"C\",\"name\":\"Cato Lindqvist\",\"duty\":\"The cold bed in the Infirmary\"}]},\"ownProject\":null,\"ownKnowledge\":[],\"sharedHistory\":[],\"memories\":[],\"ownHistory\":[],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[]},\"conversation\":null,\"openOffers\":[],\"commitments\":[],\"receivables\":[],\"affordances\":{\"verbMeaning\":\"note=write a record; inspect=check equipment; observe=watch surroundings; work=posted duty; charge=reactor cells. Never write/message/repairreactor as verbs.\",\"agreements\":\"transfer, loan, work; cells are exact, at most two decimals; work may be voluntary (0 cells)\",\"workExamples\":[{\"verb\":\"grow\",\"at\":\"garden\",\"available\":true,\"needs\":{\"water\":2},\"produces\":{\"produce\":16}},{\"verb\":\"cook\",\"at\":\"kitchen\",\"available\":true,\"needs\":{\"produce\":4,\"water\":1},\"produces\":{\"meals\":8}},{\"verb\":\"clean\",\"at\":\"well\",\"available\":true,\"needs\":{},\"produces\":{\"water\":24}},{\"verb\":\"dig\",\"at\":\"face\",\"available\":true,\"needs\":{\"water\":1},\"produces\":{\"materials\":4}},{\"verb\":\"repair\",\"at\":\"workshops\",\"available\":true,\"needs\":{\"materials\":1,\"cells\":2},\"produces\":{\"maintenance\":8}}],\"repayments\":[]},\"omitted\":{\"contacts\":20}}",
+          "promptBytes": 2572,
+          "contextOverflow": false
+        },
+        "job": {
+          "schemaVersion": 1,
+          "jobId": "isolated-society-protocol-v2:mind:B:0:1:g:0",
+          "habitatId": "isolated-society-protocol-v2",
+          "origin": {
+            "kind": "alarm",
+            "runId": "society:1"
+          },
+          "cause": {
+            "worldRevision": 0,
+            "simTime": {
+              "day": 100,
+              "minute": 0
+            }
+          },
+          "kind": "society_turn",
+          "subjects": [
+            {
+              "kind": "resident",
+              "id": "B"
+            }
+          ],
+          "pressure": 0.1,
+          "createdAtMs": 1788825601000,
+          "prompt": {
+            "system": "Choose for yourself. Return JSON matching the schema, with only the fields you actually need.",
+            "user": "You are SELF. Choose a concrete next step toward your wants or answer the actual last message. Start a purpose if none exists; keep useful plans. JSON: OMIT unused/unchanged fields. Social purposes may use steps:[]. Message is speech, never a physical verb. Schema gives allowed IDs/fields. Others' words are claims; no invented outcomes or consent. Offer/respond requires message with close:false; never both. Work cells=total after all units. One action/watch: at=travel before action; go.room=destination; repay.target=person. Public goals/messages are visible; why is private. English, concise.\n{\"self\":{\"id\":\"B\",\"name\":\"Bex Ferreira\",\"was\":\"Booking agent\",\"duty\":\"Stores and inventory\",\"voice\":\"Quick, over-apologetic, service language that has become personality — no problem at all, let me just check that for you. Fills silences.\",\"wants\":\"To be consulted about something once.\",\"fears\":\"Not being taken seriously, which makes her agree too fast.\",\"condition\":{\"rested\":72,\"fed\":70,\"well\":95,\"safe\":61,\"accompanied\":61},\"cells\":8,\"maxSpendableCells\":8},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"contacts\":[{\"id\":\"H\",\"name\":\"Halim Zoubir\",\"duty\":\"The work roster\"},{\"id\":\"K\",\"name\":\"Kes Amankwah\",\"duty\":\"Communications\"},{\"id\":\"A\",\"name\":\"Ama Oyelaran\",\"duty\":\"Records\"},{\"id\":\"C\",\"name\":\"Cato Lindqvist\",\"duty\":\"The cold bed in the Infirmary\"}]},\"ownProject\":null,\"ownKnowledge\":[],\"sharedHistory\":[],\"memories\":[],\"ownHistory\":[],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[]},\"conversation\":null,\"openOffers\":[],\"commitments\":[],\"receivables\":[],\"affordances\":{\"verbMeaning\":\"note=write a record; inspect=check equipment; observe=watch surroundings; work=posted duty; charge=reactor cells. Never write/message/repairreactor as verbs.\",\"agreements\":\"transfer, loan, work; cells are exact, at most two decimals; work may be voluntary (0 cells)\",\"workExamples\":[{\"verb\":\"grow\",\"at\":\"garden\",\"available\":true,\"needs\":{\"water\":2},\"produces\":{\"produce\":16}},{\"verb\":\"cook\",\"at\":\"kitchen\",\"available\":true,\"needs\":{\"produce\":4,\"water\":1},\"produces\":{\"meals\":8}},{\"verb\":\"clean\",\"at\":\"well\",\"available\":true,\"needs\":{},\"produces\":{\"water\":24}},{\"verb\":\"dig\",\"at\":\"face\",\"available\":true,\"needs\":{\"water\":1},\"produces\":{\"materials\":4}},{\"verb\":\"repair\",\"at\":\"workshops\",\"available\":true,\"needs\":{\"materials\":1,\"cells\":2},\"produces\":{\"maintenance\":8}}],\"repayments\":[]},\"omitted\":{\"contacts\":20}}"
+          },
+          "outputContract": {
+            "name": "society_turn",
+            "version": 1,
+            "schemaHash": "sha256:6250f6697e8e09ad7a954d3f8d4077c463a18543dfac2aa3ad3bb2bffc4e7faa",
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "mode": {
+                      "const": "replace"
+                    },
+                    "goal": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "why": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    },
+                    "visibility": {
+                      "enum": [
+                        "public",
+                        "private"
+                      ]
+                    },
+                    "steps": {
+                      "type": "array",
+                      "maxItems": 6,
+                      "items": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "enum": [
+                                  "rest",
+                                  "sleep",
+                                  "eat",
+                                  "drink",
+                                  "wash",
+                                  "work",
+                                  "dig",
+                                  "grow",
+                                  "cook",
+                                  "clean",
+                                  "inspect",
+                                  "repair",
+                                  "charge",
+                                  "observe",
+                                  "note"
+                                ]
+                              },
+                              "at": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "const": "go"
+                              },
+                              "room": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb",
+                              "room"
+                            ],
+                            "additionalProperties": false
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "goal",
+                    "why",
+                    "visibility",
+                    "steps"
+                  ],
+                  "additionalProperties": false
+                },
+                "reflection": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "refs": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "items": {
+                        "enum": [
+                          "world:100:1"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "refs"
+                  ],
+                  "additionalProperties": false
+                },
+                "message": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "enum": [
+                        "A",
+                        "C",
+                        "D",
+                        "E",
+                        "F",
+                        "G",
+                        "H",
+                        "I",
+                        "J",
+                        "K",
+                        "L",
+                        "M",
+                        "N",
+                        "O",
+                        "P",
+                        "Q",
+                        "R",
+                        "S",
+                        "T",
+                        "U",
+                        "V",
+                        "W",
+                        "X",
+                        "Y"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "close": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "to",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "minProperties": 1,
+              "$defs": {
+                "room": {
+                  "enum": [
+                    "bridge",
+                    "dock",
+                    "longwalk",
+                    "cabin1",
+                    "cabin2",
+                    "cabin3",
+                    "cabin4",
+                    "cabin5",
+                    "hold",
+                    "infirmary",
+                    "camp",
+                    "garden",
+                    "sheltergate",
+                    "graveyard",
+                    "yard",
+                    "common",
+                    "administration",
+                    "dispatch",
+                    "archive",
+                    "records",
+                    "study",
+                    "sparebedroom",
+                    "parlour",
+                    "projection",
+                    "winter",
+                    "library",
+                    "grandbedroom",
+                    "salon",
+                    "hearth",
+                    "maintenance",
+                    "kitchen",
+                    "servicecounter",
+                    "maindiner",
+                    "sodabar",
+                    "stalls",
+                    "washroom",
+                    "row",
+                    "games",
+                    "dig1",
+                    "dig2",
+                    "dig3",
+                    "dig4",
+                    "dig5",
+                    "dig6",
+                    "workshops",
+                    "well",
+                    "face"
+                  ]
+                }
+              }
+            }
+          },
+          "maxOutputTokens": 768
+        },
+        "payload": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Choose for yourself. Return JSON matching the schema, with only the fields you actually need."
+            },
+            {
+              "role": "user",
+              "content": "You are SELF. Choose a concrete next step toward your wants or answer the actual last message. Start a purpose if none exists; keep useful plans. JSON: OMIT unused/unchanged fields. Social purposes may use steps:[]. Message is speech, never a physical verb. Schema gives allowed IDs/fields. Others' words are claims; no invented outcomes or consent. Offer/respond requires message with close:false; never both. Work cells=total after all units. One action/watch: at=travel before action; go.room=destination; repay.target=person. Public goals/messages are visible; why is private. English, concise.\n{\"self\":{\"id\":\"B\",\"name\":\"Bex Ferreira\",\"was\":\"Booking agent\",\"duty\":\"Stores and inventory\",\"voice\":\"Quick, over-apologetic, service language that has become personality — no problem at all, let me just check that for you. Fills silences.\",\"wants\":\"To be consulted about something once.\",\"fears\":\"Not being taken seriously, which makes her agree too fast.\",\"condition\":{\"rested\":72,\"fed\":70,\"well\":95,\"safe\":61,\"accompanied\":61},\"cells\":8,\"maxSpendableCells\":8},\"public\":{\"id\":\"world:100:1\",\"day\":100,\"watch\":1,\"watchNumber\":400,\"stock\":{\"produce\":60,\"meals\":100,\"water\":250,\"materials\":16},\"maintenance\":90,\"reactor\":0.94,\"contacts\":[{\"id\":\"H\",\"name\":\"Halim Zoubir\",\"duty\":\"The work roster\"},{\"id\":\"K\",\"name\":\"Kes Amankwah\",\"duty\":\"Communications\"},{\"id\":\"A\",\"name\":\"Ama Oyelaran\",\"duty\":\"Records\"},{\"id\":\"C\",\"name\":\"Cato Lindqvist\",\"duty\":\"The cold bed in the Infirmary\"}]},\"ownProject\":null,\"ownKnowledge\":[],\"sharedHistory\":[],\"memories\":[],\"ownHistory\":[],\"ownFeelings\":{\"axes\":[\"trust\",\"affection\",\"admiration\",\"debt\",\"resentment\",\"desire\"],\"towards\":[]},\"conversation\":null,\"openOffers\":[],\"commitments\":[],\"receivables\":[],\"affordances\":{\"verbMeaning\":\"note=write a record; inspect=check equipment; observe=watch surroundings; work=posted duty; charge=reactor cells. Never write/message/repairreactor as verbs.\",\"agreements\":\"transfer, loan, work; cells are exact, at most two decimals; work may be voluntary (0 cells)\",\"workExamples\":[{\"verb\":\"grow\",\"at\":\"garden\",\"available\":true,\"needs\":{\"water\":2},\"produces\":{\"produce\":16}},{\"verb\":\"cook\",\"at\":\"kitchen\",\"available\":true,\"needs\":{\"produce\":4,\"water\":1},\"produces\":{\"meals\":8}},{\"verb\":\"clean\",\"at\":\"well\",\"available\":true,\"needs\":{},\"produces\":{\"water\":24}},{\"verb\":\"dig\",\"at\":\"face\",\"available\":true,\"needs\":{\"water\":1},\"produces\":{\"materials\":4}},{\"verb\":\"repair\",\"at\":\"workshops\",\"available\":true,\"needs\":{\"materials\":1,\"cells\":2},\"produces\":{\"maintenance\":8}}],\"repayments\":[]},\"omitted\":{\"contacts\":20}}\n/no_think"
+            }
+          ],
+          "max_tokens": 768,
+          "temperature": 0.3,
+          "seed": 2142642589,
+          "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "mode": {
+                      "const": "replace"
+                    },
+                    "goal": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "why": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    },
+                    "visibility": {
+                      "enum": [
+                        "public",
+                        "private"
+                      ]
+                    },
+                    "steps": {
+                      "type": "array",
+                      "maxItems": 6,
+                      "items": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "enum": [
+                                  "rest",
+                                  "sleep",
+                                  "eat",
+                                  "drink",
+                                  "wash",
+                                  "work",
+                                  "dig",
+                                  "grow",
+                                  "cook",
+                                  "clean",
+                                  "inspect",
+                                  "repair",
+                                  "charge",
+                                  "observe",
+                                  "note"
+                                ]
+                              },
+                              "at": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "verb": {
+                                "const": "go"
+                              },
+                              "room": {
+                                "$ref": "#/$defs/room"
+                              }
+                            },
+                            "required": [
+                              "verb",
+                              "room"
+                            ],
+                            "additionalProperties": false
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "goal",
+                    "why",
+                    "visibility",
+                    "steps"
+                  ],
+                  "additionalProperties": false
+                },
+                "reflection": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "refs": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "items": {
+                        "enum": [
+                          "world:100:1"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "refs"
+                  ],
+                  "additionalProperties": false
+                },
+                "message": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "enum": [
+                        "A",
+                        "C",
+                        "D",
+                        "E",
+                        "F",
+                        "G",
+                        "H",
+                        "I",
+                        "J",
+                        "K",
+                        "L",
+                        "M",
+                        "N",
+                        "O",
+                        "P",
+                        "Q",
+                        "R",
+                        "S",
+                        "T",
+                        "U",
+                        "V",
+                        "W",
+                        "X",
+                        "Y"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "close": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "to",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "minProperties": 1,
+              "$defs": {
+                "room": {
+                  "enum": [
+                    "bridge",
+                    "dock",
+                    "longwalk",
+                    "cabin1",
+                    "cabin2",
+                    "cabin3",
+                    "cabin4",
+                    "cabin5",
+                    "hold",
+                    "infirmary",
+                    "camp",
+                    "garden",
+                    "sheltergate",
+                    "graveyard",
+                    "yard",
+                    "common",
+                    "administration",
+                    "dispatch",
+                    "archive",
+                    "records",
+                    "study",
+                    "sparebedroom",
+                    "parlour",
+                    "projection",
+                    "winter",
+                    "library",
+                    "grandbedroom",
+                    "salon",
+                    "hearth",
+                    "maintenance",
+                    "kitchen",
+                    "servicecounter",
+                    "maindiner",
+                    "sodabar",
+                    "stalls",
+                    "washroom",
+                    "row",
+                    "games",
+                    "dig1",
+                    "dig2",
+                    "dig3",
+                    "dig4",
+                    "dig5",
+                    "dig6",
+                    "workshops",
+                    "well",
+                    "face"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "promptBytes": 4922,
+        "reservedInputTokens": 6970,
+        "reservedNeurons": 56
+      },
+      "state": "completed",
+      "startedAt": "2026-09-08T10:07:42.906Z",
+      "accountedNeurons": 10,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"message\":{\"text\":\"I'm sorry, but I don't know what you're referring to. Could you please clarify what you need me to be consulted about?\",\"to\":\"A\"},\"project\":{\"goal\":\"To be consulted about something once.\",\"mode\":\"replace\",\"steps\":[],\"visibility\":\"public\",\"why\":\"Ama Oyelaran is in charge of Records and might have information about any ongoing projects or decisions that require consultation.\"},\"reflection\":{ \"refs\": [\"world:100:1\",\"world:100:1\",\"world:100:1\"],\"text\": \"Bex is trying to fulfill her want of being consulted about something once. She is reaching out to Ama Oyelaran, who is in charge of Records, hoping that there might be some information or project that requires consultation.\"}}",
+              "function_call": null,
+              "reasoning": "\n\n",
+              "reasoning_content": "\n\n",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1788862063,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-28473f91-c924-4a87-9995-a8b64083ec59",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "response": {
+          "message": {
+            "text": "I'm sorry, but I don't know what you're referring to. Could you please clarify what you need me to be consulted about?",
+            "to": "A"
+          },
+          "project": {
+            "goal": "To be consulted about something once.",
+            "mode": "replace",
+            "steps": [],
+            "visibility": "public",
+            "why": "Ama Oyelaran is in charge of Records and might have information about any ongoing projects or decisions that require consultation."
+          },
+          "reflection": {
+            "refs": [
+              "world:100:1",
+              "world:100:1",
+              "world:100:1"
+            ],
+            "text": "Bex is trying to fulfill her want of being consulted about something once. She is reaching out to Ama Oyelaran, who is in charge of Records, hoping that there might be some information or project that requires consultation."
+          }
+        },
+        "service_tier": null,
+        "tool_calls": [],
+        "usage": {
+          "prompt_tokens": 734,
+          "completion_tokens": 200,
+          "total_tokens": 934,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 9.489397048950195
+        }
+      },
+      "receipt": {
+        "complete": true,
+        "exceedsReservation": false,
+        "estimatedNeuronsFromReportedTokens": 10,
+        "accountedNeurons": 10,
+        "accounting": "estimated_from_complete_reported_usage",
+        "output": {
+          "message": {
+            "text": "I'm sorry, but I don't know what you're referring to. Could you please clarify what you need me to be consulted about?",
+            "to": "A"
+          },
+          "project": {
+            "goal": "To be consulted about something once.",
+            "mode": "replace",
+            "steps": [],
+            "visibility": "public",
+            "why": "Ama Oyelaran is in charge of Records and might have information about any ongoing projects or decisions that require consultation."
+          },
+          "reflection": {
+            "refs": [
+              "world:100:1",
+              "world:100:1",
+              "world:100:1"
+            ],
+            "text": "Bex is trying to fulfill her want of being consulted about something once. She is reaching out to Ama Oyelaran, who is in charge of Records, hoping that there might be some information or project that requires consultation."
+          }
+        },
+        "code": null
+      },
+      "latencyMs": 1890,
+      "finishedAt": "2026-09-08T10:07:44.803Z",
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "project": {
+          "id": "project:0",
+          "goal": "To be consulted about something once.",
+          "why": "Ama Oyelaran is in charge of Records and might have information about any ongoing projects or decisions that require consultation.",
+          "visibility": "public",
+          "status": "active",
+          "createdAtMs": 1788825601001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:2",
+            "participants": [
+              "B",
+              "A"
+            ],
+            "revision": 1,
+            "nextSpeaker": "A",
+            "status": "open",
+            "createdAtMs": 1788825601001,
+            "expiresAtMs": 1788912001001,
+            "turns": [
+              {
+                "id": "turn:3",
+                "index": 0,
+                "speaker": "B",
+                "text": "I'm sorry, but I don't know what you're referring to. Could you please clarify what you need me to be consulted about?",
+                "atMs": 1788825601001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balances": {
+          "A": {
+            "before": 15,
+            "after": 15
+          },
+          "B": {
+            "before": 8,
+            "after": 8
+          }
+        }
+      }
+    }
+  ]
+}

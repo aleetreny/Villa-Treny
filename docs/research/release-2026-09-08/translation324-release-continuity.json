@@ -1,0 +1,177 @@
+{
+  "format": "villa-translation324-release-continuity-v1",
+  "version": "900bff99-fd53-4753-9dc1-23b9e687207e",
+  "scope": "All rows and all columns in both complete cuts are identical; no intervening activity filtered out.",
+  "worldRevision": 177,
+  "before": {
+    "backupDirectory": "20260908T190421688Z-pre-translation324",
+    "sha256": "9831cc6ae4b424e49311102c6978630ea81b52a4b2d608c76f8b352d131918e7",
+    "exportedAtMs": 1788894262131
+  },
+  "after": {
+    "backupDirectory": "20260908T190602680Z-post-translation324",
+    "sha256": "3421cf65e5a7eeedd25b842188e07a135d70595d6ca14ff0a6ede268bf873818",
+    "exportedAtMs": 1788894363320
+  },
+  "tables": [
+    {
+      "table": "_sql_schema_migrations",
+      "rows": 9,
+      "sha256": "13b5c87d2fb24b37e77ea123ee73ba7a2002974b8d3a6e0dd615a446639e4caf"
+    },
+    {
+      "table": "admin_commands",
+      "rows": 9,
+      "sha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5"
+    },
+    {
+      "table": "alarm_runs",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "authored_publications",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "cognition_contexts",
+      "rows": 72,
+      "sha256": "0d72d4cf3a6cef19dc759c91d48a67ab12a77ecad27a46e99cdde90668a28b53"
+    },
+    {
+      "table": "cognition_jobs",
+      "rows": 102,
+      "sha256": "3b94865a06ac53f14873efa2359e908c80d5a0d1e16b338448794cbbe622d1ff"
+    },
+    {
+      "table": "economic_events",
+      "rows": 38,
+      "sha256": "bdc0d75161780fe3688fc85c8f85cbbff0a217b5a147e38d07d61f0a3e98e62b"
+    },
+    {
+      "table": "happening_people",
+      "rows": 463,
+      "sha256": "7e6f558a96cbb19a970eb7faed25ea6b879b15fd9505240c79a90074d48c0474"
+    },
+    {
+      "table": "happenings",
+      "rows": 270,
+      "sha256": "761590019660b5d2a25e45901ad23a7ac4e1dd4e0c573e1222cee647f7f14d38"
+    },
+    {
+      "table": "physical_runs",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "provider_attempts",
+      "rows": 121,
+      "sha256": "465a704e9a55791d391e0a9616d7707899375216820469bf7fd4d1f145c4ee72"
+    },
+    {
+      "table": "provider_breakers",
+      "rows": 2,
+      "sha256": "86102eec17a086e3cd983aaebbd41678bca3e3e02bb0a34eb50beea172874407"
+    },
+    {
+      "table": "provider_rejections",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "provider_usage_daily",
+      "rows": 14,
+      "sha256": "b20af88c61dd412f13c0e64452ffeae56896eced6d7d812de68bdd4868a19569"
+    },
+    {
+      "table": "quota_reservations",
+      "rows": 125,
+      "sha256": "935457036f4f8001eb23594b571d4f90950dd91e519f218da7e7b4c4cd6d8f3c"
+    },
+    {
+      "table": "runtime_events",
+      "rows": 113,
+      "sha256": "8374d9f80fc6247fec418413bdf62d4902b3877b3fd6cd53e5ff055ed1332495"
+    },
+    {
+      "table": "runtime_meta",
+      "rows": 1,
+      "sha256": "b4305049a136ad83d65229846729837325a29a886852c96b1962fbb8fa02b62b"
+    },
+    {
+      "table": "society_events",
+      "rows": 72,
+      "sha256": "f3fe1dafd1f5b383b51aa0d57d77c1c239016f0751b1bd5d6b5423ba02b1e7f9"
+    },
+    {
+      "table": "society_layout_backups",
+      "rows": 1,
+      "sha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e"
+    },
+    {
+      "table": "society_state",
+      "rows": 1,
+      "sha256": "e50961f2368dd9087fa7771709ba20363df57ce187319a9b0fe9819559395ba3"
+    },
+    {
+      "table": "watch_runs",
+      "rows": 30,
+      "sha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf"
+    },
+    {
+      "table": "world_checkpoints",
+      "rows": 2,
+      "sha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a"
+    },
+    {
+      "table": "world_layout_backups",
+      "rows": 3,
+      "sha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57"
+    },
+    {
+      "table": "world_state",
+      "rows": 1,
+      "sha256": "3b34db8957049ece6cd0ffc9847f1f3d28801ddee49ad3960d8b718caf13acd2"
+    }
+  ],
+  "checks": {
+    "fullRecovery": true,
+    "entirePhysicalStateIdentical": true,
+    "allTablesAndColumnsIdentical": true,
+    "allRuntimeFieldsAndClocksIdentical": true,
+    "allSocietyStateAndRecordsIdentical": true,
+    "lint": true,
+    "typecheck": true,
+    "appTests": 949,
+    "workerTests": 248,
+    "nodeTests": 48,
+    "hostingTests": 6,
+    "targetedTranslationBrowserPassed": true,
+    "build": true,
+    "dryDeploy": true
+  },
+  "source": [
+    {
+      "path": "src/lib/habitat/public-message-translation.ts",
+      "sha256": "4efcb1d94f30d7973e49ddcb221f3ef215e24f68ab38b24f7f2cae1f17c17931"
+    },
+    {
+      "path": "src/lib/habitat/public-message-translation.test.ts",
+      "sha256": "d589e7f5fd77dd1ae9935b686c4205d6bc80da67c6df17be1aa1d19e96872df7"
+    },
+    {
+      "path": "tests/browser/historical-translations.spec.ts",
+      "sha256": "363fe7077902945c1368ff9e9a337322658c30345b0eed107839fdbe16dbf78b"
+    },
+    {
+      "path": "workers/habitat-runtime/wrangler.jsonc",
+      "sha256": "80cfb6103275f2fef47e0b8f675e3a81df327e9fcdbca20692775f729b312637"
+    }
+  ],
+  "limitations": [
+    "This translates one already-public historical P4 message; no future language guarantee.",
+    "C72 P6 first reply is preserved exactly; no publication or paid work is inferred."
+  ],
+  "gitCommitOrPush": false
+}

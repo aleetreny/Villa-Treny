@@ -1,0 +1,87 @@
+{
+  "verifiedAt": "2026-09-08T14:51:49.256Z",
+  "newCalls": 0,
+  "halted": null,
+  "attempts": 6,
+  "httpRequests": 0,
+  "ledgerSha256": "83feb8d0f685a59e1a9a0f2eb747e51b20db1ee116b2985164a13c824f302504",
+  "reportSha256": "4fe2d5417a74f80ea4ccdb0f6d184ddb1502ab1d0d667541045c7ef67b48f3ea",
+  "sourceBundleSha256": "f875183895116e670a69f708da2dc5f8cff1025d13573f059e76c9850c6dcd25",
+  "maxRssKiB": 14655872,
+  "totals": {
+    "input": 9052,
+    "output": 936,
+    "latencyMs": 26285
+  },
+  "pairs": [
+    {
+      "actor": "G",
+      "exactContentEqual": true,
+      "outputHash": "47d170b69121e83e2d5d5c1107ea26d3996394e4a9cd3a549cc159219093ed36",
+      "variants": [
+        {
+          "variant": "A",
+          "payloadHash": "3d403794f9a12738965718b1c38c57afec26d6af13e05e918b25952f67f37223",
+          "schemaHash": "8205b032920fa69d21d06d4c25a5dc66845b12872f4214cb4432f6cd34cf62d0",
+          "rawResponseHash": "b66f91c1de939f350e70f2230871459189b88d631a0af2e8bc416ed7eb4c56c9",
+          "sourceJobHash": "497929ea01e38f2e3765f0a2d5ccec8b2aff58dd8d92c3334989998425fbbf4f",
+          "beforeHash": "f4430efe707dcc7c475175e2234c6269c754e683a0a80bd551d2bb5cadbe002c"
+        },
+        {
+          "variant": "B",
+          "payloadHash": "6d2f83b39075dd28d0a6e18fa965886f04f8d111228f95fc0cc8774488b6dc2b",
+          "schemaHash": "7eb3267295560c98f73455d0f8e7cf311fa577e4158087d669fb21a81e4a4984",
+          "rawResponseHash": "7fc988601008177f505ce21177394090bd020236c05674af734c9eadffe2d73d",
+          "sourceJobHash": "497929ea01e38f2e3765f0a2d5ccec8b2aff58dd8d92c3334989998425fbbf4f",
+          "beforeHash": "f4430efe707dcc7c475175e2234c6269c754e683a0a80bd551d2bb5cadbe002c"
+        }
+      ]
+    },
+    {
+      "actor": "L",
+      "exactContentEqual": true,
+      "outputHash": "c2d7066eec875ab10b81c230e07986f0fd0399896a631213df11f6452176dffc",
+      "variants": [
+        {
+          "variant": "B",
+          "payloadHash": "339d23447f07c95b2c61cfd31035d7a8bdbcd873613616df1f350e6ad5f0db5f",
+          "schemaHash": "50609e9bb9c7a266623a97266b856e9238050c3887eb896a7ba91e256ef39ea0",
+          "rawResponseHash": "cfa22903012ed0749cae421120a5d5d1791f89df1d7c5ab235ac2a07c50a887d",
+          "sourceJobHash": "9629f6ca56bb208dd64056856b127fc0683560c0b9ab9a8aa7e88e9f4cefff45",
+          "beforeHash": "f6a74ba9bdd41b89de70e4b704fb35c3f1970b4b6dbeb71f2439d85526f37fee"
+        },
+        {
+          "variant": "A",
+          "payloadHash": "05fefabc0b40365e33b4b7fc2fbdc6de34cb2fbc3bdc18f237e17595f6c996da",
+          "schemaHash": "5e1106aa4ecf5679ad494e339e56299c0270d6cf26461d85c6806b0109b04507",
+          "rawResponseHash": "f2e5d2e9785317078eed2f9c931cf16c6b91d89ad4c1dac0134c775d37cc05bb",
+          "sourceJobHash": "9629f6ca56bb208dd64056856b127fc0683560c0b9ab9a8aa7e88e9f4cefff45",
+          "beforeHash": "f6a74ba9bdd41b89de70e4b704fb35c3f1970b4b6dbeb71f2439d85526f37fee"
+        }
+      ]
+    },
+    {
+      "actor": "B",
+      "exactContentEqual": true,
+      "outputHash": "740d9a689f3796a1a091f793c9c43683de79121983394f38a2d165f38a5cc60f",
+      "variants": [
+        {
+          "variant": "A",
+          "payloadHash": "ef54886b4f2bcce4d5453d2648fc77c15a68a5a1b7c77296b7885a462c9d8038",
+          "schemaHash": "5dcc8d303a48ba7468244a9326577697bfd3f1c833ebca4f0af6b5ab1ba8fbd8",
+          "rawResponseHash": "59453e9f0eadec83f60235d883634b727e417a3baff444ed4b1d35bc3d8c0d37",
+          "sourceJobHash": "c82d90033ba4a2dffafe4f9364a9ac0604b7ad8d80f7d9234364c0876df320f8",
+          "beforeHash": "7154c90ddd1a054699e56b911300e51ca56433e1b7badec0772a24e5ef3d5b68"
+        },
+        {
+          "variant": "B",
+          "payloadHash": "ab8677206518ee1b1a8312a61ded4adb787cd99f60d8e26c51f624034cdf76f2",
+          "schemaHash": "6f7bdc61ebc7735eb6a985f585eceb4fdc6d423130a6db85f2f75ecf0fdd602d",
+          "rawResponseHash": "e3630579f66f152a037459cf9bc67568df8b7ff6764d6a061c548351b1224613",
+          "sourceJobHash": "c82d90033ba4a2dffafe4f9364a9ac0604b7ad8d80f7d9234364c0876df320f8",
+          "beforeHash": "7154c90ddd1a054699e56b911300e51ca56433e1b7badec0772a24e5ef3d5b68"
+        }
+      ]
+    }
+  ]
+}

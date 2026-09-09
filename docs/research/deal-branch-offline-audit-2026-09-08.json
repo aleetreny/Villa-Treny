@@ -1,0 +1,1645 @@
+{
+  "scope": "Offline counterfactual wire schemas; no model outputs modified or applied.",
+  "httpRequests": 0,
+  "ledgerSha256": "6a664741fcb566f4c3453c0c68277cc698815bc27e77cc81442fbca49abb4e92",
+  "cases": 37,
+  "dealExposed": 36,
+  "checks": 255,
+  "tokenizer": {
+    "name": "o200k_harmony",
+    "version": "0.14.0",
+    "framing": 128,
+    "outputReservation": 1024
+  },
+  "summary": {
+    "current": {
+      "total": 183276,
+      "range": [
+        3294,
+        5367
+      ],
+      "schemaDelta": [
+        0,
+        0
+      ],
+      "above6000": 0,
+      "unmodifiedSavedOutputsAccepted": 37
+    },
+    "requiredClose": {
+      "total": 183420,
+      "range": [
+        3294,
+        5371
+      ],
+      "schemaDelta": [
+        0,
+        4
+      ],
+      "above6000": 0,
+      "unmodifiedSavedOutputsAccepted": 1
+    },
+    "implicitOpen": {
+      "total": 183204,
+      "range": [
+        3294,
+        5365
+      ],
+      "schemaDelta": [
+        -2,
+        0
+      ],
+      "above6000": 0,
+      "unmodifiedSavedOutputsAccepted": 37
+    },
+    "nullableDeal": {
+      "total": 184008,
+      "range": [
+        3294,
+        5387
+      ],
+      "schemaDelta": [
+        0,
+        21
+      ],
+      "above6000": 0,
+      "unmodifiedSavedOutputsAccepted": 1
+    },
+    "nullableFlat": {
+      "total": 176028,
+      "range": [
+        3294,
+        5166
+      ],
+      "schemaDelta": [
+        -220,
+        0
+      ],
+      "above6000": 0,
+      "unmodifiedSavedOutputsAccepted": 1
+    }
+  },
+  "validity": {
+    "current": {
+      "omittedCloseDeal": false,
+      "explicitFalseDeal": true,
+      "trueCloseDeal": false,
+      "omittedCloseNoDeal": true,
+      "falseCloseNoDeal": true,
+      "trueCloseNoDeal": true,
+      "nullDeal": false,
+      "nullDealCloseTrue": false,
+      "noMessageDeal": false,
+      "extraTop": false,
+      "extraMessage": false,
+      "negativeCells": false,
+      "selfRecipient": false,
+      "noRequiredProject": false
+    },
+    "requiredClose": {
+      "omittedCloseDeal": false,
+      "explicitFalseDeal": true,
+      "trueCloseDeal": false,
+      "omittedCloseNoDeal": false,
+      "falseCloseNoDeal": true,
+      "trueCloseNoDeal": true,
+      "nullDeal": false,
+      "nullDealCloseTrue": false,
+      "noMessageDeal": false,
+      "extraTop": false,
+      "extraMessage": false,
+      "negativeCells": false,
+      "selfRecipient": false,
+      "noRequiredProject": false
+    },
+    "implicitOpen": {
+      "omittedCloseDeal": true,
+      "explicitFalseDeal": true,
+      "trueCloseDeal": false,
+      "omittedCloseNoDeal": true,
+      "falseCloseNoDeal": true,
+      "trueCloseNoDeal": true,
+      "nullDeal": false,
+      "nullDealCloseTrue": false,
+      "noMessageDeal": false,
+      "extraTop": false,
+      "extraMessage": false,
+      "negativeCells": false,
+      "selfRecipient": false,
+      "noRequiredProject": false
+    },
+    "nullableDeal": {
+      "omittedCloseDeal": false,
+      "explicitFalseDeal": true,
+      "trueCloseDeal": false,
+      "omittedCloseNoDeal": false,
+      "falseCloseNoDeal": false,
+      "trueCloseNoDeal": false,
+      "nullDeal": true,
+      "nullDealCloseTrue": true,
+      "noMessageDeal": false,
+      "extraTop": false,
+      "extraMessage": false,
+      "negativeCells": false,
+      "selfRecipient": false,
+      "noRequiredProject": false
+    },
+    "nullableFlat": {
+      "omittedCloseDeal": true,
+      "explicitFalseDeal": true,
+      "trueCloseDeal": true,
+      "omittedCloseNoDeal": false,
+      "falseCloseNoDeal": false,
+      "trueCloseNoDeal": false,
+      "nullDeal": true,
+      "nullDealCloseTrue": true,
+      "noMessageDeal": false,
+      "extraTop": false,
+      "extraMessage": false,
+      "negativeCells": false,
+      "selfRecipient": false,
+      "noRequiredProject": false
+    }
+  },
+  "rows": [
+    {
+      "actor": "A",
+      "stage": "initial",
+      "index": 0,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2345,
+          "schemaBytes": 8568,
+          "groqReservation": 4890
+        },
+        "requiredClose": {
+          "schemaTokens": 2349,
+          "schemaBytes": 8584,
+          "groqReservation": 4894
+        },
+        "implicitOpen": {
+          "schemaTokens": 2343,
+          "schemaBytes": 8560,
+          "groqReservation": 4888
+        },
+        "nullableDeal": {
+          "schemaTokens": 2366,
+          "schemaBytes": 8633,
+          "groqReservation": 4911
+        },
+        "nullableFlat": {
+          "schemaTokens": 2125,
+          "schemaBytes": 7794,
+          "groqReservation": 4670
+        }
+      }
+    },
+    {
+      "actor": "B",
+      "stage": "initial",
+      "index": 1,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2329,
+          "schemaBytes": 8523,
+          "groqReservation": 4854
+        },
+        "requiredClose": {
+          "schemaTokens": 2333,
+          "schemaBytes": 8539,
+          "groqReservation": 4858
+        },
+        "implicitOpen": {
+          "schemaTokens": 2327,
+          "schemaBytes": 8515,
+          "groqReservation": 4852
+        },
+        "nullableDeal": {
+          "schemaTokens": 2350,
+          "schemaBytes": 8588,
+          "groqReservation": 4875
+        },
+        "nullableFlat": {
+          "schemaTokens": 2113,
+          "schemaBytes": 7757,
+          "groqReservation": 4638
+        }
+      }
+    },
+    {
+      "actor": "C",
+      "stage": "initial",
+      "index": 2,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2317,
+          "schemaBytes": 8499,
+          "groqReservation": 4881
+        },
+        "requiredClose": {
+          "schemaTokens": 2321,
+          "schemaBytes": 8515,
+          "groqReservation": 4885
+        },
+        "implicitOpen": {
+          "schemaTokens": 2315,
+          "schemaBytes": 8491,
+          "groqReservation": 4879
+        },
+        "nullableDeal": {
+          "schemaTokens": 2338,
+          "schemaBytes": 8564,
+          "groqReservation": 4902
+        },
+        "nullableFlat": {
+          "schemaTokens": 2105,
+          "schemaBytes": 7741,
+          "groqReservation": 4669
+        }
+      }
+    },
+    {
+      "actor": "D",
+      "stage": "initial",
+      "index": 3,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2305,
+          "schemaBytes": 8475,
+          "groqReservation": 4848
+        },
+        "requiredClose": {
+          "schemaTokens": 2309,
+          "schemaBytes": 8491,
+          "groqReservation": 4852
+        },
+        "implicitOpen": {
+          "schemaTokens": 2303,
+          "schemaBytes": 8467,
+          "groqReservation": 4846
+        },
+        "nullableDeal": {
+          "schemaTokens": 2326,
+          "schemaBytes": 8540,
+          "groqReservation": 4869
+        },
+        "nullableFlat": {
+          "schemaTokens": 2097,
+          "schemaBytes": 7725,
+          "groqReservation": 4640
+        }
+      }
+    },
+    {
+      "actor": "E",
+      "stage": "initial",
+      "index": 4,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2306,
+          "schemaBytes": 8489,
+          "groqReservation": 4924
+        },
+        "requiredClose": {
+          "schemaTokens": 2310,
+          "schemaBytes": 8505,
+          "groqReservation": 4928
+        },
+        "implicitOpen": {
+          "schemaTokens": 2304,
+          "schemaBytes": 8481,
+          "groqReservation": 4922
+        },
+        "nullableDeal": {
+          "schemaTokens": 2327,
+          "schemaBytes": 8554,
+          "groqReservation": 4945
+        },
+        "nullableFlat": {
+          "schemaTokens": 2102,
+          "schemaBytes": 7747,
+          "groqReservation": 4720
+        }
+      }
+    },
+    {
+      "actor": "F",
+      "stage": "initial",
+      "index": 5,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2390,
+          "schemaBytes": 8993,
+          "groqReservation": 4972
+        },
+        "requiredClose": {
+          "schemaTokens": 2394,
+          "schemaBytes": 9009,
+          "groqReservation": 4976
+        },
+        "implicitOpen": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8985,
+          "groqReservation": 4970
+        },
+        "nullableDeal": {
+          "schemaTokens": 2410,
+          "schemaBytes": 9058,
+          "groqReservation": 4992
+        },
+        "nullableFlat": {
+          "schemaTokens": 2185,
+          "schemaBytes": 8215,
+          "groqReservation": 4767
+        }
+      }
+    },
+    {
+      "actor": "G",
+      "stage": "initial",
+      "index": 6,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2391,
+          "schemaBytes": 8996,
+          "groqReservation": 5015
+        },
+        "requiredClose": {
+          "schemaTokens": 2395,
+          "schemaBytes": 9012,
+          "groqReservation": 5019
+        },
+        "implicitOpen": {
+          "schemaTokens": 2389,
+          "schemaBytes": 8988,
+          "groqReservation": 5013
+        },
+        "nullableDeal": {
+          "schemaTokens": 2411,
+          "schemaBytes": 9061,
+          "groqReservation": 5035
+        },
+        "nullableFlat": {
+          "schemaTokens": 2186,
+          "schemaBytes": 8218,
+          "groqReservation": 4810
+        }
+      }
+    },
+    {
+      "actor": "H",
+      "stage": "initial",
+      "index": 7,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2390,
+          "schemaBytes": 8991,
+          "groqReservation": 4992
+        },
+        "requiredClose": {
+          "schemaTokens": 2394,
+          "schemaBytes": 9007,
+          "groqReservation": 4996
+        },
+        "implicitOpen": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8983,
+          "groqReservation": 4990
+        },
+        "nullableDeal": {
+          "schemaTokens": 2410,
+          "schemaBytes": 9056,
+          "groqReservation": 5012
+        },
+        "nullableFlat": {
+          "schemaTokens": 2185,
+          "schemaBytes": 8213,
+          "groqReservation": 4787
+        }
+      }
+    },
+    {
+      "actor": "I",
+      "stage": "initial",
+      "index": 8,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2281,
+          "schemaBytes": 8427,
+          "groqReservation": 4802
+        },
+        "requiredClose": {
+          "schemaTokens": 2285,
+          "schemaBytes": 8443,
+          "groqReservation": 4806
+        },
+        "implicitOpen": {
+          "schemaTokens": 2279,
+          "schemaBytes": 8419,
+          "groqReservation": 4800
+        },
+        "nullableDeal": {
+          "schemaTokens": 2302,
+          "schemaBytes": 8492,
+          "groqReservation": 4823
+        },
+        "nullableFlat": {
+          "schemaTokens": 2081,
+          "schemaBytes": 7693,
+          "groqReservation": 4602
+        }
+      }
+    },
+    {
+      "actor": "J",
+      "stage": "initial",
+      "index": 9,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2282,
+          "schemaBytes": 8443,
+          "groqReservation": 4872
+        },
+        "requiredClose": {
+          "schemaTokens": 2286,
+          "schemaBytes": 8459,
+          "groqReservation": 4876
+        },
+        "implicitOpen": {
+          "schemaTokens": 2280,
+          "schemaBytes": 8435,
+          "groqReservation": 4870
+        },
+        "nullableDeal": {
+          "schemaTokens": 2303,
+          "schemaBytes": 8508,
+          "groqReservation": 4893
+        },
+        "nullableFlat": {
+          "schemaTokens": 2086,
+          "schemaBytes": 7717,
+          "groqReservation": 4676
+        }
+      }
+    },
+    {
+      "actor": "K",
+      "stage": "initial",
+      "index": 10,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2384,
+          "schemaBytes": 8976,
+          "groqReservation": 4901
+        },
+        "requiredClose": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8992,
+          "groqReservation": 4905
+        },
+        "implicitOpen": {
+          "schemaTokens": 2382,
+          "schemaBytes": 8968,
+          "groqReservation": 4899
+        },
+        "nullableDeal": {
+          "schemaTokens": 2404,
+          "schemaBytes": 9041,
+          "groqReservation": 4921
+        },
+        "nullableFlat": {
+          "schemaTokens": 2179,
+          "schemaBytes": 8198,
+          "groqReservation": 4696
+        }
+      }
+    },
+    {
+      "actor": "L",
+      "stage": "initial",
+      "index": 11,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2384,
+          "schemaBytes": 8976,
+          "groqReservation": 4942
+        },
+        "requiredClose": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8992,
+          "groqReservation": 4946
+        },
+        "implicitOpen": {
+          "schemaTokens": 2382,
+          "schemaBytes": 8968,
+          "groqReservation": 4940
+        },
+        "nullableDeal": {
+          "schemaTokens": 2404,
+          "schemaBytes": 9041,
+          "groqReservation": 4962
+        },
+        "nullableFlat": {
+          "schemaTokens": 2179,
+          "schemaBytes": 8198,
+          "groqReservation": 4737
+        }
+      }
+    },
+    {
+      "actor": "M",
+      "stage": "initial",
+      "index": 12,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2257,
+          "schemaBytes": 8379,
+          "groqReservation": 4788
+        },
+        "requiredClose": {
+          "schemaTokens": 2261,
+          "schemaBytes": 8395,
+          "groqReservation": 4792
+        },
+        "implicitOpen": {
+          "schemaTokens": 2255,
+          "schemaBytes": 8371,
+          "groqReservation": 4786
+        },
+        "nullableDeal": {
+          "schemaTokens": 2278,
+          "schemaBytes": 8444,
+          "groqReservation": 4809
+        },
+        "nullableFlat": {
+          "schemaTokens": 2065,
+          "schemaBytes": 7661,
+          "groqReservation": 4596
+        }
+      }
+    },
+    {
+      "actor": "N",
+      "stage": "initial",
+      "index": 13,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2392,
+          "schemaBytes": 8996,
+          "groqReservation": 4997
+        },
+        "requiredClose": {
+          "schemaTokens": 2396,
+          "schemaBytes": 9012,
+          "groqReservation": 5001
+        },
+        "implicitOpen": {
+          "schemaTokens": 2390,
+          "schemaBytes": 8988,
+          "groqReservation": 4995
+        },
+        "nullableDeal": {
+          "schemaTokens": 2412,
+          "schemaBytes": 9061,
+          "groqReservation": 5017
+        },
+        "nullableFlat": {
+          "schemaTokens": 2187,
+          "schemaBytes": 8218,
+          "groqReservation": 4792
+        }
+      }
+    },
+    {
+      "actor": "O",
+      "stage": "initial",
+      "index": 14,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2251,
+          "schemaBytes": 8374,
+          "groqReservation": 4761
+        },
+        "requiredClose": {
+          "schemaTokens": 2255,
+          "schemaBytes": 8390,
+          "groqReservation": 4765
+        },
+        "implicitOpen": {
+          "schemaTokens": 2249,
+          "schemaBytes": 8366,
+          "groqReservation": 4759
+        },
+        "nullableDeal": {
+          "schemaTokens": 2272,
+          "schemaBytes": 8439,
+          "groqReservation": 4782
+        },
+        "nullableFlat": {
+          "schemaTokens": 2063,
+          "schemaBytes": 7664,
+          "groqReservation": 4573
+        }
+      }
+    },
+    {
+      "actor": "P",
+      "stage": "initial",
+      "index": 15,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2384,
+          "schemaBytes": 8976,
+          "groqReservation": 4947
+        },
+        "requiredClose": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8992,
+          "groqReservation": 4951
+        },
+        "implicitOpen": {
+          "schemaTokens": 2382,
+          "schemaBytes": 8968,
+          "groqReservation": 4945
+        },
+        "nullableDeal": {
+          "schemaTokens": 2404,
+          "schemaBytes": 9041,
+          "groqReservation": 4967
+        },
+        "nullableFlat": {
+          "schemaTokens": 2179,
+          "schemaBytes": 8198,
+          "groqReservation": 4742
+        }
+      }
+    },
+    {
+      "actor": "Q",
+      "stage": "initial",
+      "index": 16,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2239,
+          "schemaBytes": 8351,
+          "groqReservation": 4757
+        },
+        "requiredClose": {
+          "schemaTokens": 2243,
+          "schemaBytes": 8367,
+          "groqReservation": 4761
+        },
+        "implicitOpen": {
+          "schemaTokens": 2237,
+          "schemaBytes": 8343,
+          "groqReservation": 4755
+        },
+        "nullableDeal": {
+          "schemaTokens": 2260,
+          "schemaBytes": 8416,
+          "groqReservation": 4778
+        },
+        "nullableFlat": {
+          "schemaTokens": 2055,
+          "schemaBytes": 7649,
+          "groqReservation": 4573
+        }
+      }
+    },
+    {
+      "actor": "R",
+      "stage": "initial",
+      "index": 17,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2221,
+          "schemaBytes": 8307,
+          "groqReservation": 4613
+        },
+        "requiredClose": {
+          "schemaTokens": 2225,
+          "schemaBytes": 8323,
+          "groqReservation": 4617
+        },
+        "implicitOpen": {
+          "schemaTokens": 2219,
+          "schemaBytes": 8299,
+          "groqReservation": 4611
+        },
+        "nullableDeal": {
+          "schemaTokens": 2242,
+          "schemaBytes": 8372,
+          "groqReservation": 4634
+        },
+        "nullableFlat": {
+          "schemaTokens": 2041,
+          "schemaBytes": 7613,
+          "groqReservation": 4433
+        }
+      }
+    },
+    {
+      "actor": "S",
+      "stage": "initial",
+      "index": 18,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2391,
+          "schemaBytes": 8996,
+          "groqReservation": 5011
+        },
+        "requiredClose": {
+          "schemaTokens": 2395,
+          "schemaBytes": 9012,
+          "groqReservation": 5015
+        },
+        "implicitOpen": {
+          "schemaTokens": 2389,
+          "schemaBytes": 8988,
+          "groqReservation": 5009
+        },
+        "nullableDeal": {
+          "schemaTokens": 2411,
+          "schemaBytes": 9061,
+          "groqReservation": 5031
+        },
+        "nullableFlat": {
+          "schemaTokens": 2186,
+          "schemaBytes": 8218,
+          "groqReservation": 4806
+        }
+      }
+    },
+    {
+      "actor": "T",
+      "stage": "initial",
+      "index": 19,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2384,
+          "schemaBytes": 8976,
+          "groqReservation": 4996
+        },
+        "requiredClose": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8992,
+          "groqReservation": 5000
+        },
+        "implicitOpen": {
+          "schemaTokens": 2382,
+          "schemaBytes": 8968,
+          "groqReservation": 4994
+        },
+        "nullableDeal": {
+          "schemaTokens": 2404,
+          "schemaBytes": 9041,
+          "groqReservation": 5016
+        },
+        "nullableFlat": {
+          "schemaTokens": 2179,
+          "schemaBytes": 8198,
+          "groqReservation": 4791
+        }
+      }
+    },
+    {
+      "actor": "U",
+      "stage": "initial",
+      "index": 20,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2384,
+          "schemaBytes": 8973,
+          "groqReservation": 5018
+        },
+        "requiredClose": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8989,
+          "groqReservation": 5022
+        },
+        "implicitOpen": {
+          "schemaTokens": 2382,
+          "schemaBytes": 8965,
+          "groqReservation": 5016
+        },
+        "nullableDeal": {
+          "schemaTokens": 2404,
+          "schemaBytes": 9038,
+          "groqReservation": 5038
+        },
+        "nullableFlat": {
+          "schemaTokens": 2179,
+          "schemaBytes": 8195,
+          "groqReservation": 4813
+        }
+      }
+    },
+    {
+      "actor": "V",
+      "stage": "initial",
+      "index": 21,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2215,
+          "schemaBytes": 8301,
+          "groqReservation": 4676
+        },
+        "requiredClose": {
+          "schemaTokens": 2219,
+          "schemaBytes": 8317,
+          "groqReservation": 4680
+        },
+        "implicitOpen": {
+          "schemaTokens": 2213,
+          "schemaBytes": 8293,
+          "groqReservation": 4674
+        },
+        "nullableDeal": {
+          "schemaTokens": 2236,
+          "schemaBytes": 8366,
+          "groqReservation": 4697
+        },
+        "nullableFlat": {
+          "schemaTokens": 2039,
+          "schemaBytes": 7615,
+          "groqReservation": 4500
+        }
+      }
+    },
+    {
+      "actor": "W",
+      "stage": "initial",
+      "index": 22,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2399,
+          "schemaBytes": 9016,
+          "groqReservation": 5105
+        },
+        "requiredClose": {
+          "schemaTokens": 2403,
+          "schemaBytes": 9032,
+          "groqReservation": 5109
+        },
+        "implicitOpen": {
+          "schemaTokens": 2397,
+          "schemaBytes": 9008,
+          "groqReservation": 5103
+        },
+        "nullableDeal": {
+          "schemaTokens": 2419,
+          "schemaBytes": 9081,
+          "groqReservation": 5125
+        },
+        "nullableFlat": {
+          "schemaTokens": 2194,
+          "schemaBytes": 8238,
+          "groqReservation": 4900
+        }
+      }
+    },
+    {
+      "actor": "X",
+      "stage": "initial",
+      "index": 23,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2390,
+          "schemaBytes": 8996,
+          "groqReservation": 4976
+        },
+        "requiredClose": {
+          "schemaTokens": 2394,
+          "schemaBytes": 9012,
+          "groqReservation": 4980
+        },
+        "implicitOpen": {
+          "schemaTokens": 2388,
+          "schemaBytes": 8988,
+          "groqReservation": 4974
+        },
+        "nullableDeal": {
+          "schemaTokens": 2410,
+          "schemaBytes": 9061,
+          "groqReservation": 4996
+        },
+        "nullableFlat": {
+          "schemaTokens": 2185,
+          "schemaBytes": 8218,
+          "groqReservation": 4771
+        }
+      }
+    },
+    {
+      "actor": "Y",
+      "stage": "initial",
+      "index": 24,
+      "dealExposed": false,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": true,
+        "implicitOpen": true,
+        "nullableDeal": true,
+        "nullableFlat": true
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 853,
+          "schemaBytes": 3203,
+          "groqReservation": 3294
+        },
+        "requiredClose": {
+          "schemaTokens": 853,
+          "schemaBytes": 3203,
+          "groqReservation": 3294
+        },
+        "implicitOpen": {
+          "schemaTokens": 853,
+          "schemaBytes": 3203,
+          "groqReservation": 3294
+        },
+        "nullableDeal": {
+          "schemaTokens": 853,
+          "schemaBytes": 3203,
+          "groqReservation": 3294
+        },
+        "nullableFlat": {
+          "schemaTokens": 853,
+          "schemaBytes": 3203,
+          "groqReservation": 3294
+        }
+      }
+    },
+    {
+      "actor": "E",
+      "stage": "reply",
+      "index": 0,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2448,
+          "schemaBytes": 9187,
+          "groqReservation": 5285
+        },
+        "requiredClose": {
+          "schemaTokens": 2452,
+          "schemaBytes": 9203,
+          "groqReservation": 5289
+        },
+        "implicitOpen": {
+          "schemaTokens": 2446,
+          "schemaBytes": 9179,
+          "groqReservation": 5283
+        },
+        "nullableDeal": {
+          "schemaTokens": 2468,
+          "schemaBytes": 9252,
+          "groqReservation": 5305
+        },
+        "nullableFlat": {
+          "schemaTokens": 2247,
+          "schemaBytes": 8429,
+          "groqReservation": 5084
+        }
+      }
+    },
+    {
+      "actor": "D",
+      "stage": "reply",
+      "index": 1,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2435,
+          "schemaBytes": 9149,
+          "groqReservation": 5120
+        },
+        "requiredClose": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9165,
+          "groqReservation": 5124
+        },
+        "implicitOpen": {
+          "schemaTokens": 2433,
+          "schemaBytes": 9141,
+          "groqReservation": 5118
+        },
+        "nullableDeal": {
+          "schemaTokens": 2455,
+          "schemaBytes": 9214,
+          "groqReservation": 5140
+        },
+        "nullableFlat": {
+          "schemaTokens": 2234,
+          "schemaBytes": 8391,
+          "groqReservation": 4919
+        }
+      }
+    },
+    {
+      "actor": "B",
+      "stage": "reply",
+      "index": 2,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2435,
+          "schemaBytes": 9147,
+          "groqReservation": 5126
+        },
+        "requiredClose": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9163,
+          "groqReservation": 5130
+        },
+        "implicitOpen": {
+          "schemaTokens": 2433,
+          "schemaBytes": 9139,
+          "groqReservation": 5124
+        },
+        "nullableDeal": {
+          "schemaTokens": 2455,
+          "schemaBytes": 9212,
+          "groqReservation": 5146
+        },
+        "nullableFlat": {
+          "schemaTokens": 2234,
+          "schemaBytes": 8389,
+          "groqReservation": 4925
+        }
+      }
+    },
+    {
+      "actor": "I",
+      "stage": "reply",
+      "index": 3,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2435,
+          "schemaBytes": 9149,
+          "groqReservation": 5116
+        },
+        "requiredClose": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9165,
+          "groqReservation": 5120
+        },
+        "implicitOpen": {
+          "schemaTokens": 2433,
+          "schemaBytes": 9141,
+          "groqReservation": 5114
+        },
+        "nullableDeal": {
+          "schemaTokens": 2455,
+          "schemaBytes": 9214,
+          "groqReservation": 5136
+        },
+        "nullableFlat": {
+          "schemaTokens": 2234,
+          "schemaBytes": 8391,
+          "groqReservation": 4915
+        }
+      }
+    },
+    {
+      "actor": "J",
+      "stage": "reply",
+      "index": 4,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2448,
+          "schemaBytes": 9189,
+          "groqReservation": 5245
+        },
+        "requiredClose": {
+          "schemaTokens": 2452,
+          "schemaBytes": 9205,
+          "groqReservation": 5249
+        },
+        "implicitOpen": {
+          "schemaTokens": 2446,
+          "schemaBytes": 9181,
+          "groqReservation": 5243
+        },
+        "nullableDeal": {
+          "schemaTokens": 2468,
+          "schemaBytes": 9254,
+          "groqReservation": 5265
+        },
+        "nullableFlat": {
+          "schemaTokens": 2247,
+          "schemaBytes": 8431,
+          "groqReservation": 5044
+        }
+      }
+    },
+    {
+      "actor": "C",
+      "stage": "reply",
+      "index": 5,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2435,
+          "schemaBytes": 9149,
+          "groqReservation": 5115
+        },
+        "requiredClose": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9165,
+          "groqReservation": 5119
+        },
+        "implicitOpen": {
+          "schemaTokens": 2433,
+          "schemaBytes": 9141,
+          "groqReservation": 5113
+        },
+        "nullableDeal": {
+          "schemaTokens": 2455,
+          "schemaBytes": 9214,
+          "groqReservation": 5135
+        },
+        "nullableFlat": {
+          "schemaTokens": 2234,
+          "schemaBytes": 8391,
+          "groqReservation": 4914
+        }
+      }
+    },
+    {
+      "actor": "O",
+      "stage": "reply",
+      "index": 6,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2441,
+          "schemaBytes": 9168,
+          "groqReservation": 5173
+        },
+        "requiredClose": {
+          "schemaTokens": 2445,
+          "schemaBytes": 9184,
+          "groqReservation": 5177
+        },
+        "implicitOpen": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9160,
+          "groqReservation": 5171
+        },
+        "nullableDeal": {
+          "schemaTokens": 2461,
+          "schemaBytes": 9233,
+          "groqReservation": 5193
+        },
+        "nullableFlat": {
+          "schemaTokens": 2240,
+          "schemaBytes": 8410,
+          "groqReservation": 4972
+        }
+      }
+    },
+    {
+      "actor": "R",
+      "stage": "reply",
+      "index": 7,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2435,
+          "schemaBytes": 9149,
+          "groqReservation": 5085
+        },
+        "requiredClose": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9165,
+          "groqReservation": 5089
+        },
+        "implicitOpen": {
+          "schemaTokens": 2433,
+          "schemaBytes": 9141,
+          "groqReservation": 5083
+        },
+        "nullableDeal": {
+          "schemaTokens": 2455,
+          "schemaBytes": 9214,
+          "groqReservation": 5105
+        },
+        "nullableFlat": {
+          "schemaTokens": 2234,
+          "schemaBytes": 8391,
+          "groqReservation": 4884
+        }
+      }
+    },
+    {
+      "actor": "M",
+      "stage": "replan",
+      "index": 0,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2439,
+          "schemaBytes": 9165,
+          "groqReservation": 5256
+        },
+        "requiredClose": {
+          "schemaTokens": 2443,
+          "schemaBytes": 9181,
+          "groqReservation": 5260
+        },
+        "implicitOpen": {
+          "schemaTokens": 2437,
+          "schemaBytes": 9157,
+          "groqReservation": 5254
+        },
+        "nullableDeal": {
+          "schemaTokens": 2459,
+          "schemaBytes": 9230,
+          "groqReservation": 5276
+        },
+        "nullableFlat": {
+          "schemaTokens": 2238,
+          "schemaBytes": 8407,
+          "groqReservation": 5055
+        }
+      }
+    },
+    {
+      "actor": "A",
+      "stage": "replan",
+      "index": 1,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2443,
+          "schemaBytes": 9184,
+          "groqReservation": 5240
+        },
+        "requiredClose": {
+          "schemaTokens": 2447,
+          "schemaBytes": 9200,
+          "groqReservation": 5244
+        },
+        "implicitOpen": {
+          "schemaTokens": 2441,
+          "schemaBytes": 9176,
+          "groqReservation": 5238
+        },
+        "nullableDeal": {
+          "schemaTokens": 2463,
+          "schemaBytes": 9249,
+          "groqReservation": 5260
+        },
+        "nullableFlat": {
+          "schemaTokens": 2242,
+          "schemaBytes": 8426,
+          "groqReservation": 5039
+        }
+      }
+    },
+    {
+      "actor": "Q",
+      "stage": "replan",
+      "index": 2,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2449,
+          "schemaBytes": 9198,
+          "groqReservation": 5316
+        },
+        "requiredClose": {
+          "schemaTokens": 2453,
+          "schemaBytes": 9214,
+          "groqReservation": 5320
+        },
+        "implicitOpen": {
+          "schemaTokens": 2447,
+          "schemaBytes": 9190,
+          "groqReservation": 5314
+        },
+        "nullableDeal": {
+          "schemaTokens": 2469,
+          "schemaBytes": 9263,
+          "groqReservation": 5336
+        },
+        "nullableFlat": {
+          "schemaTokens": 2248,
+          "schemaBytes": 8440,
+          "groqReservation": 5115
+        }
+      }
+    },
+    {
+      "actor": "F",
+      "stage": "replan",
+      "index": 3,
+      "dealExposed": true,
+      "wireChecks": {
+        "current": true,
+        "requiredClose": false,
+        "implicitOpen": true,
+        "nullableDeal": false,
+        "nullableFlat": false
+      },
+      "counts": {
+        "current": {
+          "schemaTokens": 2453,
+          "schemaBytes": 9203,
+          "groqReservation": 5367
+        },
+        "requiredClose": {
+          "schemaTokens": 2457,
+          "schemaBytes": 9219,
+          "groqReservation": 5371
+        },
+        "implicitOpen": {
+          "schemaTokens": 2451,
+          "schemaBytes": 9195,
+          "groqReservation": 5365
+        },
+        "nullableDeal": {
+          "schemaTokens": 2473,
+          "schemaBytes": 9268,
+          "groqReservation": 5387
+        },
+        "nullableFlat": {
+          "schemaTokens": 2252,
+          "schemaBytes": 8445,
+          "groqReservation": 5166
+        }
+      }
+    }
+  ]
+}

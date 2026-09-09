@@ -20,6 +20,8 @@ import { observerRoom } from './RoomAtlas';
 import { SLEEPS } from '../../../lib/habitat/engine/state';
 import type { SocietySnapshot } from '../../../lib/habitat/society';
 import { ResidentMeans } from './SocietyLedger';
+import { ResidentAgency } from './AgencyNotebook';
+import type { AgencySnapshot } from '../../../lib/habitat/agency';
 
 type Props = {
   id: ResidentId;
@@ -31,6 +33,7 @@ type Props = {
   archiveDay?: number;
   relationships?: readonly Edge[];
   society?: SocietySnapshot | null;
+  agency?: AgencySnapshot | null;
 };
 
 /** Everything the observer can see between this person and the others: the bonds
@@ -59,7 +62,7 @@ function tiesOf(id: ResidentId) {
   return [...real, ...hidden];
 }
 
-export function Dossier({ id, snapshot, onClose, onOpen, onObserve, archive, archiveDay, relationships, society }: Props) {
+export function Dossier({ id, snapshot, onClose, onOpen, onObserve, archive, archiveDay, relationships, society, agency }: Props) {
   const heading = useRef<HTMLHeadingElement>(null);
   const person = RESIDENT_BY_ID[id];
   const home = ROOM_BY_ID[SLEEPS[id]];
@@ -100,6 +103,8 @@ export function Dossier({ id, snapshot, onClose, onOpen, onObserve, archive, arc
           <h3 className="hab-block__head">Who they are</h3>
           <p className="hab-block__body">{person.before}</p>
         </article>
+
+        <ResidentAgency id={id} agency={agency} />
 
         <article className="hab-block">
           <h3 className="hab-block__head">What the ship decided</h3>

@@ -1,0 +1,731 @@
+{
+  "scope": "Three preselected exact V7 cases, each A=current conditional grammar versus B=identical schema language with deal before message. Local Qwen1024/no-thinking; six calls maximum; no physical watch.",
+  "limitation": "Three selected cases from earlier failed deals, not an unbiased society sample. Property order may affect constrained generation but this is not proof of the compiler mechanism or emergent economic behavior. No forced deal, acceptance or response repair. Zero cloud calls.",
+  "humanReview": "pending",
+  "binding": "0722d333159e875be2e31db8210c0de9a60a39f3f3ce4c7a2194321aeec6a48a",
+  "newCalls": 6,
+  "halted": null,
+  "attempts": 6,
+  "server": {
+    "pid": 30040,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions"
+  },
+  "memoryMeasurement": "ps RSS is sampled process residency, not a complete Metal/unified-memory footprint or guaranteed peak; CPU is a sampled process statistic.",
+  "rows": [
+    {
+      "actor": "G",
+      "variant": "A",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1489,
+        "completion_tokens": 160,
+        "total_tokens": 1649,
+        "input_tokens": 1489,
+        "output_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 5.27,
+        "total_time": 4.48
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 12000,
+      "maxSampledRssKiB": 14655872,
+      "maxSampledCpuPercent": 793.8,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Provide hull integrity data to Dima.",
+          "why": "Dima requested inspection data as dock safety officer.",
+          "visibility": "public",
+          "steps": []
+        },
+        "message": {
+          "to": "D",
+          "text": "Inspection complete. Hull integrity is nominal. No structural anomalies detected."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:17",
+          "why": "Dima is performing his duty correctly by requesting verification."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "886b36c1984fe7c1749fa3b8b5e8b745bd31009f057ef59aa0dc44291520e00b",
+        "project": {
+          "id": "project:30",
+          "goal": "Provide hull integrity data to Dima.",
+          "why": "Dima requested inspection data as dock safety officer.",
+          "visibility": "public",
+          "status": "active",
+          "createdAtMs": 1788825607001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "revision": 2,
+            "nextSpeaker": "D",
+            "status": "open",
+            "createdAtMs": 1788825604001,
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "index": 0,
+                "speaker": "D",
+                "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+                "atMs": 1788825604001
+              },
+              {
+                "id": "turn:31",
+                "index": 1,
+                "speaker": "G",
+                "text": "Inspection complete. Hull integrity is nominal. No structural anomalies detected.",
+                "atMs": 1788825607001
+              }
+            ],
+            "appraisedThrough": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "GD",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "cd7f3ea15b164bcbc1f80b4c9f5a1269650366bc3dab7a6e1ef3986409f3592f",
+        "balanceChanges": []
+      },
+      "error": null
+    },
+    {
+      "actor": "G",
+      "variant": "B",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1489,
+        "completion_tokens": 160,
+        "total_tokens": 1649,
+        "input_tokens": 1489,
+        "output_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.8
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 2889,
+      "maxSampledRssKiB": 2533408,
+      "maxSampledCpuPercent": 69.6,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Provide hull integrity data to Dima.",
+          "why": "Dima requested inspection data as dock safety officer.",
+          "visibility": "public",
+          "steps": []
+        },
+        "message": {
+          "to": "D",
+          "text": "Inspection complete. Hull integrity is nominal. No structural anomalies detected."
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:17",
+          "why": "Dima is performing his duty correctly by requesting verification."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "886b36c1984fe7c1749fa3b8b5e8b745bd31009f057ef59aa0dc44291520e00b",
+        "project": {
+          "id": "project:30",
+          "goal": "Provide hull integrity data to Dima.",
+          "why": "Dima requested inspection data as dock safety officer.",
+          "visibility": "public",
+          "status": "active",
+          "createdAtMs": 1788825607001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "revision": 2,
+            "nextSpeaker": "D",
+            "status": "open",
+            "createdAtMs": 1788825604001,
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "index": 0,
+                "speaker": "D",
+                "text": "As the dock safety officer, I must verify the current hull integrity status. Could you provide the latest inspection data?",
+                "atMs": 1788825604001
+              },
+              {
+                "id": "turn:31",
+                "index": 1,
+                "speaker": "G",
+                "text": "Inspection complete. Hull integrity is nominal. No structural anomalies detected.",
+                "atMs": 1788825607001
+              }
+            ],
+            "appraisedThrough": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "GD",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "cd7f3ea15b164bcbc1f80b4c9f5a1269650366bc3dab7a6e1ef3986409f3592f",
+        "balanceChanges": []
+      },
+      "error": null
+    },
+    {
+      "actor": "L",
+      "variant": "B",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1456,
+        "completion_tokens": 193,
+        "total_tokens": 1649,
+        "input_tokens": 1456,
+        "output_tokens": 193,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.27
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 3350,
+      "maxSampledRssKiB": 2597200,
+      "maxSampledCpuPercent": 69.9,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Assist Juno with the power bay maintenance repair.",
+          "why": "Juno has the materials and cells and is asking for help; this fulfills my desire to be the one who is owed.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "J",
+          "text": "I'm free, though I'd prefer to handle the delicate parts myself. Shall I head to the power bay to get started?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:42",
+          "why": "Juno is asking for my specific assistance, which validates my utility."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "9f3ac5bbd707fc645fbc06d8c908692d1193520eae45d7021ad288deb40578e3",
+        "project": {
+          "id": "project:49",
+          "goal": "Assist Juno with the power bay maintenance repair.",
+          "why": "Juno has the materials and cells and is asking for help; this fulfills my desire to be the one who is owed.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825612001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:41",
+            "participants": [
+              "J",
+              "L"
+            ],
+            "revision": 2,
+            "nextSpeaker": "J",
+            "status": "open",
+            "createdAtMs": 1788825610001,
+            "expiresAtMs": 1788912010001,
+            "turns": [
+              {
+                "id": "turn:42",
+                "index": 0,
+                "speaker": "J",
+                "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+                "atMs": 1788825610001
+              },
+              {
+                "id": "turn:50",
+                "index": 1,
+                "speaker": "L",
+                "text": "I'm free, though I'd prefer to handle the delicate parts myself. Shall I head to the power bay to get started?",
+                "atMs": 1788825612001
+              }
+            ],
+            "appraisedThrough": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "LJ",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "9f86f07e50fd14f5763a21623ced3d2b7405c4b14c89650dc4e24c62d8073239",
+        "balanceChanges": []
+      },
+      "error": null
+    },
+    {
+      "actor": "L",
+      "variant": "A",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1456,
+        "completion_tokens": 193,
+        "total_tokens": 1649,
+        "input_tokens": 1456,
+        "output_tokens": 193,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 3.25
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 3333,
+      "maxSampledRssKiB": 2660896,
+      "maxSampledCpuPercent": 68.9,
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Assist Juno with the power bay maintenance repair.",
+          "why": "Juno has the materials and cells and is asking for help; this fulfills my desire to be the one who is owed.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "J",
+          "text": "I'm free, though I'd prefer to handle the delicate parts myself. Shall I head to the power bay to get started?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:42",
+          "why": "Juno is asking for my specific assistance, which validates my utility."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "9f3ac5bbd707fc645fbc06d8c908692d1193520eae45d7021ad288deb40578e3",
+        "project": {
+          "id": "project:49",
+          "goal": "Assist Juno with the power bay maintenance repair.",
+          "why": "Juno has the materials and cells and is asking for help; this fulfills my desire to be the one who is owed.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825612001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:41",
+            "participants": [
+              "J",
+              "L"
+            ],
+            "revision": 2,
+            "nextSpeaker": "J",
+            "status": "open",
+            "createdAtMs": 1788825610001,
+            "expiresAtMs": 1788912010001,
+            "turns": [
+              {
+                "id": "turn:42",
+                "index": 0,
+                "speaker": "J",
+                "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+                "atMs": 1788825610001
+              },
+              {
+                "id": "turn:50",
+                "index": 1,
+                "speaker": "L",
+                "text": "I'm free, though I'd prefer to handle the delicate parts myself. Shall I head to the power bay to get started?",
+                "atMs": 1788825612001
+              }
+            ],
+            "appraisedThrough": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "LJ",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "9f86f07e50fd14f5763a21623ced3d2b7405c4b14c89650dc4e24c62d8073239",
+        "balanceChanges": []
+      },
+      "error": null
+    },
+    {
+      "actor": "B",
+      "variant": "A",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1581,
+        "completion_tokens": 115,
+        "total_tokens": 1696,
+        "input_tokens": 1581,
+        "output_tokens": 115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.25
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 2340,
+      "maxSampledRssKiB": 2737264,
+      "maxSampledCpuPercent": 69.2,
+      "output": {
+        "message": {
+          "to": "C",
+          "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:12",
+          "why": "Cato is asking for a concrete task rather than just resting, which suggests engagement."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "c7db9582003cd108627fa3bd8f4c32154a552c8ccd80dbedbb034dd97eb048ec",
+        "project": {
+          "id": "project:6",
+          "goal": "Consult Cato Lindqvist about the infirmary status",
+          "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "revision": 3,
+            "nextSpeaker": "C",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "index": 1,
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              },
+              {
+                "id": "turn:106",
+                "index": 2,
+                "speaker": "B",
+                "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?",
+                "atMs": 1788825626001
+              }
+            ],
+            "appraisedThrough": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "BC",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "71ff67e12aa5ac73875233192d9cbd720b9c223070452e7be7ea339de200d3dd",
+        "balanceChanges": []
+      },
+      "error": null
+    },
+    {
+      "actor": "B",
+      "variant": "B",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1581,
+        "completion_tokens": 115,
+        "total_tokens": 1696,
+        "input_tokens": 1581,
+        "output_tokens": 115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.28
+      },
+      "warning": null,
+      "schemaFallbackWarning": false,
+      "latencyMs": 2373,
+      "maxSampledRssKiB": 2811056,
+      "maxSampledCpuPercent": 67.2,
+      "output": {
+        "message": {
+          "to": "C",
+          "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?"
+        },
+        "appraisal": {
+          "axis": "trust",
+          "delta": 1,
+          "ref": "turn:12",
+          "why": "Cato is asking for a concrete task rather than just resting, which suggests engagement."
+        }
+      },
+      "reasoningContent": null,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "c7db9582003cd108627fa3bd8f4c32154a552c8ccd80dbedbb034dd97eb048ec",
+        "project": {
+          "id": "project:6",
+          "goal": "Consult Cato Lindqvist about the infirmary status",
+          "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": []
+        },
+        "conversations": [
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "revision": 3,
+            "nextSpeaker": "C",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "index": 1,
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              },
+              {
+                "id": "turn:106",
+                "index": 2,
+                "speaker": "B",
+                "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?",
+                "atMs": 1788825626001
+              }
+            ],
+            "appraisedThrough": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [
+          {
+            "pair": "BC",
+            "before": {
+              "trust": 30,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            },
+            "after": {
+              "trust": 31,
+              "affection": 26,
+              "admiration": 20,
+              "debt": 8,
+              "resentment": 14,
+              "desire": 10
+            }
+          }
+        ],
+        "clockUnchanged": true
+      },
+      "baselineValidation": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "71ff67e12aa5ac73875233192d9cbd720b9c223070452e7be7ea339de200d3dd",
+        "balanceChanges": []
+      },
+      "error": null
+    }
+  ]
+}

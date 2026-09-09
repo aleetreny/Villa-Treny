@@ -1,0 +1,37 @@
+# Concurrent attention candidate (P8)
+
+Status: C6 grammar and compact SYSTEM deployed for new P8 jobs as`5cc86d7b-9fe5-4169-b3bf-20a00930ead4`. SQL12/Society4 continuity is verified in the [release receipt](release-2026-09-09/attention-production-continuity.json). No model evaluation has been performed for P8. Offline validation establishes capabilities and invariants, not improved comprehension or an interesting economy.
+
+## Observed problem
+
+The complete revision317 cut still has the same twelve open pairs as revision247, over eleven hours later. Under the issued exclusive policy, twelve people can reply, twelve wait without being able to leave, and Wen has no eligible contact. This is a mechanical restriction rather than proof that residents freely prefer these pairs. The [occupancy audit](attention-occupancy-audit-2026-09-09.md) and [corrected exact proof](attention-occupancy-proof-v2-2026-09-09.json) preserve the evidence. Wen has actually scheduled a publication after the last physical watch; it remains pending and must not be described as failed or already published.
+
+## One decision, several possible contacts
+
+P8 permits three concurrent bilateral channels per resident and only one open channel per unordered pair. It retains the forty-conversation total bound. A thought can reply to a specifically issued channel, contact an offered third person, review one channel privately, pursue private work, explicitly leave, or perform the existing exclusive document lookup. Initial private decisions still require a purpose. Neither membership nor receipt triggers an additional model call. The resident chooses one operation through the ordinary cadence and free-provider admission.
+
+Each preparation includes all up to three own live channels and the three oldest retained unreviewed closures. Only the latest exact own and counterpart text is supplied per channel; omitted counts are explicit. No generated summary is introduced. Trusted IDs, revisions, turn counts and permitted contacts bind the response. A recipient that becomes available later does not appear retroactively in the issued contract. Current capacity, expiry, consent and resources are rechecked before effects.
+
+A per-participant `attentionThrough` marker acknowledges only the selected channel revision of an applied decision. Preparation, failure, lookup or a different channel does not consume it. A private review is a real choice to consider supplied material, not proof of reading, comprehension, endorsement or acceptance. Resident scheduling deduplicates people and orders them by their own opportunities; three channels do not buy three turns ahead of another person. New P8 contacts can retire only closed history acknowledged by both participants, preserving pending closures at the total bound.
+
+Leaving is unilateral even while awaiting a reply. It closes the exact channel and expires only its unaccepted conversation proposals. Accepted work, loans and record commissions survive. It creates an attributed departure event, without fabricating farewell words or an agreement. Speech alone continues to have no monetary or publication effect.
+
+## Persistence and compatibility
+
+SQL12 archives the exact prior cognitive row and migrates Society3 to Society4. Existing texts, records, projects, offers, agreements, clocks and balances must remain structurally identical; unexpected normalization fails the transaction. Historical codecs retain their original exclusivity checks before migration. Legacy receipt times can initialize only the demonstrably delivered revision prefix. An expiry requires its exact recorded observation; a scheduled deadline alone is insufficient. If receipt evidence is absent, the expiry remains pending conservatively.
+
+Saved P1–P7 grammars and their output meaning are retained. Successful legacy decisions acknowledge only their actually issued channel or exact supplied closing message in the new private bookkeeping. Lookup acknowledges none. Public DTO2 contains no private attention markers. P8 rechecks the persisted output schema and its digest at admission and durable application; a restored already-applied result produces no additional world publication or archive event.
+
+## Research and inference
+
+[AgentSociety, §§3.4 and5.4](https://arxiv.org/html/2502.08691v2) provides a precedent for addressed asynchronous messages and individual social histories. [Project Sid, §§2.1–2.2](https://arxiv.org/html/2411.00114v1) coordinates concurrent processes through a central decision and discusses inconsistency between language and actions. [Generative Agents, §4.3](https://arxiv.org/html/2304.03442v2) separates reacting to observations from continuing a plan and documents repetition despite plausible individual decisions. [AgentSociety2, §3.2.5](https://arxiv.org/html/2607.11895v1) describes deterministic observation and reuse of execution work; it is a newer supplementary source, not a result measured in this project.
+
+Our bounded inbox, three-channel cap and explicit private review are engineering inferences from those designs. No paper establishes this particular cap, our throughput, truthful speech or emergence of useful paid work. We do not import an additional summarization or code-generation model, nor borrow the papers' reported savings.
+
+## Capacity and falsification
+
+The first candidate puts all25 revision317 preparations above Groq's8,000-token request window. Preserve [candidate1](attention-budget-candidate1-2026-09-09.json). Later measurements isolate representation compaction, projected bookkeeping and the subsequently selected shorter SYSTEM; all keep original text and state inputs. Reference factoring must retain the same accepted language, tested independently with adversarial finite corpora rather than assumed from shorter JSON. The selected [C6 + compact SYSTEM measurement](attention-budget-candidate6-compact-system-facet-2026-09-09.json) reserves 6,587–7,903 Groq tokens for all25 real preparations at revision317. The legal three-open/three-closure fixture still requires8,754 tokens, although both byte guards pass. It therefore needs eligible Cloudflare capacity or must wait. These measurements are fixtures, not a universal bound over legal records, transcripts and plans. The C5→C6 compiler comparison found no differences in170,890 adversarial inputs; separately, all100 schemas expand to identical validation constraints after normalization of enum/required sets. This does not prove semantic equivalence of the shorter SYSTEM or model behavior.
+
+The cap can still saturate. Lack of capacity is not unwillingness, consent or location. Pending closures beyond the displayed three remain queued; choosing other work can delay them. A long legal context may require Cloudflare rather than Groq or wait for its quota. We must measure that limitation, not truncate evidence or infer free capacity from account login. The [authenticated project readback](groq-project-readback-2026-09-09.json) confirms both existing model allowances, without an increase or paid plan.
+
+Reject a claimed social improvement unless actual independent decisions use the correct channel and available evidence, preserve old commitments, and advance their own purposes beyond repeated promises. More contacts, messages, contracts or schema-valid output alone are not success. A negotiated paid-work-to-performance chain remains unproved; neither synthetic accepts nor earlier gifts satisfy that outcome.

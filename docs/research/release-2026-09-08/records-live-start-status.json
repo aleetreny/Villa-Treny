@@ -1,0 +1,260 @@
+{
+  "capturedAt": "2026-09-08T18:50:03.371Z",
+  "status": {
+    "schemaVersion": 9,
+    "storage": {
+      "bytes": 2547712,
+      "perObjectFreeLimitBytes": 1000000000
+    },
+    "worldCodecVersion": 4,
+    "habitatId": "habitat-canonical",
+    "residentCapacity": 25,
+    "mode": "running",
+    "pauseReason": null,
+    "health": "healthy",
+    "overdueByMs": 0,
+    "lastSuccessfulWatchAtMs": 1788872884147,
+    "worldRevision": 175,
+    "controlRevision": 3,
+    "simTime": {
+      "day": 107,
+      "minute": 720
+    },
+    "lastRun": {
+      "runId": "habitat-canonical:world:29:watch",
+      "committedAtMs": 1788872884147
+    },
+    "nextWatchAtMs": 1788894484141,
+    "cognition": {
+      "health": "healthy",
+      "successfulLastWatch": 25,
+      "total": 25,
+      "neverThought": 0,
+      "lastErrorCode": null,
+      "lastSuccessfulThoughtAtMs": 1788892949646,
+      "nextOpportunityAtMs": 1788893670075,
+      "pendingResidents": [],
+      "waitingForReply": [
+        "A",
+        "K",
+        "C",
+        "D",
+        "E",
+        "F",
+        "Q",
+        "O",
+        "X",
+        "V",
+        "R",
+        "Y"
+      ]
+    },
+    "nextWake": {
+      "generation": 126,
+      "dueAtMs": 1788893670075,
+      "reason": "clock",
+      "installedAtMs": 1788893670075
+    },
+    "queue": {
+      "scope": "active",
+      "counts": {},
+      "oldestDueAtMs": null
+    },
+    "providers": {
+      "day": "2026-09-08",
+      "resetAtMs": 1788912000000,
+      "usage": [
+        {
+          "provider": "groq",
+          "requests": 12,
+          "input_tokens": 54456,
+          "output_tokens": 2534,
+          "neurons": 0
+        },
+        {
+          "provider": "workers-ai",
+          "requests": 65,
+          "input_tokens": 122613,
+          "output_tokens": 20717,
+          "neurons": 5172
+        }
+      ],
+      "reserved": [
+        {
+          "provider": "groq",
+          "requests": 12,
+          "input_tokens": 54456,
+          "output_tokens": 2534,
+          "neurons": 0
+        },
+        {
+          "provider": "workers-ai",
+          "requests": 65,
+          "input_tokens": 122613,
+          "output_tokens": 20717,
+          "neurons": 5172
+        }
+      ],
+      "actual": [
+        {
+          "provider": "groq",
+          "requests": 11,
+          "input_tokens": 48587,
+          "output_tokens": 2150,
+          "neurons": 0
+        },
+        {
+          "provider": "workers-ai",
+          "requests": 64,
+          "input_tokens": 116744,
+          "output_tokens": 20333,
+          "neurons": 5133
+        }
+      ],
+      "breakers": [
+        {
+          "provider": "groq",
+          "open_until_ms": 0,
+          "reason": null,
+          "failure_streak": 0
+        },
+        {
+          "provider": "workers-ai",
+          "open_until_ms": 0,
+          "reason": null,
+          "failure_streak": 0
+        }
+      ],
+      "windows": {
+        "workers-ai": {
+          "scope": "utc-day-with-pending-carry",
+          "usage": {
+            "requests": 66,
+            "input_tokens": 128844,
+            "output_tokens": 21101,
+            "neurons": 5213
+          }
+        },
+        "groq": {
+          "limits": {
+            "minuteRequests": 10,
+            "minuteTokens": 6000,
+            "dayRequests": 200,
+            "dayTokens": 150000
+          },
+          "minute": {
+            "requests": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "neurons": 0
+          },
+          "day": {
+            "requests": 12,
+            "input_tokens": 54456,
+            "output_tokens": 2534,
+            "neurons": 0
+          }
+        }
+      },
+      "configured": {
+        "workersAI": true,
+        "groq": true
+      },
+      "recentAttempts": [
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 12768,
+          "recordedAtMs": 1788892949646
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 594,
+          "recordedAtMs": 1788892757471
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 8022,
+          "recordedAtMs": 1788892128408
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 948,
+          "recordedAtMs": 1788891591348
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 10007,
+          "recordedAtMs": 1788891420360
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 5379,
+          "recordedAtMs": 1788890705742
+        },
+        {
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 899,
+          "recordedAtMs": 1788890341147
+        },
+        {
+          "provider": "workers-ai",
+          "model": "@cf/openai/gpt-oss-120b",
+          "ok": true,
+          "kind": null,
+          "retryable": false,
+          "retryAtMs": null,
+          "detailCode": null,
+          "latencyMs": 9102,
+          "recordedAtMs": 1788889989262
+        }
+      ]
+    },
+    "lastErrorCode": null
+  },
+  "publicRecords": {
+    "entries": [],
+    "nextCursor": null
+  }
+}

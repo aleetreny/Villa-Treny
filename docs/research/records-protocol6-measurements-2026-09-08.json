@@ -1,0 +1,1296 @@
+{
+  "version": 1,
+  "measuredAt": "2026-09-08T17:57:40.549499+00:00",
+  "scope": "Offline synthetic P6 provider components. No remote inference, no production state. Exact ordinary tokens plus provisional framing and full output maximum; CF maximum uses conservative bytes.",
+  "autonomousDefault": 4,
+  "measuredExplicitProtocol": 6,
+  "requests": 0,
+  "sourceManifest": {
+    "package.json": "987cd8dcf4b02bec1105fd36735a1223a608ceb96dcba1148e3a3705bb0bdec6",
+    "pnpm-lock.yaml": "03af0997568d17db7048c52941ba924985827c7e763dee12d196a0f7a3e0658b",
+    "src/lib/habitat/engine/economy.ts": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8",
+    "src/lib/habitat/engine/knowledge.ts": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14",
+    "src/lib/habitat/engine/state.ts": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8",
+    "src/lib/habitat/engine/tick.ts": "197d912fff855258b42925a4bd71a4bb855109c8c5cffdf2503c94112b25a02e",
+    "src/lib/habitat/engine/verbs.ts": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3",
+    "src/lib/habitat/random.ts": "e18394c5735036e93d0bf001a1b2a1d95ab1255484e84a79bd8ceb77e2d17c33",
+    "src/lib/habitat/residents.ts": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29",
+    "src/lib/habitat/rooms.ts": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57",
+    "src/lib/habitat/society/appraisal.ts": "f946f0accaece3c460d3a6e5fe884aa4797e2fccfc403ea17fcdbaa25a37ea7b",
+    "src/lib/habitat/society/capabilities.ts": "d63a161cf3fb4f0baa754e2c71f1d310fb6cac9ab56353586be6bb2f86c7283a",
+    "src/lib/habitat/society/choice.ts": "2fd3e01f5a890d641ef6c22a16eb38f1ad515a1500b3f9f2cc049263cdf2b579",
+    "src/lib/habitat/society/economy.ts": "5a11678e655670b96f70d3a22fdc675c10b973cd3e2559a435acb514f9def6fa",
+    "src/lib/habitat/society/index.ts": "0d9d4f02d72b8b441ad7a5ef11dd74f5c637b65ab018a0ccc384ccca76f27e3e",
+    "src/lib/habitat/society/instructions.ts": "2492fa357702571edb9c84c22a9ff50e471c9c6df8ef771af8e3dd48534c3e7f",
+    "src/lib/habitat/society/money.ts": "923226735ffaadfdeb4fecf6ef6418b08257285c3eebf8a56941ceefe4684b8a",
+    "src/lib/habitat/society/ordered-choice.ts": "8210dc505fdf7677582e314b49bbf809a4112a4da1af1e3c04197492571b0809",
+    "src/lib/habitat/society/physical.ts": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae",
+    "src/lib/habitat/society/public-record-publication.ts": "008f564793ed576e8072c11f2633822103184deb2468b3f9a39494620dd5dc91",
+    "src/lib/habitat/society/public.ts": "7e352d244c476f6ca32b9df59a0708836b7147a6cc5ca83fcf85766d6c812b86",
+    "src/lib/habitat/society/record-archive.ts": "d631275ff9deab1765ed94fa8e64e5bc5a89de6d8bcbbc1e156e16228373ff47",
+    "src/lib/habitat/society/record-choice.ts": "7b8c556a77afaba97bb627ba6389fd66c05dcea90536bda85e37fa9296f5a66f",
+    "src/lib/habitat/society/record-instructions.ts": "e6cbd7ed7058603ea345d437de0bb84644836e554bb02c0187d1312688055d06",
+    "src/lib/habitat/society/record-schema.ts": "2849742cdedf817ddfeef342fe4fef9e3699a36a59b66e26632b78b4a061cedd",
+    "src/lib/habitat/society/record-types.ts": "e744fa2867a1e2dc6cf80db32a5f81ad10c76688300f9e53336aa4f519bd5f38",
+    "src/lib/habitat/society/record-watch.ts": "618e554836097c57f5a71d1ce1596a04b925c1a64aa47dce2c4f13c782ff6705",
+    "src/lib/habitat/society/records-test-fixture.ts": "5b8bfd3cc86cf72bbeef7659cd6ec48a4e144e2bf775c1aba9402c62ab0a842e",
+    "src/lib/habitat/society/records.ts": "6ca3fdb9677cff3500de9d6e214c3472d8495f792d0b351aeb898848d4931161",
+    "src/lib/habitat/society/schema.ts": "1fefa33d3f20e7e4f366139e7bcbc817eb24d4dfa3dbac2608eb98e7177ccb67",
+    "src/lib/habitat/society/state.ts": "1c479cf3189e947884368448e92e703fbbc5ad7202aba15ae275088e81e31031",
+    "src/lib/habitat/society/turn.ts": "31e3de49d9ef50d4ec5505869910c74cb6e702e4436671bd93c7c9249312d328",
+    "src/lib/habitat/society/types.ts": "bce35a91054d9252130e3a8b66cb18a6503085d9002e9fb4e9e3c6b03904e894",
+    "src/lib/habitat/weave.ts": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5",
+    "workers/habitat-runtime/package.json": "3b3c0a1f715373d4329886ed03713760da783373d10b555100d1089d095b7b4f",
+    "workers/habitat-runtime/src/auth.ts": "ca46bb3f9ba245715dcca3bf366fb2019906acaace6b9422efe26bd6481b38f5",
+    "workers/habitat-runtime/src/checkpoint.ts": "2eebcfa2f57dc663dfadc9b47c331f7deb521008d29c5532e6a9f37b80430fc2",
+    "workers/habitat-runtime/src/cognition-pacing.ts": "b1f8aa948930f977290eb5458d632d28c07e8b6fe8d2fbbe01ffc6316ff867df",
+    "workers/habitat-runtime/src/cognition-retention.ts": "ab070825db6a991621d116c1582a484752b42645fb975a89f9f7846a1bcb77eb",
+    "workers/habitat-runtime/src/conditional.ts": "60fc4bcfd61e5e524de5a1f29d0d5a1bf65a3a34ba217a8376f2489318f5ffb1",
+    "workers/habitat-runtime/src/contracts.ts": "3fd0231116a439a2a17482e88408751997d1f5342016aea9356706adaec13fa6",
+    "workers/habitat-runtime/src/domain.ts": "a0523ad945e440c86aec54251c4e114ef9a328f8ed0f848cc8b4dd4f25d8768e",
+    "workers/habitat-runtime/src/habitat-world.ts": "62dfebe40ccdbd5122f0e9e9354612c5fdb72fc7a58cb8e0e5091fc3df3751d5",
+    "workers/habitat-runtime/src/http.ts": "be051b051dc463cadb325157e79d140835db925c31d44b993e96afd2e8ece16a",
+    "workers/habitat-runtime/src/index.ts": "ba947377273340f19edc6f2429f3a8c2e28518ca13b391f21973ad824399abc4",
+    "workers/habitat-runtime/src/prompt-budget.ts": "36d13cecbbf47218f574038c57cd9a532383a74fba056a8246c19ea44bea42a1",
+    "workers/habitat-runtime/src/providers/deadline.ts": "2d97949eeb8c0ed829e171147f27782bdfa48fd1e408d33d7f6fa62d486f357c",
+    "workers/habitat-runtime/src/providers/groq-token-estimate.ts": "9851210b2af31b0df81fc97f6dbf124848420cb9acbab8e4daf863cc048a1dd9",
+    "workers/habitat-runtime/src/providers/groq-tokenizer.ts": "99b665861f1371d034149d689667619df1fed7ca5a059da43ebb7cf853d9d554",
+    "workers/habitat-runtime/src/providers/groq.ts": "207b756310183a2a3ebb759a0e8fe13f84ffc8a5e3c1bab8d7f945958cdc74b1",
+    "workers/habitat-runtime/src/providers/router.ts": "6276e39c8c46f56a0cda30a17ee34e5a8a71643ba47a7826979af1e40cca9a4b",
+    "workers/habitat-runtime/src/providers/shared.ts": "1d0f1f1d0d8fe6a92e3b4a1b1c6c775b580a8974a1a25bda41017857e9de42ce",
+    "workers/habitat-runtime/src/providers/tiktoken-wasm.d.ts": "18aafdd5703deffb3dbb9ffc63d06487d26d93ae9450eed8c0f26c19d024829d",
+    "workers/habitat-runtime/src/providers/workers-ai.ts": "8eebc8d8eb919864facbb0e7ebe81e2b8e9c35af900602037943b7a240150b7e",
+    "workers/habitat-runtime/src/quota.ts": "3399241645b1a065766ec5efd23e6c7a13f297344a028c9eea5d3d397744e3a9",
+    "workers/habitat-runtime/src/recovery.ts": "b8d6b7600321b82e49d840a73a5cb2512c233b7d0192cbf44bdf6a57b9aeb310",
+    "workers/habitat-runtime/src/society-protocol.ts": "35d59e4c6cbf8a5c6bb32497fa610fd5503f233510ef5ed5a5d2442841fbe3a9",
+    "workers/habitat-runtime/src/society-scheduler.ts": "1ccfad92aab5e452d4f522d5947ebda203e28bba06820dc7280f60ceb3814c03"
+  },
+  "sourceManifestSha256": "8325c8ffd94b558e946de15cbfd81d67926f75893ebb0a316123f2d764ff1805",
+  "method": {
+    "groq": "Ordinary o200k components SYSTEM+USER+JSON Schema, then provisional128 framing +1024 output maximum. Not exact server framing or actual use.",
+    "workersAI": "Conservative UTF-8 payload reservation for GPT OSS120B plus1024 maximum output. No charged usage.",
+    "hardAdmissionUnchanged": true,
+    "exactDocumentPreserved": true
+  },
+  "rows": [
+    {
+      "group": "initial",
+      "actor": "A",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 641,
+          "schema": 2354
+        },
+        "groqMaximum": 5036,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2084,
+          "schema": 8614
+        },
+        "cfPayloadBytes": 15803,
+        "cfNeuronMaximum": 577,
+        "jobHash": "55cc1db80ff6ee578ecba027daa336bbbfdb25eee5e648a36e26b8b8f11c77ba"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 710,
+          "schema": 2545
+        },
+        "groqMaximum": 5521,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2325,
+          "schema": 9115
+        },
+        "cfPayloadBytes": 17885,
+        "cfNeuronMaximum": 643,
+        "jobHash": "3189ace59b8497616dfe8b1945d98ab351f31103aa678aa8cb76effbe6ba70ad"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "B",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 582,
+          "schema": 2350
+        },
+        "groqMaximum": 4973,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 1829,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15499,
+        "cfNeuronMaximum": 568,
+        "jobHash": "2b9cdbaeeb637893df325fc0e2141d17034a7e124989ac16572079521cf21fa5"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 651,
+          "schema": 2541
+        },
+        "groqMaximum": 5458,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2070,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17581,
+        "cfNeuronMaximum": 634,
+        "jobHash": "78390d741483985dee147bab022eb574305322cb1e25ddd0c9f13a5c3aaeade1"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "C",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 634,
+          "schema": 2350
+        },
+        "groqMaximum": 5025,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2025,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15713,
+        "cfNeuronMaximum": 574,
+        "jobHash": "a68532f70046e787ac63dc82cc337c1e449e2b0ce3759611ab9026fe1815ba90"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 703,
+          "schema": 2541
+        },
+        "groqMaximum": 5510,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2266,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17795,
+        "cfNeuronMaximum": 641,
+        "jobHash": "570de19e6c1dd60d18213a4ea89db6a07b1b992c31ef005abeeb4c0be0a970a6"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "D",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 627,
+          "schema": 2350
+        },
+        "groqMaximum": 5018,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2005,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15687,
+        "cfNeuronMaximum": 574,
+        "jobHash": "4186613d74ccf5bbad37b96bfe316f7372a8f31fa52cc81c46fff4108c5fd164"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 696,
+          "schema": 2541
+        },
+        "groqMaximum": 5503,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2246,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17769,
+        "cfNeuronMaximum": 640,
+        "jobHash": "e18fb82086c8b9b587ad20bcea615072980c39fa51ae498acc3e7b8a90275a4a"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "E",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 715,
+          "schema": 2363
+        },
+        "groqMaximum": 5119,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2429,
+          "schema": 8631
+        },
+        "cfPayloadBytes": 16161,
+        "cfNeuronMaximum": 589,
+        "jobHash": "7cd9cf2a4f0edcc20dd917eebcf98351620e03d3afe270504024f83cdeacac4f"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 797,
+          "schema": 2567
+        },
+        "groqMaximum": 5630,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2707,
+          "schema": 9170
+        },
+        "cfPayloadBytes": 18322,
+        "cfNeuronMaximum": 657,
+        "jobHash": "f3dcaca5e18f32994fe9f04fe1d477caf2a4f05d52b1e49310249d306f367996"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "F",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 683,
+          "schema": 2356
+        },
+        "groqMaximum": 5080,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2248,
+          "schema": 8610
+        },
+        "cfPayloadBytes": 15974,
+        "cfNeuronMaximum": 583,
+        "jobHash": "96b9e11941b569c5c107d93700b246601840bf521240181853dcee3eccd54376"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 758,
+          "schema": 2553
+        },
+        "groqMaximum": 5577,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2506,
+          "schema": 9128
+        },
+        "cfPayloadBytes": 18092,
+        "cfNeuronMaximum": 650,
+        "jobHash": "c6299701d175a30163e02c93321f84798a41db6bca5c622151ad9067ad0d9be2"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "G",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 689,
+          "schema": 2357
+        },
+        "groqMaximum": 5087,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2299,
+          "schema": 8613
+        },
+        "cfPayloadBytes": 16021,
+        "cfNeuronMaximum": 584,
+        "jobHash": "a5bfdde6a7c143de6498fd9ec45b509d93083eb3fc2edeb95a46dee0cc364d75"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 765,
+          "schema": 2555
+        },
+        "groqMaximum": 5586,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2559,
+          "schema": 9134
+        },
+        "cfPayloadBytes": 18144,
+        "cfNeuronMaximum": 652,
+        "jobHash": "69bae3911f80d64e4985b4a75fb473f9173010ec5d8de2248b4f5a66d5098683"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "H",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 719,
+          "schema": 2356
+        },
+        "groqMaximum": 5116,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2407,
+          "schema": 8611
+        },
+        "cfPayloadBytes": 16143,
+        "cfNeuronMaximum": 588,
+        "jobHash": "f344dae240672508467b6610cd1c172e31f3afc05b0461e288358f53e10116a7"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 794,
+          "schema": 2553
+        },
+        "groqMaximum": 5613,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2666,
+          "schema": 9130
+        },
+        "cfPayloadBytes": 18263,
+        "cfNeuronMaximum": 655,
+        "jobHash": "40981377be156f359b482f5e1bc1716baeb3f5dd489e33358e2cd1f134f1c8d3"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "I",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 633,
+          "schema": 2350
+        },
+        "groqMaximum": 5024,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2055,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15744,
+        "cfNeuronMaximum": 575,
+        "jobHash": "32eb6247114eb1d17737b8ababeb80bb93967b7cf9c01a57cc7b6208ac48f16b"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 702,
+          "schema": 2541
+        },
+        "groqMaximum": 5509,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2296,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17826,
+        "cfNeuronMaximum": 642,
+        "jobHash": "4a4a6f1098b39c5f8cccea3463d5526d3e979767bbe2136492a6cd1423b5fc1b"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "J",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 717,
+          "schema": 2363
+        },
+        "groqMaximum": 5121,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2389,
+          "schema": 8633
+        },
+        "cfPayloadBytes": 16133,
+        "cfNeuronMaximum": 588,
+        "jobHash": "46146fe04c97123072c0b9e7dc37f3a1bf19b32e8bbca98a926f955084c510d1"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 799,
+          "schema": 2567
+        },
+        "groqMaximum": 5632,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2669,
+          "schema": 9174
+        },
+        "cfPayloadBytes": 18298,
+        "cfNeuronMaximum": 657,
+        "jobHash": "edb6be2671feeb48f3de1982b32e1ac98724946aed16cd8ba7a86bbbf85bf042"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "K",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 610,
+          "schema": 2350
+        },
+        "groqMaximum": 5001,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 1928,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15618,
+        "cfNeuronMaximum": 571,
+        "jobHash": "a6c01b7de3c841135c3074079ea1767bb8296aaea33ec4ae86d1897910061f67"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 679,
+          "schema": 2541
+        },
+        "groqMaximum": 5486,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2169,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17700,
+        "cfNeuronMaximum": 638,
+        "jobHash": "61b36a058f48c66e73f789bec51cdbf1ae2458ebdc73b02960e533e107b3bdd2"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "L",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 612,
+          "schema": 2350
+        },
+        "groqMaximum": 5003,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 1924,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15606,
+        "cfNeuronMaximum": 571,
+        "jobHash": "8d53c4bcc6c0683e708c66282dd52d47cf26be52785af580ee3a1ffd20f8a7d0"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 681,
+          "schema": 2541
+        },
+        "groqMaximum": 5488,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2165,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17688,
+        "cfNeuronMaximum": 637,
+        "jobHash": "8fc2f499e2cb86ad90eb34eed3630ba1dce793fd47ac0ffec0750582cfa9902e"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "M",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 672,
+          "schema": 2350
+        },
+        "groqMaximum": 5063,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2198,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15904,
+        "cfNeuronMaximum": 580,
+        "jobHash": "8400a666ce64de90c4bcde3603a4db8aa728c9d9a8d6082187684248ad275c40"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 741,
+          "schema": 2541
+        },
+        "groqMaximum": 5548,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2439,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17986,
+        "cfNeuronMaximum": 647,
+        "jobHash": "0bcaf709e085cc686bf4344446444eab1be86ff9227a2c1d21035b4a2cc61016"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "N",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 651,
+          "schema": 2358
+        },
+        "groqMaximum": 5050,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2093,
+          "schema": 8613
+        },
+        "cfPayloadBytes": 15807,
+        "cfNeuronMaximum": 577,
+        "jobHash": "02792b76ac6140f266f45477e7c58fb720a33dd8dd3a2fbe8a3998e0cc62dced"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 728,
+          "schema": 2557
+        },
+        "groqMaximum": 5551,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2353,
+          "schema": 9134
+        },
+        "cfPayloadBytes": 17930,
+        "cfNeuronMaximum": 645,
+        "jobHash": "033de94e3776e6b7bb99f7b42e857d062ab06dfb7c479889e45a7217118483a1"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "O",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 665,
+          "schema": 2356
+        },
+        "groqMaximum": 5062,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2116,
+          "schema": 8612
+        },
+        "cfPayloadBytes": 15835,
+        "cfNeuronMaximum": 578,
+        "jobHash": "a86cb53540117732a095e77a19572c53188a53d6e417c5b5b7ac0bc57a01a4e6"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 740,
+          "schema": 2553
+        },
+        "groqMaximum": 5559,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2376,
+          "schema": 9132
+        },
+        "cfPayloadBytes": 17957,
+        "cfNeuronMaximum": 646,
+        "jobHash": "e987269c3047df1f3d0994843b36182e9bd9e31b33b657609bc8fca13f0ef53f"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "P",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 678,
+          "schema": 2350
+        },
+        "groqMaximum": 5069,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2276,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15973,
+        "cfNeuronMaximum": 583,
+        "jobHash": "3c17a2db03d170504c98aa26ceaf20c4a73fdd9af718beb3d646f9cf37c6c00a"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 747,
+          "schema": 2541
+        },
+        "groqMaximum": 5554,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2517,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 18055,
+        "cfNeuronMaximum": 649,
+        "jobHash": "6721e34d5e88ae39f724b2e9c1631fec0c008d39cb3259c666f0b0a4b3de3eb4"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "Q",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 686,
+          "schema": 2356
+        },
+        "groqMaximum": 5083,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2283,
+          "schema": 8613
+        },
+        "cfPayloadBytes": 16013,
+        "cfNeuronMaximum": 584,
+        "jobHash": "4e398fac6bd31ca2798155f74e05436748fddf65279143ba53e3869d6f20611a"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 761,
+          "schema": 2553
+        },
+        "groqMaximum": 5580,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2544,
+          "schema": 9134
+        },
+        "cfPayloadBytes": 18137,
+        "cfNeuronMaximum": 651,
+        "jobHash": "5632afa0675697ba224b2c6655d10e01f88883239675443e2b5ffdbe88ea9202"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "R",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 574,
+          "schema": 2350
+        },
+        "groqMaximum": 4965,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 1781,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15451,
+        "cfNeuronMaximum": 566,
+        "jobHash": "ad24b8d6f5983523bb64e306a59fc295dae75ab124791c2fc7133f7edca0bede"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 643,
+          "schema": 2541
+        },
+        "groqMaximum": 5450,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2022,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17533,
+        "cfNeuronMaximum": 632,
+        "jobHash": "8fa142789a8e7927ba112bcefcf78b4015ca48b9dcc93d8d5588c9d9079f2390"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "S",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 710,
+          "schema": 2357
+        },
+        "groqMaximum": 5108,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2317,
+          "schema": 8613
+        },
+        "cfPayloadBytes": 16037,
+        "cfNeuronMaximum": 585,
+        "jobHash": "6b47e02baa633926e43f97f4618e9efa1ab3b8cd536fcd9f43b656e2be955616"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 786,
+          "schema": 2555
+        },
+        "groqMaximum": 5607,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2577,
+          "schema": 9134
+        },
+        "cfPayloadBytes": 18160,
+        "cfNeuronMaximum": 652,
+        "jobHash": "63da67dd5a7d7c672b1ae45c0980ea258c260dc8b8570926482e7835d0c35951"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "T",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 632,
+          "schema": 2350
+        },
+        "groqMaximum": 5023,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2002,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15692,
+        "cfNeuronMaximum": 574,
+        "jobHash": "a593df79ca5465ccb2b94628c1e0a92ae0a6915e5a5db37103c6919884162711"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 701,
+          "schema": 2541
+        },
+        "groqMaximum": 5508,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2243,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17774,
+        "cfNeuronMaximum": 640,
+        "jobHash": "3d29b8c964f59652b3df9071b3988f6f4dfb2d41ef91ed97e5352bfd84dacfea"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "U",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 652,
+          "schema": 2350
+        },
+        "groqMaximum": 5043,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2102,
+          "schema": 8593
+        },
+        "cfPayloadBytes": 15792,
+        "cfNeuronMaximum": 577,
+        "jobHash": "29a6332db5497ba75634c9de16de33ff342b4b42ca5e7c0353ea2c4e5aef619d"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 721,
+          "schema": 2541
+        },
+        "groqMaximum": 5528,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2343,
+          "schema": 9094
+        },
+        "cfPayloadBytes": 17874,
+        "cfNeuronMaximum": 643,
+        "jobHash": "cd69f85cc9250e14bf8e18ec9d94b60751721766e83551cab0390a428380ffc5"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "V",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 657,
+          "schema": 2356
+        },
+        "groqMaximum": 5054,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2098,
+          "schema": 8611
+        },
+        "cfPayloadBytes": 15818,
+        "cfNeuronMaximum": 578,
+        "jobHash": "e36331f3f110a0afd8d124dfbe8a000ec3719a097a31caa91fa02d5bdd66cae6"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 732,
+          "schema": 2553
+        },
+        "groqMaximum": 5551,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2357,
+          "schema": 9130
+        },
+        "cfPayloadBytes": 17938,
+        "cfNeuronMaximum": 645,
+        "jobHash": "67afca5bbb78d42c0499e805edd47961e72b90122c62e899ff026d3ae6e2cb1e"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "W",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 704,
+          "schema": 2365
+        },
+        "groqMaximum": 5110,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2309,
+          "schema": 8633
+        },
+        "cfPayloadBytes": 16051,
+        "cfNeuronMaximum": 585,
+        "jobHash": "5e785081d5c59a0fbf38a7d681eed3e680931e53d86394d4ed8b9bc431ecbfcd"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 788,
+          "schema": 2571
+        },
+        "groqMaximum": 5625,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2589,
+          "schema": 9174
+        },
+        "cfPayloadBytes": 18216,
+        "cfNeuronMaximum": 654,
+        "jobHash": "49dd91d1597bbf28326c6b5f8d57cbe4260736c0fc902c16bebe287303f6b7f8"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "X",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 647,
+          "schema": 2356
+        },
+        "groqMaximum": 5044,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2092,
+          "schema": 8610
+        },
+        "cfPayloadBytes": 15807,
+        "cfNeuronMaximum": 577,
+        "jobHash": "4699f17f1d0239f209728788014f52f80e375db9a731f8b4e36e5e6db2f006bc"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 722,
+          "schema": 2553
+        },
+        "groqMaximum": 5541,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2350,
+          "schema": 9128
+        },
+        "cfPayloadBytes": 17925,
+        "cfNeuronMaximum": 645,
+        "jobHash": "91e9b11c2d6fd631244c9f145c2ea74d0680ceb819246db77ec8a745be5d953b"
+      }
+    },
+    {
+      "group": "initial",
+      "actor": "Y",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 647,
+          "schema": 2356
+        },
+        "groqMaximum": 5044,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2085,
+          "schema": 8610
+        },
+        "cfPayloadBytes": 15794,
+        "cfNeuronMaximum": 577,
+        "jobHash": "ce70242c3292246805d16706fac749d3084b5cc10a54d5561258fcab0115e9b6"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 722,
+          "schema": 2553
+        },
+        "groqMaximum": 5541,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2343,
+          "schema": 9128
+        },
+        "cfPayloadBytes": 17912,
+        "cfNeuronMaximum": 644,
+        "jobHash": "9dc3f6691a9348fd0a26de5ed52098d685b4fae0db88bcf806eb829bab2c00b6"
+      }
+    },
+    {
+      "group": "shared-exact-draft",
+      "actor": "B",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 650,
+          "schema": 2397
+        },
+        "groqMaximum": 5088,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2165,
+          "schema": 9030
+        },
+        "cfPayloadBytes": 16407,
+        "cfNeuronMaximum": 596,
+        "jobHash": "58618b14c920a2429f76545b66e30c09abbfed814dafc77e1ebaa0405a8409e5"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 850,
+          "schema": 2877
+        },
+        "groqMaximum": 5993,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 2813,
+          "schema": 10346
+        },
+        "cfPayloadBytes": 19755,
+        "cfNeuronMaximum": 703,
+        "jobHash": "d00073d28bfaccd9b685e14f7a34e898c08dac83d11d79c668c5b0c16f200907"
+      }
+    },
+    {
+      "group": "incoming-commission",
+      "actor": "A",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 779,
+          "schema": 2456
+        },
+        "groqMaximum": 5276,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2717,
+          "schema": 9234
+        },
+        "cfPayloadBytes": 17226,
+        "cfNeuronMaximum": 622,
+        "jobHash": "37a70d70c6e5d61be6ed46e37ec9166d445e41976a450eeb040fc456136d7435"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 1111,
+          "schema": 3141
+        },
+        "groqMaximum": 6518,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 3735,
+          "schema": 11286
+        },
+        "cfPayloadBytes": 21738,
+        "cfNeuronMaximum": 766,
+        "jobHash": "9f207ce2df04a7d5bb81bbdc72d3cf095cff7ee04a5b0b91e4038da698e948f6"
+      }
+    },
+    {
+      "group": "accepted-commission-review",
+      "actor": "A",
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 807,
+          "schema": 923
+        },
+        "groqMaximum": 3771,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2851,
+          "schema": 3440
+        },
+        "cfPayloadBytes": 11581,
+        "cfNeuronMaximum": 443,
+        "jobHash": "c996a940c1f539b275a09228fc3a172ea657e8255e339781c740ef3f10bc5ffa"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 1236,
+          "schema": 1612
+        },
+        "groqMaximum": 5114,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 4135,
+          "schema": 5826
+        },
+        "cfPayloadBytes": 16721,
+        "cfNeuronMaximum": 606,
+        "jobHash": "968083452f135952dd48a4255b9ebf4e9d1e69ff57a889be439ad2bff159af37"
+      }
+    },
+    {
+      "group": "three-full-drafts-two-incoming-commissions",
+      "actor": "A",
+      "exactDraftBytes": [
+        600,
+        600,
+        600
+      ],
+      "p4": {
+        "ordinaryTokens": {
+          "system": 889,
+          "user": 812,
+          "schema": 2406
+        },
+        "groqMaximum": 5259,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 4586,
+          "user": 2740,
+          "schema": 8780
+        },
+        "cfPayloadBytes": 16711,
+        "cfNeuronMaximum": 606,
+        "jobHash": "9d023a16897d8f15f614827158a718c329c10ae4a9a9725aa849ee0f112d7d77"
+      },
+      "p6": {
+        "ordinaryTokens": {
+          "system": 1114,
+          "user": 1721,
+          "schema": 3236
+        },
+        "groqMaximum": 7223,
+        "outputMaximum": 1024,
+        "framingMargin": 128,
+        "utf8Bytes": {
+          "system": 5886,
+          "user": 6320,
+          "schema": 11313
+        },
+        "cfPayloadBytes": 24390,
+        "cfNeuronMaximum": 850,
+        "jobHash": "3e9050fd1a8911f5d6eb18d93bb367f8d215f7f17e041c368bd5ea20532325ef"
+      }
+    }
+  ],
+  "nativeGrammar": {
+    "scope": "Native XGrammar JSON grammar membership via unchanged installed FFI; no model inference, tokenizer inference, HTTP or server startup. This does not verify a hosted provider implementation.",
+    "sampleSha256": "f3904b77336d32681b5eb0078288ff020f40954736af8a16fb6103526dac2432",
+    "rows": [
+      {
+        "case": "initial-author",
+        "validAccepted": 1,
+        "invalidRejected": 4
+      },
+      {
+        "case": "private-share",
+        "validAccepted": 1,
+        "invalidRejected": 5
+      },
+      {
+        "case": "reader-commission",
+        "validAccepted": 1,
+        "invalidRejected": 5
+      },
+      {
+        "case": "author-accept",
+        "validAccepted": 1,
+        "invalidRejected": 5
+      }
+    ],
+    "version": "0.2.3"
+  },
+  "verification": {
+    "adapterAndCanonicalCore": "29 tests /2files pass, including9adapter tests.",
+    "savedWorkerProtocols": "15 tests /3files pass.",
+    "typecheck": "Worker tsc --noEmit passed.",
+    "lint": "Changed files passed ESLint.",
+    "sourceStableAcrossMeasurement": true
+  },
+  "scripts": {
+    "measure": {
+      "sha256": "7bd267eca4593ca18a8558415c632b7ef038424619b5987ca1bbc19be906882b",
+      "source": "import assert from 'node:assert/strict';\nimport {readFile,writeFile} from 'node:fs/promises';\nimport {createHash} from 'node:crypto';\nimport {createServer} from '/Users/alejandrotreny/Documents/ChatGPT/Villa-Treny/node_modules/vite/dist/node/index.js';\nconst root='/Users/alejandrotreny/Documents/ChatGPT/Villa-Treny';\nlet requests=0;globalThis.fetch=()=>{requests++;throw Error('Offline only');};\nconst sha=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');\nconst server=await createServer({root,configFile:false,appType:'custom',logLevel:'silent',server:{middlewareMode:true,hmr:false,watch:null},optimizeDeps:{noDiscovery:true,include:[]},plugins:[{name:'isolated-worker-wasm',enforce:'pre',async load(id){if(id.endsWith('tiktoken_bg.wasm'))return `export default new WebAssembly.Module(Uint8Array.from(${JSON.stringify([...await readFile(id)])}));`;}}]});\ntry {\n const core=Object.assign({},...await Promise.all(['/src/lib/habitat/society/index.ts','/src/lib/habitat/engine/state.ts','/src/lib/habitat/residents.ts','/workers/habitat-runtime/src/society-protocol.ts','/workers/habitat-runtime/src/society-scheduler.ts','/workers/habitat-runtime/src/providers/groq-tokenizer.ts','/workers/habitat-runtime/src/providers/groq-token-estimate.ts','/workers/habitat-runtime/src/providers/workers-ai.ts','/workers/habitat-runtime/src/providers/shared.ts'].map(p=>server.ssrLoadModule(p))));\n const world=core.genesisState(91),state=core.createSocietyState(world,1000),rows=[];\n async function measure(job){const parts=[job.prompt.system,job.prompt.user,JSON.stringify(job.outputContract.jsonSchema)],tokens=await core.tokenizeGroqOrdinary(parts);const cfPayload=JSON.stringify(core.workersAIInput(job,'@cf/openai/gpt-oss-120b'));return {ordinaryTokens:tokens?Object.fromEntries(['system','user','schema'].map((k,i)=>[k,tokens[i].length])):null,groqMaximum:await core.estimateGroqInputTokens(job)+job.maxOutputTokens,outputMaximum:job.maxOutputTokens,framingMargin:tokens?128:null,utf8Bytes:Object.fromEntries(['system','user','schema'].map((k,i)=>[k,Buffer.byteLength(parts[i])])),cfPayloadBytes:Buffer.byteLength(cfPayload),cfNeuronMaximum:core.estimateWorkersAINeurons('@cf/openai/gpt-oss-120b',core.estimateTokens(cfPayload),job.maxOutputTokens),jobHash:sha(job)};}\n const prepare=(s,w,actor,sequence,nowMs,protocolVersion=6)=>core.prepareSocietyJob({state:s,world:w,actor,nowMs,sequence,generation:0,worldRevision:0,habitatId:'offline-records-protocol6-measurement',protocolVersion});\n for(const{id:actor} of core.RESIDENTS){const p4=prepare(state,world,actor,1,2000,4),p6=prepare(state,world,actor,1,2000);rows.push({group:'initial',actor,p4:await measure(p4.job),p6:await measure(p6.job)});}\n const project={mode:'replace',goal:'Write a stores proposal.',why:'I want an exact text to discuss.',visibility:'private',steps:[]};\n let s=state,w=world;\n const first=prepare(s,w,'A',1,2000);\n const drafted=core.applySocietyProtocol(6,s,w,first.turn,{project,message:{to:'B',text:'Bex, would you review this exact proposal?'},record:{kind:'draft',title:'Stores proposal',text:'I propose comparing the stores register together, then recording any disagreements as claims.',refs:['world:100:1'],parent:null,audience:'B',publish:false}},{nowMs:2001,generation:0});assert.equal(drafted.ok,true,drafted.code);s=drafted.state;w=drafted.world;\n const d=s.records.drafts.at(-1),reply=prepare(s,w,'B',2,3000);rows.push({group:'shared-exact-draft',actor:'B',p4:await measure(prepare(s,w,'B',2,3000,4).job),p6:await measure(reply.job)});\n const offered=core.applySocietyProtocol(6,s,w,reply.turn,{project,message:{to:'A',text:'May I commission publication of this exact revision for one cell?'},record:{kind:'commission',draftId:d.id,contentHash:d.contentHash,counterpart:'A',cells:1,dueInWatches:2,audience:'B',visibility:'private'}},{nowMs:3001,generation:0});assert.equal(offered.ok,true,offered.code);s=offered.state;w=offered.world;\n const accept=prepare(s,w,'A',3,4000);rows.push({group:'incoming-commission',actor:'A',p4:await measure(prepare(s,w,'A',3,4000,4).job),p6:await measure(accept.job)});\n const accepted=core.applySocietyProtocol(6,s,w,accept.turn,{message:{to:'B',text:'I accept this exact publication commission.'},record:{kind:'accept',offerId:s.records.offers.at(-1).id}},{nowMs:4001,generation:0});assert.equal(accepted.ok,true,accepted.code);s=accepted.state;w=accepted.world;\n const follow=prepare(s,w,'A',4,5000);rows.push({group:'accepted-commission-review',actor:'A',p4:await measure(prepare(s,w,'A',4,5000,4).job),p6:await measure(follow.job)});\n const maxState=core.createSocietyState(world,1000);let ms=maxState,mw=world,seq=1;\n const fullText='A proposed comparison should record disagreement without inventing a corrected total. '.repeat(8);\n for(const [actor,to] of [['B','A'],['C','A'],['A','D']]){const title=actor+' record';const text=fullText.slice(0,600-Buffer.byteLength(title));assert.equal(Buffer.byteLength(title+text),600);const turn=prepare(ms,mw,actor,seq,2000+seq*1000);const out=core.applySocietyProtocol(6,ms,mw,turn.turn,{project,message:{to,text:'Here is a proposal for you to inspect.',close:true},record:{kind:'draft',title,text,refs:['world:100:1'],parent:null,audience:actor==='A'?'private':'A',publish:false}},{nowMs:2001+seq*1000,generation:0});assert.equal(out.ok,true,out.code);ms=out.state;mw=out.world;seq++;}\n for(const actor of ['B','C']){const draft=ms.records.drafts.find(d=>d.author===actor),job=prepare(ms,mw,actor,seq,2000+seq*1000);const out=core.applySocietyProtocol(6,ms,mw,job.turn,{record:{kind:'commission',draftId:draft.id,contentHash:draft.contentHash,counterpart:'A',cells:1,dueInWatches:2,audience:'A',visibility:'private'}},{nowMs:2001+seq*1000,generation:0});assert.equal(out.ok,true,out.code);ms=out.state;mw=out.world;seq++;}\n const maximum=prepare(ms,mw,'A',seq,2000+seq*1000);const maximumContext=JSON.parse(maximum.turn.prompt.slice(maximum.turn.prompt.lastIndexOf('\\n{')+1));assert.equal(maximumContext.records.drafts.length,3);assert.equal(maximumContext.records.offers.length,2);assert.ok(maximumContext.records.drafts.every(d=>Buffer.byteLength(d.title+d.text)===600));rows.push({group:'three-full-drafts-two-incoming-commissions',actor:'A',exactDraftBytes:[600,600,600],p4:await measure(prepare(ms,mw,'A',seq,2000+seq*1000,4).job),p6:await measure(maximum.job)});\n const result={scope:'Offline synthetic P6 provider components. No remote inference, no production state. Exact ordinary tokens plus provisional framing and full output maximum; CF maximum uses conservative bytes.',requests,rows};await writeFile('/tmp/villa-records-p6-measurement.json',JSON.stringify(result,null,2));console.log(JSON.stringify({requests,initialMax:Math.max(...rows.slice(0,25).map(r=>r.p6.groqMaximum)),rows:rows.slice(25)}));\n}finally{await server.close();}\n"
+    },
+    "grammarSamples": {
+      "sha256": "5cf566b2db341a81f034d65cb4d93cfffe5900710add7912daa9adba38b234f2",
+      "source": "import assert from 'node:assert/strict';\nimport {readFile,writeFile} from 'node:fs/promises';\nimport {createHash} from 'node:crypto';\nimport {createServer} from '/Users/alejandrotreny/Documents/ChatGPT/Villa-Treny/node_modules/vite/dist/node/index.js';\nconst root='/Users/alejandrotreny/Documents/ChatGPT/Villa-Treny';\nlet requests=0;globalThis.fetch=()=>{requests++;throw Error('Offline only');};\nconst sha=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');\nconst server=await createServer({root,configFile:false,appType:'custom',logLevel:'silent',server:{middlewareMode:true,hmr:false,watch:null},optimizeDeps:{noDiscovery:true,include:[]},plugins:[{name:'isolated-worker-wasm',enforce:'pre',async load(id){if(id.endsWith('tiktoken_bg.wasm'))return `export default new WebAssembly.Module(Uint8Array.from(${JSON.stringify([...await readFile(id)])}));`;}}]});\ntry {\n const core=Object.assign({},...await Promise.all(['/src/lib/habitat/society/index.ts','/src/lib/habitat/engine/state.ts','/src/lib/habitat/residents.ts','/workers/habitat-runtime/src/society-protocol.ts','/workers/habitat-runtime/src/society-scheduler.ts','/workers/habitat-runtime/src/providers/groq-tokenizer.ts','/workers/habitat-runtime/src/providers/groq-token-estimate.ts','/workers/habitat-runtime/src/providers/workers-ai.ts','/workers/habitat-runtime/src/providers/shared.ts'].map(p=>server.ssrLoadModule(p))));\n const world=core.genesisState(91),state=core.createSocietyState(world,1000),samples=[];\n const project={mode:'replace',goal:'Write a stores proposal.',why:'I want an exact text to discuss.',visibility:'private',steps:[]};\n const prepare=(s,w,actor,sequence,nowMs)=>core.prepareSocietyJob({state:s,world:w,actor,nowMs,sequence,generation:0,worldRevision:0,habitatId:'offline-records-grammar',protocolVersion:6});\n let s=state,w=world;\n function step(name,actor,sequence,raw){const nowMs=1000+sequence*1000,p=prepare(s,w,actor,sequence,nowMs);const bad=[{...raw,unexpected:true},[raw],{...raw,record:{kind:'invented'}},{...raw,record:{...raw.record,author:'Y'}}];if(raw.record.draftId)bad.push({...raw,record:{...raw.record,contentHash:'0'.repeat(64)}});if(raw.record.offerId)bad.push({...raw,record:{...raw.record,offerId:'record:offer:999999'}});samples.push({name,actor,schema:p.job.outputContract.jsonSchema,valid:[raw],invalid:bad});const r=core.applySocietyProtocol(6,s,w,p.turn,raw,{nowMs:nowMs+1,generation:0});assert.equal(r.ok,true,r.code);s=r.state;w=r.world;return r;}\n step('initial-author','A',1,{project,message:{to:'B',text:'Would you review a stores proposal?'},record:{kind:'draft',title:'Stores proposal',text:'I propose comparing the register together.',refs:['world:100:1'],parent:null,audience:'private',publish:false}});\n const d=s.records.drafts.at(-1);\n step('private-share','A',2,{record:{kind:'share',draftId:d.id,contentHash:d.contentHash,audience:'B'}});\n step('reader-commission','B',3,{project,message:{to:'A',text:'May I commission publication of this text for one cell?'},record:{kind:'commission',draftId:d.id,contentHash:d.contentHash,counterpart:'A',cells:1,dueInWatches:2,audience:'B',visibility:'private'}});\n step('author-accept','A',4,{message:{to:'B',text:'I accept this exact publication commission.'},record:{kind:'accept',offerId:s.records.offers.at(-1).id}});\n await writeFile('/tmp/villa-p6-grammar-samples.json',JSON.stringify({requests,samples}));console.log(JSON.stringify({requests,samples:samples.length}));\n}finally{await server.close();}\n"
+    },
+    "nativeGrammar": {
+      "sha256": "859332d10bef5b7cf90e4ca06f719a8869a70b87ed7d62ad10a62e47839c56f8",
+      "source": "import importlib.util, importlib, sys, json, pathlib, hashlib, socket\npackage=pathlib.Path('/Applications/oMLX.app/Contents/Resources/Python/framework-mlx-base/lib/python3.11/site-packages/xgrammar')\nspec=importlib.util.spec_from_file_location('xgrammar',package/'__init__.py',submodule_search_locations=[str(package)])\nmodule=importlib.util.module_from_spec(spec);sys.modules['xgrammar']=module\n# Load the unchanged native FFI directly: the broad Python package imports\n# optional Torch helpers unavailable in the embedded MLX environment.\nimportlib.import_module('xgrammar.load_binding')\ncore=importlib.import_module('xgrammar.tvm_ffi_binding._ffi_api')\n\ndef refuse(*args,**kwargs):raise RuntimeError('Offline grammar verification')\nsocket.create_connection=refuse\ninfo=core.TokenizerInfo([bytes([i]) for i in range(256)],0,256,[],False)\ncompiler=core.GrammarCompiler(info,1,False,-1)\nsamples=json.loads(pathlib.Path('/tmp/villa-p6-grammar-samples.json').read_text())\nrows=[]\nfor case in samples['samples']:\n grammar=compiler.compile_json_schema(json.dumps(case['schema']),True,None,None,True,None,False)\n row={'case':case['name'],'validAccepted':0,'invalidRejected':0}\n for label in ['valid','invalid']:\n  for value in case[label]:\n   matcher=core.GrammarMatcher(grammar,None,True,-1)\n   accepted=matcher.accept_string(json.dumps(value,separators=(',',':')),False) and matcher.is_completed()\n   assert accepted == (label=='valid'), (case['name'],label,value)\n   row['validAccepted' if label=='valid' else 'invalidRejected']+=1\n rows.append(row)\nresult={'scope':'Native XGrammar JSON grammar membership via unchanged installed FFI; no model inference, tokenizer inference, HTTP or server startup. This does not verify a hosted provider implementation.', 'sampleSha256':hashlib.sha256(pathlib.Path('/tmp/villa-p6-grammar-samples.json').read_bytes()).hexdigest(),'rows':rows}\npathlib.Path('/tmp/villa-p6-grammar-result.json').write_text(json.dumps(result,indent=2))\nprint(json.dumps(result))\n"
+    }
+  },
+  "limits": [
+    "No inference or production application in this measurement.",
+    "4 native grammar cases accepted4 valid and rejected19 invalid samples; no hosted-provider compatibility guarantee.",
+    "Protocol6 activation still requires separate coordinated quality evaluation.",
+    "Hashes bind available source files; they cannot reconstruct absent future source copies."
+  ]
+}

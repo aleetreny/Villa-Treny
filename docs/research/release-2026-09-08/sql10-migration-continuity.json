@@ -1,0 +1,1578 @@
+{
+  "format": "villa-sql10-production-continuity-v1",
+  "auditedAt": "2026-09-08T20:13:38.523Z",
+  "status": "passed",
+  "scope": "Strict comparison of two verified complete production recovery bundles. No intervening activity is excluded.",
+  "before": {
+    "recoverySha256": "1ebb71d66fe05a7a2849097fbc3d363fd17bba863f1452a0016f4617cfb29065",
+    "revision": 195,
+    "exportedAtMs": 1788898248974,
+    "schemaVersion": 9,
+    "pages": 26
+  },
+  "after": {
+    "recoverySha256": "e2c96e7abc9942096ac8449262690c6e77a3560985a28b89254ed870e3447db0",
+    "revision": 195,
+    "exportedAtMs": 1788898344177,
+    "schemaVersion": 10,
+    "pages": 28
+  },
+  "tableProof": [
+    {
+      "table": "runtime_meta",
+      "rowsBefore": 1,
+      "rowsAfter": 1,
+      "identical": true,
+      "beforeSha256": "e590264e475a6e4745592af822af39988f86576e21d7fafe23ce3dee3f9e903e",
+      "afterOldColumnsSha256": "e590264e475a6e4745592af822af39988f86576e21d7fafe23ce3dee3f9e903e"
+    },
+    {
+      "table": "world_state",
+      "rowsBefore": 1,
+      "rowsAfter": 1,
+      "identical": true,
+      "beforeSha256": "9aee203e0d18f4e37a685dafd6f3d78df78024ac4a52d62b0f67089f89605582",
+      "afterOldColumnsSha256": "9aee203e0d18f4e37a685dafd6f3d78df78024ac4a52d62b0f67089f89605582"
+    },
+    {
+      "table": "watch_runs",
+      "rowsBefore": 30,
+      "rowsAfter": 30,
+      "identical": true,
+      "beforeSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+      "afterOldColumnsSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf"
+    },
+    {
+      "table": "cognition_jobs",
+      "rowsBefore": 110,
+      "rowsAfter": 110,
+      "identical": true,
+      "beforeSha256": "3f0998c637be8d87164b3f1346e516f06b1160bec9a71a8eace59b085ae5b082",
+      "afterOldColumnsSha256": "3f0998c637be8d87164b3f1346e516f06b1160bec9a71a8eace59b085ae5b082"
+    },
+    {
+      "table": "provider_attempts",
+      "rowsBefore": 131,
+      "rowsAfter": 131,
+      "identical": true,
+      "beforeSha256": "af5b3b2048590587866af9667516ef044bc1331a344fcd2554e0fa6dceef3b47",
+      "afterOldColumnsSha256": "af5b3b2048590587866af9667516ef044bc1331a344fcd2554e0fa6dceef3b47"
+    },
+    {
+      "table": "happenings",
+      "rowsBefore": 281,
+      "rowsAfter": 281,
+      "identical": true,
+      "beforeSha256": "8c961998ad4e6f425c9e8b39cea4158ec8850a6106a97e1d082e666c61202daa",
+      "afterOldColumnsSha256": "8c961998ad4e6f425c9e8b39cea4158ec8850a6106a97e1d082e666c61202daa"
+    },
+    {
+      "table": "happening_people",
+      "rowsBefore": 476,
+      "rowsAfter": 476,
+      "identical": true,
+      "beforeSha256": "b8d155f4b2bf8ba56a9db95d3a75ba10efffd86a6e3526a45c35dcc00f50f834",
+      "afterOldColumnsSha256": "b8d155f4b2bf8ba56a9db95d3a75ba10efffd86a6e3526a45c35dcc00f50f834"
+    },
+    {
+      "table": "economic_events",
+      "rowsBefore": 55,
+      "rowsAfter": 55,
+      "identical": true,
+      "beforeSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+      "afterOldColumnsSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99"
+    },
+    {
+      "table": "world_checkpoints",
+      "rowsBefore": 2,
+      "rowsAfter": 2,
+      "identical": true,
+      "beforeSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+      "afterOldColumnsSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a"
+    },
+    {
+      "table": "world_layout_backups",
+      "rowsBefore": 3,
+      "rowsAfter": 3,
+      "identical": true,
+      "beforeSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+      "afterOldColumnsSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57"
+    },
+    {
+      "table": "_sql_schema_migrations",
+      "rowsBefore": 9,
+      "rowsAfter": 9,
+      "identical": true,
+      "beforeSha256": "13b5c87d2fb24b37e77ea123ee73ba7a2002974b8d3a6e0dd615a446639e4caf",
+      "afterOldColumnsSha256": "13b5c87d2fb24b37e77ea123ee73ba7a2002974b8d3a6e0dd615a446639e4caf"
+    },
+    {
+      "table": "quota_reservations",
+      "rowsBefore": 135,
+      "rowsAfter": 135,
+      "identical": true,
+      "beforeSha256": "a5ea38603302b6ed9e96ee6bb231a332d10f8a02410e78d5caff003d933a19ac",
+      "afterOldColumnsSha256": "a5ea38603302b6ed9e96ee6bb231a332d10f8a02410e78d5caff003d933a19ac"
+    },
+    {
+      "table": "provider_usage_daily",
+      "rowsBefore": 14,
+      "rowsAfter": 14,
+      "identical": true,
+      "beforeSha256": "e821ca8d53622ab3618aaebbba98d62481b1da89c9e0f91950f808ea191ae2be",
+      "afterOldColumnsSha256": "e821ca8d53622ab3618aaebbba98d62481b1da89c9e0f91950f808ea191ae2be"
+    },
+    {
+      "table": "provider_breakers",
+      "rowsBefore": 2,
+      "rowsAfter": 2,
+      "identical": true,
+      "beforeSha256": "79bb8c12fcc09ab7aabd0ae1d229b2d4bb3db2ceadb837b84c4ca97e7c5e6e85",
+      "afterOldColumnsSha256": "79bb8c12fcc09ab7aabd0ae1d229b2d4bb3db2ceadb837b84c4ca97e7c5e6e85"
+    },
+    {
+      "table": "alarm_runs",
+      "rowsBefore": 0,
+      "rowsAfter": 0,
+      "identical": true,
+      "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "afterOldColumnsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "admin_commands",
+      "rowsBefore": 9,
+      "rowsAfter": 9,
+      "identical": true,
+      "beforeSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+      "afterOldColumnsSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5"
+    },
+    {
+      "table": "runtime_events",
+      "rowsBefore": 122,
+      "rowsAfter": 122,
+      "identical": true,
+      "beforeSha256": "bddd6a06bc16526707dcb7d186269bc5d508d7231780c181300843ec07575e2a",
+      "afterOldColumnsSha256": "bddd6a06bc16526707dcb7d186269bc5d508d7231780c181300843ec07575e2a"
+    },
+    {
+      "table": "society_state",
+      "rowsBefore": 1,
+      "rowsAfter": 1,
+      "identical": true,
+      "beforeSha256": "eed6b36ed28149b3818e5465f402a77265f3c29d171018fe59f1a9d7831c4363",
+      "afterOldColumnsSha256": "eed6b36ed28149b3818e5465f402a77265f3c29d171018fe59f1a9d7831c4363"
+    },
+    {
+      "table": "cognition_contexts",
+      "rowsBefore": 80,
+      "rowsAfter": 80,
+      "identical": true,
+      "beforeSha256": "2b92d01825fae1c162b9f3b8419a62669e36f3701b8803bb7722e9e208690370",
+      "afterOldColumnsSha256": "2b92d01825fae1c162b9f3b8419a62669e36f3701b8803bb7722e9e208690370"
+    },
+    {
+      "table": "physical_runs",
+      "rowsBefore": 1,
+      "rowsAfter": 1,
+      "identical": true,
+      "beforeSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+      "afterOldColumnsSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26"
+    },
+    {
+      "table": "society_events",
+      "rowsBefore": 79,
+      "rowsAfter": 79,
+      "identical": true,
+      "beforeSha256": "130549b13a0d90a3ff8eeb88517c0fd0bb5fef8231720d785539dca6d65e2049",
+      "afterOldColumnsSha256": "130549b13a0d90a3ff8eeb88517c0fd0bb5fef8231720d785539dca6d65e2049"
+    },
+    {
+      "table": "society_layout_backups",
+      "rowsBefore": 1,
+      "rowsAfter": 1,
+      "identical": true,
+      "beforeSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+      "afterOldColumnsSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e"
+    },
+    {
+      "table": "authored_publications",
+      "rowsBefore": 0,
+      "rowsAfter": 0,
+      "identical": true,
+      "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "afterOldColumnsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "provider_rejections",
+      "rowsBefore": 3,
+      "rowsAfter": 3,
+      "identical": true,
+      "beforeSha256": "35d1407711a02cfba9e54da0e475ac8166776fdfc319b92443a576bc9e9eb3c7",
+      "afterOldColumnsSha256": "35d1407711a02cfba9e54da0e475ac8166776fdfc319b92443a576bc9e9eb3c7"
+    }
+  ],
+  "checks": [
+    {
+      "code": "both_complete_bundles_verified",
+      "passed": true
+    },
+    {
+      "code": "source_is_sql9",
+      "passed": true
+    },
+    {
+      "code": "target_is_sql10",
+      "passed": true
+    },
+    {
+      "code": "exact_sql9_table_set",
+      "passed": true
+    },
+    {
+      "code": "only_expected_sql10_tables_added",
+      "passed": true
+    },
+    {
+      "code": "same_canonical_habitat",
+      "passed": true
+    },
+    {
+      "code": "capture_order",
+      "passed": true
+    },
+    {
+      "code": "world_publication_revision_unchanged",
+      "passed": true
+    },
+    {
+      "code": "checkpoint_world_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "code": "physical_codec_unchanged",
+      "passed": true
+    },
+    {
+      "code": "checkpoint_rules_metadata_only_9_to_10",
+      "passed": true
+    },
+    {
+      "code": "exact_new_checkpoint_envelope",
+      "passed": true
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "runtime_meta",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "world_state",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "watch_runs",
+      "rowsBefore": 30,
+      "rowsAfter": 30
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "cognition_jobs",
+      "rowsBefore": 110,
+      "rowsAfter": 110
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "provider_attempts",
+      "rowsBefore": 131,
+      "rowsAfter": 131
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "happenings",
+      "rowsBefore": 281,
+      "rowsAfter": 281
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "happening_people",
+      "rowsBefore": 476,
+      "rowsAfter": 476
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "economic_events",
+      "rowsBefore": 55,
+      "rowsAfter": 55
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "world_checkpoints",
+      "rowsBefore": 2,
+      "rowsAfter": 2
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "world_layout_backups",
+      "rowsBefore": 3,
+      "rowsAfter": 3
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "_sql_schema_migrations",
+      "rowsBefore": 9,
+      "rowsAfter": 9
+    },
+    {
+      "code": "old_reservations_have_no_model_column",
+      "passed": true
+    },
+    {
+      "code": "every_observed_reservation_has_only_legacy_null_model",
+      "passed": true
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "quota_reservations",
+      "rowsBefore": 135,
+      "rowsAfter": 135
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "provider_usage_daily",
+      "rowsBefore": 14,
+      "rowsAfter": 14
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "provider_breakers",
+      "rowsBefore": 2,
+      "rowsAfter": 2
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "alarm_runs",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "admin_commands",
+      "rowsBefore": 9,
+      "rowsAfter": 9
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "runtime_events",
+      "rowsBefore": 122,
+      "rowsAfter": 122
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "society_state",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "cognition_contexts",
+      "rowsBefore": 80,
+      "rowsAfter": 80
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "physical_runs",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "society_events",
+      "rowsBefore": 79,
+      "rowsAfter": 79
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "society_layout_backups",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "authored_publications",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    {
+      "code": "all_old_values_and_rowids_identical",
+      "passed": true,
+      "table": "provider_rejections",
+      "rowsBefore": 3,
+      "rowsAfter": 3
+    },
+    {
+      "code": "one_new_migration_marker",
+      "passed": true
+    },
+    {
+      "code": "migration_marker_exact_columns",
+      "passed": true
+    },
+    {
+      "code": "migration_marker_exact_identity",
+      "passed": true
+    },
+    {
+      "code": "migration_time_inside_capture_interval",
+      "passed": true
+    },
+    {
+      "code": "exact_immutable_legacy_boundary",
+      "passed": true
+    },
+    {
+      "code": "one_old_global_groq_breaker",
+      "passed": true
+    },
+    {
+      "code": "only_exact_old_20b_breaker_copy",
+      "passed": true
+    },
+    {
+      "code": "all_historical_groq_attempts_are_20b",
+      "passed": true
+    },
+    {
+      "code": "every_clock_control_and_runtime_column_unchanged",
+      "passed": true
+    },
+    {
+      "code": "physical_world_row_exact",
+      "passed": true
+    },
+    {
+      "code": "society_and_p6_records_row_exact",
+      "passed": true
+    },
+    {
+      "code": "charged_amounts_unchanged_at_identical_instant",
+      "passed": true,
+      "provider": "workers-ai"
+    },
+    {
+      "code": "charged_amounts_unchanged_at_identical_instant",
+      "passed": true,
+      "provider": "groq"
+    },
+    {
+      "code": "record_counts_unchanged",
+      "passed": true
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "package.json"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "pnpm-lock.yaml"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/AgencyNotebook.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/Dossier.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/HabitatMap.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/HabitatView.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/LiveStatus.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/Portrait.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/PublishedRecords.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/ResidentSprite.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/ResidentThoughts.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/RoomAtlas.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/RoomCanvas.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/RoomScene.css"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/RoomScene.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/SocietyLedger.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/Weave.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/components/desk/habitat/paint.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/config.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/agency.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/agency.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/archive-message.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/archive-message.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/axes.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/bitmap-codec.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/bitmap-codec.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/conversation-outcomes.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/conversation-outcomes.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/agency.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/economy.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/economy.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/knowledge.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/publication-slot.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/state.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/tick.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/tick.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/engine/verbs.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/explorer-art.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/generated/rooms.json"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/graph.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/graph.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/grid.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/grid.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/journal.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/live.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/live.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/navigation.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/navigation.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/observer-behavior.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/observer-camera.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/observer-matrix.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/observer-preferences.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/observer.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/passages.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/passages.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/portraits.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/portraits.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/public-message-translation.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/public-message-translation.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/public-records.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/public-records.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/random.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/residents.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/residents.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/room-art.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/room-motion.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/room-motion.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/room-names.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/rooms.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/rooms.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/section.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/section.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/snapshot.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/snapshot.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society-view.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/appraisal.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/appraisal.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/capabilities.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/capabilities.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/capability-message-grammar.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/choice.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/choice.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/contacts.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/continuity.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/core.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/decimal-money.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/economy.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/grounded-tools.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/index.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/instructions.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/money.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/omitted-deal-close.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/opening-proposals.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/ordered-choice.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/ordered-choice.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/overdue-context.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/physical.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/provider-schema.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/public-record-publication.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/public.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/public.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-archive.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-choice.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-choice.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-instructions.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-migration.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-schema.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-types.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-watch.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/record-watch.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/records-test-fixture.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/records.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/records.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/schema.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/state.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/turn.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/types.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/watch.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/society/worker-credit.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/source-scale.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/tiles.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/tiles.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/useHabitatLive.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/useObserverPresence.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/weave.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/lib/habitat/weave.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/main.tsx"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/styles/app.css"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/styles/habitat-base.css"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "src/styles/habitat-observer.css"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/package.json"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/auth.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/checkpoint.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/cognition-pacing.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/cognition-retention.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/conditional.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/contracts.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/domain.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/habitat-world.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/http.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/index.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/prompt-budget.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/deadline.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/free-model-router.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/groq.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/router.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/shared.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/tiktoken-wasm.d.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/providers/workers-ai.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/quota-migration.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/quota.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/recovery.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/rejection-log.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/society-protocol.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/society-scheduler.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/agency.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/archive-message.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/cognition-candidate-search.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/cognition-pacing.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/cognition-retention.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/contracts.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/domain.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/fixtures.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/fixtures/groq-p6-tokenizer.json"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/fixtures/groq-tokenizer.json"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/free-model-routing.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/free-model-scheduler.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/groq-tokenizer.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/groq.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/http.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/integration.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/legacy-fixture.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/legacy-route-deadline.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/observer-load.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/prompt-budget.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/provider-diagnostics.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/quota-models.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/quota.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/records-runtime.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/recovery.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/rejection-log.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/router.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/service-boundaries.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/society-protocol.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/society-record-protocol.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/society-retry-pacing.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/society-runtime.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/society-schema.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/test/workers-ai.test.ts"
+    },
+    {
+      "code": "frozen_release_file_hash_valid",
+      "passed": true,
+      "path": "workers/habitat-runtime/wrangler.jsonc"
+    },
+    {
+      "code": "verifier_matches_frozen_release_source",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/quota-migration.ts"
+    },
+    {
+      "code": "verifier_matches_frozen_release_source",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/quota.ts"
+    },
+    {
+      "code": "verifier_matches_frozen_release_source",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/checkpoint.ts"
+    },
+    {
+      "code": "verifier_matches_frozen_release_source",
+      "passed": true,
+      "path": "workers/habitat-runtime/src/recovery.ts"
+    },
+    {
+      "code": "expected_index_present_in_reviewed_migration_source",
+      "passed": true
+    },
+    {
+      "code": "no_network_attempts",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "canonical": {
+    "day": 107,
+    "watch": 4,
+    "residents": 25,
+    "relationships": 600,
+    "oldRows": 1546,
+    "legacyReservations": 135,
+    "historicalGroqReservations": 35,
+    "legacyReservationCutoff": 135,
+    "recordCounts": {
+      "drafts": 3,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    },
+    "physicalWorldSha256": "732cc24f553d1077e4bab5da578cf48a02663d3aae608f262db2d4e85f7caca2",
+    "societyStateSha256": "dd27faafa8e37c054b6f5e471dce57c68a3c53605d63d00a7e0e0fc6935ae76d",
+    "controlRevision": 3,
+    "nextPhysicalWatchAtMs": 1788916084141,
+    "nextCognitionAtMs": 1788898706967
+  },
+  "quota": {
+    "comparisonAtMs": 1788898248974,
+    "charged": {
+      "workers-ai": {
+        "requests": 71,
+        "input_tokens": 137788,
+        "output_tokens": 22873,
+        "neurons": 5806
+      },
+      "groq": {
+        "requests": 17,
+        "input_tokens": 78289,
+        "output_tokens": 4262,
+        "neurons": 0
+      }
+    },
+    "groq120Reservations": 0
+  },
+  "index": {
+    "expected": "quota_provider_model_activity_idx",
+    "declaredInHashedMigration": true,
+    "actualProductionIndexInventoryAvailableInRecovery": false,
+    "verification": "Recoveryv1 exports canonical rows, not sqlite_master. Exact production index existence is not independently observable from these bundles. The additive index was verified in the separate real-helper offline rehearsal and isolated Worker tests."
+  },
+  "sources": {
+    "files": [
+      {
+        "path": "workers/habitat-runtime/src/quota-migration.ts",
+        "sha256": "b20850be0b61490e799193a9181a13446d1a3ec94e5b91db270e79d543a76606"
+      },
+      {
+        "path": "workers/habitat-runtime/src/quota.ts",
+        "sha256": "d53138b030a005c53bbb7f43b7c97b97e49ac677ab5f920a24c875e5dfac0063"
+      },
+      {
+        "path": "workers/habitat-runtime/src/checkpoint.ts",
+        "sha256": "f406a91f5dfc846e6bcae2862aef3b40bc07c62fb92018f58b32ca651d939a92"
+      },
+      {
+        "path": "workers/habitat-runtime/src/recovery.ts",
+        "sha256": "578d8f84226013ff18d48192633be0c14fcd96af2852c90eb434ad289cdcda04"
+      }
+    ],
+    "frozenReleaseBundleSha256": "16e43044ba5201dbf47618b6881a4c143e8a071ee4c59795149b563d10917556",
+    "frozenReleaseFileCount": 194,
+    "analyzerManifestSha256": "88de0cf09eda9360ff0557e486d45364d4c9e198f8bcce666d00804f1e2117f8",
+    "scriptSha256": "5e19a0ee0feffbb0512954b8ff551824ccfc1788175bbd5b5ffa702f0be6757a"
+  },
+  "actions": {
+    "networkAttempts": 0,
+    "providerCalls": 0,
+    "worldAdvances": 0,
+    "productionWrites": 0
+  },
+  "privacy": {
+    "privateBackupProseNotCopiedIntoReceipt": true,
+    "detailedEvidenceOutsideRepository": true
+  }
+}

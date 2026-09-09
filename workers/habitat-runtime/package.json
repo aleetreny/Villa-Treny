@@ -13,6 +13,7 @@
     "check": "pnpm types && pnpm typecheck && pnpm test"
   },
   "dependencies": {
+    "tiktoken": "1.0.22",
     "zod": "4.4.3"
   },
   "devDependencies": {

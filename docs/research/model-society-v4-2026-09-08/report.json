@@ -1,0 +1,1790 @@
+{
+  "scope": "Isolated GENESIS replay using the real scheduler, society core and physical engine. No production state.",
+  "limits": "One physical watch. No SQL, production alarm, sustained emergence or semantic-quality verification. Virtual turn timestamps are fixed.",
+  "humanReview": {
+    "status": "pending",
+    "questions": [
+      "Does each voice follow its own situation without inventing names, evidence, resources or another voice?",
+      "Do messages answer the actual received turn? Inspect refusals and counteroffers as well as acceptances.",
+      "Do projects persist or change for a concrete reason after the physical observation?",
+      "Were any offers made, independently accepted and physically fulfilled? Zero is a result, not success.",
+      "Check claimed goal achievement against recorded steps; completed steps do not establish the broader goal."
+    ]
+  },
+  "binding": "3123979165a35160470f66f14864138c9c42aae4aaa493be00d2133389b11fc2",
+  "halted": null,
+  "attemptCount": 37,
+  "newCalls": 21,
+  "accountedNeurons": 250,
+  "maxNeurons": 1100,
+  "unknownUsageReservations": 0,
+  "residents": [
+    {
+      "id": "A",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "B",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "C",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "D",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "E",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "F",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "G",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "H",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "I",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "J",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "K",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "L",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "M",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "N",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "O",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "P",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "Q",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "R",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "S",
+      "initialOpportunity": true,
+      "calls": 2,
+      "acceptedDecisions": 2,
+      "skipped": []
+    },
+    {
+      "id": "T",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "U",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "V",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "W",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "X",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "Y",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    }
+  ],
+  "physicalWatchCount": 1,
+  "observations": [
+    {
+      "actor": "H",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "H"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "C",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "C",
+        "verb": "note"
+      },
+      "outcome": {
+        "ok": false,
+        "refused": "not their job, though nobody has said so"
+      },
+      "actualRoom": "infirmary",
+      "stepId": "step:10"
+    },
+    {
+      "actor": "X",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "X"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "X"
+          ],
+          "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "S",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "S"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "R",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "R"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "I",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "I"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "administration"
+    },
+    {
+      "actor": "D",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "D"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "dock"
+    },
+    {
+      "actor": "W",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "W"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "F",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "F"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "F"
+          ],
+          "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "U",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "inspect",
+        "actor": "U"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "U"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary"
+    },
+    {
+      "actor": "T",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "T"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "G",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "G"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "longwalk"
+    },
+    {
+      "actor": "N",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "N",
+        "verb": "inspect"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "N"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary",
+      "stepId": "step:52"
+    },
+    {
+      "actor": "B",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "B",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "A",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "note",
+        "actor": "A"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "records",
+          "who": [
+            "A"
+          ],
+          "text": "The current store totals and working-room register were written down.",
+          "kind": "note"
+        }
+      },
+      "actualRoom": "records"
+    },
+    {
+      "actor": "V",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "grow",
+        "actor": "V"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "garden",
+          "who": [
+            "V"
+          ],
+          "text": "Vero harvested 16 produce; 2 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "garden"
+    },
+    {
+      "actor": "O",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "O",
+        "verb": "clean"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "well",
+          "who": [
+            "O"
+          ],
+          "text": "Osvald filtered 24 water at the well.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "well",
+      "stepId": "step:59"
+    },
+    {
+      "actor": "Q",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "Q",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "J",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "J"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "Y",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "Y"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "Y"
+          ],
+          "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "L",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "L",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "P",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "P"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "K",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "K"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "dispatch"
+    },
+    {
+      "actor": "M",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "M"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "E",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "E",
+        "verb": "inspect"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "workshops",
+          "who": [
+            "E"
+          ],
+          "text": "The Workshops was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "workshops",
+      "stepId": "step:21"
+    }
+  ],
+  "acceptedDecisionCount": 29,
+  "failures": [
+    {
+      "id": "isolated-society-runtime-v4:mind:G:1:6:g:0",
+      "actor": "G",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:J:1:9:g:0",
+      "actor": "J",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:T:1:19:g:0",
+      "actor": "T",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:U:1:20:g:0",
+      "actor": "U",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:X:1:23:g:0",
+      "actor": "X",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:B:4:26:g:0",
+      "actor": "B",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:K:3:28:g:0",
+      "actor": "K",
+      "state": "completed",
+      "code": "ambiguous_offer_response"
+    },
+    {
+      "id": "isolated-society-runtime-v4:mind:O:4:29:g:0",
+      "actor": "O",
+      "state": "completed",
+      "code": "invalid_offer_parties"
+    }
+  ],
+  "final": {
+    "day": 100,
+    "watch": 2,
+    "hash": "705ba753e9559ead9b6b08a39d5f402d4ce5372b4cb1c4b997bc27f268ca35a9",
+    "publicSociety": {
+      "version": 1,
+      "revision": 67,
+      "startedAtMs": 1788825600000,
+      "residents": [
+        {
+          "id": "A",
+          "lastAttemptAtMs": 1788825635000,
+          "lastSuccessAtMs": 1788825635001,
+          "project": null
+        },
+        {
+          "id": "B",
+          "lastAttemptAtMs": 1788825627000,
+          "lastSuccessAtMs": 1788825602001,
+          "project": null
+        },
+        {
+          "id": "C",
+          "lastAttemptAtMs": 1788825632000,
+          "lastSuccessAtMs": 1788825632001,
+          "project": {
+            "id": "project:9",
+            "visibility": "public",
+            "goal": "Ensure documentation of wake-up criteria",
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "D",
+          "lastAttemptAtMs": 1788825637000,
+          "lastSuccessAtMs": 1788825637001,
+          "project": null
+        },
+        {
+          "id": "E",
+          "lastAttemptAtMs": 1788825626000,
+          "lastSuccessAtMs": 1788825626001,
+          "project": {
+            "id": "project:20",
+            "visibility": "public",
+            "goal": "Initiate a discussion to fulfill the desire to be argued with.",
+            "status": "active",
+            "completedSteps": 1,
+            "totalSteps": 3
+          }
+        },
+        {
+          "id": "F",
+          "lastAttemptAtMs": 1788825633000,
+          "lastSuccessAtMs": 1788825633001,
+          "project": null
+        },
+        {
+          "id": "G",
+          "lastAttemptAtMs": 1788825607000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "H",
+          "lastAttemptAtMs": 1788825608000,
+          "lastSuccessAtMs": 1788825608001,
+          "project": null
+        },
+        {
+          "id": "I",
+          "lastAttemptAtMs": 1788825609000,
+          "lastSuccessAtMs": 1788825609001,
+          "project": null
+        },
+        {
+          "id": "J",
+          "lastAttemptAtMs": 1788825610000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "K",
+          "lastAttemptAtMs": 1788825629000,
+          "lastSuccessAtMs": 1788825611001,
+          "project": null
+        },
+        {
+          "id": "L",
+          "lastAttemptAtMs": 1788825628000,
+          "lastSuccessAtMs": 1788825628001,
+          "project": null
+        },
+        {
+          "id": "M",
+          "lastAttemptAtMs": 1788825634000,
+          "lastSuccessAtMs": 1788825634001,
+          "project": null
+        },
+        {
+          "id": "N",
+          "lastAttemptAtMs": 1788825631000,
+          "lastSuccessAtMs": 1788825631001,
+          "project": {
+            "id": "project:51",
+            "visibility": "public",
+            "goal": "Check on the well",
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "O",
+          "lastAttemptAtMs": 1788825630000,
+          "lastSuccessAtMs": 1788825615001,
+          "project": {
+            "id": "project:58",
+            "visibility": "public",
+            "goal": "clean the well",
+            "status": "steps_finished",
+            "completedSteps": 1,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "P",
+          "lastAttemptAtMs": 1788825616000,
+          "lastSuccessAtMs": 1788825616001,
+          "project": null
+        },
+        {
+          "id": "Q",
+          "lastAttemptAtMs": 1788825617000,
+          "lastSuccessAtMs": 1788825617001,
+          "project": null
+        },
+        {
+          "id": "R",
+          "lastAttemptAtMs": 1788825618000,
+          "lastSuccessAtMs": 1788825618001,
+          "project": {
+            "id": "project:72",
+            "visibility": "public",
+            "goal": "Verify inventory accuracy",
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "S",
+          "lastAttemptAtMs": 1788825636000,
+          "lastSuccessAtMs": 1788825636001,
+          "project": null
+        },
+        {
+          "id": "T",
+          "lastAttemptAtMs": 1788825620000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "U",
+          "lastAttemptAtMs": 1788825621000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "V",
+          "lastAttemptAtMs": 1788825622000,
+          "lastSuccessAtMs": 1788825622001,
+          "project": null
+        },
+        {
+          "id": "W",
+          "lastAttemptAtMs": 1788825623000,
+          "lastSuccessAtMs": 1788825623001,
+          "project": null
+        },
+        {
+          "id": "X",
+          "lastAttemptAtMs": 1788825624000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "Y",
+          "lastAttemptAtMs": 1788825625000,
+          "lastSuccessAtMs": 1788825625001,
+          "project": null
+        }
+      ],
+      "conversations": [
+        {
+          "id": "conversation:0",
+          "participants": [
+            "A",
+            "U"
+          ],
+          "status": "open",
+          "nextSpeaker": "U",
+          "expiresAtMs": 1788912001001,
+          "turns": [
+            {
+              "id": "turn:1",
+              "speaker": "A",
+              "text": "I have never written anything myself.",
+              "atMs": 1788825601001
+            }
+          ]
+        },
+        {
+          "id": "conversation:5",
+          "participants": [
+            "B",
+            "H"
+          ],
+          "status": "open",
+          "nextSpeaker": "B",
+          "expiresAtMs": 1788912002001,
+          "turns": [
+            {
+              "id": "turn:6",
+              "speaker": "B",
+              "text": "Let me check that for you.",
+              "atMs": 1788825602001
+            },
+            {
+              "id": "turn:32",
+              "speaker": "H",
+              "text": "The work roster has not been reviewed today. It was decided that we should address this.",
+              "atMs": 1788825608001
+            }
+          ]
+        },
+        {
+          "id": "conversation:12",
+          "participants": [
+            "C",
+            "Y"
+          ],
+          "status": "open",
+          "nextSpeaker": "Y",
+          "expiresAtMs": 1788912003001,
+          "turns": [
+            {
+              "id": "turn:13",
+              "speaker": "C",
+              "text": "The criteria for waking somebody must be documented before use. No exceptions.",
+              "atMs": 1788825603001
+            },
+            {
+              "id": "turn:86",
+              "speaker": "Y",
+              "text": "I'm not sure what the criteria are, but I think it's important to document everything. Maybe we could start by writing down what we know?",
+              "atMs": 1788825625001
+            },
+            {
+              "id": "turn:99",
+              "speaker": "C",
+              "text": "The criteria for waking somebody must be documented before use. No exceptions.",
+              "atMs": 1788825632001
+            }
+          ]
+        },
+        {
+          "id": "conversation:16",
+          "participants": [
+            "D",
+            "G"
+          ],
+          "status": "open",
+          "nextSpeaker": "G",
+          "expiresAtMs": 1788912004001,
+          "turns": [
+            {
+              "id": "turn:17",
+              "speaker": "D",
+              "text": "I need to inspect the hull integrity. Gita Raman is on duty. I should check with them.",
+              "atMs": 1788825604001
+            }
+          ]
+        },
+        {
+          "id": "conversation:25",
+          "participants": [
+            "E",
+            "F"
+          ],
+          "status": "open",
+          "nextSpeaker": "E",
+          "expiresAtMs": 1788912005001,
+          "turns": [
+            {
+              "id": "turn:26",
+              "speaker": "E",
+              "text": "I need to be argued with. Let's discuss something.",
+              "atMs": 1788825605001
+            },
+            {
+              "id": "turn:29",
+              "speaker": "F",
+              "text": "I'm not sure I follow. What would you like to discuss?",
+              "atMs": 1788825606001
+            },
+            {
+              "id": "turn:89",
+              "speaker": "E",
+              "text": "I'd like to discuss the matter of the ticket sale. It seems there's a discrepancy in the records.",
+              "atMs": 1788825626001
+            },
+            {
+              "id": "turn:102",
+              "speaker": "F",
+              "text": "I'm not sure I follow. What would you like to discuss?",
+              "atMs": 1788825633001
+            }
+          ]
+        },
+        {
+          "id": "conversation:35",
+          "participants": [
+            "I",
+            "J"
+          ],
+          "status": "open",
+          "nextSpeaker": "J",
+          "expiresAtMs": 1788912009001,
+          "turns": [
+            {
+              "id": "turn:36",
+              "speaker": "I",
+              "text": "I need to map the area beyond the face. Let's start with an inspection.",
+              "atMs": 1788825609001
+            }
+          ]
+        },
+        {
+          "id": "conversation:39",
+          "participants": [
+            "K",
+            "P"
+          ],
+          "status": "open",
+          "nextSpeaker": "K",
+          "expiresAtMs": 1788912011001,
+          "turns": [
+            {
+              "id": "turn:40",
+              "speaker": "K",
+              "text": "Hello, I'm Kes. I'm a sound engineer, but I work in communications now. I notice when someone's breathing changes, and I'm gentle and a bit absent-minded. I want someone to ask me to hear something. I'm a bit afraid of silence. How are you?",
+              "atMs": 1788825611001
+            },
+            {
+              "id": "turn:65",
+              "speaker": "P",
+              "text": "Buenos días, Kes. I've made a loaf of bread. Would you like to taste it?",
+              "atMs": 1788825616001
+            }
+          ]
+        },
+        {
+          "id": "conversation:44",
+          "participants": [
+            "L",
+            "M"
+          ],
+          "status": "open",
+          "nextSpeaker": "L",
+          "expiresAtMs": 1788912012001,
+          "turns": [
+            {
+              "id": "turn:45",
+              "speaker": "L",
+              "text": "Hi there! I'm Lior, and I've been meaning to talk to you about something important. How are you doing?",
+              "atMs": 1788825612001
+            },
+            {
+              "id": "turn:48",
+              "speaker": "M",
+              "text": "Lior, I'm doing well, thank you. What's on your mind?",
+              "atMs": 1788825613001
+            },
+            {
+              "id": "turn:92",
+              "speaker": "L",
+              "text": "Hi there! I'm Lior, and I've been meaning to talk to you about something important. How are you doing?",
+              "atMs": 1788825628001
+            },
+            {
+              "id": "turn:134",
+              "speaker": "M",
+              "text": "Lior, I'm doing well, thank you. What's on your mind?",
+              "atMs": 1788825634001
+            }
+          ]
+        },
+        {
+          "id": "conversation:54",
+          "participants": [
+            "N",
+            "S"
+          ],
+          "status": "open",
+          "nextSpeaker": "N",
+          "expiresAtMs": 1788912014001,
+          "turns": [
+            {
+              "id": "turn:55",
+              "speaker": "N",
+              "text": "How did you sleep, Noor?",
+              "atMs": 1788825614001
+            },
+            {
+              "id": "turn:78",
+              "speaker": "S",
+              "text": "The sleep was fine. And you?",
+              "atMs": 1788825619001
+            },
+            {
+              "id": "turn:96",
+              "speaker": "N",
+              "text": "How did you sleep, Noor?",
+              "atMs": 1788825631001
+            },
+            {
+              "id": "turn:139",
+              "speaker": "S",
+              "text": "The sleep was fine. And you?",
+              "atMs": 1788825636001
+            }
+          ]
+        },
+        {
+          "id": "conversation:61",
+          "participants": [
+            "O",
+            "Q"
+          ],
+          "status": "open",
+          "nextSpeaker": "O",
+          "expiresAtMs": 1788912015001,
+          "turns": [
+            {
+              "id": "turn:62",
+              "speaker": "O",
+              "text": "I'll clean the well.",
+              "atMs": 1788825615001
+            },
+            {
+              "id": "turn:69",
+              "speaker": "Q",
+              "text": "Nen, I've been thinking about the workshops. There's a project I've been tinkering with, and I'd like to show it to you. What do you say to a visit?",
+              "atMs": 1788825617001
+            }
+          ]
+        },
+        {
+          "id": "conversation:74",
+          "participants": [
+            "R",
+            "T"
+          ],
+          "status": "open",
+          "nextSpeaker": "T",
+          "expiresAtMs": 1788912018001,
+          "turns": [
+            {
+              "id": "turn:75",
+              "speaker": "R",
+              "text": "I need to check the inventory. There's a discrepancy in the materials count.",
+              "atMs": 1788825618001
+            }
+          ]
+        },
+        {
+          "id": "conversation:81",
+          "participants": [
+            "V",
+            "X"
+          ],
+          "status": "open",
+          "nextSpeaker": "X",
+          "expiresAtMs": 1788912022001,
+          "turns": [
+            {
+              "id": "turn:82",
+              "speaker": "V",
+              "text": "Hey, Tomás. You got a minute? I need to talk about the garden. It's not looking so good, and I think I know why.",
+              "atMs": 1788825622001
+            }
+          ]
+        }
+      ],
+      "offers": [
+        {
+          "id": "offer:68",
+          "conversationId": "conversation:39",
+          "proposer": "P",
+          "counterpart": "K",
+          "terms": {
+            "kind": "work",
+            "worker": "K",
+            "payer": "P",
+            "cells": 2,
+            "verb": "cook",
+            "room": "kitchen",
+            "units": 2,
+            "dueWatch": 401
+          },
+          "status": "expired",
+          "expiresAtWatch": 401,
+          "replaces": null
+        },
+        {
+          "id": "offer:95",
+          "conversationId": "conversation:44",
+          "proposer": "L",
+          "counterpart": "M",
+          "terms": {
+            "kind": "work",
+            "worker": "M",
+            "payer": "L",
+            "cells": 0.5,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 402
+          },
+          "status": "replaced",
+          "expiresAtWatch": 402,
+          "replaces": null
+        },
+        {
+          "id": "offer:137",
+          "conversationId": "conversation:44",
+          "proposer": "M",
+          "counterpart": "L",
+          "terms": {
+            "kind": "work",
+            "worker": "M",
+            "payer": "L",
+            "cells": 0.5,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 402
+          },
+          "status": "open",
+          "expiresAtWatch": 402,
+          "replaces": null
+        }
+      ],
+      "agreements": [],
+      "coverage": {
+        "total": 25,
+        "neverThought": 5,
+        "waitingForReply": [
+          "U",
+          "B",
+          "Y",
+          "G",
+          "E",
+          "J",
+          "K",
+          "L",
+          "N",
+          "O",
+          "T",
+          "X"
+        ]
+      }
+    },
+    "accounts": {
+      "treasury": 0,
+      "maintenance": 90,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 11,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 8,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 1,
+      "credits:B": 0,
+      "credits:C": 0,
+      "credits:D": 1,
+      "credits:E": 1,
+      "credits:F": 2,
+      "credits:G": 1,
+      "credits:H": 1,
+      "credits:I": 1,
+      "credits:J": 2,
+      "credits:K": 1,
+      "credits:L": 0,
+      "credits:M": 1,
+      "credits:N": 1,
+      "credits:O": 1,
+      "credits:P": 1,
+      "credits:Q": 0,
+      "credits:R": 1,
+      "credits:S": 1,
+      "credits:T": 1,
+      "credits:U": 1,
+      "credits:V": 2,
+      "credits:W": 2,
+      "credits:X": 2,
+      "credits:Y": 2,
+      "stock:produce": 76,
+      "stock:meals": 100,
+      "stock:water": 269,
+      "stock:materials": 28,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 0,
+      "ledger:leaked": 0
+    },
+    "balances": {
+      "A": 15,
+      "B": 8,
+      "C": 8,
+      "D": 15,
+      "E": 10,
+      "F": 13,
+      "G": 17,
+      "H": 8,
+      "I": 11,
+      "J": 15,
+      "K": 12,
+      "L": 8,
+      "M": 17,
+      "N": 17,
+      "O": 15,
+      "P": 16,
+      "Q": 10,
+      "R": 17,
+      "S": 17,
+      "T": 10,
+      "U": 13,
+      "V": 8,
+      "W": 13,
+      "X": 12,
+      "Y": 10
+    },
+    "stock": {
+      "produce": 76,
+      "meals": 100,
+      "water": 269,
+      "materials": 28
+    },
+    "economicEvents": [
+      {
+        "sequence": 0,
+        "day": 100,
+        "watch": 1,
+        "actor": "H",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:H",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 1,
+        "day": 100,
+        "watch": 1,
+        "actor": "X",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:X",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ]
+      },
+      {
+        "sequence": 2,
+        "day": 100,
+        "watch": 1,
+        "actor": "S",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:S",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "S",
+          "H"
+        ]
+      },
+      {
+        "sequence": 3,
+        "day": 100,
+        "watch": 1,
+        "actor": "R",
+        "room": "hold",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:R",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 4,
+        "day": 100,
+        "watch": 1,
+        "actor": "I",
+        "room": "administration",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:I",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 5,
+        "day": 100,
+        "watch": 1,
+        "actor": "D",
+        "room": "dock",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:D",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 6,
+        "day": 100,
+        "watch": 1,
+        "actor": "W",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:W",
+            "delta": 2
+          }
+        ]
+      },
+      {
+        "sequence": 7,
+        "day": 100,
+        "watch": 1,
+        "actor": "F",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:F",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ],
+        "companions": [
+          "F",
+          "X"
+        ]
+      },
+      {
+        "sequence": 8,
+        "day": 100,
+        "watch": 1,
+        "actor": "U",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:U",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 9,
+        "day": 100,
+        "watch": 1,
+        "actor": "T",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:T",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 10,
+        "day": 100,
+        "watch": 1,
+        "actor": "G",
+        "room": "longwalk",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:G",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 11,
+        "day": 100,
+        "watch": 1,
+        "actor": "N",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:N",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "N",
+          "U"
+        ]
+      },
+      {
+        "sequence": 12,
+        "day": 100,
+        "watch": 1,
+        "actor": "A",
+        "room": "records",
+        "action": "note",
+        "entries": [
+          {
+            "account": "credits:A",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 13,
+        "day": 100,
+        "watch": 1,
+        "actor": "V",
+        "room": "garden",
+        "action": "grow",
+        "entries": [
+          {
+            "account": "credits:V",
+            "delta": 2
+          },
+          {
+            "account": "stock:produce",
+            "delta": 16
+          },
+          {
+            "account": "stock:water",
+            "delta": -2
+          }
+        ]
+      },
+      {
+        "sequence": 14,
+        "day": 100,
+        "watch": 1,
+        "actor": "O",
+        "room": "well",
+        "action": "clean",
+        "entries": [
+          {
+            "account": "credits:O",
+            "delta": 1
+          },
+          {
+            "account": "stock:water",
+            "delta": 24
+          }
+        ]
+      },
+      {
+        "sequence": 15,
+        "day": 100,
+        "watch": 1,
+        "actor": "J",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:J",
+            "delta": 2
+          }
+        ],
+        "companions": [
+          "J",
+          "W"
+        ]
+      },
+      {
+        "sequence": 16,
+        "day": 100,
+        "watch": 1,
+        "actor": "Y",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:Y",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ]
+      },
+      {
+        "sequence": 17,
+        "day": 100,
+        "watch": 1,
+        "actor": "P",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:P",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "P",
+          "T"
+        ]
+      },
+      {
+        "sequence": 18,
+        "day": 100,
+        "watch": 1,
+        "actor": "K",
+        "room": "dispatch",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:K",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 19,
+        "day": 100,
+        "watch": 1,
+        "actor": "M",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:M",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 20,
+        "day": 100,
+        "watch": 1,
+        "actor": "E",
+        "room": "workshops",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:E",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "record": [
+      {
+        "day": 100,
+        "watch": 1,
+        "minute": 1,
+        "room": "infirmary",
+        "who": [
+          "C"
+        ],
+        "kind": "note",
+        "text": "Cato tried note: not their job, though nobody has said so."
+      },
+      {
+        "room": "face",
+        "who": [
+          "X"
+        ],
+        "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 35
+      },
+      {
+        "room": "face",
+        "who": [
+          "F"
+        ],
+        "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 116
+      },
+      {
+        "room": "infirmary",
+        "who": [
+          "U"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 130
+      },
+      {
+        "room": "infirmary",
+        "who": [
+          "N"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 171
+      },
+      {
+        "room": "records",
+        "who": [
+          "A"
+        ],
+        "text": "The current store totals and working-room register were written down.",
+        "kind": "note",
+        "day": 100,
+        "watch": 1,
+        "minute": 198
+      },
+      {
+        "room": "garden",
+        "who": [
+          "V"
+        ],
+        "text": "Vero harvested 16 produce; 2 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 212
+      },
+      {
+        "room": "well",
+        "who": [
+          "O"
+        ],
+        "text": "Osvald filtered 24 water at the well.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 225
+      },
+      {
+        "room": "face",
+        "who": [
+          "Y"
+        ],
+        "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 266
+      },
+      {
+        "room": "workshops",
+        "who": [
+          "E"
+        ],
+        "text": "The Workshops was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 334
+      }
+    ]
+  }
+}

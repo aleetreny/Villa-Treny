@@ -1,28 +1,37 @@
+import { archivedSpeech, type ArchivedSpeech } from '../../../src/lib/habitat/archive-message';
+import { createHash } from 'node:crypto';
 import { recoveryCore, recoveryPage, type RecoveryPageRequest } from './recovery';
 import { makeCheckpoint, RULES_VERSION, sealRecoveryExport } from './checkpoint';
-import type { Outcome } from '../../../src/lib/habitat/engine/verbs';
-import type { ResidentId } from '../../../src/lib/habitat/residents';
+import { RESIDENT_BY_ID, type ResidentId } from '../../../src/lib/habitat/residents';
 import { worldSociety } from '../../../src/lib/habitat/society';
+import {
+  createSocietyState, parseSocietyState, expireSocietyState, markSocietyAttempt,
+  societyPublicView,
+  type SocietyState, type PreparedTurn,
+} from '../../../src/lib/habitat/society/index';
+import { advanceSocietyWatch } from '../../../src/lib/habitat/society/record-watch';
+import { COGNITION_CADENCE_MS, COGNITION_REVIEW_MS, hasSocietyRequestWindow, nextSocietyActor, nextSocietyReconsiderationAt, prepareSocietyJob } from './society-scheduler';
+import { applyIssuedSocietyProtocol } from './society-issued-protocol';
+import { applySocietyProtocol } from './society-protocol';
+import { publicRecordPublication } from '../../../src/lib/habitat/society/public';
+import { parseArchivedPublication } from '../../../src/lib/habitat/society/record-archive';
 import { DurableObject } from 'cloudflare:workers';
 import {
   adminCommandSchema,
   archiveFilterSchema,
+  recordsFilterSchema,
   cognitionJobSchema,
   MAX_RESIDENTS,
   parseRuntimeConfig,
   SQL_SCHEMA_VERSION,
   type ArchiveFilter,
-  type CognitionJob,
+  type RecordsFilter,
   type ProviderAttemptResult,
   type RuntimeConfig,
 } from './contracts';
 import {
-  advanceWorldWatch,
   createGenesisWorld,
-  decodeCognition,
   deserializeWorldState,
-  prepareCognition,
-  selectCognitionSubject,
   serializeWorldState,
   WORLD_CODEC_VERSION,
   worldSnapshot,
@@ -30,7 +39,12 @@ import {
   projectHappening,
 } from './domain';
 import { SqlQuotaLedger } from './quota';
-import { routeCognition } from './providers/router';
+import { migrateQuotaModels } from './quota-migration';
+import { cognitionReadyAt, routeCognition } from './providers/router';
+import { GROQ_120B_MODEL } from './providers/groq';
+import { compactTerminalCognition } from './cognition-retention';
+import { saveProviderRejection } from './rejection-log';
+import { savedStructuralRetryFeedback } from './retry-feedback';
 import type { Happening } from '../../../src/lib/habitat/engine/state';
 
 type RuntimeRow = {
@@ -45,9 +59,11 @@ type RuntimeRow = {
   next_alarm_at_ms: number | null;
   next_alarm_reason: string | null;
   next_watch_at_ms: number | null;
+  next_cognition_at_ms: number | null;
   last_committed_run_id: string | null;
   last_committed_at_ms: number | null;
   last_error_code: string | null;
+  last_cognition_error_code: string | null;
 };
 
 type JobRow = {
@@ -58,6 +74,8 @@ type JobRow = {
   lease_expires_at_ms: number | null;
   provider: string | null;
   output_json: string | null;
+  due_at_ms: number;
+  error_code: string | null;
 };
 
 type WorldRow = {
@@ -122,7 +140,7 @@ export type SnapshotResult = {
 export type ArchiveResult = {
   day: number;
   filters: Omit<ArchiveFilter, 'day'>;
-  entries: Array<Happening & { sourceRoom?: string }>;
+  entries: Array<Happening & { sourceRoom?: string; speech?: ArchivedSpeech }>;
 };
 
 export class HabitatWorld extends DurableObject<Env> {
@@ -143,10 +161,28 @@ export class HabitatWorld extends DurableObject<Env> {
     });
   }
 
+  // Observer-only cache. Scheduling, quota reservations and administrative
+  // decisions always read their authoritative rows directly.
+  private statusCache: { key: string; expiresAtMs: number; value: Promise<Record<string, unknown>> } | undefined;
+
   async getStatus(): Promise<Record<string, unknown>> {
-    const runtime = this.runtime();
+    const runtime = this.runtime(), now = Date.now(), key = JSON.stringify(runtime);
+    if (this.statusCache?.key === key && this.statusCache.expiresAtMs > now) return this.statusCache.value;
+    const value = this.buildStatus(runtime);
+    const entry = { key, expiresAtMs: now + 10_000, value };
+    this.statusCache = entry;
+    try { return await value; }
+    catch (error) {
+      // An older failed request must not evict a newer revision's cache.
+      if (this.statusCache === entry) this.statusCache = undefined;
+      throw error;
+    }
+  }
+
+  private async buildStatus(runtime: RuntimeRow): Promise<Record<string, unknown>> {
     const queueRows = this.sql.exec<{ status: string; count: number }>(
-      'SELECT status, COUNT(*) AS count FROM cognition_jobs GROUP BY status ORDER BY status',
+      `SELECT status, COUNT(*) AS count FROM cognition_jobs
+         WHERE status IN ('pending','deferred','running','resolved') GROUP BY status ORDER BY status`,
     ).toArray();
     const oldest = firstRow(this.sql.exec<{ oldest_due_at_ms: number | null }>(
       `SELECT MIN(due_at_ms) AS oldest_due_at_ms
@@ -171,6 +207,7 @@ export class HabitatWorld extends DurableObject<Env> {
 
     return {
       schemaVersion: SQL_SCHEMA_VERSION,
+      storage: { bytes: this.sql.databaseSize, perObjectFreeLimitBytes: 1_000_000_000 },
       worldCodecVersion: WORLD_CODEC_VERSION,
       habitatId: this.config.HABITAT_ID,
       residentCapacity: runtime.resident_capacity,
@@ -186,6 +223,7 @@ export class HabitatWorld extends DurableObject<Env> {
         committedAtMs: runtime.last_committed_at_ms,
       },
       nextWatchAtMs: runtime.next_watch_at_ms,
+      cognition: this.cognitionHealth(Date.now()),
       nextWake: runtime.next_alarm_at_ms === null ? null : {
         generation: runtime.alarm_generation,
         dueAtMs: runtime.next_alarm_at_ms,
@@ -193,6 +231,7 @@ export class HabitatWorld extends DurableObject<Env> {
         installedAtMs: alarm,
       },
       queue: {
+        scope: 'active',
         counts: Object.fromEntries(queueRows.map((row) => [row.status, row.count])),
         oldestDueAtMs: oldest?.oldest_due_at_ms ?? null,
       },
@@ -201,6 +240,7 @@ export class HabitatWorld extends DurableObject<Env> {
         configured: {
           workersAI: true,
           groq: groqConfigured,
+          groq120B: groqConfigured && this.config.GROQ_120B_ENABLED,
         },
         recentAttempts: recentAttempts.map((attempt) => ({
           provider: attempt.provider,
@@ -216,6 +256,10 @@ export class HabitatWorld extends DurableObject<Env> {
       },
       lastErrorCode: runtime.last_error_code,
     };
+  }
+
+  getWorldRevision(): number {
+    return this.sql.exec<{ world_revision: number }>('SELECT world_revision FROM runtime_meta WHERE singleton=1').one().world_revision;
   }
 
   getSnapshot(): SnapshotResult {
@@ -241,6 +285,7 @@ export class HabitatWorld extends DurableObject<Env> {
       snapshot: worldSnapshot(state),
       relationships: worldRelationships(state),
       society: worldSociety(state),
+      agency: societyPublicView(this.society()),
     };
   }
 
@@ -270,7 +315,7 @@ export class HabitatWorld extends DurableObject<Env> {
       },
       // Filter after projecting aliases so old and new names form one timeline.
       // Original room_id and every original byte stay in the append-only table.
-      entries: rows.map(happeningFromRow).map(projectHappening)
+      entries: rows.map(row => happeningFromRow(row, this.runtimeEnv.HABITAT_ID)).map(projectHappening)
         .filter((entry) => room === null || entry.room === room || entry.sourceRoom === room),
     };
   }
@@ -334,9 +379,10 @@ export class HabitatWorld extends DurableObject<Env> {
       if (applied) {
         this.sql.exec(
           `UPDATE runtime_meta SET mode = 'running', pause_reason = NULL,
-             control_revision = ?, next_watch_at_ms = ? WHERE singleton = 1`,
+             control_revision = ?, next_watch_at_ms = ?, next_cognition_at_ms = ? WHERE singleton = 1`,
           revision,
           firstWatchAtMs,
+          Date.now() + 60_000,
         );
         this.appendEvent('runtime.resumed', command.issuedAtMs, {
           commandId: command.commandId,
@@ -346,29 +392,13 @@ export class HabitatWorld extends DurableObject<Env> {
       this.saveCommand(command.commandId, 'resume', command.issuedAtMs, result);
     });
     if (applied) {
-      await this.scheduleWake(firstWatchAtMs, 'resume');
-    } else if ((await this.state.storage.getAlarm()) === null) {
+      await this.scheduleWake(Math.min(firstWatchAtMs, this.runtime().next_cognition_at_ms!), 'resume');
+    } else {
+      // A deployment may introduce an earlier cognitive wake while preserving
+      // the installed physical alarm. Reconciliation never advances either clock.
       await this.reconcile();
     }
     return result;
-  }
-
-  enqueueCognition(value: unknown): { accepted: boolean; jobId: string } {
-    const job = cognitionJobSchema.parse(value);
-    if (job.habitatId !== this.config.HABITAT_ID) {
-      throw new TypeError('job habitatId does not match this runtime');
-    }
-    const cursor = this.sql.exec(
-      `INSERT OR IGNORE INTO cognition_jobs (
-         job_id, envelope_json, status, pressure, created_at_ms, due_at_ms, attempts
-       ) VALUES (?, ?, 'pending', ?, ?, ?, 0)`,
-      job.jobId,
-      JSON.stringify(job),
-      job.pressure,
-      job.createdAtMs,
-      job.createdAtMs,
-    );
-    return { accepted: cursor.rowsWritten > 0, jobId: job.jobId };
   }
 
   /** Operator-only smoke check: real bounded provider I/O, no world tick or
@@ -385,11 +415,10 @@ export class HabitatWorld extends DurableObject<Env> {
     const runtime = this.runtime();
     this.assertControlRevision(runtime, command.expectedControlRevision);
     const world = deserializeWorldState(this.world().state_json);
-    const prepared = prepareCognition({
-      state: world, worldRevision: runtime.world_revision, habitatId: this.config.HABITAT_ID,
-      runId: `check:${crypto.randomUUID()}`, createdAtMs: Date.now(),
-      controlRevision: runtime.control_revision,
-    });
+    const sequence = this.sql.exec<{ sequence: number }>('SELECT COALESCE(MAX(sequence),0)+1 AS sequence FROM cognition_contexts').one().sequence;
+    const society = this.society(), actor = nextSocietyActor(society, Date.now(), sequence) ?? 'A';
+    const prepared = prepareSocietyJob({ state: society, world, actor, worldRevision: runtime.world_revision,
+      habitatId: this.config.HABITAT_ID, nowMs: Date.now(), sequence, generation: runtime.control_revision });
     // Verification has its own quota identity and cannot consume a scheduled job.
     prepared.job.jobId = `check:${crypto.randomUUID()}`;
     const pending = { commandId: command.commandId, status: 'pending', worldRevision: runtime.world_revision };
@@ -400,14 +429,20 @@ export class HabitatWorld extends DurableObject<Env> {
       ai: this.runtimeEnv.AI, ...(groqApiKey ? { groqApiKey } : {}),
       config: this.config, job: prepared.job, attemptOrdinal: 1,
       quota: new SqlQuotaLedger(this.sql, this.config),
+      canDispatch: () => this.runtime().control_revision === runtime.control_revision && Date.now() < prepared.turn.expiresAtMs,
+      validatePayload: (payload) => {
+        const checked = applySocietyProtocol(prepared.job.outputContract.version, society, world, prepared.turn, payload,
+          { nowMs: Date.now(), generation: runtime.control_revision });
+        return checked.ok ? true : checked.code;
+      },
+      onAttempt: (attempt) => { if (!attempt.ok) this.saveAttempt(attempt, Date.now()); },
     });
     const attempts = result.status === 'completed' ? (result.attempts ?? [result.result]) : result.reasons;
     for (const attempt of attempts) this.saveAttempt(attempt, Date.now());
-    const intent = result.status === 'completed' ? decodeCognition(prepared.actor, result.result.payload) : undefined;
+    const valid = result.status === 'completed';
     const response = {
-      commandId: command.commandId, status: 'complete', ok: Boolean(intent),
-      worldRevision: runtime.world_revision, actor: prepared.actor,
-      ...(intent ? { verb: intent.verb } : {}),
+      commandId: command.commandId, status: 'complete', ok: valid,
+      worldRevision: runtime.world_revision, actor, contract: 'society_turn',
       attempts: attempts.map((attempt) => ({ provider: attempt.provider, ok: attempt.ok,
         ...(!attempt.ok ? { kind: attempt.kind, detailCode: attempt.detailCode ?? null } : {}) })),
     };
@@ -416,372 +451,455 @@ export class HabitatWorld extends DurableObject<Env> {
   }
 
   async reconcile(): Promise<{ mode: string; repaired: boolean; dueAtMs: number | null }> {
-    let runtime = this.runtime();
-    if (runtime.mode === 'paused') {
-      const alarm = await this.state.storage.getAlarm();
-      if (alarm !== null) await this.state.storage.deleteAlarm();
-      return { mode: runtime.mode, repaired: alarm !== null, dueAtMs: null };
-    }
-
-    if (runtime.next_watch_at_ms === null) {
-      const nextWatchAtMs = Date.now() + this.config.TICK_INTERVAL_MS;
-      this.sql.exec(
-        'UPDATE runtime_meta SET next_watch_at_ms = ? WHERE singleton = 1',
-        nextWatchAtMs,
-      );
-      runtime = this.runtime();
-    }
-
-    const dueAtMs = runtime.next_watch_at_ms!;
+    const runtime = this.runtime();
     const installed = await this.state.storage.getAlarm();
-    if (runtime.next_alarm_at_ms === null) {
-      await this.scheduleWake(dueAtMs, 'clock');
-      return { mode: runtime.mode, repaired: true, dueAtMs };
+    if (runtime.mode === 'paused') {
+      if (installed !== null) await this.state.storage.deleteAlarm();
+      return { mode: runtime.mode, repaired: installed !== null, dueAtMs: null };
     }
-    if (installed === null) {
-      await this.state.storage.setAlarm(Math.max(Date.now(), runtime.next_alarm_at_ms));
-      return { mode: runtime.mode, repaired: true, dueAtMs: runtime.next_alarm_at_ms };
-    }
-    return { mode: runtime.mode, repaired: false, dueAtMs: runtime.next_alarm_at_ms };
-  }
-
-  async alarm(): Promise<void> {
     const nowMs = Date.now();
-    let activeRunId: string | undefined;
-    try {
-      let runtime = this.runtime();
-      if (runtime.mode === 'paused') {
-        this.sql.exec(
-          'UPDATE runtime_meta SET next_alarm_at_ms = NULL, next_alarm_reason = NULL WHERE singleton = 1',
-        );
-        return;
-      }
-      if (runtime.next_watch_at_ms === null) {
-        const dueAtMs = nowMs + this.config.TICK_INTERVAL_MS;
-        this.sql.exec(
-          'UPDATE runtime_meta SET next_watch_at_ms = ? WHERE singleton = 1',
-          dueAtMs,
-        );
-        await this.scheduleWake(dueAtMs, 'clock');
-        return;
-      }
-      if (runtime.next_watch_at_ms > nowMs) {
-        await this.scheduleWake(runtime.next_watch_at_ms, 'clock');
-        return;
-      }
+    if (runtime.next_watch_at_ms === null) this.sql.exec(
+      'UPDATE runtime_meta SET next_watch_at_ms = ? WHERE singleton = 1', nowMs + this.config.TICK_INTERVAL_MS);
+    if (runtime.next_cognition_at_ms === null) this.sql.exec(
+      'UPDATE runtime_meta SET next_cognition_at_ms = ? WHERE singleton = 1', nowMs + 60_000);
+    const dueAtMs = this.nextDueAt(nowMs);
+    const repaired = installed === null || Math.abs(installed - Math.max(nowMs, dueAtMs)) > 1_000
+      || runtime.next_alarm_at_ms === null;
+    if (repaired) await this.scheduleWake(Math.max(nowMs, dueAtMs), 'clock');
+    return { mode: runtime.mode, repaired, dueAtMs };
+  }
 
-      const prepared = this.prepareWatchRun(nowMs);
-      activeRunId = prepared.runId;
-      await this.processCognitionJob(prepared.jobId, nowMs);
-      const outcome = this.commitWatchRun(prepared.runId, Date.now());
-      runtime = this.runtime();
-      if (outcome.status === 'waiting') {
-        await this.scheduleWake(outcome.retryAtMs, 'retry');
+  /** One authority, two independent clocks. No provider await surrounds the
+   * physical commit, and a delayed thought cannot tick the world again. */
+  async alarm(): Promise<void> {
+    try {
+      const nowMs = Date.now();
+      if (this.runtime().mode === 'paused') {
+        this.sql.exec('UPDATE runtime_meta SET next_alarm_at_ms = NULL, next_alarm_reason = NULL WHERE singleton = 1');
         return;
       }
-      if (outcome.status !== 'committed' || runtime.mode === 'paused') return;
-      await this.scheduleWake(runtime.next_watch_at_ms!, 'clock');
+      this.commitPhysicalWatch(nowMs);
+      try {
+        await this.runCognitionWake(nowMs);
+      } catch (error) {
+        this.sql.exec('UPDATE runtime_meta SET last_cognition_error_code=?,next_cognition_at_ms=? WHERE singleton=1',
+          safeErrorCode(error), Date.now() + COGNITION_CADENCE_MS);
+      }
+      if (this.runtime().mode === 'running') await this.scheduleWake(this.nextDueAt(Date.now()), 'clock');
     } catch (error) {
-      const code = safeErrorCode(error);
-      this.sql.exec(
-        'UPDATE runtime_meta SET last_error_code = ? WHERE singleton = 1',
-        code,
-      );
-      if (activeRunId) {
-        this.sql.exec(
-          'UPDATE watch_runs SET error_code = ? WHERE run_id = ? AND phase = ?',
-          code,
-          activeRunId,
-          'claimed',
-        );
-      }
-      if (this.runtime().mode === 'running') {
-        await this.scheduleWake(Date.now() + 15 * 60 * 1_000, 'retry');
+      this.sql.exec('UPDATE runtime_meta SET last_error_code = ? WHERE singleton = 1', safeErrorCode(error));
+      if (this.runtime().mode === 'running') await this.scheduleWake(Date.now() + 60_000, 'retry');
+    }
+  }
+
+  private async runCognitionWake(nowMs: number): Promise<void> {
+    this.retireStaleJobs(nowMs);
+    // A crash after response persistence resumes here without another call.
+    for (const row of this.sql.exec<{ job_id: string }>(
+      "SELECT j.job_id FROM cognition_jobs j JOIN cognition_contexts c ON c.job_id=j.job_id WHERE j.status='resolved' ORDER BY c.sequence LIMIT 25",
+    ).toArray()) this.applySocietyJob(row.job_id, nowMs);
+    const runtime = this.runtime();
+    if (runtime.next_cognition_at_ms === null || runtime.next_cognition_at_ms <= nowMs) {
+      this.sql.exec('UPDATE runtime_meta SET next_cognition_at_ms = ? WHERE singleton = 1', nowMs + COGNITION_CADENCE_MS);
+      const queued = firstRow(this.sql.exec<{ job_id: string }>(
+        `SELECT j.job_id FROM cognition_jobs j JOIN cognition_contexts c ON c.job_id=j.job_id
+         WHERE j.status IN ('pending','deferred') AND j.due_at_ms <= ? ORDER BY j.due_at_ms, c.sequence LIMIT 1`, nowMs));
+      const jobId = queued?.job_id ?? await this.prepareNextSocietyJob(nowMs);
+      if (jobId) {
+        await this.processSocietyJob(jobId, nowMs);
+        this.applySocietyJob(jobId, Date.now());
       }
     }
   }
 
-  private prepareWatchRun(nowMs: number): { runId: string; jobId: string } {
-    return this.state.storage.transactionSync(() => {
+  private nextDueAt(nowMs: number): number {
+    const runtime = this.runtime();
+    // Queue retries share the cadence. No busy-loop on a denied quota or lease.
+    return Math.max(nowMs + 1_000, Math.min(runtime.next_watch_at_ms ?? nowMs + this.config.TICK_INTERVAL_MS,
+      runtime.next_cognition_at_ms ?? nowMs + COGNITION_CADENCE_MS));
+  }
+
+  private society(): SocietyState {
+    const row = this.sql.exec<{ state_json: string }>('SELECT state_json FROM society_state WHERE singleton=1').one();
+    const parsed = parseSocietyState(JSON.parse(row.state_json));
+    if (!parsed.ok) throw new RangeError(parsed.code);
+    return parsed.state;
+  }
+
+  private saveSociety(society: SocietyState, nowMs: number): void {
+    const validated = parseSocietyState(society);
+    if (!validated.ok) throw new RangeError(validated.code);
+    const archivedThrough = this.sql.exec<{ archived_record_next_id: number }>(
+      'SELECT archived_record_next_id FROM society_state WHERE singleton=1').one().archived_record_next_id;
+    for (const publication of society.records.publications) {
+      const ordinal = Number(publication.id.split(':').at(-1));
+      if (ordinal < archivedThrough) continue;
+      const draft = society.records.drafts.find((draft) => draft.id === publication.draftId);
+      if (!draft || draft.contentHash !== publication.contentHash) throw new RangeError('Missing publication content');
+      this.sql.exec(`INSERT OR IGNORE INTO authored_publications
+        (publication_id,draft_id,author,is_public,published_at_ms,publication_json) VALUES (?,?,?,?,?,?)`, publication.id,
+        publication.draftId, publication.author, publication.audience === 'public' ? 1 : 0, publication.publishedAtMs, JSON.stringify({ publication, draft }));
+    }
+    this.sql.exec('UPDATE society_state SET codec_version=?, revision=?, state_json=?, updated_at_ms=?, archived_record_next_id=? WHERE singleton=1',
+      society.version, society.revision, JSON.stringify(society), nowMs, society.records.nextId);
+  }
+
+  /** Explicit observer request only. Indexed, bounded and independent of the
+   * model queue; private/shared drafts never enter this historical projection. */
+  getRecords(raw: RecordsFilter) {
+    const filter = recordsFilterSchema.parse(raw);
+    const rows = this.sql.exec<{ sequence: number; publication_json: string }>(
+      'SELECT sequence,publication_json FROM authored_publications WHERE is_public=1 AND sequence<? ORDER BY sequence DESC LIMIT ?',
+      filter.before ?? Number.MAX_SAFE_INTEGER, filter.limit + 1).toArray();
+    const page = rows.slice(0, filter.limit);
+    const entries = page.map((row) => {
+      const { publication, draft } = parseArchivedPublication(JSON.parse(row.publication_json));
+      const parent = draft.parent ? firstRow(this.sql.exec<{ publication_id: string }>(
+        'SELECT publication_id FROM authored_publications WHERE draft_id=? AND is_public=1 AND sequence<? ORDER BY sequence DESC LIMIT 1',
+        draft.parent.draftId, row.sequence))?.publication_id ?? null : null;
+      const entry = publicRecordPublication(publication, draft, parent);
+      if (!entry) throw new RangeError('Invalid public publication archive');
+      return entry;
+    });
+    return { entries, nextCursor: rows.length > filter.limit ? page.at(-1)!.sequence : null };
+  }
+
+  private cognitionHealth(nowMs: number) {
+    const runtime = this.runtime(), society = this.society();
+    const successes = Object.values(society.minds).flatMap((m) => m.lastSuccessAtMs === null ? [] : [m.lastSuccessAtMs]);
+    const successfulLastWatch = successes.filter((at) => nowMs - at <= COGNITION_REVIEW_MS).length;
+    const pendingResidents = this.sql.exec<{ actor: ResidentId }>(
+      `SELECT DISTINCT c.actor FROM cognition_contexts c JOIN cognition_jobs j ON j.job_id=c.job_id
+       WHERE j.status IN ('pending','deferred','running','resolved') ORDER BY c.actor`,
+    ).toArray().map((r) => r.actor);
+    return { health: runtime.mode === 'paused' ? 'paused' : runtime.last_cognition_error_code !== null ? 'degraded' : successfulLastWatch === 25 ? 'healthy'
+      : nowMs - society.createdAtMs < COGNITION_REVIEW_MS ? 'starting' : 'degraded',
+      successfulLastWatch, total: 25, neverThought: 25 - successes.length, lastErrorCode: runtime.last_cognition_error_code,
+      lastSuccessfulThoughtAtMs: successes.length ? Math.max(...successes) : null,
+      nextOpportunityAtMs: runtime.mode === 'running' ? runtime.next_cognition_at_ms : null,
+      pendingResidents, waitingForReply: [...new Set(society.conversations.filter((c) => c.status === 'open').map((c) => c.nextSpeaker!))] };
+  }
+
+  private postponeCognition(readyAtMs: number, nowMs: number, society: SocietyState): void {
+    // Counting a large context can await lazy tokenizer initialization. Never
+    // persist a deadline that is already past when that work finishes.
+    const currentMs = Math.max(nowMs, Date.now());
+    // Selection used nowMs: a review/backoff crossing during that await must
+    // still trigger reconsideration, at the fresh minimum rather than be lost.
+    const reconsiderAt = nextSocietyReconsiderationAt(society, nowMs, this.runtime().next_watch_at_ms);
+    this.sql.exec('UPDATE runtime_meta SET next_cognition_at_ms=? WHERE singleton=1',
+      Math.max(currentMs + COGNITION_CADENCE_MS, Math.ceil(Math.min(readyAtMs, reconsiderAt ?? readyAtMs))));
+  }
+
+  private async prepareNextSocietyJob(nowMs: number): Promise<string | undefined> {
+    const captured = this.state.storage.transactionSync(() => {
       const runtime = this.runtime();
-      if (runtime.mode !== 'running') throw new RangeError('runtime is paused');
-      if (runtime.next_watch_at_ms === null || runtime.next_watch_at_ms > nowMs) {
-        throw new RangeError('the next simulation watch is not due');
+      if (runtime.mode !== 'running') return undefined;
+      const world = deserializeWorldState(this.world().state_json);
+      let society = this.society();
+      const expired = expireSocietyState(society, world, nowMs);
+      if (expired !== society) { society = expired; this.publishSociety(society, world, nowMs); }
+      const occupied = new Set(this.sql.exec<{ actor: ResidentId }>(
+        `SELECT c.actor FROM cognition_contexts c JOIN cognition_jobs j ON j.job_id=c.job_id
+         WHERE j.status IN ('pending','deferred','running','resolved')`).toArray().map((r) => r.actor));
+      const sequence = this.sql.exec<{ sequence: number }>('SELECT COALESCE(MAX(sequence),0)+1 AS sequence FROM cognition_contexts').one().sequence;
+      return { world, society, occupied, sequence, generation: runtime.control_revision, worldRevision: this.runtime().world_revision };
+    });
+    if (!captured) return undefined;
+    const { world, society, sequence, generation, worldRevision } = captured;
+    const rejected = new Set(captured.occupied), quota = new SqlQuotaLedger(this.sql, this.config);
+    const groqAvailable = Boolean(readSecret(this.runtimeEnv, 'GROQ_API_KEY'));
+    let pacingSnapshots: Parameters<typeof cognitionReadyAt>[0]['pacingSnapshots'];
+    let selected: ReturnType<typeof prepareSocietyJob> | undefined, minimumReady = Number.POSITIVE_INFINITY;
+    for (let checked = 0; checked < MAX_RESIDENTS; checked += 1) {
+      const actor = nextSocietyActor(society, nowMs, sequence, rejected);
+      if (!actor) break;
+      rejected.add(actor);
+      const candidate = prepareSocietyJob({ state: society, world, actor, nowMs, sequence,
+        generation, worldRevision, habitatId: this.config.HABITAT_ID,
+        ...(this.config.GROQ_120B_ENABLED ? { routingPolicy: 'free-models-v1' as const } : {}) });
+      let readyAtMs: number | null = nowMs;
+      if (society.minds[actor].lastAttemptAtMs !== null) {
+        // One indexed quota snapshot per provider for the entire bounded search.
+        // Different candidate sizes are evaluated without rereading its history.
+        pacingSnapshots ??= { workersAI: quota.pacingSnapshot('workers-ai', this.config.WORKERS_AI_MODEL, nowMs),
+          ...(groqAvailable ? { groq: quota.pacingSnapshot('groq', this.config.GROQ_MODEL, nowMs),
+            ...(this.config.GROQ_120B_ENABLED ? { groq120B: quota.pacingSnapshot('groq', GROQ_120B_MODEL, nowMs) } : {}) } : {}) };
+        readyAtMs = await cognitionReadyAt({ job: candidate.job, config: this.config, quota, nowMs,
+          groqAvailable, pacingSnapshots, freshJob: true });
+        const current = this.runtime();
+        if (current.mode !== 'running' || current.control_revision !== generation || current.world_revision !== worldRevision) return undefined;
       }
-      const stored = this.world();
-      if (stored.codec_version !== WORLD_CODEC_VERSION) {
-        throw new RangeError('unsupported world codec version');
+      if (readyAtMs === null) continue;
+      if (readyAtMs <= Date.now()) { selected = candidate; break; }
+      minimumReady = Math.min(minimumReady, readyAtMs);
+    }
+    return this.state.storage.transactionSync(() => {
+      const current = this.runtime();
+      if (current.mode !== 'running' || current.control_revision !== generation || current.world_revision !== worldRevision) return undefined;
+      if (!selected) {
+        if (Number.isFinite(minimumReady)) this.postponeCognition(minimumReady, nowMs, society);
+        return undefined;
       }
-      if (stored.world_revision !== runtime.world_revision) {
-        throw new RangeError('world revision metadata is inconsistent');
+      const { turn, job } = selected;
+      const currentMs = Date.now();
+      if (!hasSocietyRequestWindow(turn.expiresAtMs, currentMs)) {
+        // Lazy counting can outlive the original cadence. A discarded fresh
+        // context must not leave nextDueAt retrying a past deadline at +1 s.
+        // Preserve any later wait installed without a world/control change.
+        const next = currentMs + COGNITION_CADENCE_MS;
+        this.sql.exec('UPDATE runtime_meta SET next_cognition_at_ms=MAX(COALESCE(next_cognition_at_ms,?),?) WHERE singleton=1', next, next);
+        return undefined;
       }
-
-      const state = deserializeWorldState(stored.state_json);
-      const runId = `${this.config.HABITAT_ID}:world:${runtime.world_revision}:watch`;
-      const prepared = prepareCognition({
-        state,
-        worldRevision: runtime.world_revision,
-        habitatId: this.config.HABITAT_ID,
-        runId,
-        createdAtMs: nowMs,
-        controlRevision: runtime.control_revision,
-        recentHistory: this.recentHistoryFor(selectCognitionSubject(state)),
-      });
-      const existing = firstRow(this.sql.exec<WatchRunRow>(
-        'SELECT * FROM watch_runs WHERE cause_world_revision = ?',
-        runtime.world_revision,
-      ));
-
-      if (existing && existing.phase !== 'committed'
-        && (existing.control_revision !== runtime.control_revision || existing.phase === 'cancelled')) {
-        this.sql.exec(
-          `UPDATE cognition_jobs SET status = 'dead', lease_expires_at_ms = NULL,
-             error_code = 'control_revision_changed'
-           WHERE job_id = ? AND status NOT IN ('applied', 'dead')`,
-          existing.cognition_job_id,
-        );
-        this.sql.exec(
-          `UPDATE watch_runs SET control_revision = ?, subject_id = ?, cognition_job_id = ?,
-             phase = 'claimed', due_at_ms = ?, decision_source = NULL, decision_json = NULL,
-             committed_at_ms = NULL, error_code = NULL WHERE run_id = ?`,
-          runtime.control_revision,
-          prepared.actor,
-          prepared.job.jobId,
-          runtime.next_watch_at_ms,
-          runId,
-        );
-      } else if (!existing) {
-        this.sql.exec(
-          `INSERT INTO watch_runs (
-             run_id, cause_world_revision, sim_day, sim_watch, control_revision,
-             subject_id, cognition_job_id, phase, due_at_ms
-           ) VALUES (?, ?, ?, ?, ?, ?, ?, 'claimed', ?)`,
-          runId,
-          runtime.world_revision,
-          state.day,
-          state.watch,
-          runtime.control_revision,
-          prepared.actor,
-          prepared.job.jobId,
-          runtime.next_watch_at_ms,
-        );
-      }
-
-      const active = existing?.phase === 'committed'
-        ? existing
-        : firstRow(this.sql.exec<WatchRunRow>('SELECT * FROM watch_runs WHERE run_id = ?', runId))!;
-      if (active.phase === 'committed') return { runId, jobId: active.cognition_job_id };
-
-      this.sql.exec(
-        `INSERT OR IGNORE INTO cognition_jobs (
-           job_id, envelope_json, status, pressure, created_at_ms, due_at_ms, attempts
-         ) VALUES (?, ?, 'pending', ?, ?, ?, 0)`,
-        prepared.job.jobId,
-        JSON.stringify(prepared.job),
-        prepared.job.pressure,
-        prepared.job.createdAtMs,
-        prepared.job.createdAtMs,
-      );
-      return { runId, jobId: prepared.job.jobId };
+      // Another preparation can insert a job without changing the world yet.
+      if (firstRow(this.sql.exec('SELECT sequence FROM cognition_contexts WHERE sequence=?', sequence))) return undefined;
+      this.sql.exec('INSERT INTO cognition_contexts (sequence,job_id,actor,prepared_json,generation) VALUES (?,?,?,?,?)',
+        turn.sequence, job.jobId, turn.actor, JSON.stringify(turn), turn.generation);
+      this.sql.exec(`INSERT INTO cognition_jobs (job_id,envelope_json,status,pressure,created_at_ms,due_at_ms,attempts)
+        VALUES (?,?,'pending',?,?,?,0)`, job.jobId, JSON.stringify(job), job.pressure, nowMs, nowMs);
+      return job.jobId;
     });
   }
 
-  private async processCognitionJob(jobId: string, nowMs: number): Promise<void> {
-    const row = firstRow(this.sql.exec<JobRow>(
-      `SELECT job_id, envelope_json, status, attempts, lease_expires_at_ms, provider, output_json
-       FROM cognition_jobs WHERE job_id = ?`,
-      jobId,
-    ));
-    if (!row || row.status !== 'pending') return;
+  private retireStaleJobs(nowMs: number): void {
+    this.state.storage.transactionSync(() => {
+      const runtime = this.runtime();
+      for (const row of this.sql.exec<JobRow & { prepared_json: string; generation: number }>(
+        `SELECT j.*,c.prepared_json,c.generation FROM cognition_jobs j JOIN cognition_contexts c ON c.job_id=j.job_id
+         WHERE j.status IN ('pending','deferred','running','resolved')`).toArray()) {
+        const turn = JSON.parse(row.prepared_json) as PreparedTurn;
+        const reason = row.generation !== runtime.control_revision ? 'control_revision_changed'
+          : turn.expiresAtMs <= nowMs ? 'turn_expired'
+          : ['pending', 'deferred'].includes(row.status)
+            && !hasSocietyRequestWindow(turn.expiresAtMs, Math.max(nowMs, row.due_at_ms)) ? 'provider_window_expired'
+          : row.status === 'running' && (row.lease_expires_at_ms ?? 0) <= nowMs ? 'ambiguous_provider_lease' : null;
+        if (reason) {
+          this.finishSocietyJob(row.job_id, 'dead', reason);
+          // Another job may remain usable once this wait is released. Do not
+          // retire it merely because of the old, shared next_cognition deadline.
+          if (['pending', 'deferred'].includes(row.status)) this.releaseCognitionWait(nowMs);
+        }
+      }
+    });
+  }
 
-    const claimed = this.sql.exec(
-      `UPDATE cognition_jobs SET status = 'running', attempts = 1, lease_expires_at_ms = ?
-       WHERE job_id = ? AND status = 'pending'`,
-      nowMs + 5 * 60 * 1_000,
-      jobId,
-    );
-    if (claimed.rowsWritten === 0) return;
+  // Terminal jobs become immutable at the same instant as their duplicated
+  // input is compacted, so a recovery cut can never combine two versions.
+  // Every caller must already hold a synchronous storage transaction.
+  private finishSocietyJob(jobId: string, status: 'applied' | 'dead', code: string | null): void {
+    this.sql.exec('UPDATE cognition_jobs SET status=?,error_code=?,lease_expires_at_ms=NULL WHERE job_id=?', status, code, jobId);
+    compactTerminalCognition(this.sql, jobId);
+  }
 
-    let job: CognitionJob;
-    try {
-      job = cognitionJobSchema.parse(JSON.parse(row.envelope_json));
-    } catch {
-      this.sql.exec(
-        `UPDATE cognition_jobs SET status = 'dead', error_code = 'invalid_envelope',
-           lease_expires_at_ms = NULL WHERE job_id = ?`,
-        jobId,
-      );
-      return;
+  /** A discarded context cannot keep its provider-specific wait over everyone
+   * else. Preserve an earlier wake; never turn retirement into a tight retry. */
+  private releaseCognitionWait(nowMs: number): void {
+    const next = nowMs + COGNITION_CADENCE_MS;
+    this.sql.exec(`UPDATE runtime_meta SET next_cognition_at_ms=MIN(COALESCE(next_cognition_at_ms,?),?)
+      WHERE singleton=1 AND mode='running'`, next, next);
+  }
+
+  private async processSocietyJob(jobId: string, nowMs: number): Promise<void> {
+    const row = firstRow(this.sql.exec<JobRow & { prepared_json: string }>(
+      'SELECT j.*,c.prepared_json FROM cognition_jobs j JOIN cognition_contexts c ON c.job_id=j.job_id WHERE j.job_id=?', jobId));
+    if (!row || !['pending', 'deferred'].includes(row.status) || row.due_at_ms > nowMs) return;
+    const job = cognitionJobSchema.parse(JSON.parse(row.envelope_json));
+    const baseUser = job.prompt.user;
+    if (row.error_code?.startsWith('invalid_society:')) {
+      const structure = savedStructuralRetryFeedback(this.sql, job, row.error_code);
+      job.prompt.user += ` Previous attempt was refused: ${row.error_code.slice('invalid_society:'.length)}. Correct that issue using only the supplied state and exact IDs.${structure}`;
     }
-
-    const quota = new SqlQuotaLedger(this.sql, this.config);
+    const turn = JSON.parse(row.prepared_json) as PreparedTurn;
+    const before = this.society(), physical = deserializeWorldState(this.world().state_json);
+    const capturedWorldRevision = this.runtime().world_revision;
+    const mayClaim = () => {
+      const current = this.runtime();
+      const fresh = firstRow(this.sql.exec<{ status: string; attempts: number; due_at_ms: number }>(
+        'SELECT status,attempts,due_at_ms FROM cognition_jobs WHERE job_id=?', jobId));
+      return current.mode === 'running' && current.control_revision === turn.generation
+        && current.world_revision === capturedWorldRevision
+        && this.society().minds[turn.actor].revision === turn.mindRevision
+        && fresh && ['pending', 'deferred'].includes(fresh.status) && fresh.attempts === row.attempts
+        && fresh.due_at_ms <= nowMs;
+    };
+    if (before.minds[turn.actor].revision !== turn.mindRevision) {
+      this.state.storage.transactionSync(() => this.finishSocietyJob(jobId, 'dead', 'mind_revision_changed')); return;
+    }
+    const firstOpportunity = before.minds[turn.actor].lastAttemptAtMs === null;
     const groqApiKey = readSecret(this.runtimeEnv, 'GROQ_API_KEY');
-    const result = await routeCognition({
-      ai: this.runtimeEnv.AI,
-      ...(groqApiKey ? { groqApiKey } : {}),
-      config: this.config,
-      job,
-      attemptOrdinal: 1,
-      quota,
-    });
-    this.persistRouterResult(jobId, result, Date.now());
-  }
-
-  private commitWatchRun(
-    runId: string,
-    nowMs: number,
-  ): { status: 'committed' | 'skipped' } | { status: 'waiting'; retryAtMs: number } {
-    return this.state.storage.transactionSync(() => {
-      const run = firstRow(this.sql.exec<WatchRunRow>(
-        'SELECT * FROM watch_runs WHERE run_id = ?',
-        runId,
-      ));
-      if (!run) throw new RangeError('watch run was not prepared');
-      if (run.phase === 'committed') return { status: 'skipped' as const };
-      if (run.phase !== 'claimed') throw new RangeError('watch run is not claimable');
-
-      const runtime = this.runtime();
-      if (runtime.mode !== 'running' || runtime.control_revision !== run.control_revision) {
-        this.cancelWatchRun(run, 'control_revision_changed');
-        return { status: 'skipped' as const };
+    if (!firstOpportunity) {
+      const readyAtMs = await cognitionReadyAt({ job, config: this.config,
+        quota: new SqlQuotaLedger(this.sql, this.config), nowMs, groqAvailable: Boolean(groqApiKey) });
+      if (!mayClaim()) return;
+      if (readyAtMs === null) {
+        this.state.storage.transactionSync(() => this.finishSocietyJob(jobId, 'dead', 'provider_attempts_exhausted'));
+        return;
       }
-      if (runtime.world_revision !== run.cause_world_revision) {
-        this.cancelWatchRun(run, 'world_revision_changed');
-        return { status: 'skipped' as const };
-      }
-
-      const stored = this.world();
-      if (stored.world_revision !== run.cause_world_revision) {
-        throw new RangeError('stored world revision changed during cognition');
-      }
-      const state = deserializeWorldState(stored.state_json);
-      const job = firstRow(this.sql.exec<JobRow>(
-        `SELECT job_id, envelope_json, status, attempts, lease_expires_at_ms, provider, output_json
-         FROM cognition_jobs WHERE job_id = ?`,
-        run.cognition_job_id,
-      ));
-      if (job?.status === 'running' && job.lease_expires_at_ms !== null
-        && job.lease_expires_at_ms > nowMs) {
-        return {
-          status: 'waiting' as const,
-          retryAtMs: Math.max(nowMs + 1_000, job.lease_expires_at_ms),
-        };
-      }
-
-      let intent: ReturnType<typeof decodeCognition>;
-      let decisionSource = 'routine';
-      if (job?.status === 'resolved' && job.output_json !== null) {
-        try {
-          const envelope = cognitionJobSchema.parse(JSON.parse(job.envelope_json));
-          const actor = envelope.subjects[0]?.id;
-          if (envelope.cause.worldRevision === run.cause_world_revision
-            && actor === run.subject_id) {
-            intent = decodeCognition(
-              run.subject_id as Parameters<typeof decodeCognition>[0],
-              JSON.parse(job.output_json),
-            );
-            if (intent) decisionSource = job.provider ?? 'model';
+      if (readyAtMs > Date.now()) {
+        this.state.storage.transactionSync(() => {
+          if (!mayClaim()) return;
+          // An early reconsideration can wake other residents, but this job
+          // cannot dispatch before both its provider and the cadence permit it.
+          const retryAtMs = Math.max(readyAtMs, Date.now() + COGNITION_CADENCE_MS);
+          if (!hasSocietyRequestWindow(turn.expiresAtMs, retryAtMs)) {
+            this.finishSocietyJob(jobId, 'dead', readyAtMs >= turn.expiresAtMs ? 'pacing_context_expired' : 'provider_window_expired');
+            this.releaseCognitionWait(Date.now());
+            return; // A retired context must not impose its provider wait globally.
           }
-        } catch {
-          intent = undefined;
-        }
+          this.sql.exec("UPDATE cognition_jobs SET status='deferred',due_at_ms=?,error_code=CASE WHEN substr(error_code,1,16)='invalid_society:' THEN error_code ELSE 'pacing_wait' END WHERE job_id=?", readyAtMs, jobId);
+          this.postponeCognition(readyAtMs, nowMs, before);
+        });
+        return;
       }
-
-      let intentionOutcome: Outcome | undefined;
-      advanceWorldWatch(state, intent, run.subject_id as ResidentId, (outcome) => { intentionOutcome = outcome; });
-      const nextWorldRevision = runtime.world_revision + 1;
-      const nextWatchAtMs = nextWatchDueAt(
-        runtime.next_watch_at_ms ?? nowMs,
-        nowMs,
-        this.config.TICK_INTERVAL_MS,
-      );
-      const simMinute = (state.watch - 1) * 360;
-
-      const worldUpdate = this.sql.exec(
-        `UPDATE world_state SET codec_version = ?, world_revision = ?, state_json = ?,
-           updated_at_ms = ? WHERE singleton = 1 AND world_revision = ?`,
-        WORLD_CODEC_VERSION,
-        nextWorldRevision,
-        serializeWorldState(state),
-        nowMs,
-        run.cause_world_revision,
-      );
-      if (worldUpdate.rowsWritten !== 1) throw new RangeError('world commit lost its revision race');
-      const runtimeUpdate = this.sql.exec(
-        `UPDATE runtime_meta SET world_revision = ?, sim_day = ?, sim_minute = ?,
-           next_watch_at_ms = ?, next_alarm_at_ms = NULL, next_alarm_reason = NULL,
-           last_committed_run_id = ?, last_committed_at_ms = ?, last_error_code = NULL
-         WHERE singleton = 1 AND world_revision = ?`,
-        nextWorldRevision,
-        state.day,
-        simMinute,
-        nextWatchAtMs,
-        runId,
-        nowMs,
-        run.cause_world_revision,
-      );
-      if (runtimeUpdate.rowsWritten !== 1) throw new RangeError('runtime commit lost its revision race');
-
-      this.archiveWatchHappenings(run, state, nextWorldRevision, nowMs);
-      for (const event of state.economy.events) this.sql.exec(
-        'INSERT OR IGNORE INTO economic_events (sequence, world_revision, day, watch, event_json) VALUES (?, ?, ?, ?, ?)',
-        event.sequence, nextWorldRevision, event.day, event.watch, JSON.stringify(event));
-      if (state.watch === 1) this.saveCheckpoint(nextWorldRevision, serializeWorldState(state), nowMs);
-      this.appendEvent('world.intention.result', nowMs, { runId, actor: run.subject_id,
-        intent: intent ? JSON.parse(JSON.stringify(intent)) : null,
-        accepted: intentionOutcome?.ok ?? false,
-        refusal: intentionOutcome?.refused ?? (intent ? null : 'no_valid_cognition'),
-      });
-
-      if (job) {
-        if (intent && intentionOutcome?.ok) {
-          this.sql.exec(
-            `UPDATE cognition_jobs SET status = 'applied', lease_expires_at_ms = NULL,
-               error_code = NULL WHERE job_id = ?`,
-            job.job_id,
-          );
-        } else {
-          this.sql.exec(
-            `UPDATE cognition_jobs SET status = 'dead', lease_expires_at_ms = NULL,
-               error_code = ? WHERE job_id = ?`,
-            intent ? `intention_refused:${intentionOutcome?.refused ?? 'unknown'}` : job.status === 'resolved' ? 'invalid_domain_intent' : 'routine_fallback',
-            job.job_id,
-          );
-        }
+    }
+    let claimAtMs = 0, leaseExpiresAtMs = 0;
+    const claimed = this.state.storage.transactionSync(() => {
+      if (!mayClaim()) return false;
+      claimAtMs = Date.now();
+      if (!hasSocietyRequestWindow(turn.expiresAtMs, claimAtMs)) {
+        this.finishSocietyJob(jobId, 'dead', 'provider_window_expired');
+        this.releaseCognitionWait(claimAtMs);
+        return false;
       }
-      this.sql.exec(
-        `UPDATE watch_runs SET phase = 'committed', decision_source = ?, decision_json = ?,
-           committed_at_ms = ?, error_code = NULL WHERE run_id = ? AND phase = 'claimed'`,
-        decisionSource,
-        JSON.stringify(intent ?? null),
-        nowMs,
-        runId,
-      );
-      this.appendEvent('world.watch.committed', nowMs, {
-        runId,
-        worldRevision: nextWorldRevision,
-        day: state.day,
-        watch: state.watch,
-        subjectId: run.subject_id,
-        decisionSource,
+      leaseExpiresAtMs = claimAtMs + 120_000;
+      this.sql.exec("UPDATE cognition_jobs SET status='running',attempts=attempts+1,lease_expires_at_ms=? WHERE job_id=?", leaseExpiresAtMs, jobId);
+      if (row.error_code?.startsWith('invalid_society:')) this.appendEvent('society.turn.retry', claimAtMs, {
+        jobId, attempt: row.attempts + 1, reason: row.error_code,
+        baseUserHash: createHash('sha256').update(baseUser).digest('hex'),
+        systemHash: createHash('sha256').update(job.prompt.system).digest('hex'),
+        userHash: createHash('sha256').update(job.prompt.user).digest('hex'),
       });
-      return { status: 'committed' as const };
+      this.publishSociety(markSocietyAttempt(before, turn.actor, claimAtMs), physical, claimAtMs);
+      return true;
+    });
+    if (!claimed) return;
+    let validationCode: string | undefined;
+    const result = await routeCognition({ ai: this.runtimeEnv.AI, ...(groqApiKey ? { groqApiKey } : {}),
+      config: this.config, job, attemptOrdinal: row.attempts + 1, quota: new SqlQuotaLedger(this.sql, this.config), pacing: !firstOpportunity,
+      deadlineAtMs: Math.min(leaseExpiresAtMs, turn.expiresAtMs) - 10_000,
+      onAttempt: (attempt) => { if (!attempt.ok) this.saveAttempt(attempt, Date.now()); },
+      canDispatch: () => {
+        const current = this.runtime();
+        const active = firstRow(this.sql.exec<{ status: string; lease_expires_at_ms: number | null }>(
+          'SELECT status,lease_expires_at_ms FROM cognition_jobs WHERE job_id=?', jobId));
+        return current.mode === 'running' && current.control_revision === turn.generation
+          && active?.status === 'running' && active.lease_expires_at_ms === leaseExpiresAtMs
+          && Date.now() < Math.min(turn.expiresAtMs, leaseExpiresAtMs)
+          && this.society().minds[turn.actor].revision === turn.mindRevision;
+      },
+      validatePayload: (payload) => {
+        const checked = applyIssuedSocietyProtocol(job, this.society(), deserializeWorldState(this.world().state_json),
+          turn, payload, { nowMs: Date.now(), generation: this.runtime().control_revision });
+        if (!checked.ok) validationCode = checked.code;
+        return checked.ok ? true : checked.code;
+      },
+    });
+    // Keep the original attempt's evidence, but only the current lease owner
+    // may resolve, defer, compact or close this job after a provider await.
+    this.state.storage.transactionSync(() => {
+      const completedAtMs = Date.now();
+      const active = firstRow(this.sql.exec<{ status: string; lease_expires_at_ms: number | null }>(
+        'SELECT status,lease_expires_at_ms FROM cognition_jobs WHERE job_id=?', jobId));
+      if (active?.status !== 'running' || active.lease_expires_at_ms !== leaseExpiresAtMs
+        || completedAtMs >= leaseExpiresAtMs) {
+        const attempts = result.status === 'completed' ? result.attempts ?? [result.result] : result.reasons;
+        for (const attempt of attempts) this.saveAttempt(attempt, completedAtMs);
+        if (active?.status === 'running' && active.lease_expires_at_ms === leaseExpiresAtMs) {
+          this.finishSocietyJob(jobId, 'dead', 'provider_lease_expired');
+        }
+        return;
+      }
+      // Store a result before effects; a lost response is never guessed.
+      this.persistRouterResult(jobId, result, completedAtMs);
+      if (result.status === 'deferred' && validationCode) this.sql.exec(
+        "UPDATE cognition_jobs SET error_code=? WHERE job_id=? AND status='deferred'", `invalid_society:${validationCode}`, jobId);
+      if (result.status !== 'completed' && this.runtime().control_revision === turn.generation) this.sql.exec(
+        'UPDATE runtime_meta SET last_cognition_error_code=? WHERE singleton=1',
+        validationCode ? `invalid_society:${validationCode}` : `providers_${result.status}`);
     });
   }
 
-  private cancelWatchRun(run: WatchRunRow, errorCode: string): void {
-    this.sql.exec(
-      `UPDATE watch_runs SET phase = 'cancelled', error_code = ?
-       WHERE run_id = ? AND phase = 'claimed'`,
-      errorCode,
-      run.run_id,
-    );
-    this.sql.exec(
-      `UPDATE cognition_jobs SET status = 'dead', lease_expires_at_ms = NULL, error_code = ?
-       WHERE job_id = ? AND status NOT IN ('applied', 'dead')`,
-      errorCode,
-      run.cognition_job_id,
-    );
+  private applySocietyJob(jobId: string, nowMs: number): void {
+    this.state.storage.transactionSync(() => {
+      const row = firstRow(this.sql.exec<JobRow & { prepared_json: string }>(
+        'SELECT j.*,c.prepared_json FROM cognition_jobs j JOIN cognition_contexts c ON c.job_id=j.job_id WHERE j.job_id=?', jobId));
+      if (row?.status !== 'resolved' || !row.output_json) return;
+      const runtime = this.runtime(), turn = JSON.parse(row.prepared_json) as PreparedTurn;
+      const world = deserializeWorldState(this.world().state_json), before = this.society();
+      const job = cognitionJobSchema.parse(JSON.parse(row.envelope_json));
+      const result = runtime.mode === 'running'
+        ? applyIssuedSocietyProtocol(job, before, world, turn, JSON.parse(row.output_json), { nowMs, generation: runtime.control_revision })
+        : { ok: false, code: 'runtime_paused', state: before, world };
+      if (!result.ok) {
+        this.finishSocietyJob(jobId, 'dead', result.code);
+        this.sql.exec('UPDATE runtime_meta SET last_cognition_error_code=? WHERE singleton=1', result.code);
+        this.appendEvent('society.turn.refused', nowMs, { jobId, actor: turn.actor, code: result.code }); return;
+      }
+      if (job.outputContract.version === 8 && result.code === 'already_applied') {
+        this.finishSocietyJob(jobId, 'applied', null); return;
+      }
+      // A successful deliberation updates legacy coverage metadata without
+      // implying a physical action, wage, meal or movement.
+      const body = result.world.bodies[turn.actor];
+      body.thoughtOn = result.world.day; body.lastThoughtWatch = result.world.day * 4 + result.world.watch - 1;
+      body.lastAttemptWatch = body.lastThoughtWatch;
+      this.publishSociety(result.state, result.world, nowMs);
+      this.sql.exec('UPDATE runtime_meta SET last_cognition_error_code=NULL WHERE singleton=1');
+      this.finishSocietyJob(jobId, 'applied', null);
+      const view = societyPublicView(result.state);
+      const changedTurns = result.state.conversations.flatMap((c) => c.turns.filter((t) =>
+        !before.conversations.find((old) => old.id === c.id)?.turns.some((old) => old.id === t.id))
+        .map((t) => ({ conversationId: c.id, participants: c.participants, ...t })));
+      const departures = result.state.conversations.filter(c => c.status === 'closed' && c.participants.includes(turn.actor)
+        && before.conversations.some(old => old.id === c.id && old.status === 'open' && old.turns.length === c.turns.length));
+      this.sql.exec('INSERT OR IGNORE INTO society_events (world_revision,occurred_at_ms,job_id,actor,event_json) VALUES (?,?,?,?,?)',
+        this.runtime().world_revision, nowMs, jobId, turn.actor, JSON.stringify({ source: row.provider,
+          resident: view.residents.find((r) => r.id === turn.actor), turns: changedTurns,
+          ...(departures.length ? { departures: departures.map(c => ({ conversationId: c.id, actor: turn.actor })) } : {}),
+          offers: view.offers.filter((o) => !before.offers.some((old) => old.id === o.id && old.status === o.status)),
+          agreements: view.agreements.filter((a) => !before.agreements.some((old) => old.id === a.id && old.status === a.status)) }));
+      for (const t of changedTurns) this.archiveHappening(`${jobId}:${t.id}`, { day: result.world.day,
+        watch: result.world.watch, minute: (result.world.watch - 1) * 360,
+        room: body.room, who: [...t.participants], kind: 'meeting', text: `${t.speaker}: ${t.text}` }, this.runtime().world_revision, nowMs);
+      for (const c of departures) this.archiveHappening(`${jobId}:left:${c.id}`, { day: result.world.day,
+        watch: result.world.watch, minute: (result.world.watch - 1) * 360, room: body.room, who: [...c.participants], kind: 'meeting',
+        text: `${RESIDENT_BY_ID[turn.actor].name} left the conversation with ${RESIDENT_BY_ID[c.participants.find(id => id !== turn.actor)!].name}.` },
+      this.runtime().world_revision, nowMs);
+      this.appendEvent('society.turn.applied', nowMs, { jobId, actor: turn.actor, source: row.provider });
+    });
+  }
+
+  private publishSociety(society: SocietyState, world: ReturnType<typeof deserializeWorldState>, nowMs: number): void {
+    const revision = this.runtime().world_revision + 1;
+    this.saveSociety(society, nowMs);
+    this.sql.exec('UPDATE world_state SET world_revision=?,state_json=?,updated_at_ms=? WHERE singleton=1', revision, serializeWorldState(world), nowMs);
+    this.sql.exec('UPDATE runtime_meta SET world_revision=?,sim_day=?,sim_minute=? WHERE singleton=1', revision, world.day, (world.watch - 1) * 360);
+    for (const e of world.economy.events) this.sql.exec(
+      'INSERT OR IGNORE INTO economic_events (sequence,world_revision,day,watch,event_json) VALUES (?,?,?,?,?)',
+      e.sequence, revision, e.day, e.watch, JSON.stringify(e));
+  }
+
+  private commitPhysicalWatch(nowMs: number): void {
+    this.state.storage.transactionSync(() => {
+      const runtime = this.runtime();
+      if (runtime.mode !== 'running' || runtime.next_watch_at_ms === null || runtime.next_watch_at_ms > nowMs) return;
+      let world = deserializeWorldState(this.world().state_json);
+      const society = this.society(), day = world.day, watch = world.watch;
+      const runId = `${this.config.HABITAT_ID}:physical:${day}:${watch}`;
+      const observed = advanceSocietyWatch(society, world, nowMs), observations = observed.observations;
+      world = observed.world;
+      this.publishSociety(observed.state, world, nowMs);
+      const revision = this.runtime().world_revision;
+      this.sql.exec('INSERT INTO physical_runs VALUES (?,?,?,?,?,?,?)', runId, day, watch,
+        runtime.next_watch_at_ms, revision, nowMs, JSON.stringify(observations));
+      this.sql.exec(`UPDATE runtime_meta SET next_watch_at_ms=?,last_committed_run_id=?,last_committed_at_ms=?,last_error_code=NULL WHERE singleton=1`,
+        nextWatchDueAt(runtime.next_watch_at_ms, nowMs, this.config.TICK_INTERVAL_MS), runId, nowMs);
+      this.archiveWatchHappenings({ run_id: runId, sim_day: day, sim_watch: watch }, world, revision, nowMs);
+      if (world.watch === 1) this.saveCheckpoint(revision, serializeWorldState(world), nowMs);
+      this.appendEvent('world.watch.committed', nowMs, { runId, worldRevision: revision, day: world.day,
+        watch: world.watch, plannedActions: observations.filter((o) => 'stepId' in o && o.stepId).length,
+        publications: observations.filter((o) => 'kind' in o && o.kind === 'record_publication' && o.outcome.ok).length, source: 'physical-engine' });
+    });
   }
 
   private persistRouterResult(
@@ -806,6 +924,17 @@ export class HabitatWorld extends DurableObject<Env> {
 
     for (const reason of result.reasons) this.saveAttempt(reason, nowMs);
     if (result.status === 'deferred') {
+      const context = this.sql.exec<{ prepared_json: string }>(
+        'SELECT prepared_json FROM cognition_contexts WHERE job_id=?', jobId).one();
+      const turn = JSON.parse(context.prepared_json) as PreparedTurn;
+      const retryAtMs = Math.max(result.retryAtMs, nowMs, this.runtime().next_cognition_at_ms ?? nowMs + COGNITION_CADENCE_MS);
+      if (!hasSocietyRequestWindow(turn.expiresAtMs, retryAtMs)) {
+        // Actual attempts and their usage were persisted above. Retirement is
+        // not an additional attempt or a new resident failure/backoff.
+        this.finishSocietyJob(jobId, 'dead', 'provider_window_expired');
+        this.releaseCognitionWait(nowMs);
+        return;
+      }
       this.sql.exec(
         `UPDATE cognition_jobs SET status = 'deferred', due_at_ms = ?,
            lease_expires_at_ms = NULL, error_code = 'providers_deferred'
@@ -815,11 +944,10 @@ export class HabitatWorld extends DurableObject<Env> {
       );
       return;
     }
-    this.sql.exec(
-      `UPDATE cognition_jobs SET status = 'dead', lease_expires_at_ms = NULL,
-         error_code = 'providers_rejected' WHERE job_id = ? AND status = 'running'`,
-      jobId,
-    );
+    this.state.storage.transactionSync(() => {
+      const row = firstRow(this.sql.exec<{ status: string }>('SELECT status FROM cognition_jobs WHERE job_id=?', jobId));
+      if (row?.status === 'running') this.finishSocietyJob(jobId, 'dead', 'providers_rejected');
+    });
   }
 
   private saveAttempt(result: ProviderAttemptResult, nowMs: number): void {
@@ -839,24 +967,16 @@ export class HabitatWorld extends DurableObject<Env> {
       result.latencyMs,
       nowMs,
     );
-  }
-
-  private recentHistoryFor(personId: string): Happening[] {
-    const rows = this.sql.exec<HappeningRow>(
-      `SELECT h.sequence, h.happening_id, h.world_revision, h.day, h.watch,
-              h.minute, h.room_id, h.who_json, h.text, h.kind, h.committed_at_ms
-         FROM happenings AS h
-         JOIN happening_people AS hp ON hp.happening_id = h.happening_id
-        WHERE hp.resident_id = ?
-        ORDER BY h.day DESC, h.minute DESC, h.sequence DESC
-        LIMIT 8`,
-      personId,
-    ).toArray();
-    return rows.reverse().map(happeningFromRow);
+    try { saveProviderRejection(this.sql, result, nowMs); }
+    catch {
+      // Optional capture cannot roll back an attempt or authorize another call.
+      try { this.appendEvent('provider.diagnostic.unavailable', nowMs, { attemptId: result.attemptId }); }
+      catch { /* Accounting and the original result remain authoritative. */ }
+    }
   }
 
   private archiveWatchHappenings(
-    run: WatchRunRow,
+    run: Pick<WatchRunRow, 'run_id' | 'sim_day' | 'sim_watch'>,
     state: ReturnType<typeof deserializeWorldState>,
     worldRevision: number,
     committedAtMs: number,
@@ -1100,6 +1220,12 @@ export class HabitatWorld extends DurableObject<Env> {
     if (version < 4) this.migrateToV4();
     if (version < 5) this.migrateToV5();
     if (version < 6) this.migrateToV6();
+    if (version < 7) this.migrateToV7();
+    if (version < 8) this.migrateToV8();
+    if (version < 9) this.migrateToV9();
+    if (version < 10) this.migrateToV10();
+    if (version < 11) this.migrateToV11();
+    if (version < 12) this.migrateToV12();
   }
 
   private migrateToV2(): void {
@@ -1290,6 +1416,154 @@ export class HabitatWorld extends DurableObject<Env> {
     });
   }
 
+  private migrateToV7(): void {
+    this.state.storage.transactionSync(() => {
+      const nowMs = Date.now();
+      this.sql.exec(`
+        ALTER TABLE quota_reservations ADD COLUMN usage_confirmed INTEGER NOT NULL DEFAULT 0;
+        CREATE INDEX quota_provider_created_idx ON quota_reservations(provider, created_at_ms);
+        UPDATE provider_breakers SET open_until_ms = 0, failure_streak = 0, reason = NULL
+          WHERE reason = 'invalid-response';
+        ALTER TABLE runtime_meta ADD COLUMN next_cognition_at_ms INTEGER;
+        ALTER TABLE runtime_meta ADD COLUMN last_cognition_error_code TEXT;
+        CREATE TABLE society_state (
+          singleton INTEGER PRIMARY KEY CHECK(singleton = 1), codec_version INTEGER NOT NULL,
+          revision INTEGER NOT NULL, state_json TEXT NOT NULL, updated_at_ms INTEGER NOT NULL);
+        CREATE TABLE cognition_contexts (
+          sequence INTEGER PRIMARY KEY AUTOINCREMENT, job_id TEXT UNIQUE,
+          actor TEXT NOT NULL, prepared_json TEXT NOT NULL, generation INTEGER NOT NULL);
+        CREATE TABLE physical_runs (
+          run_id TEXT PRIMARY KEY, sim_day INTEGER NOT NULL, sim_watch INTEGER NOT NULL,
+          due_at_ms INTEGER NOT NULL, world_revision INTEGER NOT NULL, committed_at_ms INTEGER NOT NULL,
+          actions_json TEXT NOT NULL);
+        CREATE TABLE society_events (
+          sequence INTEGER PRIMARY KEY AUTOINCREMENT, world_revision INTEGER NOT NULL,
+          occurred_at_ms INTEGER NOT NULL, job_id TEXT NOT NULL UNIQUE, actor TEXT NOT NULL,
+          event_json TEXT NOT NULL);
+        UPDATE cognition_jobs SET status = 'dead', lease_expires_at_ms = NULL, error_code = 'superseded_by_individual_minds'
+          WHERE status NOT IN ('applied', 'dead');
+        UPDATE watch_runs SET phase = 'cancelled', error_code = 'independent_physical_clock'
+          WHERE phase = 'claimed';
+      `);
+      const society = createSocietyState(deserializeWorldState(this.world().state_json), nowMs);
+      this.sql.exec('INSERT INTO society_state VALUES (1, ?, ?, ?, ?)', society.version, society.revision, JSON.stringify(society), nowMs);
+      this.sql.exec('UPDATE runtime_meta SET next_cognition_at_ms = ? WHERE singleton = 1', nowMs + 60_000);
+      this.sql.exec('INSERT INTO _sql_schema_migrations VALUES (7, ?)', nowMs);
+      this.appendEvent('society.initialized', nowMs, { residents: 25, societyVersion: society.version, physicalWorldPreserved: true });
+    });
+  }
+
+  /** Additive read indexes only: no world, quota or historical rows change. */
+  private migrateToV8(): void {
+    this.state.storage.transactionSync(() => {
+      this.sql.exec('CREATE INDEX provider_attempts_recent_idx ON provider_attempts(recorded_at_ms DESC)');
+      this.sql.exec('CREATE INDEX quota_day_provider_idx ON quota_reservations(day, provider)');
+      this.sql.exec(`CREATE INDEX quota_provider_activity_idx ON quota_reservations(provider,
+        MAX(created_at_ms, COALESCE(dispatched_at_ms, 0), COALESCE(settled_at_ms, 0)))`);
+      this.sql.exec('INSERT INTO _sql_schema_migrations VALUES (8, ?)', Date.now());
+    });
+  }
+
+  /** Preserve the exact previous cognitive singleton before adding documents.
+   * No physical world, outstanding job, allowance or schedule is rewritten. */
+  private migrateToV9(): void {
+    this.state.storage.transactionSync(() => {
+      const row = this.sql.exec<{ codec_version: number; revision: number; state_json: string }>(
+        'SELECT codec_version,revision,state_json FROM society_state WHERE singleton=1').one();
+      const decoded = parseSocietyState(JSON.parse(row.state_json));
+      if (!decoded.ok) throw new RangeError(decoded.code);
+      const nowMs = Date.now();
+      this.sql.exec(`CREATE TABLE society_layout_backups (
+        migration_version INTEGER PRIMARY KEY, codec_version INTEGER NOT NULL, revision INTEGER NOT NULL,
+        state_json TEXT NOT NULL, sha256 TEXT NOT NULL, created_at_ms INTEGER NOT NULL);
+        CREATE TABLE authored_publications (
+          sequence INTEGER PRIMARY KEY AUTOINCREMENT, publication_id TEXT NOT NULL UNIQUE,
+          draft_id TEXT NOT NULL,
+          author TEXT NOT NULL, is_public INTEGER NOT NULL CHECK(is_public IN(0,1)),
+          published_at_ms INTEGER NOT NULL, publication_json TEXT NOT NULL);
+        CREATE INDEX authored_publications_public_idx ON authored_publications(is_public,sequence DESC);
+        CREATE INDEX authored_publications_draft_idx ON authored_publications(draft_id,is_public,sequence DESC);
+        CREATE TABLE provider_rejections (
+          sequence INTEGER PRIMARY KEY AUTOINCREMENT, attempt_id TEXT NOT NULL UNIQUE,
+          recorded_at_ms INTEGER NOT NULL, diagnostic_json TEXT NOT NULL, byte_count INTEGER NOT NULL);
+        CREATE INDEX provider_rejections_expiry_idx ON provider_rejections(recorded_at_ms);
+        ALTER TABLE society_state ADD COLUMN archived_record_next_id INTEGER NOT NULL DEFAULT 0;`);
+      this.sql.exec('INSERT INTO society_layout_backups VALUES (9,?,?,?,?,?)', row.codec_version, row.revision,
+        row.state_json, createHash('sha256').update(row.state_json).digest('hex'), nowMs);
+      // Historical intermediate codecs remain exact: SQL11 adds retrieval;
+      // SQL12 adds the private channel attention markers independently.
+      const { retrieval, ...recordSociety } = decoded.state;
+      void retrieval;
+      this.sql.exec('UPDATE society_state SET codec_version=?,state_json=?,updated_at_ms=? WHERE singleton=1',
+        2, JSON.stringify({ ...recordSociety, version: 2, conversations: recordSociety.conversations.map(c => {
+          const { attentionThrough, ...legacy } = c; void attentionThrough; return legacy;
+        }) }), nowMs);
+      this.sql.exec('INSERT INTO _sql_schema_migrations VALUES (9,?)', nowMs);
+    });
+  }
+
+  private migrateToV10(): void {
+    this.state.storage.transactionSync(() => {
+      const nowMs = Date.now();
+      migrateQuotaModels(this.sql, nowMs);
+      this.sql.exec('INSERT INTO _sql_schema_migrations VALUES (10,?)', nowMs);
+    });
+  }
+
+  /** Archive the exact old cognitive row before adding empty private lookup
+   * state. No clock, world, queued job, quota or document content changes. */
+  private migrateToV11(): void {
+    this.state.storage.transactionSync(() => {
+      const row = this.sql.exec<{ codec_version: number; revision: number; state_json: string }>(
+        'SELECT codec_version,revision,state_json FROM society_state WHERE singleton=1').one();
+      const original: unknown = JSON.parse(row.state_json), decoded = parseSocietyState(original);
+      if (!decoded.ok) throw new RangeError(decoded.code);
+      if (!original || typeof original !== 'object' || !('version' in original)
+        || original.version !== row.codec_version || decoded.state.revision !== row.revision) {
+        throw new RangeError('Society migration row metadata differs from its content');
+      }
+      const nowMs = Date.now();
+      this.sql.exec('INSERT INTO society_layout_backups VALUES (11,?,?,?,?,?)', row.codec_version, row.revision,
+        row.state_json, createHash('sha256').update(row.state_json).digest('hex'), nowMs);
+      this.sql.exec('UPDATE society_state SET codec_version=?,state_json=?,updated_at_ms=? WHERE singleton=1',
+        3, JSON.stringify({ ...decoded.state, version: 3, conversations: decoded.state.conversations.map(c => {
+          const { attentionThrough, ...legacy } = c; void attentionThrough; return legacy;
+        }) }), nowMs);
+      this.sql.exec('INSERT INTO _sql_schema_migrations VALUES (11,?)', nowMs);
+    });
+  }
+
+  /** Preserve the complete prior row before admitting concurrent channels.
+   * Only the codec and derived private attention markers change; clocks,
+   * jobs, authored records, quotas, obligations and physical state stay exact. */
+  private migrateToV12(): void {
+    this.state.storage.transactionSync(() => {
+      const row = this.sql.exec<{ codec_version: number; revision: number; state_json: string }>(
+        'SELECT codec_version,revision,state_json FROM society_state WHERE singleton=1').one();
+      const original: unknown = JSON.parse(row.state_json), decoded = parseSocietyState(original);
+      if (!decoded.ok) throw new RangeError(decoded.code);
+      if (!original || typeof original !== 'object' || !('version' in original)
+        || original.version !== 3 || row.codec_version !== 3 || decoded.state.revision !== row.revision) {
+        throw new RangeError('Society attention migration requires matching codec3 row metadata');
+      }
+      const previousFields = { ...decoded.state, version: 3, conversations: decoded.state.conversations.map(c => {
+        const { attentionThrough, ...legacy } = c; void attentionThrough; return legacy;
+      }) };
+      // Legacy validation trims text. Refuse to apply that normalization to a
+      // saved row: this migration may append markers, never rewrite old fields.
+      const canonical = (value: unknown) => JSON.stringify(value, (_key, item: unknown) => item !== null
+        && typeof item === 'object' && !Array.isArray(item)
+        ? Object.fromEntries(Object.entries(item).sort(([a], [b]) => a.localeCompare(b))) : item);
+      if (canonical(previousFields) !== canonical(original)) throw new RangeError('Society attention migration would change prior fields');
+      const nowMs = Date.now();
+      this.sql.exec('INSERT INTO society_layout_backups VALUES (12,?,?,?,?,?)', row.codec_version, row.revision,
+        row.state_json, createHash('sha256').update(row.state_json).digest('hex'), nowMs);
+      this.sql.exec('UPDATE society_state SET codec_version=?,state_json=?,updated_at_ms=? WHERE singleton=1',
+        decoded.state.version, JSON.stringify(decoded.state), nowMs);
+      this.sql.exec('INSERT INTO _sql_schema_migrations VALUES (12,?)', nowMs);
+    });
+  }
+
   private backfillCurrentRecord(): void {
     const stored = this.world();
     const world = deserializeWorldState(stored.state_json);
@@ -1315,9 +1589,11 @@ export class HabitatWorld extends DurableObject<Env> {
   }
 }
 
-function happeningFromRow(row: HappeningRow): Happening {
+function happeningFromRow(row: HappeningRow, habitatId: string): Happening & { speech?: ArchivedSpeech } {
   const who = JSON.parse(row.who_json) as Happening['who'];
+  const speech = archivedSpeech(habitatId, row.happening_id, { who, text: row.text, kind: row.kind });
   return {
+    ...(speech ? { speech } : {}),
     day: row.day,
     watch: row.watch,
     minute: row.minute,

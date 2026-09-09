@@ -20,7 +20,19 @@ import {
   type Happening, type WorldState,
 } from './state';
 import { closeEconomyDay, outstanding, remember } from './economy';
-import { attempt, VERBS, type Intent, type VerbName, type Outcome } from './verbs';
+import { attempt, decodeIntentFor, VERBS, type Intent, type VerbName, type Outcome } from './verbs';
+import { PLANNABLE_VERBS, type PhysicalObservation, type PlannedAction } from '../society/types';
+
+export type SocietyWatchOptions = {
+  plans: Partial<Record<ResidentId, PlannedAction>>;
+  /** An authored publication uses this same action slot. Its authority lives in
+   * the society domain; it is deliberately not a renamed note/work verb. */
+  publications?: Partial<Record<ResidentId, { intentId: string }>>;
+  publishRecord?: (actor: ResidentId, intentId: string, world: WorldState) => Outcome;
+  /** Called once per resident, with the pre-advance day/watch, after their real
+   * action. The caller persists these observations with the resulting world. */
+  onAction?: (observation: PhysicalObservation) => void;
+};
 
 /** How fast the five conditions fall over one watch, with nobody doing anything
  *  about them. Slow: these are meant to bite over days, not hours. */
@@ -255,12 +267,69 @@ function assertCognitionActor(state: WorldState, cognition?: Readonly<Intent>): 
   }
 }
 
+function assertSocietyActors(state: WorldState, society?: SocietyWatchOptions): void {
+  for (const [actor, step] of Object.entries(society?.plans ?? {})) {
+    if (!step || !Object.hasOwn(state.bodies, actor) || step.intent.actor !== actor) throw new TypeError('Invalid planned actor');
+    const { actor: subject, ...raw } = step.intent;
+    if (!decodeIntentFor(subject, raw).ok || !(PLANNABLE_VERBS as readonly string[]).includes(raw.verb)) throw new TypeError('Invalid planned action');
+  }
+  for (const [actor, publication] of Object.entries(society?.publications ?? {})) {
+    if (!publication || !Object.hasOwn(state.bodies, actor) || !publication.intentId || !society?.publishRecord) {
+      throw new TypeError('Invalid publication action');
+    }
+  }
+}
+
+const NEGOTIATED_ROUTINES = new Set<VerbName>(['give', 'lend', 'trade', 'speak', 'ask', 'listen', 'joke', 'argue', 'confide', 'greet', 'flirt', 'teach']);
+/** The old policy remains available to legacy callers. With independent minds,
+ * it cannot invent dialogue or accept a financial exchange for a second actor. */
+function routineFor(state: WorldState, id: ResidentId, roll: () => number, society?: SocietyWatchOptions): Intent {
+  const proposed = choose(state, id, roll);
+  if (!society || !NEGOTIATED_ROUTINES.has(proposed.verb)) return proposed;
+  if (proposed.verb === 'trade' && !VERBS.repair.requires?.(state, { actor: id, verb: 'repair' })) return { actor: id, verb: 'repair' };
+  return { actor: id, verb: state.bodies[id].condition.rested < 60 ? 'rest' : 'observe' };
+}
+
+/** Plan travel follows the authored topology. All hops fit within the existing
+ * six-hour watch; crossing an opening is not another productive work action. */
+function travelForPlan(state: WorldState, actor: ResidentId, destination: RoomId): Outcome {
+  const start = state.bodies[actor].room;
+  if (destination === 'breach' || !Object.hasOwn(ROOM_BY_ID, destination)) return { ok: false, refused: 'planned destination is inaccessible' };
+  if (start === destination) return { ok: true };
+  const queue: RoomId[] = [start], previous = new Map<RoomId, RoomId | null>([[start, null]]);
+  for (let i = 0; i < queue.length && !previous.has(destination); i += 1) {
+    for (const next of ROOM_BY_ID[queue[i]!].connects) {
+      if (next === 'breach' || previous.has(next)) continue;
+      previous.set(next, queue[i]!); queue.push(next);
+    }
+  }
+  if (!previous.has(destination)) return { ok: false, refused: 'no connected route to planned destination' };
+  const path: RoomId[] = [];
+  for (let room: RoomId | null = destination; room !== start; room = previous.get(room!)!) path.unshift(room!);
+  for (const room of path) {
+    const moved = attempt(state, { actor, verb: 'go', room });
+    if (!moved.ok) return moved;
+  }
+  return { ok: true };
+}
+
+function urgentPlanInterruption(state: WorldState, actor: ResidentId): string | undefined {
+  const c = state.bodies[actor].condition;
+  if (c.fed < 18) return 'Critical hunger requires food or its missing supplies';
+  if (c.rested < 15) return 'Exhaustion requires sleep';
+  if (c.fed < 28) return 'Hunger requires food or its missing supplies';
+  if (c.well < 20) return 'Poor health requires washing or clean water';
+  return undefined;
+}
+
 /** One watch. Everybody acts once, in an order that changes with the day so
  *  nobody is permanently first through the door. */
 export function advanceWatch(
   state: WorldState, cognition?: Readonly<Intent>, attemptedActor?: ResidentId, onDecision?: (outcome: Outcome) => void,
+  society?: SocietyWatchOptions,
 ): WorldState {
   assertCognitionActor(state, cognition);
+  assertSocietyActors(state, society);
   const roll = streamFor(state, 7);
   const order = RESIDENTS.map(({ id }) => ({ id, priority: state.bodies[id].pressure + roll() * 40 }))
     .sort((a, b) => b.priority - a.priority || a.id.localeCompare(b.id))
@@ -279,14 +348,45 @@ export function advanceWatch(
     // to reach where they are going and then do something there. Charging a
     // whole watch per doorway collapsed the place into a commute: everybody
     // spent every watch in transit and nobody ever arrived at their post.
-    const injected = cognition?.actor === id ? cognition : undefined;
-    let intent: Intent = injected ? { ...injected } : choose(state, id, roll);
-    let outcome = attempt(state, intent);
-    for (let hops = 0; !injected && hops < ROOMS.length && outcome.ok && intent.verb === 'go'; hops += 1) {
-      intent = choose(state, id, roll);
+    const planned = society?.plans[id];
+    const publication = society?.publications?.[id];
+    const interrupted = planned || publication ? urgentPlanInterruption(state, id) : undefined;
+    if (publication && !interrupted) {
+      // Branch before ordinary actions: publication cannot also earn routine
+      // labour, consume repair materials, or complete a different planned step.
+      const result = society!.publishRecord!(id, publication.intentId, state);
+      const body = state.bodies[id];
+      body.doing = result.ok ? 'publishing an authored record' : 'unable to publish the intended record';
+      body.pressure = bounded(body.pressure + (result.ok ? -1 : 6));
+      if (body.plan && body.plan.untilWatch < state.day * 4 + state.watch - 1) body.plan = null;
+      emitted.push(result.happening ? { ...result.happening, day: state.day, watch: state.watch,
+        minute: (state.watch - 1) * 360 + Math.floor((slot / order.length) * 340) + 8 }
+        : { day: state.day, watch: state.watch, minute: (state.watch - 1) * 360 + Math.floor((slot / order.length) * 340) + 8,
+          room: body.room, who: [id], kind: 'note', text: result.ok ? `${RESIDENT_BY_ID[id].name.split(' ')[0]} published an authored record.`
+            : `${RESIDENT_BY_ID[id].name.split(' ')[0]} could not publish the intended record: ${result.refused ?? 'unavailable'}.` });
+      slot += 1;
+      continue;
+    }
+    const injected = !planned && !publication && cognition?.actor === id ? cognition : undefined;
+    let intent: Intent = planned && !interrupted ? { ...planned.intent } : injected ? { ...injected } : routineFor(state, id, roll, society);
+    let outcome: Outcome;
+    if (planned && !interrupted) {
+      const destination = intent.verb === 'go' ? intent.room : planned.at;
+      outcome = destination ? travelForPlan(state, id, destination) : { ok: true };
+      if (outcome.ok && intent.verb !== 'go') outcome = attempt(state, intent);
+      else if (!intent.room && intent.verb === 'go') outcome = { ok: false, refused: 'nowhere named' };
+    } else if ((planned || publication) && interrupted?.startsWith('Poor health')) {
+      intent = { actor: id, verb: state.economy.stock.water >= 2 ? 'wash' : 'clean' };
+      outcome = travelForPlan(state, id, 'well');
+      if (outcome.ok) outcome = attempt(state, intent);
+    } else outcome = attempt(state, intent);
+    for (let hops = 0; !injected && (!planned || interrupted) && hops < ROOMS.length && outcome.ok && intent.verb === 'go'; hops += 1) {
+      intent = routineFor(state, id, roll, society);
       outcome = attempt(state, intent);
     }
     const b = state.bodies[id];
+    society?.onAction?.({ actor: id, day: state.day, watch: state.watch, intent: { ...intent }, outcome: structuredClone(outcome),
+      actualRoom: b.room, ...(planned ? { stepId: planned.stepId } : {}), ...(interrupted ? { interrupted } : {}) });
     // A thought happened even when the world refused what it proposed.
     if (injected) {
       b.thoughtOn = state.day;
@@ -297,8 +397,10 @@ export function advanceWatch(
     }
     if (b.plan && b.plan.untilWatch < state.day * 4 + state.watch - 1) b.plan = null;
     if (!outcome.ok) remember(state, id, { kind: intent.verb, ...(intent.target ? { other: intent.target } : {}), outcome: outcome.refused ?? 'refused' });
-    if (injected && !outcome.ok) emitted.push({ day: state.day, watch: state.watch, minute: (state.watch - 1) * 360 + 1,
+    if ((injected || planned) && !outcome.ok) emitted.push({ day: state.day, watch: state.watch, minute: (state.watch - 1) * 360 + 1,
       room: b.room, who: [id], kind: 'note', text: `${RESIDENT_BY_ID[id].name.split(' ')[0]} tried ${intent.verb}: ${outcome.refused ?? 'refused'}.` });
+    if (interrupted) emitted.push({ day: state.day, watch: state.watch, minute: (state.watch - 1) * 360 + 2,
+      room: b.room, who: [id], kind: 'note', text: `${RESIDENT_BY_ID[id].name.split(' ')[0]}'s planned activity was interrupted: ${interrupted.toLowerCase()}.` });
     b.doing = doingFor(intent, outcome.ok);
     // A world that says no to somebody is a world they have to think about.
     b.pressure = bounded(b.pressure + (outcome.ok ? -1 : 6));
@@ -388,13 +490,15 @@ function closeDay(state: WorldState): void {
  * cleared when watch I begins and completing watch IV rolls the world forward. */
 export function advanceScheduledWatch(
   state: WorldState, cognition?: Readonly<Intent>, attemptedActor?: ResidentId, onDecision?: (outcome: Outcome) => void,
+  society?: SocietyWatchOptions,
 ): WorldState {
   assertCognitionActor(state, cognition);
+  assertSocietyActors(state, society);
   if (!Number.isInteger(state.watch) || state.watch < 1 || state.watch > NIGHT) {
     throw new RangeError(`Cannot schedule invalid watch ${state.watch}`);
   }
   if (state.watch === 1) { state.record = []; state.economy.events = []; }
-  advanceWatch(state, cognition, attemptedActor, onDecision);
+  advanceWatch(state, cognition, attemptedActor, onDecision, society);
   if (state.watch === NIGHT + 1) closeDay(state);
   return state;
 }

@@ -1,0 +1,619 @@
+{
+  "format": "villa-society-recovery-analysis-v1",
+  "scope": "Observed persisted recovery cut; no model calls or runtime mutation.",
+  "bundleSha256": "b1d72a341b4400516b3fc00ec9a6c74e8c3ecce9ba87248ab96a922c93a6f715",
+  "sourceSha256": "61607d822787311150f3dcc23124d107327dea2444fd0feab23b4c09495402ed",
+  "completeRecovery": true,
+  "capturedAtMs": 1788875020335,
+  "worldRevision": 52,
+  "day": 107,
+  "watch": 3,
+  "societyInitialized": true,
+  "coverage": {
+    "total": 25,
+    "everSucceeded": 9,
+    "neverSucceeded": 16,
+    "residents": [
+      {
+        "id": "A",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788874237138,
+        "lastAttemptAtMs": 1788874231714
+      },
+      {
+        "id": "B",
+        "appliedJobs": 2,
+        "lastSuccessAtMs": 1788874956841,
+        "lastAttemptAtMs": 1788874951721
+      },
+      {
+        "id": "C",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788873699272,
+        "lastAttemptAtMs": 1788873691705
+      },
+      {
+        "id": "D",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788874057822,
+        "lastAttemptAtMs": 1788874051711
+      },
+      {
+        "id": "E",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788874419830,
+        "lastAttemptAtMs": 1788874411716
+      },
+      {
+        "id": "F",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788874778148,
+        "lastAttemptAtMs": 1788874771719
+      },
+      {
+        "id": "G",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "H",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "I",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "J",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "K",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788873877826,
+        "lastAttemptAtMs": 1788873871709
+      },
+      {
+        "id": "L",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "M",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "N",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788874600567,
+        "lastAttemptAtMs": 1788874591718
+      },
+      {
+        "id": "O",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "P",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "Q",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "R",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "S",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "T",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "U",
+        "appliedJobs": 1,
+        "lastSuccessAtMs": 1788873515967,
+        "lastAttemptAtMs": 1788873511701
+      },
+      {
+        "id": "V",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "W",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "X",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      },
+      {
+        "id": "Y",
+        "appliedJobs": 0,
+        "lastSuccessAtMs": null,
+        "lastAttemptAtMs": null
+      }
+    ]
+  },
+  "cognition": {
+    "allHistoricJobs": 41,
+    "individualSocietyJobs": 11,
+    "statuses": {
+      "pending": 0,
+      "running": 0,
+      "deferred": 0,
+      "resolved": 0,
+      "applied": 11,
+      "dead": 0
+    },
+    "appliedWithPublicCommit": 11,
+    "appliedWithMessages": 11,
+    "appliedWithOfferChanges": 0,
+    "appliedWithAgreementChanges": 0,
+    "interpretation": "Applied means a validated decision was persisted, not that its purpose was useful or fulfilled."
+  },
+  "providers": [
+    {
+      "provider": "workers-ai",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "recordedOutcomes": 16,
+      "successfulProviderResponses": 3,
+      "recordedDispatches": 14,
+      "appliedSocietyJobs": 0,
+      "confirmed": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "unresolved": {
+        "reservations": 14,
+        "inputTokens": 57766,
+        "outputTokens": 2816,
+        "neurons": 361
+      },
+      "chargedInCurrentWindow": {
+        "requests": 4,
+        "inputTokens": 20886,
+        "outputTokens": 1536,
+        "neurons": 145
+      }
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "recordedOutcomes": 29,
+      "successfulProviderResponses": 16,
+      "recordedDispatches": 19,
+      "appliedSocietyJobs": 0,
+      "confirmed": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "unresolved": {
+        "reservations": 19,
+        "inputTokens": 67331,
+        "outputTokens": 2688,
+        "neurons": 0
+      },
+      "chargedInCurrentWindow": {
+        "requests": 1,
+        "inputTokens": 5869,
+        "outputTokens": 384,
+        "neurons": 0
+      }
+    },
+    {
+      "provider": "workers-ai",
+      "model": "@cf/openai/gpt-oss-120b",
+      "recordedOutcomes": 11,
+      "successfulProviderResponses": 11,
+      "recordedDispatches": 11,
+      "appliedSocietyJobs": 11,
+      "confirmed": {
+        "requests": 11,
+        "inputTokens": 18334,
+        "outputTokens": 2732,
+        "neurons": 774
+      },
+      "unresolved": {
+        "reservations": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "chargedInCurrentWindow": {
+        "requests": 11,
+        "inputTokens": 18334,
+        "outputTokens": 2732,
+        "neurons": 774
+      }
+    },
+    {
+      "provider": "workers-ai",
+      "model": "unknown",
+      "recordedOutcomes": 0,
+      "successfulProviderResponses": 0,
+      "recordedDispatches": 16,
+      "appliedSocietyJobs": 0,
+      "confirmed": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      },
+      "unresolved": {
+        "reservations": 16,
+        "inputTokens": 52706,
+        "outputTokens": 2048,
+        "neurons": 316
+      },
+      "chargedInCurrentWindow": {
+        "requests": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "neurons": 0
+      }
+    }
+  ],
+  "conversations": {
+    "retainedCurrent": 6,
+    "archivedAndCurrent": 6,
+    "bilateral": 3,
+    "uniquePublicMessages": 11,
+    "currentStatuses": {
+      "open": 6,
+      "closed": 0,
+      "expired": 0
+    }
+  },
+  "offers": {
+    "scope": "Current bounded society state",
+    "total": 0,
+    "statuses": {
+      "open": 0,
+      "accepted": 0,
+      "rejected": 0,
+      "replaced": 0,
+      "expired": 0
+    },
+    "history": {
+      "archivedAndCurrent": 0,
+      "latestKnownStatuses": {
+        "open": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "replaced": 0,
+        "expired": 0
+      },
+      "historyCaveat": "Evicted entries retain their last archived status; it is not a current active obligation."
+    }
+  },
+  "agreements": {
+    "scope": "Current bounded society state",
+    "total": 0,
+    "statuses": {
+      "active": 0,
+      "payment_due": 0,
+      "fulfilled": 0,
+      "breached": 0
+    },
+    "history": {
+      "archivedAndCurrent": 0,
+      "latestKnownStatuses": {
+        "active": 0,
+        "payment_due": 0,
+        "fulfilled": 0,
+        "breached": 0
+      },
+      "historyCaveat": "Evicted entries retain their last archived status; it is not a current active obligation."
+    }
+  },
+  "plans": {
+    "currentProjects": 9,
+    "active": 9,
+    "activePurposesWithoutPhysicalSteps": 6,
+    "stepsFinishedNotGoalsProven": 0,
+    "steps": {
+      "pending": 3,
+      "done": 0,
+      "failed": 0
+    },
+    "eligibleNextActions": 3
+  },
+  "physical": {
+    "scope": "Retained physical_runs only; older watch_runs are not reconstructed as individual outcomes.",
+    "committedWatches": 0,
+    "actions": 0,
+    "distinctActors": 0,
+    "successful": 0,
+    "refused": 0,
+    "plannedExecutions": 0,
+    "plannedSuccessful": 0,
+    "plannedInterrupted": 0,
+    "routineExecutions": 0,
+    "verbs": {
+      "go": 0,
+      "rest": 0,
+      "sleep": 0,
+      "eat": 0,
+      "drink": 0,
+      "wash": 0,
+      "work": 0,
+      "dig": 0,
+      "grow": 0,
+      "cook": 0,
+      "clean": 0,
+      "inspect": 0,
+      "repair": 0,
+      "charge": 0,
+      "observe": 0,
+      "note": 0,
+      "repay": 0
+    },
+    "otherVerbCount": 0
+  },
+  "economy": {
+    "stock": {
+      "produce": 76,
+      "meals": 100,
+      "water": 240,
+      "materials": 21
+    },
+    "maintenance": 100,
+    "money": {
+      "initial": 828.4872291863744,
+      "minted": 72,
+      "burned": 11,
+      "leaked": 10.697846750236494,
+      "wallets": 812.4945824361378,
+      "treasury": 66.29480000000004,
+      "total": 878.7893824361378,
+      "expected": 878.7893824361379,
+      "difference": -1.1368683772161603e-13,
+      "conserved": true,
+      "nonnegative": true
+    },
+    "history": {
+      "retainedEvents": 37,
+      "completeSequenceFromEconomyStart": true,
+      "nonconservingEvents": 0,
+      "negotiatedWorkPaymentEvents": 0,
+      "negotiatedWorkCellsTransferred": 0,
+      "agreementTransferOrLoanEvents": 0
+    },
+    "debts": {
+      "retained": 0,
+      "statuses": {
+        "open": 0,
+        "paid": 0,
+        "overdue": 0
+      },
+      "remainingCells": 0
+    }
+  },
+  "publicMessages": [
+    {
+      "id": "turn:3",
+      "conversationId": "conversation:2",
+      "participants": [
+        "A",
+        "U"
+      ],
+      "speaker": "A",
+      "text": "Ulla, may I borrow some paper and ink from the records room for a writing project?",
+      "atMs": 1788873160826
+    },
+    {
+      "id": "turn:8",
+      "conversationId": "conversation:7",
+      "participants": [
+        "B",
+        "K"
+      ],
+      "speaker": "B",
+      "text": "No problem at all, could you let me know what the current communication backlog looks like?",
+      "atMs": 1788873339160
+    },
+    {
+      "id": "turn:12",
+      "conversationId": "conversation:2",
+      "participants": [
+        "A",
+        "U"
+      ],
+      "speaker": "U",
+      "text": "Sure, I can spare some paper and ink – just let me know how much you need and when you’ll return it.",
+      "atMs": 1788873515967
+    },
+    {
+      "id": "turn:18",
+      "conversationId": "conversation:17",
+      "participants": [
+        "C",
+        "N"
+      ],
+      "speaker": "C",
+      "text": "Noor, I need the waking criteria documented before any case arises. Please sit and write them down.",
+      "atMs": 1788873699272
+    },
+    {
+      "id": "turn:22",
+      "conversationId": "conversation:7",
+      "participants": [
+        "B",
+        "K"
+      ],
+      "speaker": "K",
+      "text": "The backlog is light right now—just a few pending logs from the workshops and a couple of status updates from the garden. Anything specific you need?",
+      "atMs": 1788873877826
+    },
+    {
+      "id": "turn:27",
+      "conversationId": "conversation:26",
+      "participants": [
+        "D",
+        "H"
+      ],
+      "speaker": "D",
+      "text": "Halim, could we schedule a brief review of the dock's structural integrity to ensure nothing unexpected arises?",
+      "atMs": 1788874057822
+    },
+    {
+      "id": "turn:33",
+      "conversationId": "conversation:2",
+      "participants": [
+        "A",
+        "U"
+      ],
+      "speaker": "A",
+      "text": "Thank you, Ulla. Could I take enough paper for a few pages and a vial of ink, and return them by tomorrow?",
+      "atMs": 1788874237138
+    },
+    {
+      "id": "turn:38",
+      "conversationId": "conversation:37",
+      "participants": [
+        "E",
+        "L"
+      ],
+      "speaker": "E",
+      "text": "Lior, the salvage allocation of 4 materials to the workshops seems excessive when we have only 21 in stock; could we reassign 2 to the garden instead?",
+      "atMs": 1788874419830
+    },
+    {
+      "id": "turn:43",
+      "conversationId": "conversation:17",
+      "participants": [
+        "C",
+        "N"
+      ],
+      "speaker": "N",
+      "text": "Cato, how did you sleep last night? Once you're rested, I can sit down and draft the waking criteria for you.",
+      "atMs": 1788874600567
+    },
+    {
+      "id": "turn:48",
+      "conversationId": "conversation:47",
+      "participants": [
+        "F",
+        "M"
+      ],
+      "speaker": "F",
+      "text": "Hey Mara, I heard the Common's coffee is so strong it could dig a tunnel—any chance you need a hand (or a joke) with the next excavation?",
+      "atMs": 1788874778148
+    },
+    {
+      "id": "turn:54",
+      "conversationId": "conversation:7",
+      "participants": [
+        "B",
+        "K"
+      ],
+      "speaker": "B",
+      "text": "Could you forward the latest garden status updates and any pending workshop logs?",
+      "atMs": 1788874956841
+    }
+  ],
+  "limitations": [
+    "Public messages are communicated claims, not verified facts.",
+    "Current mind/project/offer arrays are bounded; archived counts are labelled separately.",
+    "No private project goals, reasons, reflections, model inputs or raw outputs are printed.",
+    "A recorded dispatch can have an unknown transport outcome; only confirmed usage authorizes a quota refund.",
+    "No autonomous quality score can be inferred from acceptance or balances alone."
+  ],
+  "forecast": {
+    "source": "Forecast on a clone, NOT observed production. No future cognition is assumed.",
+    "startingDay": 107,
+    "startingWatch": 3,
+    "endingDay": 107,
+    "endingWatch": 4,
+    "actions": 25,
+    "distinctActors": 25,
+    "successful": 25,
+    "refused": 0,
+    "plannedExecutions": 3,
+    "plannedSuccessful": 3,
+    "plannedInterrupted": 0,
+    "routineExecutions": 22,
+    "verbs": {
+      "go": 0,
+      "rest": 0,
+      "sleep": 2,
+      "eat": 22,
+      "drink": 0,
+      "wash": 0,
+      "work": 1,
+      "dig": 0,
+      "grow": 0,
+      "cook": 0,
+      "clean": 0,
+      "inspect": 0,
+      "repair": 0,
+      "charge": 0,
+      "observe": 0,
+      "note": 0,
+      "repay": 0
+    },
+    "otherVerbCount": 0,
+    "money": {
+      "initial": 828.4872291863744,
+      "minted": 72,
+      "burned": 11,
+      "leaked": 10.697846750236494,
+      "wallets": 801.4945824361378,
+      "treasury": 77.29480000000004,
+      "total": 878.7893824361378,
+      "expected": 878.7893824361379,
+      "difference": -1.1368683772161603e-13,
+      "conserved": true,
+      "nonnegative": true
+    },
+    "stockDelta": {
+      "produce": 0,
+      "meals": -22,
+      "water": -22,
+      "materials": 0
+    },
+    "maintenanceDelta": 0,
+    "agreementStatuses": {
+      "active": 0,
+      "payment_due": 0,
+      "fulfilled": 0,
+      "breached": 0
+    }
+  }
+}

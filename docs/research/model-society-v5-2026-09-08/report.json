@@ -1,0 +1,497 @@
+{
+  "scope": "Isolated GENESIS replay using the real scheduler, society core and physical engine. No production state.",
+  "limits": "One physical watch. No SQL, production alarm, sustained emergence or semantic-quality verification. Virtual turn timestamps are fixed.",
+  "humanReview": {
+    "status": "pending",
+    "questions": [
+      "Does each voice follow its own situation without inventing names, evidence, resources or another voice?",
+      "Do messages answer the actual received turn? Inspect refusals and counteroffers as well as acceptances.",
+      "Do projects persist or change for a concrete reason after the physical observation?",
+      "Were any offers made, independently accepted and physically fulfilled? Zero is a result, not success.",
+      "Check claimed goal achievement against recorded steps; completed steps do not establish the broader goal."
+    ]
+  },
+  "binding": "cf263c0df1e141ec1e24024af963dd1b8b5e3aa70f1cd0d2d5816288ef4887cf",
+  "halted": "call_limit_reached",
+  "attemptCount": 4,
+  "newCalls": 4,
+  "accountedNeurons": 58,
+  "maxNeurons": 750,
+  "unknownUsageReservations": 0,
+  "residents": [
+    {
+      "id": "A",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "B",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "C",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "D",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 1,
+      "skipped": []
+    },
+    {
+      "id": "E",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "F",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "G",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "H",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "I",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "J",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "K",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "L",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "M",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "N",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "O",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "P",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "Q",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "R",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "S",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "T",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "U",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "V",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "W",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "X",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "Y",
+      "initialOpportunity": false,
+      "calls": 0,
+      "acceptedDecisions": 0,
+      "skipped": []
+    }
+  ],
+  "physicalWatchCount": 0,
+  "observations": [],
+  "acceptedDecisionCount": 4,
+  "failures": [],
+  "final": {
+    "day": 100,
+    "watch": 1,
+    "hash": "94be6012c68b5e77c4df5c0ba6c558aa9e7dcb077ed2c1483495551411c543ef",
+    "publicSociety": {
+      "version": 1,
+      "revision": 8,
+      "startedAtMs": 1788825600000,
+      "residents": [
+        {
+          "id": "A",
+          "lastAttemptAtMs": 1788825601000,
+          "lastSuccessAtMs": 1788825601001,
+          "project": {
+            "id": "project:0",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 0
+          }
+        },
+        {
+          "id": "B",
+          "lastAttemptAtMs": 1788825602000,
+          "lastSuccessAtMs": 1788825602001,
+          "project": {
+            "id": "project:2",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "C",
+          "lastAttemptAtMs": 1788825603000,
+          "lastSuccessAtMs": 1788825603001,
+          "project": {
+            "id": "project:5",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "D",
+          "lastAttemptAtMs": 1788825604000,
+          "lastSuccessAtMs": 1788825604001,
+          "project": {
+            "id": "project:8",
+            "visibility": "private",
+            "goal": null,
+            "status": "active",
+            "completedSteps": 0,
+            "totalSteps": 1
+          }
+        },
+        {
+          "id": "E",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "F",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "G",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "H",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "I",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "J",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "K",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "L",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "M",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "N",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "O",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "P",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "Q",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "R",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "S",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "T",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "U",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "V",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "W",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "X",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "Y",
+          "lastAttemptAtMs": null,
+          "lastSuccessAtMs": null,
+          "project": null
+        }
+      ],
+      "conversations": [],
+      "offers": [],
+      "agreements": [],
+      "coverage": {
+        "total": 25,
+        "neverThought": 21,
+        "waitingForReply": []
+      }
+    },
+    "accounts": {
+      "treasury": 0,
+      "maintenance": 90,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 11,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 8,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 0,
+      "credits:B": 0,
+      "credits:C": 0,
+      "credits:D": 0,
+      "credits:E": 0,
+      "credits:F": 0,
+      "credits:G": 0,
+      "credits:H": 0,
+      "credits:I": 0,
+      "credits:J": 0,
+      "credits:K": 0,
+      "credits:L": 0,
+      "credits:M": 0,
+      "credits:N": 0,
+      "credits:O": 0,
+      "credits:P": 0,
+      "credits:Q": 0,
+      "credits:R": 0,
+      "credits:S": 0,
+      "credits:T": 0,
+      "credits:U": 0,
+      "credits:V": 0,
+      "credits:W": 0,
+      "credits:X": 0,
+      "credits:Y": 0,
+      "stock:produce": 60,
+      "stock:meals": 100,
+      "stock:water": 250,
+      "stock:materials": 16,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 0,
+      "ledger:leaked": 0
+    },
+    "balances": {
+      "A": 15,
+      "B": 8,
+      "C": 8,
+      "D": 15,
+      "E": 10,
+      "F": 13,
+      "G": 17,
+      "H": 8,
+      "I": 11,
+      "J": 15,
+      "K": 12,
+      "L": 8,
+      "M": 17,
+      "N": 17,
+      "O": 15,
+      "P": 16,
+      "Q": 10,
+      "R": 17,
+      "S": 17,
+      "T": 10,
+      "U": 13,
+      "V": 8,
+      "W": 13,
+      "X": 12,
+      "Y": 10
+    },
+    "stock": {
+      "produce": 60,
+      "meals": 100,
+      "water": 250,
+      "materials": 16
+    },
+    "economicEvents": [],
+    "record": []
+  }
+}

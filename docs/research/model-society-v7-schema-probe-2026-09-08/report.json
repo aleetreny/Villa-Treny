@@ -1,0 +1,10 @@
+{
+  "newCalls": 1,
+  "state": "completed",
+  "accountedNeurons": 82,
+  "validation": {
+    "ok": false,
+    "code": "nonfinal_or_truncated"
+  },
+  "warning": "One format compatibility sample. It does not demonstrate conditional enforcement for every possible output, negotiation or sustained autonomy."
+}

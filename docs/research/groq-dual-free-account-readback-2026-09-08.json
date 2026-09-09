@@ -1,0 +1,39 @@
+{
+  "format": "villa-groq-dual-free-account-readback-v1",
+  "verifiedAt": "2026-09-08T20:10:48.398Z",
+  "source": "Authenticated Groq console through native browser after user login",
+  "project": "habitat-prod",
+  "plan": "Free",
+  "planEvidence": "groq-free-account-readback-2026-09-08.json",
+  "allowedModels": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "limitsPerModel": {
+    "rpm": 30,
+    "rpd": 1000,
+    "tpm": 8000,
+    "tpd": 200000
+  },
+  "projectLimitOrigins": {
+    "openai/gpt-oss-120b": "Inherited organization defaults, shown in Configure Model Limits; cancelled without override",
+    "openai/gpt-oss-20b": "Existing project override, table reread unchanged"
+  },
+  "actions": [
+    "Enabled120B while preserving20B in only-allow list; saved once",
+    "Reread allowed-model list and20B override table",
+    "Selected120B in Configure Model Limits; all defaults and org limits read; cancelled"
+  ],
+  "billingUpgrade": false,
+  "newCredential": false,
+  "providerProbes": 0,
+  "officialReferences": [
+    "https://console.groq.com/docs/service-tiers",
+    "https://console.groq.com/docs/rate-limits"
+  ],
+  "limitations": [
+    "Independent model allowances; no fungible400K pool",
+    "Organization usage by other projects shares each model limit",
+    "This account setting does not by itself prove runtime deployment or a successful120B result"
+  ]
+}

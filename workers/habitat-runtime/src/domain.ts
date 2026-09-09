@@ -321,8 +321,8 @@ export function worldRelationships(state: WorldState) {
   });
 }
 
-export function advanceWorldWatch(state: WorldState, cognition?: Intent, attemptedActor?: ResidentId, onDecision?: Parameters<typeof advanceScheduledWatch>[3]): WorldState {
-  return advanceScheduledWatch(state, cognition, attemptedActor, onDecision);
+export function advanceWorldWatch(state: WorldState, cognition?: Intent, attemptedActor?: ResidentId, onDecision?: Parameters<typeof advanceScheduledWatch>[3], society?: Parameters<typeof advanceScheduledWatch>[4]): WorldState {
+  return advanceScheduledWatch(state, cognition, attemptedActor, onDecision, society);
 }
 
 export function decodeCognition(actor: ResidentId, payload: unknown): Intent | undefined {

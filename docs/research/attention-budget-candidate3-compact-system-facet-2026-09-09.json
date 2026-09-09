@@ -1,0 +1,1805 @@
+{
+  "format": "villa-attention-counterfactual-system-budget-v1",
+  "baseLabel": "candidate3",
+  "measuredAt": "2026-09-09T11:07:27.533Z",
+  "sourcePrivateMeasurementSha256": "a48fce77fc1d2ce8712d5e4f21272cb91b29b7d03e11efd4a6c8870d67cefd58",
+  "candidateSourcePath": "src/lib/habitat/society/attention-instructions-candidate.ts",
+  "candidateSourceSha256": "b7fcb4b3a62b00528da999fc7216288f8492dd94f3aab1f2a6d671c308bce866",
+  "scriptSha256": "fc6cd2308e17d42281fd82f085b148b58c7eb8423d1c8fb18b4c5e872abec179",
+  "systemSha256": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+  "producerUnchanged": true,
+  "onlySystemReplacedOnClonedSavedJobs": true,
+  "usersAndSchemasByteIdentical": true,
+  "fixtureUnchanged": true,
+  "provisionalFramingTokens": 128,
+  "modelRequests": 0,
+  "networkRequests": 0,
+  "summaries": [
+    {
+      "caseName": "observed-revision317",
+      "residents": 25,
+      "minimumCombinedTokenReservation": 6853,
+      "maximumCombinedTokenReservation": 8177,
+      "over8000Actors": [
+        "C",
+        "M",
+        "Q",
+        "S",
+        "U"
+      ],
+      "byteGuardFailureActors": [],
+      "maxPayloadBytes": 25937,
+      "maxComponentBytes": 14478,
+      "totalMaximumCFNeurons": 21682
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "residents": 25,
+      "minimumCombinedTokenReservation": 5636,
+      "maximumCombinedTokenReservation": 33359,
+      "over8000Actors": [
+        "A"
+      ],
+      "byteGuardFailureActors": [
+        "A"
+      ],
+      "maxPayloadBytes": 32205,
+      "maxComponentBytes": 18190,
+      "totalMaximumCFNeurons": 17553
+    }
+  ],
+  "rows": [
+    {
+      "caseName": "observed-revision317",
+      "actor": "A",
+      "baseCombinedTokenReservation": 7872,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5498,
+        "schemaBytes": 11889,
+        "combinedBytes": 22715,
+        "maximumComponentBytes": 11889,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1723,
+        "schemaOrdinaryTokens": 3387
+      },
+      "groq": {
+        "reservedInputTokens": 6205,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7229,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23864,
+        "outputTokens": 1024,
+        "neurons": 830
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "fd66f7137c6039ff113744562ecfc49233e44b65d96552da1a1c3516bd10d82c",
+        "schema": "63e50d191b35cee774667508b197d5d49ee609a272bd2dede0e8c67da4a7be15"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "B",
+      "baseCombinedTokenReservation": 8112,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5395,
+        "schemaBytes": 12736,
+        "combinedBytes": 23459,
+        "maximumComponentBytes": 12736,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1694,
+        "schemaOrdinaryTokens": 3656
+      },
+      "groq": {
+        "reservedInputTokens": 6445,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7469,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 24624,
+        "outputTokens": 1024,
+        "neurons": 854
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "fadd23c8db7968148dde3b215e449b405ae75a4d666a10b4a17b7423325361c3",
+        "schema": "a58258206915af696165cfcfa8a4a0e222fb9a524a30d2e27e172bb0f8e101d2"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "C",
+      "baseCombinedTokenReservation": 8656,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5789,
+        "schemaBytes": 14356,
+        "combinedBytes": 25473,
+        "maximumComponentBytes": 14356,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1781,
+        "schemaOrdinaryTokens": 4113
+      },
+      "groq": {
+        "reservedInputTokens": 6989,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 8013,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": false,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 26632,
+        "outputTokens": 1024,
+        "neurons": 918
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "99ce4438602f7bdc30209fd7f4e71c625367786724036f502d4df1a9ff24fdbf",
+        "schema": "4243ed49cdb418e3d11abcb630ec8710c986273dcb9a29cf7131a2f93d8e444a"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "D",
+      "baseCombinedTokenReservation": 8324,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 6043,
+        "schemaBytes": 12808,
+        "combinedBytes": 24179,
+        "maximumComponentBytes": 12808,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1865,
+        "schemaOrdinaryTokens": 3697
+      },
+      "groq": {
+        "reservedInputTokens": 6657,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7681,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25396,
+        "outputTokens": 1024,
+        "neurons": 878
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "9fc1216f3cfb58fe0f25889f487ca0e82508bd58dbaf81709b1431af427e15d4",
+        "schema": "ca0d5270262a98ed14414ec18d918c1a177c4a12e91b6c73b208952ec41c5d47"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "E",
+      "baseCombinedTokenReservation": 8278,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5483,
+        "schemaBytes": 13517,
+        "combinedBytes": 24328,
+        "maximumComponentBytes": 13517,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1671,
+        "schemaOrdinaryTokens": 3845
+      },
+      "groq": {
+        "reservedInputTokens": 6611,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7635,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25419,
+        "outputTokens": 1024,
+        "neurons": 879
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "dbfebfc24818b8932cf023e451687774691467bd12a51f21126ad5066fa0928f",
+        "schema": "9d35c2d64553f7b682d86f977f40e51a704b31573bb734dd9c14cba77d3aae51"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "F",
+      "baseCombinedTokenReservation": 7905,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5614,
+        "schemaBytes": 11925,
+        "combinedBytes": 22867,
+        "maximumComponentBytes": 11925,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1736,
+        "schemaOrdinaryTokens": 3407
+      },
+      "groq": {
+        "reservedInputTokens": 6238,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7262,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 24016,
+        "outputTokens": 1024,
+        "neurons": 834
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "f4bf87d9f13a2ef96f5a0b1560ccdabee9393a0f9c6ebf1569ea586fc7c22cdf",
+        "schema": "193a244e8e407ca01c981479b228640d46443efc7f75d9e42473c4b499349b42"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "G",
+      "baseCombinedTokenReservation": 7670,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5246,
+        "schemaBytes": 11786,
+        "combinedBytes": 22360,
+        "maximumComponentBytes": 11786,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1573,
+        "schemaOrdinaryTokens": 3335
+      },
+      "groq": {
+        "reservedInputTokens": 6003,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7027,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23457,
+        "outputTokens": 1024,
+        "neurons": 817
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "f14341802ba8822bfb7fa8e9ced068e92fba49c75b30b43b8fe6c001fa71e284",
+        "schema": "36dc650c227445a8dd915fdd0f308162b7d5788a5b76135e68db734688999926"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "H",
+      "baseCombinedTokenReservation": 8555,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5708,
+        "schemaBytes": 14346,
+        "combinedBytes": 25382,
+        "maximumComponentBytes": 14346,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1698,
+        "schemaOrdinaryTokens": 4095
+      },
+      "groq": {
+        "reservedInputTokens": 6888,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7912,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 26515,
+        "outputTokens": 1024,
+        "neurons": 914
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "86229330c2143a86adc0c0a2f92bb5c79ae75956a1c7419a9f6766250cea7aa1",
+        "schema": "8172dc8844aab87e7ab69030b89abe34d44cb6dfabe0424faf356e152d252a89"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "I",
+      "baseCombinedTokenReservation": 7867,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5483,
+        "schemaBytes": 11870,
+        "combinedBytes": 22681,
+        "maximumComponentBytes": 11870,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1718,
+        "schemaOrdinaryTokens": 3387
+      },
+      "groq": {
+        "reservedInputTokens": 6200,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7224,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23822,
+        "outputTokens": 1024,
+        "neurons": 828
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "7b1fcbf61f222506f0883afc22509ce9dbf1840fea7e074c365616aaa3398b1f",
+        "schema": "d2149fbf8931fc7c8656abd01cdb6897e77bb6e4ce07000feb81b001e5dbd7f7"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "J",
+      "baseCombinedTokenReservation": 8374,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5505,
+        "schemaBytes": 13587,
+        "combinedBytes": 24420,
+        "maximumComponentBytes": 13587,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1737,
+        "schemaOrdinaryTokens": 3875
+      },
+      "groq": {
+        "reservedInputTokens": 6707,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7731,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25549,
+        "outputTokens": 1024,
+        "neurons": 883
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "49d2c5154fd5fbe4511d369ac184442aebafecbbb865ecb66c46f016d17cb0c9",
+        "schema": "9a80a7e64bf6371b7c390f46c841415fa0073efda5922f5b0e37970665de772e"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "K",
+      "baseCombinedTokenReservation": 8317,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5381,
+        "schemaBytes": 13486,
+        "combinedBytes": 24195,
+        "maximumComponentBytes": 13486,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1700,
+        "schemaOrdinaryTokens": 3855
+      },
+      "groq": {
+        "reservedInputTokens": 6650,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7674,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25330,
+        "outputTokens": 1024,
+        "neurons": 876
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "0e6898168e443e58d072d98825f995424b8fa03323ba3c406b6be08f840ad291",
+        "schema": "02ed76cf672faba9ddad77c83d76130e4264f22201234f4555e4f7e25d76af39"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "L",
+      "baseCombinedTokenReservation": 8262,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5859,
+        "schemaBytes": 12808,
+        "combinedBytes": 23995,
+        "maximumComponentBytes": 12808,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1821,
+        "schemaOrdinaryTokens": 3679
+      },
+      "groq": {
+        "reservedInputTokens": 6595,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7619,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25172,
+        "outputTokens": 1024,
+        "neurons": 871
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "5efa31e302b3355d06fce6c9c032e26f6d88d0fce17f0d5caa0331219a9c1835",
+        "schema": "5f48a22749abee2494e97823ed305928266265e85a299c21b617a3efb3d85555"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "M",
+      "baseCombinedTokenReservation": 8820,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 6124,
+        "schemaBytes": 14420,
+        "combinedBytes": 25872,
+        "maximumComponentBytes": 14420,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1906,
+        "schemaOrdinaryTokens": 4152
+      },
+      "groq": {
+        "reservedInputTokens": 7153,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 8177,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": false,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 27072,
+        "outputTokens": 1024,
+        "neurons": 932
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "6746af186f17b244c8ef0fefb1e8c431843d005ab921ae7d92a9f3a3ff922fd6",
+        "schema": "be6c9464095a157f3f2f091aa60e89b7d226a77b71dbe8195eca2e58675c8614"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "N",
+      "baseCombinedTokenReservation": 7921,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5851,
+        "schemaBytes": 11850,
+        "combinedBytes": 23029,
+        "maximumComponentBytes": 11850,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1786,
+        "schemaOrdinaryTokens": 3373
+      },
+      "groq": {
+        "reservedInputTokens": 6254,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7278,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 24254,
+        "outputTokens": 1024,
+        "neurons": 842
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "1416a88d57584ab63aefccad9338502ada461f613d733a423556f97923e3b179",
+        "schema": "94a0c79c1c3b1b944ec965cf6b9469cf5c13c1c9db4fdbec572998c524cdf13b"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "O",
+      "baseCombinedTokenReservation": 8415,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5559,
+        "schemaBytes": 13546,
+        "combinedBytes": 24433,
+        "maximumComponentBytes": 13546,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1776,
+        "schemaOrdinaryTokens": 3877
+      },
+      "groq": {
+        "reservedInputTokens": 6748,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7772,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25586,
+        "outputTokens": 1024,
+        "neurons": 884
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "dd3d5758775c1000beb6adb15b27c93abf11dbe91a166af455f7a0549cf161b2",
+        "schema": "a23fefd90a7b80b1e055e5e8ff9334179379b6fe0aa3d564acaf56e0b42faccf"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "P",
+      "baseCombinedTokenReservation": 8357,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5552,
+        "schemaBytes": 13492,
+        "combinedBytes": 24372,
+        "maximumComponentBytes": 13492,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1752,
+        "schemaOrdinaryTokens": 3843
+      },
+      "groq": {
+        "reservedInputTokens": 6690,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7714,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25517,
+        "outputTokens": 1024,
+        "neurons": 882
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "08a32f30f8056e1bdffbe491f1837850285fa91bb882279b19eb828a9f20aac9",
+        "schema": "181e3d228b0b38c6f399e311a6a6aa9f15280f492b1c41a2019ddb9c2d55b6e4"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Q",
+      "baseCombinedTokenReservation": 8797,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5909,
+        "schemaBytes": 14478,
+        "combinedBytes": 25715,
+        "maximumComponentBytes": 14478,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1866,
+        "schemaOrdinaryTokens": 4169
+      },
+      "groq": {
+        "reservedInputTokens": 7130,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 8154,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": false,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 26898,
+        "outputTokens": 1024,
+        "neurons": 926
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "822f2e0b0dbf23cc12084370665539caf829b5e60ccbf7e3f6c3b10e315e2c3b",
+        "schema": "a75b86123ef56e68556f8421b748a1837c8b11c161828808418d928a4c1c8464"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "R",
+      "baseCombinedTokenReservation": 7496,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 4610,
+        "schemaBytes": 11748,
+        "combinedBytes": 21686,
+        "maximumComponentBytes": 11748,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1417,
+        "schemaOrdinaryTokens": 3317
+      },
+      "groq": {
+        "reservedInputTokens": 5829,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 6853,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 22748,
+        "outputTokens": 1024,
+        "neurons": 794
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "e9bdd53004cca0bed50e60c4e655630b6e991c2a5e993edc9432504605672525",
+        "schema": "6771db3e6268ebfd31227d4b03c38d402c03276fff341be15abdaee0ab8365b3"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "S",
+      "baseCombinedTokenReservation": 8747,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 6257,
+        "schemaBytes": 14352,
+        "combinedBytes": 25937,
+        "maximumComponentBytes": 14352,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1892,
+        "schemaOrdinaryTokens": 4093
+      },
+      "groq": {
+        "reservedInputTokens": 7080,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 8104,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": false,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 27206,
+        "outputTokens": 1024,
+        "neurons": 936
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "7d481170646cef91d8a269dfb8386c1b0c204bafb02091f8a6ecb3851b7b9adf",
+        "schema": "bdb59297d26e80687a1dcb6b215d042a41936af9ea89538ac620aff09cb3c117"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "T",
+      "baseCombinedTokenReservation": 7917,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5530,
+        "schemaBytes": 11912,
+        "combinedBytes": 22770,
+        "maximumComponentBytes": 11912,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1750,
+        "schemaOrdinaryTokens": 3405
+      },
+      "groq": {
+        "reservedInputTokens": 6250,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7274,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23926,
+        "outputTokens": 1024,
+        "neurons": 832
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "4fd0f650c97861093bb29ac2eb2ad190f2e1c716204d38bd40f2f58bd4492839",
+        "schema": "fbf04a30902717c18f09ca39359fcfdc418f40404d5d5d6ebcdd52911e88a1ff"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "U",
+      "baseCombinedTokenReservation": 8714,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5949,
+        "schemaBytes": 14370,
+        "combinedBytes": 25647,
+        "maximumComponentBytes": 14370,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1830,
+        "schemaOrdinaryTokens": 4122
+      },
+      "groq": {
+        "reservedInputTokens": 7047,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 8071,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": false,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 26820,
+        "outputTokens": 1024,
+        "neurons": 924
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "03e60a5f04ea3e7fc39879a56e03acb2192862583db7b454fb943cbbdddf3604",
+        "schema": "fa004a00af887f0c4b5681f0935660915bb90494e88cad2e0ca3cc340957caca"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "V",
+      "baseCombinedTokenReservation": 7817,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5338,
+        "schemaBytes": 11866,
+        "combinedBytes": 22532,
+        "maximumComponentBytes": 11866,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1678,
+        "schemaOrdinaryTokens": 3377
+      },
+      "groq": {
+        "reservedInputTokens": 6150,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7174,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23644,
+        "outputTokens": 1024,
+        "neurons": 823
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "046dd2187dce2eb67738fb1a386102b6ab8f777d77d75d7b6f574640cb35c890",
+        "schema": "9ef73f86f9776542b4466b0b8ddaac96f3c3374bb47dd047a50b8f10c9f06f1e"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "W",
+      "baseCombinedTokenReservation": 7652,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5220,
+        "schemaBytes": 11546,
+        "combinedBytes": 22094,
+        "maximumComponentBytes": 11546,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1574,
+        "schemaOrdinaryTokens": 3316
+      },
+      "groq": {
+        "reservedInputTokens": 5985,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7009,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23125,
+        "outputTokens": 1024,
+        "neurons": 806
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "1746e4d742e5cbfbe6f912d2e8fcf59eb726a138e8ceb52708b1087a764273a6",
+        "schema": "a4534f3e271fdb1a3962a85cbbfc1cc258fb5101a180cb62b8fd67fd18bad793"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "X",
+      "baseCombinedTokenReservation": 7836,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5267,
+        "schemaBytes": 11925,
+        "combinedBytes": 22520,
+        "maximumComponentBytes": 11925,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1667,
+        "schemaOrdinaryTokens": 3407
+      },
+      "groq": {
+        "reservedInputTokens": 6169,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7193,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 23623,
+        "outputTokens": 1024,
+        "neurons": 822
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "9224561371a1e00d71828600ca0d97b537f7b27941be134c10df9c2f79f83412",
+        "schema": "6bc43c9b280512cc4910d07069420cfabc75d8fc0011fc0ab8dc2a937f0be8b1"
+      }
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Y",
+      "baseCombinedTokenReservation": 8493,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5409,
+        "schemaBytes": 14102,
+        "combinedBytes": 24839,
+        "maximumComponentBytes": 14102,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1670,
+        "schemaOrdinaryTokens": 4061
+      },
+      "groq": {
+        "reservedInputTokens": 6826,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 7850,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 25988,
+        "outputTokens": 1024,
+        "neurons": 897
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "998aa5b1a940b30b3bf26601f62d874a3b161b23fd4c1f7a17a12de0c30acfca",
+        "schema": "33b39789f7619e1378794e40f762a36f7f5f8a61460e6956b06c77f6c06fc06e"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "A",
+      "baseCombinedTokenReservation": 36629,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 8687,
+        "schemaBytes": 18190,
+        "combinedBytes": 32205,
+        "maximumComponentBytes": 18190
+      },
+      "groq": {
+        "reservedInputTokens": 32335,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 33359,
+        "strategy": "full-byte-fallback",
+        "fits8000TokenRequest": false,
+        "withinCombinedByteGuard": false,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 33460,
+        "outputTokens": 1024,
+        "neurons": 1135
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "256d8f9be76de4e99a3a10f411eea5e7e1c38ef66ab9783a54c0580365db86d1",
+        "schema": "99eb9223c9ff8f710002e73f10522f5a8fefde1834c20e2650e50f20ef15a0d1"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "B",
+      "baseCombinedTokenReservation": 7128,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 4810,
+        "schemaBytes": 10822,
+        "combinedBytes": 20960,
+        "maximumComponentBytes": 10822,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1343,
+        "schemaOrdinaryTokens": 3023
+      },
+      "groq": {
+        "reservedInputTokens": 5461,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 6485,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 21911,
+        "outputTokens": 1024,
+        "neurons": 767
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "5effdd7755880d0666f3321d658617c07119c444c405f2fbb0c4306733b79b2c",
+        "schema": "baf5334802b4b49f16aafd73aa3da3925e0860e616d74d8b5af66b3940262493"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "C",
+      "baseCombinedTokenReservation": 7180,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 5006,
+        "schemaBytes": 10822,
+        "combinedBytes": 21156,
+        "maximumComponentBytes": 10822,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1395,
+        "schemaOrdinaryTokens": 3023
+      },
+      "groq": {
+        "reservedInputTokens": 5513,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 6537,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 22123,
+        "outputTokens": 1024,
+        "neurons": 774
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "2dc9e812745af21148b383405d299958fde9e59ccbf49a55223b3f21df5898ae",
+        "schema": "6add0ae5cbfe5aa43719d9ceadc89375bdcdcb7ee9195f998a25d42c7908445d"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "D",
+      "baseCombinedTokenReservation": 7173,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 4986,
+        "schemaBytes": 10822,
+        "combinedBytes": 21136,
+        "maximumComponentBytes": 10822,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1388,
+        "schemaOrdinaryTokens": 3023
+      },
+      "groq": {
+        "reservedInputTokens": 5506,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 6530,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 22097,
+        "outputTokens": 1024,
+        "neurons": 773
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "b6a02499298722dade94be642fe185f3dfaf3cb0f4e2e94561b1f27e3fb3ae96",
+        "schema": "d98771a21a5cac2b3b5465be2d5c2e995bcb65706d6e639e85b57bea075a31cf"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "E",
+      "baseCombinedTokenReservation": 6668,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3629,
+        "schemaBytes": 10068,
+        "combinedBytes": 19025,
+        "maximumComponentBytes": 10068,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1059,
+        "schemaOrdinaryTokens": 2847
+      },
+      "groq": {
+        "reservedInputTokens": 5001,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 6025,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19871,
+        "outputTokens": 1024,
+        "neurons": 703
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "5cab332ecfc78e0f965d3e3c2aadec640059d04a2c67f598210001ef5c887aa1",
+        "schema": "8517eab77f901610b41640ab51e04829a71c31202bf42b14e88e385bc0b0cb77"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "F",
+      "baseCombinedTokenReservation": 6619,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3427,
+        "schemaBytes": 10023,
+        "combinedBytes": 18778,
+        "maximumComponentBytes": 10023,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1020,
+        "schemaOrdinaryTokens": 2837
+      },
+      "groq": {
+        "reservedInputTokens": 4952,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5976,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19639,
+        "outputTokens": 1024,
+        "neurons": 695
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "a56868e6e8f2299fe60a65a373548450e55cc6cd46c2a845a117e5df9ce6ffbd",
+        "schema": "60bfa604e5dcd61160202d39ae1a69db7231d16b196bdb5bee8bedbf6613c697"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "G",
+      "baseCombinedTokenReservation": 6621,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3481,
+        "schemaBytes": 10009,
+        "combinedBytes": 18818,
+        "maximumComponentBytes": 10009,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 1027,
+        "schemaOrdinaryTokens": 2832
+      },
+      "groq": {
+        "reservedInputTokens": 4954,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5978,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19671,
+        "outputTokens": 1024,
+        "neurons": 696
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "d2aa5816989e7d88270c27005347b0ffe11378aff435a887e4db06284db21fb9",
+        "schema": "b3ea857866aaa6ed3f9ee6bb6934b308b6924fcd15464a80493b138bad4d40cc"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "H",
+      "baseCombinedTokenReservation": 6450,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3197,
+        "schemaBytes": 9616,
+        "combinedBytes": 18141,
+        "maximumComponentBytes": 9616,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 968,
+        "schemaOrdinaryTokens": 2720
+      },
+      "groq": {
+        "reservedInputTokens": 4783,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5807,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18990,
+        "outputTokens": 1024,
+        "neurons": 675
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "412cfc395ab5bca80468abd4319b0159a2bfb752f5b6c2853909323ed9ffe57b",
+        "schema": "c552579aa2067b7b225149c5cb69df6de2e0a3fe278af433ac09a3e601488a3b"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "I",
+      "baseCombinedTokenReservation": 6338,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2827,
+        "schemaBytes": 9571,
+        "combinedBytes": 17726,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 876,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4671,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5695,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18545,
+        "outputTokens": 1024,
+        "neurons": 660
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "baf2b446a2ff94d8a9780ff3abc3ff38b8492982522623e34f4a433ba819b3a9",
+        "schema": "b4269af2b4ba26fadf368d7ef2ba115fcf80db32cee08633c69879129003f965"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "J",
+      "baseCombinedTokenReservation": 6574,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3200,
+        "schemaBytes": 10050,
+        "combinedBytes": 18578,
+        "maximumComponentBytes": 10050,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 973,
+        "schemaOrdinaryTokens": 2839
+      },
+      "groq": {
+        "reservedInputTokens": 4907,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5931,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19415,
+        "outputTokens": 1024,
+        "neurons": 688
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "d3217040db80d171a48c04708203c9c92ffc8896a5001ad6a2a3c6fd63ae49ad",
+        "schema": "916434d487b4b7a8e75e0669cb40482da575825a4193074eab4e2274c941bc41"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "K",
+      "baseCombinedTokenReservation": 6315,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2700,
+        "schemaBytes": 9571,
+        "combinedBytes": 17599,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 853,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4648,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5672,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18418,
+        "outputTokens": 1024,
+        "neurons": 656
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "12bf2f4370560f44398df8555546262f8b2c91bf939eb03498e9295df92707a6",
+        "schema": "4b71a5b9f0e58686442229a8111901e23630f572a085ae3afadfb9dd11b469fd"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "L",
+      "baseCombinedTokenReservation": 6317,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2696,
+        "schemaBytes": 9571,
+        "combinedBytes": 17595,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 855,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4650,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5674,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18406,
+        "outputTokens": 1024,
+        "neurons": 656
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "263d27a7f56761661a13ec64c4d14960ac5bb73e4579950db6ffb9dd139e00cf",
+        "schema": "28201c80177456acfe36aef51ac1bd6f262649f4d49e023ba436930724a681a4"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "M",
+      "baseCombinedTokenReservation": 6377,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2970,
+        "schemaBytes": 9571,
+        "combinedBytes": 17869,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 915,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4710,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5734,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18704,
+        "outputTokens": 1024,
+        "neurons": 665
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "c05574a679fbe8b533a9743500a916e0b808b4a7016733b01c0790527c2d363a",
+        "schema": "7b01568ce29225b03412996147fb3004e1d76807c20a6b274519d450fc414bad"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "N",
+      "baseCombinedTokenReservation": 6493,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2884,
+        "schemaBytes": 9997,
+        "combinedBytes": 18209,
+        "maximumComponentBytes": 9997,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 902,
+        "schemaOrdinaryTokens": 2829
+      },
+      "groq": {
+        "reservedInputTokens": 4826,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5850,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19033,
+        "outputTokens": 1024,
+        "neurons": 676
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "6f233357b5f10f074040d3a29ce855242fc399b0540af78666b011eef5c96f87",
+        "schema": "e3c5542eb88ec51d25f402abe39dc4fef9d04b4956afe1711f4c59d0329df523"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "O",
+      "baseCombinedTokenReservation": 6396,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2907,
+        "schemaBytes": 9617,
+        "combinedBytes": 17852,
+        "maximumComponentBytes": 9617,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 914,
+        "schemaOrdinaryTokens": 2720
+      },
+      "groq": {
+        "reservedInputTokens": 4729,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5753,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18683,
+        "outputTokens": 1024,
+        "neurons": 665
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "9b0e67a029009244e9b6f6e1d26165f5b8f41342d17025fb44db2b9eee5344d8",
+        "schema": "6cdc4599239a650c8d50c4497834b1e7b3809127591513b0e47e6f6088478aef"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "P",
+      "baseCombinedTokenReservation": 6383,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3048,
+        "schemaBytes": 9571,
+        "combinedBytes": 17947,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 921,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4716,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5740,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18774,
+        "outputTokens": 1024,
+        "neurons": 668
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "0da9039da8fd89df1ef1af568b6d24b279c3dfa42c533eb5728cb98af8aacd7f",
+        "schema": "77fef67b9ab7ef7eb9ef9a66aabf16f65aad975d252c01e3aadb2d9aadfad86c"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Q",
+      "baseCombinedTokenReservation": 6417,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3075,
+        "schemaBytes": 9618,
+        "combinedBytes": 18021,
+        "maximumComponentBytes": 9618,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 935,
+        "schemaOrdinaryTokens": 2720
+      },
+      "groq": {
+        "reservedInputTokens": 4750,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5774,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18862,
+        "outputTokens": 1024,
+        "neurons": 670
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "ea26c83d3ebb94b3a9134f61259a94bffbf5e735e8be9e37a3c8befe6f2e7520",
+        "schema": "9877233ad3fe5b70cde116ca02578f30514d486a455971726231f7186554e6b9"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "R",
+      "baseCombinedTokenReservation": 6279,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2553,
+        "schemaBytes": 9571,
+        "combinedBytes": 17452,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 817,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4612,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5636,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18251,
+        "outputTokens": 1024,
+        "neurons": 651
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "9b93e873e1dfadb45cab6a5040bba47b5e7fc1f3d82d00d954d94cfb908706c3",
+        "schema": "cfe143d28cbfc4ae1a3481a4d736e36e320215e8085a617a519abaf5cab76a0e"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "S",
+      "baseCombinedTokenReservation": 6550,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3108,
+        "schemaBytes": 9997,
+        "combinedBytes": 18433,
+        "maximumComponentBytes": 9997,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 960,
+        "schemaOrdinaryTokens": 2828
+      },
+      "groq": {
+        "reservedInputTokens": 4883,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5907,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19264,
+        "outputTokens": 1024,
+        "neurons": 683
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "d34ae2094f3f602b26dd7668d1e287343790fdc76c1ef1639d3afcf72b2da7bc",
+        "schema": "651fde3e24f3f08f1face4ce79bb63e46bb19183a07fca994692425278be1622"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "T",
+      "baseCombinedTokenReservation": 6337,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2774,
+        "schemaBytes": 9571,
+        "combinedBytes": 17673,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 875,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4670,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5694,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18491,
+        "outputTokens": 1024,
+        "neurons": 659
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "b282c12c0173de89776a54e003eb141a892f8f36efd7c175d1594aa72f006efe",
+        "schema": "cc33450520d81070a3dc12d552d48506842c817edb839e4de762c577fe5df2e9"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "U",
+      "baseCombinedTokenReservation": 6357,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2874,
+        "schemaBytes": 9571,
+        "combinedBytes": 17773,
+        "maximumComponentBytes": 9571,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 895,
+        "schemaOrdinaryTokens": 2700
+      },
+      "groq": {
+        "reservedInputTokens": 4690,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5714,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18592,
+        "outputTokens": 1024,
+        "neurons": 662
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "05336a30d6f049e63e1f2a8c23833170a403c442bbf0e376b6d569ecd5cf60c4",
+        "schema": "3e6e8954964284ec21439b2167567b382196cbe09f60c45ecfacb28208d75d25"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "V",
+      "baseCombinedTokenReservation": 6388,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2888,
+        "schemaBytes": 9616,
+        "combinedBytes": 17832,
+        "maximumComponentBytes": 9616,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 906,
+        "schemaOrdinaryTokens": 2720
+      },
+      "groq": {
+        "reservedInputTokens": 4721,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5745,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18665,
+        "outputTokens": 1024,
+        "neurons": 664
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "9d973a12f7995502b5e7ce614985468b463866fd04a29c25dd7b59557349e559",
+        "schema": "9843660073822a672caa52a1a1941af29c678931bd11058956ccb8e3beeb6dea"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "W",
+      "baseCombinedTokenReservation": 6567,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 3120,
+        "schemaBytes": 10050,
+        "combinedBytes": 18498,
+        "maximumComponentBytes": 10050,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 962,
+        "schemaOrdinaryTokens": 2843
+      },
+      "groq": {
+        "reservedInputTokens": 4900,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5924,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 19333,
+        "outputTokens": 1024,
+        "neurons": 685
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "64c9c2542b0c01bfa77608ee9133f3af41bfe920ce25bb090a0c24fc99bba895",
+        "schema": "47a8bc6084f46d1dfe2935030204b3263355477f36f4d28a3b2f04cfde6ceb53"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "X",
+      "baseCombinedTokenReservation": 6378,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2881,
+        "schemaBytes": 9615,
+        "combinedBytes": 17824,
+        "maximumComponentBytes": 9615,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 896,
+        "schemaOrdinaryTokens": 2720
+      },
+      "groq": {
+        "reservedInputTokens": 4711,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5735,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18653,
+        "outputTokens": 1024,
+        "neurons": 664
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "7d9208574487c2bf49a12690172dfc69eb426141757f0139fe3e966fde00683c",
+        "schema": "df2fc36c00775143ce342bae79aac0b25942f64e91c0bf50356e1675023f817d"
+      }
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Y",
+      "baseCombinedTokenReservation": 6378,
+      "components": {
+        "systemBytes": 5328,
+        "userBytes": 2874,
+        "schemaBytes": 9615,
+        "combinedBytes": 17817,
+        "maximumComponentBytes": 9615,
+        "systemOrdinaryTokens": 967,
+        "userOrdinaryTokens": 896,
+        "schemaOrdinaryTokens": 2720
+      },
+      "groq": {
+        "reservedInputTokens": 4711,
+        "reservedOutputTokens": 1024,
+        "combinedTokenReservation": 5735,
+        "strategy": "ordinary-o200k-plus-provisional-framing",
+        "fits8000TokenRequest": true,
+        "withinCombinedByteGuard": true,
+        "withinComponentByteGuard": true
+      },
+      "cloudflareOSS120BMaximum": {
+        "requests": 1,
+        "inputTokens": 18640,
+        "outputTokens": 1024,
+        "neurons": 663
+      },
+      "hashes": {
+        "system": "e9589b12d43c1447413905058492f1fc0a3b3f7fdf9b05e9ff9eb9818863e6c2",
+        "user": "6f956dbedfcb1048e02e9a3be28bd0771688c4684fca4aa3d9b30e54dd19e158",
+        "schema": "d6f6612fd1aab9eef7059b9f2152a14d8212f88a5bf586c785ef8e583127afb6"
+      }
+    }
+  ],
+  "limitations": [
+    "This wording is an unselected counterfactual; the real producer was not changed.",
+    "Smaller wording is not evidence of equivalent comprehension or social behavior.",
+    "The real Groq estimator and CF reservation were reused; the 128-token framing allowance remains provisional."
+  ]
+}

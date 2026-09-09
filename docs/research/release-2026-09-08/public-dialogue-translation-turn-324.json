@@ -1,0 +1,57 @@
+{
+  "format": "villa-reviewed-public-dialogue-translation-v1",
+  "status": "Presentation translation of one already-public message; source records remain unchanged.",
+  "source": {
+    "kind": "verified-complete-recovery-public-message-projection",
+    "backupDirectory": "20260908T184733300Z-post-records-p6-release",
+    "backupSha256": "0805dfeb345f194e4955f60f5bb34d84582065c803f45a5e275eac5143cd4351",
+    "capturedAtMs": 1788893253749,
+    "worldRevision": 175,
+    "pages": 22,
+    "instruction": {
+      "protocolVersion": 4,
+      "systemSha256": "b0a732999d9575c140ae1ea498a10e03ce9a28993a7ae3d7c237633d78229d8f",
+      "systemTextRetained": false,
+      "matchedCurrentEnglishInstruction": true,
+      "definitionPath": "src/lib/habitat/society/instructions.ts"
+    }
+  },
+  "scope": "Only the matched public turn, its public Journal copy and saved protocol identity. No private prompts, plans or other response fields.",
+  "limitation": "This message was generated under protocol4 before the protocol6 release. The exact stored SYSTEM hash matches its English instruction, but the model still replied in Spanish. This reviewed translation covers only this message; it does not guarantee English for future messages. The 5:3 ratio remains Pilar’s claim, not a verified recipe, stock count, transfer or completed action. Journal exposes the turn ID and simulation clock but not the real-world atMs timestamp.",
+  "label": "English translation",
+  "entries": [
+    {
+      "conversationId": "conversation:115",
+      "turnId": "turn:324",
+      "speaker": "P",
+      "atMs": 1788891420360,
+      "protocolVersion": 4,
+      "sourceLanguage": "es",
+      "targetLanguage": "en",
+      "sourceText": "¡Claro, hijita! La proporción es 5 partes de harina por 3 de agua, ¿tienes ya la harina a mano?",
+      "sourceTextSha256": "dc7e675e04e08f70576cb457244403942cf8c48d46b11251b9443943b8c4c978",
+      "translation": "Of course, my dear! The ratio is 5 parts flour to 3 parts water; do you already have the flour to hand?",
+      "label": "English translation",
+      "journal": {
+        "happeningId": "habitat-canonical:mind:P:7:67:g:3:turn:324",
+        "worldRevision": 167,
+        "day": 107,
+        "watch": 3,
+        "minute": 720,
+        "room": "hold",
+        "who": [
+          "P",
+          "V"
+        ],
+        "kind": "meeting",
+        "speech": {
+          "speaker": "P",
+          "turnId": "turn:324"
+        },
+        "sourceText": "P: ¡Claro, hijita! La proporción es 5 partes de harina por 3 de agua, ¿tienes ya la harina a mano?",
+        "sourceTextSha256": "f80686ea679ec9b113cc19a956c78994cc03a9b1fa542b74ceb2e6e868394995",
+        "translation": "P: Of course, my dear! The ratio is 5 parts flour to 3 parts water; do you already have the flour to hand?"
+      }
+    }
+  ]
+}

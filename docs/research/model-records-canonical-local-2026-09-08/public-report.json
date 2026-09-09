@@ -1,0 +1,419 @@
+{
+  "newCalls": 10,
+  "stopped": "all_selected_branches_processed",
+  "branches": [
+    {
+      "pair": "CN",
+      "stopped": "invalid_or_unknown_response",
+      "forecast": true,
+      "productionObservation": false,
+      "beforeHash": "22483382363126c855460d9d8257477835ce4b9fcdfff4c0364c9d9d6be06c0b",
+      "afterHash": "8e61be4d1c131e0bbd9e2d83ed92bdf9f0076ac76b8195b404bd00dc6924082f",
+      "physicalActions": 25,
+      "publicationActions": 0,
+      "paidRecordCells": 0,
+      "money": {
+        "conserved": true,
+        "expectedCells": 874.7893824361379,
+        "actualCells": 874.7893824361378
+      },
+      "publicRecords": {
+        "publications": [],
+        "offers": [],
+        "agreements": []
+      }
+    },
+    {
+      "pair": "AU",
+      "stopped": "three_turn_limit",
+      "forecast": true,
+      "productionObservation": false,
+      "beforeHash": "d6a2d14015b6b592a00eb5259eea2e791bfd32fa68ef118a30a8a00ffb2f31fc",
+      "afterHash": "92948ecacdf4d48d6270b5a4866dd3f48d2fcfd38fa54c924b23704fef3b0c3d",
+      "physicalActions": 25,
+      "publicationActions": 0,
+      "paidRecordCells": 0,
+      "money": {
+        "conserved": true,
+        "expectedCells": 874.7893824361379,
+        "actualCells": 874.7893824361378
+      },
+      "publicRecords": {
+        "publications": [],
+        "offers": [],
+        "agreements": []
+      }
+    },
+    {
+      "pair": "BK",
+      "stopped": "three_turn_limit",
+      "forecast": true,
+      "productionObservation": false,
+      "beforeHash": "87e53a72226b429b4fe693882765aa8ebba7bba2d633864a4ca815067c343194",
+      "afterHash": "49d6aa50742ce831e5fc8ed6158334d8b4a732aaeb74ae3daecf8fc17b2bb193",
+      "physicalActions": 25,
+      "publicationActions": 0,
+      "paidRecordCells": 0,
+      "money": {
+        "conserved": true,
+        "expectedCells": 874.7893824361379,
+        "actualCells": 874.7893824361378
+      },
+      "publicRecords": {
+        "publications": [],
+        "offers": [],
+        "agreements": []
+      }
+    },
+    {
+      "pair": "TY",
+      "stopped": "three_turn_limit",
+      "forecast": true,
+      "productionObservation": false,
+      "beforeHash": "4b26c42a721c6bc93bd583e573644e2b664ad5b173686820fabfda5c3e1cdb8c",
+      "afterHash": "ca5f22942223240757a93dbf4c38151301a06f94805e72cd8d5246ceeed0e7c4",
+      "physicalActions": 25,
+      "publicationActions": 0,
+      "paidRecordCells": 0,
+      "money": {
+        "conserved": true,
+        "expectedCells": 874.7893824361379,
+        "actualCells": 874.7893824361378
+      },
+      "publicRecords": {
+        "publications": [],
+        "offers": [],
+        "agreements": []
+      }
+    }
+  ],
+  "scope": "Four independent clones of one verified canonical recovery. Actual next speaker, no planted dialogue, no production writes.",
+  "usage": [
+    {
+      "pair": "CN",
+      "actor": "C",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2619,
+        "completion_tokens": 182,
+        "total_tokens": 2801
+      },
+      "latencyMs": 13614,
+      "application": {
+        "ok": false,
+        "code": "publication_requires_audience",
+        "afterHash": "22483382363126c855460d9d8257477835ce4b9fcdfff4c0364c9d9d6be06c0b",
+        "messages": [],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "AU",
+      "actor": "U",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2638,
+        "completion_tokens": 87,
+        "total_tokens": 2725
+      },
+      "latencyMs": 2462,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "aaba44d952a9f3cecef287682876bffee32745e0f4c8ce9018c85ad6b6011179",
+        "messages": [
+          {
+            "conversationId": "conversation:2",
+            "id": "turn:310",
+            "speaker": "U",
+            "text": "Yes, please log it now so the inventory stays accurate. I need to know exactly what's out of the infirmary.",
+            "atMs": 1788890103777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "AU",
+      "actor": "A",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2766,
+        "completion_tokens": 201,
+        "total_tokens": 2967
+      },
+      "latencyMs": 4004,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "64c3fa073a6a47eef246209120cd0037b74594da85f36290e5d98be45e57c357",
+        "messages": [
+          {
+            "conversationId": "conversation:2",
+            "id": "turn:314",
+            "speaker": "A",
+            "text": "I have logged the ten sheets and the vial of ink as requested. The inventory is now accurate. I will return them tomorrow.",
+            "atMs": 1788890283777
+          }
+        ],
+        "recordsCreated": 1,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "AU",
+      "actor": "U",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 91,
+        "total_tokens": 2762
+      },
+      "latencyMs": 2527,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "d6a2d14015b6b592a00eb5259eea2e791bfd32fa68ef118a30a8a00ffb2f31fc",
+        "messages": [
+          {
+            "conversationId": "conversation:2",
+            "id": "turn:318",
+            "speaker": "U",
+            "text": "Good. I’ve noted the loan in my own log as well, so we’re aligned. Please bring the sheets and ink back tomorrow as promised.",
+            "atMs": 1788890463777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "BK",
+      "actor": "K",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2632,
+        "completion_tokens": 97,
+        "total_tokens": 2729
+      },
+      "latencyMs": 2613,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "fd70d6d6f56591fbc8f688a62ff2bfb5fb2a5d8a19ab06dcf54033bc68141735",
+        "messages": [
+          {
+            "conversationId": "conversation:7",
+            "id": "turn:310",
+            "speaker": "K",
+            "text": "I’ve pulled the pending workshop logs for the two stations you mentioned. They’re attached here for your reference. Let me know if you need the full files or just these summaries.",
+            "atMs": 1788890643777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "BK",
+      "actor": "B",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 155,
+        "total_tokens": 2794
+      },
+      "latencyMs": 3349,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "d804b4062b852affdfe88a6963ae0e3616f9d32faee994cda48d075f02496030",
+        "messages": [
+          {
+            "conversationId": "conversation:7",
+            "id": "turn:314",
+            "speaker": "B",
+            "text": "I’ve reviewed the workshop logs you sent—thanks for pulling those together so quickly. Since everything looks clear on my end, is there anything specific you’d like me to handle regarding the communications queue?",
+            "atMs": 1788890823777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "BK",
+      "actor": "K",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 152,
+        "total_tokens": 2791
+      },
+      "latencyMs": 3316,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "87e53a72226b429b4fe693882765aa8ebba7bba2d633864a4ca815067c343194",
+        "messages": [
+          {
+            "conversationId": "conversation:7",
+            "id": "turn:319",
+            "speaker": "K",
+            "text": "The queue is quiet, but I’d love to share a sound I recorded today if you have a moment. Would you like to hear it?",
+            "atMs": 1788891003777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "TY",
+      "actor": "T",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2650,
+        "completion_tokens": 132,
+        "total_tokens": 2782
+      },
+      "latencyMs": 3070,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "9fae6d688772d816c9a0b0a0565126e74a2629fc673342603da25f738c6f874d",
+        "messages": [
+          {
+            "conversationId": "conversation:145",
+            "id": "turn:310",
+            "speaker": "T",
+            "text": "That projection is mathematically sound, Yara; a net gain of fourteen produce units for two water is an efficient allocation of resources. Please proceed with tending the garden.",
+            "atMs": 1788891183777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "TY",
+      "actor": "Y",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2650,
+        "completion_tokens": 142,
+        "total_tokens": 2792
+      },
+      "latencyMs": 3213,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "1daa88787e3b03d7a4fd793c3b6b4c8fcea93517a3f6a4c91d926e5a942add7b",
+        "messages": [
+          {
+            "conversationId": "conversation:145",
+            "id": "turn:314",
+            "speaker": "Y",
+            "text": "I’m still here, waiting for the shovel to do its work. Since you’re handling the physical tending, do you want me to sketch the growth chart for the ledger, or just wait for the numbers to appear?",
+            "atMs": 1788891363777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    },
+    {
+      "pair": "TY",
+      "actor": "T",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2713,
+        "completion_tokens": 129,
+        "total_tokens": 2842
+      },
+      "latencyMs": 3060,
+      "application": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "4b26c42a721c6bc93bd583e573644e2b664ad5b173686820fabfda5c3e1cdb8c",
+        "messages": [
+          {
+            "conversationId": "conversation:145",
+            "id": "turn:318",
+            "speaker": "T",
+            "text": "The ledger requires the numerical data, Yara; a sketch cannot balance the accounts. Please allow the garden to complete its cycle so I may record the actual yield.",
+            "atMs": 1788891543777
+          }
+        ],
+        "recordsCreated": 0,
+        "recordOffersCreated": 0,
+        "recordAgreementsCreated": 0,
+        "publicRecords": {
+          "publications": [],
+          "offers": [],
+          "agreements": []
+        }
+      }
+    }
+  ],
+  "httpRequestsThisInvocation": 10,
+  "rawPrivate": true,
+  "productionWrites": 0,
+  "cloudRequests": 0
+}

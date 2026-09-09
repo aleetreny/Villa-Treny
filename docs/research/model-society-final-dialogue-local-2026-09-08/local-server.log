@@ -1,0 +1,89 @@
+2026-09-08 17:44:36,898 - omlx.settings - INFO - Saved settings to /private/tmp/villa-omlx-final-dialogue-20260908/settings.json
+INFO:     Uvicorn running on http://127.0.0.1:8018 (Press CTRL+C to quit)
+2026-09-08 17:44:38,079 - omlx.scheduler - INFO - ChunkedKVCache patch: methods already present upstream, skipped: size
+2026-09-08 17:44:38,132 - omlx.settings - INFO - Saved settings to /private/tmp/villa-omlx-final-dialogue-20260908/settings.json
+2026-09-08 17:44:38,132 - omlx.server - INFO - Generated and saved new auth secret key
+2026-09-08 17:44:38,132 - omlx.server - INFO - CORS origins: ['*']
+2026-09-08 17:44:38,139 - omlx.model_discovery - INFO - Discovered model: Qwen3.6-35B-A3B-4bit (type: vlm, engine: vlm, size: 19.95GB, text-only: 19.08GB)
+2026-09-08 17:44:38,139 - omlx.engine_pool - INFO - Discovered 1 models
+2026-09-08 17:44:38,139 - omlx.server - INFO - Server initialized with 1 models
+2026-09-08 17:44:38,139 - omlx.server - INFO - Default model: Qwen3.6-35B-A3B-4bit
+2026-09-08 17:44:38,139 - omlx.server - INFO - Memory guard tier: safe (guard on)
+2026-09-08 17:44:38,139 - omlx.server - INFO - Default max tokens: 32768
+2026-09-08 17:44:38,140 - omlx.server - INFO - HF Downloader initialized
+2026-09-08 17:44:38,160 - omlx.server - INFO - ModelScope Downloader initialized
+2026-09-08 17:44:38,161 - omlx.server - INFO - oQ Quantizer initialized
+2026-09-08 17:44:38,161 - omlx.server - INFO - HF Uploader initialized
+INFO:     Started server process [34678]
+INFO:     Waiting for application startup.
+2026-09-08 17:44:38,182 - omlx.settings - INFO - Saved settings to /private/tmp/villa-omlx-final-dialogue-20260908/settings.json
+2026-09-08 17:44:38,182 - omlx.server - INFO - Auto-detected server aliases: ['localhost', '127.0.0.1', 'PichonBook-2.local', '192.168.1.242']
+2026-09-08 17:44:38,193 - omlx.process_memory_enforcer - WARNING - Metal cap (37.4GB, Apple max_recommended_working_set_size) is below the oMLX static ceiling (40.0GB); leaving Apple's default Metal cap active because iogpu.wired_limit_mb is unset. Raise it with: sudo sysctl iogpu.wired_limit_mb=40960
+2026-09-08 17:44:38,193 - omlx.process_memory_enforcer - INFO - Process memory enforcer started (tier=safe, ceiling=31.9GB, interval=1.0s)
+INFO:     Application startup complete.
+2026-09-08 17:44:53,873 - omlx.engine_pool - INFO - Loading model: Qwen3.6-35B-A3B-4bit
+2026-09-08 17:44:53,874 - omlx.utils.model_loading - INFO - M5 sorted gather_qmm reroute installed (issue #2267)
+2026-09-08 17:44:53,883 - omlx.patches.mlx_lm_mtp.qwen35_model - INFO - Qwen3.5/3.6 MTP model patch applied (PR 990)
+2026-09-08 17:44:53,884 - omlx.patches.mlx_lm_mtp.nemotron_h_chain - INFO - nemotron_h MTP chain patch applied (depth-k drafting, sequential fused verify, replay-free rollback)
+2026-09-08 17:44:53,885 - omlx.patches.qwen35_verify_qmm - INFO - MTP verify qmm patch applied (M=2..6 affine 4/8-bit)
+2026-09-08 17:44:53,887 - omlx.patches.mlx_vlm_mtp.qwen35_vlm_model - INFO - Patched mlx_vlm.models.qwen3_5.Model.sanitize for MTP
+2026-09-08 17:44:53,887 - omlx.patches.mlx_vlm_mtp.qwen35_moe_vlm_model - INFO - Patched mlx_vlm.models.qwen3_5_moe.Model.sanitize for MTP
+2026-09-08 17:44:53,892 - omlx.patches.mlx_vlm_inkling_compat - INFO - Inkling mlx-vlm compatibility patch applied
+2026-09-08 17:44:53,893 - omlx.patches.mlx_vlm_mtp.qwen35_moe_vlm_runtime - INFO - mlx-vlm Qwen3.5-MoE runtime MTP patch applied
+2026-09-08 17:44:53,893 - omlx.patches.mlx_vlm_mtp.qwen35_vlm_runtime - INFO - mlx-vlm Qwen3.5 (dense) runtime MTP patch applied
+2026-09-08 17:44:53,901 - omlx.patches.gemma4_verify_attention - INFO - gemma4 small-L verify attention patch applied (kernel + per-token)
+2026-09-08 17:44:53,901 - omlx.patches.mlx_vlm_mtp.gemma4_vlm_runtime - INFO - mlx-vlm Gemma 4 runtime MTP patch applied
+2026-09-08 17:44:53,902 - omlx.patches.mlx_vlm_mtp.inkling_vlm_runtime - INFO - mlx-vlm inkling runtime MTP patch applied
+2026-09-08 17:44:53,902 - omlx.utils.model_loading - INFO - mlx-vlm runtime MTP patch applied for /Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit (config declares mtp heads but checkpoint ships no mtp.* weights; MTPModule attachment skipped to keep strict load_weights happy)
+2026-09-08 17:44:53,903 - omlx.engine_core - INFO - MLX executor thread initialized: generation_stream = ThreadLocalStream(Device(gpu, 0), 4)
+2026-09-08 17:44:53,918 - omlx.patches.mlx_vlm_pixtral_torch_free - INFO - Pixtral torch-free processor patch installed (mlx-vlm PR #1502 backport + TokenizersBackend pin)
+2026-09-08 17:44:58,136 - omlx.patches.qwen35_moe_gate_up - INFO - MoE gate+up fusion applied: 40 layers
+2026-09-08 17:44:58,139 - omlx.engine.vlm - INFO - Vision feature cache enabled (SSD: disabled)
+2026-09-08 17:44:58,577 - omlx.scheduler - INFO - Loaded 1 additional EOS token(s) from generation_config.json: {248044}
+2026-09-08 17:44:58,590 - omlx.scheduler - INFO - Decode KV cache materialization interval set to 256 tokens
+2026-09-08 17:44:58,590 - omlx.memory_monitor - INFO - MemoryMonitor initialized (estimator-only, eviction disabled)
+2026-09-08 17:44:58,597 - omlx.memory_monitor - INFO - Model info set: 40 layers (10 KVCache), 2 KV heads, 16 Q heads, 256 head_dim. Estimated memory per 64-token block: 1.25 MB
+2026-09-08 17:44:58,597 - omlx.scheduler - INFO - oMLX cache disabled (mlx-lm BatchGenerator manages KV internally)
+2026-09-08 17:44:58,597 - omlx.engine_core - INFO - Engine started
+2026-09-08 17:44:58,598 - omlx.patches.sdpa256_attention - INFO - sdpa256 attention patch applied (head_dim=256 prefill, kv_len>=8192, tiled only when unfused exceeds guard headroom)
+2026-09-08 17:44:58,599 - omlx.patches.qwen35_fa256_attention - INFO - Qwen FA-256 steel patch skipped: NAX GPU, stock SDPA is faster
+2026-09-08 17:44:58,600 - omlx.patches.qwen35_gdn_prework - INFO - Qwen3.5/3.6 fused GDN verify prework patch applied
+2026-09-08 17:44:58,600 - omlx.patches.qwen35_verify_sdpa_split - INFO - Qwen3.5/3.6 verify-width causal vector attention patch applied
+2026-09-08 17:44:58,600 - omlx.patches.qwen35_gdn_chunked - INFO - Qwen3.5/3.6 GDN prefill kernel patch applied (Metal, impl=blocked_seq, min_t=64)
+2026-09-08 17:44:58,601 - omlx.patches.qwen35_q4_mlp - INFO - Qwen quantized MLP prefill patch applied (variant=8, min_tokens=2048, q8_min_tokens=16384)
+2026-09-08 17:44:58,601 - omlx.patches.qwen35_q4_mlp - INFO - Qwen quantized prefill linear patch applied (variant=8, min_tokens=2048, q8_min_tokens=16384)
+2026-09-08 17:44:58,601 - omlx.patches.qwen35_moe_router - INFO - Qwen MoE fused router top-k patch applied
+2026-09-08 17:44:58,602 - omlx.patches.qwen35_moe_weighted_sum - INFO - Qwen3.5/3.6 MoE weighted-sum patch applied (min_tokens=1024)
+2026-09-08 17:44:58,602 - omlx.patches.qwen35_ragged_decode - INFO - qwen3_5 ragged decode threadgroup fallback patch applied
+2026-09-08 17:44:58,646 - omlx.engine.vlm - INFO - VLM tool calling enabled: parser=qwen3_coder
+2026-09-08 17:44:58,650 - omlx.engine.vlm - INFO - VLMBatchedEngine loaded: /Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit
+2026-09-08 17:44:58,650 - omlx.engine_pool - INFO - Loaded model: Qwen3.6-35B-A3B-4bit (actual: 19.43GB, local estimate: 19.95GB, full model: 19.95GB, total: 19.95GB)
+2026-09-08 17:44:58,964 - omlx.engine.vlm - INFO - GrammarCompiler initialized for /Users/alejandrotreny/.omlx/models/mlx-community/Qwen3.6-35B-A3B-4bit
+2026-09-08 17:45:02,272 - omlx.scheduler - INFO - Prefill lm_head skip enabled: chunk logits are discarded, vocabulary projection deferred to first decode step.
+2026-09-08 17:45:02,272 - omlx.custom_kernels.qwen35_prefill.fast - INFO - Qwen qmm NAX dispatch enabled (nax_variant=0)
+2026-09-08 17:45:05,384 - omlx.scheduler - INFO - Cache phase timings: cleanup_finished_sync=2.6ms/1
+2026-09-08 17:45:05,386 - omlx.server - INFO - Chat completion: model=Qwen3.6-35B-A3B-4bit, 125 tokens in 3.56s (35.1 tok/s), prompt: 2099, finish_reason=stop, max_tokens=1024, request_max_tokens=1024
+2026-09-08 17:45:07,928 - omlx.scheduler - INFO - Cache phase timings: cleanup_finished_sync=5.5ms/2
+2026-09-08 17:45:07,928 - omlx.server - INFO - Chat completion: model=Qwen3.6-35B-A3B-4bit, 112 tokens in 2.33s (48.0 tok/s), prompt: 2028, finish_reason=stop, max_tokens=1024, request_max_tokens=1024
+2026-09-08 17:45:10,660 - omlx.scheduler - INFO - Cache phase timings: cleanup_finished_sync=8.3ms/3
+2026-09-08 17:45:10,661 - omlx.server - INFO - Chat completion: model=Qwen3.6-35B-A3B-4bit, 121 tokens in 2.54s (47.6 tok/s), prompt: 2084, finish_reason=stop, max_tokens=1024, request_max_tokens=1024
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-08 17:45:15,803 - omlx.process_memory_enforcer - INFO - Process memory enforcer stopped
+2026-09-08 17:45:15,803 - omlx.server - INFO - Process memory enforcer stopped
+2026-09-08 17:45:15,803 - omlx.admin.hf_downloader - INFO - HF Downloader shut down
+2026-09-08 17:45:15,804 - omlx.server - INFO - HF Downloader stopped
+2026-09-08 17:45:15,804 - omlx.admin.ms_downloader - INFO - MS Downloader shut down
+2026-09-08 17:45:15,804 - omlx.server - INFO - MS Downloader stopped
+2026-09-08 17:45:15,804 - omlx.engine_pool - INFO - Unloading model: Qwen3.6-35B-A3B-4bit (immediate abort)
+2026-09-08 17:45:15,804 - omlx.engine_core - INFO - Engine stopped
+2026-09-08 17:45:15,839 - omlx.scheduler - INFO - Scheduler shutdown initiated...
+2026-09-08 17:45:15,839 - omlx.scheduler - INFO - Scheduler shutdown completed
+2026-09-08 17:45:15,884 - omlx.scheduler - INFO - Deep reset completed - all caches cleared
+2026-09-08 17:45:16,069 - omlx.utils.compile_cache - INFO - MLX compile-cache clear resolved (_ZN3mlx4core6detail19compile_clear_cacheEv)
+2026-09-08 17:45:16,069 - omlx.engine.vlm - INFO - VLMBatchedEngine stopped
+2026-09-08 17:45:16,090 - omlx.engine_pool - INFO - Unloaded model: Qwen3.6-35B-A3B-4bit, freed=19.40GB (expected>=17.95GB), active_memory: 1.02KB (settled)
+2026-09-08 17:45:16,090 - omlx.engine_pool - INFO - Engine pool shutdown complete
+2026-09-08 17:45:16,090 - omlx.server - INFO - Engine pool shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [34678]

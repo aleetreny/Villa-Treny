@@ -1,0 +1,89 @@
+{
+  "format": "villa-attention-release-validation-v1",
+  "at": "2026-09-09T11:34:45.691971+00:00",
+  "versionId": "5cc86d7b-9fe5-4169-b3bf-20a00930ead4",
+  "protocol": 8,
+  "sql": 12,
+  "societyCodec": 4,
+  "worldCodec": 4,
+  "publicDto": 2,
+  "sourceBundleSha256": "8092638dd5ad35ac79ad25db153600d51fe06687daee69521e3c6489261c6434",
+  "sourceFiles": 319,
+  "checks": {
+    "lint": "passed",
+    "types": "passed",
+    "nodeTests": 62,
+    "applicationTests": 1077,
+    "workerTests": 377,
+    "browserTests": 21,
+    "hostingTests": 6,
+    "build": "passed",
+    "deployableFiles": 59,
+    "roomPngs": 46,
+    "dryDeploy": "passed",
+    "deployment": "passed"
+  },
+  "logs": {
+    "check": {
+      "name": "selected-check-final.log",
+      "sha256": "2e2ba7f3d4af8eb5d4b42661c2a76b506445aa5d3d36f9fc35d41975fa09d793"
+    },
+    "build": {
+      "name": "selected-build-final.log",
+      "sha256": "c5d81422b11358395b85007c791956d949dcd25f9e45637b62d28ae25f623879"
+    },
+    "browser": {
+      "name": "selected-browser.log",
+      "sha256": "9695ad0b1eae82fafedca38fe3526322d9249e6a276583bd90d8183e58ee85ee"
+    },
+    "dryDeploy": {
+      "name": "selected-dry.log",
+      "sha256": "ea5334b6f5ed0f8335d21bc08c76489c0cc32f353d8518e4f23de28af6dc941d"
+    },
+    "hosting": {
+      "name": "selected-hosting-final.log",
+      "sha256": "276f2d5dc8c52b7f32e5841766fefcca42068ef8dac1df6a9a69ff6f4d4840ec"
+    },
+    "deploy": {
+      "name": "selected-deploy.log",
+      "sha256": "193c80948ce24ec1b527f774dcec6652fe447795326547f335697990ae45d9d1"
+    }
+  },
+  "continuity": "attention-production-continuity.json",
+  "rehearsal": "attention-sql12-offline-rehearsal.json",
+  "nativeReview": {
+    "completed": true,
+    "scenes": [
+      "The Common at integer 4x",
+      "Journal",
+      "Lives"
+    ],
+    "observed": [
+      "Connected",
+      "World running",
+      "Thoughts delayed",
+      "A reply is available to",
+      "Recorded outcome"
+    ],
+    "limitations": "No native review of all45 rooms in this release; automated browser suite covers them. Archived model speech can still contain unsupported claims or Spanish. Initial Lives role=tab selector had no match; native checkbox action succeeded."
+  },
+  "limits": [
+    "No new real-provider evaluation of P8; capabilities and schema integrity do not prove social quality.",
+    "C6 compact on actual revision317:6587\u20137903 total Groq reservation; legal stress8754 exceedsGroq8k.",
+    "Provisional128-token framing and finite budget fixtures are not universal fit or provider input measurement.",
+    "Three channels per person and40 retained conversations can saturate; bounded individual waiting is not guaranteed.",
+    "Existing large client chunk build warning persists.",
+    "Research totals unchanged:165local calls and1852CFneurons; natural production inference is separate."
+  ],
+  "publicStatus": {
+    "worldRevision": 322,
+    "worldHealth": "healthy",
+    "cognitionHealth": "degraded",
+    "lastCognitionError": "providers_deferred",
+    "successfulLastWatch": 18,
+    "neverThought": 0
+  },
+  "commit": false,
+  "push": false,
+  "portfolioChanged": false
+}

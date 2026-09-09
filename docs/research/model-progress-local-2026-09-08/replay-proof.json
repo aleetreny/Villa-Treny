@@ -1,0 +1,48 @@
+{
+  "format": "villa-progress-local-replay-v1",
+  "capturedAt": "2026-09-08T20:58:15.952Z",
+  "newCalls": 0,
+  "matchingResults": true,
+  "unchangedPrivateFiles": [
+    {
+      "name": "ledger.json",
+      "size": 999449,
+      "mtimeMs": 1788900993560.8193,
+      "sha256": "b3ed1456f4679076e11bebd78cef54a19d4abadd7aa8dbd979ab6e7f8352dde4"
+    },
+    {
+      "name": "private-cases.json",
+      "size": 2061419,
+      "mtimeMs": 1788900923196.594,
+      "sha256": "91f0e9ec9e1982f9ebe0295a1724f8ad31da0145e40e0681c3bb74871c747ace"
+    },
+    {
+      "name": "public-plan.json",
+      "size": 7363,
+      "mtimeMs": 1788900923219.5027,
+      "sha256": "b8d1f792dc0113a4321453d2d076064d3530a0fb466b7b3a16aeaf7e7b24b5ad"
+    },
+    {
+      "name": "public-report.json",
+      "size": 9689,
+      "mtimeMs": 1788900993582.565,
+      "sha256": "dbe46d08f955c182241c31a0e7204d2e22016e9116e06a216806b0ccec48facc"
+    },
+    {
+      "name": "source-bundle.json",
+      "size": 2186803,
+      "mtimeMs": 1788900923180.94,
+      "sha256": "b921837947fb530ebf853d8895ff67a99cd9e081d6827d38fbd32982feaa471d"
+    }
+  ],
+  "privateLedgerSha256": "b3ed1456f4679076e11bebd78cef54a19d4abadd7aa8dbd979ab6e7f8352dde4",
+  "productionWrites": 0,
+  "cloudCalls": 0,
+  "physicalWatches": 0,
+  "cumulativeLocalResearchCalls": 157,
+  "researchCloudNeurons": 1852,
+  "limitations": [
+    "Eight single local responses, not a sustained society or cloud-model comparison.",
+    "First inference overlaps offline fullcheck and model cold start; latency does not establish a treatment speed effect."
+  ]
+}

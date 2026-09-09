@@ -1,0 +1,17 @@
+{
+  "format": "villa-free-capacity-readback-v1",
+  "observedOn": "2026-09-09",
+  "method": "Authenticated native browser accessibility trees, no inference",
+  "organization": "Personal",
+  "project": "habitat-prod",
+  "organizationSource": "https://console.groq.com/settings/limits",
+  "projectSource": "https://console.groq.com/settings/project/limits",
+  "allowedProjectModels": ["openai/gpt-oss-120b", "openai/gpt-oss-20b"],
+  "models": [
+    {"model": "openai/gpt-oss-120b", "requestsPerMinute": 30, "requestsPerDay": 1000, "tokensPerMinute": 8000, "tokensPerDay": 200000, "projectLimit": "inherited organization rates; no project override row"},
+    {"model": "openai/gpt-oss-20b", "requestsPerMinute": 30, "requestsPerDay": 1000, "tokensPerMinute": 8000, "tokensPerDay": 200000, "projectLimit": "explicit project row matches organization rates"}
+  ],
+  "changes": [],
+  "inferenceCalls": 0,
+  "conclusion": "The project has no lower effective rate to raise for either configured model. Authentication itself did not increase capacity. No paid plan or additional recurring free allowance was obtained."
+}

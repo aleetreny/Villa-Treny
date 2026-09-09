@@ -1,0 +1,1513 @@
+{
+  "scope": "Offline schema proposal and accounting, not an implementation, replayed future or inference result.",
+  "httpRequests": 0,
+  "sourceLedger": "docs/research/model-society-v7-grammar-local-2026-09-08/ledger.json",
+  "sourceLedgerSha256": "1cfd4fb0e79e04bee8f25f6c6a19378065090cd09fbd31e6ccf93fcc0c6f6031",
+  "grammarChecks": 757,
+  "tokenizer": {
+    "name": "o200k_harmony",
+    "version": "0.14.0",
+    "framingMargin": 128,
+    "outputReservation": 1024,
+    "limitation": "Ordinary authored-component counts plus provisional provider-framing allowance; not exact server prompt usage."
+  },
+  "systemProposal": "Deal is optional. To propose a concrete transfer, loan or work commitment that serves your purpose, use deal, including first contact. Words alone do not schedule work or move cells. Ordinary discussion needs no deal.",
+  "openingCases": 12,
+  "affectedActors": [
+    "A",
+    "B",
+    "D",
+    "E",
+    "F",
+    "I",
+    "J",
+    "N",
+    "P",
+    "R",
+    "S",
+    "V"
+  ],
+  "instructionTokenDelta": [
+    28,
+    28
+  ],
+  "openingSchemaTokenDelta": [
+    1308,
+    1396
+  ],
+  "reservations": {
+    "baselineGroqReservation": {
+      "range": [
+        3266,
+        5268
+      ],
+      "total": 165893,
+      "above6000": 0
+    },
+    "grammarOnlyGroqReservation": {
+      "range": [
+        3266,
+        5268
+      ],
+      "total": 182117,
+      "above6000": 0
+    },
+    "withInstructionGroqReservation": {
+      "range": [
+        3294,
+        5296
+      ],
+      "total": 183153,
+      "above6000": 0
+    }
+  },
+  "candidateAuthoredBytes": [
+    8923,
+    16635
+  ],
+  "rows": [
+    {
+      "actor": "A",
+      "stage": "initial",
+      "index": 0,
+      "opening": true,
+      "baselineSchemaHash": "f851a28a2a2928c84d7e1e1c591a4e7a654ff86179483037cba09b070cd44a15",
+      "candidateSchemaHash": "d718de86be6883d4769d585f197e291782fa399ce3d459568fbf7f0d1e8d8f52",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 641,
+          "bytes": 2084,
+          "sha256": "5bb0b84fbb387f3f05c109968db522e48795fedeaa7863ee620b2f6d1496967b"
+        },
+        "schema": {
+          "tokens": 949,
+          "bytes": 3508,
+          "sha256": "f851a28a2a2928c84d7e1e1c591a4e7a654ff86179483037cba09b070cd44a15"
+        },
+        "candidateSchema": {
+          "tokens": 2345,
+          "bytes": 8568,
+          "sha256": "d718de86be6883d4769d585f197e291782fa399ce3d459568fbf7f0d1e8d8f52"
+        }
+      },
+      "baselineGroqReservation": 3466,
+      "grammarOnlyGroqReservation": 4862,
+      "withInstructionGroqReservation": 4890,
+      "candidateAuthoredBytes": 14550
+    },
+    {
+      "actor": "B",
+      "stage": "initial",
+      "index": 1,
+      "opening": true,
+      "baselineSchemaHash": "748d87e1190fc20eea68f85e84ac1337bf2e9c02c79cb2e2af1a6fca945c9562",
+      "candidateSchemaHash": "3dc686c5e4542a13261c77d369cfb65685d0f7eeffcccf186b5f03fd516ac1ac",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 621,
+          "bytes": 1909,
+          "sha256": "8e53e17faa44ce5c3f700a792fa146819010adb2eb9bb9ed972ae1eff6ea4a9c"
+        },
+        "schema": {
+          "tokens": 941,
+          "bytes": 3479,
+          "sha256": "748d87e1190fc20eea68f85e84ac1337bf2e9c02c79cb2e2af1a6fca945c9562"
+        },
+        "candidateSchema": {
+          "tokens": 2329,
+          "bytes": 8523,
+          "sha256": "3dc686c5e4542a13261c77d369cfb65685d0f7eeffcccf186b5f03fd516ac1ac"
+        }
+      },
+      "baselineGroqReservation": 3438,
+      "grammarOnlyGroqReservation": 4826,
+      "withInstructionGroqReservation": 4854,
+      "candidateAuthoredBytes": 14330
+    },
+    {
+      "actor": "C",
+      "stage": "initial",
+      "index": 2,
+      "opening": false,
+      "baselineSchemaHash": "8080ff524a5c1021a26a0e8a8a193f8a0ba3a4ce055350d5059e2cc144bf8fbe",
+      "candidateSchemaHash": "8080ff524a5c1021a26a0e8a8a193f8a0ba3a4ce055350d5059e2cc144bf8fbe",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 684,
+          "bytes": 2291,
+          "sha256": "56a648737a5698c7cd75af034aef6a26d781ea9d84c8997fc374ce797f86d9ae"
+        },
+        "schema": {
+          "tokens": 2384,
+          "bytes": 8974,
+          "sha256": "8080ff524a5c1021a26a0e8a8a193f8a0ba3a4ce055350d5059e2cc144bf8fbe"
+        },
+        "candidateSchema": {
+          "tokens": 2384,
+          "bytes": 8974,
+          "sha256": "8080ff524a5c1021a26a0e8a8a193f8a0ba3a4ce055350d5059e2cc144bf8fbe"
+        }
+      },
+      "baselineGroqReservation": 4944,
+      "grammarOnlyGroqReservation": 4944,
+      "withInstructionGroqReservation": 4972,
+      "candidateAuthoredBytes": 15163
+    },
+    {
+      "actor": "D",
+      "stage": "initial",
+      "index": 3,
+      "opening": true,
+      "baselineSchemaHash": "6c0ce92cb438dadfe5fa593ffcba2d8932765088781fb74575b2fe3c7ac84091",
+      "candidateSchemaHash": "2d9ec8acfbef6961d6610e0cd53d8fd77769a2b41919d5278a43e997a527369c",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 654,
+          "bytes": 2051,
+          "sha256": "248ea0b06b68b483244a8dd35a7b8996c707ab1749e47d73fbee0c9ddc0f2a28"
+        },
+        "schema": {
+          "tokens": 937,
+          "bytes": 3471,
+          "sha256": "6c0ce92cb438dadfe5fa593ffcba2d8932765088781fb74575b2fe3c7ac84091"
+        },
+        "candidateSchema": {
+          "tokens": 2317,
+          "bytes": 8499,
+          "sha256": "2d9ec8acfbef6961d6610e0cd53d8fd77769a2b41919d5278a43e997a527369c"
+        }
+      },
+      "baselineGroqReservation": 3467,
+      "grammarOnlyGroqReservation": 4847,
+      "withInstructionGroqReservation": 4875,
+      "candidateAuthoredBytes": 14448
+    },
+    {
+      "actor": "E",
+      "stage": "initial",
+      "index": 4,
+      "opening": true,
+      "baselineSchemaHash": "2992dea0e00c6013f5c6e6148186a6a665e1a3a50c10c8cd61667dffe3705547",
+      "candidateSchemaHash": "bb397b939b166be74aeee63f3080ca9036b9f82483d0ca690d8cdfa937a9cd41",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 729,
+          "bytes": 2444,
+          "sha256": "3a40af5899022ceb2fa37edd0f0b441c07ef416a8624dfb4618b421ccda04a4e"
+        },
+        "schema": {
+          "tokens": 946,
+          "bytes": 3501,
+          "sha256": "2992dea0e00c6013f5c6e6148186a6a665e1a3a50c10c8cd61667dffe3705547"
+        },
+        "candidateSchema": {
+          "tokens": 2318,
+          "bytes": 8513,
+          "sha256": "bb397b939b166be74aeee63f3080ca9036b9f82483d0ca690d8cdfa937a9cd41"
+        }
+      },
+      "baselineGroqReservation": 3551,
+      "grammarOnlyGroqReservation": 4923,
+      "withInstructionGroqReservation": 4951,
+      "candidateAuthoredBytes": 14855
+    },
+    {
+      "actor": "F",
+      "stage": "initial",
+      "index": 5,
+      "opening": true,
+      "baselineSchemaHash": "a13c2410bff52e2c99d46a9b1640b96dbfe9d99020996868f36b7556176290ac",
+      "candidateSchemaHash": "4de27c8c93be93a215e8648d30103fd9fc465440c0d4ebe9c59f6a21aa23a202",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 681,
+          "bytes": 2229,
+          "sha256": "b1ac0b5b7d8a5e71ab49bbb99aeae1a1d69134dd7d726527c15d5ee356246ca5"
+        },
+        "schema": {
+          "tokens": 935,
+          "bytes": 3472,
+          "sha256": "a13c2410bff52e2c99d46a9b1640b96dbfe9d99020996868f36b7556176290ac"
+        },
+        "candidateSchema": {
+          "tokens": 2299,
+          "bytes": 8468,
+          "sha256": "4de27c8c93be93a215e8648d30103fd9fc465440c0d4ebe9c59f6a21aa23a202"
+        }
+      },
+      "baselineGroqReservation": 3492,
+      "grammarOnlyGroqReservation": 4856,
+      "withInstructionGroqReservation": 4884,
+      "candidateAuthoredBytes": 14595
+    },
+    {
+      "actor": "G",
+      "stage": "initial",
+      "index": 6,
+      "opening": false,
+      "baselineSchemaHash": "8205b032920fa69d21d06d4c25a5dc66845b12872f4214cb4432f6cd34cf62d0",
+      "candidateSchemaHash": "8205b032920fa69d21d06d4c25a5dc66845b12872f4214cb4432f6cd34cf62d0",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 706,
+          "bytes": 2471,
+          "sha256": "ff2f11189512991d4fc33c77876bc834f5b5fe8d2e13e722b2d2832b2e858719"
+        },
+        "schema": {
+          "tokens": 2391,
+          "bytes": 8996,
+          "sha256": "8205b032920fa69d21d06d4c25a5dc66845b12872f4214cb4432f6cd34cf62d0"
+        },
+        "candidateSchema": {
+          "tokens": 2391,
+          "bytes": 8996,
+          "sha256": "8205b032920fa69d21d06d4c25a5dc66845b12872f4214cb4432f6cd34cf62d0"
+        }
+      },
+      "baselineGroqReservation": 4973,
+      "grammarOnlyGroqReservation": 4973,
+      "withInstructionGroqReservation": 5001,
+      "candidateAuthoredBytes": 15365
+    },
+    {
+      "actor": "H",
+      "stage": "initial",
+      "index": 7,
+      "opening": false,
+      "baselineSchemaHash": "82ae3a1165fb72f285050a200ffd669ae11ccec5d7266720fd2f49aa869567ed",
+      "candidateSchemaHash": "82ae3a1165fb72f285050a200ffd669ae11ccec5d7266720fd2f49aa869567ed",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 696,
+          "bytes": 2422,
+          "sha256": "1baa510122e2a2cbf70a62ddf7d17c0799e201af32ae228c87970b0e065bc0a3"
+        },
+        "schema": {
+          "tokens": 2390,
+          "bytes": 8994,
+          "sha256": "82ae3a1165fb72f285050a200ffd669ae11ccec5d7266720fd2f49aa869567ed"
+        },
+        "candidateSchema": {
+          "tokens": 2390,
+          "bytes": 8994,
+          "sha256": "82ae3a1165fb72f285050a200ffd669ae11ccec5d7266720fd2f49aa869567ed"
+        }
+      },
+      "baselineGroqReservation": 4962,
+      "grammarOnlyGroqReservation": 4962,
+      "withInstructionGroqReservation": 4990,
+      "candidateAuthoredBytes": 15314
+    },
+    {
+      "actor": "I",
+      "stage": "initial",
+      "index": 8,
+      "opening": true,
+      "baselineSchemaHash": "f640a92e624b246e5b792adf120c9789995540093c6d49ada16bb16ed13c7584",
+      "candidateSchemaHash": "6de39844eba7ef95331c80f91399cb1c35fe06c1dd503426a079c06f41a8bc79",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 618,
+          "bytes": 2007,
+          "sha256": "f5b48ed95ec3187ba7bbc60e2d01f7f6a9715e241b1cc0d7d2b1af7262d0ca77"
+        },
+        "schema": {
+          "tokens": 925,
+          "bytes": 3447,
+          "sha256": "f640a92e624b246e5b792adf120c9789995540093c6d49ada16bb16ed13c7584"
+        },
+        "candidateSchema": {
+          "tokens": 2281,
+          "bytes": 8427,
+          "sha256": "6de39844eba7ef95331c80f91399cb1c35fe06c1dd503426a079c06f41a8bc79"
+        }
+      },
+      "baselineGroqReservation": 3419,
+      "grammarOnlyGroqReservation": 4775,
+      "withInstructionGroqReservation": 4803,
+      "candidateAuthoredBytes": 14332
+    },
+    {
+      "actor": "J",
+      "stage": "initial",
+      "index": 9,
+      "opening": true,
+      "baselineSchemaHash": "8875116e5de10629de99cfac75bc1bd53992b0519e9803a681a55473204d0b4c",
+      "candidateSchemaHash": "e17bff9afa37ba133ad25ae8c70ddf29664b3e4e99f0d309de481cde1d5eb5de",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 687,
+          "bytes": 2308,
+          "sha256": "d91f8f2662078f1a1b9e14c004c932b0ebb4b528d75f318b20ffd2eea394aaf9"
+        },
+        "schema": {
+          "tokens": 934,
+          "bytes": 3479,
+          "sha256": "8875116e5de10629de99cfac75bc1bd53992b0519e9803a681a55473204d0b4c"
+        },
+        "candidateSchema": {
+          "tokens": 2282,
+          "bytes": 8443,
+          "sha256": "e17bff9afa37ba133ad25ae8c70ddf29664b3e4e99f0d309de481cde1d5eb5de"
+        }
+      },
+      "baselineGroqReservation": 3497,
+      "grammarOnlyGroqReservation": 4845,
+      "withInstructionGroqReservation": 4873,
+      "candidateAuthoredBytes": 14649
+    },
+    {
+      "actor": "K",
+      "stage": "initial",
+      "index": 10,
+      "opening": false,
+      "baselineSchemaHash": "551fffe5115af2a9bb7025418caf2bb8c0adfd76c5721f677b694ddac22037eb",
+      "candidateSchemaHash": "551fffe5115af2a9bb7025418caf2bb8c0adfd76c5721f677b694ddac22037eb",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 620,
+          "bytes": 2067,
+          "sha256": "86a1c014a6b307ac4464a621be1466efa4fb9b1a18883ccf34e9fe1380a43b4c"
+        },
+        "schema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "551fffe5115af2a9bb7025418caf2bb8c0adfd76c5721f677b694ddac22037eb"
+        },
+        "candidateSchema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "551fffe5115af2a9bb7025418caf2bb8c0adfd76c5721f677b694ddac22037eb"
+        }
+      },
+      "baselineGroqReservation": 4880,
+      "grammarOnlyGroqReservation": 4880,
+      "withInstructionGroqReservation": 4908,
+      "candidateAuthoredBytes": 14941
+    },
+    {
+      "actor": "L",
+      "stage": "initial",
+      "index": 11,
+      "opening": false,
+      "baselineSchemaHash": "40f4235f87e79dab62ed8259a25421206ef372d2ee62c154fd4bfdf97900930c",
+      "candidateSchemaHash": "40f4235f87e79dab62ed8259a25421206ef372d2ee62c154fd4bfdf97900930c",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 679,
+          "bytes": 2283,
+          "sha256": "ee3f08bdf64251605601772706d165571070a72bc1f6fcd6def95a92e8364d09"
+        },
+        "schema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "40f4235f87e79dab62ed8259a25421206ef372d2ee62c154fd4bfdf97900930c"
+        },
+        "candidateSchema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "40f4235f87e79dab62ed8259a25421206ef372d2ee62c154fd4bfdf97900930c"
+        }
+      },
+      "baselineGroqReservation": 4939,
+      "grammarOnlyGroqReservation": 4939,
+      "withInstructionGroqReservation": 4967,
+      "candidateAuthoredBytes": 15157
+    },
+    {
+      "actor": "M",
+      "stage": "initial",
+      "index": 12,
+      "opening": false,
+      "baselineSchemaHash": "ec6892960e8120c2a6da2d8e1babc9fa806ec2bd3d56565d2b44be18f5c4fdcb",
+      "candidateSchemaHash": "ec6892960e8120c2a6da2d8e1babc9fa806ec2bd3d56565d2b44be18f5c4fdcb",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 724,
+          "bytes": 2545,
+          "sha256": "67a10cfd7371952def7d53a83c2fae023aa788c09ad5f37cecab6da1ead64a38"
+        },
+        "schema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "ec6892960e8120c2a6da2d8e1babc9fa806ec2bd3d56565d2b44be18f5c4fdcb"
+        },
+        "candidateSchema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "ec6892960e8120c2a6da2d8e1babc9fa806ec2bd3d56565d2b44be18f5c4fdcb"
+        }
+      },
+      "baselineGroqReservation": 4984,
+      "grammarOnlyGroqReservation": 4984,
+      "withInstructionGroqReservation": 5012,
+      "candidateAuthoredBytes": 15419
+    },
+    {
+      "actor": "N",
+      "stage": "initial",
+      "index": 13,
+      "opening": true,
+      "baselineSchemaHash": "d99490703605874808c9c7292985e70f29504ba4a5e0a560b1ae1b75eba985ed",
+      "candidateSchemaHash": "48dc238201916f98bb9e64ba1332c65a6a8644d77433042b7e4558c37aed0407",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 607,
+          "bytes": 1979,
+          "sha256": "0c82dbe24c65094a6ac5706b4b3a4c44f8151079a27c0a5a20c3e51b4326d7e0"
+        },
+        "schema": {
+          "tokens": 925,
+          "bytes": 3451,
+          "sha256": "d99490703605874808c9c7292985e70f29504ba4a5e0a560b1ae1b75eba985ed"
+        },
+        "candidateSchema": {
+          "tokens": 2265,
+          "bytes": 8399,
+          "sha256": "48dc238201916f98bb9e64ba1332c65a6a8644d77433042b7e4558c37aed0407"
+        }
+      },
+      "baselineGroqReservation": 3408,
+      "grammarOnlyGroqReservation": 4748,
+      "withInstructionGroqReservation": 4776,
+      "candidateAuthoredBytes": 14276
+    },
+    {
+      "actor": "O",
+      "stage": "initial",
+      "index": 14,
+      "opening": false,
+      "baselineSchemaHash": "60f08df6cf07f6129520842048941fbf3ccb24149b8771341c3e8b1651e30cbd",
+      "candidateSchemaHash": "60f08df6cf07f6129520842048941fbf3ccb24149b8771341c3e8b1651e30cbd",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 667,
+          "bytes": 2169,
+          "sha256": "c9d83a08616445f1ec6479952f73c833a50b0c9b5aadf227be4f5e18b7cc370b"
+        },
+        "schema": {
+          "tokens": 2390,
+          "bytes": 8995,
+          "sha256": "60f08df6cf07f6129520842048941fbf3ccb24149b8771341c3e8b1651e30cbd"
+        },
+        "candidateSchema": {
+          "tokens": 2390,
+          "bytes": 8995,
+          "sha256": "60f08df6cf07f6129520842048941fbf3ccb24149b8771341c3e8b1651e30cbd"
+        }
+      },
+      "baselineGroqReservation": 4933,
+      "grammarOnlyGroqReservation": 4933,
+      "withInstructionGroqReservation": 4961,
+      "candidateAuthoredBytes": 15062
+    },
+    {
+      "actor": "P",
+      "stage": "initial",
+      "index": 15,
+      "opening": true,
+      "baselineSchemaHash": "03f3f2c425690843deb85887eebb5f7b582921112b8633ca13712a1b8c426f7c",
+      "candidateSchemaHash": "93488117ddb40386cde5efb45be0eac149baa9653405da95a42ac7b61ca61430",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 619,
+          "bytes": 2093,
+          "sha256": "7658dcf5784fcf6c3c6eb2eb0a0a1fd398032f0f0f200a4de6ae77bbd529bf51"
+        },
+        "schema": {
+          "tokens": 913,
+          "bytes": 3423,
+          "sha256": "03f3f2c425690843deb85887eebb5f7b582921112b8633ca13712a1b8c426f7c"
+        },
+        "candidateSchema": {
+          "tokens": 2245,
+          "bytes": 8355,
+          "sha256": "93488117ddb40386cde5efb45be0eac149baa9653405da95a42ac7b61ca61430"
+        }
+      },
+      "baselineGroqReservation": 3408,
+      "grammarOnlyGroqReservation": 4740,
+      "withInstructionGroqReservation": 4768,
+      "candidateAuthoredBytes": 14346
+    },
+    {
+      "actor": "Q",
+      "stage": "initial",
+      "index": 16,
+      "opening": false,
+      "baselineSchemaHash": "bced3147574c0b9726a41152bde9594272ca8b6f6504b3657c061da0e4aa85c1",
+      "candidateSchemaHash": "bced3147574c0b9726a41152bde9594272ca8b6f6504b3657c061da0e4aa85c1",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 689,
+          "bytes": 2334,
+          "sha256": "4759d7c41ae2e3b636669dfb0484fcf7fd81e7c8fecbce7c074d0cae750d2474"
+        },
+        "schema": {
+          "tokens": 2390,
+          "bytes": 8996,
+          "sha256": "bced3147574c0b9726a41152bde9594272ca8b6f6504b3657c061da0e4aa85c1"
+        },
+        "candidateSchema": {
+          "tokens": 2390,
+          "bytes": 8996,
+          "sha256": "bced3147574c0b9726a41152bde9594272ca8b6f6504b3657c061da0e4aa85c1"
+        }
+      },
+      "baselineGroqReservation": 4955,
+      "grammarOnlyGroqReservation": 4955,
+      "withInstructionGroqReservation": 4983,
+      "candidateAuthoredBytes": 15228
+    },
+    {
+      "actor": "R",
+      "stage": "initial",
+      "index": 17,
+      "opening": true,
+      "baselineSchemaHash": "3d4b66245b173832b51e27281987bda045aac5c074e945b4f75f84f463469f67",
+      "candidateSchemaHash": "3defdef6ff8d9efe0e3ae527bd8fd849be5829b75ffe7b70e80ea58124c4db37",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 503,
+          "bytes": 1605,
+          "sha256": "9402ebf77eaf8821693373e0ca4072d662dd043efdf6f62e935c0051a9849c72"
+        },
+        "schema": {
+          "tokens": 909,
+          "bytes": 3415,
+          "sha256": "3d4b66245b173832b51e27281987bda045aac5c074e945b4f75f84f463469f67"
+        },
+        "candidateSchema": {
+          "tokens": 2233,
+          "bytes": 8331,
+          "sha256": "3defdef6ff8d9efe0e3ae527bd8fd849be5829b75ffe7b70e80ea58124c4db37"
+        }
+      },
+      "baselineGroqReservation": 3288,
+      "grammarOnlyGroqReservation": 4612,
+      "withInstructionGroqReservation": 4640,
+      "candidateAuthoredBytes": 13834
+    },
+    {
+      "actor": "S",
+      "stage": "initial",
+      "index": 18,
+      "opening": true,
+      "baselineSchemaHash": "e55ef1954f734e6d366384399502906ae78f680236f568979805b3d586a06820",
+      "candidateSchemaHash": "f72833eed48048e7ba7a5d5c1fecaac5c3e5bbddab0e09dc875e17e1d9be415f",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 624,
+          "bytes": 2106,
+          "sha256": "1f0b4c8e76248134d2c97f306b3899d784cd1abb8fd062d7ac8211ab56764aee"
+        },
+        "schema": {
+          "tokens": 912,
+          "bytes": 3427,
+          "sha256": "e55ef1954f734e6d366384399502906ae78f680236f568979805b3d586a06820"
+        },
+        "candidateSchema": {
+          "tokens": 2228,
+          "bytes": 8327,
+          "sha256": "f72833eed48048e7ba7a5d5c1fecaac5c3e5bbddab0e09dc875e17e1d9be415f"
+        }
+      },
+      "baselineGroqReservation": 3412,
+      "grammarOnlyGroqReservation": 4728,
+      "withInstructionGroqReservation": 4756,
+      "candidateAuthoredBytes": 14331
+    },
+    {
+      "actor": "T",
+      "stage": "initial",
+      "index": 19,
+      "opening": false,
+      "baselineSchemaHash": "e220bcdd6ecf0849c0959649cf4cc6c370681f1f1523c34aadc6ec0e39b106b9",
+      "candidateSchemaHash": "e220bcdd6ecf0849c0959649cf4cc6c370681f1f1523c34aadc6ec0e39b106b9",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 641,
+          "bytes": 2153,
+          "sha256": "f278fb7414dab793aa288cdece1342fe4a8696028181dc31d0a5ea52a2c8b988"
+        },
+        "schema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "e220bcdd6ecf0849c0959649cf4cc6c370681f1f1523c34aadc6ec0e39b106b9"
+        },
+        "candidateSchema": {
+          "tokens": 2384,
+          "bytes": 8976,
+          "sha256": "e220bcdd6ecf0849c0959649cf4cc6c370681f1f1523c34aadc6ec0e39b106b9"
+        }
+      },
+      "baselineGroqReservation": 4901,
+      "grammarOnlyGroqReservation": 4901,
+      "withInstructionGroqReservation": 4929,
+      "candidateAuthoredBytes": 15027
+    },
+    {
+      "actor": "U",
+      "stage": "initial",
+      "index": 20,
+      "opening": false,
+      "baselineSchemaHash": "40b4af8d09129fe82b5907fb3029f01d0fd1ee9cb2cf794e7a06ec0c0704a05e",
+      "candidateSchemaHash": "40b4af8d09129fe82b5907fb3029f01d0fd1ee9cb2cf794e7a06ec0c0704a05e",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 699,
+          "bytes": 2353,
+          "sha256": "ec09a6d147485916e8c8593ad3b607a30530264d663574b40b579db29d4a664d"
+        },
+        "schema": {
+          "tokens": 2384,
+          "bytes": 8973,
+          "sha256": "40b4af8d09129fe82b5907fb3029f01d0fd1ee9cb2cf794e7a06ec0c0704a05e"
+        },
+        "candidateSchema": {
+          "tokens": 2384,
+          "bytes": 8973,
+          "sha256": "40b4af8d09129fe82b5907fb3029f01d0fd1ee9cb2cf794e7a06ec0c0704a05e"
+        }
+      },
+      "baselineGroqReservation": 4959,
+      "grammarOnlyGroqReservation": 4959,
+      "withInstructionGroqReservation": 4987,
+      "candidateAuthoredBytes": 15224
+    },
+    {
+      "actor": "V",
+      "stage": "initial",
+      "index": 21,
+      "opening": true,
+      "baselineSchemaHash": "11e547ba87d4c53483bfb85eca92856247e1af6b48a36604d8c5bd67fbc00ada",
+      "candidateSchemaHash": "a8d042160f759ec326966b55cafd90c66bc9521fe5956614d5a5d0553309a6de",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 558,
+          "bytes": 1859,
+          "sha256": "ec70f780f149f314270eaa8abf3966fb846682600e5c5b1746520ac1294cc3d0"
+        },
+        "schema": {
+          "tokens": 907,
+          "bytes": 3417,
+          "sha256": "11e547ba87d4c53483bfb85eca92856247e1af6b48a36604d8c5bd67fbc00ada"
+        },
+        "candidateSchema": {
+          "tokens": 2215,
+          "bytes": 8301,
+          "sha256": "a8d042160f759ec326966b55cafd90c66bc9521fe5956614d5a5d0553309a6de"
+        }
+      },
+      "baselineGroqReservation": 3341,
+      "grammarOnlyGroqReservation": 4649,
+      "withInstructionGroqReservation": 4677,
+      "candidateAuthoredBytes": 14058
+    },
+    {
+      "actor": "W",
+      "stage": "initial",
+      "index": 22,
+      "opening": false,
+      "baselineSchemaHash": "42e671a572c049a46a4405c7cbc2e422325b2ff501b97e5f3aadeaec51bf8589",
+      "candidateSchemaHash": "42e671a572c049a46a4405c7cbc2e422325b2ff501b97e5f3aadeaec51bf8589",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 747,
+          "bytes": 2563,
+          "sha256": "7786a432b77d12ec5750b847ac89da7ce60580b2ad4c0e45e23f700cd603226b"
+        },
+        "schema": {
+          "tokens": 2399,
+          "bytes": 9019,
+          "sha256": "42e671a572c049a46a4405c7cbc2e422325b2ff501b97e5f3aadeaec51bf8589"
+        },
+        "candidateSchema": {
+          "tokens": 2399,
+          "bytes": 9019,
+          "sha256": "42e671a572c049a46a4405c7cbc2e422325b2ff501b97e5f3aadeaec51bf8589"
+        }
+      },
+      "baselineGroqReservation": 5022,
+      "grammarOnlyGroqReservation": 5022,
+      "withInstructionGroqReservation": 5050,
+      "candidateAuthoredBytes": 15480
+    },
+    {
+      "actor": "X",
+      "stage": "initial",
+      "index": 23,
+      "opening": false,
+      "baselineSchemaHash": "05784104a51ad02c425a0f47b9a1bb58f56fb7463f5a5718660f33a88bca50b0",
+      "candidateSchemaHash": "05784104a51ad02c425a0f47b9a1bb58f56fb7463f5a5718660f33a88bca50b0",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 683,
+          "bytes": 2291,
+          "sha256": "7f34fa5911e8e84576a691a2f9848233bd07ac5188c48d7a171429a99fe8c8a5"
+        },
+        "schema": {
+          "tokens": 2390,
+          "bytes": 8993,
+          "sha256": "05784104a51ad02c425a0f47b9a1bb58f56fb7463f5a5718660f33a88bca50b0"
+        },
+        "candidateSchema": {
+          "tokens": 2390,
+          "bytes": 8993,
+          "sha256": "05784104a51ad02c425a0f47b9a1bb58f56fb7463f5a5718660f33a88bca50b0"
+        }
+      },
+      "baselineGroqReservation": 4949,
+      "grammarOnlyGroqReservation": 4949,
+      "withInstructionGroqReservation": 4977,
+      "candidateAuthoredBytes": 15182
+    },
+    {
+      "actor": "Y",
+      "stage": "initial",
+      "index": 24,
+      "opening": false,
+      "baselineSchemaHash": "dfabbb47e0287dfae86f4195057ee8b37e8765bcab2509db2b8584b069ea995f",
+      "candidateSchemaHash": "dfabbb47e0287dfae86f4195057ee8b37e8765bcab2509db2b8584b069ea995f",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 537,
+          "bytes": 1822,
+          "sha256": "629e6d360a15dcdf0d2ddf52dd56cea95f2f90e6ea0780a8c10bd1a3de880b67"
+        },
+        "schema": {
+          "tokens": 853,
+          "bytes": 3203,
+          "sha256": "dfabbb47e0287dfae86f4195057ee8b37e8765bcab2509db2b8584b069ea995f"
+        },
+        "candidateSchema": {
+          "tokens": 853,
+          "bytes": 3203,
+          "sha256": "dfabbb47e0287dfae86f4195057ee8b37e8765bcab2509db2b8584b069ea995f"
+        }
+      },
+      "baselineGroqReservation": 3266,
+      "grammarOnlyGroqReservation": 3266,
+      "withInstructionGroqReservation": 3294,
+      "candidateAuthoredBytes": 8923
+    },
+    {
+      "actor": "B",
+      "stage": "reply",
+      "index": 0,
+      "opening": false,
+      "baselineSchemaHash": "5dcc8d303a48ba7468244a9326577697bfd3f1c833ebca4f0af6b5ab1ba8fbd8",
+      "candidateSchemaHash": "5dcc8d303a48ba7468244a9326577697bfd3f1c833ebca4f0af6b5ab1ba8fbd8",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 797,
+          "bytes": 2761,
+          "sha256": "1a50e6fd332dfe123f036e8071761aac9e77b926724fa86ca1b5c36b01961fd5"
+        },
+        "schema": {
+          "tokens": 2435,
+          "bytes": 9147,
+          "sha256": "5dcc8d303a48ba7468244a9326577697bfd3f1c833ebca4f0af6b5ab1ba8fbd8"
+        },
+        "candidateSchema": {
+          "tokens": 2435,
+          "bytes": 9147,
+          "sha256": "5dcc8d303a48ba7468244a9326577697bfd3f1c833ebca4f0af6b5ab1ba8fbd8"
+        }
+      },
+      "baselineGroqReservation": 5108,
+      "grammarOnlyGroqReservation": 5108,
+      "withInstructionGroqReservation": 5136,
+      "candidateAuthoredBytes": 15806
+    },
+    {
+      "actor": "D",
+      "stage": "reply",
+      "index": 1,
+      "opening": false,
+      "baselineSchemaHash": "310c723c837f67e1afa293b5c73e683f8f60d26b41bb207479d4627415924585",
+      "candidateSchemaHash": "310c723c837f67e1afa293b5c73e683f8f60d26b41bb207479d4627415924585",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 746,
+          "bytes": 2673,
+          "sha256": "d0b6e45e123eec473e89d15c94be93c85b47568294aeadfa10cbedb2e9423c24"
+        },
+        "schema": {
+          "tokens": 2435,
+          "bytes": 9149,
+          "sha256": "310c723c837f67e1afa293b5c73e683f8f60d26b41bb207479d4627415924585"
+        },
+        "candidateSchema": {
+          "tokens": 2435,
+          "bytes": 9149,
+          "sha256": "310c723c837f67e1afa293b5c73e683f8f60d26b41bb207479d4627415924585"
+        }
+      },
+      "baselineGroqReservation": 5057,
+      "grammarOnlyGroqReservation": 5057,
+      "withInstructionGroqReservation": 5085,
+      "candidateAuthoredBytes": 15720
+    },
+    {
+      "actor": "E",
+      "stage": "reply",
+      "index": 2,
+      "opening": false,
+      "baselineSchemaHash": "3715151bc75542085dd492417341baedac75e499bbb21f26d37e81abada64af4",
+      "candidateSchemaHash": "3715151bc75542085dd492417341baedac75e499bbb21f26d37e81abada64af4",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 944,
+          "bytes": 3550,
+          "sha256": "226a5551cf1e80149bc02e584b17d02f66e36a1f786673542ef31a05a2a43c55"
+        },
+        "schema": {
+          "tokens": 2448,
+          "bytes": 9187,
+          "sha256": "3715151bc75542085dd492417341baedac75e499bbb21f26d37e81abada64af4"
+        },
+        "candidateSchema": {
+          "tokens": 2448,
+          "bytes": 9187,
+          "sha256": "3715151bc75542085dd492417341baedac75e499bbb21f26d37e81abada64af4"
+        }
+      },
+      "baselineGroqReservation": 5268,
+      "grammarOnlyGroqReservation": 5268,
+      "withInstructionGroqReservation": 5296,
+      "candidateAuthoredBytes": 16635
+    },
+    {
+      "actor": "I",
+      "stage": "reply",
+      "index": 3,
+      "opening": false,
+      "baselineSchemaHash": "4e2194546d88b73a687a4fb8737310a844d4b6761d7d7838583072c5eb14f1db",
+      "candidateSchemaHash": "4e2194546d88b73a687a4fb8737310a844d4b6761d7d7838583072c5eb14f1db",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 787,
+          "bytes": 2736,
+          "sha256": "7b9ba7493748a315ac8ff9852f68c3a4d4bc8600b9963843128595aac8f8e884"
+        },
+        "schema": {
+          "tokens": 2435,
+          "bytes": 9149,
+          "sha256": "4e2194546d88b73a687a4fb8737310a844d4b6761d7d7838583072c5eb14f1db"
+        },
+        "candidateSchema": {
+          "tokens": 2435,
+          "bytes": 9149,
+          "sha256": "4e2194546d88b73a687a4fb8737310a844d4b6761d7d7838583072c5eb14f1db"
+        }
+      },
+      "baselineGroqReservation": 5098,
+      "grammarOnlyGroqReservation": 5098,
+      "withInstructionGroqReservation": 5126,
+      "candidateAuthoredBytes": 15783
+    },
+    {
+      "actor": "J",
+      "stage": "reply",
+      "index": 4,
+      "opening": false,
+      "baselineSchemaHash": "0cd92c68acde48d1593807bc5ba2e11325d49b3c55c01a7423565e6522deca9a",
+      "candidateSchemaHash": "0cd92c68acde48d1593807bc5ba2e11325d49b3c55c01a7423565e6522deca9a",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 892,
+          "bytes": 3164,
+          "sha256": "96fcd3e5aafbe9c4677245ae001a26a26e08e4d59cec6376bfb4f04b839ca8e2"
+        },
+        "schema": {
+          "tokens": 2448,
+          "bytes": 9189,
+          "sha256": "0cd92c68acde48d1593807bc5ba2e11325d49b3c55c01a7423565e6522deca9a"
+        },
+        "candidateSchema": {
+          "tokens": 2448,
+          "bytes": 9189,
+          "sha256": "0cd92c68acde48d1593807bc5ba2e11325d49b3c55c01a7423565e6522deca9a"
+        }
+      },
+      "baselineGroqReservation": 5216,
+      "grammarOnlyGroqReservation": 5216,
+      "withInstructionGroqReservation": 5244,
+      "candidateAuthoredBytes": 16251
+    },
+    {
+      "actor": "F",
+      "stage": "reply",
+      "index": 5,
+      "opening": false,
+      "baselineSchemaHash": "138d5ddfceb63f53a0233db9c68114216705aa472e8a597bd3542332604ddd0d",
+      "candidateSchemaHash": "138d5ddfceb63f53a0233db9c68114216705aa472e8a597bd3542332604ddd0d",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 913,
+          "bytes": 3290,
+          "sha256": "28ce6e58611b28e72b632106d160f3e3c0556c94c42a773418b1c54fd732167b"
+        },
+        "schema": {
+          "tokens": 2441,
+          "bytes": 9166,
+          "sha256": "138d5ddfceb63f53a0233db9c68114216705aa472e8a597bd3542332604ddd0d"
+        },
+        "candidateSchema": {
+          "tokens": 2441,
+          "bytes": 9166,
+          "sha256": "138d5ddfceb63f53a0233db9c68114216705aa472e8a597bd3542332604ddd0d"
+        }
+      },
+      "baselineGroqReservation": 5230,
+      "grammarOnlyGroqReservation": 5230,
+      "withInstructionGroqReservation": 5258,
+      "candidateAuthoredBytes": 16354
+    },
+    {
+      "actor": "N",
+      "stage": "reply",
+      "index": 6,
+      "opening": false,
+      "baselineSchemaHash": "1ffbdb0cad12a4828d06b741e1f32e028b5413c9fb3bbe1efbc4d21dbdfe2cde",
+      "candidateSchemaHash": "1ffbdb0cad12a4828d06b741e1f32e028b5413c9fb3bbe1efbc4d21dbdfe2cde",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 865,
+          "bytes": 2916,
+          "sha256": "16a6f0428ffd033c1902417c8b48186bea7116b14f85c568c557316e2999e1e9"
+        },
+        "schema": {
+          "tokens": 2443,
+          "bytes": 9169,
+          "sha256": "1ffbdb0cad12a4828d06b741e1f32e028b5413c9fb3bbe1efbc4d21dbdfe2cde"
+        },
+        "candidateSchema": {
+          "tokens": 2443,
+          "bytes": 9169,
+          "sha256": "1ffbdb0cad12a4828d06b741e1f32e028b5413c9fb3bbe1efbc4d21dbdfe2cde"
+        }
+      },
+      "baselineGroqReservation": 5184,
+      "grammarOnlyGroqReservation": 5184,
+      "withInstructionGroqReservation": 5212,
+      "candidateAuthoredBytes": 15983
+    },
+    {
+      "actor": "P",
+      "stage": "reply",
+      "index": 7,
+      "opening": false,
+      "baselineSchemaHash": "49cb9fb4c99ebd72a3a28635020435c07b2499b3f9a743d14df301e40d768aa3",
+      "candidateSchemaHash": "49cb9fb4c99ebd72a3a28635020435c07b2499b3f9a743d14df301e40d768aa3",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 802,
+          "bytes": 2756,
+          "sha256": "c0bb44a0c5ca1f8a8ab7a0b1513cd05202545d328357dc4ce8179a04354b9b15"
+        },
+        "schema": {
+          "tokens": 2435,
+          "bytes": 9149,
+          "sha256": "49cb9fb4c99ebd72a3a28635020435c07b2499b3f9a743d14df301e40d768aa3"
+        },
+        "candidateSchema": {
+          "tokens": 2435,
+          "bytes": 9149,
+          "sha256": "49cb9fb4c99ebd72a3a28635020435c07b2499b3f9a743d14df301e40d768aa3"
+        }
+      },
+      "baselineGroqReservation": 5113,
+      "grammarOnlyGroqReservation": 5113,
+      "withInstructionGroqReservation": 5141,
+      "candidateAuthoredBytes": 15803
+    },
+    {
+      "actor": "R",
+      "stage": "replan",
+      "index": 0,
+      "opening": false,
+      "baselineSchemaHash": "993ccee3c9dc0f94b93f91f897e35e1191e43e280d5c04136642d5d4e6901a43",
+      "candidateSchemaHash": "993ccee3c9dc0f94b93f91f897e35e1191e43e280d5c04136642d5d4e6901a43",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 787,
+          "bytes": 2782,
+          "sha256": "6aeb59ce2c303f915d90f2ff501c72024c683bb6380510da341f722461875a4e"
+        },
+        "schema": {
+          "tokens": 2439,
+          "bytes": 9162,
+          "sha256": "993ccee3c9dc0f94b93f91f897e35e1191e43e280d5c04136642d5d4e6901a43"
+        },
+        "candidateSchema": {
+          "tokens": 2439,
+          "bytes": 9162,
+          "sha256": "993ccee3c9dc0f94b93f91f897e35e1191e43e280d5c04136642d5d4e6901a43"
+        }
+      },
+      "baselineGroqReservation": 5102,
+      "grammarOnlyGroqReservation": 5102,
+      "withInstructionGroqReservation": 5130,
+      "candidateAuthoredBytes": 15842
+    },
+    {
+      "actor": "A",
+      "stage": "replan",
+      "index": 1,
+      "opening": false,
+      "baselineSchemaHash": "f889b69533d8eadd6001ec73f4af8888f12a32d2b9e4eda20c1c35c83f061af5",
+      "candidateSchemaHash": "f889b69533d8eadd6001ec73f4af8888f12a32d2b9e4eda20c1c35c83f061af5",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 886,
+          "bytes": 3100,
+          "sha256": "9eab3ee1ad149b2ed1d80ac90311c9af2bc2b973780ac2b0fbd85b07fded5952"
+        },
+        "schema": {
+          "tokens": 2447,
+          "bytes": 9197,
+          "sha256": "f889b69533d8eadd6001ec73f4af8888f12a32d2b9e4eda20c1c35c83f061af5"
+        },
+        "candidateSchema": {
+          "tokens": 2447,
+          "bytes": 9197,
+          "sha256": "f889b69533d8eadd6001ec73f4af8888f12a32d2b9e4eda20c1c35c83f061af5"
+        }
+      },
+      "baselineGroqReservation": 5209,
+      "grammarOnlyGroqReservation": 5209,
+      "withInstructionGroqReservation": 5237,
+      "candidateAuthoredBytes": 16195
+    },
+    {
+      "actor": "V",
+      "stage": "replan",
+      "index": 2,
+      "opening": false,
+      "baselineSchemaHash": "78cbb31cdc4cbe1816d0ee6df04119d077ca977ee6d3c10203294a5754ed84d1",
+      "candidateSchemaHash": "78cbb31cdc4cbe1816d0ee6df04119d077ca977ee6d3c10203294a5754ed84d1",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 887,
+          "bytes": 3104,
+          "sha256": "85d1051c5c8804291eece726109cb9138dd60fff77956b62700fae91856d9024"
+        },
+        "schema": {
+          "tokens": 2449,
+          "bytes": 9198,
+          "sha256": "78cbb31cdc4cbe1816d0ee6df04119d077ca977ee6d3c10203294a5754ed84d1"
+        },
+        "candidateSchema": {
+          "tokens": 2449,
+          "bytes": 9198,
+          "sha256": "78cbb31cdc4cbe1816d0ee6df04119d077ca977ee6d3c10203294a5754ed84d1"
+        }
+      },
+      "baselineGroqReservation": 5212,
+      "grammarOnlyGroqReservation": 5212,
+      "withInstructionGroqReservation": 5240,
+      "candidateAuthoredBytes": 16200
+    },
+    {
+      "actor": "C",
+      "stage": "replan",
+      "index": 3,
+      "opening": false,
+      "baselineSchemaHash": "6faccf8a5bf1a625b18a8298f04f7622c84658d8b0e18b87c0fc10462f1d7063",
+      "candidateSchemaHash": "6faccf8a5bf1a625b18a8298f04f7622c84658d8b0e18b87c0fc10462f1d7063",
+      "counts": {
+        "system": {
+          "tokens": 724,
+          "bytes": 3758,
+          "sha256": "19a6ce99e226954d1bcfc2097b2a6109421478aef853523218bd06496da445a4"
+        },
+        "candidateSystem": {
+          "tokens": 752,
+          "bytes": 3898,
+          "sha256": "dd18e5c511331c842966e72b18f6c8449cc2e12b448c5832a79074c2605f7f64"
+        },
+        "user": {
+          "tokens": 919,
+          "bytes": 3287,
+          "sha256": "2f54d2d0b6e189810f7857415531812832cfd8b6b1cc1849bd4d0765afc898a1"
+        },
+        "schema": {
+          "tokens": 2447,
+          "bytes": 9186,
+          "sha256": "6faccf8a5bf1a625b18a8298f04f7622c84658d8b0e18b87c0fc10462f1d7063"
+        },
+        "candidateSchema": {
+          "tokens": 2447,
+          "bytes": 9186,
+          "sha256": "6faccf8a5bf1a625b18a8298f04f7622c84658d8b0e18b87c0fc10462f1d7063"
+        }
+      },
+      "baselineGroqReservation": 5242,
+      "grammarOnlyGroqReservation": 5242,
+      "withInstructionGroqReservation": 5270,
+      "candidateAuthoredBytes": 16371
+    }
+  ]
+}

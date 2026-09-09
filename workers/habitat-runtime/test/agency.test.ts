@@ -13,7 +13,7 @@ async function due(stub: DurableObjectStub<import('../src/habitat-world').Habita
   await runInDurableObject(stub, async (_instance, state) => {
     const now = Date.now();
     state.storage.sql.exec('UPDATE runtime_meta SET next_watch_at_ms=?, next_alarm_at_ms=?', now - 1000, now - 1000);
-    for (const provider of ['workers-ai', 'groq']) state.storage.sql.exec('INSERT OR REPLACE INTO provider_breakers(provider,open_until_ms,reason,failure_streak,updated_at_ms) VALUES(?,?,?,?,?)', provider, now + 86400000, 'test-no-provider', 1, now);
+    for (const provider of ['workers-ai', 'groq']) state.storage.sql.exec('INSERT OR REPLACE INTO provider_breakers(provider,open_until_ms,reason,failure_streak,updated_at_ms) VALUES(?,?,?,?,?)', provider, now + 86400000, 'authentication', 1, now);
     await state.storage.setAlarm(now - 1000);
   });
 }

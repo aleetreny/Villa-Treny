@@ -1,9 +1,12 @@
+import { debateHttp } from './debate/http';
+export { DebateForum } from './debate/forum';
 import { recoveryPageSchema } from './recovery';
 import { z } from 'zod';
 import { hasValidAdminToken } from './auth';
 import {
   adminCommandSchema,
   archiveFilterSchema,
+  recordsFilterSchema,
 } from './contracts';
 import { matchesEntityTag } from './conditional';
 import { errorResponse, jsonResponse, readJson } from './http';
@@ -45,6 +48,8 @@ async function requireAdmin(request: Request, env: Env): Promise<Response | unde
 
 export default {
   async fetch(request, env): Promise<Response> {
+    const debateResponse = await debateHttp(request, env);
+    if (debateResponse) return debateResponse;
     const url = new URL(request.url);
     if (request.method === 'OPTIONS' && (
       url.pathname === '/health'
@@ -52,6 +57,7 @@ export default {
       || url.pathname === '/v1/snapshot'
       || url.pathname === '/v1/observer'
       || url.pathname === '/v1/archive'
+      || url.pathname === '/v1/records'
     )) {
       return new Response(null, {
         status: 204,
@@ -76,7 +82,7 @@ export default {
     }
     if (request.method === 'GET' && url.pathname === '/v1/snapshot') {
       if (request.headers.has('if-none-match')) {
-        const { worldRevision } = await habitat(env).getStatus();
+        const worldRevision = await habitat(env).getWorldRevision();
         const cached = notModified(request, `"habitat-${worldRevision}"`, env);
         if (cached) return cached;
       }
@@ -87,7 +93,7 @@ export default {
     }
     if (request.method === 'GET' && url.pathname === '/v1/observer') {
       if (request.headers.has('if-none-match')) {
-        const { worldRevision } = await habitat(env).getStatus();
+        const worldRevision = await habitat(env).getWorldRevision();
         const cached = notModified(request, `"habitat-observer-${worldRevision}"`, env);
         if (cached) return cached;
       }
@@ -95,6 +101,25 @@ export default {
       const response = publicJson(current, env);
       response.headers.set('etag', `"habitat-observer-${current.worldRevision}"`);
       return response;
+    }
+    if (request.method === 'GET' && url.pathname === '/v1/records') {
+      try {
+        if ([...url.searchParams.keys()].some((key) => !['before', 'limit'].includes(key))
+          || ['before', 'limit'].some((key) => url.searchParams.getAll(key).length > 1
+            || (url.searchParams.has(key) && !/^\d+$/.test(url.searchParams.get(key)!)))) {
+          throw new TypeError('invalid records filter');
+        }
+        const filter = recordsFilterSchema.parse({
+          ...(url.searchParams.has('before') ? { before: Number(url.searchParams.get('before')) } : {}),
+          ...(url.searchParams.has('limit') ? { limit: Number(url.searchParams.get('limit')) } : {}),
+        });
+        return publicJson(await habitat(env).getRecords(filter), env);
+      } catch (error) {
+        if (error instanceof z.ZodError || error instanceof TypeError) {
+          return errorResponse(400, 'invalid_records_filter', 'Use a positive record cursor and a limit from 1 to 40.');
+        }
+        throw error;
+      }
     }
     if (request.method === 'GET' && url.pathname === '/v1/archive') {
       try {
@@ -126,7 +151,8 @@ export default {
         const value = recoveryPageSchema.parse({ table: url.searchParams.get('table'),
           upperRowId: Number(url.searchParams.get('upperRowId')), afterRowId: Number(url.searchParams.get('afterRowId') ?? -1),
           exportedAtMs: Number(url.searchParams.get('exportedAtMs')),
-          excludedRowIds: (url.searchParams.get('excludedRowIds') ?? '').split(',').filter(Boolean).map(Number) });
+          excludedRowIds: (url.searchParams.get('excludedRowIds') ?? '').split(',').filter(Boolean).map(Number),
+          ...(url.searchParams.has('cutId') ? { cutId: url.searchParams.get('cutId') } : {}) });
         return jsonResponse(await habitat(env).getRecoveryPage(value), { headers: { 'cache-control': 'no-store' } });
       } catch (error) {
         if (error instanceof z.ZodError || error instanceof TypeError || error instanceof RangeError) return errorResponse(400, 'invalid_recovery_page', 'Use a valid table, cursor and bounds from the recovery manifest.');
@@ -175,6 +201,6 @@ export default {
   },
 
   async scheduled(_controller, env, ctx): Promise<void> {
-    ctx.waitUntil(habitat(env).reconcile());
+    ctx.waitUntil(Promise.all([habitat(env).reconcile(), env.DEBATE_FORUM.getByName('villa-treny-daily-v1').reconcile()]));
   },
 } satisfies ExportedHandler<Env>;

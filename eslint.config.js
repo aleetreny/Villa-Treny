@@ -14,6 +14,7 @@ export default tseslint.config(
       'test-results',
       'playwright-report',
       'node_modules',
+      '.local',
       '**/worker-configuration.d.ts',
     ],
   },

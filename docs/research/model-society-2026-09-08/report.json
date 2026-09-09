@@ -1,0 +1,1435 @@
+{
+  "scope": "Isolated GENESIS replay using the real scheduler, society core and physical engine. No production state.",
+  "limits": "One physical watch. No SQL, production alarm, sustained emergence or semantic-quality verification. Virtual turn timestamps are fixed.",
+  "humanReview": {
+    "status": "pending",
+    "questions": [
+      "Does each voice follow its own situation without inventing names, evidence, resources or another voice?",
+      "Do messages answer the actual received turn? Inspect refusals and counteroffers as well as acceptances.",
+      "Do projects persist or change for a concrete reason after the physical observation?",
+      "Were any offers made, independently accepted and physically fulfilled? Zero is a result, not success.",
+      "Check claimed goal achievement against recorded steps; completed steps do not establish the broader goal."
+    ]
+  },
+  "binding": "ce6c05c358e8aa9b757ce3ae1026a063aa3e4dea2eb5a6207cc462933c413524",
+  "halted": null,
+  "attemptCount": 25,
+  "accountedNeurons": 321,
+  "maxNeurons": 1500,
+  "unknownUsageReservations": 1,
+  "residents": [
+    {
+      "id": "A",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "B",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "C",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "D",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "E",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "F",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "G",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "H",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "I",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "J",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "K",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "L",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "M",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "N",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "O",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "P",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "Q",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "R",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "S",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "T",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "U",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "V",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "W",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "X",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    },
+    {
+      "id": "Y",
+      "initialOpportunity": true,
+      "calls": 1,
+      "acceptedDecisions": 0,
+      "skipped": []
+    }
+  ],
+  "physicalWatchCount": 1,
+  "observations": [
+    {
+      "actor": "H",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "H"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "C",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "inspect",
+        "actor": "C"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "C"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary"
+    },
+    {
+      "actor": "X",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "X"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "X"
+          ],
+          "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "S",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "S"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "R",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "R"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "I",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "I"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "administration"
+    },
+    {
+      "actor": "D",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "D"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "dock"
+    },
+    {
+      "actor": "W",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "W"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "F",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "F"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "F"
+          ],
+          "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "U",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "inspect",
+        "actor": "U"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "U"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary"
+    },
+    {
+      "actor": "T",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "T"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "G",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "G",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "longwalk"
+    },
+    {
+      "actor": "N",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "inspect",
+        "actor": "N"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "infirmary",
+          "who": [
+            "N"
+          ],
+          "text": "The Infirmary was walked through and looked over.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "infirmary"
+    },
+    {
+      "actor": "B",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "B",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "A",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "note",
+        "actor": "A"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "records",
+          "who": [
+            "A"
+          ],
+          "text": "The current store totals and working-room register were written down.",
+          "kind": "note"
+        }
+      },
+      "actualRoom": "records"
+    },
+    {
+      "actor": "V",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "grow",
+        "actor": "V"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "garden",
+          "who": [
+            "V"
+          ],
+          "text": "Vero harvested 16 produce; 2 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "garden"
+    },
+    {
+      "actor": "O",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "O",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "well"
+    },
+    {
+      "actor": "Q",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "Q"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "J",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "charge",
+        "actor": "J"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "workshops"
+    },
+    {
+      "actor": "Y",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "dig",
+        "actor": "Y"
+      },
+      "outcome": {
+        "ok": true,
+        "happening": {
+          "room": "face",
+          "who": [
+            "Y"
+          ],
+          "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+          "kind": "work"
+        }
+      },
+      "actualRoom": "face"
+    },
+    {
+      "actor": "L",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "L"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "hold"
+    },
+    {
+      "actor": "P",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "P",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "K",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "K"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "dispatch"
+    },
+    {
+      "actor": "M",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "verb": "work",
+        "actor": "M"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    },
+    {
+      "actor": "E",
+      "day": 100,
+      "watch": 1,
+      "intent": {
+        "actor": "E",
+        "verb": "observe"
+      },
+      "outcome": {
+        "ok": true
+      },
+      "actualRoom": "common"
+    }
+  ],
+  "acceptedDecisionCount": 0,
+  "failures": [
+    {
+      "id": "isolated-society-runtime-v3:mind:A:0:0:g:0",
+      "actor": "A",
+      "state": "failed",
+      "code": "http_401"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:B:0:1:g:0",
+      "actor": "B",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:C:0:2:g:0",
+      "actor": "C",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:D:0:3:g:0",
+      "actor": "D",
+      "state": "completed",
+      "code": "invalid_structured_output"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:E:0:4:g:0",
+      "actor": "E",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:F:0:5:g:0",
+      "actor": "F",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:G:0:6:g:0",
+      "actor": "G",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:H:0:7:g:0",
+      "actor": "H",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:I:0:8:g:0",
+      "actor": "I",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:J:0:9:g:0",
+      "actor": "J",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:K:0:10:g:0",
+      "actor": "K",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:L:0:11:g:0",
+      "actor": "L",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:M:0:12:g:0",
+      "actor": "M",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:N:0:13:g:0",
+      "actor": "N",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:O:0:14:g:0",
+      "actor": "O",
+      "state": "completed",
+      "code": "invalid_structured_output"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:P:0:15:g:0",
+      "actor": "P",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:Q:0:16:g:0",
+      "actor": "Q",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:R:0:17:g:0",
+      "actor": "R",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:S:0:18:g:0",
+      "actor": "S",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:T:0:19:g:0",
+      "actor": "T",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:U:0:20:g:0",
+      "actor": "U",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:V:0:21:g:0",
+      "actor": "V",
+      "state": "completed",
+      "code": "invalid_structured_output"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:W:0:22:g:0",
+      "actor": "W",
+      "state": "completed",
+      "code": "invalid_response"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:X:0:23:g:0",
+      "actor": "X",
+      "state": "completed",
+      "code": "invalid_structured_output"
+    },
+    {
+      "id": "isolated-society-runtime-v3:mind:Y:0:24:g:0",
+      "actor": "Y",
+      "state": "completed",
+      "code": "invalid_response"
+    }
+  ],
+  "final": {
+    "day": 100,
+    "watch": 2,
+    "hash": "40387c3e0ca6b16a1c0993c0a015a025ea625c799c947dae74a0e2782d61fa90",
+    "publicSociety": {
+      "version": 1,
+      "revision": 26,
+      "startedAtMs": 1788825600000,
+      "residents": [
+        {
+          "id": "A",
+          "lastAttemptAtMs": 1788825601000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "B",
+          "lastAttemptAtMs": 1788825602000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "C",
+          "lastAttemptAtMs": 1788825603000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "D",
+          "lastAttemptAtMs": 1788825604000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "E",
+          "lastAttemptAtMs": 1788825605000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "F",
+          "lastAttemptAtMs": 1788825606000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "G",
+          "lastAttemptAtMs": 1788825607000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "H",
+          "lastAttemptAtMs": 1788825608000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "I",
+          "lastAttemptAtMs": 1788825609000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "J",
+          "lastAttemptAtMs": 1788825610000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "K",
+          "lastAttemptAtMs": 1788825611000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "L",
+          "lastAttemptAtMs": 1788825612000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "M",
+          "lastAttemptAtMs": 1788825613000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "N",
+          "lastAttemptAtMs": 1788825614000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "O",
+          "lastAttemptAtMs": 1788825615000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "P",
+          "lastAttemptAtMs": 1788825616000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "Q",
+          "lastAttemptAtMs": 1788825617000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "R",
+          "lastAttemptAtMs": 1788825618000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "S",
+          "lastAttemptAtMs": 1788825619000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "T",
+          "lastAttemptAtMs": 1788825620000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "U",
+          "lastAttemptAtMs": 1788825621000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "V",
+          "lastAttemptAtMs": 1788825622000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "W",
+          "lastAttemptAtMs": 1788825623000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "X",
+          "lastAttemptAtMs": 1788825624000,
+          "lastSuccessAtMs": null,
+          "project": null
+        },
+        {
+          "id": "Y",
+          "lastAttemptAtMs": 1788825625000,
+          "lastSuccessAtMs": null,
+          "project": null
+        }
+      ],
+      "conversations": [],
+      "offers": [],
+      "agreements": [],
+      "coverage": {
+        "total": 25,
+        "neverThought": 25,
+        "waitingForReply": []
+      }
+    },
+    "accounts": {
+      "treasury": 0,
+      "maintenance": 90,
+      "cells:A": 15,
+      "cells:B": 8,
+      "cells:C": 8,
+      "cells:D": 15,
+      "cells:E": 10,
+      "cells:F": 13,
+      "cells:G": 17,
+      "cells:H": 8,
+      "cells:I": 11,
+      "cells:J": 15,
+      "cells:K": 12,
+      "cells:L": 8,
+      "cells:M": 17,
+      "cells:N": 17,
+      "cells:O": 15,
+      "cells:P": 16,
+      "cells:Q": 10,
+      "cells:R": 17,
+      "cells:S": 17,
+      "cells:T": 10,
+      "cells:U": 13,
+      "cells:V": 8,
+      "cells:W": 13,
+      "cells:X": 12,
+      "cells:Y": 10,
+      "credits:A": 1,
+      "credits:B": 0,
+      "credits:C": 1,
+      "credits:D": 1,
+      "credits:E": 0,
+      "credits:F": 2,
+      "credits:G": 0,
+      "credits:H": 1,
+      "credits:I": 1,
+      "credits:J": 2,
+      "credits:K": 1,
+      "credits:L": 1,
+      "credits:M": 1,
+      "credits:N": 1,
+      "credits:O": 0,
+      "credits:P": 0,
+      "credits:Q": 2,
+      "credits:R": 1,
+      "credits:S": 1,
+      "credits:T": 1,
+      "credits:U": 1,
+      "credits:V": 2,
+      "credits:W": 2,
+      "credits:X": 2,
+      "credits:Y": 2,
+      "stock:produce": 76,
+      "stock:meals": 100,
+      "stock:water": 245,
+      "stock:materials": 28,
+      "ledger:initialCells": 315,
+      "ledger:minted": 0,
+      "ledger:burned": 0,
+      "ledger:leaked": 0
+    },
+    "balances": {
+      "A": 15,
+      "B": 8,
+      "C": 8,
+      "D": 15,
+      "E": 10,
+      "F": 13,
+      "G": 17,
+      "H": 8,
+      "I": 11,
+      "J": 15,
+      "K": 12,
+      "L": 8,
+      "M": 17,
+      "N": 17,
+      "O": 15,
+      "P": 16,
+      "Q": 10,
+      "R": 17,
+      "S": 17,
+      "T": 10,
+      "U": 13,
+      "V": 8,
+      "W": 13,
+      "X": 12,
+      "Y": 10
+    },
+    "stock": {
+      "produce": 76,
+      "meals": 100,
+      "water": 245,
+      "materials": 28
+    },
+    "economicEvents": [
+      {
+        "sequence": 0,
+        "day": 100,
+        "watch": 1,
+        "actor": "H",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:H",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 1,
+        "day": 100,
+        "watch": 1,
+        "actor": "C",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:C",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 2,
+        "day": 100,
+        "watch": 1,
+        "actor": "X",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:X",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ]
+      },
+      {
+        "sequence": 3,
+        "day": 100,
+        "watch": 1,
+        "actor": "S",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:S",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "S",
+          "H"
+        ]
+      },
+      {
+        "sequence": 4,
+        "day": 100,
+        "watch": 1,
+        "actor": "R",
+        "room": "hold",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:R",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 5,
+        "day": 100,
+        "watch": 1,
+        "actor": "I",
+        "room": "administration",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:I",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 6,
+        "day": 100,
+        "watch": 1,
+        "actor": "D",
+        "room": "dock",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:D",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 7,
+        "day": 100,
+        "watch": 1,
+        "actor": "W",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:W",
+            "delta": 2
+          }
+        ]
+      },
+      {
+        "sequence": 8,
+        "day": 100,
+        "watch": 1,
+        "actor": "F",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:F",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ],
+        "companions": [
+          "F",
+          "X"
+        ]
+      },
+      {
+        "sequence": 9,
+        "day": 100,
+        "watch": 1,
+        "actor": "U",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:U",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "U",
+          "C"
+        ]
+      },
+      {
+        "sequence": 10,
+        "day": 100,
+        "watch": 1,
+        "actor": "T",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:T",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 11,
+        "day": 100,
+        "watch": 1,
+        "actor": "N",
+        "room": "infirmary",
+        "action": "inspect",
+        "entries": [
+          {
+            "account": "credits:N",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 12,
+        "day": 100,
+        "watch": 1,
+        "actor": "A",
+        "room": "records",
+        "action": "note",
+        "entries": [
+          {
+            "account": "credits:A",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 13,
+        "day": 100,
+        "watch": 1,
+        "actor": "V",
+        "room": "garden",
+        "action": "grow",
+        "entries": [
+          {
+            "account": "credits:V",
+            "delta": 2
+          },
+          {
+            "account": "stock:produce",
+            "delta": 16
+          },
+          {
+            "account": "stock:water",
+            "delta": -2
+          }
+        ]
+      },
+      {
+        "sequence": 14,
+        "day": 100,
+        "watch": 1,
+        "actor": "Q",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:Q",
+            "delta": 2
+          }
+        ],
+        "companions": [
+          "Q",
+          "W"
+        ]
+      },
+      {
+        "sequence": 15,
+        "day": 100,
+        "watch": 1,
+        "actor": "J",
+        "room": "workshops",
+        "action": "charge",
+        "entries": [
+          {
+            "account": "credits:J",
+            "delta": 2
+          }
+        ]
+      },
+      {
+        "sequence": 16,
+        "day": 100,
+        "watch": 1,
+        "actor": "Y",
+        "room": "face",
+        "action": "dig",
+        "entries": [
+          {
+            "account": "credits:Y",
+            "delta": 2
+          },
+          {
+            "account": "stock:water",
+            "delta": -1
+          },
+          {
+            "account": "stock:materials",
+            "delta": 4
+          }
+        ]
+      },
+      {
+        "sequence": 17,
+        "day": 100,
+        "watch": 1,
+        "actor": "L",
+        "room": "hold",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:L",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "L",
+          "R"
+        ]
+      },
+      {
+        "sequence": 18,
+        "day": 100,
+        "watch": 1,
+        "actor": "K",
+        "room": "dispatch",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:K",
+            "delta": 1
+          }
+        ]
+      },
+      {
+        "sequence": 19,
+        "day": 100,
+        "watch": 1,
+        "actor": "M",
+        "room": "common",
+        "action": "work",
+        "entries": [
+          {
+            "account": "credits:M",
+            "delta": 1
+          }
+        ],
+        "companions": [
+          "M",
+          "T"
+        ]
+      }
+    ],
+    "record": [
+      {
+        "room": "infirmary",
+        "who": [
+          "C"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 21
+      },
+      {
+        "room": "face",
+        "who": [
+          "X"
+        ],
+        "text": "Xan recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 35
+      },
+      {
+        "room": "face",
+        "who": [
+          "F"
+        ],
+        "text": "Ferran recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 116
+      },
+      {
+        "room": "infirmary",
+        "who": [
+          "U"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 130
+      },
+      {
+        "room": "infirmary",
+        "who": [
+          "N"
+        ],
+        "text": "The Infirmary was walked through and looked over.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 171
+      },
+      {
+        "room": "records",
+        "who": [
+          "A"
+        ],
+        "text": "The current store totals and working-room register were written down.",
+        "kind": "note",
+        "day": 100,
+        "watch": 1,
+        "minute": 198
+      },
+      {
+        "room": "garden",
+        "who": [
+          "V"
+        ],
+        "text": "Vero harvested 16 produce; 2 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 212
+      },
+      {
+        "room": "face",
+        "who": [
+          "Y"
+        ],
+        "text": "Yara recovered 4 usable materials at the face; 1 water used.",
+        "kind": "work",
+        "day": 100,
+        "watch": 1,
+        "minute": 266
+      }
+    ]
+  }
+}

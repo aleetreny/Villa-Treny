@@ -1,0 +1,100 @@
+{
+  "format": "villa-attention-continuity-comparator-validation-v1",
+  "auditedAt": "2026-09-09T11:34:59.418Z",
+  "status": "passed",
+  "baseline": "Real production pre/post backups pass; each negative changes only an in-memory copy and reseals valid transport.",
+  "positiveCases": 2,
+  "negativeCases": 7,
+  "results": [
+    {
+      "name": "cognition_clock_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "every_row_column_and_rowid_matches_exact_migration",
+        "all_clock_control_error_fields_exact"
+      ],
+      "changedTables": [
+        "runtime_meta"
+      ]
+    },
+    {
+      "name": "physical_clock_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "every_row_column_and_rowid_matches_exact_migration",
+        "all_clock_control_error_fields_exact"
+      ],
+      "changedTables": [
+        "runtime_meta"
+      ]
+    },
+    {
+      "name": "quota_maximum_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "every_row_column_and_rowid_matches_exact_migration",
+        "all_reservations_models_and_charges_exact"
+      ],
+      "changedTables": [
+        "quota_reservations"
+      ]
+    },
+    {
+      "name": "saved_job_deadline_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "every_row_column_and_rowid_matches_exact_migration",
+        "all_saved_jobs_outputs_statuses_and_prompt_bytes_exact"
+      ],
+      "changedTables": [
+        "cognition_jobs"
+      ]
+    },
+    {
+      "name": "old_message_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "all_old_society_fields_exact_plus_derived_attention",
+        "every_row_column_and_rowid_matches_exact_migration"
+      ],
+      "changedTables": [
+        "society_state"
+      ]
+    },
+    {
+      "name": "derived_marker_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "all_old_society_fields_exact_plus_derived_attention",
+        "every_row_column_and_rowid_matches_exact_migration"
+      ],
+      "changedTables": [
+        "society_state"
+      ]
+    },
+    {
+      "name": "archived_source_changed",
+      "transportVerified": true,
+      "strictComparatorRejected": true,
+      "failedCheckCodes": [
+        "every_row_column_and_rowid_matches_exact_migration"
+      ],
+      "changedTables": [
+        "society_layout_backups"
+      ]
+    }
+  ],
+  "beforeBackupSha256": "1e7d942e47107169fc6f29970955cfb1822c74092220f0ce60a948044fcbf320",
+  "afterBackupSha256": "4d3ecd1cc5b80b153aa2269cf9e02647317faba8736931bd6999a46f4a0eca39",
+  "scriptSha256": "d49322a044cb0ab19439b4ddd16fe108a7e22d10d3e9687f4b161ba567cb3a8b",
+  "comparatorSha256": "41e1b147bab8bbd99508f36bcf4636ac03e0b16829838b0412cc57b7493f6d3b",
+  "networkAttempts": 0,
+  "providerCalls": 0,
+  "productionWrites": 0
+}

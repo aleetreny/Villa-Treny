@@ -1,0 +1,472 @@
+{
+  "label": "candidate4-vs-candidate5-authority-relocation",
+  "generatedAt": "2026-09-09T11:16:36.436Z",
+  "networkRequests": 0,
+  "inferenceCalls": 0,
+  "method": "Exact JSON.stringify equality of all 100 schemas and P7 full outputs; 50 P8 prompts differ only by removal of records.cursor/referenceAccess, which are preserved exactly in private recordAuthority. Other job and turn fields remain byte identical except calculated prompt byte count. This proves the recorded schema pairs equivalent for every input, without interpreting or sampling their grammar.",
+  "leftPrivateEvidenceSha256": "462bcdeb062eaeea22fd344c50d6454a0fbfe64ebc3655a27203e91976aed403",
+  "rightPrivateEvidenceSha256": "e5587f144399e44e8c58961aceee7b350e3a59985e5f67434ce250c45dc2d669",
+  "scriptSha256": "2481ba971bf1fd93bb231e75a932f90ab287a1a7b9fbe2e4ac38ac8a876751d3",
+  "counts": {
+    "allSchemaPairsByteIdentical": 100,
+    "p7FullGeneratedPairsByteIdentical": 50,
+    "p8SystemPairsByteIdentical": 50,
+    "p8JobMetadataPairsIdentical": 50,
+    "p8UserOnlyAuthorityRemoved": 50,
+    "p8TurnPromptOnlyAuthorityRemoved": 50,
+    "p8AuthorityBindingsExact": 50,
+    "p8OtherTurnFieldsIdentical": 50
+  },
+  "details": [
+    {
+      "caseName": "observed-revision317",
+      "actor": "A",
+      "schemaSha256": "27e40d3effb5bebc8ff4fc92f346610373b719f8af91d6f553263b2d46317cda",
+      "authoritySha256": "a17db286998333b9ab45baa2fb765e636a2fff3c0599ac067c648ec99ff56173",
+      "oldPromptBytes": 5303,
+      "newPromptBytes": 4992,
+      "savedBytes": 311
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "B",
+      "schemaSha256": "8482ca995e0fc2d59b5a2fbea2b3c73eb815b3166aa817e501d8b2189847c800",
+      "authoritySha256": "afb376ff26c18ca9355350b354c31e2edd3699b9c6ea5d351ee0b6b395652ff4",
+      "oldPromptBytes": 5200,
+      "newPromptBytes": 4902,
+      "savedBytes": 298
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "C",
+      "schemaSha256": "4243ed49cdb418e3d11abcb630ec8710c986273dcb9a29cf7131a2f93d8e444a",
+      "authoritySha256": "5bfc6ea863227969305dc245d99f6ec1ce972b3db59afa473dde475a98627de9",
+      "oldPromptBytes": 5595,
+      "newPromptBytes": 5297,
+      "savedBytes": 298
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "D",
+      "schemaSha256": "48b473726e3a72e21598a7c448d4346da8b50300700869f1789df1f6e2e20187",
+      "authoritySha256": "76cf4831df60e8d0013cba42e9f10d122c43cc2aa4a9b6b0bfdef77622cb095c",
+      "oldPromptBytes": 5849,
+      "newPromptBytes": 5517,
+      "savedBytes": 332
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "E",
+      "schemaSha256": "9d35c2d64553f7b682d86f977f40e51a704b31573bb734dd9c14cba77d3aae51",
+      "authoritySha256": "6914532ae51e17a24184f49d3c56e77c08d60b408e53f2c618cae5665971e1df",
+      "oldPromptBytes": 5289,
+      "newPromptBytes": 4971,
+      "savedBytes": 318
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "F",
+      "schemaSha256": "90ff725e41e4b0652411a7feed56454b5249672d41496ca5e0b25fc70d6533cc",
+      "authoritySha256": "fa0e2dc924f6e22ea4d66e293fb726f18287cf92186ff8a2a2d0ce832e8d4d34",
+      "oldPromptBytes": 5420,
+      "newPromptBytes": 5090,
+      "savedBytes": 330
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "G",
+      "schemaSha256": "2415ccfdc85339dc0ce72147963eba2a6dff27517044ae26a4bf5e5cb8370670",
+      "authoritySha256": "82c18cac925b4bd87508f1fa6a47940657ee5a287b00fe2bb9904bb984fd6086",
+      "oldPromptBytes": 5052,
+      "newPromptBytes": 4783,
+      "savedBytes": 269
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "H",
+      "schemaSha256": "8172dc8844aab87e7ab69030b89abe34d44cb6dfabe0424faf356e152d252a89",
+      "authoritySha256": "0545914e9528893db9201956a3ebafd277f4c81057aa345c10992799ed0a2cb6",
+      "oldPromptBytes": 5514,
+      "newPromptBytes": 5230,
+      "savedBytes": 284
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "I",
+      "schemaSha256": "35e5a7f5f3d7f12ca741fe2e4380ad586878a1da9969a8212f18f9ba71ffe591",
+      "authoritySha256": "4ab4f0e318f11de1589b3bc016e88acc56475f1e939ec36bb21d35566919ea62",
+      "oldPromptBytes": 5289,
+      "newPromptBytes": 4978,
+      "savedBytes": 311
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "J",
+      "schemaSha256": "9a80a7e64bf6371b7c390f46c841415fa0073efda5922f5b0e37970665de772e",
+      "authoritySha256": "b8d99ca523e74313586a8d601b65a2b4582c0e6a3d0cb0da9a671a70e4ff22eb",
+      "oldPromptBytes": 5311,
+      "newPromptBytes": 4959,
+      "savedBytes": 352
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "K",
+      "schemaSha256": "02ed76cf672faba9ddad77c83d76130e4264f22201234f4555e4f7e25d76af39",
+      "authoritySha256": "adf6db6a473bab6a99840c7422a6b78eb3594c2c9eb6d3c4ea41fd75dee20a2e",
+      "oldPromptBytes": 5186,
+      "newPromptBytes": 4873,
+      "savedBytes": 313
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "L",
+      "schemaSha256": "2cf3f9a2078c8898848421973c71770f8aacad45a845663b03f56adc248207cc",
+      "authoritySha256": "f0c0d659f255f3b3fb7029c1165d9a2b5151c929f0eecc039ddc7467b2992a6c",
+      "oldPromptBytes": 5665,
+      "newPromptBytes": 5333,
+      "savedBytes": 332
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "M",
+      "schemaSha256": "be6c9464095a157f3f2f091aa60e89b7d226a77b71dbe8195eca2e58675c8614",
+      "authoritySha256": "b11ad42f1ddadf80074d80aad9f7a53e7f8aa5cfe6df094f76e0563ce5c216ba",
+      "oldPromptBytes": 5930,
+      "newPromptBytes": 5600,
+      "savedBytes": 330
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "N",
+      "schemaSha256": "77ae38683aa00b64d2dc3fef46be81ad35379fbdcc2ad1b90ee34953f68e1580",
+      "authoritySha256": "dd2c005bf9e2796c858254d140123dfb72f15a538bb23f3c5d0540c97d5f60c3",
+      "oldPromptBytes": 5657,
+      "newPromptBytes": 5356,
+      "savedBytes": 301
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "O",
+      "schemaSha256": "a23fefd90a7b80b1e055e5e8ff9334179379b6fe0aa3d564acaf56e0b42faccf",
+      "authoritySha256": "64214dab776c049a75765b6fb4293f258fb26674ad36003507cbb486a4b45b68",
+      "oldPromptBytes": 5365,
+      "newPromptBytes": 5033,
+      "savedBytes": 332
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "P",
+      "schemaSha256": "181e3d228b0b38c6f399e311a6a6aa9f15280f492b1c41a2019ddb9c2d55b6e4",
+      "authoritySha256": "e5b5153fda421ad5dcdb7f488564cc3bc732dca6e12b54728bdbd76bbe4ac5b3",
+      "oldPromptBytes": 5358,
+      "newPromptBytes": 5045,
+      "savedBytes": 313
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Q",
+      "schemaSha256": "a75b86123ef56e68556f8421b748a1837c8b11c161828808418d928a4c1c8464",
+      "authoritySha256": "0ef24880859eb2974b284d13960a7fd233609ba7d340f1cd3019a0b6d3753118",
+      "oldPromptBytes": 5715,
+      "newPromptBytes": 5365,
+      "savedBytes": 350
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "R",
+      "schemaSha256": "d73be67bd56066bc558a18efe6a51fa9cecda55eb444820518438f2572442af4",
+      "authoritySha256": "a85b6aa0863f289792eb32e71880c97412f4e1d26f8ab9776cc8352835e07dbc",
+      "oldPromptBytes": 4416,
+      "newPromptBytes": 4167,
+      "savedBytes": 249
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "S",
+      "schemaSha256": "bdb59297d26e80687a1dcb6b215d042a41936af9ea89538ac620aff09cb3c117",
+      "authoritySha256": "b76ad4df83ea0a73c0fe13fee9d5643cdb18a1913e5188cc01bfa6542d6aff54",
+      "oldPromptBytes": 6063,
+      "newPromptBytes": 5776,
+      "savedBytes": 287
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "T",
+      "schemaSha256": "92f50deeac23991000c4722b5cc6e38a56791d826b2cf92908db8ee2fba5ce1d",
+      "authoritySha256": "e940ce177850bb90605221d841b7c9b6d1fa46c4106f1796c928e715b7b97618",
+      "oldPromptBytes": 5336,
+      "newPromptBytes": 5011,
+      "savedBytes": 325
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "U",
+      "schemaSha256": "fa004a00af887f0c4b5681f0935660915bb90494e88cad2e0ca3cc340957caca",
+      "authoritySha256": "8e9c3cdd28a09ed3890fedfc5564cb7fcb4711899ab6fa436e39b1f8f7ac9036",
+      "oldPromptBytes": 5754,
+      "newPromptBytes": 5455,
+      "savedBytes": 299
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "V",
+      "schemaSha256": "c93c840d5c98915b7fa9346f7fedafa3dd16fe73a7d9b4eb29d3e5b4724ca2c7",
+      "authoritySha256": "0df5eaa582abacbe90dddd92b03ea238feebb45aa6dd10e2ae78cd344e082150",
+      "oldPromptBytes": 5144,
+      "newPromptBytes": 4845,
+      "savedBytes": 299
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "W",
+      "schemaSha256": "a4534f3e271fdb1a3962a85cbbfc1cc258fb5101a180cb62b8fd67fd18bad793",
+      "authoritySha256": "fe0366e53fbe6688e4e9708076d7722a2b0bca4e8a1e48e2b16082c57794f1ce",
+      "oldPromptBytes": 5084,
+      "newPromptBytes": 4816,
+      "savedBytes": 268
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "X",
+      "schemaSha256": "64ad5ea709785626ec981de08b975e035c1c2173b65b70debcb3690b57aea67e",
+      "authoritySha256": "5f550d06bae0e1c75b1b991158ee3707ab9f49ca16afc88eea66f05f7020a8ea",
+      "oldPromptBytes": 5073,
+      "newPromptBytes": 4743,
+      "savedBytes": 330
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Y",
+      "schemaSha256": "33b39789f7619e1378794e40f762a36f7f5f8a61460e6956b06c77f6c06fc06e",
+      "authoritySha256": "fa6a9db66939a7b0984ca8edc9672dd91068e5281d5ca77fe5422717b1754880",
+      "oldPromptBytes": 5215,
+      "newPromptBytes": 4906,
+      "savedBytes": 309
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "A",
+      "schemaSha256": "426e2833efc44a20d884978ba48b95251e77c532a2cf734259b7a7b165a2b909",
+      "authoritySha256": "21b1605729495162ee2091ffc6dbb1293ab40fde639efd881a9659923d7acf96",
+      "oldPromptBytes": 8367,
+      "newPromptBytes": 8071,
+      "savedBytes": 296
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "B",
+      "schemaSha256": "197fc69ba9af04018c8474fab23d89193bafb861e36230177104c604ef524666",
+      "authoritySha256": "5ba4d57c2b5d0d465bea279a3f761c03b95b0651532f3f7917c7f16764e7aaf6",
+      "oldPromptBytes": 4616,
+      "newPromptBytes": 4424,
+      "savedBytes": 192
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "C",
+      "schemaSha256": "b1032ca089a66836a69cbe07c6aef892661ae1281f9f7acd512cebf5b331da77",
+      "authoritySha256": "2064eeda2a74a387c7182bdb0e31cee816de4d0e1efdcafe192a81154a3e2e60",
+      "oldPromptBytes": 4812,
+      "newPromptBytes": 4620,
+      "savedBytes": 192
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "D",
+      "schemaSha256": "a938af3203494fa2e94d775a3c0525dc448039dff3f10715279dfb2b4b8e3c11",
+      "authoritySha256": "71e8906e48714ad6ec44068e88cf3c8f1ce32a93675c3b622283cf8f90f449ba",
+      "oldPromptBytes": 4792,
+      "newPromptBytes": 4600,
+      "savedBytes": 192
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "E",
+      "schemaSha256": "8517eab77f901610b41640ab51e04829a71c31202bf42b14e88e385bc0b0cb77",
+      "authoritySha256": "5591090e001ea19706d3532db7304c4da68103ee6277e4eac67631cf57ae73a9",
+      "oldPromptBytes": 3497,
+      "newPromptBytes": 3322,
+      "savedBytes": 175
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "F",
+      "schemaSha256": "60bfa604e5dcd61160202d39ae1a69db7231d16b196bdb5bee8bedbf6613c697",
+      "authoritySha256": "f389855ca53367adf315a0885530b20da2d2ebe4a0ba1b2e9d3b6dc825657075",
+      "oldPromptBytes": 3295,
+      "newPromptBytes": 3141,
+      "savedBytes": 154
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "G",
+      "schemaSha256": "b3ea857866aaa6ed3f9ee6bb6934b308b6924fcd15464a80493b138bad4d40cc",
+      "authoritySha256": "4ab9b0c2a59f42e3d591894f1f7552b9512c8bbadf20bba7574a1826b765d0d2",
+      "oldPromptBytes": 3349,
+      "newPromptBytes": 3192,
+      "savedBytes": 157
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "H",
+      "schemaSha256": "c552579aa2067b7b225149c5cb69df6de2e0a3fe278af433ac09a3e601488a3b",
+      "authoritySha256": "1ec44f97ed6b2e768a320f154e40bae1bfce9c841a660d520d8b6cd3199790d1",
+      "oldPromptBytes": 3065,
+      "newPromptBytes": 2921,
+      "savedBytes": 144
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "I",
+      "schemaSha256": "b4269af2b4ba26fadf368d7ef2ba115fcf80db32cee08633c69879129003f965",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2695,
+      "newPromptBytes": 2569,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "J",
+      "schemaSha256": "916434d487b4b7a8e75e0669cb40482da575825a4193074eab4e2274c941bc41",
+      "authoritySha256": "e64453ad6c8db1217c4838fae7e55d85d247b13d0f36b8de06af15b14a8acbe1",
+      "oldPromptBytes": 3068,
+      "newPromptBytes": 2903,
+      "savedBytes": 165
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "K",
+      "schemaSha256": "4b71a5b9f0e58686442229a8111901e23630f572a085ae3afadfb9dd11b469fd",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2568,
+      "newPromptBytes": 2442,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "L",
+      "schemaSha256": "28201c80177456acfe36aef51ac1bd6f262649f4d49e023ba436930724a681a4",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2564,
+      "newPromptBytes": 2438,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "M",
+      "schemaSha256": "7b01568ce29225b03412996147fb3004e1d76807c20a6b274519d450fc414bad",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2838,
+      "newPromptBytes": 2712,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "N",
+      "schemaSha256": "e3c5542eb88ec51d25f402abe39dc4fef9d04b4956afe1711f4c59d0329df523",
+      "authoritySha256": "bfc1ce824c64ae1107f6161347bc02fd19fd1ebfe7186a5f366f501bd4fc3448",
+      "oldPromptBytes": 2752,
+      "newPromptBytes": 2607,
+      "savedBytes": 145
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "O",
+      "schemaSha256": "6cdc4599239a650c8d50c4497834b1e7b3809127591513b0e47e6f6088478aef",
+      "authoritySha256": "a361371e0e14357ed131b1626e0e804f1dfdd233d7a2fdfeab906cf37aba105f",
+      "oldPromptBytes": 2775,
+      "newPromptBytes": 2630,
+      "savedBytes": 145
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "P",
+      "schemaSha256": "77fef67b9ab7ef7eb9ef9a66aabf16f65aad975d252c01e3aadb2d9aadfad86c",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2916,
+      "newPromptBytes": 2790,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Q",
+      "schemaSha256": "9877233ad3fe5b70cde116ca02578f30514d486a455971726231f7186554e6b9",
+      "authoritySha256": "0ace015d5d3d06a81bbe6feee7d734a15a6ad201d595eb8980bc5b1909779ed5",
+      "oldPromptBytes": 2943,
+      "newPromptBytes": 2797,
+      "savedBytes": 146
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "R",
+      "schemaSha256": "cfe143d28cbfc4ae1a3481a4d736e36e320215e8085a617a519abaf5cab76a0e",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2421,
+      "newPromptBytes": 2295,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "S",
+      "schemaSha256": "651fde3e24f3f08f1face4ce79bb63e46bb19183a07fca994692425278be1622",
+      "authoritySha256": "c81db2de6b599e8bb850b13f306a3fd22e197c9c0c546fa02b85baedcb6d2bd5",
+      "oldPromptBytes": 2976,
+      "newPromptBytes": 2831,
+      "savedBytes": 145
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "T",
+      "schemaSha256": "cc33450520d81070a3dc12d552d48506842c817edb839e4de762c577fe5df2e9",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2642,
+      "newPromptBytes": 2516,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "U",
+      "schemaSha256": "3e6e8954964284ec21439b2167567b382196cbe09f60c45ecfacb28208d75d25",
+      "authoritySha256": "e7636c6a8f61dc68d7765bd6865c15ff311c0a9e4069673993e91dc16d605866",
+      "oldPromptBytes": 2742,
+      "newPromptBytes": 2616,
+      "savedBytes": 126
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "V",
+      "schemaSha256": "9843660073822a672caa52a1a1941af29c678931bd11058956ccb8e3beeb6dea",
+      "authoritySha256": "13010a0e632c4ceebc332981193add82f21e961eee83ebc5cf9eae5eb3fd56a3",
+      "oldPromptBytes": 2756,
+      "newPromptBytes": 2612,
+      "savedBytes": 144
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "W",
+      "schemaSha256": "47a8bc6084f46d1dfe2935030204b3263355477f36f4d28a3b2f04cfde6ceb53",
+      "authoritySha256": "dd5f85bdcb4cddc1bdb447aacc17c53e71741aff7c884533afbf3c43aace598f",
+      "oldPromptBytes": 2988,
+      "newPromptBytes": 2823,
+      "savedBytes": 165
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "X",
+      "schemaSha256": "df2fc36c00775143ce342bae79aac0b25942f64e91c0bf50356e1675023f817d",
+      "authoritySha256": "44187fe99015efb10a46a54c74acdb3ab5253e51f23f03f8805288cb44cc586d",
+      "oldPromptBytes": 2749,
+      "newPromptBytes": 2606,
+      "savedBytes": 143
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Y",
+      "schemaSha256": "d6f6612fd1aab9eef7059b9f2152a14d8212f88a5bf586c785ef8e583127afb6",
+      "authoritySha256": "44187fe99015efb10a46a54c74acdb3ab5253e51f23f03f8805288cb44cc586d",
+      "oldPromptBytes": 2742,
+      "newPromptBytes": 2599,
+      "savedBytes": 143
+    }
+  ]
+}

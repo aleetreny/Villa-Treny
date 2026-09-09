@@ -1,0 +1,1218 @@
+{
+  "format": "villa-retrieval-source-bundle-v1",
+  "capturedAt": "2026-09-08T23:12:55.656867+00:00",
+  "previousVersion": "f51806c8-c8a8-4586-8ea1-4e122c1d10e4",
+  "fileCount": 302,
+  "sourceBundleSha256": "d11e7dd6feda80b9427262228a444f204e19e956afc16bc623705d6d60250a14",
+  "scope": "P7 private authorized record retrieval, Society3/SQL11 and bounded structural retry feedback. All existing historical protocols, world data and quotas remain preserved.",
+  "files": [
+    {
+      "path": "docs/research/release-2026-09-08/public-dialogue-translation-turn-280.json",
+      "sha256": "8e1be2ec8d8d310437ffc3a3c732264e46d695fd09c8d3d312a946275c4eb468"
+    },
+    {
+      "path": "docs/research/release-2026-09-08/public-dialogue-translation-turn-324.json",
+      "sha256": "40a54c9a60b6d326b99c89b2301b4a7e134e3662441adb053b8355a942cea6b7"
+    },
+    {
+      "path": "docs/research/release-2026-09-08/public-dialogue-translation-turn-419.json",
+      "sha256": "4208fdfda9ebcd25a77b4a24de4e7a9aa393a50c52ac4df952320c826526ac55"
+    },
+    {
+      "path": "docs/research/release-2026-09-08/public-dialogue-translations-115.json",
+      "sha256": "aacc28a159fa645cf24d80192d508077a964ff05328db1b8a27c022964e9b4a0"
+    },
+    {
+      "path": "eslint.config.js",
+      "sha256": "c160e254155ea28f5c49dc8bf463b68486d473162daef08cdf4ac1312b8c0eac"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5bb112318dee2355ab2a29981ee51fe840584c3fd3055f0a6c3caba53f5c1979"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "16959bad306d4a530b24ee7af414b73adb1cfcd6510b51a9648f30aee4476107"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "03af0997568d17db7048c52941ba924985827c7e763dee12d196a0f7a3e0658b"
+    },
+    {
+      "path": "scripts/analyze-society-recovery.mjs",
+      "sha256": "d1f2e1a2d3f020bc6d09aa7554384fff243a6a479aaff620ba578bb61e61d3ff"
+    },
+    {
+      "path": "scripts/analyze-society-recovery.test.mjs",
+      "sha256": "20826cba2e07318d863db3b2ea6212e1b078a9759c5b80ca172891f279b51447"
+    },
+    {
+      "path": "scripts/audit-cognition-pacing.mjs",
+      "sha256": "252ddc989c45d465ba900aae9e771032e1258460d579881c72109b61d20cbc05"
+    },
+    {
+      "path": "scripts/benchmark-society-alternatives.mjs",
+      "sha256": "6c78a4749fda4769c941a49d9563e544dfea484ae56deeb91453269a214c2497"
+    },
+    {
+      "path": "scripts/benchmark-society-alternatives.test.mjs",
+      "sha256": "5e8ac5e8ceafff1931616f220c758b55a627f215318debb4c90a8cd8dab925ac"
+    },
+    {
+      "path": "scripts/benchmark-society-diagnostic.mjs",
+      "sha256": "5049cba7c73f40ce72dc314b91679bf9d089c8ebdf50c47c171d008a86759140"
+    },
+    {
+      "path": "scripts/benchmark-society-evidence-layout-local.mjs",
+      "sha256": "ff669fe47d519cf275a9458558dec675d52445a973a5df768844e07d3fc249e3"
+    },
+    {
+      "path": "scripts/benchmark-society-evidence-layout-local.test.mjs",
+      "sha256": "ebe51ee20cee8d5a69496f1390fcbff1df0f6a23f01ba711219da9944285d462"
+    },
+    {
+      "path": "scripts/benchmark-society-exact-accept-local.mjs",
+      "sha256": "7fee834bdfabef13217068b1041a44ea00e7612781f35fdf85dd875fd7eff8e8"
+    },
+    {
+      "path": "scripts/benchmark-society-exact-accept-local.test.mjs",
+      "sha256": "40f250e0e73283c95f9c1cc95d5f9de80baa7b3527259dc561146f92ee9b9379"
+    },
+    {
+      "path": "scripts/benchmark-society-final-dialogue-local.mjs",
+      "sha256": "627e02c729b6079ec6e70efa7a512c253e0de7cf7a93b8e0f31d31762a55b039"
+    },
+    {
+      "path": "scripts/benchmark-society-final-dialogue-local.test.mjs",
+      "sha256": "a36178fabcd9df9f4d04cf0507dcaf6cba7638924c6c6a061751b347502ed84d"
+    },
+    {
+      "path": "scripts/benchmark-society-frozen-final-dialogue.mjs",
+      "sha256": "bd49b4ce6194899adb2ed102de5cb9a1039bdb3d1c4795d631ead7405972baf4"
+    },
+    {
+      "path": "scripts/benchmark-society-frozen-v6.mjs",
+      "sha256": "06c6ebab96cc666d3b76293e303230247e5b251ce9a098e28dc074a1bcd7bbcc"
+    },
+    {
+      "path": "scripts/benchmark-society-frozen-v7.mjs",
+      "sha256": "f5679a5ac476cef2c0017eff2c0773aca478ba9bb9d1e5c81bb5d292eca4b3c8"
+    },
+    {
+      "path": "scripts/benchmark-society-grounded-turns.mjs",
+      "sha256": "cbab635a879932fff566b397119792b9f14c2972244a9b00707964d3cb3ad0f0"
+    },
+    {
+      "path": "scripts/benchmark-society-grounded-turns.test.mjs",
+      "sha256": "20c36250220271d63829d21b6417b93dc8e80f62eee79086323ff58afaf485c9"
+    },
+    {
+      "path": "scripts/benchmark-society-grounding.mjs",
+      "sha256": "d01b27ec03ef899190fa686072fd37a2b0762257683827ad28c9cc3eb6699753"
+    },
+    {
+      "path": "scripts/benchmark-society-local-identity-probe.mjs",
+      "sha256": "2e2fc861acd840ce592d630924a2732757b7538daae895b576a626453aa54938"
+    },
+    {
+      "path": "scripts/benchmark-society-local-identity-probe.test.mjs",
+      "sha256": "82dfe572bf02e6a131cc2c1313ea863c016d135e63ea6b27fb580b087594b94e"
+    },
+    {
+      "path": "scripts/benchmark-society-local-probe.mjs",
+      "sha256": "ad6b8587d3195ceaec6b3b653b3988f78657413ad48c8f0c49223d12fdad450d"
+    },
+    {
+      "path": "scripts/benchmark-society-local-probe.test.mjs",
+      "sha256": "e1551ce671e783c456dd5528196c04d4e0c647b3951000fd04565acbdb421aef"
+    },
+    {
+      "path": "scripts/benchmark-society-models.mjs",
+      "sha256": "353314dc2bce86eabdfe8ce1fefbab72535f560b23e7e6c4557054d881cba4c0"
+    },
+    {
+      "path": "scripts/benchmark-society-open-message-local.mjs",
+      "sha256": "4dadd2d1979df3a498069ad9409bba54d49b77ae4035add56a4a0d66af8def20"
+    },
+    {
+      "path": "scripts/benchmark-society-open-message-local.test.mjs",
+      "sha256": "67d2c3922becf85d693c7c8f2f18fd3828499b9614f595c39f031e66a8c5ea7b"
+    },
+    {
+      "path": "scripts/benchmark-society-ordered-choice-local.mjs",
+      "sha256": "92e814e3452391a692a8efe228d04e858e7110be5e66ceb306b7cdf934c3641d"
+    },
+    {
+      "path": "scripts/benchmark-society-ordered-choice-local.test.mjs",
+      "sha256": "7825c72437d28d0d137494cc79d3b5ebfe4b4acbc2c4b95f0b8e0e71d513f46f"
+    },
+    {
+      "path": "scripts/benchmark-society-oss-identity-probe.mjs",
+      "sha256": "23a010fe8e32fb9e9755f65772e7b491d98942e5177f63a641ef35a9d8842163"
+    },
+    {
+      "path": "scripts/benchmark-society-oss-identity-probe.test.mjs",
+      "sha256": "e114e79332142b92a4ef7c684d5fadaa5d400df0d4d90c4a99b5963b67159db9"
+    },
+    {
+      "path": "scripts/benchmark-society-oss-probe.mjs",
+      "sha256": "29082bc2867b94b9b4ad774ba83e2263c9025295430181b8d0d55c47c8bef21e"
+    },
+    {
+      "path": "scripts/benchmark-society-oss-probe.test.mjs",
+      "sha256": "6429cc46ce2d769d891f369f04baee5dbae6ed0b8e39246fa78fa2621532a081"
+    },
+    {
+      "path": "scripts/benchmark-society-progress-local.mjs",
+      "sha256": "ea99d004ab308ae9bdd9b2cde0578fd08914c92a7027ead3917adb496c61f979"
+    },
+    {
+      "path": "scripts/benchmark-society-progress-local.test.mjs",
+      "sha256": "18dd111be142b1a1970e131d9007959fcee76d4e900c10710cffbe3cc5ddf941"
+    },
+    {
+      "path": "scripts/benchmark-society-protocol-smoke.mjs",
+      "sha256": "cc14b212af10e208cbab67b48d0eecc12b0fcde6010b7de4f4d7c908b33bf5e2"
+    },
+    {
+      "path": "scripts/benchmark-society-records-canonical-local.mjs",
+      "sha256": "0dc2c74cd54a916757c0c3c9bffb489bd27869cb449156df770cd733982b1518"
+    },
+    {
+      "path": "scripts/benchmark-society-records-canonical-local.test.mjs",
+      "sha256": "77459ff2c9d10cb3ae556e3b24ca51e8f75d86707216c55525c340bfe246c4c7"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v4.mjs",
+      "sha256": "670b0e5a0f2ec4444c259ff6b3483f57c17e405b2aea91d519596cff2742b30e"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v4.test.mjs",
+      "sha256": "0cac2b315233694413c8bcb875ac4ef820bc0f80fbc9f6d239147c6d1014ccbf"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v5.mjs",
+      "sha256": "daf41c8b638004853ae16c6587b13385392e5c1f20719d3a40712abb0dfd81cb"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v5.test.mjs",
+      "sha256": "76eb48881747d64a334e5368ef86094031fb53f038761b2c6476a726c0ab4877"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v6.mjs",
+      "sha256": "2fcbe7dcc58bd8efe0ab5e50ddfa34c8ee0ea90509bc32ac8b599ce82c1fdae0"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v6.test.mjs",
+      "sha256": "05d78d731b4ec491f48c3de0f46c7a040fd3743536946f265495d4deff8be693"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v7-local.mjs",
+      "sha256": "dbc96850d2720b30d437558b6e461d5e59d184214cf3ad75e548547bb8439d0f"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime-v7-local.test.mjs",
+      "sha256": "d51e2bd12bd6a9cbb0e82422ee6405b1a40a356bee040ac231a602e895e789ec"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime.mjs",
+      "sha256": "005d44072b9f43b9be62ced55f4e17811f5002235ff0df10abd020af49b99f1d"
+    },
+    {
+      "path": "scripts/benchmark-society-runtime.test.mjs",
+      "sha256": "ff6e13d1ff4f00fde3e55d5ae014fcc13a9adb341d8beb5cfc3ad03d15128c67"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-deal-order-local.mjs",
+      "sha256": "d222f49f66870abb8115223bd4ef26c17e21e2e6da278f694be4d84066cb77a8"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-deal-order-local.test.mjs",
+      "sha256": "b3ac21915e21702d42d7c6a114dc6051d431af4f1ed5433e1d4e475fbe8f2a40"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-local-reasoning-probe.mjs",
+      "sha256": "505a72befb0649deb9b5ba3d176604ccb472b8da4117e51a6ab4c4be7f7bf9d1"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-local-reasoning-probe.test.mjs",
+      "sha256": "28bfd02714356abbc682a6fbf0dcc11f7f279c495f5524ad30fdd8f96695e3ef"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-oss-probe.mjs",
+      "sha256": "cf6aee6ac2525d5cf2466c78aca266d69974fd8e5a033587c17818c48ecfaed2"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-oss-probe.test.mjs",
+      "sha256": "458dee3436004a9166cd1969e3bb4061dacf06d3a77c427f9cdfee5bd68d5773"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-schema-probe.mjs",
+      "sha256": "4d5725c3eabed24bef5e5db0ffd818889a243a5237d8086f93168e737e17ca6b"
+    },
+    {
+      "path": "scripts/benchmark-society-v7-schema-probe.test.mjs",
+      "sha256": "1ddd0eb08bef57ec92c10e7e886a45ffc275eb2f9dfed93d23e7848a20fbb61b"
+    },
+    {
+      "path": "scripts/capture-legacy-room-art.mjs",
+      "sha256": "fd9668f91330e452b0638c6e09f0ec9bf56a40258d7e9fc67055c2c0cd19fcb8"
+    },
+    {
+      "path": "scripts/capture-recovery.mjs",
+      "sha256": "341ed92dbca82398a924aaee670cb2f3fd57f4931f6febd02c77a683e51ed230"
+    },
+    {
+      "path": "scripts/capture-runtime.mjs",
+      "sha256": "d41df0cca63ac9a7a6612fc9b01485dc4727c2c960f1c9f47ffa319016920a01"
+    },
+    {
+      "path": "scripts/continue-society-v4.mjs",
+      "sha256": "33f8c81a76fb2f42e1039d677ac03964e576df6d1bf45955bba230bc9cbf735a"
+    },
+    {
+      "path": "scripts/continue-society-v4.test.mjs",
+      "sha256": "e4e91b06b5a1bdbeeeb441fe3915dc0207fb348607823b27d619d5d8f088f42e"
+    },
+    {
+      "path": "scripts/export-rooms.mjs",
+      "sha256": "f5966226d14b18c7385a3ac8745376fd07eea80189e6c03d0ec02aaf76332bae"
+    },
+    {
+      "path": "scripts/fixtures/society-grounding-bench.json",
+      "sha256": "962a72fd0ac33ca74f8f91f12ee7c12bc4dab069fddc4ff02f500d521e0e5cfb"
+    },
+    {
+      "path": "scripts/fixtures/society-model-bench.json",
+      "sha256": "37c5cfd6dacc135a88acf3d91dab444687496b538ff82397f11cc939270157f1"
+    },
+    {
+      "path": "scripts/legacy-room-art.mjs",
+      "sha256": "ef035b5bbcee9320f4045445661474a4e6eaf9109a6f536bddec76b48424591f"
+    },
+    {
+      "path": "scripts/legacy-room-art.test.mjs",
+      "sha256": "392d2724e27dc1201cc411b353c5cc83609a58f3953c7107080893db400454f5"
+    },
+    {
+      "path": "scripts/restore-recovery.mjs",
+      "sha256": "62889b6c74a0a92f317f3e67f4ca768d05c5e2767cbbd41fb24209645fe867d1"
+    },
+    {
+      "path": "scripts/review-first-live-turns.mjs",
+      "sha256": "7d007844a6e2953303aff0cbbb721e02fda5563bbcf0bcc73f5369137aa6b7e5"
+    },
+    {
+      "path": "scripts/review-first-live-turns.test.mjs",
+      "sha256": "9315976ef7b6a0b50e489d901d787029611a03d92e5c1628391d5ab9cf2efd57"
+    },
+    {
+      "path": "scripts/verify-distribution.mjs",
+      "sha256": "d37c6d5863fd1a8c284c0b76e44895757a6e1a9eecc268453c70f286450718ab"
+    },
+    {
+      "path": "scripts/verify-recovery.mjs",
+      "sha256": "ae150e7950f26a2e7f393a57fc168722f7d0bf9d0ded5d098cadc50c2cfdad29"
+    },
+    {
+      "path": "src/components/desk/habitat/AgencyNotebook.tsx",
+      "sha256": "79417b39df0a88f07bad0a09c9cdc0e23fc08995823337008970ea97b138ed94"
+    },
+    {
+      "path": "src/components/desk/habitat/Dossier.tsx",
+      "sha256": "2a20c3d29f5cccd06e64975ecb8f91127b23875b4c79e9aca059f826725a4c34"
+    },
+    {
+      "path": "src/components/desk/habitat/HabitatMap.tsx",
+      "sha256": "490be9284f9ccc94e873138d5255a447b5a28ac58b5a161c085d5410999e4597"
+    },
+    {
+      "path": "src/components/desk/habitat/HabitatView.tsx",
+      "sha256": "b19ff9f09e8ee7ec8d03c055a590ee33309f0b908debec4e56e6528a817494a8"
+    },
+    {
+      "path": "src/components/desk/habitat/LiveStatus.tsx",
+      "sha256": "c8408bd09b034a7c0cc54be0e112cdf04795e58c2029cd5d6112ca3480c18d9b"
+    },
+    {
+      "path": "src/components/desk/habitat/Portrait.tsx",
+      "sha256": "1b9ae7a5137139c7ce481e3d61c4cebe19e3f36f197a14747c06d391c28edfba"
+    },
+    {
+      "path": "src/components/desk/habitat/PublishedRecords.tsx",
+      "sha256": "3f5d0276427b070d5cdaccba7522bc4023833ea69c8632ea396eca7fd6b74ab1"
+    },
+    {
+      "path": "src/components/desk/habitat/ResidentSprite.tsx",
+      "sha256": "47126460cf4f451727c2cdb3ea3068bde5defc8e44d66a0fd4afadea96140771"
+    },
+    {
+      "path": "src/components/desk/habitat/ResidentThoughts.tsx",
+      "sha256": "a814112429f36c480aa5cc9df05785e515faaf0273fcb60620fcbb985663c2f0"
+    },
+    {
+      "path": "src/components/desk/habitat/RoomAtlas.tsx",
+      "sha256": "4cec7c8086e83a849d78593c8f217c8390400ab9d25379bf3c348b1b86150d30"
+    },
+    {
+      "path": "src/components/desk/habitat/RoomCanvas.tsx",
+      "sha256": "a7e0a12b7b892e1c37c3b3e2946ae55ba8bcb8c843d3a7b5770710fa745379d2"
+    },
+    {
+      "path": "src/components/desk/habitat/RoomScene.css",
+      "sha256": "7f9510b60ca7cd93af253188a9582924e5b3c4b70a983d0a32848a79c0f9992f"
+    },
+    {
+      "path": "src/components/desk/habitat/RoomScene.tsx",
+      "sha256": "dc16cc5ff1a6e0632c6ae38ef8ba3c90bfdcaf68f4a5991a9af4e1a5635b3c8d"
+    },
+    {
+      "path": "src/components/desk/habitat/SocietyLedger.tsx",
+      "sha256": "bc935981b2b8c3e60bf695d87a7b6e77c25813f93347f04c1e8cb31f84e062d9"
+    },
+    {
+      "path": "src/components/desk/habitat/Weave.tsx",
+      "sha256": "0ad5c04ba7ca2a20c63d36c4ba9707b6bdaac1b3026677cc134bdbdba4485fd6"
+    },
+    {
+      "path": "src/components/desk/habitat/paint.ts",
+      "sha256": "6782874721dcd3c504b60e06779e04bbaa1396702e4e11427002e5c3398f6cbd"
+    },
+    {
+      "path": "src/lib/config.ts",
+      "sha256": "9487ee5199f974a566b6523238cd3f046fcd6a25f7bb14e5ee9fae4028ea8fa9"
+    },
+    {
+      "path": "src/lib/habitat/agency.test.ts",
+      "sha256": "f90a93b3dbf09723c3a0a82772855d846c0a713fa30867329cb6966005935bff"
+    },
+    {
+      "path": "src/lib/habitat/agency.ts",
+      "sha256": "a561ac623dd41f4ce5d3a3cc946a250b7e9bed2f3609bf26631fc42964121c43"
+    },
+    {
+      "path": "src/lib/habitat/archive-message.test.ts",
+      "sha256": "b01180b3722b11212a6355239cf24c89d14f3a973d941ffd63b3d912df528f08"
+    },
+    {
+      "path": "src/lib/habitat/archive-message.ts",
+      "sha256": "e85365989d2e27b55093a6f56d422bbe8589a9331bc29155acc8b7bcef8bd4b8"
+    },
+    {
+      "path": "src/lib/habitat/axes.ts",
+      "sha256": "cd74388ccd7f4d2f9af2d45a130dc825cacaad4d685fcfa0f7e56bac41e5fbd9"
+    },
+    {
+      "path": "src/lib/habitat/bitmap-codec.test.ts",
+      "sha256": "9886d33661e281998fcf7096c56eded0ec4f3290c2dd465b8d5e9dc373773b77"
+    },
+    {
+      "path": "src/lib/habitat/bitmap-codec.ts",
+      "sha256": "4fc39555204830e98ee585474f82e6696e5a5140f0f6db82ed5d39438836eada"
+    },
+    {
+      "path": "src/lib/habitat/conversation-outcomes.test.ts",
+      "sha256": "283e9a4424d666453c222479efa556c362e9e10a7189aa39325be678351bbff3"
+    },
+    {
+      "path": "src/lib/habitat/conversation-outcomes.ts",
+      "sha256": "465e0635f016c2719214c5ff9fa159f45fdf16949fbf9c61c305696829b94b7c"
+    },
+    {
+      "path": "src/lib/habitat/engine/agency.test.ts",
+      "sha256": "4198e6fcbb4c08edfcd66ad233a7ac7925d8a487bdba4953380283bfee5116f7"
+    },
+    {
+      "path": "src/lib/habitat/engine/economy.test.ts",
+      "sha256": "8729d89a3b6e255d887956281bebe166e01c6cee78b3e9bacee83cd5e4a103fa"
+    },
+    {
+      "path": "src/lib/habitat/engine/economy.ts",
+      "sha256": "8aae40c632db4d4aee983d511ad240d121eb9bda06e39f4972e4abecc3de39a8"
+    },
+    {
+      "path": "src/lib/habitat/engine/knowledge.ts",
+      "sha256": "3f457880911b41b65163d154a9b3792c1c22f06ecac137cbfa4013075199cd14"
+    },
+    {
+      "path": "src/lib/habitat/engine/publication-slot.test.ts",
+      "sha256": "560cebec1ec97bd5932f8e37acf941b990660440c93ebe50863916cdbbd0dee5"
+    },
+    {
+      "path": "src/lib/habitat/engine/state.ts",
+      "sha256": "054cd250b932f7bc3462d6b66bc4df205d76f71a51db88c177c26a5b1fdfcec8"
+    },
+    {
+      "path": "src/lib/habitat/engine/tick.test.ts",
+      "sha256": "554cf54c66219bdf98e3dab9e7fdfb433f46b19c08b867e6347d3d503a45f423"
+    },
+    {
+      "path": "src/lib/habitat/engine/tick.ts",
+      "sha256": "197d912fff855258b42925a4bd71a4bb855109c8c5cffdf2503c94112b25a02e"
+    },
+    {
+      "path": "src/lib/habitat/engine/verbs.ts",
+      "sha256": "221d958d09adc4010328baf761be7ec776aa4ec04c4a6bfa3f650a9bb43424c3"
+    },
+    {
+      "path": "src/lib/habitat/explorer-art.test.ts",
+      "sha256": "1ad0d91af91c1c0e4a978cff5692c208e5cca35a3e32236dc1e78862776b6f11"
+    },
+    {
+      "path": "src/lib/habitat/generated/rooms.json",
+      "sha256": "d7d9631c820a8321e5db00cdbb85a069dd72611312f3aecc20173cde4e54e208"
+    },
+    {
+      "path": "src/lib/habitat/graph.test.ts",
+      "sha256": "25d817897f9801c7f950040d953fac24d0c521bcbed8e9390045c41a9422597a"
+    },
+    {
+      "path": "src/lib/habitat/graph.ts",
+      "sha256": "ffa22d815347a48c307d5dc22dc53755fd3d07267a976f8933dddee698ca77b0"
+    },
+    {
+      "path": "src/lib/habitat/grid.test.ts",
+      "sha256": "4df239c51302e25f22e3b4ccc6c0f0a5bdf9645abbeb55bead196047d9948505"
+    },
+    {
+      "path": "src/lib/habitat/grid.ts",
+      "sha256": "f1d005f71327df39c047e2e9625da451fd5e04ac59ff47f3ca62fd592c584cd1"
+    },
+    {
+      "path": "src/lib/habitat/journal.ts",
+      "sha256": "b1ea6f4230404ec9d5084a0036912a382a61723bbf68a26791aac0d6749fb470"
+    },
+    {
+      "path": "src/lib/habitat/live.test.ts",
+      "sha256": "fd0c0f9d896a60ca96cb4bce5fda0ce45a1f3eba6294bdb1566706b1d295ed10"
+    },
+    {
+      "path": "src/lib/habitat/live.ts",
+      "sha256": "bd51af19f989027f5dbf53976beaa6b53c098f31e9fb032e23c456dae9b7b6a6"
+    },
+    {
+      "path": "src/lib/habitat/navigation.test.ts",
+      "sha256": "ecb177816a01fa8775e50f9f17ea9d163504efd300a35a9909430b7d15704d96"
+    },
+    {
+      "path": "src/lib/habitat/navigation.ts",
+      "sha256": "6078a44b9520163bdf1014b08ef0d950206aa7db4e59ac1503d8b81c12b6a3f7"
+    },
+    {
+      "path": "src/lib/habitat/observer-behavior.test.ts",
+      "sha256": "50e7bde12548613548edb47d566c2055369858fabb15387d0f59ad49d18b8641"
+    },
+    {
+      "path": "src/lib/habitat/observer-camera.ts",
+      "sha256": "2f2d9cc048756b5dffde9ad01ff4e28329a50e8fdb08111aca6dbd5d56a5c048"
+    },
+    {
+      "path": "src/lib/habitat/observer-matrix.ts",
+      "sha256": "26da0f7e03bca8d076649eda071261b2237070032dad39f69285274a37600a27"
+    },
+    {
+      "path": "src/lib/habitat/observer-preferences.ts",
+      "sha256": "8cf50c24deaccf47eeb22e5570f3348a55682f3b62942851db198eb7c1737073"
+    },
+    {
+      "path": "src/lib/habitat/observer.test.ts",
+      "sha256": "bc8ad33ca19b5cc4de46150fb44d125c226de94edcb7aeb909bf24e128694fb8"
+    },
+    {
+      "path": "src/lib/habitat/passages.test.ts",
+      "sha256": "27c9a88eac04ab80046350714085f76a90ac1dd39d750910677faa914840376e"
+    },
+    {
+      "path": "src/lib/habitat/passages.ts",
+      "sha256": "63203b2b2e1d099ec760f8c069efb9676317693006a83126e6c3dc1be216cb1a"
+    },
+    {
+      "path": "src/lib/habitat/portraits.test.ts",
+      "sha256": "13e2ff1ddbfd7b76dcf9de97ff93df8748a286a9547715a063b3a7c3f86a74af"
+    },
+    {
+      "path": "src/lib/habitat/portraits.ts",
+      "sha256": "b717c55fc544ec643d6dfb437e40a59a92dffbf2dba197da121acb5262b54754"
+    },
+    {
+      "path": "src/lib/habitat/public-message-translation.test.ts",
+      "sha256": "a3be2c47d83c95d49d3b900a1e33f74fe15e7479ee3f6eb2354fc8d54fb2596b"
+    },
+    {
+      "path": "src/lib/habitat/public-message-translation.ts",
+      "sha256": "33394bccd53a77f3856bfd5886c28f51ae04723bed2ca92bbf198b5bd601a8d8"
+    },
+    {
+      "path": "src/lib/habitat/public-records.test.ts",
+      "sha256": "1be601a46e26b3be7b5bbf1ff6b5fde957b5efde87fc63b0b17dff4d179e6f7a"
+    },
+    {
+      "path": "src/lib/habitat/public-records.ts",
+      "sha256": "00ef0d0b359ed23790065e8ab67146242004e295a5218ab1b90aeaceac811ebe"
+    },
+    {
+      "path": "src/lib/habitat/random.ts",
+      "sha256": "e18394c5735036e93d0bf001a1b2a1d95ab1255484e84a79bd8ceb77e2d17c33"
+    },
+    {
+      "path": "src/lib/habitat/residents.test.ts",
+      "sha256": "5db5ebe99654bc2d6aed75fb7e0b6564138f6a095eb8ee22ca3274617d9c7d93"
+    },
+    {
+      "path": "src/lib/habitat/residents.ts",
+      "sha256": "31fc1f5c6a6e5e143420d5feaa22e49f4536bb43a390167840e30530a4602b29"
+    },
+    {
+      "path": "src/lib/habitat/room-art.ts",
+      "sha256": "217bb8023ecce49099e18c78e39f8d7599f989becc88820243f92e6bda865124"
+    },
+    {
+      "path": "src/lib/habitat/room-motion.test.ts",
+      "sha256": "d68fd4a5f4e3be9ad55d60ac7c471e994d7daf94cd7e06422548ee6ac35ffa6f"
+    },
+    {
+      "path": "src/lib/habitat/room-motion.ts",
+      "sha256": "3b456066b93d9016a62ee039936a714284ac36f43b993c42c99f4903a5a2c99f"
+    },
+    {
+      "path": "src/lib/habitat/room-names.test.ts",
+      "sha256": "9e7c5be17440d030da93d732613d4fcd3ce68c36cbe34dc4982812930428b038"
+    },
+    {
+      "path": "src/lib/habitat/rooms.test.ts",
+      "sha256": "12be2ad938a80739754b2b0d1ed476695758343a827a4e37f15922d1a332e857"
+    },
+    {
+      "path": "src/lib/habitat/rooms.ts",
+      "sha256": "af0137f87f23e6ad015524f6eeff4ab1bed1fd07648d1e6758936a3db2e00b57"
+    },
+    {
+      "path": "src/lib/habitat/section.test.ts",
+      "sha256": "d6be79076122508d6cb819f9ce94f8ad41742cd811a82ed97c85bea2e5c2a7c4"
+    },
+    {
+      "path": "src/lib/habitat/section.ts",
+      "sha256": "ed6147c44affe83c8f00d64ffab216aa2dd9dd8bd3879085596300a7abdff7c6"
+    },
+    {
+      "path": "src/lib/habitat/snapshot.test.ts",
+      "sha256": "8b2e7eb5892883fa5dd369f733214eda912a20bb30c89f2ea125c0ca63986411"
+    },
+    {
+      "path": "src/lib/habitat/snapshot.ts",
+      "sha256": "a3569e0ce59798859a38445ea45998864072dcf737ac151d7df38a3c24b027e4"
+    },
+    {
+      "path": "src/lib/habitat/society-view.test.ts",
+      "sha256": "9197a4a77a2f5722f220044c6c24600d4d5d8800574fa15ec8b56dd7ffb5a0e4"
+    },
+    {
+      "path": "src/lib/habitat/society.test.ts",
+      "sha256": "91e0d31d1b73f4ce3138375c4b2a32503732d0f8a855857f7c332b18f99f6ca0"
+    },
+    {
+      "path": "src/lib/habitat/society.ts",
+      "sha256": "90d6e2046a3151deb4e0b3f943b2727bbd8946cf5a495f641687c6415aaca13a"
+    },
+    {
+      "path": "src/lib/habitat/society/appraisal.test.ts",
+      "sha256": "0ea4692c4059e7b309e57536a7b6d7f0186e66b528484aea0503c36db1da0250"
+    },
+    {
+      "path": "src/lib/habitat/society/appraisal.ts",
+      "sha256": "f946f0accaece3c460d3a6e5fe884aa4797e2fccfc403ea17fcdbaa25a37ea7b"
+    },
+    {
+      "path": "src/lib/habitat/society/capabilities.test.ts",
+      "sha256": "e74a01eec647b92f874d2bba2bfb51325680aa53787b2dab87b90a3a0540cd25"
+    },
+    {
+      "path": "src/lib/habitat/society/capabilities.ts",
+      "sha256": "d63a161cf3fb4f0baa754e2c71f1d310fb6cac9ab56353586be6bb2f86c7283a"
+    },
+    {
+      "path": "src/lib/habitat/society/capability-message-grammar.test.ts",
+      "sha256": "633a20383ad73ef75e210a1735d76b84919e630e66b1ffc60b2c6d80139049ea"
+    },
+    {
+      "path": "src/lib/habitat/society/choice.test.ts",
+      "sha256": "faf6f29c9f17bb850e26e1b89dc95258fc9e6683e6b687ccf7acc429cef84b4a"
+    },
+    {
+      "path": "src/lib/habitat/society/choice.ts",
+      "sha256": "2fd3e01f5a890d641ef6c22a16eb38f1ad515a1500b3f9f2cc049263cdf2b579"
+    },
+    {
+      "path": "src/lib/habitat/society/closing-turn.test.ts",
+      "sha256": "6f37ca27f155865819e625730aaf0a0fb7249a2ba27568211e9a3b45e5d538e4"
+    },
+    {
+      "path": "src/lib/habitat/society/closing-turn.ts",
+      "sha256": "efa5bd2339c2c37534e1a61ba6423d8d54701a4b845b332e6d6b2ba19b244e61"
+    },
+    {
+      "path": "src/lib/habitat/society/contacts.test.ts",
+      "sha256": "7d20ecde498e7d2999c049b3c4531059a3edc5f93c08402ee189cafb67fe7d6b"
+    },
+    {
+      "path": "src/lib/habitat/society/continuity.test.ts",
+      "sha256": "bc14db98d2760d37cf199f0b65ef8286918dd77e7a6d3e5df5ce5513ec468d77"
+    },
+    {
+      "path": "src/lib/habitat/society/core.test.ts",
+      "sha256": "c40e735822bd529af82a9f920e933a422e1fcaa4b5639d940b469236caaac614"
+    },
+    {
+      "path": "src/lib/habitat/society/decimal-money.test.ts",
+      "sha256": "7d498b1776f2e768bd5e221a337b80e8fc7d8e5031a86b8364ae9537b1bf99b2"
+    },
+    {
+      "path": "src/lib/habitat/society/economy.ts",
+      "sha256": "5a11678e655670b96f70d3a22fdc675c10b973cd3e2559a435acb514f9def6fa"
+    },
+    {
+      "path": "src/lib/habitat/society/evidence-layout.test.ts",
+      "sha256": "13384be460c69e366cfd53263444581f2bcf17e31c90fd7cea4ea94b7c3c2c07"
+    },
+    {
+      "path": "src/lib/habitat/society/evidence-layout.ts",
+      "sha256": "663c0e814d0fb8ebcf58d8c0281d5c6825e1bdaf27a671f8785c510b417c9c0d"
+    },
+    {
+      "path": "src/lib/habitat/society/grounded-tools.test.ts",
+      "sha256": "d2b2edfce09b0ab4dddafca03c31dbf0879b5386ea24a35969215f36b089528e"
+    },
+    {
+      "path": "src/lib/habitat/society/index.ts",
+      "sha256": "0d9d4f02d72b8b441ad7a5ef11dd74f5c637b65ab018a0ccc384ccca76f27e3e"
+    },
+    {
+      "path": "src/lib/habitat/society/instructions.ts",
+      "sha256": "2492fa357702571edb9c84c22a9ff50e471c9c6df8ef771af8e3dd48534c3e7f"
+    },
+    {
+      "path": "src/lib/habitat/society/money.ts",
+      "sha256": "923226735ffaadfdeb4fecf6ef6418b08257285c3eebf8a56941ceefe4684b8a"
+    },
+    {
+      "path": "src/lib/habitat/society/omitted-deal-close.test.ts",
+      "sha256": "64d0bc4eb951189ca12f257fbed88b606bcc659a8b33e365857442a985030fb6"
+    },
+    {
+      "path": "src/lib/habitat/society/opening-proposals.test.ts",
+      "sha256": "9b1e9e94af2b93761c8f7c49db3d28d03ad4e515ae4ab2c0bfe4e7a593c4a8e0"
+    },
+    {
+      "path": "src/lib/habitat/society/ordered-choice.test.ts",
+      "sha256": "818a153c4acc3cde4e8c1f705946bfca2c79543362a47d6f6df6be870b337b6e"
+    },
+    {
+      "path": "src/lib/habitat/society/ordered-choice.ts",
+      "sha256": "8210dc505fdf7677582e314b49bbf809a4112a4da1af1e3c04197492571b0809"
+    },
+    {
+      "path": "src/lib/habitat/society/overdue-context.test.ts",
+      "sha256": "5f00a95c655669d351ea286655d7ff8b3aee2ccac9d9e4d15d06f8f7681610ce"
+    },
+    {
+      "path": "src/lib/habitat/society/physical.ts",
+      "sha256": "764ce79c8badc62644b10dcfe57165d8a5b347ccbeb5b6cb47fed57f55f95eae"
+    },
+    {
+      "path": "src/lib/habitat/society/provider-schema.test.ts",
+      "sha256": "9cb0df2340bb393e4c8a4a225f2a8cb54468d54f27212ec199b7f4627fc4c817"
+    },
+    {
+      "path": "src/lib/habitat/society/public-record-publication.ts",
+      "sha256": "008f564793ed576e8072c11f2633822103184deb2468b3f9a39494620dd5dc91"
+    },
+    {
+      "path": "src/lib/habitat/society/public.test.ts",
+      "sha256": "9c143b8befe99c4e77914f7ee5387d2794f97dc003da3c0664ba9dd1dbad5752"
+    },
+    {
+      "path": "src/lib/habitat/society/public.ts",
+      "sha256": "e3bd898d989e8523acacff2633cb4fcade49a1f9968f1212d18689f44d56e3ad"
+    },
+    {
+      "path": "src/lib/habitat/society/receipt-selection.test.ts",
+      "sha256": "000abc6c372d848acca1db2d033bcfcc6d2fb84774969384ab3a7eeaf2e3e333"
+    },
+    {
+      "path": "src/lib/habitat/society/record-archive.ts",
+      "sha256": "d631275ff9deab1765ed94fa8e64e5bc5a89de6d8bcbbc1e156e16228373ff47"
+    },
+    {
+      "path": "src/lib/habitat/society/record-choice.test.ts",
+      "sha256": "37bb78157d8739f47341badea99432689c35e493db8cd15720225e565b253861"
+    },
+    {
+      "path": "src/lib/habitat/society/record-choice.ts",
+      "sha256": "51472ca62b1c187ac8d3b6ca9a2aa10451984b814f38bf5a33fd15dc79cecfc4"
+    },
+    {
+      "path": "src/lib/habitat/society/record-instructions.ts",
+      "sha256": "c8e3c02dcdbc0a672a03dff79176dc94934423dceb3931c0d40133f868fb36f1"
+    },
+    {
+      "path": "src/lib/habitat/society/record-migration.test.ts",
+      "sha256": "4d86b0be2932acc46d2ca8376bc7a7cf8a424fc8cafc1190b7985809f1a27e6e"
+    },
+    {
+      "path": "src/lib/habitat/society/record-retrieval.test.ts",
+      "sha256": "0b42ea95137f559d026041e172cd0842b81eca2099b15dc8704c53051635c5b9"
+    },
+    {
+      "path": "src/lib/habitat/society/record-retrieval.ts",
+      "sha256": "8cfd2504ec20f309612c0202e06ce2422fc84f84cd81ba93d330861c83cc7ec7"
+    },
+    {
+      "path": "src/lib/habitat/society/record-schema.ts",
+      "sha256": "2849742cdedf817ddfeef342fe4fef9e3699a36a59b66e26632b78b4a061cedd"
+    },
+    {
+      "path": "src/lib/habitat/society/record-types.ts",
+      "sha256": "e744fa2867a1e2dc6cf80db32a5f81ad10c76688300f9e53336aa4f519bd5f38"
+    },
+    {
+      "path": "src/lib/habitat/society/record-watch.test.ts",
+      "sha256": "0a7c3cada2daea0e68ffc51d45323170286b14e87e8e1de50e8ca2abf23ea2f8"
+    },
+    {
+      "path": "src/lib/habitat/society/record-watch.ts",
+      "sha256": "618e554836097c57f5a71d1ce1596a04b925c1a64aa47dce2c4f13c782ff6705"
+    },
+    {
+      "path": "src/lib/habitat/society/records-test-fixture.ts",
+      "sha256": "ec0e35e4d0fb4a677e60ca61974dd927205e2b624e59807cfc85d06d59c4fcab"
+    },
+    {
+      "path": "src/lib/habitat/society/records.test.ts",
+      "sha256": "58ca1e29d72c8ac871f21fecdc62593b57629c7baa00692f21b328b17c20c8bd"
+    },
+    {
+      "path": "src/lib/habitat/society/records.ts",
+      "sha256": "b1bccc05a3c932399d0fe83ec50558ba4ea72ef5bf2dc8276524dba16e9a3076"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-choice.test.ts",
+      "sha256": "b163f8a3ba5a27810fd633aaa0060350b0f617f2ecca6c35687dbbaf10e9fdb3"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-choice.ts",
+      "sha256": "b559a482ab28ed06dba90f4a68ce5559bfb9fef96a0c4696d65554f2f1015205"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-instructions.ts",
+      "sha256": "2c8e3b3a2770c363240bc39f2227538cdd4a8f5e169a92224a52960c8f5e889c"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-review.test.ts",
+      "sha256": "94c6d33292efad7e80fa2747d47c9827309f3acddd511cdbb3804ddfb265b81f"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-state.test.ts",
+      "sha256": "d8714bd2f4e14c73aea82555837c1f616df12d05c44a8867d2abfbc165757a9d"
+    },
+    {
+      "path": "src/lib/habitat/society/retrieval-state.ts",
+      "sha256": "29f4af2100e94ae0d724c5b49ec328f57c05c685cd5478b6d83ba569945a3bdb"
+    },
+    {
+      "path": "src/lib/habitat/society/schema.ts",
+      "sha256": "02ef6b145b03080ca2b749435c5c83ab22cfe1b4d6fef23578fc2f62b6e1af91"
+    },
+    {
+      "path": "src/lib/habitat/society/state.ts",
+      "sha256": "a89eb700ad0bcaa237a5dbce062078ef842635027ec112c697406a43a8cdb381"
+    },
+    {
+      "path": "src/lib/habitat/society/turn.ts",
+      "sha256": "97a119ebcef0bc1942a0e06862804d9c6e88b6fb0767d83e094c75d0be594a0f"
+    },
+    {
+      "path": "src/lib/habitat/society/types.ts",
+      "sha256": "b3829053454f74b0545b0749ce14ebc24789a038e49eb23accacfe970b6b5428"
+    },
+    {
+      "path": "src/lib/habitat/society/watch.test.ts",
+      "sha256": "7f095c318043d9f96494b0ac7d9da7a66e492e42d4050e742cc9aaea458e9868"
+    },
+    {
+      "path": "src/lib/habitat/society/worker-credit.test.ts",
+      "sha256": "8d851a755f88ad11fa87785c7339e8276ae14dd059ecb5607a2c2ad406b476c3"
+    },
+    {
+      "path": "src/lib/habitat/source-scale.test.ts",
+      "sha256": "54ddba4d854bfb05598f2890acfcfc361b02f6742365f7e3b045ec79bcd82f50"
+    },
+    {
+      "path": "src/lib/habitat/tiles.test.ts",
+      "sha256": "23f1c3c75681710245933c16a4dd259b26896916e53fb98c134fe8c767a46c7b"
+    },
+    {
+      "path": "src/lib/habitat/tiles.ts",
+      "sha256": "1ad438260ca82edf4a60d950f54026314b3a7d82dc9c449f2dbb675d5097a2a7"
+    },
+    {
+      "path": "src/lib/habitat/useHabitatLive.ts",
+      "sha256": "62f157c27cd08274e8d5bf2eb2e9c64de770ff3462c84adaa8d92382523cdefe"
+    },
+    {
+      "path": "src/lib/habitat/useObserverPresence.ts",
+      "sha256": "896d46511296a53ea2557ddd5419d4730d661a23c681577283447aea2cb3e77c"
+    },
+    {
+      "path": "src/lib/habitat/weave.test.ts",
+      "sha256": "9ce085ddab4b2ab01459ac9899bac7d92960f7020be76aa4c9c8d93aee9f4d80"
+    },
+    {
+      "path": "src/lib/habitat/weave.ts",
+      "sha256": "2828c12a1e979d261ab7f03f9808966b3aa83420bd01105daf5982da1a7e9bc5"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "c94b542815e795dec5c553ec894c3c5c991cc671ff27860340e4daa5a9a8ec38"
+    },
+    {
+      "path": "src/styles/app.css",
+      "sha256": "984635a4abb2019468593bd114c0177583c58e020dba5db2b4a9483fb4bf2389"
+    },
+    {
+      "path": "src/styles/habitat-base.css",
+      "sha256": "2de17f108a80687732bfc1787522d500e416e91b463c4a0c280da174154545a1"
+    },
+    {
+      "path": "src/styles/habitat-observer.css",
+      "sha256": "96885bd86a9374a997bd5922c0f7d863c0ea735ef52abdf0557c4b69526b9693"
+    },
+    {
+      "path": "tests/browser/historical-translations.spec.ts",
+      "sha256": "21820f8eab9a41761754cbd896e6e67f0c19552c4da16cd42649ac0f7bdd1204"
+    },
+    {
+      "path": "tests/fixtures/lives.ts",
+      "sha256": "2f2a2e15fb89fd4c194f99df06a828eb3a4d19efea272249dd348cef1abfca41"
+    },
+    {
+      "path": "tests/fixtures/observer.json",
+      "sha256": "8b7209742a0b1cea2ed207c3b6e8760306bb5e1c069c975e1997e05295373d0b"
+    },
+    {
+      "path": "tests/fixtures/status.json",
+      "sha256": "1ca7b57e08f5aaa9082ff2f701bc6cee93ecf73ae930d7bdbaf4f71ae5c74dce"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "sha256": "5f1cbeff2d9afe34dc1aea6c2f71e3c9966c8bbc0f1e68bfe4df4f7265b52d4b"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "3a11d1d758b82ceae1687b3b3b673d98febb16b81305239be576b6aa30148fed"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "sha256": "de2d7e527b888c502419d9371b27eda77f83838f8914d495a570f0e6dc08ebd2"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "dcc0faf04be965c8959d6de0752ad1c86b8184716a0e262dded0bc3909555594"
+    },
+    {
+      "path": "workers/habitat-runtime/package.json",
+      "sha256": "3b3c0a1f715373d4329886ed03713760da783373d10b555100d1089d095b7b4f"
+    },
+    {
+      "path": "workers/habitat-runtime/src/auth.ts",
+      "sha256": "ca46bb3f9ba245715dcca3bf366fb2019906acaace6b9422efe26bd6481b38f5"
+    },
+    {
+      "path": "workers/habitat-runtime/src/checkpoint.ts",
+      "sha256": "1acffc8cb2edb435d2749ae9f93ce13aeb043205085cd281142b66204f820309"
+    },
+    {
+      "path": "workers/habitat-runtime/src/cognition-pacing.ts",
+      "sha256": "b1f8aa948930f977290eb5458d632d28c07e8b6fe8d2fbbe01ffc6316ff867df"
+    },
+    {
+      "path": "workers/habitat-runtime/src/cognition-retention.ts",
+      "sha256": "ab070825db6a991621d116c1582a484752b42645fb975a89f9f7846a1bcb77eb"
+    },
+    {
+      "path": "workers/habitat-runtime/src/conditional.ts",
+      "sha256": "60fc4bcfd61e5e524de5a1f29d0d5a1bf65a3a34ba217a8376f2489318f5ffb1"
+    },
+    {
+      "path": "workers/habitat-runtime/src/contracts.ts",
+      "sha256": "148da0e21ac74177edbb6de511723d9491eafdbaaaa1c78f001e6eabcb8bf64d"
+    },
+    {
+      "path": "workers/habitat-runtime/src/domain.ts",
+      "sha256": "a0523ad945e440c86aec54251c4e114ef9a328f8ed0f848cc8b4dd4f25d8768e"
+    },
+    {
+      "path": "workers/habitat-runtime/src/habitat-world.ts",
+      "sha256": "ab0e4525e5af97a6f849bb477317f7c66315a61bf8daa93dabcee20b35e70f87"
+    },
+    {
+      "path": "workers/habitat-runtime/src/http.ts",
+      "sha256": "be051b051dc463cadb325157e79d140835db925c31d44b993e96afd2e8ece16a"
+    },
+    {
+      "path": "workers/habitat-runtime/src/index.ts",
+      "sha256": "ba947377273340f19edc6f2429f3a8c2e28518ca13b391f21973ad824399abc4"
+    },
+    {
+      "path": "workers/habitat-runtime/src/prompt-budget.ts",
+      "sha256": "36d13cecbbf47218f574038c57cd9a532383a74fba056a8246c19ea44bea42a1"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/deadline.ts",
+      "sha256": "2d97949eeb8c0ed829e171147f27782bdfa48fd1e408d33d7f6fa62d486f357c"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/free-model-router.ts",
+      "sha256": "52adcae584f3bf55f8b017f0ad41497f2670c61addc4880e24612674641dfbf7"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq-token-estimate.ts",
+      "sha256": "6823567f80d64db0156fe74726b43d4e0984a659c965db638c33c5a1d2e31c32"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq-tokenizer.ts",
+      "sha256": "a49a0f09f3d3072bc4c6bcd6dde2669610d216f8de5cd09b4598ca9466898f19"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq.ts",
+      "sha256": "9e54a7af1b14402435924fa13903c4c99a8d717c8542f54d467f29277224efe5"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/router.ts",
+      "sha256": "97d50a484b6b1cbf960bce6e1992985a3679541677b5c0ce14f356b49470132f"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/shared.ts",
+      "sha256": "6ef6783e8480895dd0f074337c4961bed60e153bdb78e03e05173db5892b6dd4"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/tiktoken-wasm.d.ts",
+      "sha256": "18aafdd5703deffb3dbb9ffc63d06487d26d93ae9450eed8c0f26c19d024829d"
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/workers-ai.ts",
+      "sha256": "6e0e2acfbf2fe9fe855b600b9b450f10b4277f688fc44451187776901f87b9c6"
+    },
+    {
+      "path": "workers/habitat-runtime/src/quota-migration.ts",
+      "sha256": "b20850be0b61490e799193a9181a13446d1a3ec94e5b91db270e79d543a76606"
+    },
+    {
+      "path": "workers/habitat-runtime/src/quota.ts",
+      "sha256": "d53138b030a005c53bbb7f43b7c97b97e49ac677ab5f920a24c875e5dfac0063"
+    },
+    {
+      "path": "workers/habitat-runtime/src/recovery.ts",
+      "sha256": "578d8f84226013ff18d48192633be0c14fcd96af2852c90eb434ad289cdcda04"
+    },
+    {
+      "path": "workers/habitat-runtime/src/rejection-log.ts",
+      "sha256": "839b066c9753dec486677d7563e611eed80f96ee947254aefe1010e2e3190437"
+    },
+    {
+      "path": "workers/habitat-runtime/src/retry-feedback.ts",
+      "sha256": "95bcf7351448b7b317497b8486f07ea947148cc7416ccbcff8da0ce917d87a57"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-protocol.ts",
+      "sha256": "8ebb4d2bf47ab955f36b036b496361b83586ffe10221417f35736d4420adf08c"
+    },
+    {
+      "path": "workers/habitat-runtime/src/society-scheduler.ts",
+      "sha256": "11fc659e5d599f228a62c6a77f5eed71034678f5ec5ebb2053dfa3a9562360d1"
+    },
+    {
+      "path": "workers/habitat-runtime/src/structural-feedback.ts",
+      "sha256": "73fdca3dc1e1b890f82f7938491cebc033aa28019754b1d6ecf5acb051057e7a"
+    },
+    {
+      "path": "workers/habitat-runtime/test-hosting.mjs",
+      "sha256": "9af3ec11864e4cfa9f6a6028c58f777b42f6a3240f5f3a7613bc51315dd931d5"
+    },
+    {
+      "path": "workers/habitat-runtime/test/agency.test.ts",
+      "sha256": "9f0e59ecaa7128eebe642a6a64d32b3ae8fdb2b044d769fc438cc68acf79b228"
+    },
+    {
+      "path": "workers/habitat-runtime/test/archive-message.test.ts",
+      "sha256": "2e3c36ea4a69f81529852b7963f581bca3633ec79df9fde3c19cd455b8e12a3c"
+    },
+    {
+      "path": "workers/habitat-runtime/test/cognition-candidate-search.test.ts",
+      "sha256": "49f6419d56eb1fa55da048981248205a655ff7bfb981f240a64781cafe286b2a"
+    },
+    {
+      "path": "workers/habitat-runtime/test/cognition-pacing.test.ts",
+      "sha256": "c6406ff5dd7843a7b44c95e41b260c2c71c3b97929c09bdbe84d9af81f83724c"
+    },
+    {
+      "path": "workers/habitat-runtime/test/cognition-request-window.test.ts",
+      "sha256": "9e363de8c4fb09427030814a9a000a8d4c75bbb00ebcf7741240478b34516533"
+    },
+    {
+      "path": "workers/habitat-runtime/test/cognition-retention.test.ts",
+      "sha256": "deaf7ceeb4afca5b80b4b8960f6001a461d8d93a014a5411660be79de74a0810"
+    },
+    {
+      "path": "workers/habitat-runtime/test/contracts.test.ts",
+      "sha256": "a7ec414ae9f2dcd861af5a41529850cbe029b6975362dd0e8ee6de65010ac590"
+    },
+    {
+      "path": "workers/habitat-runtime/test/domain.test.ts",
+      "sha256": "cd058383b2e369904b9618f49f9bbe33b2a84bceead6fbcf5777c045b5d172f4"
+    },
+    {
+      "path": "workers/habitat-runtime/test/fixtures.ts",
+      "sha256": "9538687b25e5796a7c1e8924f1d8a2cf7c7d3ffae8113d95562971b637eb2d42"
+    },
+    {
+      "path": "workers/habitat-runtime/test/fixtures/groq-p6-tokenizer.json",
+      "sha256": "97500f87f7a6b431a3fc337db6c39cb20f55e590d0777490e6defe1d766e0807"
+    },
+    {
+      "path": "workers/habitat-runtime/test/fixtures/groq-tokenizer.json",
+      "sha256": "490de83fb7957cc3b29715d4d47f9618fff326faf5d94c5c29549dabece5b3be"
+    },
+    {
+      "path": "workers/habitat-runtime/test/free-model-routing.test.ts",
+      "sha256": "180d0a39df253a81f584d5ff65cacaa57626ccbd1375cb147001e49a78f8b9a5"
+    },
+    {
+      "path": "workers/habitat-runtime/test/free-model-scheduler.test.ts",
+      "sha256": "4adc87edc1ff479fca1a3a1c2a9931073e831eb1c3f9ebbac8e42b6538192896"
+    },
+    {
+      "path": "workers/habitat-runtime/test/groq-tokenizer.test.ts",
+      "sha256": "23ba8d0535c897a6b1ee8f6166ab2f4338031156f700378360d5f5980ca941ff"
+    },
+    {
+      "path": "workers/habitat-runtime/test/groq.test.ts",
+      "sha256": "7459df54a88d51ece36daf3965b24b82bd3fddfd8267184dbfce6f6dfbc2c558"
+    },
+    {
+      "path": "workers/habitat-runtime/test/http.test.ts",
+      "sha256": "74ed1c4b9418c401c17a86e1531ecd89e54dfe2fa95af8e6748be9f743a99e8d"
+    },
+    {
+      "path": "workers/habitat-runtime/test/integration.test.ts",
+      "sha256": "704f1b0b7c5e4f696f90a58abec7c1316ece2036317842cbdfbdd44babbf659c"
+    },
+    {
+      "path": "workers/habitat-runtime/test/legacy-fixture.ts",
+      "sha256": "e61cbfc8b634c35993d4d616e43c7fbdea5ac2751daac0ebf06eca6cf214f738"
+    },
+    {
+      "path": "workers/habitat-runtime/test/legacy-route-deadline.test.ts",
+      "sha256": "fd17081f2466df937f9256adc4337d7154da1a3f17ffa4c58945c53b8fbbf3ce"
+    },
+    {
+      "path": "workers/habitat-runtime/test/observer-load.test.ts",
+      "sha256": "cc49274410c7c61df204a144065b89acd0b47ba4fa9917e65a48f3818d724eb5"
+    },
+    {
+      "path": "workers/habitat-runtime/test/prompt-budget.test.ts",
+      "sha256": "605e363f2b1971de6bbf4c91895f1bc7fe4b10111a7c3d2764f7c0e5428cbb75"
+    },
+    {
+      "path": "workers/habitat-runtime/test/provider-diagnostics.test.ts",
+      "sha256": "cb10b2f77b13efc0030dd13d5a1aa4e2cf6cf2badb9aad07650ec027a1845c23"
+    },
+    {
+      "path": "workers/habitat-runtime/test/quota-models.test.ts",
+      "sha256": "12b9263544bdc05aebe51f5bd9b631b1c992ae6dc67455dae734b38a1dc413e3"
+    },
+    {
+      "path": "workers/habitat-runtime/test/quota.test.ts",
+      "sha256": "7358226210c40d51763eb5ef9ae5d77eca2f09cbeee6ebbe16d45f5716c25e72"
+    },
+    {
+      "path": "workers/habitat-runtime/test/records-runtime.test.ts",
+      "sha256": "a234e77c62dd835fc6d967ecf1fbb120cbe295d8b6541e13619ad657ec794f01"
+    },
+    {
+      "path": "workers/habitat-runtime/test/recovery.test.ts",
+      "sha256": "9089c3a09b444b64886551076c335a6c2a5feb2160c0f6f0fb7bb9250824cfa1"
+    },
+    {
+      "path": "workers/habitat-runtime/test/rejection-log.test.ts",
+      "sha256": "a5b7c1ab4f3fd0a628c20352abadb9a742e4a7717cdb9b5eb407f3d8c87069ff"
+    },
+    {
+      "path": "workers/habitat-runtime/test/retrieval-job-runtime.test.ts",
+      "sha256": "f51a934520faa22b66d791b5c4a45491428ff8483391aa2bcbd3eb87baa4bc46"
+    },
+    {
+      "path": "workers/habitat-runtime/test/retrieval-runtime.test.ts",
+      "sha256": "282fa12e8a9bb28c866b5c43c7949e42e53e8f0897803c390c0451ad8757c0cd"
+    },
+    {
+      "path": "workers/habitat-runtime/test/router.test.ts",
+      "sha256": "a93e98fda5765bdb6e92c4c2491b6a9616e7604de338e1467a514819cb6c0a88"
+    },
+    {
+      "path": "workers/habitat-runtime/test/service-boundaries.test.ts",
+      "sha256": "68012555caac95a46320fe295ec30901b1ce59a9318c975b2c1315500c7f0281"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-closing-review.test.ts",
+      "sha256": "c51fa8aaed8fb5791579ba947d1f8a411c838d8dbbabe6ca893b51f149235ed7"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-protocol.test.ts",
+      "sha256": "22a03c69e5ae0e1741d4a533e6c5be2f6faa0b64bd712665cbc6837b1b8fc742"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-record-protocol.test.ts",
+      "sha256": "f3aa8ea72a2d1e93acff67ec47e6893198f2bba888e1e442297dd099123c08d7"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-retrieval-protocol.test.ts",
+      "sha256": "2357e1f6dbdae85eb65ff1e38d8eff872ee717d6a3081332931713b49d1bf583"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-retry-pacing.test.ts",
+      "sha256": "7657d1a0e74b6c617c7bd7e41974ba8d899780a0cfaf94caf996889fe868a0b2"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-runtime.test.ts",
+      "sha256": "dbc2aef279b01d1dc8fd0545afb876b9683157af997245ace08f06cdd471eda8"
+    },
+    {
+      "path": "workers/habitat-runtime/test/society-schema.test.ts",
+      "sha256": "dd19a29f03a03987c79f7ddde3d3252c55fdd44de084eec37593097657ec3bdd"
+    },
+    {
+      "path": "workers/habitat-runtime/test/structural-feedback.test.ts",
+      "sha256": "3b4a1e013f7263bb464c864674b8cd5b1b32dde4122a3dca5b1704771771a9a3"
+    },
+    {
+      "path": "workers/habitat-runtime/test/structural-retry-feedback.test.ts",
+      "sha256": "ea8a3f3df0923af13a00a62a3a1fd33119d96433dfc3173f755fb5494c07c200"
+    },
+    {
+      "path": "workers/habitat-runtime/test/workers-ai.test.ts",
+      "sha256": "1c04256c27c655f34fdd88d6ebb378aa274d705b4a474b76ae0a7c34ecc3e719"
+    },
+    {
+      "path": "workers/habitat-runtime/tsconfig.json",
+      "sha256": "02802180356248acd73b33b39f9ebb74e79896856534329fb4e88b69d3e14266"
+    },
+    {
+      "path": "workers/habitat-runtime/vitest.config.ts",
+      "sha256": "7d30f6994a19f3fcebc31c5c301baa78e94956c3e1ddc5743c56a048ef608684"
+    },
+    {
+      "path": "workers/habitat-runtime/wrangler.jsonc",
+      "sha256": "201989c6ab6c4a0aee94a536d18aeacf0ca9290a19effef6de08979caf51dea7"
+    }
+  ]
+}

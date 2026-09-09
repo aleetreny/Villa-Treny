@@ -1,0 +1,138 @@
+{
+  "format": "villa-u80-natural-retry-v1",
+  "auditedAt": "2026-09-08T20:23:20.255Z",
+  "scope": "Exact offline replay of one already-completed natural retry. No network, model call, forecast or runtime mutation.",
+  "before": {
+    "revision": 195,
+    "schemaVersion": 9,
+    "backupSha256": "1ebb71d66fe05a7a2849097fbc3d363fd17bba863f1452a0016f4617cfb29065"
+  },
+  "observation": {
+    "revision": 197,
+    "schemaVersion": 10,
+    "exportedAtMs": 1788898765656,
+    "backupSha256": "d167d397f9faa3dc744b31832e354e17e64c9f8c4f873b7292d3f7814e77c521"
+  },
+  "job": {
+    "id": "habitat-canonical:mind:U:16:80:g:3",
+    "actor": "U",
+    "sequence": 80,
+    "protocol": 6,
+    "routingPolicy": null,
+    "retainedLegacyRoute": true,
+    "status": "applied",
+    "appliedAtMs": 1788898717743,
+    "appliedAtUTC": "2026-09-08T20:18:37.743Z"
+  },
+  "prompt": {
+    "originalHashes": {
+      "system": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+      "user": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75",
+      "prepared": "c28f0aad22c3d9f2ceec4e6b2cc9921750d002f194a55084bba351ba56835f75"
+    },
+    "terminalCompactionHashesMatch": true,
+    "actualRetrySystemSha256": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+    "actualRetryUserSha256": "a1157ca095246fbf64e047358bd34d4210fb1a6e44f012ab9e5738abe0c62644",
+    "refusalFeedbackMatchesExactly": true,
+    "newReferenceShapeClarificationPresent": false,
+    "newClarificationCausedThisSuccess": false,
+    "schemaSha256": "0e67029541cafdb1870aab117b1191d2c4f8be07fef0d9b4e1e4c56dba069afe",
+    "originalSchemaAcceptsOutput": true
+  },
+  "provider": {
+    "provider": "workers-ai",
+    "model": "@cf/openai/gpt-oss-120b",
+    "attemptId": "habitat-canonical:mind:U:16:80:g:3:workers-ai:2",
+    "latencyMs": 10774,
+    "usageConfirmed": true,
+    "usage": {
+      "inputTokens": 2666,
+      "outputTokens": 449,
+      "neurons": 116
+    },
+    "reservedMaximum": {
+      "inputTokens": 17800,
+      "outputTokens": 1024,
+      "neurons": 637
+    },
+    "newModelCallsInObservedInterval": 1,
+    "groq120BCallsInObservedInterval": 0
+  },
+  "effects": {
+    "operation": "draft",
+    "audience": "private",
+    "draft": {
+      "id": "record:draft:3",
+      "author": "U",
+      "titleAndTextBytes": 145,
+      "contentHashVerified": true,
+      "exactOutputFieldsPreserved": true,
+      "readers": [
+        "U"
+      ]
+    },
+    "refsAreStrings": true,
+    "records": {
+      "drafts": 4,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    },
+    "published": 0,
+    "shared": 0,
+    "scheduled": 0,
+    "newPublicMessages": 0,
+    "commissions": 0,
+    "commissionPayments": 0,
+    "economyUnchanged": true,
+    "economicEventsUnchanged": true,
+    "money": {
+      "total": 872.7893824361378,
+      "expected": 872.7893824361379,
+      "error": -1.1368683772161603e-13,
+      "conserved": true
+    },
+    "publicRecordProjectionEmpty": true
+  },
+  "replay": {
+    "savedPreparedTurnUsed": true,
+    "actualRetryPromptHashVerified": true,
+    "domainApplied": true,
+    "duplicateNoOp": true,
+    "exactFinalWorldBytes": true,
+    "exactFinalSocietyBytes": true,
+    "newPhysicalWatches": 0,
+    "newJobs": 0
+  },
+  "source": {
+    "analyzerManifestSha256": "dc17f41bfc66e3e298e6ff6480175d9b40f40c0872ed69439252d081c0e1bbf7",
+    "additionalFiles": [
+      {
+        "path": "/workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "35d59e4c6cbf8a5c6bb32497fa610fd5503f233510ef5ed5a5d2442841fbe3a9"
+      },
+      {
+        "path": "/src/lib/habitat/society/records.ts",
+        "sha256": "6ca3fdb9677cff3500de9d6e214c3472d8495f792d0b351aeb898848d4931161"
+      },
+      {
+        "path": "/src/lib/habitat/society/record-schema.ts",
+        "sha256": "2849742cdedf817ddfeef342fe4fef9e3699a36a59b66e26632b78b4a061cedd"
+      },
+      {
+        "path": "/src/lib/habitat/society/record-instructions.ts",
+        "sha256": "8bf88540d85151ef8b94bbd06315f67160207c4b0b2ae82ee78bbc308ce68896"
+      }
+    ],
+    "scriptSha256": "ce61415e51937b4437077bb3e059fa2bf9bcbd6a5db5750af5cc31eed5ff852c"
+  },
+  "limits": [
+    "This successful private writing is not publication, endorsement, a tracked paper/ink transfer or a paid commission.",
+    "The retry included the existing generic refusal feedback and ran on a different provider; this is not an identical-input A/B experiment.",
+    "The new reference-shape clarification was absent from the actual saved SYSTEM; success cannot be attributed to it.",
+    "Although SQL10 had been deployed, this saved job had no routing marker and used its historical CF→Groq20B route. It provides no observed Groq120B result.",
+    "Private draft text, full inputs and response remain only beside the private recovery backup."
+  ]
+}

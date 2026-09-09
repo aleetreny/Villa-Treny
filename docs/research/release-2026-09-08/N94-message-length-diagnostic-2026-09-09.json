@@ -1,0 +1,143 @@
+{
+  "format": "villa-n94-message-length-diagnostic-v1",
+  "auditedAt": "2026-09-08T22:28:39.430Z",
+  "status": "verified_offline",
+  "release": "5443a27b-ca4f-4b69-9d77-3017977ed969",
+  "backup": {
+    "sha256": "c78a9e789b6bdecb2c719f8f9c388fdc0ca84996506143ebd8dd9653fe3c62c2",
+    "revision": 227,
+    "fullRecoveryVerified": true,
+    "originalBytesUnchanged": true
+  },
+  "jobId": "habitat-canonical:mind:N:13:94:g:3",
+  "attemptId": "habitat-canonical:mind:N:13:94:g:3:groq:openai%2Fgpt-oss-20b:1",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "recordedAtMs": 1788904655612,
+  "capture": {
+    "source": "groq_http_json",
+    "selectedField": "choices[0].message.content",
+    "selectedType": "string",
+    "httpStatus": 200,
+    "finishReason": "stop",
+    "captureFailed": false,
+    "candidateBytes": 801,
+    "candidateComplete": true,
+    "candidateSha256": "e42360a114010986b1976c6e496a76ce01cb4414aeef5d3f270c9e0437fee317",
+    "candidateFullSha256": "e42360a114010986b1976c6e496a76ce01cb4414aeef5d3f270c9e0437fee317",
+    "candidateHashVerified": true
+  },
+  "contract": {
+    "name": "society_turn",
+    "version": 6,
+    "schemaBytes": 11136,
+    "schemaSha256": "df468d4cb2f0fa2fa523c85be96b70991e71ee133257ed291e3b74a035bfea9b",
+    "schemaComplete": true,
+    "retainedSchemaHashVerified": true,
+    "retainedEnvelopeSchemaByteIdentical": true,
+    "regeneratedSchemaByteIdentical": true,
+    "groqStrict": false,
+    "strictEvidence": "Released groq.ts sets strict to outputContract.name !== society_turn; no original HTTP envelope is retained."
+  },
+  "parse": {
+    "actualParser": "parseStructuredPayload",
+    "ok": true,
+    "sameParsedValueAsJsonParse": true,
+    "topLevelKeys": [
+      "message"
+    ],
+    "recordOperationPresent": false,
+    "dealPresent": false
+  },
+  "failure": {
+    "storedCode": "invalid_society:invalid_record_choice",
+    "diagnosticStage": "schema",
+    "diagnosticPhase": "schema_or_decode",
+    "decoder": {
+      "ok": false,
+      "code": "invalid_record_choice"
+    },
+    "suppliedSchemaAccepts": false,
+    "uniqueViolations": [
+      {
+        "path": [
+          "message",
+          "text"
+        ],
+        "code": "too_big",
+        "maximum": 300,
+        "actualUnicodeScalars": 695,
+        "actualUtf16Units": 695,
+        "actualUtf8Bytes": 753
+      }
+    ],
+    "emittedZodIssues": 2,
+    "zodVersion": "4.4.3",
+    "explanation": "The original candidate violates the explicit message.text maxLength300 in the issued schema. The P6 decoder returns its generic invalid_record_choice at the schema gate, before any document or other domain operation. Two Zod issues repeat the same path/bound through combined schema branches; they are one underlying violation."
+  },
+  "usage": [
+    {
+      "reservationId": "habitat-canonical:mind:N:13:94:g:3:groq:openai%2Fgpt-oss-20b:1",
+      "actualRequests": 1,
+      "inputTokens": 5893,
+      "outputTokens": 269,
+      "totalTokens": 6162,
+      "maxInputTokens": 5925,
+      "maxOutputTokens": 1024,
+      "settledAtMs": 1788904655612
+    }
+  ],
+  "retryFeedback": {
+    "atMs": 1788905533964,
+    "attempt": 2,
+    "storedReason": "invalid_society:invalid_record_choice",
+    "systemHash": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+    "userHash": "db39ef6e2453a67dd317f907add5372921ea84a32bda9fd2ce32cf1f8f35533f",
+    "exactGenericSuffixBytes": 117,
+    "reconstructedSystemHashMatches": true,
+    "reconstructedUserHashMatches": true,
+    "containsSpecificErrorPath": false,
+    "containsMaximum": false,
+    "actualNextProviderCallStarted": false,
+    "limitation": "The stored retry event authenticates the generic feedback preparation. The later route_time_budget guard prevented its dispatch; this is not evidence of the model seeing or ignoring that feedback."
+  },
+  "separation": "The first quota-charged request returned an overlong message. The later scheduler preclaim/window defect is a different cause and its time-window correction cannot fix long model generations.",
+  "futureDiagnosticImprovement": {
+    "implemented": false,
+    "proposal": "Preserve a bounded structural error with field path, code and applicable size bound for diagnostic/retry context. Deduplicate repeated paths, allowlist structural fields, exclude candidate prose and private enum values. Keep strict rejection, recorded usage and original candidate bytes; do not change output or trigger a new retry just for diagnosis."
+  },
+  "sourceChecks": [
+    {
+      "path": "src/lib/habitat/society/record-choice.ts",
+      "sha256": "4299a9a8964f9f2103f3c71b90eb4720947b0d3aad99116437f67bfb4f8d7d34",
+      "matchesRelease": true
+    },
+    {
+      "path": "src/lib/habitat/society/schema.ts",
+      "sha256": "1fefa33d3f20e7e4f366139e7bcbc817eb24d4dfa3dbac2608eb98e7177ccb67",
+      "matchesRelease": true
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/groq.ts",
+      "sha256": "9e54a7af1b14402435924fa13903c4c99a8d717c8542f54d467f29277224efe5",
+      "matchesRelease": true
+    },
+    {
+      "path": "workers/habitat-runtime/src/providers/shared.ts",
+      "sha256": "6306da59c7870562263e6a4f3e9a6ab003685945b52fa029eb4d724d5aa8f30c",
+      "matchesRelease": true
+    }
+  ],
+  "verification": {
+    "stateWorldUnchanged": true,
+    "networkAttempts": 0,
+    "inferences": 0,
+    "modifiedCandidate": false,
+    "appliedAlteredCandidate": false
+  },
+  "limitations": [
+    "Complete capture refers to selected message.content, not a saved HTTP wire envelope or independently verified complete generation.",
+    "This request used best-effort strict:false. The result violates its supplied schema, not a claimed strict structured-decoding guarantee.",
+    "No private model prose, prompt or schema values are included in this public receipt. No semantic assessment of the rejected private message is made."
+  ]
+}

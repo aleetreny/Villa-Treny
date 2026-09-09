@@ -1,0 +1,21 @@
+{
+  "verifiedAt": "2026-09-08T12:00:03.178Z",
+  "binding": "d4fe2e905270eaf8358401d825c5e95f9a8a2223b843309123dcbdc3255c37d2",
+  "httpRequests": 0,
+  "sourceBindingVerified": true,
+  "exactJobReconstruction": true,
+  "rawReceiptsVerified": true,
+  "inMemoryApplicationReplayed": true,
+  "sourceStateUnchanged": true,
+  "ledgerUnchanged": true,
+  "rows": [
+    {
+      "actor": "B",
+      "validation": "applied"
+    },
+    {
+      "actor": "C",
+      "validation": "applied"
+    }
+  ]
+}

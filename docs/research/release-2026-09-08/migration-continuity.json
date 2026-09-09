@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-09-08T13:12:30.350Z",
+  "version": "5b972ccd-1b3b-4024-9165-7266ac2a2f2e",
+  "preExport": "dd27fe1c3d8b60e4960ddd3aec3166819eb04e78442e5d7b3726435d423e15c7",
+  "postExport": "58d8969516552718b565b7ff1a5926120ebf52603c1d626d330db4f406d1bafe",
+  "worldBytesIdentical": true,
+  "worldRevision": 30,
+  "day": 107,
+  "watch": 3,
+  "controlRevision": 3,
+  "nextWatchAtMs": 1788894484141,
+  "preserved": {
+    "watch_runs": 30,
+    "cognition_jobs": 30,
+    "provider_attempts": 45,
+    "happenings": 199,
+    "happening_people": 321,
+    "economic_events": 37,
+    "world_checkpoints": 2,
+    "world_layout_backups": 3,
+    "quota_reservations": 49,
+    "provider_usage_daily": 14,
+    "admin_commands": 8
+  },
+  "oldRuntimeFieldsIdentical": true
+}

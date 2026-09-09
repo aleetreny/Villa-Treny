@@ -1,0 +1,180 @@
+{
+  "policy": {
+    "version": 1,
+    "protocol": 6,
+    "sourceRevision": 199,
+    "pairs": [
+      "BK",
+      "CN",
+      "IO",
+      "GQ"
+    ],
+    "order": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ]
+    ],
+    "maxCalls": 8,
+    "maxOutputTokens": 1024,
+    "maxPromptBytes": 32000,
+    "timeoutMs": 120000,
+    "concurrency": 1,
+    "thinking": false,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+    "continuations": 0,
+    "physicalWatches": 0,
+    "variable": "SYSTEM only: exact 7a reference guidance versus progress guidance",
+    "byteAccounting": "32,000 UTF-8 bytes of the complete serialized local request, including sampling and model fields. The historic shared receiver remains at 24,576 messages-plus-schema bytes.",
+    "common": "Current pure core, one prepared USER/schema/seed per pair, isolated clone per response. No historic output is planted."
+  },
+  "model": "Qwen3.6-35B-A3B-4bit",
+  "backupSha256": "82cdd88b6e4acfbb083289cfad6e732974049d2680a5977505b0b327bef138d7",
+  "sourceManifestSha256": "24d936798e18de60a024ceeaf84ff7c68d3fd9f30a4b09f02357f4536f440ed6",
+  "worldRevision": 199,
+  "epochMs": 1788898916648,
+  "cases": [
+    {
+      "pair": "BK",
+      "conversationId": "conversation:7",
+      "nextSpeaker": "B",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-progress-system-v1:mind:B:17:82:g:3:progress:A",
+          "variant": "A",
+          "jobHash": "8daba38c631f0b9159d7f26b2a3c6df522cea40bda1436235f4bca23a10c145b",
+          "systemHash": "140e7aa80aed56c7bfb327139753e36ef741873e9b5729a6adfe52022cee9a49",
+          "userHash": "16c0b977bb8e1e0f48b08147350e3469cc7772991a73d5771aecd4e85478774b",
+          "schemaHash": "297970ea9ce6dc5fcc95e359ad538af482ff8a59149ab753c74c5c7753cb8b9e",
+          "seed": 1594026586,
+          "promptBytes": 24762,
+          "historicPromptBytes": 24613,
+          "exceedsHistoricReceiver": true
+        },
+        {
+          "id": "isolated-progress-system-v1:mind:B:17:82:g:3:progress:B",
+          "variant": "B",
+          "jobHash": "1cdc94144fda1e46252a492fff06f0b5b7dadbe637691651bd0ee649b21d3dcc",
+          "systemHash": "26961cf2c1f9f12ff652d94f78efdeff3baafec5cb7779c54642438204758c8d",
+          "userHash": "16c0b977bb8e1e0f48b08147350e3469cc7772991a73d5771aecd4e85478774b",
+          "schemaHash": "297970ea9ce6dc5fcc95e359ad538af482ff8a59149ab753c74c5c7753cb8b9e",
+          "seed": 1594026586,
+          "promptBytes": 25699,
+          "historicPromptBytes": 25550,
+          "exceedsHistoricReceiver": true
+        }
+      ]
+    },
+    {
+      "pair": "CN",
+      "conversationId": "conversation:17",
+      "nextSpeaker": "N",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-progress-system-v1:mind:N:13:83:g:3:progress:B",
+          "variant": "B",
+          "jobHash": "a1b95ae73e8a4dbfc774b71aa7ddff149934f5553550311bf8227f6b5ae91c4a",
+          "systemHash": "26961cf2c1f9f12ff652d94f78efdeff3baafec5cb7779c54642438204758c8d",
+          "userHash": "ce6f6399ada27ad66c06f36f37fce1fe9dc40cc2d58b0fec5871cdd51a4d66a0",
+          "schemaHash": "afbfb75ae7d9ac39160bcc186692e235b14d8d9c25bac5d3e19f3215512dfe71",
+          "seed": 2597442013,
+          "promptBytes": 24345,
+          "historicPromptBytes": 24196,
+          "exceedsHistoricReceiver": false
+        },
+        {
+          "id": "isolated-progress-system-v1:mind:N:13:83:g:3:progress:A",
+          "variant": "A",
+          "jobHash": "f86be1a0c9011c2ca80f99e80243e07e96116bcbda0a6d32a092411bbb9e1ce5",
+          "systemHash": "140e7aa80aed56c7bfb327139753e36ef741873e9b5729a6adfe52022cee9a49",
+          "userHash": "ce6f6399ada27ad66c06f36f37fce1fe9dc40cc2d58b0fec5871cdd51a4d66a0",
+          "schemaHash": "afbfb75ae7d9ac39160bcc186692e235b14d8d9c25bac5d3e19f3215512dfe71",
+          "seed": 2597442013,
+          "promptBytes": 23408,
+          "historicPromptBytes": 23259,
+          "exceedsHistoricReceiver": false
+        }
+      ]
+    },
+    {
+      "pair": "IO",
+      "conversationId": "conversation:71",
+      "nextSpeaker": "I",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-progress-system-v1:mind:I:15:84:g:3:progress:A",
+          "variant": "A",
+          "jobHash": "657aed1b9f64c2e0a57256a3c6ed8e1d6fa04e7cf1e3b7586a68e7e05a4dab5c",
+          "systemHash": "140e7aa80aed56c7bfb327139753e36ef741873e9b5729a6adfe52022cee9a49",
+          "userHash": "c74701244fa6bd45718a991acc3653b33ad5c691ad37f2e28933df66684b1752",
+          "schemaHash": "b8f7a87c492ecbefec7f551cbc51fdc57161d312650354147444e0827679323b",
+          "seed": 2622851339,
+          "promptBytes": 23317,
+          "historicPromptBytes": 23168,
+          "exceedsHistoricReceiver": false
+        },
+        {
+          "id": "isolated-progress-system-v1:mind:I:15:84:g:3:progress:B",
+          "variant": "B",
+          "jobHash": "a385358d9c0ed6013ae966ecd88392971152ece1ec74bde02660e7d53be13c16",
+          "systemHash": "26961cf2c1f9f12ff652d94f78efdeff3baafec5cb7779c54642438204758c8d",
+          "userHash": "c74701244fa6bd45718a991acc3653b33ad5c691ad37f2e28933df66684b1752",
+          "schemaHash": "b8f7a87c492ecbefec7f551cbc51fdc57161d312650354147444e0827679323b",
+          "seed": 2622851339,
+          "promptBytes": 24254,
+          "historicPromptBytes": 24105,
+          "exceedsHistoricReceiver": false
+        }
+      ]
+    },
+    {
+      "pair": "GQ",
+      "conversationId": "conversation:59",
+      "nextSpeaker": "G",
+      "beforeHash": "574a1303c945b633a4c55835fa474f89aeb37e6e67b1121f0c3c0ddd9ad7a4d7",
+      "jobs": [
+        {
+          "id": "isolated-progress-system-v1:mind:G:15:85:g:3:progress:B",
+          "variant": "B",
+          "jobHash": "dfa38718247ca353c83e65d5152043c4a7fe8e6d8774fd1b6b361393de5dbac1",
+          "systemHash": "26961cf2c1f9f12ff652d94f78efdeff3baafec5cb7779c54642438204758c8d",
+          "userHash": "c44b1d0a08f5da1d403ab0e382596a6a26736bbb592c3bab0533b42ddbfe8113",
+          "schemaHash": "26d4e76829ac08c50808c6a9e99ff8a0282e6d125fc911745d3bf97f9ed15a44",
+          "seed": 2642071726,
+          "promptBytes": 23903,
+          "historicPromptBytes": 23754,
+          "exceedsHistoricReceiver": false
+        },
+        {
+          "id": "isolated-progress-system-v1:mind:G:15:85:g:3:progress:A",
+          "variant": "A",
+          "jobHash": "ff18cdb2490ee1cc701984d120518ce4f46237240df8592e01cecf75bba712cd",
+          "systemHash": "140e7aa80aed56c7bfb327139753e36ef741873e9b5729a6adfe52022cee9a49",
+          "userHash": "c44b1d0a08f5da1d403ab0e382596a6a26736bbb592c3bab0533b42ddbfe8113",
+          "schemaHash": "26d4e76829ac08c50808c6a9e99ff8a0282e6d125fc911745d3bf97f9ed15a44",
+          "seed": 2642071726,
+          "promptBytes": 22966,
+          "historicPromptBytes": 22817,
+          "exceedsHistoricReceiver": false
+        }
+      ]
+    }
+  ],
+  "httpRequests": 0,
+  "privacy": "Full state, prompts, outputs, source bundle and ledger stay outside Git. Public speech comes only from the authoritative projection."
+}

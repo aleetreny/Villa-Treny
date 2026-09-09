@@ -1,0 +1,245 @@
+{
+  "scope": "Joint intervention: explicit system, mandatory initial purpose, strict schema, and configured thinking/output. Matched V4 contexts; no production mutation or physical watch. Not a factorial comparison or model ranking.",
+  "humanReview": "pending",
+  "binding": "42eed0f4c3aca4807ac703f8cb0cf2639e9e0a97b1c89ce2f0ff52b7af7c4a28",
+  "newCalls": 4,
+  "halted": null,
+  "attempts": 4,
+  "accountedNeurons": 157,
+  "maxNeurons": 300,
+  "baselines": [
+    {
+      "actor": "G",
+      "beforeHash": "60c2bf8e73d43120767c806444dda3729f48421ab4d80c7973a2ec6092b4c641",
+      "qwenOutput": {
+        "message": {
+          "text": "I'll inspect the hull integrity. Let me know if you need anything else.",
+          "to": "D"
+        },
+        "offer": {
+          "expiresInWatches": 1,
+          "terms": {
+            "cells": 0,
+            "dueWatch": 401,
+            "kind": "work",
+            "payer": "G",
+            "room": "workshops",
+            "units": 1,
+            "verb": "inspect",
+            "worker": "G"
+          }
+        }
+      },
+      "qwenApplication": {
+        "ok": false,
+        "code": "invalid_offer_parties",
+        "afterHash": "3876a05cda1b952ab34ef3a873049b5d8a380bfc2fb3d1b1d706cf786629d9f8",
+        "balanceChanges": []
+      }
+    },
+    {
+      "actor": "B",
+      "beforeHash": "de4b7f63e0b49d499a145a57014fb071d509dc840488faba73abdf34840d8b71",
+      "qwenOutput": {
+        "message": {
+          "text": "Let me check that for you.",
+          "to": "H"
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1"
+          ],
+          "text": "Let me check that for you."
+        }
+      },
+      "qwenApplication": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "776aece95f95e9ed284ad256af50f7f4751ac8c719a8ba54e539d9dbc7befb4c",
+        "balanceChanges": []
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "grounded-v1:gemma:isolated-society-runtime-v4:mind:G:1:6:g:0",
+      "actor": "G",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1226,
+        "completion_tokens": 193,
+        "total_tokens": 1419,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.40909194946289
+      },
+      "output": {
+        "message": {
+          "text": "You're late, Vashenko. The integrity reports won't write themselves. Are you ready to begin the walkthrough?",
+          "to": "D"
+        },
+        "offer": {
+          "expiresInWatches": 1,
+          "terms": {
+            "cells": 0,
+            "dueWatch": 400,
+            "kind": "work",
+            "payer": "D",
+            "room": "dock",
+            "units": 1,
+            "verb": "inspect",
+            "worker": "D"
+          }
+        },
+        "project": {
+          "goal": "Establish a definitive baseline for hull integrity through systematic inspection.",
+          "mode": "replace",
+          "steps": [
+            {
+              "verb": "inspect"
+            }
+          ],
+          "visibility": "public",
+          "why": "To ensure structural stability and maintain indispensability."
+        },
+        "reflection": {
+          "refs": [
+            "memory:19"
+          ],
+          "text": "Dima is looking for me to start the inspection. I will formalize this as a project to ensure no section is overlooked."
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "experimental_schema_violation",
+        "issues": [
+          {
+            "path": [
+              "offer",
+              "terms",
+              "dueWatch"
+            ],
+            "message": "Too small: expected number to be >=401"
+          }
+        ]
+      },
+      "error": null,
+      "accountedNeurons": 17,
+      "latencyMs": 3174
+    },
+    {
+      "id": "grounded-v1:glm:isolated-society-runtime-v4:mind:G:1:6:g:0",
+      "actor": "G",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1193,
+        "completion_tokens": 1536,
+        "total_tokens": 2729,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 62.471900000000005
+      },
+      "output": null,
+      "validation": {
+        "ok": false,
+        "code": "output_truncated"
+      },
+      "error": "output_truncated",
+      "accountedNeurons": 63,
+      "latencyMs": 16347
+    },
+    {
+      "id": "grounded-v1:gemma:isolated-society-runtime-v4:mind:B:0:1:g:0",
+      "actor": "B",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1053,
+        "completion_tokens": 167,
+        "total_tokens": 1220,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.127272605895996
+      },
+      "output": {
+        "project": {
+          "goal": "Establish a professional consultation process for inventory decisions.",
+          "mode": "replace",
+          "steps": [
+            {
+              "verb": "note"
+            }
+          ],
+          "visibility": "private",
+          "why": "I need to be consulted before inventory changes are finalized."
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1"
+          ],
+          "text": "Bex lacks a project and wants to be consulted. I have created a private project to establish a consultation process, starting with noting the current need."
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "ba29ad2ba2896c34bb5a9794f3a407125e4078a237d5de9fe4c758af71127124",
+        "project": {
+          "id": "project:4",
+          "goal": "Establish a professional consultation process for inventory decisions.",
+          "why": "I need to be consulted before inventory changes are finalized.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": [
+            {
+              "id": "step:5",
+              "intent": {
+                "actor": "B",
+                "verb": "note"
+              },
+              "at": null,
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [],
+        "offers": [],
+        "agreements": [],
+        "balanceChanges": []
+      },
+      "error": null,
+      "accountedNeurons": 15,
+      "latencyMs": 3711
+    },
+    {
+      "id": "grounded-v1:glm:isolated-society-runtime-v4:mind:B:0:1:g:0",
+      "actor": "B",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1026,
+        "completion_tokens": 1536,
+        "total_tokens": 2562,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 61.5534
+      },
+      "output": null,
+      "validation": {
+        "ok": false,
+        "code": "output_truncated"
+      },
+      "error": "output_truncated",
+      "accountedNeurons": 62,
+      "latencyMs": 26861
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "format": "villa-sql9-migration-continuity-v1",
+  "scope": "Two complete offline-verified cuts. Any intervening natural activity fails this comparison.",
+  "deploymentVerified": false,
+  "worldRevision": 175,
+  "physicalStateSha256": "adf583dceaf8f1546a025257161e9eae56c550d2d1fad2ca10d3ecf48ba15954",
+  "migration": {
+    "fromSql": 8,
+    "toSql": 9,
+    "appliedAtMs": 1788893248057,
+    "oldMigrationRowsUnchanged": true
+  },
+  "checks": {
+    "physicalWorldBytesIdentical": true,
+    "entireRuntimeRowIdentical": true,
+    "allOtherOldTableRowsIdentical": true,
+    "previousSocietyFieldsIdentical": true,
+    "originalSocietyBytesAndHashBackedUp": true,
+    "onlyEmptyRecordsAdded": true,
+    "threeNewTablesAsExpected": true,
+    "archiveCursorZero": true
+  },
+  "society": {
+    "fromCodec": 1,
+    "toCodec": 2,
+    "revision": 145,
+    "previousStateBytes": 73143,
+    "previousStateSha256": "7030c0611d33d180c1aa6f7afa9dda1b048af11405187708fe63de0005a84efe",
+    "upgradedStateBytes": 74914,
+    "upgradedStateSha256": "cebaab8fcdf672115bb1229ba03a48d79e1a95a367c6085f5874268164606b77",
+    "allowedChanges": [
+      "codec_version:1->2",
+      "state_json.version:1->2",
+      "empty state_json.records",
+      "updated_at_ms:migration timestamp",
+      "archived_record_next_id:0"
+    ]
+  },
+  "preservedTables": [
+    {
+      "table": "admin_commands",
+      "rows": 9,
+      "sha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5"
+    },
+    {
+      "table": "alarm_runs",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "cognition_contexts",
+      "rows": 71,
+      "sha256": "cd0470dbd67497934133cc2c4e2514ba1025b40bb03673aacb5e07d63b5cf9f1"
+    },
+    {
+      "table": "cognition_jobs",
+      "rows": 101,
+      "sha256": "16e0aecae31af10922fb2bd1f4f7b40a2a6e00ffec60923e6a588f0b1687405f"
+    },
+    {
+      "table": "economic_events",
+      "rows": 38,
+      "sha256": "bdc0d75161780fe3688fc85c8f85cbbff0a217b5a147e38d07d61f0a3e98e62b"
+    },
+    {
+      "table": "happening_people",
+      "rows": 461,
+      "sha256": "0017884b21571898c6d981da8e75af6a7e2c2078ea691a7747cdf5d43f66862d"
+    },
+    {
+      "table": "happenings",
+      "rows": 269,
+      "sha256": "a82d76e734af3ec805a86b9afa6d551ca347509d1a9b3cf208c409f0b0437f0d"
+    },
+    {
+      "table": "physical_runs",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "provider_attempts",
+      "rows": 120,
+      "sha256": "6c5e148d53e90f88abef1e4eb56e9fc404ca017e6c6711546b2d2086fd5ef080"
+    },
+    {
+      "table": "provider_breakers",
+      "rows": 2,
+      "sha256": "6226a47203807e83071bb6a5383223ed175304de689e2a031d4987074187b7c5"
+    },
+    {
+      "table": "provider_usage_daily",
+      "rows": 14,
+      "sha256": "12798db6d528d0edfc61ffb7af440f9ae20d9815a42e62525628a6e6d32c4aa8"
+    },
+    {
+      "table": "quota_reservations",
+      "rows": 124,
+      "sha256": "09e11656ee2d507be5d901f397593e825e92bc95621f18d69347f15030468d6a"
+    },
+    {
+      "table": "runtime_events",
+      "rows": 112,
+      "sha256": "0433d35d8dadd32fbf301d7bc7c006a752771403c7d129e84ae5bb6da41ea6d5"
+    },
+    {
+      "table": "runtime_meta",
+      "rows": 1,
+      "sha256": "b4b1106729f1ada2e2a4ed434ad9d0fb043b06e6af789d40c905b75ada82b53e"
+    },
+    {
+      "table": "society_events",
+      "rows": 71,
+      "sha256": "c00df93b74f499d32d1ca5cc622f7398dc12c569b41b91aa1b22c33cd6dc6893"
+    },
+    {
+      "table": "watch_runs",
+      "rows": 30,
+      "sha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf"
+    },
+    {
+      "table": "world_checkpoints",
+      "rows": 2,
+      "sha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a"
+    },
+    {
+      "table": "world_layout_backups",
+      "rows": 3,
+      "sha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57"
+    },
+    {
+      "table": "world_state",
+      "rows": 1,
+      "sha256": "c49de8dae24971cc9ab1e3bc4f5f63a2f1c825bfec49049295976c71fcc60f42"
+    }
+  ],
+  "newTables": {
+    "society_layout_backups": 1,
+    "authored_publications": 0,
+    "provider_rejections": 0
+  },
+  "boundary": "Worker name, class, binding and deployment identity require separate runtime-configuration evidence.",
+  "before": {
+    "backupDirectory": "20260908T184642240Z-pre-records-p6-release",
+    "backupSha256": "8f6bc80e02890480068159dd39bb50d01cbf306af938666daf25c1dbb9fd03c4",
+    "exportedAtMs": 1788893202696,
+    "pages": 21,
+    "coreExportSha256": "2e6b43ad1ad31561466920ca72f41f0f3c92d6c8ba1fb39130044a8a25a5613d"
+  },
+  "after": {
+    "backupDirectory": "20260908T184733300Z-post-records-p6-release",
+    "backupSha256": "0805dfeb345f194e4955f60f5bb34d84582065c803f45a5e275eac5143cd4351",
+    "exportedAtMs": 1788893253749,
+    "pages": 22,
+    "coreExportSha256": "595da9b22486a492e25ed41040a2cfe5e79796a3d5f0b90c478d3140ea042d46"
+  }
+}

@@ -1,0 +1,586 @@
+{
+  "scope": "Read-only exact output replay plus separate grammar membership diagnostics. Counterfactual removal/closure samples are never model decisions, never applied or substituted in the ledger.",
+  "ledgerSha256": "b3ed1456f4679076e11bebd78cef54a19d4abadd7aa8dbd979ab6e7f8352dde4",
+  "sourceSha256": "24d936798e18de60a024ceeaf84ff7c68d3fd9f30a4b09f02357f4536f440ed6",
+  "rows": [
+    {
+      "pair": "BK",
+      "variant": "A",
+      "actor": "B",
+      "applied": true,
+      "code": "applied",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "deal",
+        "appraisal"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 1,
+        "pendingStepsAfter": 1,
+        "retainedPendingSteps": 1
+      },
+      "record": null,
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:7",
+          "proposer": "B",
+          "counterpart": "K",
+          "terms": {
+            "kind": "transfer",
+            "from": "B",
+            "to": "K",
+            "cells": 1.5
+          },
+          "status": "open",
+          "expiresAtWatch": 433,
+          "replaces": null
+        }
+      ],
+      "operations": {
+        "drafts": 0,
+        "shares": 0,
+        "publications": 0,
+        "recordOffers": 0,
+        "recordAgreements": 0,
+        "offers": 1,
+        "agreements": 0,
+        "conversationsClosed": 0,
+        "economicEvents": 0
+      },
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 2908,
+        "completion_tokens": 147,
+        "total_tokens": 3055
+      },
+      "latencyMs": 16096
+    },
+    {
+      "pair": "BK",
+      "variant": "B",
+      "actor": "B",
+      "applied": true,
+      "code": "applied",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "deal",
+        "appraisal"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 1,
+        "pendingStepsAfter": 1,
+        "retainedPendingSteps": 1
+      },
+      "record": null,
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:7",
+          "proposer": "B",
+          "counterpart": "K",
+          "terms": {
+            "kind": "transfer",
+            "from": "B",
+            "to": "K",
+            "cells": 1.5
+          },
+          "status": "open",
+          "expiresAtWatch": 433,
+          "replaces": null
+        }
+      ],
+      "operations": {
+        "drafts": 0,
+        "shares": 0,
+        "publications": 0,
+        "recordOffers": 0,
+        "recordAgreements": 0,
+        "offers": 1,
+        "agreements": 0,
+        "conversationsClosed": 0,
+        "economicEvents": 0
+      },
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 3085,
+        "completion_tokens": 134,
+        "total_tokens": 3219
+      },
+      "latencyMs": 3429
+    },
+    {
+      "pair": "CN",
+      "variant": "B",
+      "actor": "N",
+      "applied": false,
+      "code": "record_content_too_large",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "record"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 5,
+        "pendingStepsAfter": 5,
+        "retainedPendingSteps": 5
+      },
+      "record": {
+        "kind": "draft",
+        "audience": "private",
+        "publish": false,
+        "titleBytes": 25,
+        "bodyBytes": 600,
+        "totalBytes": 625,
+        "titleCodePoints": 25,
+        "bodyCodePoints": 600,
+        "combinedByteLimit": 600
+      },
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [],
+      "operations": {},
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 2960,
+        "completion_tokens": 314,
+        "total_tokens": 3274
+      },
+      "latencyMs": 6179
+    },
+    {
+      "pair": "CN",
+      "variant": "A",
+      "actor": "N",
+      "applied": false,
+      "code": "record_content_too_large",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "record"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 5,
+        "pendingStepsAfter": 5,
+        "retainedPendingSteps": 5
+      },
+      "record": {
+        "kind": "draft",
+        "audience": "private",
+        "publish": false,
+        "titleBytes": 25,
+        "bodyBytes": 600,
+        "totalBytes": 625,
+        "titleCodePoints": 25,
+        "bodyCodePoints": 600,
+        "combinedByteLimit": 600
+      },
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [],
+      "operations": {},
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 2783,
+        "completion_tokens": 291,
+        "total_tokens": 3074
+      },
+      "latencyMs": 5796
+    },
+    {
+      "pair": "IO",
+      "variant": "A",
+      "actor": "I",
+      "applied": true,
+      "code": "applied",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "deal"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 0,
+        "pendingStepsAfter": 0,
+        "retainedPendingSteps": 0
+      },
+      "record": null,
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:71",
+          "proposer": "I",
+          "counterpart": "O",
+          "terms": {
+            "kind": "work",
+            "worker": "I",
+            "payer": "O",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 433
+          },
+          "status": "open",
+          "expiresAtWatch": 433,
+          "replaces": null
+        }
+      ],
+      "operations": {
+        "drafts": 0,
+        "shares": 0,
+        "publications": 0,
+        "recordOffers": 0,
+        "recordAgreements": 0,
+        "offers": 1,
+        "agreements": 0,
+        "conversationsClosed": 0,
+        "economicEvents": 0
+      },
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 2857,
+        "completion_tokens": 112,
+        "total_tokens": 2969
+      },
+      "latencyMs": 3011
+    },
+    {
+      "pair": "IO",
+      "variant": "B",
+      "actor": "I",
+      "applied": true,
+      "code": "applied",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "deal",
+        "appraisal"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 0,
+        "pendingStepsAfter": 0,
+        "retainedPendingSteps": 0
+      },
+      "record": null,
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:71",
+          "proposer": "I",
+          "counterpart": "O",
+          "terms": {
+            "kind": "work",
+            "worker": "I",
+            "payer": "O",
+            "cells": 0,
+            "verb": "grow",
+            "room": "garden",
+            "units": 1,
+            "dueWatch": 432
+          },
+          "status": "open",
+          "expiresAtWatch": 433,
+          "replaces": null
+        }
+      ],
+      "operations": {
+        "drafts": 0,
+        "shares": 0,
+        "publications": 0,
+        "recordOffers": 0,
+        "recordAgreements": 0,
+        "offers": 1,
+        "agreements": 0,
+        "conversationsClosed": 0,
+        "economicEvents": 0
+      },
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 3034,
+        "completion_tokens": 169,
+        "total_tokens": 3203
+      },
+      "latencyMs": 3624
+    },
+    {
+      "pair": "GQ",
+      "variant": "B",
+      "actor": "G",
+      "applied": true,
+      "code": "applied",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "deal"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 1,
+        "pendingStepsAfter": 1,
+        "retainedPendingSteps": 1
+      },
+      "record": null,
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:59",
+          "proposer": "G",
+          "counterpart": "Q",
+          "terms": {
+            "kind": "transfer",
+            "from": "Q",
+            "to": "G",
+            "cells": 2
+          },
+          "status": "open",
+          "expiresAtWatch": 433,
+          "replaces": null
+        }
+      ],
+      "operations": {
+        "drafts": 0,
+        "shares": 0,
+        "publications": 0,
+        "recordOffers": 0,
+        "recordAgreements": 0,
+        "offers": 1,
+        "agreements": 0,
+        "conversationsClosed": 0,
+        "economicEvents": 0
+      },
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 2850,
+        "completion_tokens": 76,
+        "total_tokens": 2926
+      },
+      "latencyMs": 2459
+    },
+    {
+      "pair": "GQ",
+      "variant": "A",
+      "actor": "G",
+      "applied": true,
+      "code": "applied",
+      "originalSchemaValid": true,
+      "rootRequired": [
+        "message"
+      ],
+      "submittedMessageClose": "omitted",
+      "submittedFields": [
+        "message",
+        "deal"
+      ],
+      "project": {
+        "operation": "omitted",
+        "projectChanged": false,
+        "pendingStepsBefore": 1,
+        "pendingStepsAfter": 1,
+        "retainedPendingSteps": 1
+      },
+      "record": null,
+      "recordCounts": {
+        "before": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        },
+        "after": {
+          "drafts": 4,
+          "shares": 0,
+          "intents": 0
+        }
+      },
+      "newPublicOffers": [
+        {
+          "id": "offer:411",
+          "conversationId": "conversation:59",
+          "proposer": "G",
+          "counterpart": "Q",
+          "terms": {
+            "kind": "transfer",
+            "from": "Q",
+            "to": "G",
+            "cells": 2
+          },
+          "status": "open",
+          "expiresAtWatch": 433,
+          "replaces": null
+        }
+      ],
+      "operations": {
+        "drafts": 0,
+        "shares": 0,
+        "publications": 0,
+        "recordOffers": 0,
+        "recordAgreements": 0,
+        "offers": 1,
+        "agreements": 0,
+        "conversationsClosed": 0,
+        "economicEvents": 0
+      },
+      "languageDiagnostics": {
+        "removingDealSchemaValid": true,
+        "removingDealAndClosingSchemaValid": true,
+        "removingRecordSchemaValid": true
+      },
+      "usage": {
+        "prompt_tokens": 2673,
+        "completion_tokens": 76,
+        "total_tokens": 2749
+      },
+      "latencyMs": 2296
+    }
+  ]
+}

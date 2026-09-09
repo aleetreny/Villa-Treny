@@ -1,0 +1,636 @@
+{
+  "format": "villa-observer419-natural-continuity-v1",
+  "auditedAt": "2026-09-08T21:38:51.977Z",
+  "status": "verified_with_natural_activity",
+  "deployment": "7dd380ef-5c98-4608-9be8-842d31599299",
+  "scope": "Exact offline reconciliation of all 26 canonical tables, every rowid and every column between complete revision216 and revision218 recovery cuts. One naturally scheduled E90 job explains the whole delta. No activity is filtered out.",
+  "strictIdentityComparison": {
+    "status": "failed_preserved",
+    "privateEvidenceSha256": "121389b4ad376db04a6ee56f393ad72eff4f71857b418faa051f55a55366fd46",
+    "failureWasCorrect": true,
+    "reason": "The world advanced by one natural cognition job between the captures. The old and new cuts are not identical.",
+    "failedChecks": [
+      {
+        "code": "same_world_publication_revision"
+      },
+      {
+        "code": "every_checkpoint_field_exact"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "runtime_meta"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "world_state"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "cognition_jobs"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "provider_attempts"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "happenings"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "happening_people"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "quota_reservations"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "provider_usage_daily"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "runtime_events"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "society_state"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "cognition_contexts"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "society_events"
+      },
+      {
+        "code": "all_rows_columns_and_rowids_exact",
+        "table": "provider_model_breakers"
+      },
+      {
+        "code": "all_clock_control_error_fields_exact"
+      },
+      {
+        "code": "world_state_json_and_metadata_exact"
+      },
+      {
+        "code": "society_records_and_metadata_exact"
+      },
+      {
+        "code": "saved_jobs_prompts_outputs_and_states_exact"
+      },
+      {
+        "code": "saved_prepared_contexts_exact"
+      },
+      {
+        "code": "all_reservations_and_actual_charges_exact"
+      },
+      {
+        "code": "all_provider_attempts_exact"
+      }
+    ]
+  },
+  "before": {
+    "revision": 216,
+    "exportedAtMs": 1788902693616,
+    "pages": 30,
+    "backupSha256": "2a0872eb669d09456bcacc60c89ab3a3052699e7adf740184ed38043a79bec2b",
+    "schemaVersion": 10
+  },
+  "after": {
+    "revision": 218,
+    "exportedAtMs": 1788902950375,
+    "pages": 30,
+    "backupSha256": "73129b31d52efee6307236e6576da9d5f81b8b78bac34526544285359ca35b08",
+    "schemaVersion": 10
+  },
+  "replay": {
+    "allTablesMatched": true,
+    "tables": 26,
+    "allColumnsAndRowidsMatched": true,
+    "noDeletedRows": true,
+    "canonicalRowsBefore": 1630,
+    "canonicalRowsAfter": 1639,
+    "sqlStatements": 334,
+    "wholeRevisionDeltaExplained": true,
+    "oldJobsContextsAttemptsAndReservationsUnchanged": true,
+    "worldStateJsonSha256": "128dcfcd593a017ae7cf99822754973a589267fa7f68ef78a41a5d9d89cd0085",
+    "societyStateJsonSha256": "d5073df1b31431a354d93bddfb4d7e6503d67a6d3889914dfe93bcb548d55802",
+    "worldJsonMatchesExactly": true,
+    "societyJsonMatchesExactly": true,
+    "actualAlarmSchedulerRouterLedgerParserDomainRetentionArchiveExecuted": true,
+    "duplicateDomainNoOp": true,
+    "duplicateSqlNoOp": true,
+    "tableProof": [
+      {
+        "table": "runtime_meta",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "ca59cd240c39b9812ed07cd01654218c52efeeadb7f00825c825c004c2873971",
+        "observedSha256": "9b1f7957b74fe40da4c50b8efd6b706c2744f44a1ef1d261b38cfcc3c6c26e78",
+        "replayedSha256": "9b1f7957b74fe40da4c50b8efd6b706c2744f44a1ef1d261b38cfcc3c6c26e78",
+        "changes": [
+          {
+            "row": 1,
+            "fields": [
+              "world_revision",
+              "alarm_generation",
+              "next_alarm_at_ms",
+              "next_cognition_at_ms"
+            ]
+          }
+        ],
+        "explanation": "One claim publication and one applied publication; next cognition is job-created time + 180000 ms; next alarm follows that deadline and alarm generation increments once. All other control and physical-clock fields unchanged."
+      },
+      {
+        "table": "world_state",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "efefc86ab788ba8d3aa3bce8836a4a0638054fa689538148a65197522b477210",
+        "observedSha256": "f470e61ed1afd3bd1f070dcb0153785d8c98df47a3fda4e0d799c7c99c1723b1",
+        "replayedSha256": "f470e61ed1afd3bd1f070dcb0153785d8c98df47a3fda4e0d799c7c99c1723b1",
+        "changes": [
+          {
+            "row": 1,
+            "fields": [
+              "world_revision",
+              "state_json",
+              "updated_at_ms"
+            ]
+          }
+        ],
+        "explanation": "Actual saved response replay plus legacy cognition coverage metadata. Exact state JSON and publication timestamp verified."
+      },
+      {
+        "table": "watch_runs",
+        "beforeRows": 30,
+        "afterRows": 30,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "observedSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "replayedSha256": "ef54c19be332626d1b20ebcba20250bb461b025f3d4cfec3dc532740a47c6acf",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "cognition_jobs",
+        "beforeRows": 119,
+        "afterRows": 120,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "0c99345a0760f9112eeadf171466ddced383fd5cb0804ef88ccb45563f3990b3",
+        "observedSha256": "dc763e48d3121e93f7eba866cd4651d5386d01c6c7641fee63795664bb9d4a94",
+        "replayedSha256": "dc763e48d3121e93f7eba866cd4651d5386d01c6c7641fee63795664bb9d4a94",
+        "changes": [
+          {
+            "row": 120,
+            "add": true
+          }
+        ],
+        "explanation": "One generated job, one claim, one resolved response, applied status and original-input hash compaction."
+      },
+      {
+        "table": "provider_attempts",
+        "beforeRows": 142,
+        "afterRows": 143,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "822eabdbbfa2de48958a42930c128f201033d870ef765715492078f335b6dfbe",
+        "observedSha256": "8540bbc11df342561aea9f7b509f28d221c4c1a42dcf6de0d54cf7237d60762f",
+        "replayedSha256": "8540bbc11df342561aea9f7b509f28d221c4c1a42dcf6de0d54cf7237d60762f",
+        "changes": [
+          {
+            "row": 143,
+            "add": true
+          }
+        ],
+        "explanation": "One successful Groq20B receipt, with the saved latency and completion time."
+      },
+      {
+        "table": "happenings",
+        "beforeRows": 287,
+        "afterRows": 288,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "5c2f3873d45924b1dc084875635442954874bcd1ff74ff6ebd20fb12287edf84",
+        "observedSha256": "eb1ef7888ec6d987f24b037c8305606f51723c92272d9f2cca40dde940041b6a",
+        "replayedSha256": "eb1ef7888ec6d987f24b037c8305606f51723c92272d9f2cca40dde940041b6a",
+        "changes": [
+          {
+            "row": 288,
+            "add": true
+          }
+        ],
+        "explanation": "One already public E→L message, archived by the actual runtime method at publication revision218."
+      },
+      {
+        "table": "happening_people",
+        "beforeRows": 488,
+        "afterRows": 490,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "dd930ff8a55056e2de3ec1ed2c72fccf4f9f0593f3b0725b56f2cf325a3a1cbc",
+        "observedSha256": "21b72f1d38d4152270afb8a05b1930d99fcfe13a8d34e191eeac5a693cd0f02f",
+        "replayedSha256": "21b72f1d38d4152270afb8a05b1930d99fcfe13a8d34e191eeac5a693cd0f02f",
+        "changes": [
+          {
+            "row": 489,
+            "add": true
+          },
+          {
+            "row": 490,
+            "add": true
+          }
+        ],
+        "explanation": "Two participant index rows for E and L, generated from the conversation participants."
+      },
+      {
+        "table": "economic_events",
+        "beforeRows": 55,
+        "afterRows": 55,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "observedSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "replayedSha256": "c52df80684045a4996fe680bee25235408ed5438749d7e55a8d1716215afeb99",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "world_checkpoints",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "observedSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "replayedSha256": "e9ab1b4551679df62f88b004338c99a3e2cf549c1bbdbe4777f02ef9d928542a",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "world_layout_backups",
+        "beforeRows": 3,
+        "afterRows": 3,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "observedSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "replayedSha256": "bff208e09a9ca433df994096df9b56ba1f0f8ec9f4836bf08edea7cafc74ec57",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "_sql_schema_migrations",
+        "beforeRows": 10,
+        "afterRows": 10,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "4543b60831f47801032215770a20395493615c7c49a585c2bbbf46f57d2e2b07",
+        "observedSha256": "4543b60831f47801032215770a20395493615c7c49a585c2bbbf46f57d2e2b07",
+        "replayedSha256": "4543b60831f47801032215770a20395493615c7c49a585c2bbbf46f57d2e2b07",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "quota_reservations",
+        "beforeRows": 146,
+        "afterRows": 147,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "413be6f27dd2ec705fd882e52e3313ceae6ac823331025d8bec78db254049e6b",
+        "observedSha256": "9399a08304043b4d16fc6a44ec2523b032d34fc5b6d01789dd72b9fe5930c5d8",
+        "replayedSha256": "9399a08304043b4d16fc6a44ec2523b032d34fc5b6d01789dd72b9fe5930c5d8",
+        "changes": [
+          {
+            "row": 147,
+            "add": true
+          }
+        ],
+        "explanation": "One actual maximum reservation before simulated I/O; settled to the saved authoritative usage. All historical reservations unchanged."
+      },
+      {
+        "table": "provider_usage_daily",
+        "beforeRows": 14,
+        "afterRows": 14,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "d6143c38d2d5fd90a6076ca96f2957248dd6ea86f8b1e1a5a47cc7d37c466aaf",
+        "observedSha256": "5727603e907446f135ab8a88daacfbd7a9eb2530bbaddd3457b8ddc70b36b16e",
+        "replayedSha256": "5727603e907446f135ab8a88daacfbd7a9eb2530bbaddd3457b8ddc70b36b16e",
+        "changes": [
+          {
+            "row": 14,
+            "fields": [
+              "requests",
+              "input_tokens",
+              "output_tokens",
+              "actual_requests",
+              "actual_input_tokens",
+              "actual_output_tokens"
+            ]
+          }
+        ],
+        "explanation": "Existing aggregate Groq day row adds 1 request, 5887 input tokens and 195 output tokens to both charged and actual totals; no other change."
+      },
+      {
+        "table": "provider_breakers",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "7d033273af15af1db097b9662b701b3c6cd140cfb0f9663300ce1d6e64a9c506",
+        "observedSha256": "7d033273af15af1db097b9662b701b3c6cd140cfb0f9663300ce1d6e64a9c506",
+        "replayedSha256": "7d033273af15af1db097b9662b701b3c6cd140cfb0f9663300ce1d6e64a9c506",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "alarm_runs",
+        "beforeRows": 0,
+        "afterRows": 0,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "observedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "replayedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "admin_commands",
+        "beforeRows": 9,
+        "afterRows": 9,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "observedSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "replayedSha256": "f1e894be9dd05b3ace802ea7566d7103452f27e128c3acc39704c46ebad4e2b5",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "runtime_events",
+        "beforeRows": 133,
+        "afterRows": 134,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "84d68d8a73cf0fbc2509d3a42a8b8db0223cd549c3ab182ec8989413672c1d36",
+        "observedSha256": "0d10e1051cffa856f52b2edf18ce8a381792a662585f4b6d1e18afef292cd0ea",
+        "replayedSha256": "0d10e1051cffa856f52b2edf18ce8a381792a662585f4b6d1e18afef292cd0ea",
+        "changes": [
+          {
+            "row": 134,
+            "add": true
+          }
+        ],
+        "explanation": "One society.turn.applied event for the same job, actor, provider and timestamp."
+      },
+      {
+        "table": "society_state",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "7f0d1321d07d6e0086f6b495eb605799ad2ff4368c6d8c0dcce41d433faae4f8",
+        "observedSha256": "12376e1280830932c850e23ee3526df94e54a9ac7ed698b31a0b558ceb733585",
+        "replayedSha256": "12376e1280830932c850e23ee3526df94e54a9ac7ed698b31a0b558ceb733585",
+        "changes": [
+          {
+            "row": 1,
+            "fields": [
+              "revision",
+              "state_json",
+              "updated_at_ms"
+            ]
+          }
+        ],
+        "explanation": "Actual mark-attempt and successful message effects. Exact JSON/revision/timestamp verified; records unchanged."
+      },
+      {
+        "table": "cognition_contexts",
+        "beforeRows": 89,
+        "afterRows": 90,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "58fc933a0bd829252add693f758d436e77711197697902e530609481cd2675cb",
+        "observedSha256": "181ced6846453719b1a721e32b9003f98a8aedd61f5d5546b5939edbe1e766a1",
+        "replayedSha256": "181ced6846453719b1a721e32b9003f98a8aedd61f5d5546b5939edbe1e766a1",
+        "changes": [
+          {
+            "row": 90,
+            "add": true
+          }
+        ],
+        "explanation": "One exact generated prepared context, retaining its original prompt hash after terminal compaction."
+      },
+      {
+        "table": "physical_runs",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "observedSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "replayedSha256": "ff7f9bc20c0ac4df11af23c250e625bc6384c75149bbd11fc82173cc2793ce26",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "society_events",
+        "beforeRows": 89,
+        "afterRows": 90,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "66154bdc986b5f8a27954f59d25947bc06b413222586f0aaab9390ea6c74c82f",
+        "observedSha256": "0e71693a158f7730a6c281ffdde6bb3a7ef4493a20311cfc73a58364ff33572e",
+        "replayedSha256": "0e71693a158f7730a6c281ffdde6bb3a7ef4493a20311cfc73a58364ff33572e",
+        "changes": [
+          {
+            "row": 90,
+            "add": true
+          }
+        ],
+        "explanation": "One exact public projection event for the applied message; no offers or agreements created."
+      },
+      {
+        "table": "society_layout_backups",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+        "observedSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+        "replayedSha256": "64a0591f13edf88b9dee04da4f0ce097391a372e38c833c0745984bb2b0ec35e",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "authored_publications",
+        "beforeRows": 0,
+        "afterRows": 0,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "observedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "replayedSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "provider_rejections",
+        "beforeRows": 4,
+        "afterRows": 4,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "f0b2db7c29c39a4429407bed5c929f80e7958e85da89d229ec2d9f3a634c51bd",
+        "observedSha256": "f0b2db7c29c39a4429407bed5c929f80e7958e85da89d229ec2d9f3a634c51bd",
+        "replayedSha256": "f0b2db7c29c39a4429407bed5c929f80e7958e85da89d229ec2d9f3a634c51bd",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "quota_model_migration",
+        "beforeRows": 1,
+        "afterRows": 1,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "observedSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "replayedSha256": "8be17c817ca328cff72f2e0ccd040cab13e0520202e34906d06cb92f472ad9fe",
+        "changes": [],
+        "explanation": "Every pre-existing value and rowid remains unchanged; no new or deleted rows."
+      },
+      {
+        "table": "provider_model_breakers",
+        "beforeRows": 2,
+        "afterRows": 2,
+        "allRowsColumnsRowidsExact": true,
+        "beforeSha256": "368bc92963b087367f5558c87f70affe1a1c9a5ee7405ff9dc6199fbc1910e1d",
+        "observedSha256": "6775c379a11feb39dd4a65bf0630cf23cdd6b7c25186e78b6373e68a7a0ad16d",
+        "replayedSha256": "6775c379a11feb39dd4a65bf0630cf23cdd6b7c25186e78b6373e68a7a0ad16d",
+        "changes": [
+          {
+            "row": 1,
+            "fields": [
+              "updated_at_ms"
+            ]
+          }
+        ],
+        "explanation": "Only Groq20B breaker updated_at_ms advances to the success receipt timestamp; its zero failure/open state is unchanged."
+      }
+    ]
+  },
+  "job": {
+    "id": "habitat-canonical:mind:E:11:90:g:3",
+    "actor": "E",
+    "sequence": 90,
+    "protocol": 6,
+    "routingPolicy": "free-models-v1",
+    "status": "applied",
+    "createdAtMs": 1788902816329,
+    "appliedAtMs": 1788902818885,
+    "createdAtRevision": 216,
+    "claimPublicationRevision": 217,
+    "appliedRevision": 218,
+    "inputs": {
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "userSha256": "2af4fe1dc519bcc1cbccd8ebfc0148b56561ff885a268aa2046e51e01080aa0e",
+      "preparedPromptSha256": "2af4fe1dc519bcc1cbccd8ebfc0148b56561ff885a268aa2046e51e01080aa0e",
+      "schemaSha256": "66c58ab4d201442cb26e702929562663ed156ac4d3cce9ae7c7cb903aaf82ea0",
+      "savedCompactionHashesMatchExactly": true,
+      "savedJobAndPreparedMetadataMatchExactly": true,
+      "currentMinimalGuide": true,
+      "draftTextMaxLength": 504,
+      "providerPayloadMatchesFullGeneratedInputs": true
+    },
+    "provider": {
+      "id": "groq",
+      "model": "openai/gpt-oss-20b",
+      "dispatches": 1,
+      "rejections": 0,
+      "latencyMs": 2556,
+      "usageConfirmed": true,
+      "maximum": {
+        "requests": 1,
+        "inputTokens": 5919,
+        "outputTokens": 1024,
+        "neurons": 0
+      },
+      "actual": {
+        "requests": 1,
+        "inputTokens": 5887,
+        "outputTokens": 195,
+        "neurons": 0
+      },
+      "reservedAndDispatchedAtMs": 1788902816329,
+      "settledAtMs": 1788902818885,
+      "actualLedgerGeneratedEveryQuotaRowExactly": true
+    },
+    "effects": {
+      "fields": [
+        "message"
+      ],
+      "message": {
+        "conversationId": "conversation:37",
+        "id": "turn:433",
+        "from": "E",
+        "to": "L",
+        "atMs": 1788902818885,
+        "text": "Could we also consider shifting one more material to the garden to balance the resources further?",
+        "textSha256": "a9e0fcf1345a829ad967ac85b434771a4616a96a4ac4283f51802e29ca44f955",
+        "archived": true
+      },
+      "closesConversation": false,
+      "recordOperation": null,
+      "offersCreated": 0,
+      "agreementsCreated": 0,
+      "payments": 0,
+      "physicalActions": 0
+    }
+  },
+  "preserved": {
+    "physicalRuns": true,
+    "economicEvents": true,
+    "worldCheckpoints": true,
+    "schemaMigrations": true,
+    "adminCommands": true,
+    "providerRejections": true,
+    "authoredPublications": true,
+    "records": true,
+    "recordCounts": {
+      "drafts": 5,
+      "shares": 0,
+      "intents": 0,
+      "offers": 0,
+      "agreements": 0,
+      "publications": 0
+    },
+    "controlRevision": 3,
+    "nextPhysicalWatchAtMs": 1788916084141,
+    "day": 107,
+    "watch": 4
+  },
+  "scheduling": {
+    "before": {
+      "alarmGeneration": 164,
+      "nextAlarmAtMs": 1788902816328,
+      "nextCognitionAtMs": 1788902816328
+    },
+    "after": {
+      "alarmGeneration": 165,
+      "nextAlarmAtMs": 1788902996329,
+      "nextCognitionAtMs": 1788902996329
+    },
+    "nextCognitionEqualsCreatedPlus180000": true,
+    "actualSetAlarmArgumentMatched": true
+  },
+  "source": {
+    "fileCount": 209,
+    "frozenBundleSha256": "c0a61f3bc43cfef56a5e35156bd33da463cd8025877f47e4b272ecb157cc5016",
+    "allFrozenFileHashesAndCurrentFilesMatchedBeforeAfter": true,
+    "replayScriptSha256": "a38ee2217573a7fb182082f5b7477e72f80ff113a70c5cbb782623c411891cdf",
+    "privateReplayEvidenceSha256": "89ab8fdefc877f8df38a747425997b1d806ba0bd82bda057bf186ba6d14eeabf"
+  },
+  "actions": {
+    "networkRequests": 0,
+    "modelInferences": 0,
+    "productionWrites": 0,
+    "manualRetries": 0,
+    "physicalWatchAdvances": 0,
+    "syntheticProviderReceiptInOfflineMemory": 1
+  },
+  "limitations": [
+    "The original strict identity comparison remains a failure. This is a separate deterministic reconciliation with natural activity, not a claim that both cuts were identical.",
+    "The offline adapter replaces Cloudflare hosting/storage with local SQLite and loads the same WASM tokenizer package. It does not independently inspect remote sqlite_master, indexes or hosting internals.",
+    "The successful provider raw HTTP envelope is not retained. The synthetic envelope contains the exact stored output and usage; remote raw bytes, server framing and latency are not independently reconstructed.",
+    "The replay clock is anchored to the recorded creation and receipt timestamps. The next alarm argument is reproduced, but future delivery by the Cloudflare alarm service is outside this check.",
+    "E90 only asks about moving a material. No transfer, physical action, payment, document operation or semantic improvement follows from the wording. This turn does not exercise the new draft limit or prove successful conversation closure."
+  ],
+  "privacy": {
+    "publicReceiptContainsNoPrivatePromptsReflectionsOrDrafts": true,
+    "quotedMessageAlreadyPublished": true,
+    "completeReplayEvidenceStoredOutsideRepository": true
+  }
+}

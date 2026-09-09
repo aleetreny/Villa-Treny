@@ -1,0 +1,205 @@
+{
+  "scope": "V6 B/C contexts with explicit self identity and offered recipient names prefixed to USER; original SYSTEM/schema/state, local Qwen only. No production or cloud calls, no physical watch, no sustained cognition claim.",
+  "humanReview": "pending",
+  "binding": "d4fe2e905270eaf8358401d825c5e95f9a8a2223b843309123dcbdc3255c37d2",
+  "newCalls": 2,
+  "halted": null,
+  "server": {
+    "pid": 14483,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions"
+  },
+  "memoryMeasurement": "ps RSS is sampled process residency, not a complete Metal/unified-memory footprint or a guaranteed peak. CPU percentage is ps recent CPU, not a benchmark.",
+  "rows": [
+    {
+      "actor": "B",
+      "state": "completed",
+      "httpStatus": 200,
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 1287,
+        "completion_tokens": 237,
+        "total_tokens": 1524,
+        "input_tokens": 1287,
+        "output_tokens": 237,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 5.89
+      },
+      "latencyMs": 5908,
+      "maxSampledRssKiB": 824368,
+      "maxSampledCpuPercent": 100.1,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "6baa7a925deff4f3b5b10743effd8baae3a908a91e6a1351a5dd99407c5063e6",
+        "project": {
+          "id": "project:6",
+          "goal": "Consult Cato Lindqvist about the Infirmary's cold bed situation.",
+          "why": "Cato is in the Infirmary and has a duty related to it; I want to be consulted about something once, and checking on the bed status seems like a valid, low-risk inquiry.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825602001,
+          "steps": [
+            {
+              "id": "step:7",
+              "intent": {
+                "actor": "B",
+                "verb": "go",
+                "room": "infirmary"
+              },
+              "at": null,
+              "status": "pending",
+              "evidenceId": null
+            },
+            {
+              "id": "step:8",
+              "intent": {
+                "actor": "B",
+                "verb": "work"
+              },
+              "at": "infirmary",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:9",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "revision": 1,
+            "nextSpeaker": "C",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:10",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're in the Infirmary. I was just wondering if you needed any help with that cold bed situation, or if there's anything specific you'd like me to check on? No problem at all, let me know!",
+                "atMs": 1788825602001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": []
+      },
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Consult Cato Lindqvist about the Infirmary's cold bed situation.",
+          "why": "Cato is in the Infirmary and has a duty related to it; I want to be consulted about something once, and checking on the bed status seems like a valid, low-risk inquiry.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "go",
+              "room": "infirmary"
+            },
+            {
+              "verb": "work",
+              "at": "infirmary"
+            }
+          ]
+        },
+        "message": {
+          "to": "C",
+          "text": "Hi Cato, it's Bex. I know you're in the Infirmary. I was just wondering if you needed any help with that cold bed situation, or if there's anything specific you'd like me to check on? No problem at all, let me know!"
+        }
+      },
+      "error": null
+    },
+    {
+      "actor": "C",
+      "state": "completed",
+      "httpStatus": 200,
+      "warning": null,
+      "usage": {
+        "prompt_tokens": 1331,
+        "completion_tokens": 153,
+        "total_tokens": 1484,
+        "input_tokens": 1331,
+        "output_tokens": 153,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_time": 2.59
+      },
+      "latencyMs": 2601,
+      "maxSampledRssKiB": 830384,
+      "maxSampledCpuPercent": 66.6,
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "74bcd876f2aca0e84c902acac5815f9b624e936b10eed4eb9c7cc682884d6b33",
+        "project": {
+          "id": "project:11",
+          "goal": "Draft the waking criteria document.",
+          "why": "I need the criteria for waking somebody to be written down before they are needed.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825603001,
+          "steps": [
+            {
+              "id": "step:12",
+              "intent": {
+                "actor": "C",
+                "verb": "work"
+              },
+              "at": "infirmary",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:13",
+            "participants": [
+              "C",
+              "N"
+            ],
+            "revision": 1,
+            "nextSpeaker": "N",
+            "status": "open",
+            "createdAtMs": 1788825603001,
+            "expiresAtMs": 1788912003001,
+            "turns": [
+              {
+                "id": "turn:14",
+                "index": 0,
+                "speaker": "C",
+                "text": "Noor. We need to establish the waking criteria. I am drafting them now. Sit with me and review the parameters. Precision is required.",
+                "atMs": 1788825603001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": []
+      },
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Draft the waking criteria document.",
+          "why": "I need the criteria for waking somebody to be written down before they are needed.",
+          "visibility": "private",
+          "steps": [
+            {
+              "verb": "work",
+              "at": "infirmary"
+            }
+          ]
+        },
+        "message": {
+          "to": "N",
+          "text": "Noor. We need to establish the waking criteria. I am drafting them now. Sit with me and review the parameters. Precision is required."
+        }
+      },
+      "error": null
+    }
+  ]
+}

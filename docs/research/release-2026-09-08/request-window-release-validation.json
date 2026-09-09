@@ -1,0 +1,77 @@
+{
+  "format": "villa-request-window-release-validation-v1",
+  "capturedAt": "2026-09-08T22:42:39.740Z",
+  "version": "f51806c8-c8a8-4586-8ea1-4e122c1d10e4",
+  "previousVersion": "5443a27b-ca4f-4b69-9d77-3017977ed969",
+  "scope": "Require55s remaining context at a new claim and a usable future retry opportunity. Retire pending/deferred contexts without another attempt, release only their global wait and preserve other queued contexts. Slow expired fresh preparations retain a3min cadence floor and any later legitimate deadline. Existing resolved/running outcome handling and provider charges remain authoritative.",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "appTests": 981,
+    "workerTests": 323,
+    "nodeTests": 62,
+    "newWindowRegressions": 16,
+    "independentReview": true,
+    "hostingTests": 6,
+    "hostingExternalCalls": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "rooms": 46,
+    "dryDeploy": true,
+    "sourceFiles": 215,
+    "strictContinuity": 475
+  },
+  "browser": {
+    "previousAutomatedTests": 21,
+    "previousRelease": "5443a27b-ca4f-4b69-9d77-3017977ed969",
+    "rerun": false,
+    "reason": "Only2Worker sources and1newWorker test differ from the frozen prior release; observer sources and the build's content-hashed JavaScript/CSS asset names are unchanged.",
+    "nativeTab": 19,
+    "reloadedAfterRelease": true,
+    "worldBadge": "World running",
+    "cognitionBadge": "Thoughts active",
+    "connected": true,
+    "commonIntegerScale": 4,
+    "journalClaimLabelVisible": true,
+    "leftOpen": "The Common / Journal",
+    "delivered": true
+  },
+  "logEvidence": {
+    "check": {
+      "sha256": "09fadc7aef3e564af387a557a88b8771aa153456a28b805b3ece0e209692ebc3",
+      "bytes": 10283
+    },
+    "build": {
+      "sha256": "9a2e8c4a1141ea99435df76219fdc3ef10583c208590046e2030a54a2889cbb9",
+      "bytes": 876
+    },
+    "dry": {
+      "sha256": "813b323693eefcb50a6dff068518c9469dd80e4e0f1723355818c55ecbaf46a8",
+      "bytes": 1854
+    },
+    "hosting": {
+      "sha256": "666f27aa7df2446b094f402ae8f4209d2cf37778e5ce8434fb363b7387f4c785",
+      "bytes": 792
+    },
+    "deploy": {
+      "sha256": "06e1876329773d4c2fd495c81ef7b223ca282dfc5bd8318ad0f7c00b9ddcaff6",
+      "bytes": 2194
+    }
+  },
+  "sourceManifest": "request-window-v2-source-manifest.json",
+  "sourceBundleSha256": "2e5a8a6a5172d6e575f5d5203082bd0cce2989e982520755b8908a88e4be8f0c",
+  "continuity": "request-window-release-continuity.json",
+  "liveStatus": "request-window-live-status.json",
+  "diagnosis": "n94-expiring-retry-receipt.json",
+  "separateModelFailure": "N94-message-length-diagnostic-2026-09-09.json",
+  "review": "../expired-cognition-review-2026-09-09.md",
+  "limitations": [
+    "A later delay after a valid claim may still prevent dispatch. The router guard remains authoritative; legitimate attempt history is not erased.",
+    "This patch does not correct overlong model messages or improve generic validation feedback.",
+    "Historical N94 attempt/backoff and its actual paid-in-quota request remain preserved; no corrective world rewrite was performed.",
+    "The evidence-layout experiment remains mixed and unselected. Useful autonomous authored-work chains remain unproven.",
+    "The main JavaScript bundle still emits a size warning."
+  ],
+  "newResearchInferenceCalls": 0,
+  "commitOrPush": false
+}

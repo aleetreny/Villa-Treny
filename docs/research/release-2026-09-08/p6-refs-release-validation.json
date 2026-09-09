@@ -1,0 +1,49 @@
+{
+  "format": "villa-p6-refs-release-validation-v1",
+  "capturedAt": "2026-09-08T20:23:41.226Z",
+  "version": "7a103b97-5ff9-490c-b3ff-fb191582e7a4",
+  "previousVersion": "13ba0a43-f0e2-45b5-bf38-524faf16b5fb",
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "appTests": 949,
+    "workerTests": 302,
+    "nodeTests": 48,
+    "hostingTests": 6,
+    "hostingExternalCalls": 0,
+    "build": true,
+    "deployableFiles": 59,
+    "rooms": 46,
+    "dryDeploy": true
+  },
+  "scope": "One sentence explains record.refs string IDs in newly prepared P6 SYSTEM; no parser, schema, quota, UI, world or saved job rewrite.",
+  "logEvidence": {
+    "full-check": {
+      "sha256": "6f47242d16d3106fdeb9eaf7b2a4664828637375f460aa1db64f7b2a21ad5f64",
+      "bytes": 8501
+    },
+    "build": {
+      "sha256": "bd797ac183d9e34649f6087c7525f5cdf4bb4d2ab531de7858f809f650b8c118",
+      "bytes": 876
+    },
+    "dry": {
+      "sha256": "512ddbeea0edd70d9fba39a399ab5f354161a57b76527e4f7d77ab683d866e36",
+      "bytes": 1854
+    },
+    "hosting": {
+      "sha256": "fef82a96eb18cdeb73c8fa0cb066aaad27df91d496be1268133c93aa7c634960",
+      "bytes": 792
+    },
+    "deploy": {
+      "sha256": "6ed559df492ca7feedadaa7b4810c93d18c656d36b83b278c4e02e89afee09b1",
+      "bytes": 2194
+    }
+  },
+  "limitations": [
+    "This clarity change does not enforce constrained decoding or guarantee correct model choices.",
+    "The natural U80 retry and firstGroq120B success happened before this instruction was deployed.",
+    "128-token Groq framing allowance remains provisional.",
+    "No publication or paid authored commission is established."
+  ],
+  "commitOrPush": false
+}

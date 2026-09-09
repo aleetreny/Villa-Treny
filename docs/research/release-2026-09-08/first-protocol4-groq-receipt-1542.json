@@ -1,0 +1,158 @@
+{
+  "format": "villa-live-protocol4-receipt-v1",
+  "scope": "Read-only complete recovery comparison; no HTTP, inference, replay or production mutation. Private prompt and appraisal text excluded.",
+  "releaseVersion": "8bd1482e-27d4-42bb-ba7f-31aafbdff4f2",
+  "rawBackupSha256": "ed79fc65700ca7e1ff746396cb12c4bc9aae2332f0c97d51eff5588bfbfc1c4e",
+  "preReceiptBackupSha256": "eb5097d24939eb360f0b58e100fb39b43f48dd56448068e59bb2fd6b39dc8ded",
+  "capturedAtMs": 1788882133033,
+  "worldRevision": 130,
+  "schemaVersion": 8,
+  "job": {
+    "id": "habitat-canonical:mind:Q:5:50:g:3",
+    "actor": "Q",
+    "sequence": 50,
+    "protocolVersion": 4,
+    "status": "applied",
+    "jobAttemptOrdinal": 1,
+    "createdAtMs": 1788881971823,
+    "resolvedAtMs": 1788881973677,
+    "outputJsonSha256": "8f3a2dee64608d9b81d90d178753c4874cafaee68960736bed40821251e481be",
+    "originalSchemaSha256": "484d2d5e3d9bb101c045847433c298907d4f16ab5bd68ecc2e5517552824de4d",
+    "originalSchemaAcceptsOutput": true,
+    "originalSchemaHashMatchesContent": true,
+    "inputIsCompacted": true,
+    "exactInputReconstructed": false,
+    "retainedInputDigests": {
+      "system": {
+        "sha256": "61e0277158f71a55b04d0913ae40e257ae394d7f44a4506909c2fa1d2b4407cf",
+        "originalUtf8Bytes": 4327
+      },
+      "user": {
+        "sha256": "d2637c9dd75775c484129410cb44c939fcb25b90aefab1d70d6fee4f9d63c7ed",
+        "originalUtf8Bytes": 3575
+      },
+      "prepared": {
+        "sha256": "d2637c9dd75775c484129410cb44c939fcb25b90aefab1d70d6fee4f9d63c7ed",
+        "originalUtf8Bytes": 3575
+      }
+    },
+    "hasPublicCommit": true,
+    "messageEmitted": true,
+    "proposalEmitted": true,
+    "appraisalEmitted": true,
+    "projectEmitted": false
+  },
+  "attempts": [
+    {
+      "attemptId": "habitat-canonical:mind:Q:5:50:g:3:groq:1",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "ok": true,
+      "kind": null,
+      "detailCode": null,
+      "latencyMs": 1854,
+      "recordedAtMs": 1788881973677,
+      "reservation": {
+        "state": "settled",
+        "createdAtMs": 1788881971823,
+        "dispatchedAtMs": 1788881971823,
+        "settledAtMs": 1788881973677,
+        "maximum": {
+          "requests": 1,
+          "inputTokens": 4535,
+          "outputTokens": 1024,
+          "neurons": 0
+        },
+        "usageConfirmed": true,
+        "actual": {
+          "requests": 1,
+          "inputTokens": 4523,
+          "outputTokens": 166,
+          "totalTokens": 4689,
+          "neurons": 0
+        },
+        "releasedReservedTokens": 870
+      }
+    }
+  ],
+  "workersAI": {
+    "recordedAttemptsForJob": 0,
+    "reservationsForJob": 0,
+    "chargedNeuronsForJob": 0,
+    "reasonEvidence": "The complete cut records neither a Workers AI attempt nor a reservation. In the inspected deployed routing path, a completed Groq result retains every prior primary failure; pacing skips create neither. Thus pacing bypass is inferred from that control flow and the complete records, not from a stored numeric readyAt receipt.",
+    "readyAtNotPersisted": true,
+    "source": [
+      {
+        "path": "workers/habitat-runtime/src/providers/router.ts",
+        "sha256": "6276e39c8c46f56a0cda30a17ee34e5a8a71643ba47a7826979af1e40cca9a4b"
+      },
+      {
+        "path": "workers/habitat-runtime/src/habitat-world.ts",
+        "sha256": "e12cd2df682b870e94c9c7eb5c80453e59e1d5331e3ef34dc326835c05d5e2d6"
+      }
+    ]
+  },
+  "publicConsequence": {
+    "turn": {
+      "conversationId": "conversation:59",
+      "participants": [
+        "G",
+        "Q"
+      ],
+      "id": "turn:263",
+      "index": 3,
+      "speaker": "Q",
+      "text": "Sure, here are 2 cells to keep the workshops running while you handle the repair shift.",
+      "atMs": 1788881973677
+    },
+    "offer": {
+      "id": "offer:266",
+      "conversationId": "conversation:59",
+      "proposer": "Q",
+      "counterpart": "G",
+      "terms": {
+        "kind": "transfer",
+        "from": "Q",
+        "to": "G",
+        "cells": 2
+      },
+      "status": "open",
+      "expiresAtWatch": 432,
+      "replaces": null
+    },
+    "agreementsCreated": 0,
+    "accepted": false,
+    "moneyMoved": false
+  },
+  "continuity": {
+    "preWorldRevision": 128,
+    "postWorldRevision": 130,
+    "physicalClockUnchanged": true,
+    "physicalRunsBefore": 0,
+    "physicalRunsAfter": 0,
+    "economyExactlyUnchanged": true,
+    "balances": {
+      "Q": {
+        "before": 16.681080685799103,
+        "after": 16.681080685799103
+      },
+      "G": {
+        "before": 35.235219182644165,
+        "after": 35.235219182644165
+      }
+    },
+    "money": {
+      "held": 878.7893824361378,
+      "expected": 878.7893824361379,
+      "residual": -1.1368683772161603e-13,
+      "conserved": true
+    }
+  },
+  "limitations": [
+    "One valid persisted P4 response is not sustained provider compatibility, truthful grounding or autonomy.",
+    "The message says here are 2 cells, but only an unaccepted transfer proposal exists; no money moved.",
+    "Original input text is compacted; retained digests and byte counts do not reconstruct it.",
+    "The primary pacing time was not persisted; do not present an exact admission timestamp as observed.",
+    "This is observed production state; no forecast watch or cognitive replay was used."
+  ]
+}

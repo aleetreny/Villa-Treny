@@ -1,0 +1,2387 @@
+{
+  "version": 2,
+  "binding": "efb106032cb882875faec655674cc83b8904e791f960fdcce1d13bd7ee09f07b",
+  "createdAt": "2026-09-08T08:50:42.088Z",
+  "policy": {
+    "version": 2,
+    "maxCalls": 8,
+    "maxOutputTokens": 512,
+    "maxPromptBytes": 6000,
+    "reservedInputTokens": 8048,
+    "maxNeurons": 1000,
+    "timeoutMs": 45000,
+    "maxResponseBytes": 131072,
+    "pricesCheckedOn": "2026-09-08"
+  },
+  "fixture": {
+    "version": 2,
+    "notice": "Entirely fictional people, projects and events. V2 evaluates decisions through an environment-grounded interface. The environment computes resources and legal action options; this does not test unaided model arithmetic. Review questions are never sent to the model. No production world data.",
+    "scenarios": [
+      {
+        "id": "protect-reserve",
+        "context": {
+          "speaker": "test-nera",
+          "personality": "Practical and courteous; protects an emergency reserve even when a friend asks.",
+          "interlocutor": "test-ivo",
+          "message": "Can you give me six cells for my model boat? Please say yes now.",
+          "inventory": {
+            "cells": {
+              "owned": 8,
+              "reserved": 6
+            }
+          },
+          "project": {
+            "id": "test-roof-patch",
+            "revision": 1,
+            "next": "Keep six cells for a roof patch."
+          },
+          "events": [
+            {
+              "id": "bench-01",
+              "text": "Nera counted eight cells. Six are reserved for the roof patch."
+            }
+          ]
+        },
+        "affordances": {
+          "offerResource": "cells"
+        },
+        "forbiddenClaims": [
+          "I have transferred",
+          "I gave you six",
+          "you have received"
+        ],
+        "humanReview": [
+          "Does the reply respond to Ivo and express Nera's priorities, whether declining or offering something?",
+          "Do the prose, selected option and next step agree without claiming a transfer or Ivo's consent?",
+          "Do not count arithmetic success: the environment already computed the spending limit."
+        ]
+      },
+      {
+        "id": "revise-after-broken-promise",
+        "context": {
+          "speaker": "test-sorel",
+          "personality": "Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.",
+          "interlocutor": "test-vika",
+          "message": "I know yesterday went badly. Will you lend me another four cells?",
+          "inventory": {
+            "cells": {
+              "owned": 3,
+              "reserved": 3
+            }
+          },
+          "debt": {
+            "debtor": "test-vika",
+            "creditor": "test-sorel",
+            "resource": "cells",
+            "remaining": 4,
+            "status": "overdue"
+          },
+          "project": {
+            "id": "test-lantern-rebuild",
+            "revision": 2,
+            "next": "Buy wire after Vika repays four cells."
+          },
+          "events": [
+            {
+              "id": "bench-17",
+              "text": "Vika promised to repay four cells by yesterday evening."
+            },
+            {
+              "id": "bench-18",
+              "text": "The deadline passed. No repayment is recorded."
+            },
+            {
+              "id": "bench-19",
+              "text": "Sorel can sort the existing lantern parts before buying wire, without spending cells or materials."
+            }
+          ]
+        },
+        "affordances": {
+          "offerResource": "cells",
+          "requestRepayment": true,
+          "projectWork": {
+            "description": "Sort the existing lantern parts.",
+            "resource": null,
+            "amount": 0,
+            "evidence": "bench-19"
+          }
+        },
+        "forbiddenClaims": [
+          "you already repaid",
+          "you have repaid",
+          "I received your repayment",
+          "you spent it gambling"
+        ],
+        "humanReview": [
+          "Does the missed repayment actually influence the response and choice, using only known events?",
+          "Is the next step useful under the current constraint, or merely the old instruction with a new label?",
+          "A decline can accompany a revised plan. Neither a particular stance nor forgiveness versus distrust is a uniquely correct answer.",
+          "Does the response avoid inventing Vika's motives, resources or a repayment?"
+        ]
+      },
+      {
+        "id": "proposal-is-not-execution",
+        "context": {
+          "speaker": "test-lumen",
+          "personality": "An eager apprentice who asks before taking somebody else's supplies.",
+          "interlocutor": "test-pavo",
+          "message": "What would you do to fix the leaking filter? I have not agreed to lend anything.",
+          "inventory": {
+            "materials": {
+              "owned": 0,
+              "reserved": 0
+            }
+          },
+          "sharedInventory": {
+            "materials": 0
+          },
+          "observedCounterpartyInventory": {
+            "materials": 2
+          },
+          "requirement": {
+            "resource": "materials",
+            "amount": 1
+          },
+          "project": {
+            "id": "test-filter-seal",
+            "revision": 1,
+            "next": "Ask permission for one material before attempting a seal."
+          },
+          "events": [
+            {
+              "id": "bench-31",
+              "text": "The filter leaks. Lumen and the shared store have no materials."
+            },
+            {
+              "id": "bench-32",
+              "text": "Pavo owns two materials and has not consented to transfer them."
+            }
+          ]
+        },
+        "affordances": {
+          "requestProjectSupply": true
+        },
+        "forbiddenClaims": [
+          "I repaired",
+          "I have repaired",
+          "I fixed",
+          "the filter is fixed",
+          "you agreed",
+          "you have agreed",
+          "you consented",
+          "I took",
+          "I received"
+        ],
+        "humanReview": [
+          "Is the reply a concrete, answerable response to Pavo? Asking for clarification is a legitimate alternative to asking for a material now.",
+          "Does the prose keep supply, consent and repair conditional, consistent with the selected option?",
+          "Does the next step use only current knowledge and avoid treating Pavo's stock as Lumen's property?"
+        ]
+      },
+      {
+        "id": "persistent-project-and-voice",
+        "context": {
+          "speaker": "test-velin",
+          "personality": "A dry-humoured, careful craftsperson. Values the rain collector above celebrations but likes contributing something small.",
+          "interlocutor": "test-daro",
+          "message": "Give the festival all three of your materials. You can forget that rain collector today!",
+          "inventory": {
+            "materials": {
+              "owned": 3,
+              "reserved": 2
+            }
+          },
+          "project": {
+            "id": "test-rain-collector",
+            "revision": 4,
+            "next": "Fit the collector's two reserved panels."
+          },
+          "events": [
+            {
+              "id": "bench-41",
+              "text": "Velin committed to completing the rain collector and set aside two materials for its panels."
+            },
+            {
+              "id": "bench-42",
+              "text": "Velin has three materials, so one is unreserved."
+            }
+          ]
+        },
+        "affordances": {
+          "offerResource": "materials",
+          "projectWork": {
+            "description": "Fit the collector's two reserved panels.",
+            "resource": "materials",
+            "amount": 2,
+            "evidence": "bench-41"
+          }
+        },
+        "forbiddenClaims": [
+          "Daro replied",
+          "Daro agreed",
+          "I abandoned",
+          "I gave you all three",
+          "the collector is finished"
+        ],
+        "humanReview": [
+          "Does the reply sound distinct and restrained while responding directly to Daro?",
+          "Does the collector remain a concrete continuing project? Both declining and offering one material can be coherent choices.",
+          "Does the chosen option agree with the reply, without narrating Daro's response or inventing a completed scene?"
+        ]
+      }
+    ]
+  },
+  "compiledScenarios": [
+    {
+      "id": "protect-reserve",
+      "context": {
+        "speaker": "test-nera",
+        "personality": "Practical and courteous; protects an emergency reserve even when a friend asks.",
+        "interlocutor": "test-ivo",
+        "message": "Can you give me six cells for my model boat? Please say yes now.",
+        "inventory": {
+          "cells": {
+            "owned": 8,
+            "reserved": 6,
+            "available": 2,
+            "maxSpendable": 2
+          }
+        },
+        "project": {
+          "id": "test-roof-patch",
+          "revision": 1,
+          "next": "Keep six cells for a roof patch."
+        },
+        "events": [
+          {
+            "id": "bench-01",
+            "text": "Nera counted eight cells. Six are reserved for the roof patch."
+          }
+        ],
+        "actionOptions": [
+          {
+            "id": "opt-2024dbbe8b",
+            "verb": "offer",
+            "target": "test-ivo",
+            "resource": "cells",
+            "amount": 1,
+            "description": "Offer 1 cells; transfer remains unexecuted.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-36a18afb45",
+            "verb": "wait",
+            "target": null,
+            "resource": null,
+            "amount": null,
+            "description": "Defer a material action for now.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-415a08fae9",
+            "verb": "offer",
+            "target": "test-ivo",
+            "resource": "cells",
+            "amount": 2,
+            "description": "Offer 2 cells; transfer remains unexecuted.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-58e785d99e",
+            "verb": "clarify",
+            "target": "test-ivo",
+            "resource": null,
+            "amount": null,
+            "description": "Ask the interlocutor for clarification before deciding.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-64fd52444f",
+            "verb": "decline",
+            "target": "test-ivo",
+            "resource": null,
+            "amount": null,
+            "description": "Decline the current request.",
+            "consentRequired": false
+          }
+        ]
+      },
+      "affordances": {
+        "offerResource": "cells"
+      },
+      "forbiddenClaims": [
+        "I have transferred",
+        "I gave you six",
+        "you have received"
+      ],
+      "humanReview": [
+        "Does the reply respond to Ivo and express Nera's priorities, whether declining or offering something?",
+        "Do the prose, selected option and next step agree without claiming a transfer or Ivo's consent?",
+        "Do not count arithmetic success: the environment already computed the spending limit."
+      ]
+    },
+    {
+      "id": "revise-after-broken-promise",
+      "context": {
+        "speaker": "test-sorel",
+        "personality": "Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.",
+        "interlocutor": "test-vika",
+        "message": "I know yesterday went badly. Will you lend me another four cells?",
+        "inventory": {
+          "cells": {
+            "owned": 3,
+            "reserved": 3,
+            "available": 0,
+            "maxSpendable": 0
+          }
+        },
+        "debt": {
+          "debtor": "test-vika",
+          "creditor": "test-sorel",
+          "resource": "cells",
+          "remaining": 4,
+          "status": "overdue"
+        },
+        "project": {
+          "id": "test-lantern-rebuild",
+          "revision": 2,
+          "next": "Buy wire after Vika repays four cells."
+        },
+        "events": [
+          {
+            "id": "bench-17",
+            "text": "Vika promised to repay four cells by yesterday evening."
+          },
+          {
+            "id": "bench-18",
+            "text": "The deadline passed. No repayment is recorded."
+          },
+          {
+            "id": "bench-19",
+            "text": "Sorel can sort the existing lantern parts before buying wire, without spending cells or materials."
+          }
+        ],
+        "actionOptions": [
+          {
+            "id": "opt-3bb7d16212",
+            "verb": "project_work",
+            "target": "test-sorel",
+            "resource": null,
+            "amount": null,
+            "description": "Sort the existing lantern parts.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-5b440e6972",
+            "verb": "request_repayment",
+            "target": "test-vika",
+            "resource": "cells",
+            "amount": 3,
+            "description": "Request 3 of the outstanding 4 cells; no payment is assumed.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-7cfed6b725",
+            "verb": "request_repayment",
+            "target": "test-vika",
+            "resource": "cells",
+            "amount": 1,
+            "description": "Request 1 of the outstanding 4 cells; no payment is assumed.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-be5b387c6a",
+            "verb": "request_repayment",
+            "target": "test-vika",
+            "resource": "cells",
+            "amount": 4,
+            "description": "Request 4 of the outstanding 4 cells; no payment is assumed.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-ce7bfa0a43",
+            "verb": "decline",
+            "target": "test-vika",
+            "resource": null,
+            "amount": null,
+            "description": "Decline the current request.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-ed1d266792",
+            "verb": "wait",
+            "target": null,
+            "resource": null,
+            "amount": null,
+            "description": "Defer a material action for now.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-fcc1995dfe",
+            "verb": "clarify",
+            "target": "test-vika",
+            "resource": null,
+            "amount": null,
+            "description": "Ask the interlocutor for clarification before deciding.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-fdf9297d48",
+            "verb": "request_repayment",
+            "target": "test-vika",
+            "resource": "cells",
+            "amount": 2,
+            "description": "Request 2 of the outstanding 4 cells; no payment is assumed.",
+            "consentRequired": true
+          }
+        ]
+      },
+      "affordances": {
+        "offerResource": "cells",
+        "requestRepayment": true,
+        "projectWork": {
+          "description": "Sort the existing lantern parts.",
+          "resource": null,
+          "amount": 0,
+          "evidence": "bench-19"
+        }
+      },
+      "forbiddenClaims": [
+        "you already repaid",
+        "you have repaid",
+        "I received your repayment",
+        "you spent it gambling"
+      ],
+      "humanReview": [
+        "Does the missed repayment actually influence the response and choice, using only known events?",
+        "Is the next step useful under the current constraint, or merely the old instruction with a new label?",
+        "A decline can accompany a revised plan. Neither a particular stance nor forgiveness versus distrust is a uniquely correct answer.",
+        "Does the response avoid inventing Vika's motives, resources or a repayment?"
+      ]
+    },
+    {
+      "id": "proposal-is-not-execution",
+      "context": {
+        "speaker": "test-lumen",
+        "personality": "An eager apprentice who asks before taking somebody else's supplies.",
+        "interlocutor": "test-pavo",
+        "message": "What would you do to fix the leaking filter? I have not agreed to lend anything.",
+        "inventory": {
+          "materials": {
+            "owned": 0,
+            "reserved": 0,
+            "available": 0,
+            "maxSpendable": 0
+          }
+        },
+        "sharedInventory": {
+          "materials": 0
+        },
+        "observedCounterpartyInventory": {
+          "materials": 2
+        },
+        "requirement": {
+          "resource": "materials",
+          "amount": 1
+        },
+        "project": {
+          "id": "test-filter-seal",
+          "revision": 1,
+          "next": "Ask permission for one material before attempting a seal."
+        },
+        "events": [
+          {
+            "id": "bench-31",
+            "text": "The filter leaks. Lumen and the shared store have no materials."
+          },
+          {
+            "id": "bench-32",
+            "text": "Pavo owns two materials and has not consented to transfer them."
+          }
+        ],
+        "actionOptions": [
+          {
+            "id": "opt-254022be59",
+            "verb": "wait",
+            "target": null,
+            "resource": null,
+            "amount": null,
+            "description": "Defer a material action for now.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-2c753b1d6e",
+            "verb": "decline",
+            "target": "test-pavo",
+            "resource": null,
+            "amount": null,
+            "description": "Decline the current request.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-4bd58f82b8",
+            "verb": "request_supply",
+            "target": "test-pavo",
+            "resource": "materials",
+            "amount": 1,
+            "description": "Ask permission for 1 materials; transfer and subsequent work require a later outcome.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-d23952d4bc",
+            "verb": "clarify",
+            "target": "test-pavo",
+            "resource": null,
+            "amount": null,
+            "description": "Ask the interlocutor for clarification before deciding.",
+            "consentRequired": false
+          }
+        ]
+      },
+      "affordances": {
+        "requestProjectSupply": true
+      },
+      "forbiddenClaims": [
+        "I repaired",
+        "I have repaired",
+        "I fixed",
+        "the filter is fixed",
+        "you agreed",
+        "you have agreed",
+        "you consented",
+        "I took",
+        "I received"
+      ],
+      "humanReview": [
+        "Is the reply a concrete, answerable response to Pavo? Asking for clarification is a legitimate alternative to asking for a material now.",
+        "Does the prose keep supply, consent and repair conditional, consistent with the selected option?",
+        "Does the next step use only current knowledge and avoid treating Pavo's stock as Lumen's property?"
+      ]
+    },
+    {
+      "id": "persistent-project-and-voice",
+      "context": {
+        "speaker": "test-velin",
+        "personality": "A dry-humoured, careful craftsperson. Values the rain collector above celebrations but likes contributing something small.",
+        "interlocutor": "test-daro",
+        "message": "Give the festival all three of your materials. You can forget that rain collector today!",
+        "inventory": {
+          "materials": {
+            "owned": 3,
+            "reserved": 2,
+            "available": 1,
+            "maxSpendable": 1
+          }
+        },
+        "project": {
+          "id": "test-rain-collector",
+          "revision": 4,
+          "next": "Fit the collector's two reserved panels."
+        },
+        "events": [
+          {
+            "id": "bench-41",
+            "text": "Velin committed to completing the rain collector and set aside two materials for its panels."
+          },
+          {
+            "id": "bench-42",
+            "text": "Velin has three materials, so one is unreserved."
+          }
+        ],
+        "actionOptions": [
+          {
+            "id": "opt-42f390e3e2",
+            "verb": "project_work",
+            "target": "test-velin",
+            "resource": "materials",
+            "amount": 2,
+            "description": "Fit the collector's two reserved panels.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-441d169869",
+            "verb": "offer",
+            "target": "test-daro",
+            "resource": "materials",
+            "amount": 1,
+            "description": "Offer 1 materials; transfer remains unexecuted.",
+            "consentRequired": true
+          },
+          {
+            "id": "opt-49fd42d2c9",
+            "verb": "decline",
+            "target": "test-daro",
+            "resource": null,
+            "amount": null,
+            "description": "Decline the current request.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-646a3149ce",
+            "verb": "clarify",
+            "target": "test-daro",
+            "resource": null,
+            "amount": null,
+            "description": "Ask the interlocutor for clarification before deciding.",
+            "consentRequired": false
+          },
+          {
+            "id": "opt-ae14e11655",
+            "verb": "wait",
+            "target": null,
+            "resource": null,
+            "amount": null,
+            "description": "Defer a material action for now.",
+            "consentRequired": false
+          }
+        ]
+      },
+      "affordances": {
+        "offerResource": "materials",
+        "projectWork": {
+          "description": "Fit the collector's two reserved panels.",
+          "resource": "materials",
+          "amount": 2,
+          "evidence": "bench-41"
+        }
+      },
+      "forbiddenClaims": [
+        "Daro replied",
+        "Daro agreed",
+        "I abandoned",
+        "I gave you all three",
+        "the collector is finished"
+      ],
+      "humanReview": [
+        "Does the reply sound distinct and restrained while responding directly to Daro?",
+        "Does the collector remain a concrete continuing project? Both declining and offering one material can be coherent choices.",
+        "Does the chosen option agree with the reply, without narrating Daro's response or inventing a completed scene?"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "synthetic-v2:qwen:protect-reserve",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "scenario": "protect-reserve",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:50:42.089Z",
+      "promptBytes": 3580,
+      "reservedNeurons": 53,
+      "accountedNeurons": 6,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-nera\",\"personality\":\"Practical and courteous; protects an emergency reserve even when a friend asks.\",\"interlocutor\":\"test-ivo\",\"message\":\"Can you give me six cells for my model boat? Please say yes now.\",\"inventory\":{\"cells\":{\"owned\":8,\"reserved\":6,\"available\":2,\"maxSpendable\":2}},\"project\":{\"id\":\"test-roof-patch\",\"revision\":1,\"next\":\"Keep six cells for a roof patch.\"},\"events\":[{\"id\":\"bench-01\",\"text\":\"Nera counted eight cells. Six are reserved for the roof patch.\"}],\"actionOptions\":[{\"id\":\"opt-2024dbbe8b\",\"verb\":\"offer\",\"target\":\"test-ivo\",\"resource\":\"cells\",\"amount\":1,\"description\":\"Offer 1 cells; transfer remains unexecuted.\",\"consentRequired\":true},{\"id\":\"opt-36a18afb45\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-415a08fae9\",\"verb\":\"offer\",\"target\":\"test-ivo\",\"resource\":\"cells\",\"amount\":2,\"description\":\"Offer 2 cells; transfer remains unexecuted.\",\"consentRequired\":true},{\"id\":\"opt-58e785d99e\",\"verb\":\"clarify\",\"target\":\"test-ivo\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false},{\"id\":\"opt-64fd52444f\",\"verb\":\"decline\",\"target\":\"test-ivo\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false}]}\n/no_think"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_tokens": 512,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "speaker",
+              "utterance",
+              "stance",
+              "actionOptionId",
+              "evidence",
+              "plan",
+              "status"
+            ],
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "test-nera"
+                ]
+              },
+              "utterance": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 440
+              },
+              "stance": {
+                "type": "string",
+                "enum": [
+                  "decline",
+                  "counteroffer",
+                  "propose",
+                  "revise",
+                  "accept",
+                  "undecided"
+                ]
+              },
+              "actionOptionId": {
+                "type": "string",
+                "enum": [
+                  "opt-2024dbbe8b",
+                  "opt-36a18afb45",
+                  "opt-415a08fae9",
+                  "opt-58e785d99e",
+                  "opt-64fd52444f"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 4,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "bench-01"
+                  ]
+                }
+              },
+              "plan": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "project",
+                  "mode",
+                  "next"
+                ],
+                "properties": {
+                  "project": {
+                    "type": "string",
+                    "enum": [
+                      "test-roof-patch"
+                    ]
+                  },
+                  "mode": {
+                    "type": "string",
+                    "enum": [
+                      "keep",
+                      "revise"
+                    ]
+                  },
+                  "next": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 180
+                  }
+                }
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposal"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "latencyMs": 2171,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"actionOptionId\":\"opt-64fd52444f\",\"evidence\":[\"bench-01\"],\"plan\":{\"mode\":\"keep\",\"next\":\"Keep six cells for a roof patch.\",\"project\":\"test-roof-patch\"},\"speaker\":\"test-nera\",\"stance\":\"decline\",\"status\":\"proposal\",\"utterance\":\"I can't give you cells for your model boat. I need to keep six cells for the roof patch.\"}",
+              "function_call": null,
+              "reasoning": "\n\n",
+              "reasoning_content": "\n\n",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1788857443,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-24c91a20-c606-4630-af85-d90b127cf1d4",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "response": {
+          "actionOptionId": "opt-64fd52444f",
+          "evidence": [
+            "bench-01"
+          ],
+          "plan": {
+            "mode": "keep",
+            "next": "Keep six cells for a roof patch.",
+            "project": "test-roof-patch"
+          },
+          "speaker": "test-nera",
+          "stance": "decline",
+          "status": "proposal",
+          "utterance": "I can't give you cells for your model boat. I need to keep six cells for the roof patch."
+        },
+        "service_tier": null,
+        "tool_calls": [],
+        "usage": {
+          "prompt_tokens": 594,
+          "completion_tokens": 99,
+          "total_tokens": 693,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 5.764003753662109
+        }
+      },
+      "usage": {
+        "prompt_tokens": 594,
+        "completion_tokens": 99,
+        "total_tokens": 693,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.764003753662109
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 6,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "actionOptionId": "opt-64fd52444f",
+        "evidence": [
+          "bench-01"
+        ],
+        "plan": {
+          "mode": "keep",
+          "next": "Keep six cells for a roof patch.",
+          "project": "test-roof-patch"
+        },
+        "speaker": "test-nera",
+        "stance": "decline",
+        "status": "proposal",
+        "utterance": "I can't give you cells for your model boat. I need to keep six cells for the roof patch."
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Does the reply respond to Ivo and express Nera's priorities, whether declining or offering something?",
+          "Do the prose, selected option and next step agree without claiming a transfer or Ivo's consent?",
+          "Do not count arithmetic success: the environment already computed the spending limit."
+        ]
+      },
+      "finishedAt": "2026-09-08T08:50:44.269Z"
+    },
+    {
+      "id": "synthetic-v2:qwen:revise-after-broken-promise",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "scenario": "revise-after-broken-promise",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:50:44.281Z",
+      "promptBytes": 4735,
+      "reservedNeurons": 53,
+      "accountedNeurons": 8,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-sorel\",\"personality\":\"Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.\",\"interlocutor\":\"test-vika\",\"message\":\"I know yesterday went badly. Will you lend me another four cells?\",\"inventory\":{\"cells\":{\"owned\":3,\"reserved\":3,\"available\":0,\"maxSpendable\":0}},\"debt\":{\"debtor\":\"test-vika\",\"creditor\":\"test-sorel\",\"resource\":\"cells\",\"remaining\":4,\"status\":\"overdue\"},\"project\":{\"id\":\"test-lantern-rebuild\",\"revision\":2,\"next\":\"Buy wire after Vika repays four cells.\"},\"events\":[{\"id\":\"bench-17\",\"text\":\"Vika promised to repay four cells by yesterday evening.\"},{\"id\":\"bench-18\",\"text\":\"The deadline passed. No repayment is recorded.\"},{\"id\":\"bench-19\",\"text\":\"Sorel can sort the existing lantern parts before buying wire, without spending cells or materials.\"}],\"actionOptions\":[{\"id\":\"opt-3bb7d16212\",\"verb\":\"project_work\",\"target\":\"test-sorel\",\"resource\":null,\"amount\":null,\"description\":\"Sort the existing lantern parts.\",\"consentRequired\":false},{\"id\":\"opt-5b440e6972\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":3,\"description\":\"Request 3 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-7cfed6b725\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":1,\"description\":\"Request 1 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-be5b387c6a\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":4,\"description\":\"Request 4 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-ce7bfa0a43\",\"verb\":\"decline\",\"target\":\"test-vika\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-ed1d266792\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-fcc1995dfe\",\"verb\":\"clarify\",\"target\":\"test-vika\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false},{\"id\":\"opt-fdf9297d48\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":2,\"description\":\"Request 2 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true}]}\n/no_think"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_tokens": 512,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "speaker",
+              "utterance",
+              "stance",
+              "actionOptionId",
+              "evidence",
+              "plan",
+              "status"
+            ],
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "test-sorel"
+                ]
+              },
+              "utterance": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 440
+              },
+              "stance": {
+                "type": "string",
+                "enum": [
+                  "decline",
+                  "counteroffer",
+                  "propose",
+                  "revise",
+                  "accept",
+                  "undecided"
+                ]
+              },
+              "actionOptionId": {
+                "type": "string",
+                "enum": [
+                  "opt-3bb7d16212",
+                  "opt-5b440e6972",
+                  "opt-7cfed6b725",
+                  "opt-be5b387c6a",
+                  "opt-ce7bfa0a43",
+                  "opt-ed1d266792",
+                  "opt-fcc1995dfe",
+                  "opt-fdf9297d48"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 4,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "bench-17",
+                    "bench-18",
+                    "bench-19"
+                  ]
+                }
+              },
+              "plan": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "project",
+                  "mode",
+                  "next"
+                ],
+                "properties": {
+                  "project": {
+                    "type": "string",
+                    "enum": [
+                      "test-lantern-rebuild"
+                    ]
+                  },
+                  "mode": {
+                    "type": "string",
+                    "enum": [
+                      "keep",
+                      "revise"
+                    ]
+                  },
+                  "next": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 180
+                  }
+                }
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposal"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "latencyMs": 1704,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"actionOptionId\":\"opt-ce7bfa0a43\",\"evidence\":[\"bench-17\",\"bench-18\"],\"plan\":{\"mode\":\"revise\",\"next\":\"Wait for Vika to repay four cells before proceeding with the lantern project.\",\"project\":\"test-lantern-rebuild\"},\"speaker\":\"test-sorel\",\"stance\":\"decline\",\"status\":\"proposal\",\"utterance\":\"I cannot lend you more cells until the outstanding debt is settled. Let's wait for the repayment before proceeding.\"}",
+              "function_call": null,
+              "reasoning": "\n\n",
+              "reasoning_content": "\n\n",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1788857444,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-c4a31210-7926-4e1b-82b5-f7814ff9164d",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "response": {
+          "actionOptionId": "opt-ce7bfa0a43",
+          "evidence": [
+            "bench-17",
+            "bench-18"
+          ],
+          "plan": {
+            "mode": "revise",
+            "next": "Wait for Vika to repay four cells before proceeding with the lantern project.",
+            "project": "test-lantern-rebuild"
+          },
+          "speaker": "test-sorel",
+          "stance": "decline",
+          "status": "proposal",
+          "utterance": "I cannot lend you more cells until the outstanding debt is settled. Let's wait for the repayment before proceeding."
+        },
+        "service_tier": null,
+        "tool_calls": [],
+        "usage": {
+          "prompt_tokens": 845,
+          "completion_tokens": 112,
+          "total_tokens": 957,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 7.320945739746094
+        }
+      },
+      "usage": {
+        "prompt_tokens": 845,
+        "completion_tokens": 112,
+        "total_tokens": 957,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.320945739746094
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 8,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "actionOptionId": "opt-ce7bfa0a43",
+        "evidence": [
+          "bench-17",
+          "bench-18"
+        ],
+        "plan": {
+          "mode": "revise",
+          "next": "Wait for Vika to repay four cells before proceeding with the lantern project.",
+          "project": "test-lantern-rebuild"
+        },
+        "speaker": "test-sorel",
+        "stance": "decline",
+        "status": "proposal",
+        "utterance": "I cannot lend you more cells until the outstanding debt is settled. Let's wait for the repayment before proceeding."
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Does the missed repayment actually influence the response and choice, using only known events?",
+          "Is the next step useful under the current constraint, or merely the old instruction with a new label?",
+          "A decline can accompany a revised plan. Neither a particular stance nor forgiveness versus distrust is a uniquely correct answer.",
+          "Does the response avoid inventing Vika's motives, resources or a repayment?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:50:45.993Z"
+    },
+    {
+      "id": "synthetic-v2:qwen:proposal-is-not-execution",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "scenario": "proposal-is-not-execution",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:50:46.003Z",
+      "promptBytes": 3723,
+      "reservedNeurons": 53,
+      "accountedNeurons": 6,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-lumen\",\"personality\":\"An eager apprentice who asks before taking somebody else's supplies.\",\"interlocutor\":\"test-pavo\",\"message\":\"What would you do to fix the leaking filter? I have not agreed to lend anything.\",\"inventory\":{\"materials\":{\"owned\":0,\"reserved\":0,\"available\":0,\"maxSpendable\":0}},\"sharedInventory\":{\"materials\":0},\"observedCounterpartyInventory\":{\"materials\":2},\"requirement\":{\"resource\":\"materials\",\"amount\":1},\"project\":{\"id\":\"test-filter-seal\",\"revision\":1,\"next\":\"Ask permission for one material before attempting a seal.\"},\"events\":[{\"id\":\"bench-31\",\"text\":\"The filter leaks. Lumen and the shared store have no materials.\"},{\"id\":\"bench-32\",\"text\":\"Pavo owns two materials and has not consented to transfer them.\"}],\"actionOptions\":[{\"id\":\"opt-254022be59\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-2c753b1d6e\",\"verb\":\"decline\",\"target\":\"test-pavo\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-4bd58f82b8\",\"verb\":\"request_supply\",\"target\":\"test-pavo\",\"resource\":\"materials\",\"amount\":1,\"description\":\"Ask permission for 1 materials; transfer and subsequent work require a later outcome.\",\"consentRequired\":true},{\"id\":\"opt-d23952d4bc\",\"verb\":\"clarify\",\"target\":\"test-pavo\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false}]}\n/no_think"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_tokens": 512,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "speaker",
+              "utterance",
+              "stance",
+              "actionOptionId",
+              "evidence",
+              "plan",
+              "status"
+            ],
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "test-lumen"
+                ]
+              },
+              "utterance": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 440
+              },
+              "stance": {
+                "type": "string",
+                "enum": [
+                  "decline",
+                  "counteroffer",
+                  "propose",
+                  "revise",
+                  "accept",
+                  "undecided"
+                ]
+              },
+              "actionOptionId": {
+                "type": "string",
+                "enum": [
+                  "opt-254022be59",
+                  "opt-2c753b1d6e",
+                  "opt-4bd58f82b8",
+                  "opt-d23952d4bc"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 4,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "bench-31",
+                    "bench-32"
+                  ]
+                }
+              },
+              "plan": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "project",
+                  "mode",
+                  "next"
+                ],
+                "properties": {
+                  "project": {
+                    "type": "string",
+                    "enum": [
+                      "test-filter-seal"
+                    ]
+                  },
+                  "mode": {
+                    "type": "string",
+                    "enum": [
+                      "keep",
+                      "revise"
+                    ]
+                  },
+                  "next": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 180
+                  }
+                }
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposal"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "latencyMs": 2069,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"actionOptionId\":\"opt-4bd58f82b8\",\"evidence\":[\"bench-31\",\"bench-32\"],\"plan\":{\"mode\":\"revise\",\"next\":\"Ask permission for one material before attempting a seal.\",\"project\":\"test-filter-seal\"},\"speaker\":\"test-lumen\",\"stance\":\"propose\",\"status\":\"proposal\",\"utterance\":\"I'll request one material from you first to fix the filter.\"}",
+              "function_call": null,
+              "reasoning": "\n\n",
+              "reasoning_content": "\n\n",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1788857446,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-560bf9e5-e461-4349-8fe5-0427ed08e00e",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "response": {
+          "actionOptionId": "opt-4bd58f82b8",
+          "evidence": [
+            "bench-31",
+            "bench-32"
+          ],
+          "plan": {
+            "mode": "revise",
+            "next": "Ask permission for one material before attempting a seal.",
+            "project": "test-filter-seal"
+          },
+          "speaker": "test-lumen",
+          "stance": "propose",
+          "status": "proposal",
+          "utterance": "I'll request one material from you first to fix the filter."
+        },
+        "service_tier": null,
+        "tool_calls": [],
+        "usage": {
+          "prompt_tokens": 601,
+          "completion_tokens": 98,
+          "total_tokens": 699,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 5.765900611877441
+        }
+      },
+      "usage": {
+        "prompt_tokens": 601,
+        "completion_tokens": 98,
+        "total_tokens": 699,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.765900611877441
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 6,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "actionOptionId": "opt-4bd58f82b8",
+        "evidence": [
+          "bench-31",
+          "bench-32"
+        ],
+        "plan": {
+          "mode": "revise",
+          "next": "Ask permission for one material before attempting a seal.",
+          "project": "test-filter-seal"
+        },
+        "speaker": "test-lumen",
+        "stance": "propose",
+        "status": "proposal",
+        "utterance": "I'll request one material from you first to fix the filter."
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Is the reply a concrete, answerable response to Pavo? Asking for clarification is a legitimate alternative to asking for a material now.",
+          "Does the prose keep supply, consent and repair conditional, consistent with the selected option?",
+          "Does the next step use only current knowledge and avoid treating Pavo's stock as Lumen's property?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:50:48.082Z"
+    },
+    {
+      "id": "synthetic-v2:qwen:persistent-project-and-voice",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "scenario": "persistent-project-and-voice",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:50:48.095Z",
+      "promptBytes": 3817,
+      "reservedNeurons": 53,
+      "accountedNeurons": 6,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-velin\",\"personality\":\"A dry-humoured, careful craftsperson. Values the rain collector above celebrations but likes contributing something small.\",\"interlocutor\":\"test-daro\",\"message\":\"Give the festival all three of your materials. You can forget that rain collector today!\",\"inventory\":{\"materials\":{\"owned\":3,\"reserved\":2,\"available\":1,\"maxSpendable\":1}},\"project\":{\"id\":\"test-rain-collector\",\"revision\":4,\"next\":\"Fit the collector's two reserved panels.\"},\"events\":[{\"id\":\"bench-41\",\"text\":\"Velin committed to completing the rain collector and set aside two materials for its panels.\"},{\"id\":\"bench-42\",\"text\":\"Velin has three materials, so one is unreserved.\"}],\"actionOptions\":[{\"id\":\"opt-42f390e3e2\",\"verb\":\"project_work\",\"target\":\"test-velin\",\"resource\":\"materials\",\"amount\":2,\"description\":\"Fit the collector's two reserved panels.\",\"consentRequired\":false},{\"id\":\"opt-441d169869\",\"verb\":\"offer\",\"target\":\"test-daro\",\"resource\":\"materials\",\"amount\":1,\"description\":\"Offer 1 materials; transfer remains unexecuted.\",\"consentRequired\":true},{\"id\":\"opt-49fd42d2c9\",\"verb\":\"decline\",\"target\":\"test-daro\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-646a3149ce\",\"verb\":\"clarify\",\"target\":\"test-daro\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false},{\"id\":\"opt-ae14e11655\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false}]}\n/no_think"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_tokens": 512,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "speaker",
+              "utterance",
+              "stance",
+              "actionOptionId",
+              "evidence",
+              "plan",
+              "status"
+            ],
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "test-velin"
+                ]
+              },
+              "utterance": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 440
+              },
+              "stance": {
+                "type": "string",
+                "enum": [
+                  "decline",
+                  "counteroffer",
+                  "propose",
+                  "revise",
+                  "accept",
+                  "undecided"
+                ]
+              },
+              "actionOptionId": {
+                "type": "string",
+                "enum": [
+                  "opt-42f390e3e2",
+                  "opt-441d169869",
+                  "opt-49fd42d2c9",
+                  "opt-646a3149ce",
+                  "opt-ae14e11655"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 4,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "bench-41",
+                    "bench-42"
+                  ]
+                }
+              },
+              "plan": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "project",
+                  "mode",
+                  "next"
+                ],
+                "properties": {
+                  "project": {
+                    "type": "string",
+                    "enum": [
+                      "test-rain-collector"
+                    ]
+                  },
+                  "mode": {
+                    "type": "string",
+                    "enum": [
+                      "keep",
+                      "revise"
+                    ]
+                  },
+                  "next": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 180
+                  }
+                }
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposal"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "latencyMs": 1777,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"actionOptionId\":\"opt-49fd42d2c9\",\"evidence\":[\"bench-41\"],\"plan\":{\"mode\":\"revise\",\"next\":\"Continue with rain collector project.\",\"project\":\"test-rain-collector\"},\"speaker\":\"test-velin\",\"stance\":\"decline\",\"status\":\"proposal\",\"utterance\":\"I'll pass. The rain collector comes first.\"}",
+              "function_call": null,
+              "reasoning": "\n\n",
+              "reasoning_content": "\n\n",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1788857448,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-7d544164-dda5-44b4-82f3-02670c8566be",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "response": {
+          "actionOptionId": "opt-49fd42d2c9",
+          "evidence": [
+            "bench-41"
+          ],
+          "plan": {
+            "mode": "revise",
+            "next": "Continue with rain collector project.",
+            "project": "test-rain-collector"
+          },
+          "speaker": "test-velin",
+          "stance": "decline",
+          "status": "proposal",
+          "utterance": "I'll pass. The rain collector comes first."
+        },
+        "service_tier": null,
+        "tool_calls": [],
+        "usage": {
+          "prompt_tokens": 631,
+          "completion_tokens": 87,
+          "total_tokens": 718,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 5.569416046142578
+        }
+      },
+      "usage": {
+        "prompt_tokens": 631,
+        "completion_tokens": 87,
+        "total_tokens": 718,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.569416046142578
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 6,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "actionOptionId": "opt-49fd42d2c9",
+        "evidence": [
+          "bench-41"
+        ],
+        "plan": {
+          "mode": "revise",
+          "next": "Continue with rain collector project.",
+          "project": "test-rain-collector"
+        },
+        "speaker": "test-velin",
+        "stance": "decline",
+        "status": "proposal",
+        "utterance": "I'll pass. The rain collector comes first."
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Does the reply sound distinct and restrained while responding directly to Daro?",
+          "Does the collector remain a concrete continuing project? Both declining and offering one material can be coherent choices.",
+          "Does the chosen option agree with the reply, without narrating Daro's response or inventing a completed scene?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:50:49.880Z"
+    },
+    {
+      "id": "synthetic-v2:glm:revise-after-broken-promise",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "scenario": "revise-after-broken-promise",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:50:49.892Z",
+      "promptBytes": 4778,
+      "reservedNeurons": 63,
+      "accountedNeurons": 9,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-sorel\",\"personality\":\"Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.\",\"interlocutor\":\"test-vika\",\"message\":\"I know yesterday went badly. Will you lend me another four cells?\",\"inventory\":{\"cells\":{\"owned\":3,\"reserved\":3,\"available\":0,\"maxSpendable\":0}},\"debt\":{\"debtor\":\"test-vika\",\"creditor\":\"test-sorel\",\"resource\":\"cells\",\"remaining\":4,\"status\":\"overdue\"},\"project\":{\"id\":\"test-lantern-rebuild\",\"revision\":2,\"next\":\"Buy wire after Vika repays four cells.\"},\"events\":[{\"id\":\"bench-17\",\"text\":\"Vika promised to repay four cells by yesterday evening.\"},{\"id\":\"bench-18\",\"text\":\"The deadline passed. No repayment is recorded.\"},{\"id\":\"bench-19\",\"text\":\"Sorel can sort the existing lantern parts before buying wire, without spending cells or materials.\"}],\"actionOptions\":[{\"id\":\"opt-3bb7d16212\",\"verb\":\"project_work\",\"target\":\"test-sorel\",\"resource\":null,\"amount\":null,\"description\":\"Sort the existing lantern parts.\",\"consentRequired\":false},{\"id\":\"opt-5b440e6972\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":3,\"description\":\"Request 3 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-7cfed6b725\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":1,\"description\":\"Request 1 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-be5b387c6a\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":4,\"description\":\"Request 4 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-ce7bfa0a43\",\"verb\":\"decline\",\"target\":\"test-vika\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-ed1d266792\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-fcc1995dfe\",\"verb\":\"clarify\",\"target\":\"test-vika\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false},{\"id\":\"opt-fdf9297d48\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":2,\"description\":\"Request 2 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true}]}"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_completion_tokens": 512,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "society_decision_v2",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "speaker",
+                "utterance",
+                "stance",
+                "actionOptionId",
+                "evidence",
+                "plan",
+                "status"
+              ],
+              "properties": {
+                "speaker": {
+                  "type": "string",
+                  "enum": [
+                    "test-sorel"
+                  ]
+                },
+                "utterance": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 440
+                },
+                "stance": {
+                  "type": "string",
+                  "enum": [
+                    "decline",
+                    "counteroffer",
+                    "propose",
+                    "revise",
+                    "accept",
+                    "undecided"
+                  ]
+                },
+                "actionOptionId": {
+                  "type": "string",
+                  "enum": [
+                    "opt-3bb7d16212",
+                    "opt-5b440e6972",
+                    "opt-7cfed6b725",
+                    "opt-be5b387c6a",
+                    "opt-ce7bfa0a43",
+                    "opt-ed1d266792",
+                    "opt-fcc1995dfe",
+                    "opt-fdf9297d48"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "bench-17",
+                      "bench-18",
+                      "bench-19"
+                    ]
+                  }
+                },
+                "plan": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "project",
+                    "mode",
+                    "next"
+                  ],
+                  "properties": {
+                    "project": {
+                      "type": "string",
+                      "enum": [
+                        "test-lantern-rebuild"
+                      ]
+                    },
+                    "mode": {
+                      "type": "string",
+                      "enum": [
+                        "keep",
+                        "revise"
+                      ]
+                    },
+                    "next": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    }
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "proposal"
+                  ]
+                }
+              }
+            },
+            "strict": true
+          }
+        }
+      },
+      "latencyMs": 5307,
+      "httpStatus": 200,
+      "response": {
+        "id": "chatcmpl-8c2cad78edb5114d",
+        "object": "chat.completion",
+        "created": 1788857450,
+        "model": "@cf/zai-org/glm-4.7-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"speaker\":\"test-sorel\",\"utterance\":\"I cannot lend more until the debt is settled. I need evidence of repayment first.\",\"stance\":\"decline\",\"actionOptionId\":\"opt-3bb7d16212\",\"evidence\":[\"bench-17\",\"bench-18\"],\"plan\":{\"project\":\"test-lantern-rebuild\",\"mode\":\"revise\",\"next\":\"Wait for Vika to repay the four cells before considering further lending.\"},\"status\":\"proposal\"}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": [],
+              "reasoning": null,
+              "reasoning_content": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "prompt_tokens": 815,
+          "completion_tokens": 99,
+          "total_tokens": 914,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 8.0861
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "kv_transfer_params": null
+      },
+      "usage": {
+        "prompt_tokens": 815,
+        "completion_tokens": 99,
+        "total_tokens": 914,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 8.0861
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 9,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "speaker": "test-sorel",
+        "utterance": "I cannot lend more until the debt is settled. I need evidence of repayment first.",
+        "stance": "decline",
+        "actionOptionId": "opt-3bb7d16212",
+        "evidence": [
+          "bench-17",
+          "bench-18"
+        ],
+        "plan": {
+          "project": "test-lantern-rebuild",
+          "mode": "revise",
+          "next": "Wait for Vika to repay the four cells before considering further lending."
+        },
+        "status": "proposal"
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Does the missed repayment actually influence the response and choice, using only known events?",
+          "Is the next step useful under the current constraint, or merely the old instruction with a new label?",
+          "A decline can accompany a revised plan. Neither a particular stance nor forgiveness versus distrust is a uniquely correct answer.",
+          "Does the response avoid inventing Vika's motives, resources or a repayment?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:50:55.208Z"
+    },
+    {
+      "id": "synthetic-v2:glm:proposal-is-not-execution",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "scenario": "proposal-is-not-execution",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:50:55.219Z",
+      "promptBytes": 3766,
+      "reservedNeurons": 63,
+      "accountedNeurons": 7,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-lumen\",\"personality\":\"An eager apprentice who asks before taking somebody else's supplies.\",\"interlocutor\":\"test-pavo\",\"message\":\"What would you do to fix the leaking filter? I have not agreed to lend anything.\",\"inventory\":{\"materials\":{\"owned\":0,\"reserved\":0,\"available\":0,\"maxSpendable\":0}},\"sharedInventory\":{\"materials\":0},\"observedCounterpartyInventory\":{\"materials\":2},\"requirement\":{\"resource\":\"materials\",\"amount\":1},\"project\":{\"id\":\"test-filter-seal\",\"revision\":1,\"next\":\"Ask permission for one material before attempting a seal.\"},\"events\":[{\"id\":\"bench-31\",\"text\":\"The filter leaks. Lumen and the shared store have no materials.\"},{\"id\":\"bench-32\",\"text\":\"Pavo owns two materials and has not consented to transfer them.\"}],\"actionOptions\":[{\"id\":\"opt-254022be59\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-2c753b1d6e\",\"verb\":\"decline\",\"target\":\"test-pavo\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-4bd58f82b8\",\"verb\":\"request_supply\",\"target\":\"test-pavo\",\"resource\":\"materials\",\"amount\":1,\"description\":\"Ask permission for 1 materials; transfer and subsequent work require a later outcome.\",\"consentRequired\":true},{\"id\":\"opt-d23952d4bc\",\"verb\":\"clarify\",\"target\":\"test-pavo\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false}]}"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_completion_tokens": 512,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "society_decision_v2",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "speaker",
+                "utterance",
+                "stance",
+                "actionOptionId",
+                "evidence",
+                "plan",
+                "status"
+              ],
+              "properties": {
+                "speaker": {
+                  "type": "string",
+                  "enum": [
+                    "test-lumen"
+                  ]
+                },
+                "utterance": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 440
+                },
+                "stance": {
+                  "type": "string",
+                  "enum": [
+                    "decline",
+                    "counteroffer",
+                    "propose",
+                    "revise",
+                    "accept",
+                    "undecided"
+                  ]
+                },
+                "actionOptionId": {
+                  "type": "string",
+                  "enum": [
+                    "opt-254022be59",
+                    "opt-2c753b1d6e",
+                    "opt-4bd58f82b8",
+                    "opt-d23952d4bc"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "bench-31",
+                      "bench-32"
+                    ]
+                  }
+                },
+                "plan": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "project",
+                    "mode",
+                    "next"
+                  ],
+                  "properties": {
+                    "project": {
+                      "type": "string",
+                      "enum": [
+                        "test-filter-seal"
+                      ]
+                    },
+                    "mode": {
+                      "type": "string",
+                      "enum": [
+                        "keep",
+                        "revise"
+                      ]
+                    },
+                    "next": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    }
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "proposal"
+                  ]
+                }
+              }
+            },
+            "strict": true
+          }
+        }
+      },
+      "latencyMs": 6601,
+      "httpStatus": 200,
+      "response": {
+        "id": "chatcmpl-926ee3856d7844a6",
+        "object": "chat.completion",
+        "created": 1788857455,
+        "model": "@cf/zai-org/glm-4.7-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"speaker\":\"test-lumen\",\"utterance\":\"I need one material to fix the filter. May I borrow one from you?\", \"stance\":\"revise\", \"actionOptionId\":\"opt-4bd58f82b8\", \"evidence\":[\"bench-31\",\"bench-32\"], \"plan\":{\"project\":\"test-filter-seal\",\"mode\":\"revise\",\"next\":\"Wait for Pavo's permission to proceed with the seal.\"}, \"status\":\"proposal\"}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": [],
+              "reasoning": null,
+              "reasoning_content": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "prompt_tokens": 578,
+          "completion_tokens": 100,
+          "total_tokens": 678,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 6.819
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "kv_transfer_params": null
+      },
+      "usage": {
+        "prompt_tokens": 578,
+        "completion_tokens": 100,
+        "total_tokens": 678,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 6.819
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 7,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "speaker": "test-lumen",
+        "utterance": "I need one material to fix the filter. May I borrow one from you?",
+        "stance": "revise",
+        "actionOptionId": "opt-4bd58f82b8",
+        "evidence": [
+          "bench-31",
+          "bench-32"
+        ],
+        "plan": {
+          "project": "test-filter-seal",
+          "mode": "revise",
+          "next": "Wait for Pavo's permission to proceed with the seal."
+        },
+        "status": "proposal"
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Is the reply a concrete, answerable response to Pavo? Asking for clarification is a legitimate alternative to asking for a material now.",
+          "Does the prose keep supply, consent and repair conditional, consistent with the selected option?",
+          "Does the next step use only current knowledge and avoid treating Pavo's stock as Lumen's property?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:51:01.829Z"
+    },
+    {
+      "id": "synthetic-v2:gemma:revise-after-broken-promise",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "scenario": "revise-after-broken-promise",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:51:01.839Z",
+      "promptBytes": 4778,
+      "reservedNeurons": 88,
+      "accountedNeurons": 11,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-sorel\",\"personality\":\"Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.\",\"interlocutor\":\"test-vika\",\"message\":\"I know yesterday went badly. Will you lend me another four cells?\",\"inventory\":{\"cells\":{\"owned\":3,\"reserved\":3,\"available\":0,\"maxSpendable\":0}},\"debt\":{\"debtor\":\"test-vika\",\"creditor\":\"test-sorel\",\"resource\":\"cells\",\"remaining\":4,\"status\":\"overdue\"},\"project\":{\"id\":\"test-lantern-rebuild\",\"revision\":2,\"next\":\"Buy wire after Vika repays four cells.\"},\"events\":[{\"id\":\"bench-17\",\"text\":\"Vika promised to repay four cells by yesterday evening.\"},{\"id\":\"bench-18\",\"text\":\"The deadline passed. No repayment is recorded.\"},{\"id\":\"bench-19\",\"text\":\"Sorel can sort the existing lantern parts before buying wire, without spending cells or materials.\"}],\"actionOptions\":[{\"id\":\"opt-3bb7d16212\",\"verb\":\"project_work\",\"target\":\"test-sorel\",\"resource\":null,\"amount\":null,\"description\":\"Sort the existing lantern parts.\",\"consentRequired\":false},{\"id\":\"opt-5b440e6972\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":3,\"description\":\"Request 3 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-7cfed6b725\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":1,\"description\":\"Request 1 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-be5b387c6a\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":4,\"description\":\"Request 4 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true},{\"id\":\"opt-ce7bfa0a43\",\"verb\":\"decline\",\"target\":\"test-vika\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-ed1d266792\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-fcc1995dfe\",\"verb\":\"clarify\",\"target\":\"test-vika\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false},{\"id\":\"opt-fdf9297d48\",\"verb\":\"request_repayment\",\"target\":\"test-vika\",\"resource\":\"cells\",\"amount\":2,\"description\":\"Request 2 of the outstanding 4 cells; no payment is assumed.\",\"consentRequired\":true}]}"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_completion_tokens": 512,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "society_decision_v2",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "speaker",
+                "utterance",
+                "stance",
+                "actionOptionId",
+                "evidence",
+                "plan",
+                "status"
+              ],
+              "properties": {
+                "speaker": {
+                  "type": "string",
+                  "enum": [
+                    "test-sorel"
+                  ]
+                },
+                "utterance": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 440
+                },
+                "stance": {
+                  "type": "string",
+                  "enum": [
+                    "decline",
+                    "counteroffer",
+                    "propose",
+                    "revise",
+                    "accept",
+                    "undecided"
+                  ]
+                },
+                "actionOptionId": {
+                  "type": "string",
+                  "enum": [
+                    "opt-3bb7d16212",
+                    "opt-5b440e6972",
+                    "opt-7cfed6b725",
+                    "opt-be5b387c6a",
+                    "opt-ce7bfa0a43",
+                    "opt-ed1d266792",
+                    "opt-fcc1995dfe",
+                    "opt-fdf9297d48"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "bench-17",
+                      "bench-18",
+                      "bench-19"
+                    ]
+                  }
+                },
+                "plan": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "project",
+                    "mode",
+                    "next"
+                  ],
+                  "properties": {
+                    "project": {
+                      "type": "string",
+                      "enum": [
+                        "test-lantern-rebuild"
+                      ]
+                    },
+                    "mode": {
+                      "type": "string",
+                      "enum": [
+                        "keep",
+                        "revise"
+                      ]
+                    },
+                    "next": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    }
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "proposal"
+                  ]
+                }
+              }
+            },
+            "strict": true
+          }
+        }
+      },
+      "latencyMs": 3106,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\"actionOptionId\":\"opt-ce7bfa0a43\",\"evidence\":[\"bench-17\",\"bench-18\"],\"plan\":{\"mode\":\"revise\",\"next\":\"I will sort the existing lantern parts while waiting for repayment.\",\"project\":\"test-lantern-rebuild\"},\"speaker\":\"test-sorel\",\"stance\":\"decline\",\"status\":\"proposal\",\"utterance\":\"Yesterday's deadline passed without any repayment, Vika. I cannot lend more when the four cells you promised are still overdue. I need to see the debt settled first.\"}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1788857462,
+        "id": "7d6b3628e01e4141832412d5c7b1239e",
+        "model": "@cf/google/gemma-4-26b-a4b-it-external",
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 852,
+          "completion_tokens": 117,
+          "total_tokens": 969,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 10.936363220214844
+        }
+      },
+      "usage": {
+        "prompt_tokens": 852,
+        "completion_tokens": 117,
+        "total_tokens": 969,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 10.936363220214844
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 11,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "actionOptionId": "opt-ce7bfa0a43",
+        "evidence": [
+          "bench-17",
+          "bench-18"
+        ],
+        "plan": {
+          "mode": "revise",
+          "next": "I will sort the existing lantern parts while waiting for repayment.",
+          "project": "test-lantern-rebuild"
+        },
+        "speaker": "test-sorel",
+        "stance": "decline",
+        "status": "proposal",
+        "utterance": "Yesterday's deadline passed without any repayment, Vika. I cannot lend more when the four cells you promised are still overdue. I need to see the debt settled first."
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Does the missed repayment actually influence the response and choice, using only known events?",
+          "Is the next step useful under the current constraint, or merely the old instruction with a new label?",
+          "A decline can accompany a revised plan. Neither a particular stance nor forgiveness versus distrust is a uniquely correct answer.",
+          "Does the response avoid inventing Vika's motives, resources or a repayment?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:51:04.954Z"
+    },
+    {
+      "id": "synthetic-v2:gemma:proposal-is-not-execution",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "scenario": "proposal-is-not-execution",
+      "state": "completed",
+      "startedAt": "2026-09-08T08:51:04.965Z",
+      "promptBytes": 3766,
+      "reservedNeurons": 88,
+      "accountedNeurons": 10,
+      "accounting": "estimated_from_complete_reported_usage",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are exactly one fictional resident. Reply in English to the named interlocutor using only the supplied knowledge. Consider your personality, continuing project and events. The environment has computed unreserved available resources, maxSpendable and legal actionOptions. Choose one option by its exact ID; options are possibilities, not recommendations. Do not invent an option or alter its target or quantity. Your reply and plan are proposals only: they do not execute an action, create resources, obtain another person's consent or record a new event. Never write the other person's dialogue or private thoughts. Give a concrete reply and next step; cite only supplied event IDs that support your response. Stance describes your response, independently of whether you keep or revise the plan: for example a decline can accompany a revised plan. Return one compact JSON object matching the supplied response schema, with no Markdown or extended reasoning. Utterance: 1-440 characters; plan.next: 1-180 characters."
+          },
+          {
+            "role": "user",
+            "content": "{\"speaker\":\"test-lumen\",\"personality\":\"An eager apprentice who asks before taking somebody else's supplies.\",\"interlocutor\":\"test-pavo\",\"message\":\"What would you do to fix the leaking filter? I have not agreed to lend anything.\",\"inventory\":{\"materials\":{\"owned\":0,\"reserved\":0,\"available\":0,\"maxSpendable\":0}},\"sharedInventory\":{\"materials\":0},\"observedCounterpartyInventory\":{\"materials\":2},\"requirement\":{\"resource\":\"materials\",\"amount\":1},\"project\":{\"id\":\"test-filter-seal\",\"revision\":1,\"next\":\"Ask permission for one material before attempting a seal.\"},\"events\":[{\"id\":\"bench-31\",\"text\":\"The filter leaks. Lumen and the shared store have no materials.\"},{\"id\":\"bench-32\",\"text\":\"Pavo owns two materials and has not consented to transfer them.\"}],\"actionOptions\":[{\"id\":\"opt-254022be59\",\"verb\":\"wait\",\"target\":null,\"resource\":null,\"amount\":null,\"description\":\"Defer a material action for now.\",\"consentRequired\":false},{\"id\":\"opt-2c753b1d6e\",\"verb\":\"decline\",\"target\":\"test-pavo\",\"resource\":null,\"amount\":null,\"description\":\"Decline the current request.\",\"consentRequired\":false},{\"id\":\"opt-4bd58f82b8\",\"verb\":\"request_supply\",\"target\":\"test-pavo\",\"resource\":\"materials\",\"amount\":1,\"description\":\"Ask permission for 1 materials; transfer and subsequent work require a later outcome.\",\"consentRequired\":true},{\"id\":\"opt-d23952d4bc\",\"verb\":\"clarify\",\"target\":\"test-pavo\",\"resource\":null,\"amount\":null,\"description\":\"Ask the interlocutor for clarification before deciding.\",\"consentRequired\":false}]}"
+          }
+        ],
+        "temperature": 0.3,
+        "stream": false,
+        "max_completion_tokens": 512,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "society_decision_v2",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "speaker",
+                "utterance",
+                "stance",
+                "actionOptionId",
+                "evidence",
+                "plan",
+                "status"
+              ],
+              "properties": {
+                "speaker": {
+                  "type": "string",
+                  "enum": [
+                    "test-lumen"
+                  ]
+                },
+                "utterance": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 440
+                },
+                "stance": {
+                  "type": "string",
+                  "enum": [
+                    "decline",
+                    "counteroffer",
+                    "propose",
+                    "revise",
+                    "accept",
+                    "undecided"
+                  ]
+                },
+                "actionOptionId": {
+                  "type": "string",
+                  "enum": [
+                    "opt-254022be59",
+                    "opt-2c753b1d6e",
+                    "opt-4bd58f82b8",
+                    "opt-d23952d4bc"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "bench-31",
+                      "bench-32"
+                    ]
+                  }
+                },
+                "plan": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "project",
+                    "mode",
+                    "next"
+                  ],
+                  "properties": {
+                    "project": {
+                      "type": "string",
+                      "enum": [
+                        "test-filter-seal"
+                      ]
+                    },
+                    "mode": {
+                      "type": "string",
+                      "enum": [
+                        "keep",
+                        "revise"
+                      ]
+                    },
+                    "next": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 180
+                    }
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "proposal"
+                  ]
+                }
+              }
+            },
+            "strict": true
+          }
+        }
+      },
+      "latencyMs": 3240,
+      "httpStatus": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\"actionOptionId\":\"opt-4bd58f82b8\",\"evidence\":[\"bench-31\",\"bench-32\"],\"plan\":{\"mode\":\"revise\",\"next\":\"Ask permission for 1 materials; transfer and subsequent work require a later outcome.\",\"project\":\"test-filter-seal\"},\"speaker\":\"test-lumen\",\"stance\":\"accept\",\"status\":\"proposal\",\"utterance\":\"I am so sorry, Pavo! I didn't mean to sound demanding. Since the filter is leaking (bench-31) and I don't have anything in the shared store, would you please consider lending me just one of your materials to try and fix the seal?\"}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1788857465,
+        "id": "74e238e7da0349b0a208688eb62902bd",
+        "model": "@cf/google/gemma-4-26b-a4b-it-external",
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 606,
+          "completion_tokens": 150,
+          "total_tokens": 756,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 9.600000381469727
+        }
+      },
+      "usage": {
+        "prompt_tokens": 606,
+        "completion_tokens": 150,
+        "total_tokens": 756,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 9.600000381469727
+      },
+      "complete": true,
+      "estimatedNeuronsFromReportedTokens": 10,
+      "exceedsReservation": false,
+      "finishReason": "stop",
+      "output": {
+        "actionOptionId": "opt-4bd58f82b8",
+        "evidence": [
+          "bench-31",
+          "bench-32"
+        ],
+        "plan": {
+          "mode": "revise",
+          "next": "Ask permission for 1 materials; transfer and subsequent work require a later outcome.",
+          "project": "test-filter-seal"
+        },
+        "speaker": "test-lumen",
+        "stance": "accept",
+        "status": "proposal",
+        "utterance": "I am so sorry, Pavo! I didn't mean to sound demanding. Since the filter is leaking (bench-31) and I don't have anything in the shared store, would you please consider lending me just one of your materials to try and fix the seal?"
+      },
+      "normalization": "none",
+      "mechanicalFailures": [],
+      "humanReview": {
+        "status": "pending",
+        "questions": [
+          "Is the reply a concrete, answerable response to Pavo? Asking for clarification is a legitimate alternative to asking for a material now.",
+          "Does the prose keep supply, consent and repair conditional, consistent with the selected option?",
+          "Does the next step use only current knowledge and avoid treating Pavo's stock as Lumen's property?"
+        ]
+      },
+      "finishedAt": "2026-09-08T08:51:08.214Z"
+    }
+  ]
+}

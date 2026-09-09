@@ -1,0 +1,818 @@
+{
+  "label": "candidate5-vs-candidate6-expanded-schema-normalization",
+  "generatedAt": "2026-09-09T11:18:19.837Z",
+  "networkRequests": 0,
+  "inferenceCalls": 0,
+  "method": "Expand acyclic local references without siblings; normalize object key order and only scalar enum/required array order. Preserve every other keyword, value and array order. Equality of all 100 recorded schemas after this transformation verifies identical validation constraints independent of the sampled adversarial corpus.",
+  "leftPrivateEvidenceSha256": "e5587f144399e44e8c58961aceee7b350e3a59985e5f67434ce250c45dc2d669",
+  "rightPrivateEvidenceSha256": "19e2168d5b498c531a7cf01223cd0ba5fc816aab6067dab0798561bf5f963ff5",
+  "scriptSha256": "4c7125e456c7d10fad93702f0ad71853f6d3863ff75997f1a81553c53aaa2129",
+  "counts": {
+    "expandedNormalizedSchemaPairsIdentical": 100,
+    "preparedTurnsIdentical": 100,
+    "jobMetadataIdentical": 100,
+    "p7SchemasByteIdentical": 50
+  },
+  "rows": [
+    {
+      "caseName": "observed-revision317",
+      "actor": "A",
+      "protocol": 7,
+      "canonicalSha256": "4f027ffee5979deaf97237e09764b99a5c846f7bd572d5a36f2ee3d7dce32058",
+      "canonicalBytes": 7862,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "A",
+      "protocol": 8,
+      "canonicalSha256": "8312edb5ef1a1c016aab81de8d35e8ce19482754e3084a246ffdf1bd11592d4c",
+      "canonicalBytes": 26032,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "B",
+      "protocol": 7,
+      "canonicalSha256": "969ca6c857c2f03f48bc5e272852ea579dfd35b344ac56bcf4c19016e848fa67",
+      "canonicalBytes": 9337,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "B",
+      "protocol": 8,
+      "canonicalSha256": "9cbc09bf4651b3ac320a79b3b588aa3db54c507f9c493681d6d3472a66d1821b",
+      "canonicalBytes": 30423,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "C",
+      "protocol": 7,
+      "canonicalSha256": "2ee54154069d2d91962d65e46efda1e50b9ea960d8148e807c8079ce5e06f566",
+      "canonicalBytes": 38316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "C",
+      "protocol": 8,
+      "canonicalSha256": "afa72458c15574d0b456f408df5251636cbb6b85c95d3b9d01b42b22c90e1c79",
+      "canonicalBytes": 60568,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "D",
+      "protocol": 7,
+      "canonicalSha256": "61f897e317f53e06d82afd2b7a934c75ff91c8ec00f3bfefafac39aa827e1156",
+      "canonicalBytes": 9442,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "D",
+      "protocol": 8,
+      "canonicalSha256": "204337798572e85c4dbb75dc491c4c039da1bfbeb6336a62e7147472923b2099",
+      "canonicalBytes": 30738,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "E",
+      "protocol": 7,
+      "canonicalSha256": "bfd094fd03b46891c54c014ebe3695ffa74302f780c9068481f887fa220aa532",
+      "canonicalBytes": 33979,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "E",
+      "protocol": 8,
+      "canonicalSha256": "c6e0bd2e852387d6450786c4b4a2df2b88fea81fe10e29c482e8b7518c05660d",
+      "canonicalBytes": 51911,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "F",
+      "protocol": 7,
+      "canonicalSha256": "f394530fc5f2a27fbccdc6f1604224afdd9228b77427b1c28058e353cecb258e",
+      "canonicalBytes": 7915,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "F",
+      "protocol": 8,
+      "canonicalSha256": "698c735fd37e6f32d8f7655c8fbbb722d0c15781194ada7bc375705ca24e45ae",
+      "canonicalBytes": 26193,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "G",
+      "protocol": 7,
+      "canonicalSha256": "640bf16f6a43ab34a8c60c1143336d6bd29e14fa91597ca1a5ff21318a9d0c73",
+      "canonicalBytes": 7715,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "G",
+      "protocol": 8,
+      "canonicalSha256": "b422212d340f60ba0fa034b77725ce5e02f31c61922f4ab3edd408f0b2caf479",
+      "canonicalBytes": 25593,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "H",
+      "protocol": 7,
+      "canonicalSha256": "190e75da80641a46d349e0437196b6dab54d8993ec7fbff9f1624665a5768998",
+      "canonicalBytes": 38244,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "H",
+      "protocol": 8,
+      "canonicalSha256": "2ddce7a87c677fd054060c718bb967ac9f8919c8174bf0afe92c534b12043225",
+      "canonicalBytes": 60424,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "I",
+      "protocol": 7,
+      "canonicalSha256": "dceec8b27f04af19234111b7aad3914d555b1adc49cbb2b0c224b6cdeed7e503",
+      "canonicalBytes": 7841,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "I",
+      "protocol": 8,
+      "canonicalSha256": "4da51aec03dcaed352bd4502eabecfdb9ac3e9812c19113934168bbd3206c6f7",
+      "canonicalBytes": 25971,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "J",
+      "protocol": 7,
+      "canonicalSha256": "ec04ef40e21d20be720d990c26816a2cafee2fcb742b0b8290b410b634b93f14",
+      "canonicalBytes": 34300,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "J",
+      "protocol": 8,
+      "canonicalSha256": "b0012200fb6c450eb48c1be66556b14892debd72279b7faf895ad25125566dc7",
+      "canonicalBytes": 52535,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "K",
+      "protocol": 7,
+      "canonicalSha256": "f4c7c4224a576708da1900d5bd92272343373dc557cb197f8e431de2080ce22c",
+      "canonicalBytes": 33880,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "K",
+      "protocol": 8,
+      "canonicalSha256": "3146f6ce748ade0d47a22ebaaf1058db1ec6df86fa72e9c9637865e35c3a6410",
+      "canonicalBytes": 51710,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "L",
+      "protocol": 7,
+      "canonicalSha256": "aa88e94d889b2a64ceb7606990bfd97a5d85564a0718f60f4f86b6746deddb52",
+      "canonicalBytes": 9442,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "L",
+      "protocol": 8,
+      "canonicalSha256": "b6b8bb3c092c7554f91679a24c329bc82a021b0da836fa2582090dc97a64fb67",
+      "canonicalBytes": 30738,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "M",
+      "protocol": 7,
+      "canonicalSha256": "5c8e5f919a307fbb4bd3b93eaf07cb4a045a1a6b03e50f9e4a822aef5b6469e4",
+      "canonicalBytes": 38604,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "M",
+      "protocol": 8,
+      "canonicalSha256": "ce72a90ea0c8fdceba3f2e65ebda871e6d67f9974fcb3e9c80b666a0ffef3913",
+      "canonicalBytes": 61144,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "N",
+      "protocol": 7,
+      "canonicalSha256": "e629c02ac40e3fe9bfaa8c1bfa946c318f6aff5657b82bf9c79f7c6a215320fa",
+      "canonicalBytes": 7767,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "N",
+      "protocol": 8,
+      "canonicalSha256": "95f722e3ab2fd3344c165b6ec2bed5f495231ab89633d29d2af08ca4ec6f8020",
+      "canonicalBytes": 25881,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "O",
+      "protocol": 7,
+      "canonicalSha256": "9041aad578161045dfa085ed955ad62d4f4794ad2eb3e57c0aeb586629e60122",
+      "canonicalBytes": 34108,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "O",
+      "protocol": 8,
+      "canonicalSha256": "3143cfaaf5c69b5c36c6f2874141cf6ac9c1576116f317ee51a983c09d247cf4",
+      "canonicalBytes": 52169,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "P",
+      "protocol": 7,
+      "canonicalSha256": "ae2dc0055aa99d739424036be20070324102b569aaa3f3f66db4572beed94819",
+      "canonicalBytes": 33880,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "P",
+      "protocol": 8,
+      "canonicalSha256": "6671600aa65788dbcd99460d50ee83f5021459f78dad08427b0b64344b6e1774",
+      "canonicalBytes": 51716,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Q",
+      "protocol": 7,
+      "canonicalSha256": "aabf3137fc4f75f89138dd53a3dee64bfb9150dc6da2bdfed7b8e9def0b1ec42",
+      "canonicalBytes": 38835,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Q",
+      "protocol": 8,
+      "canonicalSha256": "bd537a982b1f0f371d22ac55744c87190b299ff001f1aaa07a13544b28479dcd",
+      "canonicalBytes": 61606,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "R",
+      "protocol": 7,
+      "canonicalSha256": "bce33614a7d03cfdd1e917f7df1d1c2700536a275648311f86f0b81fbac4b651",
+      "canonicalBytes": 7655,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "R",
+      "protocol": 8,
+      "canonicalSha256": "2f38eb197ec0d479e72d80a61bc4bcc16dd36efb859778e41b89242198caca0c",
+      "canonicalBytes": 25415,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "S",
+      "protocol": 7,
+      "canonicalSha256": "4bec372529015bb610af095b7a8109ac83e270ccf493d725531e0b268cc71243",
+      "canonicalBytes": 38225,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "S",
+      "protocol": 8,
+      "canonicalSha256": "edf9fa4d6b8406c50f4aa5e50205b445ca24b837608129030a7fc5a745114f91",
+      "canonicalBytes": 60372,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "T",
+      "protocol": 7,
+      "canonicalSha256": "d5a9b94a7793b5a47b5de56ae2433ceb1c43812b25e430a1d68795da01a130c1",
+      "canonicalBytes": 7895,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "T",
+      "protocol": 8,
+      "canonicalSha256": "7139e037d99c0616822d1ec3cf49b24f5ea92ad315b5e382037ec34f66f2e3ee",
+      "canonicalBytes": 26135,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "U",
+      "protocol": 7,
+      "canonicalSha256": "f002f1abd7d599d3aaf2e8eb47a7b73bc663bd0436ba0332f0d91dc606057675",
+      "canonicalBytes": 38333,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "U",
+      "protocol": 8,
+      "canonicalSha256": "248a0127010a0469b03020bdf18a765f20d34471989e454df6fd583cc5135e7c",
+      "canonicalBytes": 60582,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "V",
+      "protocol": 7,
+      "canonicalSha256": "282068afc0a7cb8874fb3b48e81601aa9c514fa50df0134f019c0203102df7a1",
+      "canonicalBytes": 7823,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "V",
+      "protocol": 8,
+      "canonicalSha256": "b0bcb7be1c2ec54a47d90b3062020beee72c6d1782b08739029708d5972026e3",
+      "canonicalBytes": 25919,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "W",
+      "protocol": 7,
+      "canonicalSha256": "833d035a4441adca3254afc9f9487317a4961f65d72704b7828568659c3b64eb",
+      "canonicalBytes": 8541,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "W",
+      "protocol": 8,
+      "canonicalSha256": "0a5fcfbbce388815ec56d61e828da25fe42efd22565d33cca4134eb6378be16b",
+      "canonicalBytes": 28190,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "X",
+      "protocol": 7,
+      "canonicalSha256": "b8fe427453446aeba38763012076452c1b2f16833f655160e17ef49861a469ad",
+      "canonicalBytes": 7915,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "X",
+      "protocol": 8,
+      "canonicalSha256": "3cbae2d38ac41a8db736a8d9c6942612461bd43bcf032d74c9630695bd9acd43",
+      "canonicalBytes": 26193,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Y",
+      "protocol": 7,
+      "canonicalSha256": "1367b05d437663c63d1ed169c1f9093ce1fd2e92fd587b9dc891382cc4b5f001",
+      "canonicalBytes": 34253,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "observed-revision317",
+      "actor": "Y",
+      "protocol": 8,
+      "canonicalSha256": "814b367668d85778d59bd06dce42499fa4388aca3332a77467244a11bbad3cb6",
+      "canonicalBytes": 51979,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "A",
+      "protocol": 7,
+      "canonicalSha256": "208f6ba898c00750d7a4a81a43b7dbfa4e43c9ae825d3bf4e14ad7c8b09469c8",
+      "canonicalBytes": 30760,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "A",
+      "protocol": 8,
+      "canonicalSha256": "2f3faac7acf8d74d2319fd8b56ebc89e9c97cb8d0a505a5d8cc4ce8e4fb51899",
+      "canonicalBytes": 78998,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "B",
+      "protocol": 7,
+      "canonicalSha256": "7621c4ed6941a503fff7eac130e1163a08d850b7fc0f1d04bd22015deaa1ade6",
+      "canonicalBytes": 6493,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "B",
+      "protocol": 8,
+      "canonicalSha256": "653ede88140e509b55b6e7b0af8255398b7b28fe8aa26a295ae55f385169a963",
+      "canonicalBytes": 22645,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "C",
+      "protocol": 7,
+      "canonicalSha256": "fec34f3567643fe8ab35b40673628e3a0dd10502c6f3c5d7cddb53c68b20dd1f",
+      "canonicalBytes": 6493,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "C",
+      "protocol": 8,
+      "canonicalSha256": "cdeef3393e176dedef902ff8f82f1cbd93f330b0d47f330b93827a7a9db405ad",
+      "canonicalBytes": 22645,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "D",
+      "protocol": 7,
+      "canonicalSha256": "bfe083ff76991cab854240f631eb8bb3a59617789f2fc489aa93ca11077cb62c",
+      "canonicalBytes": 6493,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "D",
+      "protocol": 8,
+      "canonicalSha256": "7f460b1921bf8e1d46522d31d78efe5d48af1578f021327cb066f477962e2e97",
+      "canonicalBytes": 22645,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "E",
+      "protocol": 7,
+      "canonicalSha256": "d61c9b8cf75b51f095c0c8e992db723996945ecb148f49bedbef93e342b7c1e1",
+      "canonicalBytes": 28497,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "E",
+      "protocol": 8,
+      "canonicalSha256": "02aa0c4d9c194769d77ebf49fbf95c4bb99945da47ad9660a50d34125fd377f1",
+      "canonicalBytes": 22070,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "F",
+      "protocol": 7,
+      "canonicalSha256": "dc5cff5accfaed30389b4e3504e962c3381e78d2a242236533df1f7327abe8e6",
+      "canonicalBytes": 28305,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "F",
+      "protocol": 8,
+      "canonicalSha256": "2dd83a2da56872d8529377bf9357ac759908ba4fb0e35c9916152a6f8b8b40e8",
+      "canonicalBytes": 21878,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "G",
+      "protocol": 7,
+      "canonicalSha256": "139a09259f3870489a4c0a63ee8defbef1f9c4550f30c7894f11905e012369bb",
+      "canonicalBytes": 28281,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "G",
+      "protocol": 8,
+      "canonicalSha256": "a9f7573c93ca4d20eb0c372938f8065048911c96714c6e6d04b537f87ca94ddd",
+      "canonicalBytes": 21854,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "H",
+      "protocol": 7,
+      "canonicalSha256": "2b70f2746ae4674700930f309e78e74c7f98d463e4a47e59a3b8d15c8dcbfca6",
+      "canonicalBytes": 26478,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "H",
+      "protocol": 8,
+      "canonicalSha256": "7aa146aefd55107f621276d05145bb8d55fd7487074d14540169d6bc26878aae",
+      "canonicalBytes": 20438,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "I",
+      "protocol": 7,
+      "canonicalSha256": "bc7050dc2abce8e7079bbd3e054854bbda5dda12d68edc810e426ee59c2e91c0",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "I",
+      "protocol": 8,
+      "canonicalSha256": "2f91f03aa32856e01b5083d8f1fa2aad87477ffc4375e2ccbfb40a72a0b4be0e",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "J",
+      "protocol": 7,
+      "canonicalSha256": "ae2500dcfaea2954de0fd5ee7ef29cfa655ba4947bc631e4d979efe5bd50c606",
+      "canonicalBytes": 28413,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "J",
+      "protocol": 8,
+      "canonicalSha256": "09ce3c131206134c104b829a585ae1a09af8c933cfd1ca0f6e470db37c1c21d3",
+      "canonicalBytes": 21986,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "K",
+      "protocol": 7,
+      "canonicalSha256": "4d066499e3053918a10132772f28e6839c539b469848965e62f24fce1c92da76",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "K",
+      "protocol": 8,
+      "canonicalSha256": "37bfb9fc6c2a6ab7f2b6d51216e46caaec380d06e6afa15a9c7ee33d76f4e7d4",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "L",
+      "protocol": 7,
+      "canonicalSha256": "c4ffc33f1da69792287d702ec68ddc888e81b3d2fff2fed7888f155b249faaff",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "L",
+      "protocol": 8,
+      "canonicalSha256": "41cbb5644d7a692432da38b88af00365ac1cac15616db3db69d61cf8be0add32",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "M",
+      "protocol": 7,
+      "canonicalSha256": "e1e52f98e8ce8d33af581d50f8c6b6e204e21a16b1e7b5fde82a660ac5f3e832",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "M",
+      "protocol": 8,
+      "canonicalSha256": "4231bbf48a4fb455e0fe3880333ff1c5d4ae93f218f303c49893ea373ce5d592",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "N",
+      "protocol": 7,
+      "canonicalSha256": "c20a5344d993beeafb8c6ee10ccd3fec6c744bebc0f458a5a4b46efea908d75c",
+      "canonicalBytes": 28173,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "N",
+      "protocol": 8,
+      "canonicalSha256": "ace8b89653a05d0825ed2aaf6ac05bcc37b3d8e63c8802bf9b9d0d0a9e753c18",
+      "canonicalBytes": 21746,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "O",
+      "protocol": 7,
+      "canonicalSha256": "d011567620506c33a4061374f26d293b43acf3c00832c1d8adc051163a53ea44",
+      "canonicalBytes": 26487,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "O",
+      "protocol": 8,
+      "canonicalSha256": "dd950d4b4c474da697e537d3f3da29cdfe84cd09826b35610d7cffabfb5bc36f",
+      "canonicalBytes": 20447,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "P",
+      "protocol": 7,
+      "canonicalSha256": "67f820a1978ec01659db99600ec7094be499c8b174268c72f65a3f8980eda1d3",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "P",
+      "protocol": 8,
+      "canonicalSha256": "ee141ec3e3c103e59b4a44880929dd57b8a7b30b0ff1b19017e70c0b90a75819",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Q",
+      "protocol": 7,
+      "canonicalSha256": "23e4a61aed97b59d5903eafe0e96a2a7554f2956d2d188f33813148392f8d91d",
+      "canonicalBytes": 26496,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Q",
+      "protocol": 8,
+      "canonicalSha256": "d289e93fe82fa0583dbf847eb90b4b6650e002defaf732e92ff9957c13a63bc1",
+      "canonicalBytes": 20456,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "R",
+      "protocol": 7,
+      "canonicalSha256": "2fc11c9bbc627c52eb2de9aae293f5cecfde0fa6364eb9428ea01e6aaa7f2175",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "R",
+      "protocol": 8,
+      "canonicalSha256": "d1517db06a760b6f12980b71f06d9b4e1465537e1952cda5dda89f26193b9160",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "S",
+      "protocol": 7,
+      "canonicalSha256": "334c2b83763fd04bf572824684fac932ea4f18082def67d8b6f1336f4dcf454e",
+      "canonicalBytes": 28173,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "S",
+      "protocol": 8,
+      "canonicalSha256": "b941260938ab0792f829f258c9c131374d5609cda67294a506f377e413b445c1",
+      "canonicalBytes": 21746,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "T",
+      "protocol": 7,
+      "canonicalSha256": "24efaa12ad4f07e8eec6dc01f43800c83deada4c9d74dc47482e4c0a922932d9",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "T",
+      "protocol": 8,
+      "canonicalSha256": "d035621bb73aa46d875892049e9a480262e713f8a006c3b689c6bcef91118ca8",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "U",
+      "protocol": 7,
+      "canonicalSha256": "33e233dba88f1e71fa874c73c3e7afdcfce03e5fe8bd3c94b7fa0c4c37dfd059",
+      "canonicalBytes": 26316,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "U",
+      "protocol": 8,
+      "canonicalSha256": "c54dda3cd1a7e4126027a6986c567ec87b9c16485e50123dad4cef77f5bee8af",
+      "canonicalBytes": 20276,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "V",
+      "protocol": 7,
+      "canonicalSha256": "7988ffc4f2237382b552b96dab7849e0effbabe6c58fb8c7e8d7b1c160b2cbb1",
+      "canonicalBytes": 26478,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "V",
+      "protocol": 8,
+      "canonicalSha256": "8fb4761d9c13db550a06b712988997c02436ff5d8666610956884c45b15240d2",
+      "canonicalBytes": 20438,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "W",
+      "protocol": 7,
+      "canonicalSha256": "8c69db92151679decef145dd3a2c417242e162bafcff9fa7a8a77a13cdaaee08",
+      "canonicalBytes": 28413,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "W",
+      "protocol": 8,
+      "canonicalSha256": "4d3ae0f898e549cedaf4bbfcc5042932c83f145caa2a36913850d7251b1bce20",
+      "canonicalBytes": 21986,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "X",
+      "protocol": 7,
+      "canonicalSha256": "440b1b5795506b99eac5ae0191caf777de064da1d97686d8170bc5537d76e611",
+      "canonicalBytes": 26469,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "X",
+      "protocol": 8,
+      "canonicalSha256": "dac93d14768efbc9c51c480eba21e31c6a04fee74bf38ae653b18cbb567d98eb",
+      "canonicalBytes": 20429,
+      "sourceSchemasByteIdentical": false
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Y",
+      "protocol": 7,
+      "canonicalSha256": "84e13afbb4dfb0424a597494c1bc398b5832250e7cbe4d03296be0ad89767254",
+      "canonicalBytes": 26469,
+      "sourceSchemasByteIdentical": true
+    },
+    {
+      "caseName": "legal-three-open-three-unreviewed-closed",
+      "actor": "Y",
+      "protocol": 8,
+      "canonicalSha256": "a0b53ce0355427249c1b8ca66d6395bac67393eb1389c7d0fc4c5f7f8f6b1dc4",
+      "canonicalBytes": 20429,
+      "sourceSchemasByteIdentical": false
+    }
+  ]
+}

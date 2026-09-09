@@ -1,0 +1,277 @@
+{
+  "scope": "Matched V4 prefixes, one independent candidate decision per model/case. No production mutation or physical watch.",
+  "humanReview": "pending",
+  "binding": "cf997ba594f8be32a3caa2c2e33f25885f8f33941c5388512667b6f169f362aa",
+  "newCalls": 3,
+  "halted": null,
+  "attempts": 4,
+  "accountedNeurons": 100,
+  "maxNeurons": 400,
+  "baselines": [
+    {
+      "actor": "B",
+      "beforeHash": "de4b7f63e0b49d499a145a57014fb071d509dc840488faba73abdf34840d8b71",
+      "qwenOutput": {
+        "message": {
+          "text": "Let me check that for you.",
+          "to": "H"
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1"
+          ],
+          "text": "Let me check that for you."
+        }
+      },
+      "qwenApplication": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "776aece95f95e9ed284ad256af50f7f4751ac8c719a8ba54e539d9dbc7befb4c",
+        "balanceChanges": []
+      }
+    },
+    {
+      "actor": "G",
+      "beforeHash": "60c2bf8e73d43120767c806444dda3729f48421ab4d80c7973a2ec6092b4c641",
+      "qwenOutput": {
+        "message": {
+          "text": "I'll inspect the hull integrity. Let me know if you need anything else.",
+          "to": "D"
+        },
+        "offer": {
+          "expiresInWatches": 1,
+          "terms": {
+            "cells": 0,
+            "dueWatch": 401,
+            "kind": "work",
+            "payer": "G",
+            "room": "workshops",
+            "units": 1,
+            "verb": "inspect",
+            "worker": "G"
+          }
+        }
+      },
+      "qwenApplication": {
+        "ok": false,
+        "code": "invalid_offer_parties",
+        "afterHash": "3876a05cda1b952ab34ef3a873049b5d8a380bfc2fb3d1b1d706cf786629d9f8",
+        "balanceChanges": []
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "alternative-v1:glm:isolated-society-runtime-v4:mind:B:0:1:g:0",
+      "actor": "B",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "state": "failed",
+      "usage": null,
+      "output": null,
+      "validation": null,
+      "error": "http_401",
+      "accountedNeurons": 68,
+      "latencyMs": 326
+    },
+    {
+      "id": "alternative-v1:gemma:isolated-society-runtime-v4:mind:B:0:1:g:0",
+      "actor": "B",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 775,
+        "completion_tokens": 147,
+        "total_tokens": 922,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.054545402526855
+      },
+      "output": {
+        "message": {
+          "text": "Oh, hello! Sorry, I didn't see you there—no problem at all, let me just check if anyone needs anything from the stores? Actually, I was wondering... if you have a moment, could I ask your opinion on the new inventory layout? It's just a small thing, really!",
+          "to": "K"
+        },
+        "reflection": {
+          "refs": [
+            "world:100:1"
+          ],
+          "text": "Initiating contact with Kes to fulfill the want of being consulted."
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "25c5a43cb3b967f6a59b796c3c3ed63869ae89e1ae29c8bbdd7740ce0398085e",
+        "project": null,
+        "conversations": [
+          {
+            "id": "conversation:5",
+            "participants": [
+              "B",
+              "K"
+            ],
+            "revision": 1,
+            "nextSpeaker": "K",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:6",
+                "index": 0,
+                "speaker": "B",
+                "text": "Oh, hello! Sorry, I didn't see you there—no problem at all, let me just check if anyone needs anything from the stores? Actually, I was wondering... if you have a moment, could I ask your opinion on the new inventory layout? It's just a small thing, really!",
+                "atMs": 1788825602001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balanceChanges": []
+      },
+      "error": null,
+      "accountedNeurons": 12,
+      "latencyMs": 3153
+    },
+    {
+      "id": "alternative-v1:glm:isolated-society-runtime-v4:mind:G:1:6:g:0",
+      "actor": "G",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 919,
+        "completion_tokens": 76,
+        "total_tokens": 995,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.8209
+      },
+      "output": {
+        "message": {
+          "to": "D",
+          "text": "I'm on duty. Report to the airlock for the inspection."
+        },
+        "offer": {
+          "terms": {
+            "kind": "work",
+            "worker": "G",
+            "payer": "D",
+            "cells": 0,
+            "verb": "inspect",
+            "room": "hold",
+            "units": 1,
+            "dueWatch": 400
+          },
+          "expiresInWatches": 1
+        }
+      },
+      "validation": {
+        "ok": false,
+        "code": "invalid_work_deadline",
+        "afterHash": "3876a05cda1b952ab34ef3a873049b5d8a380bfc2fb3d1b1d706cf786629d9f8",
+        "project": null,
+        "conversations": [
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "revision": 1,
+            "nextSpeaker": "G",
+            "status": "open",
+            "createdAtMs": 1788825604001,
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "index": 0,
+                "speaker": "D",
+                "text": "I need to inspect the hull integrity. Gita Raman is on duty. I should check with them.",
+                "atMs": 1788825604001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balanceChanges": []
+      },
+      "error": null,
+      "accountedNeurons": 8,
+      "latencyMs": 11757
+    },
+    {
+      "id": "alternative-v1:gemma:isolated-society-runtime-v4:mind:G:1:6:g:0",
+      "actor": "G",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 949,
+        "completion_tokens": 117,
+        "total_tokens": 1066,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.818181991577148
+      },
+      "output": {
+        "message": {
+          "text": "Vashenko. The integrity is within tolerance, but the sensor array in sector four is drifting. I'll need you to verify the manual readings before I sign off on the cycle.",
+          "to": "D"
+        },
+        "reflection": {
+          "refs": [
+            "turn:17"
+          ],
+          "text": "Dima is being proactive. It's efficient, if a bit loud."
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "25cad6e1ef5ed56c18aa60e5c737d41b4b6206c80186b3a6fb6db8f30688368e",
+        "project": null,
+        "conversations": [
+          {
+            "id": "conversation:16",
+            "participants": [
+              "D",
+              "G"
+            ],
+            "revision": 2,
+            "nextSpeaker": "D",
+            "status": "open",
+            "createdAtMs": 1788825604001,
+            "expiresAtMs": 1788912004001,
+            "turns": [
+              {
+                "id": "turn:17",
+                "index": 0,
+                "speaker": "D",
+                "text": "I need to inspect the hull integrity. Gita Raman is on duty. I should check with them.",
+                "atMs": 1788825604001
+              },
+              {
+                "id": "turn:33",
+                "index": 1,
+                "speaker": "G",
+                "text": "Vashenko. The integrity is within tolerance, but the sensor array in sector four is drifting. I'll need you to verify the manual readings before I sign off on the cycle.",
+                "atMs": 1788825607001
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "agreements": [],
+        "balanceChanges": []
+      },
+      "error": null,
+      "accountedNeurons": 12,
+      "latencyMs": 2387
+    }
+  ]
+}

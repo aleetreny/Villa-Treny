@@ -6,14 +6,16 @@ import { Portrait } from './Portrait';
 import { Weave } from './Weave';
 import { SocietyLedger } from './SocietyLedger';
 import { LiveStatus } from './LiveStatus';
+import { AgencyNotebook } from './AgencyNotebook';
 import { useReducedMotion } from '../../../lib/habitat/observer-preferences';
 import { ROOM_BY_ID, type RoomId } from '../../../lib/habitat/rooms';
 import { RESIDENTS, RESIDENT_BY_ID, type ResidentId } from '../../../lib/habitat/residents';
 import { useHabitatLive } from '../../../lib/habitat/useHabitatLive';
 import { useObserverPresence } from '../../../lib/habitat/useObserverPresence';
+import { presentJournalEntry } from '../../../lib/habitat/public-message-translation';
 import '../../../styles/habitat-observer.css';
 
-type Notebook = 'diary' | 'people' | 'relations';
+type Notebook = 'diary' | 'lives' | 'people' | 'relations';
 const WATCH = ['', 'I', 'II', 'III', 'IV'] as const;
 
 function clock(minute: number): string {
@@ -139,15 +141,18 @@ export function HabitatView({ onClose, portfolioUrl = 'https://aleetreny.github.
 
         <aside className="ns-notebook" aria-label="Observer’s notebook">
           <div className="ns-notebook__tabs" role="group" aria-label="Notebook">
-            {([['diary', 'Journal'], ['people', 'The 25'], ['relations', 'Weave']] as const).map(([id, label]) => (
+            {([['diary', 'Journal'], ['lives', 'Lives'], ['people', 'The 25'], ['relations', 'Weave']] as const).map(([id, label]) => (
               <button type="button" key={id} aria-pressed={notebook === id} onClick={() => { setNotebook(id); setOpened(null); }}>{label}</button>
             ))}
+          </div>
+          <div hidden={opened !== null || notebook !== 'lives'}>
+            <AgencyNotebook agency={live.agency} cognition={live.status?.cognition} onOpen={openPerson} recordsBase={live.base} />
           </div>
           {opened ? (
             <Dossier id={opened} snapshot={snapshot} onClose={closeProfile} onOpen={openPerson}
               onObserve={(id) => { setFollowed(id); setOpened(null); setNotebook('diary'); }}
-              archive={live.archive} archiveDay={live.archiveDay} relationships={live.relationships} society={live.society} />
-          ) : notebook === 'people' ? (
+              archive={live.archive} archiveDay={live.archiveDay} relationships={live.relationships} society={live.society} agency={live.agency} />
+          ) : notebook === 'lives' ? null : notebook === 'people' ? (
             <div className="ns-roster">
               <label className="ns-search"><span>Find someone</span><input value={rosterSearch} onChange={(event) => setRosterSearch(event.target.value)} placeholder="Name or room" /></label>
               {!residents.length ? <p className="ns-message">No matching residents. Try another name or a room.</p> : null}
@@ -160,6 +165,7 @@ export function HabitatView({ onClose, portfolioUrl = 'https://aleetreny.github.
             <div className="ns-trama-help"><h3>Nobody lives alone.</h3><p>Trust, affection, admiration, debt, resentment and desire. What one person feels may differ from what they receive.</p><p>Choose a portrait to read their story. Switch between the graph, matrix and bonds to see the same community from another angle.</p><button type="button" onClick={() => setNotebook('people')}>Meet the 25</button></div>
           ) : (
             <div className="ns-diary">
+              <p className="ns-ledger__note">Spoken messages are residents’ claims. Recorded outcomes show what actually changed.</p>
               <SocietyLedger society={live.society} day={live.snapshot.day} watch={live.snapshot.watch} onOpen={openPerson} />
               <div className="ns-diary__day"><button type="button" aria-label="Previous day" disabled={live.archiveDay <= 100} onClick={() => live.setArchiveDay(live.archiveDay - 1)}>Previous</button><span>Day {live.archiveDay}</span><button type="button" aria-label="Next day" disabled={live.archiveDay >= snapshot.day} onClick={() => live.setArchiveDay(live.archiveDay + 1)}>Next</button></div>
               <div className="ns-diary__filter"><button type="button" aria-pressed={!localRecord} onClick={() => setLocalRecord(false)}>Whole habitat</button><button type="button" aria-pressed={localRecord} onClick={() => setLocalRecord(true)}>This room</button></div>
@@ -167,13 +173,16 @@ export function HabitatView({ onClose, portfolioUrl = 'https://aleetreny.github.
               {live.archiveLoading ? <p className="ns-message" role="status">Reading the journal…</p> : null}
               {live.archiveError ? <p className="ns-message">{live.archiveError} <button type="button" onClick={live.refresh}>Refresh</button></p> : null}
               {!records.length && !live.archiveLoading && !live.archiveError ? <p className="ns-message">No events match this selection yet.</p> : null}
-              <ol className="ns-record">{records.map((entry, index) => (
-                <li key={`${entry.day}-${entry.minute}-${entry.room}-${index}`}>
+              <ol className="ns-record">{records.map((entry, index) => {
+                const display = presentJournalEntry(entry);
+                return <li key={`${entry.day}-${entry.minute}-${entry.room}-${index}`}>
                   <div><time>{clock(entry.minute)}</time><button type="button" onClick={() => selectRoom(entry.room)}>{ROOM_BY_ID[entry.room].name}</button></div>
-                  <p>{entry.text}</p>
+                  {entry.speech ? <p className="ns-ledger__note">{RESIDENT_BY_ID[entry.speech.speaker].name.split(' ')[0]} said</p> : null}
+                  <p>{display.text}</p>
+                  {display.translationLabel ? <p className="ns-ledger__note">{display.translationLabel}</p> : null}
                   <div className="ns-record__who">{entry.who.map((id) => <button type="button" key={id} onClick={() => openPerson(id)}>{RESIDENT_BY_ID[id].name.split(' ')[0]}</button>)}</div>
-                </li>
-              ))}</ol>
+                </li>;
+              })}</ol>
             </div>
           )}
           <footer className="ns-notebook__status"><span>{snapshot.people.length} lives · one shared refuge</span><button type="button" onClick={live.refresh} aria-label="Refresh the habitat state">Refresh</button></footer>

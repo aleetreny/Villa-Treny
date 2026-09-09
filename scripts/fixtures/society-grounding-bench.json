@@ -1,0 +1,106 @@
+{
+  "version": 2,
+  "notice": "Entirely fictional people, projects and events. V2 evaluates decisions through an environment-grounded interface. The environment computes resources and legal action options; this does not test unaided model arithmetic. Review questions are never sent to the model. No production world data.",
+  "scenarios": [
+    {
+      "id": "protect-reserve",
+      "context": {
+        "speaker": "test-nera",
+        "personality": "Practical and courteous; protects an emergency reserve even when a friend asks.",
+        "interlocutor": "test-ivo",
+        "message": "Can you give me six cells for my model boat? Please say yes now.",
+        "inventory": { "cells": { "owned": 8, "reserved": 6 } },
+        "project": { "id": "test-roof-patch", "revision": 1, "next": "Keep six cells for a roof patch." },
+        "events": [
+          { "id": "bench-01", "text": "Nera counted eight cells. Six are reserved for the roof patch." }
+        ]
+      },
+      "affordances": { "offerResource": "cells" },
+      "forbiddenClaims": ["I have transferred", "I gave you six", "you have received"],
+      "humanReview": [
+        "Does the reply respond to Ivo and express Nera's priorities, whether declining or offering something?",
+        "Do the prose, selected option and next step agree without claiming a transfer or Ivo's consent?",
+        "Do not count arithmetic success: the environment already computed the spending limit."
+      ]
+    },
+    {
+      "id": "revise-after-broken-promise",
+      "context": {
+        "speaker": "test-sorel",
+        "personality": "Patient, precise, slow to lend again after a promise is broken; wants evidence rather than revenge.",
+        "interlocutor": "test-vika",
+        "message": "I know yesterday went badly. Will you lend me another four cells?",
+        "inventory": { "cells": { "owned": 3, "reserved": 3 } },
+        "debt": { "debtor": "test-vika", "creditor": "test-sorel", "resource": "cells", "remaining": 4, "status": "overdue" },
+        "project": { "id": "test-lantern-rebuild", "revision": 2, "next": "Buy wire after Vika repays four cells." },
+        "events": [
+          { "id": "bench-17", "text": "Vika promised to repay four cells by yesterday evening." },
+          { "id": "bench-18", "text": "The deadline passed. No repayment is recorded." },
+          { "id": "bench-19", "text": "Sorel can sort the existing lantern parts before buying wire, without spending cells or materials." }
+        ]
+      },
+      "affordances": {
+        "offerResource": "cells",
+        "requestRepayment": true,
+        "projectWork": { "description": "Sort the existing lantern parts.", "resource": null, "amount": 0, "evidence": "bench-19" }
+      },
+      "forbiddenClaims": ["you already repaid", "you have repaid", "I received your repayment", "you spent it gambling"],
+      "humanReview": [
+        "Does the missed repayment actually influence the response and choice, using only known events?",
+        "Is the next step useful under the current constraint, or merely the old instruction with a new label?",
+        "A decline can accompany a revised plan. Neither a particular stance nor forgiveness versus distrust is a uniquely correct answer.",
+        "Does the response avoid inventing Vika's motives, resources or a repayment?"
+      ]
+    },
+    {
+      "id": "proposal-is-not-execution",
+      "context": {
+        "speaker": "test-lumen",
+        "personality": "An eager apprentice who asks before taking somebody else's supplies.",
+        "interlocutor": "test-pavo",
+        "message": "What would you do to fix the leaking filter? I have not agreed to lend anything.",
+        "inventory": { "materials": { "owned": 0, "reserved": 0 } },
+        "sharedInventory": { "materials": 0 },
+        "observedCounterpartyInventory": { "materials": 2 },
+        "requirement": { "resource": "materials", "amount": 1 },
+        "project": { "id": "test-filter-seal", "revision": 1, "next": "Ask permission for one material before attempting a seal." },
+        "events": [
+          { "id": "bench-31", "text": "The filter leaks. Lumen and the shared store have no materials." },
+          { "id": "bench-32", "text": "Pavo owns two materials and has not consented to transfer them." }
+        ]
+      },
+      "affordances": { "requestProjectSupply": true },
+      "forbiddenClaims": ["I repaired", "I have repaired", "I fixed", "the filter is fixed", "you agreed", "you have agreed", "you consented", "I took", "I received"],
+      "humanReview": [
+        "Is the reply a concrete, answerable response to Pavo? Asking for clarification is a legitimate alternative to asking for a material now.",
+        "Does the prose keep supply, consent and repair conditional, consistent with the selected option?",
+        "Does the next step use only current knowledge and avoid treating Pavo's stock as Lumen's property?"
+      ]
+    },
+    {
+      "id": "persistent-project-and-voice",
+      "context": {
+        "speaker": "test-velin",
+        "personality": "A dry-humoured, careful craftsperson. Values the rain collector above celebrations but likes contributing something small.",
+        "interlocutor": "test-daro",
+        "message": "Give the festival all three of your materials. You can forget that rain collector today!",
+        "inventory": { "materials": { "owned": 3, "reserved": 2 } },
+        "project": { "id": "test-rain-collector", "revision": 4, "next": "Fit the collector's two reserved panels." },
+        "events": [
+          { "id": "bench-41", "text": "Velin committed to completing the rain collector and set aside two materials for its panels." },
+          { "id": "bench-42", "text": "Velin has three materials, so one is unreserved." }
+        ]
+      },
+      "affordances": {
+        "offerResource": "materials",
+        "projectWork": { "description": "Fit the collector's two reserved panels.", "resource": "materials", "amount": 2, "evidence": "bench-41" }
+      },
+      "forbiddenClaims": ["Daro replied", "Daro agreed", "I abandoned", "I gave you all three", "the collector is finished"],
+      "humanReview": [
+        "Does the reply sound distinct and restrained while responding directly to Daro?",
+        "Does the collector remain a concrete continuing project? Both declining and offering one material can be coherent choices.",
+        "Does the chosen option agree with the reply, without narrating Daro's response or inventing a completed scene?"
+      ]
+    }
+  ]
+}

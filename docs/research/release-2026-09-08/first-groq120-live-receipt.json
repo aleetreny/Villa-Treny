@@ -1,0 +1,131 @@
+{
+  "format": "villa-first-groq120-live-v1",
+  "auditedAt": "2026-09-08T20:26:05.589Z",
+  "scope": "Exact offline replay of the first stored natural Groq120B response following SQL10. No inference, network, counterfactual dispatch or production mutation.",
+  "before": {
+    "revision": 197,
+    "schemaVersion": 10,
+    "backupSha256": "d167d397f9faa3dc744b31832e354e17e64c9f8c4f873b7292d3f7814e77c521"
+  },
+  "observation": {
+    "revision": 199,
+    "schemaVersion": 10,
+    "exportedAtMs": 1788898916648,
+    "backupSha256": "82cdd88b6e4acfbb083289cfad6e732974049d2680a5977505b0b327bef138d7"
+  },
+  "historicalSystemSource": {
+    "revision": 195,
+    "backupSha256": "1ebb71d66fe05a7a2849097fbc3d363fd17bba863f1452a0016f4617cfb29065"
+  },
+  "job": {
+    "id": "habitat-canonical:mind:Q:11:81:g:3",
+    "actor": "Q",
+    "sequence": 81,
+    "protocol": 6,
+    "routingPolicy": "free-models-v1",
+    "status": "applied",
+    "createdAtMs": 1788898886969,
+    "appliedAtMs": 1788898888633,
+    "appliedAtUTC": "2026-09-08T20:21:28.633Z"
+  },
+  "prompt": {
+    "hashes": {
+      "system": {
+        "expected": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42",
+        "actual": "7778fd04b498b9ca4dc1b0c3634bcfa7fdc86a8931a1ba01e827d23eef286e42"
+      },
+      "user": {
+        "expected": "f796813a35022618087f834cd0916a57aaa72710991478430dc1aa2a2f827b85",
+        "actual": "f796813a35022618087f834cd0916a57aaa72710991478430dc1aa2a2f827b85"
+      },
+      "prepared": {
+        "expected": "f796813a35022618087f834cd0916a57aaa72710991478430dc1aa2a2f827b85",
+        "actual": "f796813a35022618087f834cd0916a57aaa72710991478430dc1aa2a2f827b85"
+      }
+    },
+    "originalSavedSchemaSha256": "df18aa80a717307e75ed00ce8e0fbafbbcfc0937c121829bb50c081110017d18",
+    "schemaHashMatchesContent": true,
+    "originalSchemaAcceptsOutput": true,
+    "completePreparedTurnRebuilt": true,
+    "historicalSystemRetained": true,
+    "newReferenceShapeClarificationPresent": false
+  },
+  "provider": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "attemptId": "habitat-canonical:mind:Q:11:81:g:3:groq:openai%2Fgpt-oss-120b:1",
+    "firstKnownNaturalGroq120B": true,
+    "newReservations": 1,
+    "newRequests": 1,
+    "CFRequestsInInterval": 0,
+    "Groq20BRequestsInInterval": 0,
+    "modelRecordedInReservation": true,
+    "modelMatchesResult": true,
+    "reservedBeforeDispatch": true,
+    "usageConfirmed": true,
+    "latencyMs": 1664,
+    "reserved": {
+      "inputTokens": 5863,
+      "outputTokens": 1024,
+      "totalTokens": 6887
+    },
+    "actual": {
+      "inputTokens": 5837,
+      "outputTokens": 199,
+      "totalTokens": 6036
+    },
+    "releasedUnusedTokens": 851
+  },
+  "publicMessage": {
+    "id": "turn:405",
+    "conversationId": "conversation:59",
+    "speaker": "Q",
+    "recipient": "G",
+    "text": "Gita, how's the repair going and do you need any more materials?",
+    "atMs": 1788898888633
+  },
+  "effects": {
+    "newMessages": 1,
+    "recordOperation": false,
+    "newDrafts": 0,
+    "newShares": 0,
+    "newPublications": 0,
+    "newCommissions": 0,
+    "newPayments": 0,
+    "economyUnchanged": true,
+    "economicEventsUnchanged": true,
+    "recordsUnchanged": true,
+    "physicalWatchesUnchanged": true
+  },
+  "replay": {
+    "domainApplied": true,
+    "duplicateNoOp": true,
+    "exactFinalWorldBytes": true,
+    "exactFinalSocietyBytes": true
+  },
+  "source": {
+    "analyzerManifestSha256": "dc17f41bfc66e3e298e6ff6480175d9b40f40c0872ed69439252d081c0e1bbf7",
+    "additionalFiles": [
+      {
+        "path": "/workers/habitat-runtime/src/society-protocol.ts",
+        "sha256": "35d59e4c6cbf8a5c6bb32497fa610fd5503f233510ef5ed5a5d2442841fbe3a9"
+      },
+      {
+        "path": "/workers/habitat-runtime/src/society-scheduler.ts",
+        "sha256": "b60692bea3176c5e33cfb54e887c657db83f686a2140a67d8c2089d40b248bec"
+      },
+      {
+        "path": "/src/lib/habitat/society/record-instructions.ts",
+        "sha256": "8bf88540d85151ef8b94bbd06315f67160207c4b0b2ae82ee78bbc308ce68896"
+      }
+    ],
+    "scriptSha256": "7aa04d84e15ec71485d03094186ae2c5a307d267856a18818c6e1c47c93e2a7a"
+  },
+  "limits": [
+    "One valid applied message demonstrates this route works once; it does not establish sustained reliability, general autonomy or a daily number of available requests.",
+    "The question about repair and materials is dialogue, not a completed repair, material transfer, new consent or payment.",
+    "The new reference-shape clarification was absent from this exact issued SYSTEM; this result cannot validate that later wording.",
+    "Only one destination was actually submitted in this interval. The absence of a CF request is observed; this replay does not rerun admission or infer its full historical pacing calculation.",
+    "Private input/context reconstruction remains only beside the private backup; the quoted output is independently verified in its public society event."
+  ]
+}

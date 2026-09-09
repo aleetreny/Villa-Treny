@@ -1,0 +1,120 @@
+{
+  "protocol": 6,
+  "policy": {
+    "version": 1,
+    "protocol": 6,
+    "maxCalls": 12,
+    "turnsPerConversation": 3,
+    "physicalWatchesPerClone": 1,
+    "maxPromptBytes": 24576,
+    "maxOutputTokens": 1024,
+    "thinking": false,
+    "timeoutMs": 120000,
+    "turnIntervalMs": 180000,
+    "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+    "pairs": [
+      "CN",
+      "AU",
+      "BK",
+      "TY"
+    ],
+    "scope": "Four independent clones of one verified canonical recovery. Actual next speaker, no planted dialogue, no production writes.",
+    "negativeCase": "TY currently concerns a harvest forecast, not a request to write. No document is required."
+  },
+  "model": "Qwen3.6-35B-A3B-4bit",
+  "backupSha256": "7033348b3df04ae2a41254da7c002ed2eaa9aaa2b23b228d7cca2c0a39e49dbc",
+  "worldRevision": 159,
+  "sourceSchemaVersion": 8,
+  "epochMs": 1788889383776,
+  "sequenceStart": 64,
+  "sourceManifestSha256": "7cba2684cf10552c285fd9f0947b803a62817b59d4212f2cbde5a6710d357933",
+  "branches": [
+    {
+      "pair": "CN",
+      "conversationId": "conversation:17",
+      "nextSpeaker": "C",
+      "initialMessages": [
+        {
+          "id": "turn:246",
+          "speaker": "C",
+          "text": "Emphasize minimum consciousness level, vital signs thresholds, and contraindications for waking. Begin drafting now.",
+          "atMs": 1788881436914
+        },
+        {
+          "id": "turn:292",
+          "speaker": "N",
+          "text": "I'll begin drafting the waking criteria now, covering the consciousness level, vital‑sign thresholds, and contraindications. Do you have a preferred format or length for the document?",
+          "atMs": 1788887766807
+        }
+      ],
+      "firstPromptBytes": 21526,
+      "firstJobSha256": "f751bab2b2c41393e7da804ba57c6057e2425d7c647db10ffefca49af2f16fb6"
+    },
+    {
+      "pair": "AU",
+      "conversationId": "conversation:2",
+      "nextSpeaker": "U",
+      "initialMessages": [
+        {
+          "id": "turn:219",
+          "speaker": "U",
+          "text": "Take the ten sheets and the vial, I'll note it now—just make sure they're back by tomorrow. Need anything else from the records?",
+          "atMs": 1788880358200
+        },
+        {
+          "id": "turn:274",
+          "speaker": "A",
+          "text": "Ulla, should I record the paper and ink loan in the records before I leave?",
+          "atMs": 1788883257359
+        }
+      ],
+      "firstPromptBytes": 21443,
+      "firstJobSha256": "6b96e64f53209afbc3366c72a16a5c25a092b8103edab06a435c483089e6ea01"
+    },
+    {
+      "pair": "BK",
+      "conversationId": "conversation:7",
+      "nextSpeaker": "K",
+      "initialMessages": [
+        {
+          "id": "turn:260",
+          "speaker": "K",
+          "text": "Sending the garden status update now; the latest workshop logs are attached as well. Let me know if you need anything else.",
+          "atMs": 1788881799226
+        },
+        {
+          "id": "turn:301",
+          "speaker": "B",
+          "text": "Thanks for sending the garden update. Could you also send me the pending workshop logs, just in case I need to reference them? No rush, just want to be fully informed.",
+          "atMs": 1788889112972
+        }
+      ],
+      "firstPromptBytes": 21492,
+      "firstJobSha256": "7781d7c633b2b54911275e903e3f6ffaf724309358b8bacd48cd8a597719b65d"
+    },
+    {
+      "pair": "TY",
+      "conversationId": "conversation:145",
+      "nextSpeaker": "T",
+      "initialMessages": [
+        {
+          "id": "turn:240",
+          "speaker": "T",
+          "text": "Thank you, Yara; the ledger now balances with the current stock. Do you anticipate any changes to produce, meals, or water in the next watch?",
+          "atMs": 1788881256510
+        },
+        {
+          "id": "turn:283",
+          "speaker": "Y",
+          "text": "I expect a modest bump in produce if I tend the garden – about 16 units next watch, using just 2 water, while meals and water stay steady. Should I go ahead with that?",
+          "atMs": 1788885397232
+        }
+      ],
+      "firstPromptBytes": 21247,
+      "firstJobSha256": "217ec0b1c4d141c265ccffb8e029d0b94e9d87c879e3d1a5a03596ddccc50f00"
+    }
+  ],
+  "migration": "Current strict reader initializes records empty if the captured society is version1; no records are seeded from old claims.",
+  "httpRequests": 0,
+  "privateEvidence": "Full backup-derived states, prompts, receipts and source bundle remain in the private output directory."
+}

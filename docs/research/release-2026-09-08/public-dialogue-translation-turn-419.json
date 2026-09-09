@@ -1,0 +1,59 @@
+{
+  "format": "villa-reviewed-public-dialogue-translation-v1",
+  "status": "Presentation translation of one already-public message; source records remain unchanged.",
+  "source": {
+    "kind": "verified-complete-recovery-public-message-projection",
+    "backupDirectory": "20260908T211221063Z-p6-closure-budget-first-natural",
+    "backupSha256": "6651e479e35228404138900027aacdd0ca161023354dbe6de626da5922a9aa93",
+    "capturedAtMs": 1788901941449,
+    "worldRevision": 214,
+    "pages": 30,
+    "proofPath": "docs/research/release-2026-09-08/p6-closure-budget-first-natural-receipt.json",
+    "proofSha256": "998836a96ede497e1a560171edda6b4cbaf31fc8058ea8fd20ac9d58023b6e03",
+    "instruction": {
+      "protocolVersion": 6,
+      "systemSha256": "1516e1f019942606a7184407ca8441102a05d95c8119d887cac8330b49be2f04",
+      "systemTextRetained": false,
+      "matchedCurrentEnglishInstruction": true,
+      "definitionPath": "src/lib/habitat/society/record-instructions.ts"
+    }
+  },
+  "scope": "Only the matched public turn, its public Journal copy and saved protocol identity. No private prompts, plans or other response fields.",
+  "limitation": "V87 replied in Spanish despite the saved P6 English instruction. This reviewed translation covers only this message, not future language compliance. Flour on the table remains Vero’s claim; no material delivery or temperature measurement is inferred. The metaphor is retained and no temperature value is added. Journal exposes the turn ID and simulation clock but not the real-world atMs timestamp.",
+  "label": "English translation",
+  "entries": [
+    {
+      "conversationId": "conversation:115",
+      "turnId": "turn:419",
+      "speaker": "V",
+      "atMs": 1788901683450,
+      "protocolVersion": 6,
+      "sourceLanguage": "es",
+      "targetLanguage": "en",
+      "sourceText": "¡Pilar, la harina ya está en la mesa, pero ¿qué tal si me das una pista de la temperatura ideal para que la masa se levante como una fiesta?",
+      "sourceTextSha256": "5d30c9d7d09ccebfcb6e3eec3721acd07b92b3ba6b20c2fbc8d84cadd3741bbb",
+      "translation": "Pilar, the flour is already on the table, but how about giving me a hint about the ideal temperature for the dough to rise like a celebration?",
+      "label": "English translation",
+      "journal": {
+        "happeningId": "habitat-canonical:mind:V:9:87:g:3:turn:419",
+        "worldRevision": 212,
+        "day": 107,
+        "watch": 4,
+        "minute": 1080,
+        "room": "kitchen",
+        "who": [
+          "P",
+          "V"
+        ],
+        "kind": "meeting",
+        "speech": {
+          "speaker": "V",
+          "turnId": "turn:419"
+        },
+        "sourceText": "V: ¡Pilar, la harina ya está en la mesa, pero ¿qué tal si me das una pista de la temperatura ideal para que la masa se levante como una fiesta?",
+        "sourceTextSha256": "b4f5ad531ba11d549b0eb2c4113092444153467975d874fb3dc67689e77f5d0f",
+        "translation": "V: Pilar, the flour is already on the table, but how about giving me a hint about the ideal temperature for the dough to rise like a celebration?"
+      }
+    }
+  ]
+}

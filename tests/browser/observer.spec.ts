@@ -32,7 +32,7 @@ async function serveWorld(page: Page, options: { offline?: boolean; statusFailur
 }
 
 async function ready(page: Page) {
-  await page.goto('/');
+  await page.goto('/?legacy=1');
   await expect(page.locator('.ns-head')).toContainText('Connected');
   await expect(page.locator('.room-view__world')).toHaveClass(/is-ready/);
 }
@@ -202,7 +202,7 @@ test('changing reduced motion freezes and resumes visible wandering without chan
 test('offline mobile has an explicit status and no invented journal', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await serveWorld(page, { offline: true });
-  await page.goto('/');
+  await page.goto('/?legacy=1');
   await expect(page.locator('.ns-head')).toContainText(/Offline|Unavailable/);
   await expect(page.locator('.ns-record > li')).toHaveCount(0);
   await expect(page.locator('.ns-connection')).toBeVisible();
@@ -210,7 +210,7 @@ test('offline mobile has an explicit status and no invented journal', async ({ p
 
 test('a failed status endpoint does not discard a valid observer world', async ({ page }) => {
   await serveWorld(page, { statusFailure: true });
-  await page.goto('/');
+  await page.goto('/?legacy=1');
   await expect(page.locator('.ns-clock')).toContainText('106');
   await expect(page.locator('.room-view__world')).toHaveClass(/is-ready/);
   await expect(page.locator('.ns-head')).toContainText(/unknown|unavailable|unchecked/i);
@@ -235,7 +235,7 @@ test('failed room image can be retried in place', async ({ page }) => {
     if (!route.request().url().includes('?retry=')) return route.abort('failed');
     return route.continue();
   });
-  await page.goto('/');
+  await page.goto('/?legacy=1');
   await page.getByRole('button', { name: /retry/i }).click();
   await expect(page.locator('.room-view')).toHaveAttribute('data-room', 'common');
   await expect(page.locator('.room-view__world')).toHaveClass(/is-ready/);

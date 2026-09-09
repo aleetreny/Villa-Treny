@@ -1,0 +1,771 @@
+{
+  "verifiedAt": "2026-09-08T14:38:46.070Z",
+  "sourceFiles": 62,
+  "protocol": 4,
+  "ledgerSha256": "6a664741fcb566f4c3453c0c68277cc698815bc27e77cc81442fbca49abb4e92",
+  "reportSha256": "8d5fc804fe81784c400c9c061d28876a10514b930fc46ed65f010a33539a029c",
+  "sourceBundleSha256": "7059b64e168e2dc3a1bfeed76d135a9d466ec80b4581149267650d552ad44667",
+  "httpRequests": 0,
+  "newCalls": 0,
+  "halted": null,
+  "consumedEntries": 38,
+  "finalHash": "8b166192baa3d07058924041d7934cbac5859d08573e3b2fcc06228eee9a3afd",
+  "money": {
+    "treasury": 0,
+    "maintenance": 100,
+    "cells:A": 15,
+    "cells:B": 8,
+    "cells:C": 8,
+    "cells:D": 15,
+    "cells:E": 10,
+    "cells:F": 13,
+    "cells:G": 17,
+    "cells:H": 8,
+    "cells:I": 11,
+    "cells:J": 13,
+    "cells:K": 12,
+    "cells:L": 8,
+    "cells:M": 17,
+    "cells:N": 17,
+    "cells:O": 15,
+    "cells:P": 16,
+    "cells:Q": 8,
+    "cells:R": 17,
+    "cells:S": 17,
+    "cells:T": 10,
+    "cells:U": 13,
+    "cells:V": 8,
+    "cells:W": 13,
+    "cells:X": 12,
+    "cells:Y": 10,
+    "credits:A": 1,
+    "credits:B": 0,
+    "credits:C": 1,
+    "credits:D": 1,
+    "credits:E": 1,
+    "credits:F": 2,
+    "credits:G": 1,
+    "credits:H": 1,
+    "credits:I": 1,
+    "credits:J": 2,
+    "credits:K": 0,
+    "credits:L": 0,
+    "credits:M": 1,
+    "credits:N": 1,
+    "credits:O": 1,
+    "credits:P": 1,
+    "credits:Q": 2,
+    "credits:R": 1,
+    "credits:S": 1,
+    "credits:T": 0,
+    "credits:U": 1,
+    "credits:V": 2,
+    "credits:W": 2,
+    "credits:X": 2,
+    "credits:Y": 2,
+    "stock:produce": 76,
+    "stock:meals": 100,
+    "stock:water": 293,
+    "stock:materials": 26,
+    "ledger:initialCells": 315,
+    "ledger:minted": 0,
+    "ledger:burned": 4,
+    "ledger:leaked": 0
+  },
+  "startedAt": "2026-09-08T14:34:49.298Z",
+  "finishedAt": "2026-09-08T14:36:43.948Z",
+  "total": 37,
+  "accepted": 37,
+  "byStage": {
+    "initial": 25,
+    "reply": 8,
+    "replan": 4
+  },
+  "totals": {
+    "input": 56497,
+    "output": 5466,
+    "latencyMs": 112036
+  },
+  "latencyRange": [
+    2097,
+    11679
+  ],
+  "promptBytesRange": [
+    9383,
+    17521
+  ],
+  "inputRange": [
+    1290,
+    1826
+  ],
+  "outputRange": [
+    96,
+    266
+  ],
+  "schemaWarnings": 0,
+  "incompleteUsage": 0,
+  "maxRssKiB": 13847680,
+  "deals": 0,
+  "conversations": [
+    {
+      "id": "conversation:1",
+      "participants": [
+        "A",
+        "U"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:6",
+      "participants": [
+        "B",
+        "H"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:11",
+      "participants": [
+        "C",
+        "N"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:16",
+      "participants": [
+        "D",
+        "G"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:21",
+      "participants": [
+        "E",
+        "F"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 4
+    },
+    {
+      "id": "conversation:42",
+      "participants": [
+        "I",
+        "K"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:48",
+      "participants": [
+        "J",
+        "L"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:62",
+      "participants": [
+        "M",
+        "T"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:73",
+      "participants": [
+        "O",
+        "P"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:83",
+      "participants": [
+        "Q",
+        "W"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:88",
+      "participants": [
+        "R",
+        "S"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 3
+    },
+    {
+      "id": "conversation:111",
+      "participants": [
+        "V",
+        "X"
+      ],
+      "status": "open",
+      "voices": 2,
+      "messages": 2
+    }
+  ],
+  "messages": 36,
+  "incomingOpportunities": 24,
+  "uniqueIncomingRefs": 24,
+  "projects": 25,
+  "emptyProjects": 18,
+  "projectStatuses": {
+    "active": 19,
+    "completed": 6
+  },
+  "offers": [],
+  "agreements": [],
+  "appraisals": [
+    {
+      "actor": "F",
+      "sequence": 5,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:22",
+        "why": "Edda is being proactive and professional, which is refreshing compared to the usual chaos."
+      },
+      "delta": [
+        {
+          "key": "FE",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "G",
+      "sequence": 6,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:17",
+        "why": "He is doing his job properly."
+      },
+      "delta": [
+        {
+          "key": "GD",
+          "axis": "trust",
+          "before": 30,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "actor": "H",
+      "sequence": 7,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:7",
+        "why": "The request for discussion was handled with courtesy."
+      },
+      "delta": [
+        {
+          "key": "HB",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "L",
+      "sequence": 11,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:49",
+        "why": "Juno asked directly about resources, showing practical intent rather than small talk."
+      },
+      "delta": [
+        {
+          "key": "LJ",
+          "axis": "trust",
+          "before": 30,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "actor": "N",
+      "sequence": 13,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:12",
+        "why": "Cato is engaging in serious ethical planning, which suggests reliability."
+      },
+      "delta": [
+        {
+          "key": "NC",
+          "axis": "trust",
+          "before": 46,
+          "after": 47
+        }
+      ]
+    },
+    {
+      "actor": "S",
+      "sequence": 18,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:89",
+        "why": "She asked for work, not gossip. That is a start."
+      },
+      "delta": [
+        {
+          "key": "SR",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "T",
+      "sequence": 19,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:63",
+        "why": "Mara's request is direct and aligns with my duty to the Common, reinforcing my baseline trust in her intentions."
+      },
+      "delta": [
+        {
+          "key": "TM",
+          "axis": "trust",
+          "before": 90,
+          "after": 91
+        }
+      ]
+    },
+    {
+      "actor": "U",
+      "sequence": 20,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:2",
+        "why": "A asked for shared quiet, not work or data, which aligns with my desire to run things properly without unnecessary noise."
+      },
+      "delta": [
+        {
+          "key": "UA",
+          "axis": "trust",
+          "before": 72,
+          "after": 73
+        }
+      ]
+    },
+    {
+      "actor": "E",
+      "sequence": 25,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:26",
+        "why": "Ferran's willingness to engage despite the dust complaint suggests he values the work, which aligns with my desire for competent argument."
+      },
+      "delta": [
+        {
+          "key": "EF",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "D",
+      "sequence": 26,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:31",
+        "why": "Gita's assurance is direct, but my duty requires independent verification, so I remain cautiously skeptical."
+      },
+      "delta": [
+        {
+          "key": "DG",
+          "axis": "trust",
+          "before": 30,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "actor": "B",
+      "sequence": 27,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:36",
+        "why": "Halim's response was professional and directive, reducing my anxiety about being ignored."
+      },
+      "delta": [
+        {
+          "key": "BH",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "I",
+      "sequence": 28,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:53",
+        "why": "Kes shared a specific sensory detail, suggesting a desire for connection rather than just data."
+      },
+      "delta": [
+        {
+          "key": "IK",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "J",
+      "sequence": 29,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:57",
+        "why": "Lior is actively trying to help with specific resources, which is encouraging."
+      },
+      "delta": [
+        {
+          "key": "JL",
+          "axis": "trust",
+          "before": 30,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "actor": "C",
+      "sequence": 30,
+      "appraisal": {
+        "axis": "trust",
+        "delta": -1,
+        "ref": "turn:67",
+        "why": "Noor's inquiry about my rest was irrelevant to the task and implied an emotional concern that distracts from the objective."
+      },
+      "delta": [
+        {
+          "key": "CN",
+          "axis": "trust",
+          "before": 52,
+          "after": 51
+        }
+      ]
+    },
+    {
+      "actor": "O",
+      "sequence": 31,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:78",
+        "why": "P’s offer to teach baking shows a willingness to invest time in my skills, which I value."
+      },
+      "delta": [
+        {
+          "key": "OP",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "R",
+      "sequence": 32,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:93",
+        "why": "S offered concrete assistance rather than passive observation."
+      },
+      "delta": [
+        {
+          "key": "RS",
+          "axis": "trust",
+          "before": 22,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "actor": "M",
+      "sequence": 33,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:100",
+        "why": "Tomás has agreed to help, showing reliability."
+      },
+      "delta": [
+        {
+          "key": "MT",
+          "axis": "trust",
+          "before": 92,
+          "after": 93
+        }
+      ]
+    },
+    {
+      "actor": "A",
+      "sequence": 34,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:105",
+        "why": "Ulla's willingness to sit and her specific phrasing about silence suggest a deeper, shared understanding of our past, reinforcing my trust in her presence."
+      },
+      "delta": [
+        {
+          "key": "AU",
+          "axis": "trust",
+          "before": 70,
+          "after": 71
+        }
+      ]
+    },
+    {
+      "actor": "Q",
+      "sequence": 35,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:116",
+        "why": "W confirmed they would check the stabilizers, showing reliability."
+      },
+      "delta": [
+        {
+          "key": "QW",
+          "axis": "trust",
+          "before": 76,
+          "after": 77
+        }
+      ]
+    },
+    {
+      "actor": "F",
+      "sequence": 36,
+      "appraisal": {
+        "axis": "trust",
+        "delta": 1,
+        "ref": "turn:126",
+        "why": "Edda’s specific concern about vibration and containment shows she cares about the long-term safety of the hull, not just immediate output."
+      },
+      "delta": [
+        {
+          "key": "FE",
+          "axis": "trust",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    }
+  ],
+  "physical": [
+    {
+      "actor": "H",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "C",
+      "verb": "inspect",
+      "source": "routine",
+      "ok": true,
+      "text": "The Infirmary was walked through and looked over."
+    },
+    {
+      "actor": "X",
+      "verb": "dig",
+      "source": "plan",
+      "ok": true,
+      "text": "Xan recovered 4 usable materials at the face; 1 water used."
+    },
+    {
+      "actor": "S",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "R",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "I",
+      "verb": "clean",
+      "source": "plan",
+      "ok": true,
+      "text": "Iris filtered 24 water at the well."
+    },
+    {
+      "actor": "D",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "W",
+      "verb": "charge",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "F",
+      "verb": "dig",
+      "source": "routine",
+      "ok": true,
+      "text": "Ferran recovered 4 usable materials at the face; 1 water used."
+    },
+    {
+      "actor": "U",
+      "verb": "inspect",
+      "source": "routine",
+      "ok": true,
+      "text": "The Infirmary was walked through and looked over."
+    },
+    {
+      "actor": "T",
+      "verb": "go",
+      "source": "plan",
+      "ok": true
+    },
+    {
+      "actor": "G",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "N",
+      "verb": "inspect",
+      "source": "routine",
+      "ok": true,
+      "text": "The Infirmary was walked through and looked over."
+    },
+    {
+      "actor": "B",
+      "verb": "observe",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "A",
+      "verb": "note",
+      "source": "routine",
+      "ok": true,
+      "text": "The current store totals and working-room register were written down."
+    },
+    {
+      "actor": "V",
+      "verb": "grow",
+      "source": "plan",
+      "ok": true,
+      "text": "Vero harvested 16 produce; 2 water used."
+    },
+    {
+      "actor": "O",
+      "verb": "clean",
+      "source": "plan",
+      "ok": true,
+      "text": "Osvald filtered 24 water at the well."
+    },
+    {
+      "actor": "Q",
+      "verb": "repair",
+      "source": "plan",
+      "ok": true,
+      "text": "Quim repaired The Workshops; 1 material and 2 charge cells used."
+    },
+    {
+      "actor": "J",
+      "verb": "repair",
+      "source": "plan",
+      "ok": true,
+      "text": "Juno repaired The Workshops; 1 material and 2 charge cells used."
+    },
+    {
+      "actor": "Y",
+      "verb": "dig",
+      "source": "routine",
+      "ok": true,
+      "text": "Yara recovered 4 usable materials at the face; 1 water used."
+    },
+    {
+      "actor": "L",
+      "verb": "observe",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "P",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "K",
+      "verb": "observe",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "M",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    },
+    {
+      "actor": "E",
+      "verb": "work",
+      "source": "routine",
+      "ok": true
+    }
+  ],
+  "reactor": {
+    "output": 0.94
+  }
+}

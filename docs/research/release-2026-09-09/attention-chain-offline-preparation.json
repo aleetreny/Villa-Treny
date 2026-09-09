@@ -1,0 +1,107 @@
+{
+  "status": "offline_preparation_and_synthetic_validation_passed",
+  "createdOn": "2026-09-09",
+  "publicPlan": {
+    "policy": {
+      "version": 1,
+      "sourceRevision": 322,
+      "sourceSha256": "832c560405d05fd67a21fcdb3196c5953475c17b3ae6871f7c04810283514779",
+      "protocols": [
+        7,
+        8
+      ],
+      "actors": [
+        "Y",
+        "T",
+        "Y"
+      ],
+      "maxCalls": 6,
+      "concurrency": 1,
+      "order": [
+        "7:0",
+        "8:0",
+        "8:1",
+        "7:1",
+        "watch:7",
+        "watch:8",
+        "watch:control",
+        "7:2",
+        "8:2"
+      ],
+      "times": [
+        1788953353192,
+        1788953413192,
+        1788959344141
+      ],
+      "watchAtMs": 1788959284141,
+      "conversationId": "conversation:145",
+      "offerId": "offer:605",
+      "maxOutputTokens": 1024,
+      "maxRequestBytes": 65536,
+      "timeoutMs": 120000,
+      "temperature": 0.3,
+      "seeds": [
+        91,
+        92,
+        93
+      ],
+      "thinking": false,
+      "endpoint": "http://127.0.0.1:8018/v1/chat/completions",
+      "scope": "Paired consent-to-effect diagnostic, not an isolated test of concurrent-channel capacity.",
+      "admission": "Complete serialized request byte cap; not a claim about the local tokenizer or server context capacity.",
+      "physicalWatchesPerClone": 1,
+      "totalPhysicalWatches": 3,
+      "retries": 0
+    },
+    "model": "Qwen3.6-35B-A3B-4bit",
+    "sourceSha256": "832c560405d05fd67a21fcdb3196c5953475c17b3ae6871f7c04810283514779",
+    "selectionHash": "3468c74e70e907c802e08b4e41e3907506bfc5282850525d7d6e1c9f893af2b3",
+    "sourceManifestHash": "c40b17a6b49daeae4c94c578a70dd970a5a179652366eb42ef4acbf034c5e187",
+    "binding": "0e99958e8c30e368b23031b8d3157b11d09ef8cdac9c0a639cb65104f1d1eb64",
+    "httpRequests": 0,
+    "firstRequests": [
+      {
+        "id": "7:0",
+        "requestBytes": 26347,
+        "payloadHash": "a9aba4a5120a6938961f4e434402660d98710def5ebb92d39c49fd7c7e30cb2d"
+      },
+      {
+        "id": "8:0",
+        "requestBytes": 25144,
+        "payloadHash": "cc22073972666ce422c31a56b233b851231863783c22ef6a7c6582dd1a70df56"
+      }
+    ]
+  },
+  "sourceFiles": 233,
+  "validation": {
+    "nodeTestsPassed": 7,
+    "nodeTestsFailed": 0,
+    "eslint": "pass",
+    "independentReview": "7/7 passed; no remaining blocker for the declared diagnostic",
+    "syntheticTransportOnly": true,
+    "productionWritesByPreparation": 0,
+    "httpRequestsByPreparation": 0,
+    "modelCallsByPreparation": 0
+  },
+  "artifactHashes": [
+    {
+      "path": "scripts/benchmark-society-attention-chain-local.mjs",
+      "sha256": "fa844f48a32180d26389b597c822884e4728f7e8a3e116cec06e1d0161b6504b"
+    },
+    {
+      "path": "scripts/benchmark-society-attention-chain-local.test.mjs",
+      "sha256": "3a790a27111151d07650955cbb5dee987a1d468b3d75b5e285a9531fbbd1f980"
+    },
+    {
+      "path": "scripts/fixtures/attention-chain-synthetic.json",
+      "sha256": "e7dd5b547926949a41a3a52f65cc2913fead65860eaebd768485aed0300b89ab"
+    }
+  ],
+  "limitations": [
+    "Prepared requests are not model decisions.",
+    "Synthetic acceptance, rejection and claims-only fixtures are authored tests, never behavioral evidence.",
+    "One paired T/Y trajectory cannot establish an isolated benefit from concurrent channels.",
+    "Local Qwen results do not establish Cloudflare or Groq model quality.",
+    "Any subsequently executed calls have their own exact private ledger and need separate review."
+  ]
+}

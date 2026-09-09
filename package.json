@@ -17,7 +17,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:browser": "playwright test",
-    "check": "pnpm lint && pnpm typecheck && node --test scripts/legacy-room-art.test.mjs && pnpm test && pnpm runtime:check",
+    "check": "pnpm lint && pnpm typecheck && node --test scripts/legacy-room-art.test.mjs scripts/benchmark-society-runtime-v7-local.test.mjs scripts/analyze-society-recovery.test.mjs scripts/benchmark-society-v7-schema-probe.test.mjs scripts/benchmark-society-v7-deal-order-local.test.mjs scripts/benchmark-society-open-message-local.test.mjs scripts/benchmark-society-exact-accept-local.test.mjs scripts/benchmark-society-final-dialogue-local.test.mjs scripts/benchmark-society-ordered-choice-local.test.mjs scripts/benchmark-society-records-canonical-local.test.mjs scripts/benchmark-society-progress-local.test.mjs scripts/benchmark-society-evidence-layout-local.test.mjs scripts/review-first-live-turns.test.mjs scripts/run-debate-pilot.test.mjs scripts/run-daily-debate.test.mjs && pnpm test && pnpm runtime:check",
     "check:all": "pnpm check && pnpm build && pnpm test:browser",
     "rooms:export": "node scripts/export-rooms.mjs",
     "rooms:capture-legacy": "node scripts/capture-legacy-room-art.mjs",
@@ -27,7 +27,9 @@
     "runtime:deploy:dry": "pnpm --dir workers/habitat-runtime deploy:dry",
     "runtime:deploy": "pnpm --dir workers/habitat-runtime deploy",
     "society:validate": "node tools/habitat/validate-society.mjs",
-    "cognition:audit": "node tools/habitat/measure-prompts.mjs"
+    "cognition:audit": "node tools/habitat/measure-prompts.mjs",
+    "debate:pilot": "node --env-file-if-exists=.env.gemini.local scripts/run-debate-pilot.mjs",
+    "debate:daily": "node --env-file-if-exists=.env.gemini.local scripts/run-daily-debate.mjs"
   },
   "dependencies": {
     "react": "19.2.8",

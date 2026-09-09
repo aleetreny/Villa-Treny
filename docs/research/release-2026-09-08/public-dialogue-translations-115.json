@@ -1,0 +1,90 @@
+{
+  "format": "villa-proposed-public-dialogue-translations-v1",
+  "status": "Presentation proposal only; no implementation or historical mutation.",
+  "backupSha256": "ed79fc65700ca7e1ff746396cb12c4bc9aae2332f0c97d51eff5588bfbfc1c4e",
+  "scope": "Exactly three already-public messages and their exact Journal copies. No private context, semantic repair or inference.",
+  "label": "English translation",
+  "entries": [
+    {
+      "conversationId": "conversation:115",
+      "turnId": "turn:116",
+      "speaker": "P",
+      "atMs": 1788876943005,
+      "sourceLanguage": "es",
+      "targetLanguage": "en",
+      "sourceText": "¡Vero, hijita! ¿Te enseño a hacer pan antes de que te vayas? Andá, que te lo pongo en la mano.",
+      "sourceTextSha256": "77c2fa7bee1fb0eb87ae1c0cb1c81066c423c3beffa6e51237f4dca8315a7926",
+      "translation": "Vero, my dear! Shall I teach you to make bread before you leave? Come on, I'll put it in your hand.",
+      "label": "English translation",
+      "journal": {
+        "happeningId": "habitat-canonical:mind:P:0:22:g:3:turn:116",
+        "sequence": 221,
+        "day": 107,
+        "watch": 3,
+        "minute": 720,
+        "room": "hold",
+        "who": [
+          "P",
+          "V"
+        ],
+        "sourceText": "P: ¡Vero, hijita! ¿Te enseño a hacer pan antes de que te vayas? Andá, que te lo pongo en la mano.",
+        "sourceTextSha256": "fbe05630be88b6d7932e20114b4c0f4c8ad1b4c527ba2c4950ceadb6c21ec583",
+        "translation": "P: Vero, my dear! Shall I teach you to make bread before you leave? Come on, I'll put it in your hand."
+      }
+    },
+    {
+      "conversationId": "conversation:115",
+      "turnId": "turn:155",
+      "speaker": "V",
+      "atMs": 1788878376517,
+      "sourceLanguage": "es",
+      "targetLanguage": "en",
+      "sourceText": "¡Claro, Pilar! Dame una mano con la masa, que quiero que mi propio horno no sea solo una metáfora.",
+      "sourceTextSha256": "2d14da4628234121cfe9ecfd7d9c3fce3a47a2b0d343c175b34f3b650bdf3c07",
+      "translation": "Of course, Pilar! Give me a hand with the dough; I don't want my own oven to be just a metaphor.",
+      "label": "English translation",
+      "journal": {
+        "happeningId": "habitat-canonical:mind:V:1:30:g:3:turn:155",
+        "sequence": 229,
+        "day": 107,
+        "watch": 3,
+        "minute": 720,
+        "room": "garden",
+        "who": [
+          "P",
+          "V"
+        ],
+        "sourceText": "V: ¡Claro, Pilar! Dame una mano con la masa, que quiero que mi propio horno no sea solo una metáfora.",
+        "sourceTextSha256": "40f31e8c92c3f6028d06b50b9cd61630cc9d99b205921237bbc16bb673d3f77e",
+        "translation": "V: Of course, Pilar! Give me a hand with the dough; I don't want my own oven to be just a metaphor."
+      }
+    },
+    {
+      "conversationId": "conversation:115",
+      "turnId": "turn:227",
+      "speaker": "P",
+      "atMs": 1788880718892,
+      "sourceLanguage": "es",
+      "targetLanguage": "en",
+      "sourceText": "¡Vamos, Vero, hijita! Poné la harina y el agua, y yo te enseño a amasar con ritmo, ¿listita?",
+      "sourceTextSha256": "db2b69cf28b2f9aa61217c3ba787721d1f89fea271c605a73b95fd76e32ed85d",
+      "translation": "Come on, Vero, my dear! Put in the flour and water, and I'll teach you to knead with rhythm. Ready?",
+      "label": "English translation",
+      "journal": {
+        "happeningId": "habitat-canonical:mind:P:3:43:g:3:turn:227",
+        "sequence": 241,
+        "day": 107,
+        "watch": 3,
+        "minute": 720,
+        "room": "hold",
+        "who": [
+          "P",
+          "V"
+        ],
+        "sourceText": "P: ¡Vamos, Vero, hijita! Poné la harina y el agua, y yo te enseño a amasar con ritmo, ¿listita?",
+        "sourceTextSha256": "1403cbc5e24415dd6ec8b65bd7fe0d7b1279b9c52c6dd9dc9224650a7fb51b62",
+        "translation": "P: Come on, Vero, my dear! Put in the flour and water, and I'll teach you to knead with rhythm. Ready?"
+      }
+    }
+  ]
+}

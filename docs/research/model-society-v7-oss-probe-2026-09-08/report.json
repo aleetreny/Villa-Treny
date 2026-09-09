@@ -1,0 +1,275 @@
+{
+  "scope": "Two exact frozen V7 local contexts: B reply0, L initial11. Original SYSTEM/USER/schema/seed; GPT-OSS120B low reasoning/1024 output/strict wrapper. No injected fields, physical watch or production state. A two-case model/provider comparison, not a statistical ranking.",
+  "humanReview": "pending",
+  "binding": "ed0a6c5ff95322efe5d86f1dd3cbc2c52c17ce05c5187798914b09567de67d36",
+  "newCalls": 2,
+  "halted": null,
+  "accountedNeurons": 160,
+  "maxNeurons": 390,
+  "baselines": [
+    {
+      "actor": "B",
+      "stage": "reply",
+      "beforeHash": "7154c90ddd1a054699e56b911300e51ca56433e1b7badec0772a24e5ef3d5b68",
+      "sourceId": "isolated-society-runtime-v7-local:mind:B:3:25:g:0",
+      "output": {
+        "message": {
+          "to": "C",
+          "text": "I can certainly help with that, Cato—no problem at all. Could you clarify which specific conditions or thresholds should trigger the waking protocol?"
+        },
+        "deal": {
+          "kind": "work",
+          "role": "hire",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 2,
+          "verb": "grow",
+          "room": "garden"
+        }
+      },
+      "application": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "71ff67e12aa5ac73875233192d9cbd720b9c223070452e7be7ea339de200d3dd",
+        "balanceChanges": []
+      }
+    },
+    {
+      "actor": "L",
+      "stage": "initial",
+      "beforeHash": "f6a74ba9bdd41b89de70e4b704fb35c3f1970b4b6dbeb71f2439d85526f37fee",
+      "sourceId": "isolated-society-runtime-v7-local:mind:L:1:11:g:0",
+      "output": {
+        "project": {
+          "mode": "replace",
+          "goal": "Assist Juno with the power bay maintenance repair.",
+          "why": "Juno has the materials and cells and is asking for help; this fulfills my desire to be the one who is owed.",
+          "visibility": "private",
+          "steps": []
+        },
+        "message": {
+          "to": "J",
+          "text": "I'm free, though I'd prefer to handle the delicate parts myself. Shall I head to the power bay to get started?"
+        },
+        "deal": {
+          "kind": "work",
+          "role": "work",
+          "cells": 0,
+          "units": 1,
+          "slackWatches": 2,
+          "verb": "repair",
+          "room": "workshops"
+        }
+      },
+      "application": {
+        "ok": false,
+        "code": "deal_requires_open_message",
+        "afterHash": "9f86f07e50fd14f5763a21623ced3d2b7405c4b14c89650dc4e24c62d8073239",
+        "balanceChanges": []
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "v7-oss-probe-v1:isolated-society-runtime-v7-local:mind:B:3:25:g:0",
+      "actor": "B",
+      "stage": "reply",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1588,
+        "completion_tokens": 470,
+        "total_tokens": 2058,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 82.57242584228516
+      },
+      "output": {
+        "message": {
+          "text": "Sure, I can draft that for you. Here’s a quick outline: 1) Resident must be unconscious or unresponsive for >30 min; 2) Vital signs stable (HR 60‑100, BP >90/60); 3) No immediate medical emergency; 4) Consent documented or next‑of‑kin notified; 5) Staff present to monitor post‑wake. Does that cover ",
+          "to": "C"
+        },
+        "project": {
+          "goal": "Consult Cato Lindqvist about the infirmary status",
+          "mode": "replace",
+          "steps": [
+            {
+              "at": "hold",
+              "verb": "drink"
+            }
+          ],
+          "visibility": "private",
+          "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation."
+        },
+        "reflection": {
+          "refs": [
+            "turn:12"
+          ],
+          "text": "Cato asked for criteria, matching my desire to be consulted; I provide a concise draft and ask if it suffices."
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "5ede4702085e66eb489056bd74f0104d43c284a80a955ffe6d40e4eff69b724b",
+        "project": {
+          "id": "project:107",
+          "goal": "Consult Cato Lindqvist about the infirmary status",
+          "why": "Cato is in the Infirmary and I want to be consulted about something once, so I will initiate that consultation.",
+          "visibility": "private",
+          "status": "active",
+          "createdAtMs": 1788825626001,
+          "steps": [
+            {
+              "id": "step:108",
+              "intent": {
+                "actor": "B",
+                "verb": "drink"
+              },
+              "at": "hold",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:7",
+            "participants": [
+              "B",
+              "C"
+            ],
+            "revision": 3,
+            "nextSpeaker": "C",
+            "status": "open",
+            "createdAtMs": 1788825602001,
+            "expiresAtMs": 1788912002001,
+            "turns": [
+              {
+                "id": "turn:8",
+                "index": 0,
+                "speaker": "B",
+                "text": "Hi Cato, it's Bex. I know you're resting in the Infirmary, but I wanted to check in and see how you're holding up? No pressure to reply, just wanted to make sure you're okay.",
+                "atMs": 1788825602001
+              },
+              {
+                "id": "turn:12",
+                "index": 1,
+                "speaker": "C",
+                "text": "I need the criteria for waking a resident written down. Do you have time to draft them?",
+                "atMs": 1788825603001
+              },
+              {
+                "id": "turn:110",
+                "index": 2,
+                "speaker": "B",
+                "text": "Sure, I can draft that for you. Here’s a quick outline: 1) Resident must be unconscious or unresponsive for >30 min; 2) Vital signs stable (HR 60‑100, BP >90/60); 3) No immediate medical emergency; 4) Consent documented or next‑of‑kin notified; 5) Staff present to monitor post‑wake. Does that cover",
+                "atMs": 1788825626001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [],
+        "clockUnchanged": true
+      },
+      "error": null,
+      "accountedNeurons": 83,
+      "latencyMs": 11786
+    },
+    {
+      "id": "v7-oss-probe-v1:isolated-society-runtime-v7-local:mind:L:1:11:g:0",
+      "actor": "L",
+      "stage": "initial",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1470,
+        "completion_tokens": 441,
+        "total_tokens": 1911,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 76.84062957763672
+      },
+      "output": {
+        "message": {
+          "text": "Happy to lend a hand, J—let's get that maintenance humming. I’ll swing by the workshops and start the repair; later I’ll be counting on a favor from you.",
+          "to": "J"
+        },
+        "project": {
+          "goal": "Assist J with power bay maintenance repair",
+          "mode": "replace",
+          "steps": [
+            {
+              "at": "workshops",
+              "verb": "repair"
+            }
+          ],
+          "visibility": "public",
+          "why": "I want to be owed for once"
+        }
+      },
+      "validation": {
+        "ok": true,
+        "code": "applied",
+        "afterHash": "22f59b866d1341b79588b52da79d7346cf876c9e4e05de6fe920eaf49fd35667",
+        "project": {
+          "id": "project:49",
+          "goal": "Assist J with power bay maintenance repair",
+          "why": "I want to be owed for once",
+          "visibility": "public",
+          "status": "active",
+          "createdAtMs": 1788825612001,
+          "steps": [
+            {
+              "id": "step:50",
+              "intent": {
+                "actor": "L",
+                "verb": "repair"
+              },
+              "at": "workshops",
+              "status": "pending",
+              "evidenceId": null
+            }
+          ]
+        },
+        "conversations": [
+          {
+            "id": "conversation:41",
+            "participants": [
+              "J",
+              "L"
+            ],
+            "revision": 2,
+            "nextSpeaker": "J",
+            "status": "open",
+            "createdAtMs": 1788825610001,
+            "expiresAtMs": 1788912010001,
+            "turns": [
+              {
+                "id": "turn:42",
+                "index": 0,
+                "speaker": "J",
+                "text": "I'm at the power bay. I have the materials and the cells, but I need to know if you're available to help me get the maintenance up. Do you have time to assist with the repair?",
+                "atMs": 1788825610001
+              },
+              {
+                "id": "turn:51",
+                "index": 1,
+                "speaker": "L",
+                "text": "Happy to lend a hand, J—let's get that maintenance humming. I’ll swing by the workshops and start the repair; later I’ll be counting on a favor from you.",
+                "atMs": 1788825612001
+              }
+            ]
+          }
+        ],
+        "balanceChanges": [],
+        "relationshipChanges": [],
+        "clockUnchanged": true
+      },
+      "error": null,
+      "accountedNeurons": 77,
+      "latencyMs": 10554
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "pages": 12,
+  "sourceSha256": "f7adafe1283fbf50d8dd99aa04cdbff72852669048f86c2d9f3546a03a130eaa",
+  "pdfSha256": "a613525ced4a3c2d7cf38698e96a90f1fdef1beb751b313c544e3cffc566bca7",
+  "publicSources": 47,
+  "repositoryArtifacts": 24,
+  "visualReview": {
+    "pages1to6": "observer_design: each page viewed, clear margins and repeated table headers, no clipping or broken glyphs",
+    "pages7to10": "explorer_ui: each page viewed, clear tables and headings, no clipping or broken glyphs",
+    "pages11to12": "root: each page viewed, legible typography, no clipping or overlap"
+  },
+  "automatedChecks": [
+    "Every character fits page bounds",
+    "No null or replacement glyphs",
+    "Every linked URL matches the primary-source ledger",
+    "Source bytes match generated ledger",
+    "Six renderer regression tests pass"
+  ],
+  "pageMetrics": [
+    {
+      "page": 1,
+      "characters": 2425
+    },
+    {
+      "page": 2,
+      "characters": 3818
+    },
+    {
+      "page": 3,
+      "characters": 3609
+    },
+    {
+      "page": 4,
+      "characters": 3698
+    },
+    {
+      "page": 5,
+      "characters": 2361
+    },
+    {
+      "page": 6,
+      "characters": 2073
+    },
+    {
+      "page": 7,
+      "characters": 3133
+    },
+    {
+      "page": 8,
+      "characters": 3845
+    },
+    {
+      "page": 9,
+      "characters": 4450
+    },
+    {
+      "page": 10,
+      "characters": 3910
+    },
+    {
+      "page": 11,
+      "characters": 4213
+    },
+    {
+      "page": 12,
+      "characters": 2702
+    }
+  ]
+}
