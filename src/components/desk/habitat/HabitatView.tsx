@@ -22,7 +22,7 @@ function clock(minute: number): string {
   return `${Math.floor(minute / 60).toString().padStart(2, '0')}:${(minute % 60).toString().padStart(2, '0')}`;
 }
 
-export function HabitatView({ onClose, portfolioUrl = 'https://aleetreny.github.io/' }: { onClose?: () => void; portfolioUrl?: string } = {}) {
+export function HabitatView({ onClose }: { onClose?: () => void } = {}) {
   const live = useHabitatLive();
   const [wandering, setWandering] = useState(true);
   const reducedMotion = useReducedMotion();
@@ -98,7 +98,7 @@ export function HabitatView({ onClose, portfolioUrl = 'https://aleetreny.github.
     .slice().reverse();
 
   if (!snapshot || !live.snapshot) return <div className="nightshift" lang="en" ref={viewer}>
-    <header className="ns-head"><h1>Night Shift<span>The habitat</span></h1><LiveStatus {...live} /><a className="ns-close" href={portfolioUrl}>Portfolio</a></header>
+    <header className="ns-head"><h1>Night Shift<span>The habitat</span></h1><LiveStatus {...live} /><a className="ns-close" href="/">Daily board</a></header>
     <main className="ns-loading" aria-busy={live.connection === 'connecting'}><h2>{live.connection === 'connecting' ? 'Opening the habitat…' : 'The habitat could not be reached'}</h2><p>{live.connection === 'connecting' ? 'Waiting for the saved world.' : 'The saved world is unavailable. Check the connection and try again.'}</p>{live.connection !== 'connecting' ? <button type="button" onClick={live.refresh}>Try again</button> : null}</main>
   </div>;
 
@@ -108,7 +108,7 @@ export function HabitatView({ onClose, portfolioUrl = 'https://aleetreny.github.
         <h1>Night Shift<span>The habitat</span></h1>
         <div className="ns-clock"><span>Day <b>{snapshot.day}</b></span><span>Watch <b>{WATCH[snapshot.watch]}</b></span></div>
         <LiveStatus {...live} />
-        {onClose ? <button type="button" className="ns-close" onClick={onClose}>Leave</button> : <a className="ns-close" href={portfolioUrl}>Portfolio</a>}
+        {onClose ? <button type="button" className="ns-close" onClick={onClose}>Leave</button> : <a className="ns-close" href="/">Daily board</a>}
       </header>
 
       <div className="ns-world">

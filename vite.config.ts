@@ -20,7 +20,7 @@ function observerAssets(): Plugin {
 }
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES_BASE_PATH ?? '/',
+  base: '/',
   plugins: [react(), observerAssets()],
   server: { proxy: { '/__habitat': {
     target: process.env.HABITAT_PROXY_TARGET ?? 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev',

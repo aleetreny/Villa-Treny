@@ -125,7 +125,7 @@ describe('durable authored records', () => {
     }
     const response = await exports.default.fetch('https://habitat.test/v1/records?limit=20');
     expect(response.status).toBe(200);
-    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny.github.io');
+    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev');
     expect(await response.json()).toEqual({ entries: [], nextCursor: null });
     expect((await exports.default.fetch(new Request('https://habitat.test/v1/records', { method: 'OPTIONS' }))).status).toBe(204);
   });

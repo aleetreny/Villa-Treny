@@ -11,7 +11,7 @@ const NOW = 1_788_900_000_000;
 
 function fixture() {
   const config = parseRuntimeConfig({ HABITAT_ID: 'habitat-canonical',
-    PUBLIC_ORIGIN: 'https://aleetreny.github.io', TICK_INTERVAL_MS: 21_600_000,
+    PUBLIC_ORIGIN: 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev', TICK_INTERVAL_MS: 21_600_000,
     MAX_COGNITIONS_PER_ALARM: 1, WORKERS_AI_MODEL: OSS_WORKERS_AI_MODEL,
     WORKERS_AI_DAILY_NEURONS_LIMIT: 8_000, GROQ_MODEL,
     GROQ_DAILY_TOTAL_TOKENS_LIMIT: 200_000, GROQ_120B_ENABLED: 'true' });

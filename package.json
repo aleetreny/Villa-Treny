@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/verify-distribution.mjs",
+    "build": "tsc -b && vite build && node scripts/write-release.mjs && node scripts/verify-distribution.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
@@ -29,7 +29,8 @@
     "society:validate": "node tools/habitat/validate-society.mjs",
     "cognition:audit": "node tools/habitat/measure-prompts.mjs",
     "debate:pilot": "node --env-file-if-exists=.env.gemini.local scripts/run-debate-pilot.mjs",
-    "debate:daily": "node --env-file-if-exists=.env.gemini.local scripts/run-daily-debate.mjs"
+    "debate:daily": "node --env-file-if-exists=.env.gemini.local scripts/run-daily-debate.mjs",
+    "release:verify": "node scripts/verify-public.mjs"
   },
   "dependencies": {
     "react": "19.2.8",

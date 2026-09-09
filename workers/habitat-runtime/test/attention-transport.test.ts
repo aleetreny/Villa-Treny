@@ -55,7 +55,7 @@ describe('P8 saved transport integration', () => {
 
   it('routes a marked P8 through the real adapter and settles its single mocked request', async () => {
     const job = fixtureJob(), before = JSON.stringify(job), now = () => job.createdAtMs;
-    const config = parseRuntimeConfig({ HABITAT_ID: job.habitatId, PUBLIC_ORIGIN: 'https://aleetreny.github.io',
+    const config = parseRuntimeConfig({ HABITAT_ID: job.habitatId, PUBLIC_ORIGIN: 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev',
       TICK_INTERVAL_MS: '21600000', MAX_COGNITIONS_PER_ALARM: '1', WORKERS_AI_DAILY_NEURONS_LIMIT: '8000',
       WORKERS_AI_MODEL: '@cf/openai/gpt-oss-120b', GROQ_MODEL: 'openai/gpt-oss-20b', GROQ_120B_ENABLED: 'true',
       GROQ_DAILY_TOTAL_TOKENS_LIMIT: '200000' });

@@ -2,14 +2,14 @@
 
 The owner explicitly authorizes committing all verified accumulated work, pushing both independent repositories, publishing their public websites, and making incremental commits for subsequent completed changes. This supersedes the historical no-automatic-commit instruction below. Preserve original licensed artwork and durable production data. English product and repository documentation; Spanish progress reports.
 
-1. **Audit boundaries and publication — in progress.** Inspect both trees and existing hosting, verify source files contain no credentials, and keep each project's backend independent. Neon belongs to Portfolio; Villa Treny already has its own Cloudflare SQLite storage.
-2. **Preserve accumulated work — pending.** Commit the verified daily-forum implementation and research history using the owner's author and committer identity.
-3. **Finish independent delivery — pending.** Remove remaining cross-project navigation/configuration, document operation and releases, configure automatic Villa Treny deployment, and replace the accidental Pages /docs publication with the actual application.
+1. **Audit boundaries and publication — complete.** Inspect both trees and existing hosting, verify source files contain no credentials, and keep each project's backend independent. Neon belongs to Portfolio; Villa Treny already has its own Cloudflare SQLite storage.
+2. **Preserve accumulated work — complete.** Commit 08b8c46 preserves 635 accumulated files after 67 Node, 1,090 app and 411 Worker tests passed. Commit the verified daily-forum implementation and research history using the owner's author and committer identity.
+3. **Finish independent delivery — in progress.** Remove remaining cross-project navigation/configuration, document operation and releases, configure automatic Villa Treny deployment, and replace the accidental Pages /docs publication with the actual application.
 4. **Verify and publish — pending.** Run appropriate checks, push verified commits to main, verify public deployments and saved debates, and leave both working trees clean.
 
 ---
 
-# Current task: Villa-Treny daily debate production tool — 9 September 2026
+# Previous task: Villa-Treny daily debate production tool — 9 September 2026
 
 User authorizes turning the verified pilot into the official application: one daily debate, six refined fixed fictional personalities, a dominant expandable board, recent debate summaries, a vote feature, an archive, preserved portrait cards and an independent rooms page using existing art. All product text remains English. Develop and evaluate with Gemini 3.5 Flash Lite. The owner subsequently approved temporary Lite production after five Gemini 3.8 HTTP 503 failures; 3.8 remains pending a successful acceptance. Existing Groq is an explicitly authorized evaluation fallback only if Flash Lite capacity runs out. No automatic commit. Preserve the old world as recoverable history; do not edit Portfolio.
 
@@ -31,7 +31,7 @@ User authorizes turning the verified pilot into the official application: one da
 
 ---
 
-# Current task: Gemini 3.5 Flash Lite debate pilot — 9 September 2026
+# Previous task: Gemini 3.5 Flash Lite debate pilot — 9 September 2026
 
 The user has pivoted from the broad economic society to a daily debate forum and now explicitly requests integrating `gemini-3.5-flash-lite`, making real tests, and reviewing generated questions. The previous society completion audit below is historical and paused; it must not silently resume or set the acceptance criteria for this task.
 

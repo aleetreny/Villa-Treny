@@ -1,3 +1,5 @@
-# Copy to .dev.vars for local development. Never commit the real values.
+# Copy to .dev.vars for local development. Never commit real values.
+# Tests do not load this file or call external model providers.
 ADMIN_TOKEN=replace-with-a-long-random-value
+GEMINI_API_KEY=optional-key-for-explicit-local-model-evaluation
 GROQ_API_KEY=optional-free-tier-fallback-key

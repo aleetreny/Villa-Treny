@@ -1,12 +1,13 @@
-name: Verify Villa Treny
+name: Verify and publish Villa Treny
 on:
   push:
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 concurrency:
   group: check-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -24,6 +25,14 @@ jobs:
       - run: pnpm build
       - run: pnpm test:browser
       - run: pnpm rooms:export --verify
+      - run: pnpm runtime:deploy:dry
+      - run: node workers/habitat-runtime/test-hosting.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: villa-treny-site
+          path: dist/
+          retention-days: 7
+          if-no-files-found: error
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
@@ -31,3 +40,32 @@ jobs:
           path: |
             playwright-report/
             test-results/
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        with:
+          name: villa-treny-site
+          path: dist/
+      - run: node scripts/verify-distribution.mjs
+      - name: Publish the verified application and Worker
+        run: pnpm runtime:deploy
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          WRANGLER_SEND_METRICS: 'false'
+      - name: Check the public release without generating text
+        run: node scripts/verify-public.mjs --commit "$GITHUB_SHA"

@@ -8,7 +8,7 @@ import { cognitionJob } from './fixtures';
 import * as groqEstimator from '../src/providers/groq-token-estimate';
 
 function config(model: RuntimeConfig['WORKERS_AI_MODEL']): RuntimeConfig {
-  return parseRuntimeConfig({ HABITAT_ID: 'habitat-canonical', PUBLIC_ORIGIN: 'https://aleetreny.github.io',
+  return parseRuntimeConfig({ HABITAT_ID: 'habitat-canonical', PUBLIC_ORIGIN: 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev',
     TICK_INTERVAL_MS: '21600000', MAX_COGNITIONS_PER_ALARM: '1', WORKERS_AI_MODEL: model,
     WORKERS_AI_DAILY_NEURONS_LIMIT: '8000', GROQ_MODEL: 'openai/gpt-oss-20b',
     GROQ_DAILY_TOTAL_TOKENS_LIMIT: '200000' });
@@ -124,7 +124,7 @@ describe('provider routing', () => {
       groqApiKey: 'test-secret-not-real',
       config: parseRuntimeConfig({
         HABITAT_ID: 'habitat-canonical',
-        PUBLIC_ORIGIN: 'https://aleetreny.github.io',
+        PUBLIC_ORIGIN: 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev',
         TICK_INTERVAL_MS: '21600000',
         MAX_COGNITIONS_PER_ALARM: '1',
         WORKERS_AI_MODEL: '@cf/qwen/qwen3-30b-a3b-fp8',

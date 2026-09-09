@@ -407,7 +407,7 @@ isolated durable tests, privacy bounds and remaining limits.
   content or credentials. Scheduler failure and overdue time affect health even
   when HTTP and the retry alarm still work.
 - Public lightweight status, health, snapshot and day-archive endpoints with CORS
-  limited to `https://aleetreny.github.io`.
+  limited to `https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev`.
 - A test suite running in the actual Workers runtime with Durable Object storage.
 
 Operational wakeups and simulation time are separate persisted clocks. A retry or

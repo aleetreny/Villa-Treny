@@ -187,7 +187,7 @@ export type RouterResult =
 // intentionally selects only runtime policy fields instead of rejecting extras.
 export const runtimeConfigSchema = z.object({
   HABITAT_ID: z.string().min(1),
-  PUBLIC_ORIGIN: z.literal('https://aleetreny.github.io'),
+  PUBLIC_ORIGIN: z.literal('https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev'),
   TICK_INTERVAL_MS: z.coerce.number().int().refine(
     (value) => value === 6 * 60 * 60 * 1_000,
     'one watch must equal exactly six real hours',

@@ -60,7 +60,7 @@
   },
   "vars": {
     "HABITAT_ID": "habitat-canonical",
-    "PUBLIC_ORIGIN": "https://aleetreny.github.io",
+    "PUBLIC_ORIGIN": "https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev",
     "TICK_INTERVAL_MS": "21600000",
     "MAX_COGNITIONS_PER_ALARM": "1",
     "WORKERS_AI_MODEL": "@cf/openai/gpt-oss-120b",

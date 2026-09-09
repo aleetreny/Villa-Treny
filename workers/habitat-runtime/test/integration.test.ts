@@ -11,7 +11,7 @@ describe('habitat runtime Worker', () => {
   it('serves a lightweight health endpoint', async () => {
     const response = await exports.default.fetch('https://habitat.test/health');
     expect(response.status).toBe(200);
-    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny.github.io');
+    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev');
     await expect(response.json()).resolves.toMatchObject({ ok: true, service: 'habitat-runtime' });
   });
 
@@ -33,7 +33,7 @@ describe('habitat runtime Worker', () => {
 
     const response = await exports.default.fetch('https://habitat.test/v1/snapshot');
     expect(response.status).toBe(200);
-    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny.github.io');
+    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev');
     expect(response.headers.get('cache-control')).toContain('stale-while-revalidate');
     expect(response.headers.get('etag')).toBe(`"habitat-${beforeStatus.worldRevision}"`);
     await expect(response.json()).resolves.toMatchObject({
@@ -56,7 +56,7 @@ describe('habitat runtime Worker', () => {
 
     const response = await exports.default.fetch('https://habitat.test/v1/archive?day=100');
     expect(response.status).toBe(200);
-    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny.github.io');
+    expect(response.headers.get('access-control-allow-origin')).toBe('https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev');
     await expect(response.json()).resolves.toMatchObject({ day: 100, entries: [] });
   });
 

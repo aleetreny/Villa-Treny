@@ -10,4 +10,4 @@ This repository contains Villa Treny, a daily debate forum for six fictional res
 - Do not copy secrets into Git or expose administrative operations in the observer. Tests use isolated fixtures/local Workers and do not call real inference.
 - Run `pnpm check`, `pnpm build`, and relevant browser/export checks after material changes. Record limitations accurately.
 - Do not merge the dedicated simulation into Portfolio. The archived source and extraction manifest document its origin.
-- For authorized commits, the sole author and committer are Alejandro Treny Ortega `<alejandrotreny100@gmail.com>`. Set command-local identity variables; do not change global Git configuration or add generated co-author trailers.
+- The owner authorizes incremental commits after verified logical changes. Keep main current through fast-forward merges and push completed work; do not leave finished changes only on a development branch. For every commit, the sole author and committer are Alejandro Treny Ortega `<alejandrotreny100@gmail.com>`. Set command-local identity variables; do not change global Git configuration or add generated co-author trailers.

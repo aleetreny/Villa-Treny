@@ -38,4 +38,4 @@ Approved RoomLab renderers, exact source crops, exported rooms, collision masks,
 
 ## Product Principles
 
-The question and the conversation lead. Preserve accepted history. Keep uncertainty visible without flooding the reader with implementation detail. Fictional perspectives can agree, disagree or revise; never manufacture conflict merely to fill a turn. No automatic repository commit.
+The question and the conversation lead. Preserve accepted history. Keep uncertainty visible without flooding the reader with implementation detail. Fictional perspectives can agree, disagree or revise; never manufacture conflict merely to fill a turn. Save verified changes as incremental commits and publish main through the repository release workflow.

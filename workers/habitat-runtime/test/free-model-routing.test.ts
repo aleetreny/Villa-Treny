@@ -14,7 +14,7 @@ const G120 = GROQ_120B_MODEL;
 const G20 = GROQ_MODEL;
 
 function config(enabled?: 'true' | 'false'): RuntimeConfig {
-  return parseRuntimeConfig({ HABITAT_ID: 'habitat-canonical', PUBLIC_ORIGIN: 'https://aleetreny.github.io',
+  return parseRuntimeConfig({ HABITAT_ID: 'habitat-canonical', PUBLIC_ORIGIN: 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev',
     TICK_INTERVAL_MS: '21600000', MAX_COGNITIONS_PER_ALARM: '1', WORKERS_AI_MODEL: CF,
     WORKERS_AI_DAILY_NEURONS_LIMIT: '8000', GROQ_MODEL: G20, GROQ_DAILY_TOTAL_TOKENS_LIMIT: '200000',
     ...(enabled === undefined ? {} : { GROQ_120B_ENABLED: enabled }) });

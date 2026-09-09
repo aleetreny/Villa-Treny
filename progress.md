@@ -1,5 +1,13 @@
 ## Independent public release — 9 September 2026
 
+- Commit 08b8c46 saves the accumulated implementation/research (635 files). Known-secret comparison inspected all 1,193 candidate files against five real local credentials without exposing values; no match. Apparent assignments were synthetic tests/placeholders.
+- Removed live cross-project navigation and replaced the old public API origin with Villa Treny's own Worker origin. Original experiment source bundles remain immutable.
+- Added a check-gated main deployment workflow, a release commit manifest and a read-only public release verifier. Production environment permits main only. GitHub CLI workflow access refreshed through its existing authorization.
+- Disabled the accidental GitHub Pages /docs site; canonical Cloudflare URL is now the repository homepage. The portfolio keeps its own Pages configuration.
+- All local release checks pass: 67 Node tests, 1,090 app tests, 411 Worker tests, 26 browser flows, 7 bundled hosting tests, build and all 46 room / 373 foreground masks / 11 legacy raster checks. No model calls made by these checks.
+- Portfolio documentation and incremental-commit policy published in 5361e03 after 265 tests and build passed. Its GitHub CI and Pages release are being verified.
+- Two concrete owner decisions are pending: creation/storage of the prepared minimal Cloudflare deployment token, and whether to keep Villa Treny source private because original sprite packs prohibit redistribution. Its public application remains available either way.
+
 - The owner now authorizes commits, pushes and public publication for both repositories, with incremental commits in future. Earlier no-commit checkpoints are historical.
 - Villa Treny is already served by its own Cloudflare Worker and SQLite Durable Object. GitHub Pages currently serves documentation from main:/docs and needs correction. Portfolio has its own Pages workflow and its own Neon project, verified through the Neon plugin. No new database is necessary.
 - Source audit inspected 1,193 candidate files (65.27 MiB); no private-key, database-password, GitHub-token or Google-key matches. Six apparent token assignments are being checked as test/example fixtures before staging. Local keys, backups and runtime state remain ignored.

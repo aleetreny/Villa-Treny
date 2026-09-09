@@ -37,7 +37,7 @@ describe('bounded and conditional public service', () => {
     expect(repeated.status).toBe(304);
     expect(await repeated.text()).toBe('');
     expect(repeated.headers.get('etag')).toBe(tag);
-    expect(repeated.headers.get('access-control-allow-origin')).toBe('https://aleetreny.github.io');
+    expect(repeated.headers.get('access-control-allow-origin')).toBe('https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev');
     const obsolete = await exports.default.fetch('https://habitat.test/v1/observer', {
       headers: { 'if-none-match': '"habitat-observer-obsolete"' },
     });

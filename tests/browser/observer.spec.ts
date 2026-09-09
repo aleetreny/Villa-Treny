@@ -34,6 +34,7 @@ async function serveWorld(page: Page, options: { offline?: boolean; statusFailur
 async function ready(page: Page) {
   await page.goto('/?legacy=1');
   await expect(page.locator('.ns-head')).toContainText('Connected');
+  await expect(page.getByRole('link', { name: 'Daily board', exact: true })).toHaveAttribute('href', '/');
   await expect(page.locator('.room-view__world')).toHaveClass(/is-ready/);
 }
 

@@ -34,7 +34,7 @@ describe('runtime contracts', () => {
   it('rejects any provider/model configuration outside the free allowlist', () => {
     const config = {
       HABITAT_ID: 'habitat-canonical',
-      PUBLIC_ORIGIN: 'https://aleetreny.github.io',
+      PUBLIC_ORIGIN: 'https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev',
       TICK_INTERVAL_MS: '21600000',
       MAX_COGNITIONS_PER_ALARM: '1',
       WORKERS_AI_MODEL: '@cf/qwen/qwen3-30b-a3b-fp8',
@@ -43,6 +43,7 @@ describe('runtime contracts', () => {
       GROQ_DAILY_TOTAL_TOKENS_LIMIT: '200000',
     };
     expect(runtimeConfigSchema.parse(config).MAX_COGNITIONS_PER_ALARM).toBe(1);
+    expect(() => runtimeConfigSchema.parse({ ...config, PUBLIC_ORIGIN: 'https://unrelated.example' })).toThrow();
     expect(runtimeConfigSchema.parse(config).GROQ_DAILY_TOTAL_TOKENS_LIMIT).toBe(200_000);
     expect(runtimeConfigSchema.parse({ ...config, GROQ_DAILY_TOTAL_TOKENS_LIMIT: '150000' })
       .GROQ_DAILY_TOTAL_TOKENS_LIMIT).toBe(150_000);
