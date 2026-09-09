@@ -232,6 +232,12 @@ Archive entries are linked pixel titles, ordinary summaries and secondary dates,
 
 The six resident sheets preserve the original portrait and name, followed by the current lens, introduction and a habitat link. Definitions use short moss labels above readable prose. Portraits are authored on a 24 × 26 native canvas: 2× in the board/room roster, 4× in desktop profiles and 3× in mobile profiles. The larger profile is a full page, not the historical observer's notebook overlay.
 
+Resident sheets use nested row subgrids: names, lenses, introductions, habitat links and every definition label/value align within each row of profiles. Content sets track heights; no fixed-height text boxes or truncation. One-column layouts and individual profiles retain their natural height and semantic reading order.
+
+### About the project
+
+The footer links to `/about`, a Read surface in the existing visual system. Five ruled sections explain the daily question, six perspectives, reader controls, cloud schedule and limits of the experiment. On desktop a short heading column sits beside prose limited to 75ch; on mobile headings stack above their paragraphs. Resident names link to the full profiles. This page needs no debate API request or model generation, and the four main navigation destinations stay unchanged.
+
 ### Habitat and retained artwork
 
 Only the chosen room renders. RoomAtlas keeps 45 visitable interiors and the sealed Breach reference; Long Walk and Row remain recoverable in the underlying room model and RoomLab and resolve to Common in this observer. RoomScene preserves exact approved pixels, alpha masks and foreground occlusion. Its zoom is integer 1×–5× with Fit and scrolling; room and resident magnify together with nearest-neighbour rendering.

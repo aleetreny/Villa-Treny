@@ -29,6 +29,12 @@ The refinement preserves the approved rooms, authored portraits, typography and 
 - One visual batch inspected board, archive, residents and habitat at 1920×1080 and 390×844, plus reading/reply/summary views, using the actual saved edition **The Restored Hearing Threshold**. Captured pages had no JavaScript errors or horizontal overflow. README screenshots come from that batch.
 - Verification uses saved text or isolated fixtures. It does not generate debates, switch models, reset storage or spend inference quota.
 
+## Follow-up: aligned profiles and project explanation
+
+The six resident sheets now share content-sized heading and definition rows within each group of columns. Names, lenses, introductions, habitat links and all four label/value pairs align without shortened text or fixed heights. Single-column mobile and individual profiles keep their natural reading order. The footer now links to `/about`, with an English explanation of the daily question, fictional perspectives, reader controls, cloud schedule and experiment limits.
+
+Eight additional browser regressions pass in Chromium and WebKit: field alignment and absence of overlap at 390, 1280 and 1920 px, plus footer navigation, direct reload, profile links, browser Back and returning to the board. Profiles and About make zero debate API requests. The full browser suite now passes **46 tests**; `pnpm check` and `pnpm build` also pass. One batched visual inspection covered both pages on desktop and mobile, plus profiles at tablet width, with no page overflow or JavaScript errors. The layout detector reported no findings. No inference, room art, personality or saved debate was changed.
+
 ## Hosted runner correction
 
 The first GitHub run (`34404581965`, source `803afa5`) stopped before deployment: the historical offer-disposition regression spent 5,362 ms against its 5,000 ms limit on Ubuntu. Its 23 inputs all share one immutable state/turn; compiling the schema once removes redundant work while retaining every assertion and the existing timeout. Production engine behavior is unchanged. The next hosted run passed every check and deployed successfully; its immediate public check briefly saw the previous commit. Readiness verification now requires the exact commit within seven reads, five seconds apart, with regressions for stale, invalid and unavailable responses. Transport or identity errors still fail. See the release verification for the observed public result.

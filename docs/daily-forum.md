@@ -22,7 +22,7 @@ Scheduling starts at 09:00 UTC, after Pacific midnight in both seasons. Alarms a
 
 ## Interface and recommendations
 
-`/` opens the newest edition; `/debates/YYYY-MM-DD` addresses a stored discussion. `/archive` searches all saved titles, contexts and summaries, filters by subject and orders by date or recommendations. Cursors page twenty entries at a time. `/residents` and `/residents/A` expose six profile sheets. `/rooms` loads only the active approved room and six ambient residents. `?legacy=1` preserves the historical observer for recovery and development.
+`/` opens the newest edition; `/debates/YYYY-MM-DD` addresses a stored discussion. `/archive` searches all saved titles, contexts and summaries, filters by subject and orders by date or recommendations. Cursors page twenty entries at a time. `/residents` and `/residents/A` expose six profile sheets, with shared content-sized rows when shown in columns. `/rooms` loads only the active approved room and six ambient residents. The footer links to `/about`, an English explanation of the format, characters, reader controls, schedule and limitations; it makes no debate API requests. `?legacy=1` preserves the historical observer for recovery and development.
 
 Recommendations mean **worth reading**. The server stores an idempotent, reversible association between an edition and a signed anonymous browser identity. A Secure, HttpOnly, SameSite cookie is used. Same-origin checks and per-reader/network rate limits protect writes; raw IPs are not stored. This is one browser, not one verified human; deleting cookies or using another browser can create another identity. It is a discovery signal, not a representative poll. Clearing/rotating the signing secret also invalidates existing browser identities.
 
