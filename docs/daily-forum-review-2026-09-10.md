@@ -62,4 +62,12 @@ The existing completed-day validator passed. The imported public response exactl
 
 Live browser checks confirmed the date, title, twelve posts, Lite attribution, full scenario, summary navigation, a linked reply and the return to the summary. No browser warning or error was reported during those checks. At 09:00:25 UTC, after the original alarm was due, protected diagnostics showed both saved editions complete, zero cloud inference attempts and the next alarm at **11 September, 09:00 UTC**. Scheduling had advanced without duplicating today's generation. The previous edition's private record still exactly matched its backup.
 
-Full prompts, outputs, frozen source hashes and receipts remain in ignored local evaluation storage. The public JSON export's SHA-256 is `9c4b48b7a989979fb203b87970a41b31c0b29de33d5cb0b9327b9ff70f10751d`. This documentation update changes neither the runtime nor the stored generated text. It records observed behaviour and outstanding limitations, not a general model quality benchmark.
+Full prompts, outputs, frozen source hashes and receipts remain in ignored local evaluation storage. The public JSON export's SHA-256 is `9c4b48b7a989979fb203b87970a41b31c0b29de33d5cb0b9327b9ff70f10751d`. The review changes neither the production runtime nor the stored generated text. It records observed behaviour and outstanding limitations, not a general model quality benchmark.
+
+## Date-dependent test failure found during publication
+
+The documentation commit triggered the full repository checks. A durable-forum test failed because it froze the Worker's clock at 10 September, 09:00 UTC while workerd's native alarm dispatcher still used the real clock. Once that fixed time passed, native alarms ran alongside the test's manual calls. The expected reservation count no longer matched. The same failure was reproduced locally before editing; it was not a new production inference request or a duplicate public edition.
+
+The affected scheduling tests now derive a future UTC fixture date from wall time and consume scheduled alarms through Cloudflare's `runDurableObjectAlarm` test helper. They retain the pre-dispatch reservation, fifteen-call completion, saved-response recovery, exhausted-quota and next-day assertions. All nine durable-forum tests passed after the fix. No production scheduling code, model settings or archived text was changed.
+
+The full local `pnpm check` then passed: 72 Node tests, 1,090 application tests and 411 Worker tests, plus lint, types and provenance checks. `pnpm build` passed and verified 67 deployable files and 46 rooms. These automated checks use fixtures and mocked inference; they made no Gemini requests.

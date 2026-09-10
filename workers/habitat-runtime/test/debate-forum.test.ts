@@ -1,5 +1,5 @@
 import { env } from 'cloudflare:workers';
-import { runInDurableObject } from 'cloudflare:test';
+import { runDurableObjectAlarm, runInDurableObject } from 'cloudflare:test';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DebateForum } from '../src/debate/forum';
 import { debateHttp } from '../src/debate/http';
@@ -11,30 +11,34 @@ beforeEach(()=>vi.clearAllMocks());
 afterEach(()=>vi.restoreAllMocks());
 const stub=()=>env.DEBATE_FORUM.getByName('test-'+crypto.randomUUID());
 const seed=async(s:DurableObjectStub<DebateForum>,day=completedDay())=>runInDurableObject(s,(_i,ctx)=>{ctx.storage.sql.exec('INSERT INTO debate_days(id,body) VALUES(?,?)',day.id,JSON.stringify(day));});
+// Date.now is mocked inside the Worker, but workerd dispatches native alarms
+// using wall time. Keep test alarms in the future and consume them explicitly.
+const futureEditionTime=()=>{const date=new Date();date.setUTCDate(date.getUTCDate()+1);date.setUTCHours(9,0,0,0);return +date;};
 describe('durable daily forum',()=>{
  it('keeps reads inert and default scheduling disabled',async()=>{const s=stub();expect((await s.getArchive()).schedule.enabled).toBe(false);expect(await s.getEdition('2026-09-09')).toBeNull();await runInDurableObject(s,async(_i,ctx)=>expect(await ctx.storage.getAlarm()).toBeNull());expect(runGemini).not.toHaveBeenCalled();});
  it('stores idempotent recommendations across requests and rejects unfinished editions',async()=>{const s=stub();await seed(s);expect(await s.vote('2026-09-09','reader',true,'net')).toEqual({recommended:true,recommendations:1});expect(await s.vote('2026-09-09','reader',true,'net')).toEqual({recommended:true,recommendations:1});expect(await s.getVote('2026-09-09','reader')).toEqual({recommended:true,recommendations:1});expect(await s.vote('2026-09-09','other',true,'net')).toEqual({recommended:true,recommendations:2});expect(await s.vote('2026-09-09','reader',false,'net')).toEqual({recommended:false,recommendations:1});expect((await s.getEdition('2026-09-09'))?.recommendations).toBe(1);expect(await s.vote('2099-01-01','reader',true,'net')).toEqual({error:'not_ready'});});
  it('pages permanent history without repeating or dropping editions',async()=>{const s=stub();for(let i=1;i<=23;i++)await seed(s,completedDay('2026-08-'+String(i).padStart(2,'0')));const first=await s.getArchive();expect(first.entries).toHaveLength(20);const last=await s.getArchive(first.nextCursor!);expect(last.entries).toHaveLength(3);expect(last.nextCursor).toBeNull();expect(new Set([...first.entries,...last.entries].map(d=>d.id)).size).toBe(23);});
  it('reserves calls before dispatch and completes an edition without visitor triggers',async()=>{
-   const s=stub();let now=Date.UTC(2026,8,10,9);vi.spyOn(Date,'now').mockImplementation(()=>now);
+   const s=stub(),start=futureEditionTime(),date=new Date(start).toISOString().slice(0,10);let now=start;vi.spyOn(Date,'now').mockImplementation(()=>now);
    await s.configure({enabled:true,model:'gemini-3.5-flash-lite'});
    for(let i=0;i<15;i++){
-     const exported=await s.exportEdition('2026-09-10');const day=exported.day!;const task=nextDailyTask(day,[])!;
-     now+=61_000;await runInDurableObject(s,async(instance,ctx)=>{vi.mocked(runGemini).mockImplementationOnce(async()=>{expect(ctx.storage.sql.exec('SELECT COUNT(*) AS count FROM debate_attempts').one().count).toBe(i+1);return successful(payloadFor(day,task));});await instance.alarm();});
+     const exported=await s.exportEdition(date);const day=exported.day!;const task=nextDailyTask(day,[])!;
+     now+=61_000;await runInDurableObject(s,(_instance,ctx)=>{vi.mocked(runGemini).mockImplementationOnce(async()=>{expect(ctx.storage.sql.exec('SELECT COUNT(*) AS count FROM debate_attempts').one().count).toBe(i+1);return successful(payloadFor(day,task));});});
+     expect(await runDurableObjectAlarm(s)).toBe(true);
    }
-   expect((await s.getEdition('2026-09-10'))?.status).toBe('complete');expect((await s.getEdition('2026-09-10'))?.posts).toHaveLength(12);
-   await runInDurableObject(s,instance=>instance.alarm());expect((await s.exportEdition('2026-09-10')).attempts).toHaveLength(15);expect((await s.diagnostics()).nextAlarmAt).toBe(Date.UTC(2026,8,11,9));
+   expect((await s.getEdition(date))?.status).toBe('complete');expect((await s.getEdition(date))?.posts).toHaveLength(12);
+   expect(await runDurableObjectAlarm(s)).toBe(true);expect((await s.exportEdition(date)).attempts).toHaveLength(15);expect((await s.diagnostics()).nextAlarmAt).toBe(start+86_400_000);
  });
  it('charges uncertain outcomes, recovers saved responses, and blocks exhausted quota',async()=>{
-   const s=stub();const now=Date.UTC(2026,8,11,9);vi.spyOn(Date,'now').mockReturnValue(now);await s.configure({enabled:true,model:'gemini-3.8-flash'});
-   await s.accountExternal([{date:'2026-09-11',model:'gemini-3.8-flash',count:20}]);await runInDurableObject(s,instance=>instance.alarm());
-   expect((await s.exportEdition('2026-09-11')).attempts).toHaveLength(0);expect((await s.getEdition('2026-09-11'))?.status).toBe('delayed');
+   const s=stub(),now=futureEditionTime(),date=new Date(now).toISOString().slice(0,10),draftId=date+'-draft-1';vi.spyOn(Date,'now').mockReturnValue(now);await s.configure({enabled:true,model:'gemini-3.8-flash'});
+   await s.accountExternal([{date,model:'gemini-3.8-flash',count:20}]);expect(await runDurableObjectAlarm(s)).toBe(true);
+   expect((await s.exportEdition(date)).attempts).toHaveLength(0);expect((await s.getEdition(date))?.status).toBe('delayed');
    const t=stub();await t.configure({enabled:true,model:'gemini-3.5-flash-lite'});
-   await runInDurableObject(t,(_instance,ctx)=>{ctx.storage.sql.exec("INSERT INTO debate_attempts(id,day,task,model,quota_day,started,deadline,state,result) VALUES('crashed','2026-09-11','2026-09-11-draft-1','gemini-3.5-flash-lite','2026-09-11',?,?, 'pending',NULL)",now-200000,now-1);});
-   await runInDurableObject(t,instance=>instance.alarm());const recovered=await t.exportEdition('2026-09-11');expect(recovered.day?.attempts['2026-09-11-draft-1']).toBe(1);expect(recovered.attempts).toHaveLength(1);
+   await runInDurableObject(t,(_instance,ctx)=>{ctx.storage.sql.exec("INSERT INTO debate_attempts(id,day,task,model,quota_day,started,deadline,state,result) VALUES('crashed',?,?,'gemini-3.5-flash-lite',?,?,?, 'pending',NULL)",date,draftId,date,now-200000,now-1);});
+   expect(await runDurableObjectAlarm(t)).toBe(true);const recovered=await t.exportEdition(date);expect(recovered.day?.attempts[draftId]).toBe(1);expect(recovered.attempts).toHaveLength(1);
    const draftTask=nextDailyTask(recovered.day!,[])!;const response=successful(payloadFor(recovered.day!,draftTask));
-   await runInDurableObject(t,(_instance,ctx)=>{ctx.storage.sql.exec("INSERT INTO debate_attempts(id,day,task,model,quota_day,started,deadline,state,result) VALUES('saved','2026-09-11','2026-09-11-draft-1','gemini-3.5-flash-lite','2026-09-11',?,?, 'result',?)",now-1000,now+200000,JSON.stringify(response));});
-   await runInDurableObject(t,instance=>instance.alarm());expect((await t.exportEdition('2026-09-11')).day?.phase).toBe('edit');
+   await runInDurableObject(t,(_instance,ctx)=>{ctx.storage.sql.exec("INSERT INTO debate_attempts(id,day,task,model,quota_day,started,deadline,state,result) VALUES('saved',?,?,'gemini-3.5-flash-lite',?,?,?, 'result',?)",date,draftId,date,now-1000,now+200000,JSON.stringify(response));});
+   expect(await runDurableObjectAlarm(t)).toBe(true);expect((await t.exportEdition(date)).day?.phase).toBe('edit');
  });
  it('imports acceptance once, accounts external quota monotonically and refuses changed history',async()=>{
    const s=stub(),day=completedDay();
@@ -59,9 +63,9 @@ describe('durable daily forum',()=>{
    expect((await s.getArchive({domain:'space'})).entries.map(d=>d.id)).toEqual(['2026-08-01']);
  });
  it('holds an unfinished older protocol on upgrade without issuing a request',async()=>{
-   const s=stub();vi.spyOn(Date,'now').mockReturnValue(Date.UTC(2026,8,10,9));await s.configure({enabled:true,model:'gemini-3.5-flash-lite'});
+   const s=stub(),now=futureEditionTime(),date=new Date(now).toISOString().slice(0,10);vi.spyOn(Date,'now').mockReturnValue(now);await s.configure({enabled:true,model:'gemini-3.5-flash-lite'});
    await runInDurableObject(s,(_instance,ctx)=>{ctx.storage.sql.exec("UPDATE debate_days SET body=json_set(body,'$.protocol','villa-debate-v1','$.phase','edit','$.draft',NULL)");});
-   await runInDurableObject(s,instance=>instance.alarm());expect((await s.exportEdition('2026-09-10')).day?.heldReason).toBe('protocol_changed');expect(runGemini).not.toHaveBeenCalled();
+   expect(await runDurableObjectAlarm(s)).toBe(true);expect((await s.exportEdition(date)).day?.heldReason).toBe('protocol_changed');expect(runGemini).not.toHaveBeenCalled();
  });
  it('serves signed cookie votes and rejects cross-site or forged writes',async()=>{
    const s=env.DEBATE_FORUM.getByName('villa-treny-daily-v1');await seed(s);
