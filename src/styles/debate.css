@@ -22,7 +22,8 @@
 .forum-top nav { display:flex; align-self:stretch; align-items:center; gap:30px; flex:1; }
 .forum-top nav a { color:var(--muted); text-decoration:none; padding:9px 0; white-space:nowrap; }
 .forum-top nav a[aria-current='page'] { color:#eddbb0; border-bottom:2px solid #c6ac77; }
-.forum-schedule { color:var(--muted); font-size:14px; text-align:right; line-height:1.5; }
+.forum-about-link { display:inline-flex; align-items:center; justify-content:flex-end; min-height:44px; flex-shrink:0; font-size:16px; }
+.forum-about-link[aria-current='page'] { color:#eddbb0; text-decoration-thickness:2px; }
 .forum-layout { width:100%; margin:0; min-height:calc(100svh - 192px); }
 .forum-layout.has-board { display:grid; grid-template-columns:clamp(206px,17vw,280px) minmax(0,1fr); }
 .forum-layout main { min-width:0; outline:none; }
@@ -119,19 +120,43 @@
 .forum-person-list dl>div { display:grid; grid-template-rows:subgrid; grid-row:span 2; row-gap:0; margin:0 0 22px; }
 .forum-person-list dt { font-size:13px; color:#b7c69e; margin-bottom:5px; }
 .forum-person-list dd { margin:0; max-width:65ch; }
-.forum-residents:has(.forum-person-list>article:only-child) { max-width:1050px; }
-.forum-person-list:has(>article:only-child) { grid-template-columns:1fr; }
+.forum-resident-profile { padding:28px var(--gutter) 48px; }
+.forum-resident-back { display:inline-flex; align-items:center; min-height:44px; margin-bottom:20px; font-size:16px; }
+.forum-resident-sheet { display:grid; grid-template-columns:clamp(300px,28vw,440px) minmax(0,1fr); border:1px solid #7a7055; }
+.forum-resident-identity { display:grid; justify-items:start; align-content:start; gap:22px; padding:clamp(24px,2.5vw,40px); background:#1b2126; }
+.forum-resident-identity canvas { display:block; box-sizing:content-box; }
+.forum-resident-name { min-width:0; }
+.forum-resident-number { margin:0 0 9px; font-size:13px; color:var(--muted); }
+.forum-resident-name h1 { margin:0 0 12px; font:500 clamp(34px,3vw,48px)/1.08 'Pixelify Sans',sans-serif; color:#eddbb0; overflow-wrap:anywhere; }
+.forum-resident-lens { color:#b7c69e; font-size:21px; margin:0; }
+.forum-resident-bio { font-size:18px; line-height:1.55; margin:0; max-width:48ch; }
+.forum-resident-visit { display:inline-flex; align-items:center; min-height:44px; font-size:16px; }
+.forum-resident-values { margin:0; border-left:1px solid #495052; padding:clamp(28px,3vw,48px); display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px clamp(28px,3vw,48px); }
+.forum-resident-values>div { min-width:0; border-top:1px solid #495052; padding-top:18px; }
+.forum-resident-values dt { font:500 25px/1.2 'Pixelify Sans',sans-serif; color:#b7c69e; margin-bottom:16px; }
+.forum-resident-values dd { font-size:20px; line-height:1.65; margin:0; max-width:54ch; overflow-wrap:anywhere; }
 .forum-about { overflow-wrap:anywhere; }
-.forum-about header { margin-bottom:38px; }
-.forum-about header p { max-width:65ch; margin:0; font-size:20px; }
+.forum-about header { margin-bottom:28px; }
+.forum-about header p { max-width:64ch; margin:0; font-size:20px; }
+.forum-about header .forum-about-lead { font-size:clamp(22px,2vw,28px); line-height:1.5; margin:20px 0 16px; }
+.forum-about-lead strong { color:#eddbb0; font-weight:600; }
+.forum-about header .forum-about-purpose { color:var(--muted); font-size:18px; }
+.forum-about-start { display:inline-flex; align-items:center; min-height:44px; margin-top:12px; }
 .forum-about-section { display:grid; grid-template-columns:clamp(180px,22vw,300px) minmax(0,1fr); gap:clamp(24px,4vw,70px); padding:30px 0; border-top:1px solid #7a7055; }
 .forum-about-section h2 { margin:0; font:500 28px/1.2 'Pixelify Sans',sans-serif; text-wrap:balance; }
 .forum-about-section>div { max-width:75ch; min-width:0; }
 .forum-about-section p { margin:0 0 18px; }
 .forum-about-section p:last-child { margin-bottom:0; }
-.forum-about-perspectives { list-style:none; padding:0; margin:24px 0; }
+.forum-about-perspectives { list-style:none; padding:0; margin:0 0 20px; }
 .forum-about-perspectives li { display:grid; grid-template-columns:70px minmax(0,1fr); gap:18px; margin:8px 0; }
 .forum-about-source { color:var(--muted); font-size:15px; }
+.forum-about-steps { margin:0; padding-left:22px; }
+.forum-about-steps li { padding-left:6px; margin-bottom:14px; }
+.forum-about-steps li:last-child { margin-bottom:0; }
+.forum-about-steps li::marker { color:var(--brass); }
+.forum-about-details { border-top:1px solid #7a7055; padding-top:16px; }
+.forum-about-details summary { display:list-item; width:fit-content; min-height:44px; padding:10px 0; color:var(--brass); cursor:pointer; }
+.forum-about-details p { max-width:75ch; margin:16px 0 0; }
 .forum-footer { margin:0; padding:24px var(--gutter); border-top:1px solid #41483f; color:var(--muted); font-size:12px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 22px; }
 .forum-footer>a { display:inline-flex; align-items:center; min-height:44px; }
 .forum-skip { position:fixed; left:20px; top:-100px; background:#ddd3b9; color:#171c22!important; padding:12px; z-index:1001; }
@@ -184,7 +209,12 @@
 @media(max-width:1100px) {
   .forum-top { gap:28px; padding-top:20px; padding-bottom:20px; }
   .forum-top nav { gap:22px; }
-  .forum-schedule { display:none; }
+  .forum-about-link { font-size:15px; }
+  .forum-resident-sheet { grid-template-columns:1fr; }
+  .forum-resident-identity { grid-template-columns:146px minmax(0,1fr); gap:12px 28px; }
+  .forum-resident-identity canvas { grid-column:1; grid-row:1/4; }
+  .forum-resident-name, .forum-resident-bio, .forum-resident-visit { grid-column:2; }
+  .forum-resident-values { border-left:0; border-top:1px solid #495052; }
   .forum-layout.has-board { grid-template-columns:200px minmax(0,1fr); }
   .forum-sidebar { padding:30px 20px; }
   .forum-post { grid-template-columns:1fr; gap:18px; }
@@ -198,10 +228,16 @@
   .forum-room-roster h2 { grid-column:1/-1; margin:0; }
   .forum-room-roster>div { margin:0; }
 }
+@media(max-width:960px) {
+  .forum-top { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 18px; padding-bottom:0; }
+  .forum-top nav { grid-column:1/-1; grid-row:2; }
+  .forum-about-link { grid-column:2; grid-row:1; }
+}
 @media(max-width:760px) {
-  .forum-top { display:block; padding:18px var(--gutter) 0; min-height:0; }
-  .forum-brand { font-size:30px; display:flex; align-items:baseline; flex-wrap:wrap; gap:6px 16px; }
-  .forum-brand span { margin:0; font-size:13px; }
+  .forum-top { padding:16px var(--gutter) 0; min-height:0; }
+  .forum-brand { font-size:clamp(24px,6.5vw,30px); min-width:0; }
+  .forum-brand span { margin-top:7px; font-size:12px; }
+  .forum-about-link { max-width:95px; text-align:right; font-size:15px; line-height:1.4; }
   .forum-top nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:14px; font-size:16px; }
   .forum-top nav a { text-align:center; min-height:48px; display:flex; justify-content:center; align-items:center; padding:9px 0 12px; }
   .forum-layout.has-board { display:block; }
@@ -239,6 +275,17 @@
   .forum-person-list article { margin-bottom:32px; }
   .forum-person-heading { column-gap:18px; }
   .forum-person-heading canvas { width:72px!important; height:78px!important; }
+  .forum-resident-profile { padding:16px var(--gutter) 36px; }
+  .forum-resident-back { margin-bottom:12px; }
+  .forum-resident-identity { padding:20px; grid-template-columns:98px minmax(0,1fr); gap:20px 16px; align-items:center; }
+  .forum-resident-identity canvas { width:96px!important; height:104px!important; grid-row:1; }
+  .forum-resident-name h1 { font-size:32px; }
+  .forum-resident-number { font-size:12px; }
+  .forum-resident-lens { font-size:18px; }
+  .forum-resident-bio, .forum-resident-visit { grid-column:1/-1; }
+  .forum-resident-values { grid-template-columns:1fr; padding:24px 20px; gap:26px; }
+  .forum-resident-values dt { font-size:24px; margin-bottom:10px; }
+  .forum-resident-values dd { font-size:18px; line-height:1.6; }
   .forum-about-section { grid-template-columns:1fr; gap:18px; padding:26px 0; }
   .forum-about-perspectives li { min-height:44px; align-items:baseline; margin:4px 0; }
   .forum-about-perspectives a { display:flex; align-items:center; min-height:44px; }
@@ -264,6 +311,12 @@
   .forum-footer { padding:22px var(--gutter) max(22px,env(safe-area-inset-bottom)); }
   .forum-loading, .forum-empty { padding:40px var(--gutter); }
   .forum-reading-controls { font-size:14px; }
+}
+@media(max-width:380px) {
+  .forum-top nav { font-size:14px; gap:6px; }
+  .forum-resident-identity { grid-template-columns:74px minmax(0,1fr); column-gap:12px; }
+  .forum-resident-identity canvas { width:72px!important; height:78px!important; }
+  .forum-resident-name h1 { font-size:28px; }
 }
 @media(pointer:coarse) {
   .forum-app button:where(:not(.room-view__resident)), .forum-app input, .forum-app select { min-height:44px; }

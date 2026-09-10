@@ -24,7 +24,7 @@ const release = await readPublishedRelease(() => read('/release.json'), {
 assert.equal((await read('/health')).ok, true);
 const archive = await read('/v1/debates');
 assert.ok(Array.isArray(archive.entries), 'Archive must be an actual API result.');
-const paths = ['/', '/archive', '/residents', '/rooms', '/about'];
+const paths = ['/', '/archive', '/residents', '/residents/A', '/rooms', '/about'];
 if (archive.entries[0]) {
   const date = archive.entries[0].date;
   assert.match(date, /^\d{4}-\d{2}-\d{2}$/);
