@@ -2,7 +2,7 @@
 
 The current product replaces the room-first economic experiment with a daily discussion. The previous `HabitatWorld` class, binding, state and historical implementation remain recoverable. `DebateForum` uses a separate SQLite-backed Durable Object named `villa-treny-daily-v1`.
 
-The current deployed model is **Gemini 3.5 Flash Lite**, explicitly selected by the owner after repeated 3.8 HTTP 503 failures. Gemini 3.8 Flash remains a supported, unaccepted production upgrade; it is not enabled.
+The deployed model is **Gemini 3.5 Flash Lite**, selected by the owner as the ongoing production choice after repeated 3.8 HTTP 503 failures. On 10 September, 3.8 answered a minimal probe but failed all three real drafting attempts. Its integration remains available and inactive; further upgrade trials are optional, not a release requirement.
 
 ## What is published
 
@@ -31,7 +31,7 @@ Recommendations mean **worth reading**. The server stores an idempotent, reversi
 Existing bearer-token administration remains required. New endpoints:
 
 - `GET /v1/admin/debates`: settings, recent edition states and usage receipts.
-- `POST /v1/admin/debates/configure`: `{ "enabled": true, "model": "gemini-3.8-flash" }`.
+- `POST /v1/admin/debates/configure`: `{ "enabled": true, "model": "gemini-3.5-flash-lite" }`.
 - `POST /v1/admin/debates/usage`: cumulative external usage per model/Pacific date; updates only raise the recorded amount.
 - `POST /v1/admin/debates/adopt`: a fully validated actual acceptance edition plus external usage, immutable and idempotent. It cannot overwrite a different existing edition.
 - `GET /v1/admin/debates/export?date=YYYY-MM-DD`: private edition and attempt evidence.

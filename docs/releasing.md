@@ -10,7 +10,7 @@ The deploy job downloads that run's verified frontend artifact, deploys it toget
 
 **Daily discussions:** the deployed Cloudflare Durable Object starts a new date at 09:00 UTC and advances one saved step at a time. An hourly cron reconciles missed scheduling. Accepted posts and the final summary are stored in SQLite, with the archive and recommendation counts. The browser reads the API; it never starts inference. No GitHub Actions schedule, generated Markdown commit, rebuild or laptop process is involved.
 
-A new date may take several minutes to complete. Provider outages, rejected output and exhausted quotas can delay or hold an edition. The next date proceeds independently, within the configured limits. The product currently uses Gemini 3.5 Flash Lite; Gemini 3.8 Flash remains pending acceptance.
+A new date may take several minutes to complete. Provider outages, rejected output and exhausted quotas can delay or hold an edition. The next date proceeds independently, within the configured limits. Gemini 3.5 Flash Lite is the ongoing production choice. Gemini 3.8 Flash remains inactive after the 10 September recheck failed to draft a real edition; upgrading is not required to keep publishing.
 
 ## Production identity
 
