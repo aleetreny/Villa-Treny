@@ -150,7 +150,9 @@ export async function runGemini(input: {
   try {
     signal.throwIfAborted();
     const response = await (input.fetcher ?? fetch)(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: 'POST', redirect: 'error', signal,
+      // Manual mode also works in workerd; reject 3xx below without forwarding
+      // the credential or prompt to a redirect destination.
+      method: 'POST', redirect: 'manual', signal,
       headers: { 'content-type': 'application/json', 'x-goog-api-key': input.apiKey.trim() }, body,
     });
     result.status = response.status;

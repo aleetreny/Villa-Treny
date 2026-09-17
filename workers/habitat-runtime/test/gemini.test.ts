@@ -11,6 +11,18 @@ const envelope = (overrides: Record<string, unknown> = {}) => ({
 const request = (response: Response) => runGemini({ apiKey: 'fixture-secret', prompt, fetcher: async () => response });
 
 describe('Gemini debate transport (mock inference only)', () => {
+  it('constructs the outbound request with the native Workers transport', async () => {
+    const fetcher = vi.fn(async (url: string, init: RequestInit) => {
+      // A plain mock skips runtime validation of RequestInit. Exercise workerd
+      // without dispatching to a provider or loading a real credential.
+      const outbound = new Request(url, init);
+      expect(outbound.method).toBe('POST');
+      return Response.json(envelope());
+    });
+    expect(await runGemini({ apiKey: 'fixture-secret', prompt, fetcher })).toMatchObject({ ok: true, code: 'ok' });
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
   it('keeps credentials in the header, uses a pinned model, JSON schema and medium thinking', async () => {
     let capturedUrl = '', captured: RequestInit = {};
     const result = await runGemini({ apiKey: 'fixture-secret', prompt, fetcher: async (url, init) => {
@@ -19,7 +31,7 @@ describe('Gemini debate transport (mock inference only)', () => {
     } });
     expect(capturedUrl).toBe(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_DEBATE_MODEL}:generateContent`);
     expect(new Headers(captured.headers).get('x-goog-api-key')).toBe('fixture-secret');
-    expect(captured.redirect).toBe('error');
+    expect(captured.redirect).toBe('manual');
     expect(String(captured.body)).not.toContain('fixture-secret');
     expect(JSON.parse(String(captured.body))).toMatchObject({ generationConfig: {
       responseMimeType: 'application/json', responseJsonSchema: { type: 'object' },
@@ -43,6 +55,19 @@ describe('Gemini debate transport (mock inference only)', () => {
     expect(result).toMatchObject({ ok: false, code, status, retryAfterMs: 45_000, text: null });
     expect(JSON.stringify(result)).not.toContain('fixture-secret');
     expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
+  it.each([301, 302, 303, 307, 308])('rejects HTTP %s without following its destination', async status => {
+    const fetcher = vi.fn(async (url: string, init: RequestInit) => {
+      const outbound = new Request(url, init);
+      expect(outbound.redirect).toBe('manual');
+      return new Response('fixture-secret', { status, headers: { location: 'https://redirect.invalid/private' } });
+    });
+    const result = await runGemini({ apiKey: 'fixture-secret', prompt, fetcher });
+    expect(result).toMatchObject({ ok: false, code: 'provider_error', status, text: null, payload: null });
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    expect(JSON.stringify(result)).not.toContain('fixture-secret');
+    expect(JSON.stringify(result)).not.toContain('redirect.invalid');
   });
 
   it('does not return hidden thought parts as a public answer', async () => {
