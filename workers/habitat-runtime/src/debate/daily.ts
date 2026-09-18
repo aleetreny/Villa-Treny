@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { CHARACTERS, CHARACTER_IDS, CHARACTER_VERSION, type CharacterId } from '../../../../src/lib/debate/characters';
-import { DAILY_PROTOCOL, candidateCasesSchema, caseIssues, countWords, dailyPostSchema, digestSchema, editorialSchema, openingSchema,
+import { DAILY_PROTOCOL, candidateCasesSchema, debateCaseSchema, caseIssues, countWords, dailyPostSchema, digestSchema, editorialSchema, openingSchema,
   postIssues, quoteChoices, characterSchema, publicDebateSchema, replySchema, summarySchema, type DailyCase, type DailyPost, type PublicDebate } from '../../../../src/lib/debate/contracts';
 import type { GeminiModel, GeminiPrompt, GeminiResult } from '../providers/gemini';
 import { dailyBrief, dailyOpening, dailyReply, digestPrompt, draftPrompt, editPrompt } from './daily-prompts';
@@ -9,7 +9,8 @@ export const DAILY_HOUR_UTC = 9;
 export const MAX_DAY_ATTEMPTS = 20;
 export const dailyRecordSchema = publicDebateSchema.omit({ recommendations: true }).extend({
   phase: z.enum(['draft', 'edit', 'opening', 'replies', 'summary', 'done']),
-  draft: candidateCasesSchema.nullable(), draftNumber: z.number().int().min(1).max(2),
+  // Stored drafts predate the tighter generation bounds; keep them recoverable.
+  draft: z.strictObject({ candidates: z.array(debateCaseSchema).length(3) }).nullable(), draftNumber: z.number().int().min(1).max(2),
   editorialFeedback: z.array(z.string()).max(12), attempts: z.record(z.string(), z.number().int().min(0).max(3)),
   heldReason: z.string().nullable(), lastFailure: z.string().nullable(),
 });
@@ -57,7 +58,7 @@ function planDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTa
 
 const corrections: Record<string, string> = {
   candidate_schema: 'Match the requested case schema, including every string length and all three candidates.',
-  context_length: 'Use 50–125 words of context.',
+  context_length: 'REWRITE the context into 65–100 words. Do not return the same overlong draft. Then copy the facts from the rewritten context.',
   one_open_question: 'End exactly one open question with a question mark.',
   closed_question: 'Rewrite the question to begin with What should or How should, for example What should Marta do about the offer? Do not begin with Should or list two alternatives.',
   stock_balance_template: 'Ask about the concrete decision, not broad guiding principles.',
@@ -65,7 +66,7 @@ const corrections: Record<string, string> = {
   facts_must_quote_context: 'Copy the facts verbatim from the final context.',
   editorial_schema: 'Match the editorial JSON schema, including decisiveConstraint and two or three viableResponses.',
   constraint_must_quote_context: 'Copy decisiveConstraint exactly from the final context, not from a discarded draft.',
-  post_schema: 'Return two paragraph strings with no line breaks, each within the schema character limit; keep position within 120 characters and factsUsed within the supplied fact IDs.',
+  post_schema: 'Match every field in the schema. Return two short paragraphs with no line breaks; a reply paragraph has at most 240 characters and needs engagement and quoteIndex. Keep position within 120 characters and factsUsed within the supplied fact IDs.',
   post_length: 'The TOTAL across both paragraphs must be 50–105 words for an opening or 20–75 for a reply. A short reply is welcome; stay under the maximum.',
   post_paragraphs: 'Use exactly two paragraphs, 10–55 words each, with no line breaks inside an item.',
   invalid_fact_reference: 'Use only supplied established fact IDs, with no duplicates.',
@@ -79,7 +80,10 @@ export function nextDailyTask(day: DailyRecord, history: readonly DailyCase[]): 
   // Only controlled validation messages enter a retry prompt, never provider
   // error text or rejected model output. Retry the same turn, within its budget.
   const feedback = day.lastFailure.split(',').flatMap(issue => corrections[issue] ? [corrections[issue]] : []);
-  if (feedback.length) task.prompt.user = JSON.stringify({ ...JSON.parse(task.prompt.user), validationFeedback: feedback });
+  if (feedback.length) {
+    task.prompt.system = 'Your previous attempt was rejected. Correct these issues before returning a new answer:\n' + feedback.join('\n') + '\n\n' + task.prompt.system;
+    task.prompt.user = JSON.stringify({ ...JSON.parse(task.prompt.user), validationFeedback: feedback });
+  }
   return task;
 }
 

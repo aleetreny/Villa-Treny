@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyDailyResult, newDebate, nextDailyTask, publicDay, replyTarget, turnOrder, verifyCompletedDay } from '../src/debate/daily';
+import { applyDailyResult, dailyRecordSchema, newDebate, nextDailyTask, publicDay, replyTarget, turnOrder, verifyCompletedDay } from '../src/debate/daily';
 import { nextQuotaDay, quotaDate, unknownResult } from '../src/debate/budget';
 import { completedDay, sampleCase, payloadFor, successful, editorialOptions, openingParagraphs, replyParagraphs } from './fixtures/daily';
 import { CHARACTER_IDS } from '../../../src/lib/debate/characters';
@@ -26,6 +26,7 @@ describe('daily debate protocol', () => {
     expect(day.posts.every(p=>p.body.split('\n\n').length===2)).toBe(true);
     expect(day.posts[0]!.body).toBe(openingParagraphs.join('\n\n'));
     expect(day.posts[6]!.body).toBe(replyParagraphs.join('\n\n'));
+    expect(day.posts[6]).not.toHaveProperty('engagement');
     expect(verifyCompletedDay(day)).toEqual(day);
     expect(publicDay(day,2)).not.toHaveProperty('attempts');
   });
@@ -70,6 +71,7 @@ describe('daily debate protocol', () => {
     const retry=nextDailyTask(bad.day,[])!;
     expect(retry.id).toBe(task.id);
     expect(JSON.parse(retry.prompt.user).validationFeedback.join(' ')).toContain('50–105');
+    expect(retry.prompt.system.startsWith('Your previous attempt was rejected.')).toBe(true);
     const good=applyDailyResult(bad.day,retry,successful(payloadFor(bad.day,retry)),[],80_000);
     expect(good.day.posts).toHaveLength(1);
     expect(nextDailyTask(good.day,[])!.prompt.user).not.toContain('validationFeedback');
@@ -78,11 +80,13 @@ describe('daily debate protocol', () => {
     const legacyBody={body:openingParagraphs.join(' '),position:'Give both groups a predictable timetable.',factsUsed:[1]};
     expect(applyDailyResult(day,task,successful(legacyBody),[],1).issues).toContain('post_schema');
     expect(nextDailyTask({...day,lastFailure:'network_error,untrusted_provider_text',attempts:{[task.id]:1}},[])!.prompt.user).not.toContain('untrusted_provider_text');
+    expect(nextDailyTask({...day,lastFailure:'network_error,untrusted_provider_text',attempts:{[task.id]:1}},[])!.prompt.system).not.toContain('untrusted_provider_text');
   });
   it('applies the shorter reply limit without weakening fact and quotation checks', () => {
     const full=completedDay();
     const day={...full,posts:full.posts.slice(0,6),summary:null,phase:'replies' as const,status:'replies' as const,attempts:{}};
     const task=nextDailyTask(day,[])!;
+    expect(applyDailyResult(day,task,successful({...payloadFor(day,task) as object,engagement:'invent_a_disagreement'}),[],1).issues).toEqual(['post_schema']);
     const tooLong=['These are all plain words. '.repeat(8).trim(),'These are all plain words. '.repeat(8).trim()];
     expect(applyDailyResult(day,task,successful({...payloadFor(day,task) as object,paragraphs:tooLong}),[],1).issues).toEqual(['post_length']);
     expect(applyDailyResult(day,task,successful({...payloadFor(day,task) as object,factsUsed:[5]}),[],1).issues).toContain('invalid_fact_reference');
@@ -132,6 +136,16 @@ describe('daily debate protocol', () => {
     old.posts=old.posts.map(post=>({...post,body:openingParagraphs.join(' ')+' '+openingParagraphs.join(' ')}));
     old.summary!.overview='Earlier summaries could be longer. '.repeat(14);
     expect(publicDebateSchema.parse(old)).toEqual(old);
+  });
+  it('bounds new drafts without making earlier stored drafts unreadable', () => {
+    const longCase={...sampleCase,context:sampleCase.context+' '+sampleCase.context};
+    expect(longCase.context.length).toBeGreaterThan(800);
+    expect(longCase.context.length).toBeLessThanOrEqual(1600);
+    const draft={candidates:[longCase,longCase,longCase]};
+    const fresh=newDebate('2026-09-20','gemini-3.5-flash-lite',0);
+    expect(applyDailyResult(fresh,nextDailyTask(fresh,[])!,successful(draft),[],1).issues).toEqual(['candidate_schema']);
+    const previous={...fresh,protocol:'villa-debate-v4',draft};
+    expect(dailyRecordSchema.parse(previous).draft).toEqual(draft);
   });
   it('uses the Pacific quota reset through daylight saving transitions', () => {
     for(const date of ['2026-03-08T07:59:59Z','2026-11-01T06:59:59Z','2026-09-09T19:00:00Z']){ const now=Date.parse(date),next=nextQuotaDay(now);expect(quotaDate(next)).not.toBe(quotaDate(now));expect(quotaDate(next-1)).toBe(quotaDate(now));}

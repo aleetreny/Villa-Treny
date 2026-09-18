@@ -26,7 +26,7 @@ export async function main(args){
  server=await createServer({root:ROOT,configFile:false,appType:'custom',logLevel:'silent',server:{middlewareMode:true,hmr:false,watch:null},optimizeDeps:{noDiscovery:true,include:[]}});
  const [core,provider,budgetRules]=await Promise.all([server.ssrLoadModule('/workers/habitat-runtime/src/debate/daily.ts'),server.ssrLoadModule('/workers/habitat-runtime/src/providers/gemini.ts'),server.ssrLoadModule('/workers/habitat-runtime/src/debate/budget.ts')]);
  const out=resolve(LOCAL,opt.run+'-'+opt.date);await mkdir(out,{recursive:true,mode:0o700});
- const paths=['workers/habitat-runtime/src/debate/daily.ts','workers/habitat-runtime/src/debate/daily-prompts.ts','workers/habitat-runtime/src/debate/budget.ts','workers/habitat-runtime/src/providers/gemini.ts','src/lib/debate/characters.ts','src/lib/debate/contracts.ts','src/lib/habitat/residents.ts','scripts/run-daily-debate.mjs'];
+ const paths=['workers/habitat-runtime/src/debate/daily.ts','workers/habitat-runtime/src/debate/daily-prompts.ts','workers/habitat-runtime/src/debate/daily-seeds.ts','workers/habitat-runtime/src/debate/budget.ts','workers/habitat-runtime/src/providers/gemini.ts','src/lib/debate/characters.ts','src/lib/debate/contracts.ts','src/lib/habitat/residents.ts','scripts/run-daily-debate.mjs'];
  const sources=await Promise.all(paths.map(async path=>{const content=await readFile(resolve(ROOT,path),'utf8');return {path,sha256:hash(content),content};}));
  let receipt=await read(resolve(out,'receipt.json'),null);
  if(receipt&&JSON.stringify(receipt.sources)!==JSON.stringify(sources.map(({path,sha256})=>({path,sha256}))))throw new Error('source_changed_use_new_run');

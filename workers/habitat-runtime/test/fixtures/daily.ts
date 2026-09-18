@@ -22,7 +22,7 @@ export function payloadFor(day: DailyRecord, task: DailyTask): unknown {
   if (task.kind === 'edit') return { publish: true, reasons: [], decisiveConstraint: sampleCase.facts[0], viableResponses: editorialOptions, case: sampleCase };
   if (task.kind === 'summary') return { overview: 'The residents propose different ways to share a scarce public space. Their discussion turns on whether equal time, reliable access or flexibility should carry the most weight.',
     disagreements: [{ text: 'The discussion compares predictable access with the need to accommodate changing shifts.', posts: [day.posts[0]!.id,day.posts[1]!.id] }], sharedGround: 'The garden should remain a shared resource.' };
-  return { paragraphs: task.kind === 'reply' ? replyParagraphs : openingParagraphs, position: 'Publish a predictable timetable and review who can use it.', factsUsed: [1,2], ...(task.kind === 'reply' ? { quoteIndex: 1 } : {}) };
+  return { paragraphs: task.kind === 'reply' ? replyParagraphs : openingParagraphs, position: 'Publish a predictable timetable and review who can use it.', factsUsed: [1,2], ...(task.kind === 'reply' ? { quoteIndex: 1, engagement: 'agree_and_extend' } : {}) };
 }
 export function successful(payload: unknown): GeminiResult { return { ok: true, code: 'ok', model: 'gemini-3.5-flash-lite', modelVersion: 'gemini-3.5-flash-lite', responseId: 'fixture', status: 200, text: JSON.stringify(payload), payload,
   usage: { inputTokens: 10, outputTokens: 20, thinkingTokens: 0, totalTokens: 30, complete: true }, latencyMs: 10, retryAfterMs: null }; }

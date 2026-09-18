@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { CHARACTER_IDS } from './characters';
 
-export const DAILY_PROTOCOL = 'villa-debate-v4';
+export const DAILY_PROTOCOL = 'villa-debate-v5';
 export const DAILY_DOMAINS = ['space', 'bodies', 'relationships', 'work', 'culture', 'justice', 'education', 'nature', 'technology', 'belief', 'democracy', 'knowledge'] as const;
 export const debateCaseSchema = z.strictObject({
   title: z.string().min(8).max(80), context: z.string().min(200).max(1600),
@@ -10,8 +10,17 @@ export const debateCaseSchema = z.strictObject({
   tension: z.string().min(12).max(160),
 });
 export type DailyCase = z.infer<typeof debateCaseSchema>;
-export const candidateCasesSchema = z.strictObject({ candidates: z.array(debateCaseSchema).length(3) });
-export const editorialSchema = z.strictObject({ case: debateCaseSchema, decisiveConstraint: z.string().min(12).max(300), viableResponses: z.array(z.strictObject({ proposal: z.string().min(15).max(200), reason: z.string().min(20).max(250), cost: z.string().min(15).max(200) })).min(2).max(3), reasons: z.array(z.string().max(240)).max(5), publish: z.boolean() });
+const generatedCaseSchema = debateCaseSchema.extend({
+  context: z.string().min(200).max(800).describe('A complete scene in 65–100 words. Rewrite the draft if needed; do not copy an overlong paragraph.'),
+  facts: debateCaseSchema.shape.facts.describe('Copy 3–5 short excerpts EXACTLY from the final context, preserving the wording. Do not paraphrase.'),
+});
+export const candidateCasesSchema = z.strictObject({ candidates: z.array(generatedCaseSchema).length(3) });
+export const editorialSchema = z.strictObject({
+  reasons: z.array(z.string().max(240)).max(5).describe('First examine the candidates: identify specific causal flaws or credible competing wants before selecting a scene.'),
+  case: generatedCaseSchema, decisiveConstraint: z.string().min(12).max(300),
+  viableResponses: z.array(z.strictObject({ proposal: z.string().min(15).max(200), reason: z.string().min(20).max(250), cost: z.string().min(15).max(200) })).min(2).max(3),
+  publish: z.boolean(),
+});
 const postFields = {
   position: z.string().min(15).max(180),
   factsUsed: z.array(z.number().int().min(1).max(5)).min(1).max(3),
@@ -20,7 +29,12 @@ const postFields = {
 // retain their original body and remain readable after the protocol changes.
 export const openingSchema = z.strictObject({ ...postFields, position: z.string().min(15).max(120),
   paragraphs: z.array(z.string().min(30).max(500)).length(2) });
-export const replySchema = openingSchema.extend({ paragraphs: z.array(z.string().min(30).max(400)).length(2), quoteIndex: z.number().int().min(1).max(16) });
+export const replySchema = z.strictObject({
+  quoteIndex: z.number().int().min(1).max(16),
+  engagement: z.enum(['agree_and_extend', 'disagree', 'revise']).describe('Choose agree_and_extend when you support their main action, disagree for a real difference, or revise when changing your own view.'),
+  ...openingSchema.shape,
+  paragraphs: z.array(z.string().min(30).max(240).describe('One short paragraph of 15–25 words.')).length(2),
+});
 export const dailyPostSchema = z.strictObject({ ...postFields, body: z.string().min(60).max(2100),
   id: z.string(), author: z.enum(CHARACTER_IDS), round: z.union([z.literal(1), z.literal(2)]),
   replyTo: z.string().nullable(), quote: z.string().nullable(), createdAt: z.number().int(),
