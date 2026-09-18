@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { CHARACTERS, CHARACTER_IDS, CHARACTER_VERSION, type CharacterId } from '../../../../src/lib/debate/characters';
-import { DAILY_PROTOCOL, candidateCasesSchema, caseIssues, countWords, dailyPostSchema, editorialSchema, openingSchema,
+import { DAILY_PROTOCOL, candidateCasesSchema, caseIssues, countWords, dailyPostSchema, digestSchema, editorialSchema, openingSchema,
   postIssues, quoteChoices, characterSchema, publicDebateSchema, replySchema, summarySchema, type DailyCase, type DailyPost, type PublicDebate } from '../../../../src/lib/debate/contracts';
 import type { GeminiModel, GeminiPrompt, GeminiResult } from '../providers/gemini';
 import { dailyBrief, dailyOpening, dailyReply, digestPrompt, draftPrompt, editPrompt } from './daily-prompts';
@@ -35,7 +35,7 @@ export function replyTarget(date: string, actor: CharacterId, openings: DailyPos
   if (openings.length !== 6 || !post || new Set(openings.map(x => x.author)).size !== 6) throw new Error('complete_openings_required');
   return post;
 }
-export function nextDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTask | null {
+function planDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTask | null {
   if (day.phase === 'done' || day.status === 'held') return null;
   const base = { author: null, replyTo: null };
   if (day.phase === 'draft') return { ...base, id: day.id + '-draft-' + day.draftNumber, kind: 'draft',
@@ -55,6 +55,34 @@ export function nextDailyTask(day: DailyRecord, history: readonly DailyCase[]): 
   return { id: day.id + '-r-' + actor, kind: 'reply', author: actor, replyTo: target.id, prompt: dailyReply(day.case, actor, day.model, openings, target, day.characters.find(p => p.id === actor)) };
 }
 
+const corrections: Record<string, string> = {
+  candidate_schema: 'Match the requested case schema, including every string length and all three candidates.',
+  context_length: 'Use 50–125 words of context.',
+  one_open_question: 'End exactly one open question with a question mark.',
+  closed_question: 'Rewrite the question to begin with What should or How should, for example What should Marta do about the offer? Do not begin with Should or list two alternatives.',
+  stock_balance_template: 'Ask about the concrete decision, not broad guiding principles.',
+  repeated_case: 'Choose a different underlying decision from recent cases.',
+  facts_must_quote_context: 'Copy the facts verbatim from the final context.',
+  editorial_schema: 'Match the editorial JSON schema, including decisiveConstraint and two or three viableResponses.',
+  constraint_must_quote_context: 'Copy decisiveConstraint exactly from the final context, not from a discarded draft.',
+  post_schema: 'Return two paragraph strings with no line breaks, each within the schema character limit; keep position within 120 characters and factsUsed within the supplied fact IDs.',
+  post_length: 'The TOTAL across both paragraphs must be 50–105 words for an opening or 20–75 for a reply. A short reply is welcome; stay under the maximum.',
+  post_paragraphs: 'Use exactly two paragraphs, 10–55 words each, with no line breaks inside an item.',
+  invalid_fact_reference: 'Use only supplied established fact IDs, with no duplicates.',
+  exact_target_quote: 'Select a quoteIndex that exists in the supplied quoteChoices.',
+  summary_schema: 'Keep overview within 400 characters, each disagreement within 190 and sharedGround within 200; follow the JSON schema.',
+  summary_references: 'For each genuine disagreement, cite supplied post IDs from at least two different authors.',
+};
+export function nextDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTask | null {
+  const task = planDailyTask(day, history);
+  if (!task || !day.lastFailure || !day.attempts[task.id]) return task;
+  // Only controlled validation messages enter a retry prompt, never provider
+  // error text or rejected model output. Retry the same turn, within its budget.
+  const feedback = day.lastFailure.split(',').flatMap(issue => corrections[issue] ? [corrections[issue]] : []);
+  if (feedback.length) task.prompt.user = JSON.stringify({ ...JSON.parse(task.prompt.user), validationFeedback: feedback });
+  return task;
+}
+
 function statusFor(day: DailyRecord): PublicDebate['status'] {
   if (day.heldReason) return 'held';
   if (day.lastFailure) return 'delayed';
@@ -64,13 +92,18 @@ function validatePayload(day: DailyRecord, task: DailyTask, payload: unknown, hi
   if (task.kind === 'draft') {
     const p = candidateCasesSchema.safeParse(payload);
     if (!p.success) return ['candidate_schema'];
-    return p.data.candidates.every(candidate=>caseIssues(candidate,history).length>0) ? ['no_valid_candidate'] : [];
+    // Drafts can contain repairable editorial mistakes. Check their structure
+    // here; the editor must repair or reject them before any case is published.
+    return [];
   }
   if (task.kind === 'edit') {
-    const p = editorialSchema.safeParse(payload); return p.success ? caseIssues(p.data.case, history) : ['editorial_schema'];
+    const p = editorialSchema.safeParse(payload);
+    if (!p.success) return ['editorial_schema'];
+    if (!p.data.publish) return [];
+    return [...caseIssues(p.data.case, history), ...(!p.data.case.context.includes(p.data.decisiveConstraint) ? ['constraint_must_quote_context'] : [])];
   }
   if (task.kind === 'summary') {
-    const p = summarySchema.safeParse(payload);
+    const p = digestSchema.safeParse(payload);
     if (!p.success) return ['summary_schema'];
     if (day.posts.length !== 12 || p.data.disagreements.some(item => {
       const posts = item.posts.map(id => day.posts.find(post => post.id === id));
@@ -80,7 +113,7 @@ function validatePayload(day: DailyRecord, task: DailyTask, payload: unknown, hi
   }
   const p = (task.kind === 'reply' ? replySchema : openingSchema).safeParse(payload);
   if (!p.success || !day.case) return ['post_schema'];
-  const issues = postIssues(p.data, day.case);
+  const issues = postIssues({ ...p.data, body: p.data.paragraphs.join('\n\n') }, day.case, task.kind === 'reply' ? 2 : 1);
   if (task.kind === 'reply') {
     const quoteIndex = 'quoteIndex' in p.data ? Number(p.data.quoteIndex) : 0;
     const target = day.posts.find(post => post.id === task.replyTo && post.round === 1);
@@ -122,7 +155,7 @@ export function applyDailyResult(before: DailyRecord, task: DailyTask, result: G
     const post = (task.kind === 'reply' ? replySchema : openingSchema).parse(result.payload);
     const target = day.posts.find(p => p.id === task.replyTo);
     const quote = task.kind === 'reply' && target ? quoteChoices(target.body)[replySchema.parse(result.payload).quoteIndex - 1] : null;
-    day.posts.push(dailyPostSchema.parse({ body: post.body, position: post.position, factsUsed: post.factsUsed, id: task.id, author: task.author, round: task.kind === 'opening' ? 1 : 2,
+    day.posts.push(dailyPostSchema.parse({ body: post.paragraphs.join('\n\n'), position: post.position, factsUsed: post.factsUsed, id: task.id, author: task.author, round: task.kind === 'opening' ? 1 : 2,
       replyTo: task.replyTo, quote, createdAt: now }));
     if (day.posts.length === 6) day.phase = 'replies';
     if (day.posts.length === 12) day.phase = 'summary';
@@ -140,10 +173,11 @@ export function verifyCompletedDay(raw: unknown): DailyRecord {
   z.iso.date().parse(day.date);
   if (day.phase !== 'done' || day.status !== 'complete' || !day.case || !day.summary || day.posts.length !== 12
     || day.heldReason || day.lastFailure || day.nextAttemptAt !== null || day.id !== day.date || day.protocol !== DAILY_PROTOCOL || day.personaVersion !== CHARACTER_VERSION
-    || JSON.stringify(day.characters) !== JSON.stringify(z.array(characterSchema).parse(CHARACTERS)) || caseIssues(day.case, []).length) throw new Error('invalid_completed_day');
+    || JSON.stringify(day.characters) !== JSON.stringify(z.array(characterSchema).parse(CHARACTERS)) || caseIssues(day.case, []).length
+    || !digestSchema.safeParse(day.summary).success) throw new Error('invalid_completed_day');
   for (const round of [1, 2]) if (new Set(day.posts.filter(p => p.round === round).map(p => p.author)).size !== 6) throw new Error('invalid_participation');
   for (const post of day.posts) {
-    if (postIssues(post, day.case).length || post.id !== day.id + (post.round === 1 ? '-o-' : '-r-') + post.author) throw new Error('invalid_post');
+    if (postIssues(post, day.case, post.round).length || post.id !== day.id + (post.round === 1 ? '-o-' : '-r-') + post.author) throw new Error('invalid_post');
     if (post.round === 2) {
       const target = replyTarget(day.date, post.author, day.posts.filter(p => p.round === 1));
       if (post.replyTo !== target.id || !post.quote || !target.body.includes(post.quote) || countWords(post.quote) < 5 || countWords(post.quote) > 40) throw new Error('invalid_reply');

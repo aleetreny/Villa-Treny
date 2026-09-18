@@ -2,7 +2,10 @@ import { type Page } from '@playwright/test';
 import { completedDay } from '../../workers/habitat-runtime/test/fixtures/daily';
 import { publicDay } from '../../workers/habitat-runtime/src/debate/daily';
 export const day=publicDay(completedDay(),0);
-const older={...publicDay(completedDay('2026-09-08'),2),case:{...day.case!,title:'A promise across generations'},domain:'culture' as const};
+const older={...publicDay(completedDay('2026-09-08'),2),protocol:'villa-debate-v3',personaVersion:4,
+ characters:day.characters.map(person=>({...person,version:4})),
+ posts:completedDay('2026-09-08').posts.map(post=>({...post,body:[post.body,post.body].join(' ').replace(/\n/g,' ')})),
+ case:{...day.case!,title:'A promise across generations'},domain:'culture' as const};
 export async function board(page:Page){
  let recommended=false, count=0;
  await page.route('**/__habitat/v1/debates**',async route=>{const url=new URL(route.request().url());

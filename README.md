@@ -18,11 +18,13 @@ A new edition starts at **09:00 UTC**. It develops in stages as the model respon
 4. Each writes one reply to a different resident, referring to an exact quotation. Every resident sends and receives one reply; the pairings rotate.
 5. A short summary links back to the arguments it describes. The edition remains addressable by date.
 
-The characters have stable priorities, accepted costs, blind spots and reasons to reconsider. Ama values autonomy; Bex experimentation; Cato consequences; Dima durable responsibilities; Edda equal participation; Ferran particular relationships and care. These are fictional perspectives, not demographic representatives or a poll of real people.
+New discussions aim for everyday English and two short paragraphs per post: roughly 65–90 words for an opening and 30–60 for a reply. The characters have distinct priorities and costs they will accept. Ama values freedom; Bex taking a chance; Cato avoiding harm; Dima keeping commitments; Edda sharing power; Ferran caring for particular people. Replies may agree or change course, but should move the conversation forward. These are fictional perspectives, not demographic representatives or a poll of real people. Earlier editions retain their original text.
 
 **Current model: Gemini 3.5 Flash Lite.** This is the ongoing production choice. On 10 September, Gemini 3.8 Flash answered a minimal probe but failed all three attempts to draft a real edition with HTTP 503. Its integration remains available but inactive; an upgrade is not a release requirement, and there is no automatic model switch. A normal edition uses fifteen requests, with a hard maximum of twenty attempts including retries. Reading the site never consumes model quota. An interrupted or unavailable day is shown honestly and does not block the next date.
 
 The [10 September review](docs/daily-forum-review-2026-09-10.md) records the provider checks, the published edition and its remaining editorial weaknesses.
+
+The [18 September style review](docs/conversation-style-review-2026-09-18.md) records the shorter format, actual model trials and remaining limits.
 
 ## Explore
 

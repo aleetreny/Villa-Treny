@@ -1,31 +1,39 @@
 import { z } from 'zod';
 import { CHARACTER_IDS } from './characters';
 
-export const DAILY_PROTOCOL = 'villa-debate-v3';
+export const DAILY_PROTOCOL = 'villa-debate-v4';
 export const DAILY_DOMAINS = ['space', 'bodies', 'relationships', 'work', 'culture', 'justice', 'education', 'nature', 'technology', 'belief', 'democracy', 'knowledge'] as const;
 export const debateCaseSchema = z.strictObject({
-  title: z.string().min(8).max(80), context: z.string().min(200).max(1600), question: z.string().min(25).max(220),
+  title: z.string().min(8).max(80), context: z.string().min(200).max(1600),
+  question: z.string().min(25).max(220).describe('Start with What should or How should. Ask what the person should actually do, without listing two alternatives or asking how to balance values. End with one question mark.'),
   facts: z.array(z.string().min(12).max(300)).min(3).max(5), unknowns: z.array(z.string().min(8).max(200)).min(1).max(2),
   tension: z.string().min(12).max(160),
 });
 export type DailyCase = z.infer<typeof debateCaseSchema>;
 export const candidateCasesSchema = z.strictObject({ candidates: z.array(debateCaseSchema).length(3) });
-export const editorialSchema = z.strictObject({ publish: z.boolean(), reasons: z.array(z.string().max(240)).max(5), viableResponses: z.array(z.strictObject({ proposal: z.string().min(15).max(200), reason: z.string().min(20).max(250), cost: z.string().min(15).max(200) })).min(2).max(3), case: debateCaseSchema });
-export const openingSchema = z.strictObject({
-  body: z.string().min(350).max(2100), position: z.string().min(15).max(180),
+export const editorialSchema = z.strictObject({ case: debateCaseSchema, decisiveConstraint: z.string().min(12).max(300), viableResponses: z.array(z.strictObject({ proposal: z.string().min(15).max(200), reason: z.string().min(20).max(250), cost: z.string().min(15).max(200) })).min(2).max(3), reasons: z.array(z.string().max(240)).max(5), publish: z.boolean() });
+const postFields = {
+  position: z.string().min(15).max(180),
   factsUsed: z.array(z.number().int().min(1).max(5)).min(1).max(3),
-});
-export const replySchema = openingSchema.extend({ quoteIndex: z.number().int().min(1).max(16) });
-export const dailyPostSchema = openingSchema.extend({
+};
+// Generation is deliberately tighter than the public archive contract. Old posts
+// retain their original body and remain readable after the protocol changes.
+export const openingSchema = z.strictObject({ ...postFields, position: z.string().min(15).max(120),
+  paragraphs: z.array(z.string().min(30).max(500)).length(2) });
+export const replySchema = openingSchema.extend({ paragraphs: z.array(z.string().min(30).max(400)).length(2), quoteIndex: z.number().int().min(1).max(16) });
+export const dailyPostSchema = z.strictObject({ ...postFields, body: z.string().min(60).max(2100),
   id: z.string(), author: z.enum(CHARACTER_IDS), round: z.union([z.literal(1), z.literal(2)]),
   replyTo: z.string().nullable(), quote: z.string().nullable(), createdAt: z.number().int(),
 });
 export type DailyPost = z.infer<typeof dailyPostSchema>;
 export const summarySchema = z.strictObject({
   overview: z.string().min(70).max(600),
-  disagreements: z.array(z.strictObject({ text: z.string().min(30).max(300), posts: z.array(z.string()).min(2).max(3) })).min(1).max(3),
+  disagreements: z.array(z.strictObject({ text: z.string().min(30).max(300), posts: z.array(z.string()).min(2).max(3) })).max(3),
   sharedGround: z.string().max(350),
 });
+export const digestSchema = summarySchema.extend({ overview: z.string().min(70).max(400),
+  disagreements: z.array(z.strictObject({ text: z.string().min(30).max(190), posts: z.array(z.string()).min(2).max(3) })).max(3),
+  sharedGround: z.string().max(200) });
 export type DebateSummary = z.infer<typeof summarySchema>;
 export const dayStatusSchema = z.enum(['preparing', 'opening', 'replies', 'summarizing', 'complete', 'delayed', 'held']);
 export const characterSchema = z.object({ id: z.enum(CHARACTER_IDS), name: z.string(), background: z.string(), version: z.number(),
@@ -51,17 +59,20 @@ export function jsonSchema(schema: z.ZodType): Record<string, unknown> {
 }
 export function caseIssues(value: DailyCase, history: readonly DailyCase[]): string[] {
   const issues: string[] = [];
-  if (countWords(value.context) < 85 || countWords(value.context) > 190) issues.push('context_length');
+  if (countWords(value.context) < 50 || countWords(value.context) > 125) issues.push('context_length');
   if ((value.question.match(/\?/g) ?? []).length !== 1 || !value.question.endsWith('?')) issues.push('one_open_question');
   if (/^(should|would|could|can|may|must|is|are|do|does|will|has|have)\b/i.test(value.question)) issues.push('closed_question');
-  if (/how should (?:society|humanity|a community) (?:balance|weigh)|^what should guide|^what principles should/i.test(value.question)) issues.push('stock_balance_template');
+  if (/^how (?:should|can|could|might) .{1,80}\b(?:balance|weigh)\b|^what should guide|^what principles should/i.test(value.question)) issues.push('stock_balance_template');
   if (history.some(old => normal(old.title) === normal(value.title) || normal(old.question) === normal(value.question))) issues.push('repeated_case');
   if (value.facts.some(fact => !normal(value.context).includes(normal(fact)))) issues.push('facts_must_quote_context');
   return issues;
 }
-export function postIssues(value: z.infer<typeof openingSchema>, debate: DailyCase): string[] {
+export function postIssues(value: Pick<DailyPost, 'body' | 'factsUsed'>, debate: DailyCase, round: 1 | 2): string[] {
   const issues: string[] = [];
-  if (countWords(value.body) < 110 || countWords(value.body) > 280) issues.push('post_length');
+  const paragraphs = value.body.split(/\n\s*\n/u);
+  const words = countWords(value.body);
+  if (words < (round === 1 ? 50 : 20) || words > (round === 1 ? 105 : 75)) issues.push('post_length');
+  if (paragraphs.length !== 2 || paragraphs.some(text => /[\r\n]/u.test(text) || countWords(text) < 10 || countWords(text) > 55)) issues.push('post_paragraphs');
   if (new Set(value.factsUsed).size !== value.factsUsed.length || value.factsUsed.some(id => id > debate.facts.length)) issues.push('invalid_fact_reference');
   return issues;
 }

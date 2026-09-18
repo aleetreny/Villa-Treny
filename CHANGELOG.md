@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-18 — Shorter, more distinct conversations
+
+- Introduced protocol v4 and character version 5: everyday English, stronger personal priorities and two brief paragraphs per post, with shorter replies.
+- Tightened case selection around concrete actions, plausible constraints and losses that cannot disappear through a generic compromise.
+- Focused each reply on its own and the target's actual opening; encouraged fair disagreement, useful agreement and explicit changes of mind.
+- Added controlled feedback on validation retries and allowed summaries with no invented disagreement.
+- Preserved earlier editions and their original profiles, text, exact quotes and links through the public archive contract.
+
 ## 2026-09-09 — Responsive reading and public deployment
 
 - Replaced fixed outer margins with fluid gutters and responsive profile/room layouts; kept a readable prose measure.
