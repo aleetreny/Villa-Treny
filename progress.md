@@ -1,3 +1,23 @@
+# Reader-first redesign log — 2026-09-19
+
+- Final local candidate: nine independently generated short turns, visible premise, compact original portraits and two literal highlights. Fourteen full native editions completed across all twelve subjects; 23 earlier experiment families and two four-case closing-stage comparisons remain recorded, including failures.
+- A neutral recap instruction still fabricated disagreement in the bakery test. Replaced paraphrasing with exact source-post selection. Four final selections passed; replay matched 44 unchanged earlier requests, all 36 posts and the four new selection tasks against current source hashes, with no replay inference.
+- Current source passes 72 Node, 1,090 application and 430 Worker tests, all 58 browser checks, build, room provenance, dry deployment and seven offline hosting checks. React review retains stable keys, lazy room loading, abortable reads and semantic source/return links. Final highlight view inspected at 390 px; no artwork was changed.
+- Manual evaluation used 217 Lite and four Flash requests, all durably counted and registered alongside the unchanged 15 production requests. Four final simulations are available in the read-only local preview. Published history has not been regenerated. GitHub publication and post-release continuity checks are the remaining delivery step.
+
+- Native iterations 01–04 completed, 48 calls / 36 contributions. Run 02's label says belief but its actual date/domain is bodies; all reports use the stored domain as authority. Identified unsupported medical consequences, invented tuition debt, a forced expose/destroy choice and a mismatched summary attribution. Retained all evidence.
+- Revised generation to permit very short questions, use accepted costs and distinct voices, answer developments rather than restate openings, remove forced story binaries and avoid certain predictions of relationship endings. Summary now uses public speech only and validates names against cited authors.
+- Archived all 11 public editions and private attempt exports outside the repository before release. Model, schedule, quotas and existing editions remain untouched by evaluation except registered external usage.
+- First visual pass completed with actual native output on desktop and 390 px mobile. Existing lazy habitat boundary, stable post keys, abortable polling, semantic links, focus/return behavior and accessible labels reviewed under React guidance. No new fetch effect or dependency required.
+
+- Verified clean tracked state and remote/public parity; saved release, diagnostics, archive and today's edition privately.
+- Read full current edition; identified repetitive structure, not a transport failure.
+- Read planning-with-files and durable-objects skills. Using persistent plans without overwriting earlier history.
+- Created codex/reader-first-debates from current main.
+- Lookup correction: About component is About.tsx, not AboutPage.tsx. Memory line numbers moved; refreshed the relevant registry section rather than relying on stale ranges.
+
+---
+
 ## 9 September 2026 — automatic deployment and public continuity
 
 - Hosted run `34405012806` passed the entire check job and deployed source `31345cc` using the configured GitHub environment token. Its immediate post-deploy read saw the previous version; the next read-only verifier confirmed the correct release. Added bounded exact-SHA readiness and five regressions rather than accepting a stale success or retrying arbitrary API errors.
@@ -478,3 +498,9 @@ Published version `295a17c6-f7de-4bf3-b9fb-1c28d4684469`, with the owner-approve
 Final `pnpm check` passes 67 Node, 1,090 app and 411 Worker tests, lint and types. Build, 7 hosting checks, 26 browser checks, final 5 UI checks and original-room export verification pass. Actual deployed UI verified without mocks: quote links, full scenario, reading view, votes across reload and removal, archive search/sort, six profiles and six room residents with follow/pause. Live reads caused zero model requests. Records image verified loaded after following Ama; final room capture replaces an early loading frame. No browser errors or failing HTTP responses.
 
 Fresh finish reviewer scored both requested fixes resolved; documenter completed DESIGN.md and .impeccable/design.json from built evidence. All planned current work is complete under the user-approved model change. The old world remains paused, complete 35-page backup verified, revision 386 checksum identical before/after deployment and observation. No Git commit, push or Portfolio edit. Gemini 3.8 is pending; no background retry or paid tier was enabled.
+
+2026-09-19 prototype p01: 1 charged call, 15 turns, 402 words. Failed semantic review: unsupported chronic pain/eviction/hunger and A–F round-robin repetition. Syntax error mixing ?? and && fixed before dispatch (zero calls for that error). Next: targeted editor and a different premise.
+
+p05–p07: simpler whole-episode scripts are easy to read but still repeat values, invent details (shared recording ownership), or contradict themselves. Do not ship that architecture on these results. p08 separately generated turns improve direct responsiveness but overuse handoff questions and return to the same promise argument. Next experiment will give the exchange a progression and show the desired spoken style. Source scans now exclude historical JSON bundles after one overly broad search produced noisy output.
+
+Provisional v6 implemented: nine chronological contributions, every participant reads the previous turns, literal earlier-post references, 12 baseline requests, preserved v5 validation/archive rendering. Focused Worker tests: 27 passed. Header scenario and compact author layout completed; legacy browser checks: 17 passed. Current v6 exact-source live trial: reader-v6-01-tech, underway. Whole-script and larger-model trials are not a release basis: 3.8 returned 1 success and 3 provider errors.

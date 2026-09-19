@@ -1,3 +1,24 @@
+# Reader-first debate redesign — 2026-09-19
+
+## Goal
+Make the debates enjoyable and easy to follow for an ordinary reader. The owner explicitly permits deep structural changes and requests many real simulations with iteration. Do not confuse schema validity or brevity with engaging conversation.
+
+## Phases
+- [x] Verify local/origin/public release and inspect today's complete production output.
+- [x] Compare private structural prototypes using real Gemini calls and the existing shared quota ledger (23 experiment families, including failures; separate short turns selected).
+- [x] Implement the strongest format, retaining old archives and durable attempt accounting.
+- [x] Read many diverse full episodes, iterate on failures, and test unseen cases (14 complete editions across 12 subjects; four final highlight selections and exact replay).
+- [ ] Verify complete browser reading experience, checks/build/export and archive preservation.
+- [ ] Commit, fast-forward main, push and verify production. Mark the goal complete only on evidence.
+
+## Success evidence
+A clear hook; credible competing choices; six recognisable people; exchanges that develop rather than repeat; faithful facts and cost scale; short natural language; an inviting mobile reading flow. Record unsuccessful samples as well as successes. No finite sample proves perfection.
+
+## Boundaries
+Preserve existing accepted editions, Worker identity, storage, quotas and room pixels. Reader actions never call the model. Tests use mocks; separately labelled manual experiments may call Gemini. No credentials in output/source control.
+
+---
+
 # Current task: responsive refinement and automated public release — 9 September 2026
 
 The owner confirms public source/artwork authorization and has created the scoped Cloudflare deploy token. Preserve both repositories as independent projects. Commit verified logical changes, fast-forward main, push and verify public delivery. No model calls are needed for interface testing.

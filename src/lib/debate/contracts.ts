@@ -1,7 +1,9 @@
 import { z } from 'zod';
 import { CHARACTER_IDS } from './characters';
 
-export const DAILY_PROTOCOL = 'villa-debate-v5';
+export const DAILY_PROTOCOL = 'villa-debate-v6';
+export const CONVERSATION_TURNS = 9;
+export const isConversation = (day: { protocol: string }) => day.protocol === 'villa-debate-v6';
 export const DAILY_DOMAINS = ['space', 'bodies', 'relationships', 'work', 'culture', 'justice', 'education', 'nature', 'technology', 'belief', 'democracy', 'knowledge'] as const;
 export const debateCaseSchema = z.strictObject({
   title: z.string().min(8).max(80), context: z.string().min(200).max(1600),
@@ -11,7 +13,7 @@ export const debateCaseSchema = z.strictObject({
 });
 export type DailyCase = z.infer<typeof debateCaseSchema>;
 const generatedCaseSchema = debateCaseSchema.extend({
-  context: z.string().min(200).max(800).describe('A complete scene in 65–100 words. Rewrite the draft if needed; do not copy an overlong paragraph.'),
+  context: z.string().min(200).max(800).describe('A complete situation in 55–85 words. Rewrite the draft if needed; do not copy an overlong paragraph.'),
   facts: debateCaseSchema.shape.facts.describe('Copy 3–5 short excerpts EXACTLY from the final context, preserving the wording. Do not paraphrase.'),
 });
 export const candidateCasesSchema = z.strictObject({ candidates: z.array(generatedCaseSchema).length(3) });
@@ -35,17 +37,26 @@ export const replySchema = z.strictObject({
   ...openingSchema.shape,
   paragraphs: z.array(z.string().min(30).max(240).describe('One short paragraph of 15–25 words.')).length(2),
 });
-export const dailyPostSchema = z.strictObject({ ...postFields, body: z.string().min(60).max(2100),
+export const conversationTurnSchema = z.strictObject({
+  replyToIndex: z.number().int().min(0).max(CONVERSATION_TURNS - 1),
+  theirPoint: z.string().min(10).max(220).describe('What the selected person actually proposed, including any qualification. Do not add an unstated condition. For the opening, say there is no earlier contribution.'),
+  newPoint: z.string().min(10).max(180),
+  ...postFields, position: z.string().min(15).max(120),
+  body: z.string().min(10).max(260),
+});
+export const dailyPostSchema = z.strictObject({ ...postFields, body: z.string().min(10).max(2100),
   id: z.string(), author: z.enum(CHARACTER_IDS), round: z.union([z.literal(1), z.literal(2)]),
   replyTo: z.string().nullable(), quote: z.string().nullable(), createdAt: z.number().int(),
 });
 export type DailyPost = z.infer<typeof dailyPostSchema>;
+export const highlightSelectionSchema = z.strictObject({ postIndices: z.array(z.number().int().min(1).max(CONVERSATION_TURNS)).length(2) });
 export const summarySchema = z.strictObject({
-  overview: z.string().min(70).max(600),
+  overview: z.string().min(10).max(600),
   disagreements: z.array(z.strictObject({ text: z.string().min(30).max(300), posts: z.array(z.string()).min(2).max(3) })).max(3),
   sharedGround: z.string().max(350),
+  highlights: z.array(z.string()).length(2).optional(),
 });
-export const digestSchema = summarySchema.extend({ overview: z.string().min(70).max(400),
+export const digestSchema = summarySchema.omit({ highlights: true }).extend({ overview: z.string().min(70).max(400),
   disagreements: z.array(z.strictObject({ text: z.string().min(30).max(190), posts: z.array(z.string()).min(2).max(3) })).max(3),
   sharedGround: z.string().max(200) });
 export type DebateSummary = z.infer<typeof summarySchema>;
@@ -87,6 +98,13 @@ export function postIssues(value: Pick<DailyPost, 'body' | 'factsUsed'>, debate:
   const words = countWords(value.body);
   if (words < (round === 1 ? 50 : 20) || words > (round === 1 ? 105 : 75)) issues.push('post_length');
   if (paragraphs.length !== 2 || paragraphs.some(text => /[\r\n]/u.test(text) || countWords(text) < 10 || countWords(text) > 55)) issues.push('post_paragraphs');
+  if (new Set(value.factsUsed).size !== value.factsUsed.length || value.factsUsed.some(id => id > debate.facts.length)) issues.push('invalid_fact_reference');
+  return issues;
+}
+export function conversationPostIssues(value: Pick<DailyPost, 'body' | 'factsUsed'>, debate: DailyCase): string[] {
+  const words = countWords(value.body), issues: string[] = [];
+  if (words < 3 || words > 40 || value.body.length > 260) issues.push('conversation_length');
+  if (/[\r\n]/u.test(value.body)) issues.push('conversation_paragraph');
   if (new Set(value.factsUsed).size !== value.factsUsed.length || value.factsUsed.some(id => id > debate.facts.length)) issues.push('invalid_fact_reference');
   return issues;
 }

@@ -1,7 +1,7 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState, type MouseEvent } from 'react';
 import { Portrait } from '../desk/habitat/Portrait';
 import { CHARACTERS, character, type CharacterId } from '../../lib/debate/characters';
-import { DAILY_DOMAINS, type DebateCard, type PublicDebate, type DailyPost } from '../../lib/debate/contracts';
+import { DAILY_DOMAINS, CONVERSATION_TURNS, isConversation, type DebateCard, type PublicDebate, type DailyPost } from '../../lib/debate/contracts';
 import { loadDebate, loadRecommendation, setRecommendation, type Recommendation, type ArchiveQuery } from '../../lib/debate/client';
 import { useArchive } from './useArchive';
 import { About } from './About';
@@ -19,7 +19,7 @@ function RecommendationButton({day}:{day:PublicDebate}){
  const refresh=useCallback(async()=>{try{setVote(await loadRecommendation(day.id));setError('');}catch{setError('Recommendations are unavailable.');}},[day.id]);
  useEffect(()=>{const controller=new AbortController();loadRecommendation(day.id,controller.signal).then(setVote).catch(()=>{if(!controller.signal.aborted)setError('Recommendations are unavailable.');});return()=>controller.abort();},[day.id]);
  const toggle=async()=>{if(!vote||busy)return;setBusy(true);try{setVote(await setRecommendation(day.id,!vote.recommended));setError('');}catch(e){setError(e instanceof Error?e.message:'Your recommendation was not saved.');}finally{setBusy(false);}};
- return <div className="forum-recommend"><button disabled={busy||!vote||day.posts.length<12} aria-pressed={vote?.recommended??false} onClick={()=>void toggle()}>
+ return <div className="forum-recommend"><button disabled={busy||!vote||(isConversation(day)?day.status!=='complete':day.posts.length<12)} aria-pressed={vote?.recommended??false} onClick={()=>void toggle()}>
    <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M6 3h8v14l-4-3-4 3Z" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>
    {busy?'Saving…':vote?.recommended?'Recommended':'Worth reading'}<span>{vote?.recommendations??day.recommendations}</span></button>
    {error?<span role="alert">{error} <button className="text-button" onClick={()=>void refresh()}>Retry</button></span>:<small>{vote?.recommended?'Your recommendation is saved. Select again to remove it.':'Recommend the discussion to other readers.'}</small>}</div>;
@@ -32,11 +32,12 @@ function Post({post,day}:{post:DailyPost;day:PublicDebate}) {
    try { await navigator.clipboard.writeText(url); setCopied(true); setShareLink(''); }
    catch { setShareLink(url); }
  };
- return <article className="forum-post" id={post.id} tabIndex={-1} aria-label={`${person.name}’s ${post.round===1?'opening':'reply'}`}>
+ const label=isConversation(day)?'contribution':post.round===1?'opening':'reply';
+ return <article className="forum-post" id={post.id} tabIndex={-1} aria-label={`${person.name}’s ${label}`}>
    <div className="forum-post-person"><a href={'/residents/'+person.id} aria-label={'Read '+person.name+'’s profile'}><Portrait id={person.id} scale={2}/></a>
-    <div><a href={'/residents/'+person.id}>{person.name}</a><p>{person.lens}</p>
-      {target?<a className="forum-post-round" href={'#'+target.id}>Reply to {name(target.author)}’s opening</a>:<span className="forum-post-round">Opening thought</span>}
-      <button className="text-button forum-copy" onClick={()=>void copyLink()} aria-label={`Copy link to ${person.name}’s ${post.round===1?'opening':'reply'}`}>{copied?'Link copied':'Copy link'}</button>
+    <div><a href={'/residents/'+person.id} aria-label={person.name}>{person.name.split(' ')[0]}</a>
+      {target?<a className="forum-post-round" href={'#'+target.id}>To {name(target.author)}</a>:null}
+      <button className="text-button forum-copy" onClick={()=>void copyLink()} aria-label={`Copy link to ${person.name}’s ${label}`}>{copied?'Copied':'Link'}</button>
       <span className="forum-sr-only" role="status">{copied?'Post link copied to clipboard.':''}</span>
     </div></div>
    <div className="forum-post-body">{post.quote&&target?<blockquote><a href={'#'+target.id}>“{post.quote}” <span>— {name(target.author)} · Read the original</span></a></blockquote>:null}
@@ -44,8 +45,11 @@ function Post({post,day}:{post:DailyPost;day:PublicDebate}) {
     {shareLink?<label className="forum-share-fallback">Copy this post’s address<input autoFocus readOnly value={shareLink} onFocus={e=>e.target.select()}/></label>:null}</div>
  </article>;
 }
-function Summary({day}:{day:PublicDebate}){return day.summary?<section className="forum-summary" id="debate-summary" tabIndex={-1} aria-labelledby="summary-title"><h2 id="summary-title">Where they landed</h2><p>{day.summary.overview}</p>
- <ul>{day.summary.disagreements.map((item,i)=><li key={i}>{item.text}<span className="forum-summary-links">{item.posts.map(id=>{const post=day.posts.find(p=>p.id===id);return post?<a key={id} href={'#'+id}>{name(post.author)}’s {post.round===1?'opening':'reply'}</a>:null;})}</span></li>)}</ul>
+function Summary({day}:{day:PublicDebate}){
+ if(day.summary?.highlights)return <section className="forum-summary" id="debate-summary" tabIndex={-1} aria-labelledby="summary-title"><h2 id="summary-title">Worth thinking about</h2>
+   {day.summary.highlights.map(id=>{const post=day.posts.find(p=>p.id===id);return post?<figure className="forum-highlight" key={id}><blockquote>“{post.body}”</blockquote><figcaption className="forum-summary-links"><a href={'#'+post.id}>{name(post.author)} · Read in context</a></figcaption></figure>:null;})}</section>;
+ return day.summary?<section className="forum-summary" id="debate-summary" tabIndex={-1} aria-labelledby="summary-title"><h2 id="summary-title">Where they landed</h2><p>{day.summary.overview}</p>
+ <ul>{day.summary.disagreements.map((item,i)=><li key={i}>{item.text}<span className="forum-summary-links">{item.posts.map(id=>{const post=day.posts.find(p=>p.id===id);return post?<a key={id} href={'#'+id}>{name(post.author)}’s {isConversation(day)?'point':post.round===1?'opening':'reply'}</a>:null;})}</span></li>)}</ul>
  {day.summary.sharedGround?<p><strong>Common ground.</strong> {day.summary.sharedGround}</p>:null}</section>:null;}
 function Debate({id,expanded,onExpand}:{id:string;expanded:boolean;onExpand:()=>void}){
  const [day,setDay]=useState<PublicDebate|null>(null),[error,setError]=useState(''),[revision,setRevision]=useState(0);
@@ -66,7 +70,7 @@ function Debate({id,expanded,onExpand}:{id:string;expanded:boolean;onExpand:()=>
    const source=link!.closest('.forum-post')??link!.closest('.forum-summary')??link!.closest('.forum-case');
    if(source){
      const sourceId=source.id;
-     if(sourceId&&href!=='#'+sourceId)setReturnTo({id:sourceId,label:source.classList.contains('forum-post')?'Back to the reply':source.classList.contains('forum-summary')?'Back to the summary':'Back to the question'});
+     if(sourceId&&href!=='#'+sourceId)setReturnTo({id:sourceId,label:source.classList.contains('forum-post')?'Back to the reply':source.classList.contains('forum-summary')?(day?.summary?.highlights?'Back to the highlights':'Back to the summary'):'Back to the question'});
    }
    event.preventDefault();history.pushState(null,'',href);focusFragment(href);
  };
@@ -82,15 +86,14 @@ function Debate({id,expanded,onExpand}:{id:string;expanded:boolean;onExpand:()=>
    </div>:null}
    <div className="forum-edition-tools"><span><time dateTime={day.date}>{dateLabel(day.date)}</time><span className="forum-domain">{day.domain}</span></span>
      {!expanded?<button onClick={onExpand} aria-pressed={false}>Expand board</button>:null}</div>
-   {day.case?<><header className="forum-case" id="edition-question" tabIndex={-1}><h1>{day.case.title}</h1><h2>{day.case.question}</h2>
-     <div className="forum-case-meta"><span>Six fictional residents · {day.posts.length}/12 posts{day.posts.length===12?` · ${Math.ceil(wordCount(day))} min read`:''}</span><a href="#discussion">Read the discussion</a>{day.summary?<a href="#summary-title">Read the summary</a>:null}</div>
-     <details className="forum-premise"><summary>Read the full scenario</summary><p className="forum-case-context">{day.case.context}</p>
-       <details><summary>What the case establishes</summary><ul>{day.case.facts.map(f=><li key={f}>{f}</li>)}</ul><p><strong>Left open:</strong> {day.case.unknowns.join(' ')}</p></details>
-     </details></header>
-     {day.status!=='complete'?<p className="forum-status" role="status">{phaseText[day.status]}</p>:null}
-     <section id="discussion" aria-label="The discussion"><div className="forum-round"><h2>Opening thoughts</h2><p>Written independently, before reading one another.</p></div>
+   {day.case?<><header className="forum-case" id="edition-question" tabIndex={-1}><h1>{day.case.title}</h1>
+     <p className="forum-case-context">{day.case.context}</p><h2>{day.case.question}</h2>
+     <div className="forum-case-meta"><span>Six fictional residents · {day.posts.length}/{isConversation(day)?CONVERSATION_TURNS:12} {isConversation(day)?'short turns':'posts'}{day.status==='complete'?` · ${Math.ceil(wordCount(day))} min read`:''}</span><a href="#discussion">Read the discussion</a>{day.summary?<a href="#summary-title">{day.summary.highlights?'Two highlights':'Read the summary'}</a>:null}</div>
+     <details className="forum-premise"><summary>Facts and open questions</summary><ul>{day.case.facts.map(f=><li key={f}>{f}</li>)}</ul><p><strong>Left open:</strong> {day.case.unknowns.join(' ')}</p></details></header>
+     {day.status!=='complete'?<p className="forum-status" role="status">{isConversation(day)&&day.status==='replies'?'The conversation is unfolding. Each resident reads the earlier turns before responding.':isConversation(day)&&day.status==='summarizing'?'The conversation is here. Two highlights are being chosen.':phaseText[day.status]}</p>:null}
+     <section id="discussion" aria-label="The discussion">{isConversation(day)?<><div className="forum-round"><h2>Around the table</h2><p>Pick a side. Change your mind.</p></div>{day.posts.map(post=><Post key={post.id} post={post} day={day}/>)}</>:<><div className="forum-round"><h2>Opening thoughts</h2><p>Written independently, before reading one another.</p></div>
        {day.posts.filter(p=>p.round===1).map(post=><Post key={post.id} post={post} day={day}/>)}
-       {day.posts.some(p=>p.round===2)?<><div className="forum-round"><h2>Across the table</h2><p>One reply each. Every resident receives a response.</p></div>{day.posts.filter(p=>p.round===2).map(post=><Post key={post.id} post={post} day={day}/>)}</>:null}</section>
+       {day.posts.some(p=>p.round===2)?<><div className="forum-round"><h2>Across the table</h2><p>One reply each. Every resident receives a response.</p></div>{day.posts.filter(p=>p.round===2).map(post=><Post key={post.id} post={post} day={day}/>)}</>:null}</>}</section>
      <Summary day={day}/><RecommendationButton key={day.id} day={day}/>
      <p className="forum-edition-foot">A fictional discussion generated with {day.model==='gemini-3.8-flash'?'Gemini 3.8 Flash':'Gemini 3.5 Flash Lite'}. These are imagined perspectives, not a poll of real people. <a href="/residents">Meet the six residents</a>.</p>
    </>:<div className="forum-empty"><h1>A new question is on its way</h1><p>{phaseText[day.status]}</p><a href="/archive">Read previous discussions</a></div>}
@@ -117,7 +120,7 @@ function ArchiveResults({query}:{query:ArchiveQuery}){
    {archive.error?<ErrorNotice message={archive.error} retry={archive.retry}/>:null}
    {archive.data.nextCursor?<div className="forum-load-more"><button disabled={archive.loadingMore} onClick={()=>void archive.more()}>{archive.loadingMore?'Loading…':'Load more debates'}</button></div>:null}</>;
 }
-function ArchiveRow({day}:{day:DebateCard}){return <article><time dateTime={day.date}>{dateLabel(day.date)}<span>{day.domain}</span></time><div><h2><a href={'/debates/'+day.id}>{day.case?.title??'An unpublished question'}</a></h2><p>{day.summary?.overview??day.case?.question??phaseText[day.status]}</p><span className="forum-archive-detail">{day.postCount}/12 posts · {day.recommendations} {day.recommendations===1?'recommendation':'recommendations'}{day.status!=='complete'?' · Incomplete':''}</span></div></article>;}
+function ArchiveRow({day}:{day:DebateCard}){return <article><time dateTime={day.date}>{dateLabel(day.date)}<span>{day.domain}</span></time><div><h2><a href={'/debates/'+day.id}>{day.case?.title??'An unpublished question'}</a></h2><p>{day.summary?.overview??day.case?.question??phaseText[day.status]}</p><span className="forum-archive-detail">{day.postCount}/{isConversation(day)?CONVERSATION_TURNS:12} {isConversation(day)?'short turns':'posts'} · {day.recommendations} {day.recommendations===1?'recommendation':'recommendations'}{day.status!=='complete'?' · Incomplete':''}</span></div></article>;}
 function Residents({selected}:{selected?:string}){
  const people=selected?CHARACTERS.filter(p=>p.id===selected):CHARACTERS;
  if(selected&&people[0])return <ResidentProfile person={people[0]}/>;

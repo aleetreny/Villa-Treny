@@ -1,7 +1,7 @@
 import { DurableObject } from 'cloudflare:workers';
 import { z } from 'zod';
 import { archiveFilterSchema, archiveQuery } from './archive';
-import { DAILY_PROTOCOL, archiveSchema, type DailyCase } from '../../../../src/lib/debate/contracts';
+import { DAILY_PROTOCOL, isConversation, archiveSchema, type DailyCase } from '../../../../src/lib/debate/contracts';
 import { GEMINI_MODELS, runGemini, type GeminiModel, type GeminiResult } from '../providers/gemini';
 import { applyDailyResult, DAILY_HOUR_UTC, MAX_DAY_ATTEMPTS, newDebate, nextDailyTask, publicDay, verifyCompletedDay, type DailyRecord } from './daily';
 import { modelDailyCap, nextQuotaDay, quotaDate, unknownResult } from './budget';
@@ -74,7 +74,7 @@ export class DebateForum extends DurableObject<Env> {
   vote(id: string, reader: string, recommended: boolean, network: string) {
     return this.ctx.storage.transactionSync(() => {
       const day = this.day(id);
-      if (!day?.case || day.posts.length !== 12) return { error: 'not_ready' };
+      if (!day?.case || (isConversation(day) ? day.status !== 'complete' : day.posts.length !== 12)) return { error: 'not_ready' };
       const current = this.getVote(id, reader)!;
       if (current.recommended === recommended) return current;
       const now = Date.now();
@@ -106,7 +106,7 @@ export class DebateForum extends DurableObject<Env> {
     const entries = externalSchema.parse(usage);
     // Import reserves externally spent quota too. Re-import is immutable and idempotent.
     const required = Object.values(day.attempts).reduce((a,b) => a+b, 0);
-    if (required < 15 || !entries.some(e => e.model === day.model && e.count >= required)) throw new TypeError('acceptance_usage_required');
+    if (required < (isConversation(day) ? 12 : 15) || !entries.some(e => e.model === day.model && e.count >= required)) throw new TypeError('acceptance_usage_required');
     this.ctx.storage.transactionSync(() => {
       const existing = this.day(day.id);
       if (existing && JSON.stringify(existing) !== JSON.stringify(day)) throw new RangeError('edition_already_exists');

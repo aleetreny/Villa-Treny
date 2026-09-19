@@ -17,7 +17,7 @@ export function options(args){
  if(result.model==='gemini-3.8-flash'&&(!result.acceptance||result.questionsOnly||result.date!==new Date().toISOString().slice(0,10)))throw new Error('flash_requires_current_daily_acceptance');return result;
 }
 export async function main(args){
- const opt=options(args);if(!opt.live){console.log(JSON.stringify({mode:'plan',...opt,calls:0,baseline:15,maxPerEdition:20,liteDailyCap:300,flashDailyCap:20,priorPilotIncluded:true}));return;}
+ const opt=options(args);if(!opt.live){console.log(JSON.stringify({mode:'plan',...opt,calls:0,baseline:12,maxPerEdition:20,liteDailyCap:300,flashDailyCap:20,priorPilotIncluded:true}));return;}
  if(!process.env.GEMINI_API_KEY)throw new Error('missing_GEMINI_API_KEY');await mkdir(LOCAL,{recursive:true,mode:0o700});
  // Shared lock with the original pilot; both spend the same project quota.
  const lockPath=resolve(ROOT,'.local/gemini-debate/pilot.lock');await mkdir(dirname(lockPath),{recursive:true,mode:0o700});const lock=await open(lockPath,'wx',0o600);
@@ -59,7 +59,7 @@ export async function main(args){
  }
  if(day.status==='complete')core.verifyCompletedDay(day);
  const publicDay=core.publicDay(day,0);await atomic(resolve(out,'public.json'),publicDay);
- const report=[`# ${day.case?.title??'Unpublished debate'}`,'',`Model: ${day.model}. Status: ${day.status}. Actual attempts: ${receipt.attempts.length}.`,'',day.case?.context??'', '',day.case?.question??'',...day.posts.flatMap(p=>['',`## ${day.characters.find(c=>c.id===p.author).name} · round ${p.round}`,'',...(p.quote?['> '+p.quote,'']:[]),p.body]),'', '## Summary','',day.summary?.overview??'Not yet generated.'];
+ const report=[`# ${day.case?.title??'Unpublished debate'}`,'',`Model: ${day.model}. Status: ${day.status}. Actual attempts: ${receipt.attempts.length}.`,'',day.case?.context??'', '',day.case?.question??'',...day.posts.flatMap((p,i)=>['',`## ${day.characters.find(c=>c.id===p.author).name} · ${day.protocol==='villa-debate-v6'?'turn '+(i+1):'round '+p.round}`,'',...(p.quote?['> '+p.quote,'']:[]),p.body]),'', '## Summary','',day.summary?.overview??'Not yet generated.'];
  await writeFile(resolve(out,'read.md'),report.join('\n'),{mode:0o600});
  const usage=[];for(const model of provider.GEMINI_MODELS){const attempts=ledger.attempts.filter(a=>a.model===model).concat(model==='gemini-3.5-flash-lite'?prior.attempts:[]);for(const date of new Set(attempts.map(a=>budgetRules.quotaDate(a.atMs))))usage.push({model,date,count:attempts.filter(a=>budgetRules.quotaDate(a.atMs)===date).length});}
  await atomic(resolve(out,'adoption.json'),{day,usage});

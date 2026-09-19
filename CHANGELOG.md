@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-19 — Short turns that answer one another
+
+- Replaced new editions' two fixed rounds with nine connected contributions. Every resident reads the earlier conversation, all six join in, and extra turns rotate by date.
+- Let a direct question or answer stand on its own; brought residents' accepted costs and distinct voices into the prompts. Added clearer editorial checks for invented consequences and forced choices.
+- Made the situation visible immediately and compacted posts around their original portraits, first names and actual response links. Earlier editions retain their text and round structure.
+- Replaced rewritten recaps with two selected, verbatim contributions and exact author/source links; earlier summaries remain unchanged.
+- Kept Gemini 3.5 Flash Lite, all saved editions, resources and quotas. New editions normally use twelve requests within the existing twenty-attempt cap.
+- Recorded real simulations and unsuccessful alternatives in the [reader review](docs/reader-review-2026-09-19.md).
+
 ## 2026-09-18 — Shorter, more distinct conversations
 
 - Introduced protocol v4 and character version 5: everyday English, stronger personal priorities and two brief paragraphs per post, with shorter replies.

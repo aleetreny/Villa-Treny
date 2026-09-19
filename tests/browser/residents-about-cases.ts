@@ -56,7 +56,7 @@ export function residentAndAboutChecks(browserName: 'chromium' | 'webkit') {
       await expect(aboutLink).toHaveAttribute('aria-current', 'page');
       await page.reload();
       await expect(page.locator('.forum-about-lead')).toBeInViewport();
-      await expect(page.locator('.forum-about-lead')).toContainText('Six independent AI agents debate one question every day.');
+      await expect(page.locator('.forum-about-lead')).toContainText('Six fictional residents. One question worth talking about.');
       await expect(page.locator('.forum-about-lead')).toContainText('Gemini 3.5 Flash Lite');
       await page.getByText('Schedule, limits and source', { exact: true }).click();
       await expect(page.locator('.forum-about-details')).toHaveAttribute('open', '');

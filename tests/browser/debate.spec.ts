@@ -1,7 +1,35 @@
 import { expect, test } from '@playwright/test';
-import { board, day } from './debate-fixture';
+import { board, day, conversationBoard, conversation } from './debate-fixture';
+test('continuous debates keep chronological order and source links, and are recommendable at nine turns',async({page})=>{
+ await conversationBoard(page);await page.goto('/');
+ await expect(page.locator('.forum-post')).toHaveCount(9);
+ await expect(page.locator('.forum-case-context')).toBeVisible();
+ await expect(page.locator('.forum-case-meta')).toContainText('9/9 short turns');
+ await expect(page.getByRole('heading',{name:'Opening thoughts'})).toHaveCount(0);
+ expect(await page.locator('.forum-post').evaluateAll(posts=>posts.map(p=>p.id))).toEqual(conversation.posts.map(p=>p.id));
+ await expect(page.locator('.forum-highlight blockquote')).toHaveText(conversation.summary!.highlights!.map(id=>'“'+conversation.posts.find(p=>p.id===id)!.body+'”'));
+ await page.getByRole('link',{name:'Two highlights',exact:true}).click();
+ await page.locator('.forum-highlight a').first().click();
+ await expect(page.locator('.forum-post').first()).toBeFocused();
+ await page.getByRole('button',{name:'Back to the highlights'}).click();
+ await expect(page.locator('.forum-summary')).toBeFocused();
+ const second=page.locator('.forum-post').nth(1);
+ await second.locator('.forum-post-round').click();
+ await expect(page.locator('.forum-post').first()).toBeFocused();
+ await page.getByRole('button',{name:'Back to the reply'}).click();
+ await expect(second).toBeFocused();
+ await page.getByRole('button',{name:'Worth reading'}).click();
+ await expect(page.getByRole('button',{name:'Recommended'})).toHaveAttribute('aria-pressed','true');
+ await page.reload();await expect(page.getByRole('button',{name:'Recommended'})).toHaveAttribute('aria-pressed','true');
+});
+test('an unfinished nine-turn edition is not presented as complete',async({page})=>{
+ await conversationBoard(page,'summarizing');await page.setViewportSize({width:320,height:740});await page.goto('/');
+ await expect(page.getByRole('status').filter({hasText:'Two highlights'})).toBeVisible();
+ await expect(page.getByRole('button',{name:'Worth reading'})).toBeDisabled();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
 test('board, literal reply links, reading view and persistent recommendations',async({page})=>{
- await board(page);await page.goto('/');await expect(page.getByRole('heading',{name:day.case!.title})).toBeVisible();await expect(page.locator('.forum-post')).toHaveCount(12);await expect(page.getByRole('heading',{name:day.case!.question})).toBeInViewport();await expect(page.locator('.forum-post').first()).toBeInViewport();await page.getByText('Read the full scenario',{exact:true}).click();await expect(page.locator('.forum-case-context')).toHaveText(day.case!.context);await page.getByText('Read the full scenario',{exact:true}).click();
+ await board(page);await page.goto('/');await expect(page.getByRole('heading',{name:day.case!.title})).toBeVisible();await expect(page.locator('.forum-post')).toHaveCount(12);await expect(page.getByRole('heading',{name:day.case!.question})).toBeVisible();await expect(page.locator('.forum-case-context')).toHaveText(day.case!.context);await expect(page.locator('.forum-case-context')).toBeVisible();await page.getByText('Facts and open questions',{exact:true}).click();await expect(page.locator('.forum-premise')).toContainText(day.case!.unknowns[0]!);await page.getByText('Facts and open questions',{exact:true}).click();
  await expect(page.locator('.forum-post-body > p')).toHaveCount(24);
  await page.getByRole('button',{name:'Expand board'}).click();await expect(page.locator('.forum-sidebar')).toHaveCount(0);await expect(page.getByRole('button',{name:'Exit reading view'})).toBeVisible();
  const reply=page.locator('.forum-post blockquote a').first();const href=await reply.getAttribute('href');await reply.click();await expect(page).toHaveURL(new RegExp(href!+'$'));await expect(page.locator('[id="'+href!.slice(1)+'"]')).toBeInViewport();
@@ -15,7 +43,7 @@ test('six profiles, intact rooms, follow controls and navigation',async({page})=
  const image=page.locator('.room-view__world img');expect(await image.evaluate(e=>getComputedStyle(e).imageRendering)).toBe('pixelated');
 });
 test('mobile board and profiles remain readable without horizontal overflow',async({page})=>{
- await page.setViewportSize({width:390,height:844});await board(page);await page.goto('/');await expect(page.getByRole('heading',{name:day.case!.question})).toBeInViewport();await expect(page.getByRole('link',{name:'Read the discussion',exact:true})).toBeInViewport();await expect(page.getByRole('link',{name:'Read the summary',exact:true})).toBeInViewport();await expect(page.getByRole('heading',{name:day.case!.title})).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Residents'}).click();await expect(page.locator('.forum-person-list article')).toHaveCount(6);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.setViewportSize({width:390,height:844});await board(page);await page.goto('/');await expect(page.getByRole('heading',{name:day.case!.question})).toBeVisible();await expect(page.getByRole('link',{name:'Read the discussion',exact:true})).toBeVisible();await expect(page.getByRole('link',{name:'Read the summary',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:day.case!.title})).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Residents'}).click();await expect(page.locator('.forum-person-list article')).toHaveCount(6);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
 test('offline errors offer recovery and unpublished editions are honest',async({page})=>{
  await page.route('**/__habitat/v1/debates**',route=>route.fulfill({status:503,json:{error:'offline'}}));await page.goto('/');await expect(page.getByRole('alert')).toContainText('could not be reached');await expect(page.getByRole('button',{name:'Try again'})).toBeVisible();await page.unrouteAll();await page.route('**/__habitat/v1/debates**',route=>route.fulfill({json:{entries:[],nextCursor:null,schedule:{hourUtc:9,enabled:false,model:'gemini-3.8-flash'}}}));await page.getByRole('button',{name:'Try again'}).click();await expect(page.getByRole('heading',{name:'Pull up a chair'})).toBeVisible();

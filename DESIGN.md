@@ -92,7 +92,7 @@ spacing:
   compact-gap: "20px"
   mobile-gutter: "22px"
   rail-gutter: "24px"
-  post-gap: "28px"
+  post-gap: "18px"
   row: "30px"
   page: "36px"
   section: "40px"
@@ -107,7 +107,7 @@ components:
   navigation: {"textColor": "{colors.muted}", "typography": "{typography.body}", "padding": "9px 0"}
   navigation-current: {"textColor": "{colors.brand-paper}"}
   scenario-disclosure: {"textColor": "{colors.paper}", "typography": "{typography.quotation}", "padding": "12px 0"}
-  post: {"textColor": "{colors.paper}", "typography": "{typography.post}", "padding": "30px 0 34px"}
+  post: {"textColor": "{colors.paper}", "typography": "{typography.post}", "padding": "22px 0 26px"}
   summary: {"backgroundColor": "{colors.summary}", "textColor": "{colors.paper}", "typography": "{typography.body}", "rounded": "{rounded.square}", "padding": "28px 30px"}
   archive-row: {"textColor": "{colors.paper}", "typography": "{typography.body}", "padding": "30px 0"}
   profile-sheet: {"textColor": "{colors.paper}", "typography": "{typography.profile}", "padding": "24px 0 0"}
@@ -182,14 +182,14 @@ The implemented ramp is contextual rather than a single mathematical ratio. Pixe
 
 ## Layout
 
-The forum is a full-width scrolling document. Shared gutters use `clamp(16px, 2.5vw, 48px)`, with safe-area insets for notched devices. The shell no longer has a fixed centered outer width. Long prose deliberately retains a readable measure rather than stretching across a large monitor. The desktop masthead is at least 109 px high. The board rail varies from 206 to 280 px; author columns vary from 130 to 185 px and sit beside a flexible argument column.
+The forum is a full-width scrolling document. Shared gutters use `clamp(16px, 2.5vw, 48px)`, with safe-area insets for notched devices. The shell has no fixed centered outer width. Prose retains a readable measure rather than stretching across a large monitor. The desktop masthead is at least 109 px high. The board rail varies from 206 to 280 px. Each post uses a 48 px portrait column beside its name, reference and body, with an 18 px gap.
 
 Archive and resident pages use the same fluid gutters. Filters give spare width to search while retaining native subject/sort selectors. Profile sheets use a responsive grid with a 420 px target minimum; at 1800 px they show three columns. A single profile remains a bounded 1050 px sheet. No decorative cards or new artwork were introduced.
 
 ### Responsive behavior
 
-- **At 1100 px and below:** the secondary schedule disappears, the board rail becomes 200 px and author information moves above arguments. The habitat roster moves below the room in three columns.
-- **At 760 px and below:** the four main destinations fit in one visible row, each at least 48 px high. The board rail disappears. Posts, archive entries and profiles use one column. Filters wrap into a search row and two native selectors. Controls and inputs are at least 44 px high on touch screens; inputs use at least 16 px type.
+- **At 1100 px and below:** the secondary schedule disappears and the board rail becomes 200 px. The habitat roster moves below the room in three columns.
+- **At 760 px and below:** the four main destinations fit in one visible row, each at least 48 px high. The board rail disappears. Posts retain their 2× portrait, with a 14 px gap and wrapping author controls; archive entries and profiles use one column. Filters wrap into a search row and two native selectors. Controls and inputs are at least 44 px high on touch screens; inputs use at least 16 px type.
 - **Reading view:** removes the masthead, rail and footer. A sticky bar keeps Exit reading view and reading navigation available at every scroll position. Escape also exits. Linked quotations/summary arguments focus their destination and expose a return to the reply, summary or question. Copy link uses a dated canonical URL and provides visible success or a selectable fallback.
 
 The habitat uses a 175–250 px atlas, a flexible room and a 210–280 px roster on large screens. At 1100 px the roster moves below; at 760 px the atlas becomes a compact orientation preview next to a native room selector. Its tiny map targets are not interactive on touch/narrow layouts. Mobile roster entries retain generous portrait, name, current room and follow controls; following scrolls the resulting room into view. Stopping follow retains the resident's current room. Room and follow choices participate in browser history.
@@ -222,13 +222,13 @@ Fields are solid dark rectangles with an edge border, 8 px by 12 px padding, a 4
 
 ### Scenario disclosure, posts and summary
 
-The case title and central question remain visible. The **Read the full scenario** disclosure follows the reading links; its body contains the full context and a nested **What the case establishes** disclosure. Both are native keyboard-operable details/summary elements with structural rules. The outer disclosure uses 17 px text, paper content and a brass summary; nested facts use the smaller muted treatment.
+The title, complete situation and question are immediately visible in that order. The **Facts and open questions** disclosure follows the reading links. It uses a native keyboard-operable details/summary element with a structural rule; it reveals supporting excerpts and uncertainties without hiding the premise readers need.
 
-Posts are ruled rows with an identity area, author profile link, lens, round label and explicit Copy link action. Opening thoughts and Across the table separate the rounds. Reply quotations use moss text and horizontal rules; each links to its actual source post. Target styling, programmatic focus and a persistent return control mark the destination without a modal. An opening-round label is plain text; a reply-round link goes to the other resident’s actual opening rather than targeting itself. Where they landed uses the single bounded `summary` surface, wraps source links below each point and links to the relevant arguments.
+Posts are compact ruled rows with an original portrait, first-name profile link, **To [name]** reference and **Link** action with a full accessible label. New nine-turn editions form one chronological **Around the table** conversation. Earlier editions retain **Opening thoughts** and **Across the table** grouping and their literal quotations. Target styling, programmatic focus and a persistent return control mark the destination without a modal. **Worth thinking about** uses the bounded summary surface for two verbatim quotations with **Read in context** links. Earlier editions keep **Where they landed** and their saved summaries.
 
 ### Archive and resident sheets
 
-Archive entries are linked pixel titles, ordinary summaries and secondary dates, subjects and recommendation totals. Filters, pagination, empty results and connection errors use the same quiet form vocabulary. The subject label is plain metadata, not a pill or chip.
+Archive entries are linked pixel titles, a named excerpt for new editions or saved summaries for earlier ones and secondary dates, subjects and recommendation totals. Filters, pagination, empty results and connection errors use the same quiet form vocabulary. The subject label is plain metadata, not a pill or chip.
 
 The six resident sheets preserve the original portrait and name, followed by the current lens, introduction and a habitat link. Definitions use short moss labels above readable prose. Portraits are authored on a 24 × 26 native canvas: 2× in the board/room roster, 4× in desktop profiles and 3× in mobile profiles. The larger profile is a full page, not the historical observer's notebook overlay.
 

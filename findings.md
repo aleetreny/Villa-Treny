@@ -1,3 +1,24 @@
+# Reader review — 2026-09-19
+
+- Final decision: release the shorter continuous format with literal highlights. The last four dialogues have 151–174 words versus the 660-word published baseline. The bakery and manuscript exchanges develop useful questions; the gift and cabin cases remain more repetitive. This is a qualitative improvement with explicit residual weaknesses, not evidence that every future debate will be exceptional.
+- Recap retries revealed a structural failure: after removing a forced contrast instruction, the model still labelled two identical recommendations as disagreement. Selecting two actual posts removes that extra semantic rewriting. Four live selections and exact replay preserve wording/authorship; selection quality and the truthfulness of speakers' own claims remain model limitations.
+- Fourteen native editions, 126 contributions, all twelve subjects reviewed. Total evaluation: 217 Lite / four Flash requests, with all reservations and errors retained. Final check/build, 58 browser checks and seven offline hosting checks pass; old editions/world remain subject to the post-deploy comparison.
+
+- HEAD, origin/main and deployed release all match 0e519ae4e676e64dd6ca7fa56a379ebd93c9e139. Working tree has only pre-existing untracked .serena/.
+- Today's v5 edition completed in 15 production calls. External daily usage starts at zero; Lite quota remains 300/day including cloud and manual calls.
+- The Automated Shift is operationally sound but five openings repeat the rent argument, several repeat the landlord joke, and assigned replies mostly restate agreement. Bex's unsupported financial hustle is weak opposition. Context repeats its setup.
+- Independent openings plus fixed one-reply targets prevent a continuous exchange. Scenario is hidden by default, so readers encounter opinions before knowing enough about the choice.
+- Hypothesis to test: short connected turns with an editorial view of the whole conversation can improve coherence and reduce duplication. Authorship must be described honestly if one model call writes multiple voices.
+- Evidence and private calls: .local/reader-review-2026-09-19/. Existing production edition is a baseline, never rewritten.
+- The first four native v6 trials completed in 12 calls each. Brief connected turns improve pacing, but the first drafts still repeat positions, turn possibilities into facts and sometimes overstate family consequences. Shortening alone does not solve those weaknesses.
+- A separate copy-edit experiment removed some padding and an invented formal debt, but retained repetition and introduced an unanswered closing question. Rejected as an extra production stage.
+- The education trial exposed a definite summary bug: text named Ama while citing Bex. Summary input now contains only visible bodies and exact author names; v6 validates that each named side matches its cited authors. Earlier saved summaries remain unchanged.
+- First batched visual pass: actual generated nine-turn edition read in desktop and 390 px phone views. Scenario is visible; portrait/name/reference/body follow a compact continuous flow. No clipping or need for a new layout change found.
+- Culture supports the nine-turn format, but belief remains solemn/repetitive and relationships misreads adding a monthly group dinner as cancelling the private weekly meeting. A fixed-source five-run batch was stopped at its launcher; the active relationship trial completed normally. No live request or receipt was discarded.
+- The next candidate adds varied everyday/playful/ambitious briefs and actual recent contexts; the resident privately identifies the target's proposal before deciding a new contribution. This directly addresses tone monotony, inherited assumptions and meta-answers about who has the right to decide.
+
+---
+
 # Evidence and decisions
 
 ## Initial state
@@ -203,3 +224,7 @@ v1 completed as incomplete, not as a successful debate: 26 actual calls, four ti
 ## Official debate product — initial audit, 9 September
 
 The user explicitly authorizes a product pivot and production release using six debate residents and Gemini 3.8 Flash after Flash Lite development tests. Prior pilot is evidence, not production: 58 attempts, seven timeouts, one complete debate; recurring topic motifs, invented facts and unfair target paraphrases were observed. Existing frontend enters through src/main.tsx -> HabitatView, not src/App.tsx. Existing Cloudflare Worker uses canonical HabitatWorld SQLite state, hourly cron and approved static assets; preserve its binding/state while introducing the new persistent debate workload. Google docs confirm per-model project quotas reset at Pacific midnight; DO alarms are at-least-once, with one alarm per object, so per-turn idempotency and reservation-before-fetch are required.
+
+2026-09-19 prototypes: p02 space (366 words) still exaggerates a lease into a lifelong promise and invents a dead ship if Mark stays. p03 targeted editorial revision removes worst factual inventions, but remains a round-robin of slogans; insufficient. p04 Flash comparison returned provider_error and remains charged. p05 simplifies profiles to everyday priorities and dialogue to short direct questions/answers.
+
+p08: all 12 turns completed, ~320 words, but 5 handoffs say What do you think and the original conflict is repeated; separate calls alone are not the solution. p09 (memory erasure) is more readable and invites a real choice; p10–p11 still need editing for unsupported claims and repeated points. Testing a final editor that may actually delete filler rather than satisfying a fixed quota of speeches.

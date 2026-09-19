@@ -1,5 +1,6 @@
 import { applyDailyResult, newDebate, nextDailyTask, type DailyRecord, type DailyTask } from '../../src/debate/daily';
 import type { GeminiResult } from '../../src/providers/gemini';
+import { character } from '../../../../src/lib/debate/characters';
 export const sampleCase = {
   title: 'The last quiet hour',
   context: 'A lunar settlement has one shared garden, used by people who work different shifts. The garden is the only place with living plants. Some residents meet there to sing after their shifts, while others use the same hour to sit quietly. Both groups have asked the elected council for reliable access. Sound carries through the whole garden, and the settlement cannot build another one for a year. The existing timetable changes every week, which makes planning difficult for both groups. Nobody has a private garden. The council can change how the space is scheduled, but any new arrangement must still leave time for maintenance.',
@@ -20,14 +21,24 @@ export const replyParagraphs = [
 export function payloadFor(day: DailyRecord, task: DailyTask): unknown {
   if (task.kind === 'draft') return {candidates:[sampleCase,sampleCase,sampleCase]};
   if (task.kind === 'edit') return { publish: true, reasons: [], decisiveConstraint: sampleCase.facts[0], viableResponses: editorialOptions, case: sampleCase };
+  if (task.kind === 'summary' && day.protocol === 'villa-debate-v6') return { postIndices: [1, 2] };
   if (task.kind === 'summary') return { overview: 'The residents propose different ways to share a scarce public space. Their discussion turns on whether equal time, reliable access or flexibility should carry the most weight.',
-    disagreements: [{ text: 'The discussion compares predictable access with the need to accommodate changing shifts.', posts: [day.posts[0]!.id,day.posts[1]!.id] }], sharedGround: 'The garden should remain a shared resource.' };
+    disagreements: [{ text: `${character(day.posts[0]!.author).name.split(' ')[0]} favours predictable access, while ${character(day.posts[1]!.author).name.split(' ')[0]} favours accommodating changing shifts.`, posts: [day.posts[0]!.id,day.posts[1]!.id] }], sharedGround: 'The garden should remain a shared resource.' };
+  if (task.kind === 'turn') return { theirPoint: day.posts.length ? 'They propose a daily quiet hour, accepting shorter singing sessions.' : 'There is no earlier contribution.',
+    newPoint: 'Keep a quiet period every day instead of rotating whole weeks.',
+    replyToIndex: day.posts.length, body: 'I would keep a quiet hour every day. That gives people a reliable visit, though singers would have to accept shorter sessions.',
+    position: 'Keep a quiet hour every day.', factsUsed: [1, 2] };
   return { paragraphs: task.kind === 'reply' ? replyParagraphs : openingParagraphs, position: 'Publish a predictable timetable and review who can use it.', factsUsed: [1,2], ...(task.kind === 'reply' ? { quoteIndex: 1, engagement: 'agree_and_extend' } : {}) };
 }
 export function successful(payload: unknown): GeminiResult { return { ok: true, code: 'ok', model: 'gemini-3.5-flash-lite', modelVersion: 'gemini-3.5-flash-lite', responseId: 'fixture', status: 200, text: JSON.stringify(payload), payload,
   usage: { inputTokens: 10, outputTokens: 20, thinkingTokens: 0, totalTokens: 30, complete: true }, latencyMs: 10, retryAfterMs: null }; }
 export function completedDay(date = '2026-09-09') {
-  let day = newDebate(date, 'gemini-3.5-flash-lite', Date.parse(date+'T09:00:00Z'));
+  let day = { ...newDebate(date, 'gemini-3.5-flash-lite', Date.parse(date+'T09:00:00Z')), protocol: 'villa-debate-v5' };
   for (let i=0; i<15; i++) { const task=nextDailyTask(day,[])!; day=applyDailyResult(day,task,successful(payloadFor(day,task)),[],day.updatedAt+1000).day; }
+  return day;
+}
+export function completedConversation(date = '2026-09-20') {
+  let day = newDebate(date, 'gemini-3.5-flash-lite', Date.parse(date+'T09:00:00Z'));
+  for (let i = 0; i < 12; i++) { const task = nextDailyTask(day, [])!; day = applyDailyResult(day, task, successful(payloadFor(day, task)), [], day.updatedAt + 1000).day; }
   return day;
 }

@@ -5,7 +5,7 @@ import { DebateForum } from '../src/debate/forum';
 import { debateHttp } from '../src/debate/http';
 import { nextDailyTask } from '../src/debate/daily';
 import { runGemini } from '../src/providers/gemini';
-import { completedDay, payloadFor, successful } from './fixtures/daily';
+import { completedDay, completedConversation, payloadFor, successful } from './fixtures/daily';
 vi.mock('../src/providers/gemini', async original => ({...await original<typeof import('../src/providers/gemini')>(),runGemini:vi.fn()}));
 beforeEach(()=>vi.clearAllMocks());
 afterEach(()=>vi.restoreAllMocks());
@@ -21,13 +21,20 @@ describe('durable daily forum',()=>{
  it('reserves calls before dispatch and completes an edition without visitor triggers',async()=>{
    const s=stub(),start=futureEditionTime(),date=new Date(start).toISOString().slice(0,10);let now=start;vi.spyOn(Date,'now').mockImplementation(()=>now);
    await s.configure({enabled:true,model:'gemini-3.5-flash-lite'});
-   for(let i=0;i<15;i++){
+   for(let i=0;i<12;i++){
      const exported=await s.exportEdition(date);const day=exported.day!;const task=nextDailyTask(day,[])!;
      now+=61_000;await runInDurableObject(s,(_instance,ctx)=>{vi.mocked(runGemini).mockImplementationOnce(async()=>{expect(ctx.storage.sql.exec('SELECT COUNT(*) AS count FROM debate_attempts').one().count).toBe(i+1);return successful(payloadFor(day,task));});});
      expect(await runDurableObjectAlarm(s)).toBe(true);
    }
-   expect((await s.getEdition(date))?.status).toBe('complete');expect((await s.getEdition(date))?.posts).toHaveLength(12);
-   expect(await runDurableObjectAlarm(s)).toBe(true);expect((await s.exportEdition(date)).attempts).toHaveLength(15);expect((await s.diagnostics()).nextAlarmAt).toBe(start+86_400_000);
+   expect((await s.getEdition(date))?.status).toBe('complete');expect((await s.getEdition(date))?.posts).toHaveLength(9);
+   expect(await runDurableObjectAlarm(s)).toBe(true);expect((await s.exportEdition(date)).attempts).toHaveLength(12);expect((await s.diagnostics()).nextAlarmAt).toBe(start+86_400_000);
+ });
+ it('accepts recommendations only after the new conversation is complete',async()=>{
+   const s=stub(),day=completedConversation();await seed(s,{...day,status:'summarizing',phase:'summary',summary:null});
+   expect(await s.vote(day.id,'reader',true,'net')).toEqual({error:'not_ready'});
+   await runInDurableObject(s,(_i,ctx)=>{ctx.storage.sql.exec('UPDATE debate_days SET body=? WHERE id=?',JSON.stringify(day),day.id);});
+   expect(await s.vote(day.id,'reader',true,'net')).toEqual({recommended:true,recommendations:1});
+   expect(runGemini).not.toHaveBeenCalled();
  });
  it('charges uncertain outcomes, recovers saved responses, and blocks exhausted quota',async()=>{
    const s=stub(),now=futureEditionTime(),date=new Date(now).toISOString().slice(0,10),draftId=date+'-draft-1';vi.spyOn(Date,'now').mockReturnValue(now);await s.configure({enabled:true,model:'gemini-3.8-flash'});

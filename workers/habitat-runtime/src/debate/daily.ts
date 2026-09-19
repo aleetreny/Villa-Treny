@@ -1,21 +1,21 @@
 import { z } from 'zod';
 import { CHARACTERS, CHARACTER_IDS, CHARACTER_VERSION, type CharacterId } from '../../../../src/lib/debate/characters';
-import { DAILY_PROTOCOL, candidateCasesSchema, debateCaseSchema, caseIssues, countWords, dailyPostSchema, digestSchema, editorialSchema, openingSchema,
-  postIssues, quoteChoices, characterSchema, publicDebateSchema, replySchema, summarySchema, type DailyCase, type DailyPost, type PublicDebate } from '../../../../src/lib/debate/contracts';
+import { DAILY_PROTOCOL, CONVERSATION_TURNS, isConversation, conversationTurnSchema, conversationPostIssues, candidateCasesSchema, debateCaseSchema, caseIssues, countWords, dailyPostSchema, digestSchema, editorialSchema, openingSchema,
+  postIssues, quoteChoices, characterSchema, publicDebateSchema, replySchema, summarySchema, highlightSelectionSchema, type DailyCase, type DailyPost, type DebateSummary, type PublicDebate } from '../../../../src/lib/debate/contracts';
 import type { GeminiModel, GeminiPrompt, GeminiResult } from '../providers/gemini';
-import { dailyBrief, dailyOpening, dailyReply, digestPrompt, draftPrompt, editPrompt } from './daily-prompts';
+import { dailyBrief, dailyOpening, dailyReply, digestPrompt, draftPrompt, editPrompt, conversationPrompt, highlightsPrompt } from './daily-prompts';
 
 export const DAILY_HOUR_UTC = 9;
 export const MAX_DAY_ATTEMPTS = 20;
 export const dailyRecordSchema = publicDebateSchema.omit({ recommendations: true }).extend({
-  phase: z.enum(['draft', 'edit', 'opening', 'replies', 'summary', 'done']),
+  phase: z.enum(['draft', 'edit', 'opening', 'replies', 'conversation', 'summary', 'done']),
   // Stored drafts predate the tighter generation bounds; keep them recoverable.
   draft: z.strictObject({ candidates: z.array(debateCaseSchema).length(3) }).nullable(), draftNumber: z.number().int().min(1).max(2),
   editorialFeedback: z.array(z.string()).max(12), attempts: z.record(z.string(), z.number().int().min(0).max(3)),
   heldReason: z.string().nullable(), lastFailure: z.string().nullable(),
 });
 export type DailyRecord = z.infer<typeof dailyRecordSchema>;
-export type DailyTask = { id: string; kind: 'draft' | 'edit' | 'opening' | 'reply' | 'summary'; author: CharacterId | null;
+export type DailyTask = { id: string; kind: 'draft' | 'edit' | 'opening' | 'reply' | 'turn' | 'summary'; author: CharacterId | null;
   replyTo: string | null; prompt: GeminiPrompt };
 
 export function newDebate(date: string, model: GeminiModel, now: number): DailyRecord {
@@ -28,6 +28,11 @@ export function newDebate(date: string, model: GeminiModel, now: number): DailyR
 export function turnOrder(date: string): CharacterId[] {
   const offset = Math.floor(Date.parse(date + 'T12:00:00Z') / 86_400_000) % CHARACTER_IDS.length;
   return [...CHARACTER_IDS.slice(offset), ...CHARACTER_IDS.slice(0, offset)];
+}
+/** Early exchanges can return to a speaker; all six join before the final turn. */
+export function conversationOrder(date: string): CharacterId[] {
+  const people = turnOrder(date);
+  return [0, 1, 0, 2, 3, 4, 3, 5, 1].map(index => people[index]!);
 }
 export function replyTarget(date: string, actor: CharacterId, openings: DailyPost[]): DailyPost {
   const offset = 1 + Math.floor(Date.parse(date + 'T12:00:00Z') / 86_400_000) % 5;
@@ -46,7 +51,13 @@ function planDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTa
     return { ...base, id: day.id + '-edit-' + day.draftNumber, kind: 'edit', prompt: editPrompt(day.draft, day.model, history, day.date) };
   }
   if (!day.case) throw new Error('missing_case');
-  if (day.phase === 'summary') return { ...base, id: day.id + '-summary', kind: 'summary', prompt: digestPrompt(day.case, day.model, day.posts) };
+  if (day.phase === 'summary') return { ...base, id: day.id + '-summary', kind: 'summary', prompt: (isConversation(day) ? highlightsPrompt : digestPrompt)(day.case, day.model, day.posts) };
+  if (day.phase === 'conversation') {
+    const actor = conversationOrder(day.date)[day.posts.length];
+    if (!actor) throw new Error('invalid_phase');
+    return { ...base, id: `${day.id}-t-${day.posts.length + 1}`, kind: 'turn', author: actor,
+      prompt: conversationPrompt(day.case, actor, day.model, day.posts, day.characters.find(p => p.id === actor)) };
+  }
   const round = day.phase === 'opening' ? 1 : 2;
   const actor = turnOrder(day.date).find(id => !day.posts.some(post => post.author === id && post.round === round));
   if (!actor) throw new Error('invalid_phase');
@@ -58,7 +69,7 @@ function planDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTa
 
 const corrections: Record<string, string> = {
   candidate_schema: 'Match the requested case schema, including every string length and all three candidates.',
-  context_length: 'REWRITE the context into 65–100 words. Do not return the same overlong draft. Then copy the facts from the rewritten context.',
+  context_length: 'REWRITE the context into 55–85 words. Do not return the same overlong draft. Then copy the facts from the rewritten context.',
   one_open_question: 'End exactly one open question with a question mark.',
   closed_question: 'Rewrite the question to begin with What should or How should, for example What should Marta do about the offer? Do not begin with Should or list two alternatives.',
   stock_balance_template: 'Ask about the concrete decision, not broad guiding principles.',
@@ -73,6 +84,12 @@ const corrections: Record<string, string> = {
   exact_target_quote: 'Select a quoteIndex that exists in the supplied quoteChoices.',
   summary_schema: 'Keep overview within 400 characters, each disagreement within 190 and sharedGround within 200; follow the JSON schema.',
   summary_references: 'For each genuine disagreement, cite supplied post IDs from at least two different authors.',
+  highlight_schema: 'Return only postIndices: exactly two integers from the supplied posts. Do not write a summary.',
+  highlight_references: 'Choose two different existing posts by different authors, in chronological order.',
+  conversation_schema: 'Return replyToIndex, theirPoint, newPoint, position, factsUsed and body exactly as specified. Body is one short paragraph, at most 260 characters.',
+  conversation_length: 'Rewrite this contribution into 6–25 words, at most 260 characters. A short question or answer is enough.',
+  conversation_paragraph: 'Use one paragraph with no line breaks.',
+  conversation_reference: 'Use 0 only for the first contribution. Otherwise select an existing earlier turn by someone else.',
 };
 export function nextDailyTask(day: DailyRecord, history: readonly DailyCase[]): DailyTask | null {
   const task = planDailyTask(day, history);
@@ -90,7 +107,26 @@ export function nextDailyTask(day: DailyRecord, history: readonly DailyCase[]): 
 function statusFor(day: DailyRecord): PublicDebate['status'] {
   if (day.heldReason) return 'held';
   if (day.lastFailure) return 'delayed';
-  return day.phase === 'done' ? 'complete' : day.phase === 'draft' || day.phase === 'edit' ? 'preparing' : day.phase === 'summary' ? 'summarizing' : day.phase;
+  return day.phase === 'done' ? 'complete' : day.phase === 'draft' || day.phase === 'edit' ? 'preparing' : day.phase === 'summary' ? 'summarizing' : day.phase === 'conversation' ? 'replies' : day.phase;
+}
+function highlightSummary(day: DailyRecord, posts: DailyPost[]): DebateSummary {
+  const first = posts[0]!;
+  const author = day.characters.find(p => p.id === first.author)!.name.split(' ')[0];
+  return { overview: author + ': “' + first.body + '”', highlights: posts.map(p => p.id), disagreements: [], sharedGround: '' };
+}
+function summaryIssues(day: DailyRecord, summary: DebateSummary): string[] {
+  if (isConversation(day)) {
+    const selected = summary.highlights?.map(id => day.posts.find(post => post.id === id));
+    if (!selected || selected.length !== 2 || selected.some(p => !p)
+      || new Set(selected.map(p => p?.author)).size !== 2
+      || day.posts.indexOf(selected[0]!) >= day.posts.indexOf(selected[1]!)) return ['highlight_references'];
+    const expected = highlightSummary(day, selected as DailyPost[]);
+    return summary.overview !== expected.overview || summary.disagreements.length || summary.sharedGround ? ['highlight_quote'] : [];
+  }
+  return summary.disagreements.some(item => {
+    const cited = item.posts.map(id => day.posts.find(post => post.id === id));
+    return cited.some(post => !post) || new Set(cited.map(post => post?.author)).size < 2;
+  }) ? ['summary_references'] : [];
 }
 function validatePayload(day: DailyRecord, task: DailyTask, payload: unknown, history: readonly DailyCase[]): string[] {
   if (task.kind === 'draft') {
@@ -107,13 +143,26 @@ function validatePayload(day: DailyRecord, task: DailyTask, payload: unknown, hi
     return [...caseIssues(p.data.case, history), ...(!p.data.case.context.includes(p.data.decisiveConstraint) ? ['constraint_must_quote_context'] : [])];
   }
   if (task.kind === 'summary') {
+    if (isConversation(day)) {
+      const p = highlightSelectionSchema.safeParse(payload);
+      if (!p.success) return ['highlight_schema'];
+      const selected = p.data.postIndices.map(index => day.posts[index - 1]);
+      return day.posts.length !== CONVERSATION_TURNS || selected.some(post => !post)
+        || new Set(selected.map(post => post?.author)).size !== 2 || p.data.postIndices[0]! >= p.data.postIndices[1]!
+        ? ['highlight_references'] : [];
+    }
     const p = digestSchema.safeParse(payload);
     if (!p.success) return ['summary_schema'];
-    if (day.posts.length !== 12 || p.data.disagreements.some(item => {
-      const posts = item.posts.map(id => day.posts.find(post => post.id === id));
-      return posts.some(post => !post) || new Set(posts.map(post => post?.author)).size < 2;
-    })) return ['summary_references'];
-    return [];
+    if (day.posts.length !== (isConversation(day) ? CONVERSATION_TURNS : 12)) return ['summary_references'];
+    return summaryIssues(day, p.data);
+  }
+  if (task.kind === 'turn') {
+    const p = conversationTurnSchema.safeParse(payload);
+    if (!p.success || !day.case) return ['conversation_schema'];
+    const issues = conversationPostIssues(p.data, day.case);
+    const target = day.posts[p.data.replyToIndex - 1];
+    if (day.posts.length ? !target || target.author === task.author : p.data.replyToIndex !== 0) issues.push('conversation_reference');
+    return issues;
   }
   const p = (task.kind === 'reply' ? replySchema : openingSchema).safeParse(payload);
   if (!p.success || !day.case) return ['post_schema'];
@@ -152,9 +201,17 @@ export function applyDailyResult(before: DailyRecord, task: DailyTask, result: G
       day.editorialFeedback = edit.reasons.slice(0, 5);
       if (day.draftNumber >= 2) day.heldReason = 'editorial_hold';
       else { day.draftNumber = 2; day.draft = null; day.phase = 'draft'; }
-    } else { day.case = edit.case; day.phase = 'opening'; }
+    } else { day.case = edit.case; day.phase = isConversation(day) ? 'conversation' : 'opening'; }
   } else if (task.kind === 'summary') {
-    day.summary = summarySchema.parse(result.payload); day.phase = 'done'; day.nextAttemptAt = null;
+    day.summary = isConversation(day)
+      ? highlightSummary(day, highlightSelectionSchema.parse(result.payload).postIndices.map(index => day.posts[index - 1]!))
+      : summarySchema.parse(result.payload);
+    day.phase = 'done'; day.nextAttemptAt = null;
+  } else if (task.kind === 'turn') {
+    const turn = conversationTurnSchema.parse(result.payload);
+    day.posts.push(dailyPostSchema.parse({ id: task.id, author: task.author, body: turn.body, position: turn.position, factsUsed: turn.factsUsed,
+      round: day.posts.some(p => p.author === task.author) ? 2 : 1, replyTo: day.posts[turn.replyToIndex - 1]?.id ?? null, quote: null, createdAt: now }));
+    if (day.posts.length === CONVERSATION_TURNS) day.phase = 'summary';
   } else {
     const post = (task.kind === 'reply' ? replySchema : openingSchema).parse(result.payload);
     const target = day.posts.find(p => p.id === task.replyTo);
@@ -175,22 +232,28 @@ export function publicDay(day: DailyRecord, recommendations: number): PublicDeba
 export function verifyCompletedDay(raw: unknown): DailyRecord {
   const day = dailyRecordSchema.parse(raw);
   z.iso.date().parse(day.date);
-  if (day.phase !== 'done' || day.status !== 'complete' || !day.case || !day.summary || day.posts.length !== 12
-    || day.heldReason || day.lastFailure || day.nextAttemptAt !== null || day.id !== day.date || day.protocol !== DAILY_PROTOCOL || day.personaVersion !== CHARACTER_VERSION
+  const conversation = isConversation(day), postCount = conversation ? CONVERSATION_TURNS : 12;
+  if (day.phase !== 'done' || day.status !== 'complete' || !day.case || !day.summary || day.posts.length !== postCount
+    || day.heldReason || day.lastFailure || day.nextAttemptAt !== null || day.id !== day.date || ![DAILY_PROTOCOL, 'villa-debate-v5'].includes(day.protocol) || day.personaVersion !== CHARACTER_VERSION
     || JSON.stringify(day.characters) !== JSON.stringify(z.array(characterSchema).parse(CHARACTERS)) || caseIssues(day.case, []).length
-    || !digestSchema.safeParse(day.summary).success) throw new Error('invalid_completed_day');
-  for (const round of [1, 2]) if (new Set(day.posts.filter(p => p.round === round).map(p => p.author)).size !== 6) throw new Error('invalid_participation');
-  for (const post of day.posts) {
+    || (!conversation && !digestSchema.safeParse(day.summary).success)) throw new Error('invalid_completed_day');
+  if (conversation && new Set(day.posts.map(p => p.author)).size !== 6) throw new Error('invalid_participation');
+  if (!conversation) for (const round of [1, 2]) if (new Set(day.posts.filter(p => p.round === round).map(p => p.author)).size !== 6) throw new Error('invalid_participation');
+  for (const [index, post] of day.posts.entries()) {
+    if (conversation) {
+      if (conversationPostIssues(post, day.case).length || post.id !== `${day.id}-t-${index + 1}` || post.author !== conversationOrder(day.date)[index]
+        || post.quote !== null || post.round !== (day.posts.slice(0, index).some(p => p.author === post.author) ? 2 : 1)) throw new Error('invalid_post');
+      const target = day.posts.slice(0, index).find(p => p.id === post.replyTo);
+      if (index ? !target || target.author === post.author : post.replyTo !== null) throw new Error('invalid_reply');
+      continue;
+    }
     if (postIssues(post, day.case, post.round).length || post.id !== day.id + (post.round === 1 ? '-o-' : '-r-') + post.author) throw new Error('invalid_post');
     if (post.round === 2) {
       const target = replyTarget(day.date, post.author, day.posts.filter(p => p.round === 1));
       if (post.replyTo !== target.id || !post.quote || !target.body.includes(post.quote) || countWords(post.quote) < 5 || countWords(post.quote) > 40) throw new Error('invalid_reply');
     } else if (post.replyTo !== null || post.quote !== null) throw new Error('invalid_opening');
   }
-  if (new Set(day.posts.map(p => p.id)).size !== 12 || Object.values(day.attempts).reduce((a,b) => a+b, 0) > MAX_DAY_ATTEMPTS) throw new Error('invalid_day_ledger');
-  if (day.summary.disagreements.some(item => {
-    const posts = item.posts.map(id => day.posts.find(post => post.id === id));
-    return posts.some(post => !post) || new Set(posts.map(post => post?.author)).size < 2;
-  })) throw new Error('invalid_summary_references');
+  if (new Set(day.posts.map(p => p.id)).size !== postCount || Object.values(day.attempts).reduce((a,b) => a+b, 0) > MAX_DAY_ATTEMPTS) throw new Error('invalid_day_ledger');
+  if (summaryIssues(day, day.summary).length) throw new Error('invalid_summary_references');
   return day;
 }
