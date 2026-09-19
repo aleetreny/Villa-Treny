@@ -8,8 +8,8 @@ Make the debates enjoyable and easy to follow for an ordinary reader. The owner 
 - [x] Compare private structural prototypes using real Gemini calls and the existing shared quota ledger (23 experiment families, including failures; separate short turns selected).
 - [x] Implement the strongest format, retaining old archives and durable attempt accounting.
 - [x] Read many diverse full episodes, iterate on failures, and test unseen cases (14 complete editions across 12 subjects; four final highlight selections and exact replay).
-- [ ] Verify complete browser reading experience, checks/build/export and archive preservation.
-- [ ] Commit, fast-forward main, push and verify production. Mark the goal complete only on evidence.
+- [x] Verify complete browser reading experience, checks/build/export and archive preservation (all 11 public/private editions, paused world revision 386 and scheduler unchanged).
+- [x] Commit, fast-forward main, push and verify production. Code release 0a0cbf4 passed Actions 35450277846 and live continuity checks.
 
 ## Success evidence
 A clear hook; credible competing choices; six recognisable people; exchanges that develop rather than repeat; faithful facts and cost scale; short natural language; an inviting mobile reading flow. Record unsuccessful samples as well as successes. No finite sample proves perfection.
