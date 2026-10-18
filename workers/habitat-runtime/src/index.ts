@@ -1,4 +1,5 @@
 import { debateHttp } from './debate/http';
+import { labHttp } from './lab/http';
 export { DebateForum } from './debate/forum';
 import { recoveryPageSchema } from './recovery';
 import { z } from 'zod';
@@ -50,6 +51,8 @@ export default {
   async fetch(request, env): Promise<Response> {
     const debateResponse = await debateHttp(request, env);
     if (debateResponse) return debateResponse;
+    const labResponse = await labHttp(request, env);
+    if (labResponse) return labResponse;
     const url = new URL(request.url);
     if (request.method === 'OPTIONS' && (
       url.pathname === '/health'

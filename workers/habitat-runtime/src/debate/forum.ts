@@ -5,16 +5,28 @@ import { DAILY_PROTOCOL, isConversation, archiveSchema, type DailyCase } from '.
 import { GEMINI_MODELS, runGemini, type GeminiModel, type GeminiResult } from '../providers/gemini';
 import { applyDailyResult, DAILY_HOUR_UTC, MAX_DAY_ATTEMPTS, newDebate, nextDailyTask, publicDay, verifyCompletedDay, type DailyRecord } from './daily';
 import { modelDailyCap, nextQuotaDay, quotaDate, unknownResult } from './budget';
+import { LAB_EXPERIMENTS, type LabExperiment } from '../../../../src/lib/lab/contracts';
+import { LabStore, digestOf, type LabAttempt } from '../lab/store';
+import { promptFor, type CompletedDebate } from '../lab/experiments';
 
 type Settings = { enabled: boolean; model: GeminiModel; activatedAt: number | null };
 type Attempt = { id: string; day: string; task: string; model: GeminiModel; started: number; deadline: number; state: string; result: string | null };
 const settingsSchema = z.strictObject({ enabled: z.boolean(), model: z.enum(GEMINI_MODELS) });
 const externalSchema = z.array(z.strictObject({ model: z.enum(GEMINI_MODELS), date: z.iso.date(), count: z.number().int().min(0).max(500) })).max(40);
 const nextEdition = (now: number) => { const d = new Date(now); d.setUTCHours(DAILY_HOUR_UTC, 0, 0, 0); if (+d <= now) d.setUTCDate(d.getUTCDate() + 1); return +d; };
+/** The Lab's working date runs from one 09:00 UTC edition to the next. */
+export const labDate = (now: number) => new Date(now - DAILY_HOUR_UTC * 3_600_000).toISOString().slice(0, 10);
+/** The debate keeps priority: the Lab only dispatches while today's debate is
+ * finished, held, or waiting more than two minutes for a retry or quota. */
+const LAB_DEBATE_GAP_MS = 120_000;
+const debateBlocks = (day: DailyRecord | null, now: number) => !!day && day.phase !== 'done' && day.status !== 'held' && day.protocol === DAILY_PROTOCOL && (day.nextAttemptAt ?? 0) <= now + LAB_DEBATE_GAP_MS;
+const completed = (day: DailyRecord | null): CompletedDebate | null => day && day.phase === 'done' && day.status === 'complete' && isConversation(day) && day.case
+  ? { id: day.id, protocol: day.protocol, case: day.case, posts: day.posts } : null;
 
 /** One community owns its daily editions and anonymous recommendations. Reading
  * never schedules cognition. The previous HabitatWorld remains separately stored. */
 export class DebateForum extends DurableObject<Env> {
+  private readonly lab: LabStore;
   constructor(ctx: DurableObjectState, env: Env) {
     super(ctx, env);
     ctx.storage.sql.exec(`
@@ -28,6 +40,18 @@ export class DebateForum extends DurableObject<Env> {
       CREATE TABLE IF NOT EXISTS debate_votes (day TEXT NOT NULL, reader TEXT NOT NULL, PRIMARY KEY(day,reader));
       CREATE TABLE IF NOT EXISTS debate_rate (key TEXT PRIMARY KEY, start INTEGER NOT NULL, count INTEGER NOT NULL);
     `);
+    this.lab = new LabStore(ctx.storage.sql);
+  }
+  /** One provider ledger for debate, Lab and registered external usage. */
+  private usage(model: GeminiModel, quotaDay: string) {
+    const debate = this.sql.exec<{ count: number }>('SELECT COUNT(*) AS count FROM debate_attempts WHERE model=? AND quota_day=?', model, quotaDay).one().count;
+    const external = this.sql.exec<{ count: number }>('SELECT count FROM debate_external_usage WHERE model=? AND date=?', model, quotaDay).toArray()[0]?.count ?? 0;
+    return debate + this.lab.used(model, quotaDay) + external;
+  }
+  /** Shared pacing: dispatch starts in the last minute, across both ledgers. */
+  private recentStarts(model: GeminiModel, now: number) {
+    return [...this.sql.exec<{ started: number }>('SELECT started FROM debate_attempts WHERE model=? AND started>?', model, now - 60_000).toArray().map(r => r.started),
+      ...this.lab.starts(model, now - 60_000)].sort((a, b) => a - b);
   }
   private get sql() { return this.ctx.storage.sql; }
   private settings(): Settings {
@@ -122,6 +146,28 @@ export class DebateForum extends DurableObject<Env> {
       external: this.sql.exec('SELECT * FROM debate_external_usage ORDER BY date DESC LIMIT 30').toArray(),
       editions: this.sql.exec<{ body: string }>('SELECT body FROM debate_days ORDER BY id DESC LIMIT 10').toArray().map(r => { const d = JSON.parse(r.body) as DailyRecord; return { id: d.id, status: d.status, phase: d.phase, posts: d.posts.length, attempts: d.attempts, heldReason: d.heldReason, lastFailure: d.lastFailure }; }) };
   }
+  /* ---------- The Lab: stored reads, operator controls ---------- */
+  private labSchedule(now = Date.now()) {
+    const lab = this.lab.settings(), forum = this.settings();
+    return { enabled: forum.enabled && lab.enabled, model: forum.model, hourUtc: DAILY_HOUR_UTC, activatedOn: lab.activatedOn, today: labDate(now) };
+  }
+  private debateStatus(date: string) { const day = this.day(date); return day ? { status: publicDay(day, 0).status } : null; }
+  getLabDay(experiment: LabExperiment, date: string) {
+    return this.lab.day(experiment, date, labDate(Date.now()), experiment === 'verdict' ? this.debateStatus(date) : null);
+  }
+  getLabOverview() {
+    const schedule = this.labSchedule();
+    return { schedule, today: Object.fromEntries(LAB_EXPERIMENTS.map(e => [e, this.getLabDay(e, schedule.today)])),
+      latest: Object.fromEntries(LAB_EXPERIMENTS.map(e => [e, this.lab.dates(e)[0] ?? null])) };
+  }
+  getLabHistory(experiment: LabExperiment) { return { experiment, runs: this.lab.history(experiment), schedule: this.labSchedule() }; }
+  async configureLab(raw: unknown) {
+    const settings = this.lab.configure(raw, labDate(Date.now()));
+    await this.reconcile();
+    return { ...settings, diagnostics: this.lab.diagnostics() };
+  }
+  labDiagnostics() { return { schedule: this.labSchedule(), ...this.lab.diagnostics() }; }
+  exportLab(date: string) { return this.lab.export(date); }
   exportEdition(id: string) {
     return { day: this.day(id), attempts: this.sql.exec('SELECT * FROM debate_attempts WHERE day=? ORDER BY started', id).toArray() };
   }
@@ -133,15 +179,52 @@ export class DebateForum extends DurableObject<Env> {
     const now = Date.now();
     const pending = this.sql.exec<Attempt>("SELECT * FROM debate_attempts WHERE state<>'applied' ORDER BY started LIMIT 1").toArray()[0];
     if (pending) { await this.wake(pending.state === 'result' ? now + 1000 : pending.deadline); return; }
+    const labPending = this.lab.pending();
+    if (labPending) { await this.wake(labPending.state === 'result' ? now + 1000 : labPending.deadline); return; }
     const date = new Date(now).toISOString().slice(0,10);
-    if (new Date(now).getUTCHours() < DAILY_HOUR_UTC) { await this.wake(nextEdition(now)); return; }
+    const labWake = (blocked: boolean) => blocked || !this.lab.settings().enabled ? Infinity : this.lab.wakeAt(labDate(now)) ?? Infinity;
+    if (new Date(now).getUTCHours() < DAILY_HOUR_UTC) { await this.wake(Math.min(nextEdition(now), labWake(false))); return; }
     for (const row of this.sql.exec<{body:string}>("SELECT body FROM debate_days WHERE id<? AND json_extract(body,'$.status') NOT IN ('complete','held')", date).toArray()) {
       const old = JSON.parse(row.body) as DailyRecord; old.status = 'held'; old.heldReason = 'edition_window_closed'; old.nextAttemptAt = null; this.save(old);
     }
     const day = this.day(date) ?? newDebate(date, this.settings().model, now);
     if (!this.day(date)) this.save(day);
-    if (day.phase === 'done' || day.status === 'held') await this.wake(nextEdition(now));
-    else await this.wake(day.nextAttemptAt ?? now + 1000);
+    // Lab runs for the new date are created here (never by a reader).
+    this.lab.closeBefore(date, now);
+    this.lab.ensure(date, this.settings().model, now, completed(day));
+    const debateWake = day.phase === 'done' || day.status === 'held' ? nextEdition(now) : day.nextAttemptAt ?? now + 1000;
+    await this.wake(Math.min(debateWake, labWake(debateBlocks(day, now))));
+  }
+  /** One Lab request, only when the debate does not need the slot. Returns
+   * false without dispatching when nothing is due or a guard applies. */
+  private async labStep(now: number, debate: DailyRecord | null): Promise<boolean> {
+    if (!this.lab.settings().enabled || debateBlocks(debate, now)) return false;
+    const date = labDate(now), next = this.lab.next(date, now);
+    if (!next) return false;
+    const { run, unitId } = next, model = run.model as GeminiModel, quotaDay = quotaDate(now);
+    // Keep the debate's full remaining attempt budget in reserve for today.
+    const reserve = debate && debate.phase !== 'done' && debate.status !== 'held'
+      ? Math.max(0, MAX_DAY_ATTEMPTS - this.sql.exec<{ count: number }>('SELECT COUNT(*) AS count FROM debate_attempts WHERE day=?', debate.id).one().count) : 0;
+    const minute = this.recentStarts(model, now);
+    if (this.usage(model, quotaDay) + reserve >= modelDailyCap(model) || minute.length >= 3) {
+      run.nextAttemptAt = minute.length >= 3 && this.usage(model, quotaDay) + reserve < modelDailyCap(model) ? minute[0]! + 61_000 : nextQuotaDay(now) + 1000;
+      run.reason = 'quota_wait'; this.lab.save(run); return false;
+    }
+    const unit = run.units.find(u => u.id === unitId)!;
+    const prompt = promptFor(run, unit, run.experiment === 'verdict' ? completed(this.day(run.date)) : null);
+    const digest = await digestOf(prompt);
+    if (run.reason === 'quota_wait') { run.reason = null; this.lab.save(run); }
+    const attempt = this.lab.reserve(run, unitId, quotaDay, now, prompt, digest);
+    await this.wake(attempt.deadline);
+    const result = await runGemini({ apiKey: this.env.GEMINI_API_KEY, prompt, model, timeoutMs: 150_000 });
+    this.lab.saveResult(attempt.id, result);
+    this.ctx.storage.transactionSync(() => this.lab.settle(attempt, result, Date.now()));
+    this.lab.retain(now);
+    await this.reconcile();
+    return true;
+  }
+  private settleLab(attempt: LabAttempt, now: number) {
+    this.ctx.storage.transactionSync(() => this.lab.settle(attempt, attempt.result ? JSON.parse(attempt.result) as GeminiResult : unknownResult(attempt.model), now));
   }
   private settle(attempt: Attempt, result: GeminiResult) {
     this.ctx.storage.transactionSync(() => {
@@ -164,21 +247,31 @@ export class DebateForum extends DurableObject<Env> {
       this.settle(pending, pending.result ? JSON.parse(pending.result) as GeminiResult : unknownResult(pending.model));
       await this.reconcile(); return;
     }
+    const labPending = this.lab.pending();
+    if (labPending) {
+      if (labPending.state === 'pending' && labPending.deadline > now) { await this.wake(labPending.deadline); return; }
+      // A crashed unknown outcome is charged as a timeout; a saved one is applied.
+      this.settleLab(labPending, now);
+      await this.reconcile(); return;
+    }
     const date = new Date(now).toISOString().slice(0,10);
     const day = this.day(date);
     if(day && day.protocol!==DAILY_PROTOCOL && day.phase!=='done'){day.status='held';day.heldReason='protocol_changed';day.nextAttemptAt=null;this.save(day);}
-    if (!day || day.phase === 'done' || day.status === 'held' || (day.nextAttemptAt ?? 0) > now) { await this.reconcile(); return; }
+    if (!day || day.phase === 'done' || day.status === 'held' || (day.nextAttemptAt ?? 0) > now) {
+      if (new Date(now).getUTCHours() >= DAILY_HOUR_UTC) this.lab.ensure(date, this.settings().model, now, completed(day));
+      if (await this.labStep(now, day)) return;
+      await this.reconcile(); return;
+    }
     const history = this.history(date);
     const task = nextDailyTask(day, history);
     if (!task) { await this.reconcile(); return; }
     const count = this.sql.exec<{ count: number }>('SELECT COUNT(*) AS count FROM debate_attempts WHERE day=?', date).one().count;
     if (count >= MAX_DAY_ATTEMPTS) { day.status = 'held'; day.heldReason = 'attempt_limit'; day.nextAttemptAt = null; this.save(day); await this.reconcile(); return; }
     const quotaDay = quotaDate(now);
-    const used = this.sql.exec<{ count: number }>('SELECT COUNT(*) AS count FROM debate_attempts WHERE model=? AND quota_day=?', day.model, quotaDay).one().count;
-    const external = this.sql.exec<{ count: number }>('SELECT count FROM debate_external_usage WHERE model=? AND date=?', day.model, quotaDay).toArray()[0]?.count ?? 0;
-    const minute = this.sql.exec<{ started: number }>('SELECT started FROM debate_attempts WHERE model=? AND started>? ORDER BY started', day.model, now - 60_000).toArray();
-    if (used + external >= modelDailyCap(day.model) || minute.length >= 3) {
-      day.nextAttemptAt = used + external >= modelDailyCap(day.model) ? nextQuotaDay(now) + 1000 : minute[0]!.started + 61_000;
+    const used = this.usage(day.model, quotaDay);
+    const minute = this.recentStarts(day.model, now);
+    if (used >= modelDailyCap(day.model) || minute.length >= 3) {
+      day.nextAttemptAt = used >= modelDailyCap(day.model) ? nextQuotaDay(now) + 1000 : minute[0]! + 61_000;
       day.status = 'delayed'; day.lastFailure = 'quota_wait'; this.save(day); await this.wake(day.nextAttemptAt); return;
     }
     // Synchronous reservation closes the crash and concurrent-alarm quota window.
