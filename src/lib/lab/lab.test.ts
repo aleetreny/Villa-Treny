@@ -3,7 +3,7 @@ import { CHARACTER_IDS, type CharacterId } from '../debate/characters';
 import { binomialPmf, binomialTest, rate, rateReading, wilson } from './stats';
 import { headToHead, tally, verdict } from './verdict';
 import { FALLBACK_TEMPLATES, SCENARIOS, acceptable, culpritFor, dayNumber, generatePuzzle, rng, shuffle, solve, solveStatements } from './mystery';
-import { ballotIssues, companionIssues, type Ballot, type LabRun, type LabUnit } from './contracts';
+import { acceptedOutput, ballotIssues, companionIssues, type Ballot, type LabRun, type LabUnit } from './contracts';
 import { MUTUAL_BASELINE, PAIR_BASELINE, PICK_BASELINE, coinSummary, companionSummary, mysterySummary, verdictSummary } from './aggregate';
 
 const dates = (from: string, count: number) => Array.from({ length: count }, (_, i) => new Date(Date.parse(from + 'T12:00:00Z') + i * 86_400_000).toISOString().slice(0, 10));
@@ -44,7 +44,9 @@ describe('the verdict', () => {
     expect(ballotIssues('A', { ranking: ['B', 'B', 'D', 'E', 'F'], reason: 'Bex was clearest.' })).toEqual(['duplicate_ranking']);
     expect(ballotIssues('A', { ranking: ['B', 'C', 'D', 'E'], reason: 'Bex was clearest.' })).toEqual(['ballot_schema']);
     expect(ballotIssues('A', { ranking: ['B', 'C', 'D', 'E', 'G'], reason: 'Bex was clearest.' })).toEqual(['ballot_schema']);
-    expect(ballotIssues('A', { ranking: ['B', 'C', 'D', 'E', 'F'] })).toEqual(['ballot_schema']);
+    // A missing or empty note never invalidates a complete, valid ranking.
+    expect(ballotIssues('A', { ranking: ['B', 'C', 'D', 'E', 'F'] })).toEqual([]);
+    expect(ballotIssues('A', { ranking: ['B', 'C', 'D', 'E', 'F'], reason: '' })).toEqual([]);
   });
   it('totals Borda points and needs all six ballots', () => {
     const ballots = cyclic();
@@ -185,6 +187,11 @@ describe('aggregation', () => {
     expect(companionIssues('A', { choices: ['A', 'B'], reason: 'Fixture.' })).toEqual(['self_selection']);
     expect(companionIssues('A', { choices: ['B', 'B'], reason: 'Fixture.' })).toEqual(['duplicate_choice']);
     expect(companionIssues('A', { choices: ['B'], reason: 'Fixture.' })).toEqual(['companion_schema']);
+    // Regression from production (18 October): valid choices with an empty reason.
+    expect(companionIssues('C', { choices: ['B', 'D'], reason: '' })).toEqual([]);
+    expect(acceptedOutput('companions', 'C', { choices: ['B', 'D'], reason: '' })).toEqual({ choices: ['B', 'D'], reason: '' });
+    expect(acceptedOutput('mystery', 'A', { culprit: 'B', explanation: '', confidence: 80 })).toMatchObject({ culprit: 'B', confidence: 80 });
+    expect(() => acceptedOutput('mystery', 'A', { culprit: 'B', explanation: 'x', confidence: 101 })).toThrow();
   });
   it('summarises mystery accuracy, calibration and own-guilt cases', () => {
     const puzzle = generatePuzzle('2026-10-18'), culprit = puzzle.culprit, wrong = others(culprit)[0]!;

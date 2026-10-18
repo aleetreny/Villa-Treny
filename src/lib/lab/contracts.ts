@@ -54,9 +54,25 @@ export type Ballot = { ranking: CharacterId[]; reason: string };
 export type CompanionChoice = { choices: CharacterId[]; reason: string };
 export type MysteryAnswer = z.infer<typeof mysteryAnswerSchema>;
 
+
+/* Acceptance is checked on the measured fields only. The schemas above are
+ * what the model is asked for; a missing or short free-text note does not
+ * invalidate an otherwise valid choice, because rejecting it would select
+ * which choices get recorded. */
+const note = (max: number) => z.string().max(max).catch('');
+const acceptedBallotFor = (voter: CharacterId) => z.object({ ranking: z.array(z.enum(others(voter))).length(5), reason: note(400) });
+const acceptedCompanionFor = (selector: CharacterId) => z.object({ choices: z.array(z.enum(others(selector))).length(2), reason: note(400) });
+export const mysteryAcceptedSchema = z.object({ culprit: id, explanation: note(600), confidence: z.number().int().min(0).max(100) });
+/** The stored output for an accepted answer, with notes normalised to strings. */
+export function acceptedOutput(experiment: 'verdict' | 'companions' | 'mystery' | 'coin', resident: CharacterId, value: unknown): unknown {
+  if (experiment === 'verdict') return acceptedBallotFor(resident).parse(value);
+  if (experiment === 'companions') return acceptedCompanionFor(resident).parse(value);
+  if (experiment === 'mystery') return mysteryAcceptedSchema.parse(value);
+  return coinOutputSchema.parse(value);
+}
 /** Server-side ballot validation independent of the structured-output schema. */
 export function ballotIssues(voter: CharacterId, value: unknown): string[] {
-  const parsed = ballotSchemaFor(voter).safeParse(value);
+  const parsed = acceptedBallotFor(voter).safeParse(value);
   if (!parsed.success) {
     const raw = value as { ranking?: unknown };
     if (Array.isArray(raw?.ranking) && raw.ranking.includes(voter)) return ['self_vote'];
@@ -67,7 +83,7 @@ export function ballotIssues(voter: CharacterId, value: unknown): string[] {
   return [];
 }
 export function companionIssues(selector: CharacterId, value: unknown): string[] {
-  const parsed = companionSchemaFor(selector).safeParse(value);
+  const parsed = acceptedCompanionFor(selector).safeParse(value);
   if (!parsed.success) {
     const raw = value as { choices?: unknown };
     if (Array.isArray(raw?.choices) && raw.choices.includes(selector)) return ['self_selection'];

@@ -3,7 +3,7 @@ import { Portrait } from '../desk/habitat/Portrait';
 import { CHARACTER_IDS, type CharacterId } from '../../lib/debate/characters';
 import { useHistory, useLabDay } from '../../lib/lab/client';
 import { GUESS_BASELINE, mysterySummary } from '../../lib/lab/aggregate';
-import { mysteryAnswerSchema, puzzleSchema, type LabRun, type Puzzle } from '../../lib/lab/contracts';
+import { mysteryAcceptedSchema, puzzleSchema, type LabRun, type Puzzle } from '../../lib/lab/contracts';
 import { percent } from '../../lib/lab/stats';
 import { RateRows } from './charts';
 import { Availability, DateNav, ErrorNotice, LabHeader, Loading, Method, SampleNote, dateLabel, given, selectedDate } from './shared';
@@ -75,12 +75,12 @@ function Game({ run, puzzle }: { run: LabRun; puzzle: Puzzle }) {
   </div>;
 }
 function Predictions({ run, puzzle }: { run: LabRun; puzzle: Puzzle }) {
-  const right = run.units.filter(u => mysteryAnswerSchema.safeParse(u.output).data?.culprit === puzzle.culprit).length;
+  const right = run.units.filter(u => mysteryAcceptedSchema.safeParse(u.output).data?.culprit === puzzle.culprit).length;
   const answered = run.units.filter(u => u.status === 'accepted').length;
   return <div>
     <h3>How the residents reasoned</h3>
     <p className="lab-muted">{answered ? `${right} of ${answered} residents named ${given(puzzle.culprit)}.` : 'The residents have not answered yet.'} Each answered alone, without seeing the others.</p>
-    <ul className="lab-predictions">{run.units.map(u => { const a = mysteryAnswerSchema.safeParse(u.output); const self = u.resident === puzzle.culprit;
+    <ul className="lab-predictions">{run.units.map(u => { const a = mysteryAcceptedSchema.safeParse(u.output); const self = u.resident === puzzle.culprit;
       return <li key={u.id} className={a.success ? a.data.culprit === puzzle.culprit ? 'is-right' : 'is-wrong' : 'is-missing'}>
         <Portrait id={u.resident} scale={2}/>
         <div><p><strong>{given(u.resident)}</strong>{self ? <span className="lab-tag">the culprit</span> : null}

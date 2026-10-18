@@ -1,5 +1,5 @@
 import { CHARACTER_IDS, type CharacterId } from '../debate/characters';
-import { coinOutputSchema, companionInputSchema, mysteryAnswerSchema, puzzleSchema, verdictInputSchema, verdictResultSchema,
+import { coinOutputSchema, companionInputSchema, mysteryAcceptedSchema, puzzleSchema, verdictInputSchema, verdictResultSchema,
   type Ballot, type CoinCondition, type LabRun, type Puzzle, type VerdictResult } from './contracts';
 import { rate, wilson, binomialTest, type Rate } from './stats';
 
@@ -151,7 +151,7 @@ export function predictions(runs: LabRun[]): MysteryPrediction[] {
     const puzzle = puzzleSchema.safeParse(run.input);
     if (!puzzle.success) return [];
     return run.units.flatMap(u => {
-      const answer = u.status === 'accepted' ? mysteryAnswerSchema.safeParse(u.output) : null;
+      const answer = u.status === 'accepted' ? mysteryAcceptedSchema.safeParse(u.output) : null;
       if (!answer?.success) return [];
       return [{ date: run.date, resident: u.resident, culprit: puzzle.data.culprit, guess: answer.data.culprit, correct: answer.data.culprit === puzzle.data.culprit,
         confidence: answer.data.confidence, explanation: answer.data.explanation, ownGuilt: puzzle.data.culprit === u.resident,

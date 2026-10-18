@@ -1,6 +1,6 @@
 import { CHARACTER_IDS, type CharacterId } from '../../../../src/lib/debate/characters';
 import { CONVERSATION_TURNS, type DailyCase, type DailyPost } from '../../../../src/lib/debate/contracts';
-import { BORDA_METHOD, LAB_PROTOCOLS, ballotIssues, coinOutputSchema, companionInputSchema, companionIssues, mysteryAnswerSchema, puzzleSchema, verdictInputSchema,
+import { BORDA_METHOD, LAB_PROTOCOLS, ballotIssues, coinOutputSchema, companionInputSchema, companionIssues, mysteryAcceptedSchema, acceptedOutput, puzzleSchema, verdictInputSchema,
   type Ballot, type LabExperiment, type LabRun, type LabUnit, type Receipt, type RunStatus } from '../../../../src/lib/lab/contracts';
 import { dayNumber, generatePuzzle, rng, seedOf, shuffle, solveStatements } from '../../../../src/lib/lab/mystery';
 import { verdict } from '../../../../src/lib/lab/verdict';
@@ -67,7 +67,7 @@ export function validate(run: LabRun, u: LabUnit, payload: unknown): string[] {
   if (run.experiment === 'verdict') return ballotIssues(u.resident, payload);
   if (run.experiment === 'companions') return companionIssues(u.resident, payload);
   if (run.experiment === 'coin') return coinOutputSchema.safeParse(payload).success ? [] : ['coin_schema'];
-  return mysteryAnswerSchema.safeParse(payload).success ? [] : ['mystery_schema'];
+  return mysteryAcceptedSchema.safeParse(payload).success ? [] : ['mystery_schema'];
 }
 /** Coin answers are observations: an invalid answer is recorded, never retried
  * or replaced. Other experiments may retry invalid structure within budget. */
@@ -101,7 +101,7 @@ export function applyLabResult(before: LabRun, unitId: string, attemptId: string
   run.updatedAt = now;
   let reason: string | null = null;
   if (run.reason === 'quota_wait') run.reason = null;
-  if (!issues.length) { u.status = 'accepted'; u.output = result.payload; run.nextAttemptAt = now + 1_000; }
+  if (!issues.length) { u.status = 'accepted'; u.output = acceptedOutput(run.experiment, u.resident, result.payload) as LabUnit['output']; run.nextAttemptAt = now + 1_000; }
   else if (result.ok || CONTENT_CODES.includes(result.code)) {
     // The model answered, but not validly.
     if (!retriesInvalid(run.experiment) || u.attempts >= UNIT_ATTEMPT_CAP) u.status = 'invalid';
