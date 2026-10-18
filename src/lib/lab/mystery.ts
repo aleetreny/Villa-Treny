@@ -126,7 +126,7 @@ function explain(shapes: Shape[], roles: readonly CharacterId[], texts: string[]
   for (const candidate of [1, 2, 3, 4, 5].sort((a, b) => CHARACTER_IDS.indexOf(roles[a]!) - CHARACTER_IDS.indexOf(roles[b]!))) {
     const broken = shapes.find(s => s.speaker === candidate && truthSet(s).includes(candidate))
       ?? shapes.find(s => truthSet(s).includes(candidate) !== (s.speaker !== candidate))!;
-    const who = GIVEN[roles[candidate]!], speaker = GIVEN[roles[broken.speaker]!], said = texts[broken.speaker]!;
+    const who = GIVEN[roles[candidate]!], speaker = GIVEN[roles[broken.speaker]!], said = texts[broken.speaker]!.replace(/\.$/, '');
     lines.push(broken.speaker === candidate
       ? `Not ${who}: ${who}’s own statement, “${said}”, would then be true, but the responsible resident’s statement must be false.`
       : `Not ${who}: ${speaker}’s statement, “${said}”, would then be false, though ${speaker} would be innocent.`);

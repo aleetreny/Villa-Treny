@@ -94,8 +94,9 @@ test('built observer and canonical API share one offline Worker', async (t) => {
         [javascript, await readFile(join(assetRoot, javascript)), 'javascript'],
         [`/${png}`, await readFile(join(assetRoot, png)), 'image/png'],
         ['/observer/common', html, 'text/html'],
+        ['/lab/companions', html, 'text/html'],
       ]) {
-        const response = await request(path, path === '/' || path.startsWith('/observer/'));
+        const response = await request(path, path === '/' || path.startsWith('/observer/') || path.startsWith('/lab/'));
         assert.equal(response.status, 200, path);
         assert.ok(response.headers.get('content-type')?.includes(contentType), path);
         assert.equal(response.headers.has('x-hosting-test-user-worker'), false, path);
@@ -129,6 +130,13 @@ test('built observer and canonical API share one offline Worker', async (t) => {
       const missing=await request('/v1/debates/2026-09-09',true);assert.equal(missing.status,404);assert.equal((await missing.json()).error.code,'edition_not_found');
     });
 
+    await t.test('Lab APIs are JSON, read-only and disabled by default', async () => {
+      const overview=await request('/v1/lab',true);assert.equal(overview.status,200);assert.equal((await overview.json()).schedule.enabled,false);
+      const coin=await request('/v1/lab/coin/2026-10-18',true);assert.equal(coin.status,200);assert.equal((await coin.json()).availability,'not_recorded');
+      const write=await mf.dispatchFetch('https://hosting.invalid/v1/lab/coin',{method:'POST'});assert.equal(write.status,405);
+      assert.equal(outboundAttempts,0);
+    });
+
     await t.test('reserved API roots and descendants keep their JSON 404', async () => {
       for (const path of ['/v1', '/v1/unknown', '/v1/unknown/child', '/health/', '/health/unknown']) {
         const response = await request(path, true);
@@ -152,9 +160,9 @@ test('built observer and canonical API share one offline Worker', async (t) => {
       assert.equal(finalStatus.worldRevision, firstStatus.worldRevision);
       assert.equal(finalStatus.nextWatchAtMs, firstStatus.nextWatchAtMs);
       assert.equal(outboundAttempts, 0);
-      assert.equal(userInvocations, 12);
+      assert.equal(userInvocations, 15);
     });
-    t.diagnostic('Actual dry-run bundle; 4 asset routes bypassed the user Worker; 12 API invocations including writings and daily debates; 0 external requests.');
+    t.diagnostic('Actual dry-run bundle; 5 asset routes bypassed the user Worker; 15 API invocations including writings, daily debates and the Lab; 0 external requests.');
   } finally {
     await mf.dispose();
   }

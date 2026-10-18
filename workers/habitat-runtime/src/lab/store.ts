@@ -65,7 +65,9 @@ export class LabStore {
   ensure(date: string, model: GeminiModel, now: number, debate: CompletedDebate | null) {
     const s = this.settings();
     if (!s.enabled || !s.activatedOn || date < s.activatedOn) return;
-    const create = (id: string, make: () => LabRun) => { if (!this.run(id)) this.save(make()); };
+    // A failed run construction (e.g. a puzzle that fails its independent
+    // check) skips that experiment; it must never block the debate's alarm.
+    const create = (id: string, make: () => LabRun) => { if (this.run(id)) return; try { this.save(make()); } catch (error) { console.error('lab_run_not_created', id, error instanceof Error ? error.message : 'unknown'); } };
     create(date + '/coin', () => newCoinRun(date, model, now));
     create(date + '/companions', () => newCompanionRun(date, model, now));
     create(date + '/mystery', () => newMysteryRun(date, model, now));

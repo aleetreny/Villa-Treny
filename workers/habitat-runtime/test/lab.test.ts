@@ -8,14 +8,19 @@ import { COIN_INSTRUCTION, coinPrompt } from '../src/lab/prompts';
 import { runGemini, type GeminiPrompt, type GeminiResult } from '../src/providers/gemini';
 import { generatePuzzle } from '../../../src/lib/lab/mystery';
 import { CHARACTER_IDS, type CharacterId } from '../../../src/lib/debate/characters';
-import type { LabRun } from '../../../src/lib/lab/contracts';
+import type { LabDay, LabExperiment, LabHistory, LabOverview, LabRun } from '../../../src/lib/lab/contracts';
 import { completedConversation, successful } from './fixtures/daily';
 
 vi.mock('../src/providers/gemini', async original => ({ ...await original<typeof import('../src/providers/gemini')>(), runGemini: vi.fn() }));
 beforeEach(() => vi.clearAllMocks());
 afterEach(() => vi.restoreAllMocks());
 
-const stub = () => env.DEBATE_FORUM.getByName('lab-' + crypto.randomUUID());
+/** RPC typings collapse the Lab's open JSON fields; the values themselves are plain data. */
+type LabReads = { getLabOverview(): Promise<LabOverview>; getLabDay(e: LabExperiment, d: string): Promise<LabDay>; getLabHistory(e: LabExperiment): Promise<LabHistory>;
+  exportLab(d: string): Promise<{ runs: LabRun[]; attempts: unknown[] }>; configureLab(raw: unknown): Promise<unknown> };
+type Forum = Omit<DurableObjectStub<DebateForum>, keyof LabReads> & LabReads;
+const typed = (s: DurableObjectStub<DebateForum>) => s as unknown as Forum & DurableObjectStub<DebateForum>;
+const stub = () => typed(env.DEBATE_FORUM.getByName('lab-' + crypto.randomUUID()));
 // Workerd fires native alarms on wall time; keep test time in the future and consume alarms explicitly.
 const futureTime = (hour = 10) => { const d = new Date(); d.setUTCDate(d.getUTCDate() + 2); d.setUTCHours(hour, 0, 0, 0); return +d; };
 const seedDebate = (s: DurableObjectStub<DebateForum>, day: ReturnType<typeof completedConversation>) =>
@@ -33,7 +38,7 @@ function answer(prompt: GeminiPrompt, coins: string[] = []): unknown {
   throw new Error('Unexpected prompt ' + user.protocol);
 }
 const kindOf = (prompt: GeminiPrompt) => prompt.user === COIN_INSTRUCTION ? 'coin' : (JSON.parse(prompt.user) as { protocol: string }).protocol;
-async function drain(s: DurableObjectStub<DebateForum>, clock: { now: number }, calls: Call[], limit = 80) {
+async function drain(s: Forum & DurableObjectStub<DebateForum>, clock: { now: number }, calls: Call[], limit = 80) {
   for (let i = 0; i < limit; i++) {
     clock.now += 61_000;
     const alarm = (await s.diagnostics()).nextAlarmAt;
@@ -49,7 +54,7 @@ function mockModel(calls: Call[], coins: string[] = []) {
 
 describe('the Lab', () => {
   it('serves read-only routes that never create runs or call the model', async () => {
-    const s = env.DEBATE_FORUM.getByName('villa-treny-daily-v1');
+    const s = typed(env.DEBATE_FORUM.getByName('villa-treny-daily-v1'));
     for (const path of ['/v1/lab', '/v1/lab/coin', '/v1/lab/companions', '/v1/lab/mystery', '/v1/lab/verdict', '/v1/lab/coin/2026-10-18', '/v1/lab/verdict/2026-09-20']) {
       const response = await labHttp(new Request('https://lab.test' + path), env);
       expect(response?.status, path).toBe(200);

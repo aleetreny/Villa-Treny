@@ -6,6 +6,8 @@
 
 Six fictional residents encounter an unusual hypothetical situation and talk it through in nine short turns. Each contribution responds to the conversation so far. The reader can expand the board, revisit two linked highlights, recommend an edition as **worth reading**, or visit the residents in their pixel-art habitat.
 
+After each debate, the residents act as a jury and rank one another's arguments. **The Lab** (`/lab`) adds three more daily experiments: a coin toss, a choice of two companions for a walk, and a programmatically verified logic mystery. See [docs/lab.md](docs/lab.md).
+
 ![The daily board, showing the first published discussion](docs/images/daily-board.png)
 
 ## The daily edition
@@ -129,6 +131,7 @@ For an actual trial, put `GEMINI_API_KEY` in the ignored `.env.gemini.local`. Pr
 - [Responsive interface review](docs/responsive-review.md): resolved defects, browser coverage and remaining limits.
 - [Current release verification and delivery status](docs/release-validation.md).
 - [Project introduction and resident-card review](docs/profile-about-review.md): responsive layout, navigation and browser coverage.
+- [The Lab: four daily experiments, methods, budget and operations](docs/lab.md).
 - [Publishing and operating the public site](docs/releasing.md): automatic releases, daily updates, credentials, recovery and troubleshooting.
 - [Daily forum architecture](docs/daily-forum.md): editorial protocol, budgets, durability and protected administration.
 - [Production acceptance review](docs/daily-forum-review.md): actual results and remaining model limitations.
