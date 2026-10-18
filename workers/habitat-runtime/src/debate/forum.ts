@@ -206,10 +206,9 @@ export class DebateForum extends DurableObject<Env> {
     const reserve = debate && debate.phase !== 'done' && debate.status !== 'held'
       ? Math.max(0, MAX_DAY_ATTEMPTS - this.sql.exec<{ count: number }>('SELECT COUNT(*) AS count FROM debate_attempts WHERE day=?', debate.id).one().count) : 0;
     const minute = this.recentStarts(model, now);
-    if (this.usage(model, quotaDay) + reserve >= modelDailyCap(model) || minute.length >= 3) {
-      run.nextAttemptAt = minute.length >= 3 && this.usage(model, quotaDay) + reserve < modelDailyCap(model) ? minute[0]! + 61_000 : nextQuotaDay(now) + 1000;
-      run.reason = 'quota_wait'; this.lab.save(run); return false;
-    }
+    // Daily capacity is a public, explained wait; per-minute pacing is routine.
+    if (this.usage(model, quotaDay) + reserve >= modelDailyCap(model)) { run.nextAttemptAt = nextQuotaDay(now) + 1000; run.reason = 'quota_wait'; this.lab.save(run); return false; }
+    if (minute.length >= 3) { run.nextAttemptAt = minute[0]! + 61_000; this.lab.save(run); return false; }
     const unit = run.units.find(u => u.id === unitId)!;
     const prompt = promptFor(run, unit, run.experiment === 'verdict' ? completed(this.day(run.date)) : null);
     const digest = await digestOf(prompt);

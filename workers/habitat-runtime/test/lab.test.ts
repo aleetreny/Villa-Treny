@@ -88,6 +88,8 @@ describe('the Lab', () => {
     await drain(s, clock, calls);
     const overview = await s.getLabOverview();
     expect(Object.values(overview.today).map(d => d.run?.status)).toEqual(['complete', 'complete', 'complete', 'complete']);
+    // Routine per-minute pacing is not reported as a capacity problem.
+    expect(Object.values(overview.today).map(d => d.run?.reason)).toEqual([null, null, null, null]);
     // 6 ballots + 12 coins + 6 companion choices + 6 mystery answers.
     expect(calls).toHaveLength(30);
     expect(calls.slice(0, 6).every(c => c.kind === 'lab-verdict-v1')).toBe(true);

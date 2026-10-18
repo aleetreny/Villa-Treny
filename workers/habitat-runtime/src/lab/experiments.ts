@@ -80,7 +80,8 @@ function finish(run: LabRun, reason: string | null) {
   run.status = status;
   if (status !== 'running') {
     run.nextAttemptAt = null;
-    run.reason = reason ?? run.reason;
+    // A transient capacity wait never becomes a finished run's explanation.
+    run.reason = reason ?? (run.reason === 'quota_wait' ? null : run.reason);
     if (run.experiment === 'verdict') run.result = verdict(ballotsOf(run) as Partial<Record<CharacterId, Ballot>>);
   }
 }
@@ -99,6 +100,7 @@ export function applyLabResult(before: LabRun, unitId: string, attemptId: string
   u.receipts.push(receipt);
   run.updatedAt = now;
   let reason: string | null = null;
+  if (run.reason === 'quota_wait') run.reason = null;
   if (!issues.length) { u.status = 'accepted'; u.output = result.payload; run.nextAttemptAt = now + 1_000; }
   else if (result.ok || CONTENT_CODES.includes(result.code)) {
     // The model answered, but not validly.
