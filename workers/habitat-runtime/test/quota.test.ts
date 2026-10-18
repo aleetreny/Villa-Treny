@@ -120,7 +120,8 @@ describe('real SQL quota ledger', () => {
       expect(ledger.reserve('1001', 'groq', maximum(1, 0), NOW + 1_000 * 61_000)).toMatchObject({ allowed: false, limit: 'day-requests', retryAtMs: NOW + DAY });
       expect(ledger.reserve('1001', 'groq', maximum(1, 0), NOW + DAY)).toEqual({ allowed: true });
     });
-  });
+    // A thousand real SQL dispatches: about 1 s locally, near 5 s on shared CI runners.
+  }, 30_000);
 
   it('admits the verified 200000-token rolling day and rejects its first excess token', async () => {
     await withLedger('tpd', (ledger) => {
