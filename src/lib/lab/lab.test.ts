@@ -4,7 +4,7 @@ import { binomialPmf, binomialTest, rate, rateReading, wilson } from './stats';
 import { headToHead, tally, verdict } from './verdict';
 import { FALLBACK_TEMPLATES, SCENARIOS, acceptable, culpritFor, dayNumber, generatePuzzle, rng, shuffle, solve, solveStatements } from './mystery';
 import { acceptedOutput, ballotIssues, companionIssues, type Ballot, type LabRun, type LabUnit } from './contracts';
-import { MUTUAL_BASELINE, PAIR_BASELINE, PICK_BASELINE, coinSummary, companionSummary, mysterySummary, verdictSummary } from './aggregate';
+import { MUTUAL_BASELINE, PAIR_BASELINE, PICK_BASELINE, coinOrder, coinSummary, companionSummary, mysterySummary, verdictSummary } from './aggregate';
 
 const dates = (from: string, count: number) => Array.from({ length: count }, (_, i) => new Date(Date.parse(from + 'T12:00:00Z') + i * 86_400_000).toISOString().slice(0, 10));
 const others = (id: CharacterId) => CHARACTER_IDS.filter(o => o !== id);
@@ -199,9 +199,56 @@ describe('aggregation', () => {
     const s = mysterySummary([run('mystery', '2026-10-18', units, puzzle)]);
     expect(s.answers).toBe(6); expect(s.accuracy.count).toBe(3);
     expect(s.accuracy.brier).toBeCloseTo((3 * 0.01 + 3 * 0.36) / 6, 10);
-    expect(s.falseAccusations[wrong]).toBe(3);
+    // Puzzle culprit D; A–C name D, D–F name A.
+    expect(culprit).toBe('D'); expect(wrong).toBe('A');
+    expect(s.accusedByOthers.A).toBe(3); expect(s.falseSelfAccusations.A).toBe(0);
+    expect(s.selfAccusation.whenGuilty).toMatchObject({ count: 0, opportunities: 1 });
+    expect(s.selfAccusation.whenInnocent).toMatchObject({ count: 0, opportunities: 5 });
+    expect(s.overconfidence).toBeCloseTo(0.75 - 0.5, 10);
     expect(s.byResident[culprit].whenGuilty.opportunities).toBe(1);
     expect(s.calibration.find(b => b.range[0] === 90)).toMatchObject({ n: 3, accuracy: 1 });
+  });
+  it('separates wrong self-accusations from accusations by others (production regression, 19 October)', () => {
+    const puzzle = generatePuzzle('2026-10-19');
+    expect(puzzle.culprit).toBe('A');
+    const guesses: Record<CharacterId, CharacterId> = { A: 'A', B: 'E', C: 'A', D: 'A', E: 'E', F: 'A' };
+    const s = mysterySummary([run('mystery', '2026-10-19', CHARACTER_IDS.map(id => u(id, id, { culprit: guesses[id], explanation: '', confidence: 100 })), puzzle)]);
+    expect(s.accusedByOthers.E).toBe(1); expect(s.falseSelfAccusations.E).toBe(1);
+    expect(s.selfAccusation.whenGuilty).toMatchObject({ count: 1, opportunities: 1 });
+    expect(s.selfAccusation.whenInnocent).toMatchObject({ count: 1, opportunities: 5 });
+    expect(s.overconfidence).toBeCloseTo(1 - 4 / 6, 10);
+  });
+  it('compares heads-first and tails-first requests only on paired days', () => {
+    const coinUnits = (neutral: string[], reversed: string[]) => [
+      ...neutral.map((r, i) => u('neutral-' + (i + 1), CHARACTER_IDS[i]!, { result: r }, 'accepted', 'neutral')),
+      ...reversed.map((r, i) => u('reversed-' + (i + 1), CHARACTER_IDS[i]!, { result: r }, 'accepted', 'reversed'))];
+    const old = run('coin', '2026-10-19', coinUnits(Array(6).fill('heads'), []));
+    const paired = run('coin', '2026-10-20', coinUnits(['heads', 'heads', 'heads', 'heads', 'heads', 'tails'], ['tails', 'tails', 'tails', 'tails', 'heads', 'heads']));
+    const o = coinOrder([old, paired]);
+    expect(o.days).toBe(1);
+    expect(o.headsFirst).toMatchObject({ count: 5, opportunities: 6 });
+    expect(o.tailsFirst).toMatchObject({ count: 2, opportunities: 6 });
+    // First-listed: 5 heads (neutral) + 4 tails (reversed) of 12.
+    expect(o.firstListed).toMatchObject({ count: 9, opportunities: 12, baseline: 0.5 });
+    expect(o.balancedHeads).toBeCloseTo((5 / 6 + 2 / 6) / 2, 10);
+    expect(coinOrder([old]).days).toBe(0);
+  });
+  it('compares invitations and points with what list position alone predicts', () => {
+    const random = rng(9);
+    const runs = dates('2026-10-20', 40).map(date => {
+      const orders = Object.fromEntries(CHARACTER_IDS.map(id => [id, shuffle(others(id), random)])) as Record<CharacterId, CharacterId[]>;
+      // A pure position effect: everyone picks the first two listed.
+      return run('companions', date, CHARACTER_IDS.map(id => u(id, id, { choices: orders[id].slice(0, 2), reason: '' })), { scenarioVersion: 'v', scenario: 's', candidateOrders: orders });
+    });
+    const s = companionSummary(runs);
+    expect(s.positions.map(p => p.rate)).toEqual([1, 1, 0, 0, 0]);
+    for (const id of CHARACTER_IDS) expect(s.adjusted[id].ratio).toBeCloseTo(1, 10);
+    expect(CHARACTER_IDS.reduce((n, id) => n + s.adjusted[id].expected, 0)).toBeCloseTo(2 * s.decisions, 10);
+    const ballots = runs.map(r => run('verdict', r.date, CHARACTER_IDS.map(id => u(id, id, { ranking: (r.input as { candidateOrders: Record<CharacterId, CharacterId[]> }).candidateOrders[id], reason: '' })),
+      { debateId: r.date, debateProtocol: 'villa-debate-v6', method: 'borda-5-4-3-2-1-v1', participation: {}, firstTurn: {}, candidateOrders: (r.input as { candidateOrders: unknown }).candidateOrders }));
+    const v = verdictSummary(ballots);
+    expect(v.slots.map(x => x.mean)).toEqual([5, 4, 3, 2, 1]);
+    for (const id of CHARACTER_IDS) expect(v.adjusted[id].ratio).toBeCloseTo(1, 10);
   });
   it('summarises verdict wins, average points and the affinity matrix', () => {
     const ballots = cyclic(); ballots.A = { reason: 'Swap.', ranking: ['C', 'B', 'D', 'E', 'F'] };

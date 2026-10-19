@@ -41,6 +41,21 @@ export function coinSummary(runs: LabRun[], condition: CoinCondition): CoinSumma
     proportion: valid ? heads / valid : null, interval: wilson(heads, valid), pValue: binomialTest(heads, valid, 0.5), byResident };
 }
 
+/** Label order: compares heads-first (neutral) with tails-first (reversed)
+ * answers on the days both were asked. A preference for the first-listed
+ * label and a preference for heads are then separable. */
+export type CoinOrder = { days: number; headsFirst: Rate; tailsFirst: Rate; firstListed: Rate; balancedHeads: number | null };
+export function coinOrder(runs: LabRun[]): CoinOrder {
+  const paired = runs.filter(r => r.units.some(u => u.condition === 'reversed'));
+  const n = paired.map(r => coinDay(r, 'neutral')), v = paired.map(r => coinDay(r, 'reversed'));
+  const sum = (xs: CoinDay[], k: 'heads' | 'tails') => xs.reduce((a, d) => a + d[k], 0);
+  const nValid = sum(n, 'heads') + sum(n, 'tails'), vValid = sum(v, 'heads') + sum(v, 'tails');
+  const headsFirst = rate(sum(n, 'heads'), nValid, 0.5), tailsFirst = rate(sum(v, 'heads'), vValid, 0.5);
+  return { days: paired.length, headsFirst, tailsFirst,
+    firstListed: rate(sum(n, 'heads') + sum(v, 'tails'), nValid + vValid, 0.5),
+    balancedHeads: headsFirst.rate !== null && tailsFirst.rate !== null ? (headsFirst.rate + tailsFirst.rate) / 2 : null };
+}
+
 /* ---------------- Companions ---------------- */
 export const PICK_BASELINE = 2 / 5;
 export const PAIR_BASELINE = 1 / 10;
@@ -65,6 +80,8 @@ export type CompanionSummary = {
   pairs: { pair: string; members: [CharacterId, CharacterId]; value: Rate }[];
   mutual: { pair: string; members: [CharacterId, CharacterId]; value: Rate }[];
   positions: Rate[];
+  /** Invitations received compared with what list position alone predicts. */
+  adjusted: Record<CharacterId, { observed: number; expected: number; ratio: number | null }>;
 };
 export function companionSummary(runs: LabRun[]): CompanionSummary {
   const list = decisions(runs);
@@ -95,7 +112,15 @@ export function companionSummary(runs: LabRun[]): CompanionSummary {
   });
   pairs.sort((x, y) => y.value.count - x.value.count || x.pair.localeCompare(y.pair));
   mutual.sort((x, y) => y.value.count - x.value.count || x.pair.localeCompare(y.pair));
-  return { decisions: list.length, selected, matrix, decisionsBy, pairs, mutual, positions };
+  // Indirect standardisation: each opportunity contributes the observed
+  // selection rate of the slot in which the resident was listed.
+  const adjusted = Object.fromEntries(CHARACTER_IDS.map(t => {
+    const chances = list.filter(d => d.selector !== t);
+    const expected = chances.reduce((n, d) => { const slot = d.order.indexOf(t); return n + (slot >= 0 ? positions[slot]!.rate ?? PICK_BASELINE : PICK_BASELINE); }, 0);
+    const observed = chances.filter(d => d.choices.includes(t)).length;
+    return [t, { observed, expected, ratio: expected ? observed / expected : null }];
+  })) as CompanionSummary['adjusted'];
+  return { decisions: list.length, selected, matrix, decisionsBy, pairs, mutual, positions, adjusted };
 }
 
 /* ---------------- Verdict ---------------- */
@@ -113,6 +138,10 @@ export type VerdictSummary = {
   affinity: Record<CharacterId, Record<CharacterId, { mean: number | null; ballots: number }>>;
   timeline: { date: string; points: Record<CharacterId, number>; rank: Record<CharacterId, number>; winners: CharacterId[] }[];
   participation: { twice: { points: number; n: number }; once: { points: number; n: number } };
+  /** Average points given to the candidate listed in each slot (uniform: 3). */
+  slots: { mean: number | null; n: number }[];
+  /** Points received compared with what display slot alone predicts. */
+  adjusted: Record<CharacterId, { observed: number; expected: number; ratio: number | null }>;
 };
 export function verdictSummary(runs: LabRun[]): VerdictSummary {
   const zero = () => Object.fromEntries(CHARACTER_IDS.map(id => [id, 0])) as Record<CharacterId, number>;
@@ -120,10 +149,14 @@ export function verdictSummary(runs: LabRun[]): VerdictSummary {
   const sums = Object.fromEntries(CHARACTER_IDS.map(v => [v, Object.fromEntries(CHARACTER_IDS.map(c => [c, { sum: 0, n: 0 }]))])) as Record<CharacterId, Record<CharacterId, { sum: number; n: number }>>;
   const timeline: VerdictSummary['timeline'] = [];
   const participation = { twice: { points: 0, n: 0 }, once: { points: 0, n: 0 } };
+  const shown: { slot: number; candidate: CharacterId; points: number }[] = [];
   for (const run of byDate(runs)) {
     const result = verdictOf(run);
+    const orders = verdictInputSchema.safeParse(run.input);
     for (const [voter, ballot] of Object.entries(ballotsOf(run)) as [CharacterId, Ballot][]) {
       ballot.ranking.forEach((candidate, i) => { sums[voter][candidate].sum += 5 - i; sums[voter][candidate].n++; });
+      const order = orders.success ? orders.data.candidateOrders[voter] : undefined;
+      if (order?.length === 5) order.forEach((candidate, slot) => shown.push({ slot, candidate, points: 5 - ballot.ranking.indexOf(candidate) }));
     }
     if (!result) continue;
     const input = verdictInputSchema.safeParse(run.input);
@@ -141,7 +174,16 @@ export function verdictSummary(runs: LabRun[]): VerdictSummary {
   return { verdicts: timeline.length, wins, jointWins,
     averagePoints: Object.fromEntries(CHARACTER_IDS.map(id => [id, counted[id] ? total[id] / counted[id] : null])) as Record<CharacterId, number | null>,
     affinity: Object.fromEntries(CHARACTER_IDS.map(v => [v, Object.fromEntries(CHARACTER_IDS.map(c => [c, { mean: sums[v][c].n ? sums[v][c].sum / sums[v][c].n : null, ballots: sums[v][c].n }]))])) as VerdictSummary['affinity'],
-    timeline, participation };
+    timeline, participation, ...slotAnalysis(shown) };
+}
+function slotAnalysis(shown: { slot: number; candidate: CharacterId; points: number }[]) {
+  const slots = [0, 1, 2, 3, 4].map(slot => { const xs = shown.filter(x => x.slot === slot); return { mean: xs.length ? xs.reduce((a, x) => a + x.points, 0) / xs.length : null, n: xs.length }; });
+  const adjusted = Object.fromEntries(CHARACTER_IDS.map(id => {
+    const mine = shown.filter(x => x.candidate === id);
+    const expected = mine.reduce((a, x) => a + (slots[x.slot]!.mean ?? 3), 0), observed = mine.reduce((a, x) => a + x.points, 0);
+    return [id, { observed, expected, ratio: expected ? observed / expected : null }];
+  })) as VerdictSummary['adjusted'];
+  return { slots, adjusted };
 }
 
 /* ---------------- Mystery ---------------- */
@@ -164,7 +206,14 @@ export type MysterySummary = {
   answers: number; accuracy: Rate & { brier: number | null };
   byResident: Record<CharacterId, { all: Rate; whenGuilty: Rate; whenInnocent: Rate; meanConfidence: number | null }>;
   calibration: { range: readonly [number, number]; n: number; meanConfidence: number | null; accuracy: number | null }[];
-  falseAccusations: Record<CharacterId, number>;
+  /** Wrong accusations naming this resident, made by the other residents. */
+  accusedByOthers: Record<CharacterId, number>;
+  /** Times this resident wrongly accused itself. */
+  falseSelfAccusations: Record<CharacterId, number>;
+  /** Self-serving check: accusing oneself when guilty versus when innocent. */
+  selfAccusation: { whenGuilty: Rate; whenInnocent: Rate };
+  /** Mean stated confidence minus actual accuracy (positive = overconfident). */
+  overconfidence: number | null;
   byReferences: { references: number; value: Rate }[];
 };
 /** Baseline: a uniform guess among six residents is right one time in six. */
@@ -173,7 +222,10 @@ const accuracyRate = (list: MysteryPrediction[]) => rate(list.filter(p => p.corr
 export function mysterySummary(runs: LabRun[]): MysterySummary {
   const list = predictions(runs);
   const mean = (xs: number[]) => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
-  const falseAccusations = Object.fromEntries(CHARACTER_IDS.map(id => [id, list.filter(p => !p.correct && p.guess === id).length])) as Record<CharacterId, number>;
+  const accusedByOthers = Object.fromEntries(CHARACTER_IDS.map(id => [id, list.filter(p => !p.correct && p.guess === id && p.resident !== id).length])) as Record<CharacterId, number>;
+  const falseSelfAccusations = Object.fromEntries(CHARACTER_IDS.map(id => [id, list.filter(p => !p.correct && p.guess === id && p.resident === id).length])) as Record<CharacterId, number>;
+  const guilty = list.filter(p => p.ownGuilt), innocent = list.filter(p => !p.ownGuilt);
+  const meanConfidence = mean(list.map(p => p.confidence / 100));
   return {
     answers: list.length,
     accuracy: { ...accuracyRate(list), brier: mean(list.map(p => (p.confidence / 100 - (p.correct ? 1 : 0)) ** 2)) },
@@ -186,7 +238,10 @@ export function mysterySummary(runs: LabRun[]): MysterySummary {
       const bin = list.filter(p => p.confidence >= range[0] && p.confidence <= range[1]);
       return { range, n: bin.length, meanConfidence: mean(bin.map(p => p.confidence / 100)), accuracy: bin.length ? bin.filter(p => p.correct).length / bin.length : null };
     }),
-    falseAccusations,
+    accusedByOthers, falseSelfAccusations,
+    selfAccusation: { whenGuilty: rate(guilty.filter(p => p.guess === p.resident).length, guilty.length, GUESS_BASELINE),
+      whenInnocent: rate(innocent.filter(p => p.guess === p.resident).length, innocent.length, GUESS_BASELINE) },
+    overconfidence: meanConfidence === null ? null : meanConfidence - list.filter(p => p.correct).length / list.length,
     byReferences: [...new Set(list.map(p => p.references))].sort().map(references => ({ references, value: accuracyRate(list.filter(p => p.references === references)) })),
   };
 }

@@ -137,7 +137,7 @@
 .forum-app button.lab-node { position:absolute; transform:translate(-50%,-50%); display:grid; justify-items:center; gap:3px; padding:4px 6px; min-height:0; background:#171c22; border:1px solid transparent; font-size:15px; }
 .forum-app button.lab-node[aria-pressed='true'] { border-color:#a6b88a; background:#262c27; }
 .lab-decisions { list-style:none; margin:10px 0; padding:0; }
-.lab-decisions li { display:flex; align-items:center; flex-wrap:wrap; gap:6px 14px; padding:10px 0; border-bottom:1px solid #2b3334; font-size:16px; }
+.lab-decisions li { display:grid; grid-template-columns:116px minmax(0,1fr); align-items:center; gap:6px 14px; padding:10px 0; border-bottom:1px solid #2b3334; font-size:16px; }
 .lab-decisions small { display:block; color:#c9c0a6; font-size:14px; margin-top:2px; }
 .lab-pairs { margin:8px 0; padding-left:22px; font-size:15px; }
 .lab-pairs li { padding:6px 0; }
@@ -236,3 +236,17 @@
   .forum-top nav { font-size:14px; }
   .lab-flips li > .lab-coin { left:calc(50% + 10px); }
 }
+.lab-callout { margin:8px 0 26px; padding:18px 22px; background:#232b29; border:1px solid #4c584b; max-width:860px; }
+.lab-callout h3 { margin:0 0 8px; font:500 22px/1.25 'Pixelify Sans',sans-serif; color:#b8c5a6; }
+.lab-callout p { margin:0 0 8px; font-size:16px; }
+.lab-callout p:last-child { margin-bottom:0; }
+.lab-tie { display:block; color:var(--muted); font-size:12px; }
+.lab-slots { margin:12px 0; max-width:420px; }
+.lab-slots figcaption { font-size:14px; color:var(--muted); margin-bottom:8px; }
+.lab-slot-plot { position:relative; display:grid; grid-template-columns:repeat(5,1fr); gap:10px; height:120px; border-bottom:1px solid #495052; }
+.lab-slot { position:relative; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; height:100%; }
+.lab-slot-bar { display:block; width:70%; background:#c6ac77; min-height:2px; }
+.lab-slot-baseline { position:absolute; left:0; right:0; border-top:2px dashed #a6b88a; z-index:1; pointer-events:none; }
+.lab-slot-labels { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; text-align:center; font-size:12px; color:#8f9488; margin-top:6px; line-height:1.3; }
+.lab-slot-labels strong { display:block; font-size:15px; color:var(--paper); font-weight:600; font-variant-numeric:tabular-nums; }
+.lab-participation { font-size:14px; margin:10px 0 4px; }

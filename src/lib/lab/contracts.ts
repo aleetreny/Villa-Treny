@@ -7,9 +7,15 @@ import { CHARACTER_IDS, type CharacterId } from '../debate/characters';
 export const LAB_EXPERIMENTS = ['verdict', 'coin', 'companions', 'mystery'] as const;
 export type LabExperiment = typeof LAB_EXPERIMENTS[number];
 export const LAB_PROTOCOLS = {
-  verdict: 'lab-verdict-v1', coin: 'lab-coin-v1', companions: 'lab-companions-v1', mystery: 'lab-mystery-v1',
+  verdict: 'lab-verdict-v2', coin: 'lab-coin-v2', companions: 'lab-companions-v2', mystery: 'lab-mystery-v1',
 } as const satisfies Record<LabExperiment, string>;
-export const COIN_CONDITIONS = ['neutral', 'persona'] as const;
+/** v1 → v2 (from 20 October 2026): verdict and companion candidates are listed
+ * in a seeded random order instead of a rotation of one fixed sequence, which
+ * kept the same residents adjacent; the coin adds a counterbalanced condition.
+ * Prompt wording is unchanged and every order is stored with the run. */
+export const PROTOCOL_HISTORY = { verdict: ['lab-verdict-v1'], coin: ['lab-coin-v1'], companions: ['lab-companions-v1'], mystery: [] } as const;
+/** neutral: heads listed first; reversed: identical except tails listed first. */
+export const COIN_CONDITIONS = ['neutral', 'reversed', 'persona'] as const;
 export type CoinCondition = typeof COIN_CONDITIONS[number];
 export const BORDA_METHOD = 'borda-5-4-3-2-1-v1';
 

@@ -5,7 +5,7 @@ import { useHistory, useLabDay } from '../../lib/lab/client';
 import { verdictInputSchema, verdictResultSchema, type Ballot, type LabDay, type LabRun } from '../../lib/lab/contracts';
 import { ballotsOf, verdictSummary } from '../../lib/lab/aggregate';
 import { TIE_RULES } from '../../lib/lab/verdict';
-import { Matrix } from './charts';
+import { Matrix, SlotBars } from './charts';
 import { Availability, DateNav, ErrorNotice, LabHeader, Loading, Method, SampleNote, dateLabel, given, selectedDate } from './shared';
 
 const ORDINAL = ['1st', '2nd', '3rd', '4th', '5th'];
@@ -38,16 +38,22 @@ export function VerdictPanel({ run, compact = false }: { run: LabRun; compact?: 
     <ol className="lab-standings" aria-label="Points received">
       {standings.map(s => <li key={s.id}>
         <span className="lab-rank">{s.rank}</span>
-        <span className="lab-rate-who"><Portrait id={s.id} scale={2}/><span>{given(s.id)}{input.success ? <small>spoke {input.data.participation[s.id] === 2 ? 'twice' : 'once'}</small> : null}</span></span>
+        <span className="lab-rate-who"><Portrait id={s.id} scale={2}/><span>{given(s.id)}{input.success ? <small>spoke {input.data.participation[s.id] === 2 ? 'twice' : 'once'}</small> : null}
+          {s.decidedBy !== 'points' && standings.some(o => o.id !== s.id && o.points === s.points) ? <span className="lab-tie">{s.decidedBy === 'joint' ? 'tied' : 'tie settled by ' + s.decidedBy}</span> : null}</span></span>
         <span className="lab-bar" title={`${given(s.id)}: ${s.points} points; ${s.positions.map((n, i) => `${n}× ${ORDINAL[i]}`).join(', ')}`}>
           {s.positions.map((n, i) => n ? <span key={i} className={'lab-bar-seg is-' + i} style={{ width: (n * (5 - i)) / 25 * 100 + '%' }}/> : null)}
         </span>
         <span className="lab-points">{s.points}<small>pts</small></span>
       </li>)}
     </ol>
+    {input.success ? <ParticipationNote standings={standings} participation={input.data.participation}/> : null}
     <p className="lab-legend"><span><span className="lab-swatch is-0"/>First places</span><span><span className="lab-swatch is-1"/>Second places</span><span><span className="lab-swatch is-2"/>Lower places</span><span>Bar length: points out of 25</span></p>
     <BallotTable ballots={ballots}/>
   </div>;
+}
+function ParticipationNote({ standings, participation }: { standings: { id: CharacterId; points: number }[]; participation: Partial<Record<CharacterId, number>> }) {
+  const avg = (times: number) => { const xs = standings.filter(s => participation[s.id] === times); return xs.length ? (xs.reduce((a, s) => a + s.points, 0) / xs.length).toFixed(1) : '—'; };
+  return <p className="lab-muted lab-participation">Residents who spoke twice averaged {avg(2)} points; those who spoke once, {avg(1)}. Speaking more gives more to judge, so this is tracked as a possible confounder.</p>;
 }
 function BallotTable({ ballots }: { ballots: Partial<Record<CharacterId, Ballot>> }) {
   return <details className="lab-method"><summary>How each resident ranked the others</summary><div className="lab-table-wrap"><table className="lab-table">
@@ -95,10 +101,17 @@ function VerdictStats({ runs }: { runs: LabRun[] }) {
   return <div className="lab-stats">
     <h2 className="lab-section-title">Over time</h2>
     <SampleNote n={s.verdicts} unit={s.verdicts === 1 ? 'complete verdict' : 'complete verdicts'}/>
+    <div className="lab-callout">
+      <h3>What else could sway a jury</h3>
+      <p><strong>Speaking twice.</strong> {s.participation.twice.n ? (s.participation.twice.points / s.participation.twice.n).toFixed(1) : '—'} average points when a resident spoke twice ({s.participation.twice.n} cases), {s.participation.once.n ? (s.participation.once.points / s.participation.once.n).toFixed(1) : '—'} when they spoke once ({s.participation.once.n} cases). The debate’s turn order decides who speaks twice, so this is not a judgement about the residents themselves.</p>
+      <p><strong>Where a name appears in the list.</strong> Each juror sees the five candidates in a recorded order. If position did not matter, every slot would average 3 points.</p>
+      <SlotBars caption="Average points given to the candidate listed in each position" values={s.slots.map(x => x.mean)} counts={s.slots.map(x => x.n)} baseline={3} max={5} format={v => v === null ? '—' : v.toFixed(1)}/>
+    </div>
     <div className="lab-table-wrap"><table className="lab-table lab-numeric">
       <caption>Wins and average points per verdict</caption>
-      <thead><tr><th scope="col">Resident</th><th scope="col">Wins</th><th scope="col">Joint wins</th><th scope="col">Average points</th></tr></thead>
-      <tbody>{CHARACTER_IDS.map(id => <tr key={id}><th scope="row">{given(id)}</th><td>{s.wins[id]}</td><td>{s.jointWins[id]}</td><td>{s.averagePoints[id]?.toFixed(1) ?? '—'}</td></tr>)}</tbody>
+      <thead><tr><th scope="col">Resident</th><th scope="col">Wins</th><th scope="col">Joint wins</th><th scope="col">Average points</th><th scope="col">Points vs list-position expectation</th></tr></thead>
+      <tbody>{CHARACTER_IDS.map(id => <tr key={id}><th scope="row">{given(id)}</th><td>{s.wins[id]}</td><td>{s.jointWins[id]}</td><td>{s.averagePoints[id]?.toFixed(1) ?? '—'}</td>
+        <td>{s.adjusted[id].ratio === null ? '—' : <>×{s.adjusted[id].ratio!.toFixed(2)}<small> {s.adjusted[id].observed} vs {s.adjusted[id].expected.toFixed(1)}</small></>}</td></tr>)}</tbody>
     </table></div>
     {s.timeline.length ? <div className="lab-table-wrap"><table className="lab-table lab-numeric lab-timeline">
       <caption>Rank by date (1 is best)</caption>
@@ -112,6 +125,6 @@ function VerdictStats({ runs }: { runs: LabRun[] }) {
         title: `${given(r)} gave ${given(c)} ${s.affinity[r][c].mean?.toFixed(2) ?? 'no'} points on average over ${s.affinity[r][c].ballots} ballots` }}
       scale={v => ({ tone: Math.min(1, Math.abs(v - 3) / 2), side: v > 3 ? 'up' : v < 3 ? 'down' : 'none' })}/>
     <p className="lab-sample">Darker brass cells are above the uniform average of 3, slate cells below. With a few ballots, a cell can sit far from 3 by chance: a juror who favours a resident on a handful of days has not shown a stable preference.</p>
-    <p className="lab-sample">Speaking twice versus once (a possible confounder): {s.participation.twice.n ? (s.participation.twice.points / s.participation.twice.n).toFixed(1) : '—'} average points when speaking twice ({s.participation.twice.n} cases), {s.participation.once.n ? (s.participation.once.points / s.participation.once.n).toFixed(1) : '—'} when speaking once ({s.participation.once.n} cases).</p>
+
   </div>;
 }

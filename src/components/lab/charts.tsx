@@ -109,3 +109,17 @@ export function Network({ edges, focus, onFocus, caption }: { edges: { from: Cha
     </div>
   </figure>;
 }
+
+/** Share chosen (or average points) by the slot in which a candidate was listed. */
+export function SlotBars({ caption, values, baseline, max, format, counts }: { caption: string; values: (number | null)[]; baseline: number; max: number; format: (v: number | null) => string; counts: number[] }) {
+  return <figure className="lab-slots">
+    <figcaption>{caption}</figcaption>
+    <div className="lab-slot-plot">
+      <span className="lab-slot-baseline" style={{ bottom: baseline / max * 100 + '%' }} aria-hidden="true"/>
+      {values.map((v, i) => <div key={i} className="lab-slot" title={`Listed ${i + 1}${['st', 'nd', 'rd', 'th', 'th'][i]}: ${format(v)} over ${counts[i]} answers`}>
+        <span className="lab-slot-bar" style={{ height: (v ?? 0) / max * 100 + '%' }}/>
+      </div>)}
+    </div>
+    <div className="lab-slot-labels">{values.map((v, i) => <span key={i}><strong>{format(v)}</strong>{i + 1}{['st', 'nd', 'rd', 'th', 'th'][i]} listed</span>)}</div>
+  </figure>;
+}

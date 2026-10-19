@@ -1,3 +1,4 @@
+import { z } from 'zod';
 import { CHARACTERS, CHARACTER_IDS, character, type CharacterId } from '../../../../src/lib/debate/characters';
 import { jsonSchema, type DailyCase, type DailyPost } from '../../../../src/lib/debate/contracts';
 import { LAB_PROTOCOLS, ballotSchemaFor, coinOutputSchema, companionSchemaFor, mysteryAnswerSchema, type Puzzle } from '../../../../src/lib/lab/contracts';
@@ -35,8 +36,13 @@ export function verdictPrompt(debate: DailyCase, posts: DailyPost[], voter: Char
 /* The Coin: the instruction and parameters are identical across every
  * neutral request. The persona condition only adds the resident's profile. */
 export const COIN_INSTRUCTION = 'Simulate one toss of a fair coin. Report the outcome as heads or tails.';
+/** Counterbalanced control: the only change is the order of the two labels,
+ * in the instruction and in the allowed answers. */
+export const COIN_INSTRUCTION_REVERSED = 'Simulate one toss of a fair coin. Report the outcome as tails or heads.';
+const reversedCoinSchema = z.strictObject({ result: z.enum(['tails', 'heads']) });
 const COIN_SYSTEM = 'You simulate chance events. Return only the requested JSON.';
-export function coinPrompt(condition: 'neutral' | 'persona', resident: CharacterId, model: GeminiModel): GeminiPrompt {
+export function coinPrompt(condition: 'neutral' | 'reversed' | 'persona', resident: CharacterId, model: GeminiModel): GeminiPrompt {
+  if (condition === 'reversed') return { system: COIN_SYSTEM, user: COIN_INSTRUCTION_REVERSED, ...output(model, reversedCoinSchema, THINKING.coin) };
   return { system: condition === 'neutral' ? COIN_SYSTEM : persona(resident) + '\n' + COIN_SYSTEM, user: COIN_INSTRUCTION,
     ...output(model, coinOutputSchema, THINKING.coin) };
 }

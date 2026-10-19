@@ -3,12 +3,12 @@ import { runDurableObjectAlarm, runInDurableObject } from 'cloudflare:test';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { DebateForum } from '../src/debate/forum';
 import { labHttp } from '../src/lab/http';
-import { applyLabResult, closeRun, newCoinRun, newVerdictRun, rotatedCandidates } from '../src/lab/experiments';
-import { COIN_INSTRUCTION, coinPrompt } from '../src/lab/prompts';
+import { applyLabResult, closeRun, newCoinRun, newVerdictRun, randomCandidates, rotatedCandidates } from '../src/lab/experiments';
+import { COIN_INSTRUCTION, COIN_INSTRUCTION_REVERSED, coinPrompt } from '../src/lab/prompts';
 import { runGemini, type GeminiPrompt, type GeminiResult } from '../src/providers/gemini';
 import { generatePuzzle } from '../../../src/lib/lab/mystery';
 import { CHARACTER_IDS, type CharacterId } from '../../../src/lib/debate/characters';
-import type { LabDay, LabExperiment, LabHistory, LabOverview, LabRun } from '../../../src/lib/lab/contracts';
+import { LAB_PROTOCOLS, type LabDay, type LabExperiment, type LabHistory, type LabOverview, type LabRun } from '../../../src/lib/lab/contracts';
 import { completedConversation, successful } from './fixtures/daily';
 
 vi.mock('../src/providers/gemini', async original => ({ ...await original<typeof import('../src/providers/gemini')>(), runGemini: vi.fn() }));
@@ -30,14 +30,14 @@ const failure = (code: GeminiResult['code']): GeminiResult => ({ ...successful(n
 type Call = { prompt: GeminiPrompt; kind: string };
 /** Fixture answers built from the prompt the engine actually sent. */
 function answer(prompt: GeminiPrompt, coins: string[] = []): unknown {
-  if (prompt.user === COIN_INSTRUCTION) return { result: coins.shift() ?? 'heads' };
+  if (prompt.user === COIN_INSTRUCTION || prompt.user === COIN_INSTRUCTION_REVERSED) return { result: coins.shift() ?? 'heads' };
   const user = JSON.parse(prompt.user) as { protocol: string; candidates?: { id: CharacterId }[]; you?: { id: CharacterId }; title?: string };
-  if (user.protocol === 'lab-verdict-v1') return { ranking: user.candidates!.map(c => c.id), reason: 'Their argument was the clearest.' };
-  if (user.protocol === 'lab-companions-v1') return { choices: user.candidates!.slice(0, 2).map(c => c.id), reason: 'Good company for a walk.' };
-  if (user.protocol === 'lab-mystery-v1') return { culprit: 'A', explanation: 'Only one statement can be false.', confidence: 70 };
+  if (user.protocol === LAB_PROTOCOLS.verdict) return { ranking: user.candidates!.map(c => c.id), reason: 'Their argument was the clearest.' };
+  if (user.protocol === LAB_PROTOCOLS.companions) return { choices: user.candidates!.slice(0, 2).map(c => c.id), reason: 'Good company for a walk.' };
+  if (user.protocol === LAB_PROTOCOLS.mystery) return { culprit: 'A', explanation: 'Only one statement can be false.', confidence: 70 };
   throw new Error('Unexpected prompt ' + user.protocol);
 }
-const kindOf = (prompt: GeminiPrompt) => prompt.user === COIN_INSTRUCTION ? 'coin' : (JSON.parse(prompt.user) as { protocol: string }).protocol;
+const kindOf = (prompt: GeminiPrompt) => prompt.user === COIN_INSTRUCTION || prompt.user === COIN_INSTRUCTION_REVERSED ? 'coin' : (JSON.parse(prompt.user) as { protocol: string }).protocol;
 async function drain(s: Forum & DurableObjectStub<DebateForum>, clock: { now: number }, calls: Call[], limit = 80) {
   for (let i = 0; i < limit; i++) {
     clock.now += 61_000;
@@ -90,9 +90,9 @@ describe('the Lab', () => {
     expect(Object.values(overview.today).map(d => d.run?.status)).toEqual(['complete', 'complete', 'complete', 'complete']);
     // Routine per-minute pacing is not reported as a capacity problem.
     expect(Object.values(overview.today).map(d => d.run?.reason)).toEqual([null, null, null, null]);
-    // 6 ballots + 12 coins + 6 companion choices + 6 mystery answers.
-    expect(calls).toHaveLength(30);
-    expect(calls.slice(0, 6).every(c => c.kind === 'lab-verdict-v1')).toBe(true);
+    // 6 ballots + 18 coins (neutral, tails-first, persona) + 6 companion choices + 6 mystery answers.
+    expect(calls).toHaveLength(36);
+    expect(calls.slice(0, 6).every(c => c.kind === LAB_PROTOCOLS.verdict)).toBe(true);
     // Fair interleaving: the three independent experiments alternate rather than run back to back.
     expect(new Set(calls.slice(6, 9).map(c => c.kind)).size).toBe(3);
 
@@ -107,8 +107,14 @@ describe('the Lab', () => {
 
     // Neutral coin requests are byte-identical, and actual model answers are stored.
     const coins = calls.filter(c => c.kind === 'coin');
-    const neutral = coins.filter(c => !c.prompt.system.includes('You are '));
+    const neutral = coins.filter(c => !c.prompt.system.includes('You are ') && c.prompt.user === COIN_INSTRUCTION);
     expect(neutral).toHaveLength(6);
+    // The counterbalanced requests are identical to each other and differ from neutral only in label order.
+    const reversed = coins.filter(c => c.prompt.user === COIN_INSTRUCTION_REVERSED);
+    expect(reversed).toHaveLength(6);
+    expect(new Set(reversed.map(c => JSON.stringify(c.prompt))).size).toBe(1);
+    expect(reversed[0]!.prompt.system).toBe(neutral[0]!.prompt.system);
+    expect(JSON.stringify(reversed[0]!.prompt.jsonSchema).replace('"tails","heads"', '"heads","tails"')).toBe(JSON.stringify(neutral[0]!.prompt.jsonSchema));
     expect(new Set(neutral.map(c => JSON.stringify(c.prompt))).size).toBe(1);
     expect(coins.filter(c => c.prompt.system.includes('You are '))).toHaveLength(6);
     const coin = overview.today.coin.run!;
@@ -117,7 +123,7 @@ describe('the Lab', () => {
 
     // Companion candidate orders are recorded and rotated.
     const companions = overview.today.companions.run!;
-    expect((companions.input as { candidateOrders: Record<string, string[]> }).candidateOrders.A).toEqual(rotatedCandidates(date, 'A'));
+    expect((companions.input as { candidateOrders: Record<string, string[]> }).candidateOrders.A).toEqual(randomCandidates(date, 'A', 'companions'));
     const mystery = overview.today.mystery.run!;
     expect((mystery.input as { culprit: string }).culprit).toBe(generatePuzzle(date).culprit);
     // Reloading reads the same stored results without new inference.
@@ -146,11 +152,12 @@ describe('the Lab', () => {
     const date = '2026-10-18', now = Date.parse(date + 'T10:00:00Z');
     let coin = newCoinRun(date, 'gemini-3.5-flash-lite', now);
     coin = applyLabResult(coin, 'neutral-1', 'a#1', now, 'sha256:x', successful({ result: 'edge' }), now + 1);
-    expect(coin.units[0]).toMatchObject({ status: 'invalid', attempts: 1, output: null });
+    const unitOf = (id: string) => coin.units.find(u => u.id === id);
+    expect(unitOf('neutral-1')).toMatchObject({ status: 'invalid', attempts: 1, output: null });
     coin = applyLabResult(coin, 'neutral-2', 'b#1', now, 'sha256:x', failure('invalid_json'), now + 2);
-    expect(coin.units[2]).toMatchObject({ status: 'invalid' });
+    expect(unitOf('neutral-2')).toMatchObject({ status: 'invalid' });
     coin = applyLabResult(coin, 'persona-A', 'c#1', now, 'sha256:x', failure('provider_error'), now + 3);
-    expect(coin.units[1]).toMatchObject({ status: 'pending', attempts: 1 });
+    expect(unitOf('persona-A')).toMatchObject({ status: 'pending', attempts: 1 });
     // A replayed attempt identity changes nothing.
     expect(applyLabResult(coin, 'persona-A', 'c#1', now, 'sha256:x', successful({ result: 'heads' }), now + 4)).toBe(coin);
 
@@ -247,6 +254,23 @@ describe('the Lab', () => {
     const count = await runInDurableObject(s, (_i, ctx) => ctx.storage.sql.exec('SELECT COUNT(*) AS n FROM lab_runs').one().n);
     await s.reconcile();
     expect(await runInDurableObject(s, (_i, ctx) => ctx.storage.sql.exec('SELECT COUNT(*) AS n FROM lab_runs').one().n)).toBe(count);
+  });
+
+  it('lists candidates in independent random orders instead of rotating one fixed sequence', () => {
+    const days = Array.from({ length: 300 }, (_, i) => new Date(Date.UTC(2026, 9, 20 + i)).toISOString().slice(0, 10));
+    const slots = Object.fromEntries(CHARACTER_IDS.filter(id => id !== 'A').map(id => [id, [0, 0, 0, 0, 0]])) as Record<string, number[]>;
+    const neighbours = new Set<string>();
+    for (const day of days) {
+      const order = randomCandidates(day, 'A', 'companions');
+      expect([...order].sort()).toEqual(['B', 'C', 'D', 'E', 'F']);
+      order.forEach((id, slot) => slots[id]![slot]!++);
+      neighbours.add(order.slice(0, 2).sort().join(''));
+    }
+    expect(randomCandidates('2026-10-20', 'A', 'companions')).toEqual(randomCandidates('2026-10-20', 'A', 'companions'));
+    // Every pair can appear in the top two slots; the old rotation allowed only five.
+    expect(neighbours.size).toBe(10);
+    expect(new Set(days.slice(0, 30).map(d => rotatedCandidates(d, 'A').slice(0, 2).sort().join(''))).size).toBe(5);
+    for (const counts of Object.values(slots)) for (const n of counts) expect(n).toBeGreaterThan(35);
   });
 
   it('builds identical neutral coin prompts and persona prompts that differ only by profile', () => {

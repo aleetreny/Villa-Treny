@@ -6,21 +6,27 @@ import { dayNumber, generatePuzzle, rng, seedOf, shuffle, solveStatements } from
 import { verdict } from '../../../../src/lib/lab/verdict';
 import { ballotsOf } from '../../../../src/lib/lab/aggregate';
 import type { GeminiModel, GeminiPrompt, GeminiResult } from '../providers/gemini';
-import { COIN_INSTRUCTION, COMPANION_SCENARIO, COMPANION_SCENARIO_VERSION, THINKING, coinPrompt, companionPrompt, maxOutput, mysteryPrompt, verdictPrompt } from './prompts';
+import { COIN_INSTRUCTION, COIN_INSTRUCTION_REVERSED, COMPANION_SCENARIO, COMPANION_SCENARIO_VERSION, THINKING, coinPrompt, companionPrompt, maxOutput, mysteryPrompt, verdictPrompt } from './prompts';
 
 export const UNIT_ATTEMPT_CAP = 3;
 /** Independent per-run budgets; each counts every charged attempt. */
-export const RUN_ATTEMPT_CAP: Record<LabExperiment, number> = { verdict: 12, coin: 18, companions: 12, mystery: 12 };
+export const RUN_ATTEMPT_CAP: Record<LabExperiment, number> = { verdict: 12, coin: 27, companions: 12, mystery: 12 };
 /** Codes where the model returned content that is not a valid answer. */
 const CONTENT_CODES = ['invalid_json', 'truncated', 'blocked'];
 const FATAL_CODES = ['authentication', 'missing_key', 'unexpected_model', 'invalid_request'];
 
-/** Systematic rotation: over five consecutive days each candidate appears once
- * in every position for each chooser. The order is stored with the run. */
+/** v1 (until 19 October 2026): a rotation of one fixed sequence. It balanced
+ * slots over five days but always kept the same residents next to each other. */
 export function rotatedCandidates(date: string, chooser: CharacterId): CharacterId[] {
   const others = CHARACTER_IDS.filter(id => id !== chooser);
   const offset = ((dayNumber(date) + CHARACTER_IDS.indexOf(chooser)) % 5 + 5) % 5;
   return [...others.slice(offset), ...others.slice(0, offset)];
+}
+/** v2: an independent seeded random order for each chooser, day and
+ * experiment, so slots and neighbours are balanced in expectation. Stored with
+ * the run; randomness only decides presentation, never an answer. */
+export function randomCandidates(date: string, chooser: CharacterId, experiment: 'verdict' | 'companions'): CharacterId[] {
+  return shuffle(CHARACTER_IDS.filter(id => id !== chooser), rng(seedOf(`${experiment}-order:${date}:${chooser}`)));
 }
 const unit = (id: string, resident: CharacterId, condition: string): LabUnit => ({ id, resident, condition, status: 'pending', attempts: 0, output: null, receipts: [] });
 function base(experiment: LabExperiment, date: string, model: GeminiModel, now: number, input: unknown, units: LabUnit[]): LabRun {
@@ -32,13 +38,15 @@ function base(experiment: LabExperiment, date: string, model: GeminiModel, now: 
 export function newCoinRun(date: string, model: GeminiModel, now: number): LabRun {
   // Randomness only decides which portrait displays each neutral answer.
   const portraits = shuffle(CHARACTER_IDS, rng(seedOf('coin-portraits:' + date)));
-  const units = CHARACTER_IDS.flatMap((id, i) => [unit('neutral-' + (i + 1), portraits[i]!, 'neutral'), unit('persona-' + id, id, 'persona')]);
-  return base('coin', date, model, now, { promptVersion: LAB_PROTOCOLS.coin + ':' + COIN_INSTRUCTION, conditions: ['neutral', 'persona'],
-    portraits: Object.fromEntries(portraits.map((id, i) => ['neutral-' + (i + 1), id])) }, units);
+  const reversedPortraits = shuffle(CHARACTER_IDS, rng(seedOf('coin-reversed-portraits:' + date)));
+  // Interleaved so that no condition is systematically asked first.
+  const units = CHARACTER_IDS.flatMap((id, i) => [unit('neutral-' + (i + 1), portraits[i]!, 'neutral'), unit('reversed-' + (i + 1), reversedPortraits[i]!, 'reversed'), unit('persona-' + id, id, 'persona')]);
+  return base('coin', date, model, now, { promptVersion: LAB_PROTOCOLS.coin + ':' + COIN_INSTRUCTION + ' | ' + COIN_INSTRUCTION_REVERSED, conditions: ['neutral', 'reversed', 'persona'],
+    portraits: Object.fromEntries([...portraits.map((id, i) => ['neutral-' + (i + 1), id]), ...reversedPortraits.map((id, i) => ['reversed-' + (i + 1), id])]) }, units);
 }
 export function newCompanionRun(date: string, model: GeminiModel, now: number): LabRun {
   return base('companions', date, model, now, { scenarioVersion: COMPANION_SCENARIO_VERSION, scenario: COMPANION_SCENARIO,
-    candidateOrders: Object.fromEntries(CHARACTER_IDS.map(id => [id, rotatedCandidates(date, id)])) }, CHARACTER_IDS.map(id => unit(id, id, 'persona')));
+    candidateOrders: Object.fromEntries(CHARACTER_IDS.map(id => [id, randomCandidates(date, id, 'companions')])) }, CHARACTER_IDS.map(id => unit(id, id, 'persona')));
 }
 export function newMysteryRun(date: string, model: GeminiModel, now: number): LabRun {
   const puzzle = generatePuzzle(date);
@@ -52,12 +60,12 @@ export function newVerdictRun(debate: CompletedDebate, model: GeminiModel, now: 
   return base('verdict', debate.id, model, now, { debateId: debate.id, debateProtocol: debate.protocol, method: BORDA_METHOD,
     participation: Object.fromEntries(CHARACTER_IDS.map(id => [id, debate.posts.filter(p => p.author === id).length])),
     firstTurn: Object.fromEntries(CHARACTER_IDS.map(id => { const i = debate.posts.findIndex(p => p.author === id); return [id, i < 0 ? null : i + 1]; })),
-    candidateOrders: Object.fromEntries(CHARACTER_IDS.map(id => [id, rotatedCandidates(debate.id, id)])) }, CHARACTER_IDS.map(id => unit(id, id, 'persona')));
+    candidateOrders: Object.fromEntries(CHARACTER_IDS.map(id => [id, randomCandidates(debate.id, id, 'verdict')])) }, CHARACTER_IDS.map(id => unit(id, id, 'persona')));
 }
 
 export function promptFor(run: LabRun, u: LabUnit, debate?: CompletedDebate | null): GeminiPrompt {
   const model = run.model as GeminiModel;
-  if (run.experiment === 'coin') return coinPrompt(u.condition as 'neutral' | 'persona', u.resident, model);
+  if (run.experiment === 'coin') return coinPrompt(u.condition as 'neutral' | 'reversed' | 'persona', u.resident, model);
   if (run.experiment === 'companions') return companionPrompt(u.resident, companionInputSchema.parse(run.input).candidateOrders[u.resident]!, model);
   if (run.experiment === 'mystery') return mysteryPrompt(puzzleSchema.parse(run.input), u.resident, model);
   if (!debate?.case) throw new Error('missing_debate');

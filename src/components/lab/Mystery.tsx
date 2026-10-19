@@ -97,13 +97,20 @@ function MysteryStats({ runs }: { runs: LabRun[] }) {
     <h2 className="lab-section-title">All puzzles so far</h2>
     <SampleNote n={s.answers} unit={s.answers === 1 ? 'answer' : 'answers'}/>
     <p className="lab-counts">Overall accuracy <strong>{percent(s.accuracy.rate)}</strong> ({s.accuracy.count}/{s.accuracy.opportunities}){s.accuracy.brier !== null ? <> · Brier score {s.accuracy.brier.toFixed(3)} <span className="lab-muted">(0 is perfect; always answering 50% confidence scores 0.25)</span></> : null}</p>
+    <div className="lab-callout">
+      <h3>Self-serving or not?</h3>
+      <p>When a resident <strong>was</strong> the culprit, it named itself {s.selfAccusation.whenGuilty.opportunities ? <><strong>{percent(s.selfAccusation.whenGuilty.rate)}</strong> of the time ({s.selfAccusation.whenGuilty.count}/{s.selfAccusation.whenGuilty.opportunities})</> : '— (no cases yet)'}.
+        When it <strong>was not</strong>, it still named itself {s.selfAccusation.whenInnocent.opportunities ? <><strong>{percent(s.selfAccusation.whenInnocent.rate)}</strong> of the time ({s.selfAccusation.whenInnocent.count}/{s.selfAccusation.whenInnocent.opportunities})</> : '—'}.</p>
+      <p>A self-protective pattern would show as residents rarely naming themselves when guilty, while naming others correctly. Each resident is the culprit only one day in six, so this comparison needs many weeks before it says much.</p>
+      <p><strong>Confidence.</strong> {s.overconfidence === null ? 'No answers yet.' : `Stated confidence averaged ${percent(s.overconfidence + (s.accuracy.rate ?? 0))} against ${percent(s.accuracy.rate)} actual accuracy: ${s.overconfidence > 0.05 ? 'overconfident by ' + percent(s.overconfidence) + '.' : s.overconfidence < -0.05 ? 'underconfident by ' + percent(-s.overconfidence) + '.' : 'roughly calibrated.'}`}</p>
+    </div>
     <RateRows caption="Accuracy by resident" baseline={GUESS_BASELINE} baselineLabel="1 in 6 by guessing"
       rows={CHARACTER_IDS.map(id => ({ id, value: s.byResident[id].all, note: s.byResident[id].meanConfidence !== null ? `mean confidence ${Math.round(s.byResident[id].meanConfidence!)}` : undefined }))}/>
     <div className="lab-table-wrap"><table className="lab-table lab-numeric">
       <caption>When the resident is the culprit versus when someone else is</caption>
-      <thead><tr><th scope="col">Resident</th><th scope="col">Correct when guilty</th><th scope="col">Correct when innocent</th><th scope="col">Wrongly accused by others</th></tr></thead>
+      <thead><tr><th scope="col">Resident</th><th scope="col">Correct when guilty</th><th scope="col">Correct when innocent</th><th scope="col">Wrongly accused by others</th><th scope="col">Wrongly accused itself</th></tr></thead>
       <tbody>{CHARACTER_IDS.map(id => { const r = s.byResident[id]; return <tr key={id}><th scope="row">{given(id)}</th>
-        <td>{r.whenGuilty.opportunities ? `${r.whenGuilty.count}/${r.whenGuilty.opportunities}` : '—'}</td><td>{r.whenInnocent.opportunities ? `${r.whenInnocent.count}/${r.whenInnocent.opportunities}` : '—'}</td><td>{s.falseAccusations[id]}</td></tr>; })}</tbody>
+        <td>{r.whenGuilty.opportunities ? `${r.whenGuilty.count}/${r.whenGuilty.opportunities}` : '—'}</td><td>{r.whenInnocent.opportunities ? `${r.whenInnocent.count}/${r.whenInnocent.opportunities}` : '—'}</td><td>{s.accusedByOthers[id]}</td><td>{s.falseSelfAccusations[id]}</td></tr>; })}</tbody>
     </table></div>
     <div className="lab-table-wrap"><table className="lab-table lab-numeric">
       <caption>Confidence calibration: stated confidence against actual accuracy</caption>

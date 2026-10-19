@@ -31,9 +31,10 @@ test('coin results are stratified by condition, with honest invalid counts and d
   const today = history.coin.find(r => r.date === TODAY)!;
   const heads = today.units.filter(u => u.condition === 'neutral' && (u.output as { result?: string } | null)?.result === 'heads').length;
   await expect(neutral.locator('.lab-counts')).toContainText(`Heads ${heads} · Tails ${6 - heads}`);
-  await expect(page.locator('.lab-condition-stats')).toHaveCount(2);
+  await expect(page.locator('.lab-condition-stats')).toHaveCount(3);
+  await expect(page.locator('.lab-callout')).toContainText('first-listed word was chosen');
   await expect(page.locator('.lab-condition-stats').first()).toContainText('1 invalid');
-  await expect(page.locator('.lab-chart svg')).toHaveCount(2);
+  await expect(page.locator('.lab-chart svg')).toHaveCount(3);
   await page.getByRole('link', { name: /Previous day/ }).click();
   await expect(page).toHaveURL(/\/lab\/coin\?date=2026-10-17$/);
   await expect(page.locator('.lab-section-title').first()).toHaveText('17 October 2026');

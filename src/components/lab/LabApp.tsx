@@ -44,7 +44,7 @@ function Overview({ overview, error, retry }: { overview: LabOverview | null; er
       <div><h3>Not why</h3><p>A departure from chance is a pattern, not an explanation. These are fictional personas of one model, not people.</p></div>
     </div>
     <Method title="Schedule, model and requests">
-      <p>The daily debate always goes first. Its jury meets when it ends; the coin, the walk and the mystery follow, sharing the same request limits. About 30 extra model requests are made per day. Opening a page never makes one.</p>
+      <p>The daily debate always goes first. Its jury meets when it ends; the coin, the walk and the mystery follow, sharing the same request limits. About 36 extra model requests are made per day. Opening a page never makes one.</p>
       {overview ? <p>Model: {overview.schedule.model}. New experiments begin at {String(overview.schedule.hourUtc).padStart(2, '0')}:00 UTC.{overview.schedule.activatedOn ? ` Recording since ${dateLabel(overview.schedule.activatedOn)}.` : ' Recording has not started yet.'}</p> : null}
     </Method>
   </section>;
