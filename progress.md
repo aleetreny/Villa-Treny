@@ -504,3 +504,8 @@ Fresh finish reviewer scored both requested fixes resolved; documenter completed
 p05–p07: simpler whole-episode scripts are easy to read but still repeat values, invent details (shared recording ownership), or contradict themselves. Do not ship that architecture on these results. p08 separately generated turns improve direct responsiveness but overuse handoff questions and return to the same promise argument. Next experiment will give the exchange a progression and show the desired spoken style. Source scans now exclude historical JSON bundles after one overly broad search produced noisy output.
 
 Provisional v6 implemented: nine chronological contributions, every participant reads the previous turns, literal earlier-post references, 12 baseline requests, preserved v5 validation/archive rendering. Focused Worker tests: 27 passed. Header scenario and compact author layout completed; legacy browser checks: 17 passed. Current v6 exact-source live trial: reader-v6-01-tech, underway. Whole-script and larger-model trials are not a release basis: 3.8 returned 1 success and 3 provider errors.
+
+
+## Lab findings release — 2026-11-02
+
+Reviewed production: every edition from 14 October to 2 November is complete; the Lab has recorded 16 days (564 accepted answers) and no debate had a recommendation. Added live findings, the CSV/JSON dataset, resident Lab records, the reader's seventh-juror vote and a board teaser, all client-side over existing GET endpoints. `pnpm check`, `pnpm build` and 72 browser tests pass. Avoided the pixel font's broken lowercase “fi” in new titles. Debate topic quality (mostly domestic disputes) is a separate follow-up needing live trials.

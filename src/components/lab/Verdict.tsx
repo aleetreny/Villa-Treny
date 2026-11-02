@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Portrait } from '../desk/habitat/Portrait';
 import { CHARACTER_IDS, type CharacterId } from '../../lib/debate/characters';
-import { useHistory, useLabDay } from '../../lib/lab/client';
-import { verdictInputSchema, verdictResultSchema, type Ballot, type LabDay, type LabRun } from '../../lib/lab/contracts';
-import { ballotsOf, verdictSummary } from '../../lib/lab/aggregate';
+import { readVotes, readerRecord, saveVote } from '../../lib/debate/reader-votes';
+import { useHistories, useHistory, useLabDay } from '../../lib/lab/client';
+import { verdictInputSchema, verdictResultSchema, type Ballot, type LabDay, type LabRun, type VerdictResult } from '../../lib/lab/contracts';
+import { ballotsOf, verdictOf, verdictSummary } from '../../lib/lab/aggregate';
 import { TIE_RULES } from '../../lib/lab/verdict';
 import { Matrix, SlotBars } from './charts';
 import { Availability, DateNav, ErrorNotice, LabHeader, Loading, Method, SampleNote, dateLabel, given, selectedDate } from './shared';
@@ -18,7 +19,7 @@ export function VotingRules() {
 }
 
 /** The verdict for one stored jury run. */
-export function VerdictPanel({ run, compact = false }: { run: LabRun; compact?: boolean }) {
+export function VerdictPanel({ run, compact = false, pick = null }: { run: LabRun; compact?: boolean; pick?: CharacterId | null }) {
   const result = verdictResultSchema.safeParse(run.result);
   const ballots = ballotsOf(run) as Partial<Record<CharacterId, Ballot>>;
   const input = verdictInputSchema.safeParse(run.input);
@@ -36,7 +37,7 @@ export function VerdictPanel({ run, compact = false }: { run: LabRun; compact?: 
         <p className="lab-muted">{standings[0]!.points} of 25 points{tieNote ? ' · ' + tieNote : ''}</p></div>
     </div>
     <ol className="lab-standings" aria-label="Points received">
-      {standings.map(s => <li key={s.id}>
+      {standings.map(s => <li key={s.id} className={s.id === pick ? 'is-reader-pick' : undefined}>
         <span className="lab-rank">{s.rank}</span>
         <span className="lab-rate-who"><Portrait id={s.id} scale={2}/><span>{given(s.id)}{input.success ? <small>spoke {input.data.participation[s.id] === 2 ? 'twice' : 'once'}</small> : null}
           {s.decidedBy !== 'points' && standings.some(o => o.id !== s.id && o.points === s.points) ? <span className="lab-tie">{s.decidedBy === 'joint' ? 'tied' : 'tie settled by ' + s.decidedBy}</span> : null}</span></span>
@@ -68,15 +69,48 @@ export function VerdictSection({ date, complete }: { date: string; complete: boo
   // Poll stored state only for the current edition window.
   const [current] = useState(() => new Date(Date.now() - 9 * 3_600_000).toISOString().slice(0, 10));
   const day = useLabDay('verdict', date, date === current);
+  const [vote, setVote] = useState<CharacterId | null>(() => readVotes()[date] ?? null), [revealed, setRevealed] = useState(false);
+  const result = day.data?.run ? verdictOf(day.data.run) : null;
+  // A finished jury waits until the reader has voted or chosen to skip.
+  const hidden = !!result && !vote && !revealed;
   return <section className="lab-verdict-section" id="verdict" aria-labelledby="verdict-title">
     <h2 id="verdict-title">The Verdict</h2>
     <p className="lab-muted">The six residents, as jurors, rank one another’s arguments. <a href={'/lab/verdict' + (date ? '?date=' + date : '')}>Verdicts in the Lab</a></p>
+    {complete ? <ReaderVote date={date} vote={vote} result={result} hidden={hidden}
+      onVote={id => { setVote(id); saveVote(date, id); if (!id) setRevealed(true); }} onReveal={() => setRevealed(true)}/> : null}
     {day.error ? <ErrorNotice message={day.error} retry={day.retry}/> : !day.data ? <Loading what="the verdict"/>
-      : day.data.run ? <><Availability day={day.data} what="jury"/><VerdictPanel run={day.data.run} compact/></>
+      : day.data.run ? hidden ? null : <><Availability day={day.data} what="jury"/><VerdictPanel run={day.data.run} compact pick={vote}/></>
       : day.data.availability === 'not_recorded' ? <p className="lab-notice" role="status">No jury recorded for this debate.</p>
       : <p className="lab-notice" role="status">{complete ? 'The jury is scheduled and will meet shortly.' : 'The verdict is pending until the conversation is complete.'}</p>}
     <VotingRules/>
   </section>;
+}
+
+const PLACE = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
+/** The reader as a seventh juror: one pick per debate, kept in this browser only. */
+function ReaderVote({ date, vote, result, hidden, onVote, onReveal }: { date: string; vote: CharacterId | null; result: VerdictResult | null; hidden: boolean; onVote: (id: CharacterId | null) => void; onReveal: () => void }) {
+  if (!vote) return <div className="lab-reader-vote">
+    <h3>Your vote: who made the strongest case?</h3>
+    <p className="lab-muted">{hidden ? 'Choose before you see how the residents ranked one another.' : 'Add your own pick to the jury’s.'} Your vote stays in this browser.</p>
+    <ul className="lab-reader-options">{CHARACTER_IDS.map(id => <li key={id}><button type="button" aria-pressed={false} onClick={() => onVote(id)}><Portrait id={id} scale={2}/>{given(id)}</button></li>)}</ul>
+    {hidden ? <div className="lab-reader-actions"><button type="button" className="text-button" onClick={onReveal}>Skip to the jury’s verdict</button></div> : null}
+  </div>;
+  const standing = result?.standings.find(s => s.id === vote), agrees = !!result?.winners.includes(vote);
+  return <div className="lab-reader-vote">
+    <h3>Your vote: {given(vote)}</h3>
+    <p className={'lab-reader-result' + (agrees ? ' is-match' : '')} role="status">{!result || !standing ? 'Saved. The jury’s verdict is not available for this debate.'
+      : agrees ? `You and the jury agree: ${given(vote)} ${result.winners.length > 1 ? 'shared the win' : 'won'} with ${standing.points} of 25 points.`
+      : `The jury ranked ${given(vote)} ${PLACE[standing.rank - 1]} with ${standing.points} points; ${result.winners.map(given).join(' & ')} ${result.winners.length > 1 ? 'shared the win' : 'won'}.`}</p>
+    <ReaderRecordLine date={date}/>
+    <div className="lab-reader-actions"><button type="button" className="text-button" onClick={() => onVote(null)}>Change my vote</button></div>
+  </div>;
+}
+function ReaderRecordLine({ date }: { date: string }) {
+  const history = useHistories(['verdict'] as const);
+  const winners = Object.fromEntries((history.data?.verdict ?? []).flatMap(run => { const v = verdictOf(run); return v ? [[run.date, v.winners]] : []; })) as Record<string, CharacterId[]>;
+  const record = readerRecord(readVotes(), winners);
+  if (record.votes < 2) return null;
+  return <p className="lab-reader-record" key={date}>Your record: {record.votes} votes{record.compared ? ` · you agreed with the jury ${record.agreed} of ${record.compared} times` : ''}{record.favourite.length ? ` · you side most with ${record.favourite.map(given).join(' & ')}` : ''}.</p>;
 }
 
 export function VerdictPage({ search, today }: { search: string; today: string }) {

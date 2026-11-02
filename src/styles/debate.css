@@ -39,6 +39,10 @@
 .forum-recent time { display:block; margin-bottom:6px; font-size:12px; color:var(--muted); }
 .forum-recent a[aria-current] span { color:#f1dfb2; }
 .forum-recent .forum-all { font-size:14px; border:0; text-decoration:underline; }
+.forum-lab-teaser { margin-top:36px; padding:14px 14px 10px; border:1px dashed #6b624f; font-size:15px; }
+.forum-lab-teaser h2 { margin:0 0 6px; }
+.forum-lab-teaser p { margin:0 0 6px; }
+.forum-lab-teaser strong { color:#ecdfbe; }
 .forum-sidebar-note { margin:42px 0 0; font-size:14px; color:var(--muted); }
 .forum-edition { padding:29px var(--gutter) 48px; width:100%; margin:0; }
 .forum-edition-tools { display:flex; justify-content:space-between; align-items:center; gap:20px; color:var(--muted); font-size:14px; padding-bottom:28px; }

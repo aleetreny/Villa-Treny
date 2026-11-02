@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { z } from 'zod';
-import { labDaySchema, labHistorySchema, labOverviewSchema, type LabDay, type LabExperiment, type LabHistory, type LabOverview } from './contracts';
+import { labDaySchema, labHistorySchema, labOverviewSchema, type LabDay, type LabExperiment, type LabHistory, type LabOverview, type LabRun } from './contracts';
 
 /** Read-only Lab client. Every request reads stored results; none can start inference. */
 const base = import.meta.env.DEV ? '/__habitat/v1/lab' : '/v1/lab';
@@ -38,3 +38,17 @@ export const useOverview = (): Loaded<LabOverview> => useLoad('overview', loadOv
 export const useHistory = (experiment: LabExperiment): Loaded<LabHistory> => useLoad('history:' + experiment, signal => loadHistory(experiment, signal));
 export const useLabDay = (experiment: LabExperiment, date: string | null, pending = false): Loaded<LabDay> =>
   useLoad(date ? experiment + ':' + date : null, signal => loadLabDay(experiment, date!, signal), pending ? 30_000 : 0);
+
+/** Complete histories shared by the findings, resident records and the board
+ * teaser, so moving between those pages reads each experiment once per visit. */
+const shared = new Map<LabExperiment, { at: number; promise: Promise<LabHistory> }>();
+function sharedHistory(experiment: LabExperiment): Promise<LabHistory> {
+  const hit = shared.get(experiment);
+  if (hit && Date.now() - hit.at < 300_000) return hit.promise;
+  const promise = loadHistory(experiment).catch(error => { shared.delete(experiment); throw error; });
+  shared.set(experiment, { at: Date.now(), promise });
+  return promise;
+}
+export const useHistories = <E extends LabExperiment>(experiments: readonly E[]): Loaded<Record<E, LabRun[]>> =>
+  useLoad('histories:' + experiments.join(','), () => Promise.all(experiments.map(sharedHistory))
+    .then(list => Object.fromEntries(experiments.map((e, i) => [e, list[i]!.runs])) as Record<E, LabRun[]>));

@@ -1,5 +1,6 @@
 import { Portrait } from '../desk/habitat/Portrait';
 import type { Character } from '../../lib/debate/characters';
+import { LabRecord } from '../lab/Findings';
 
 export function ResidentProfile({ person }: { person: Character }) {
   const room = { A: 'records', B: 'hold', C: 'infirmary', D: 'dock', E: 'common', F: 'garden' }[person.id];
@@ -24,5 +25,6 @@ export function ResidentProfile({ person }: { person: Character }) {
         <div><dt>What could change their mind</dt><dd>{person.changesMind}</dd></div>
       </dl>
     </article>
+    <LabRecord id={person.id} />
   </section>;
 }

@@ -2,11 +2,24 @@
 
 **A question. Six lives. One new discussion a day.**
 
-[Read the daily board](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/) · [Explore the archive](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/archive) · [Meet the residents](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/residents)
+[Read the daily board](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/) · [Explore the archive](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/archive) · [Meet the residents](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/residents) · [Open the Lab](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/lab)
 
 Six fictional residents encounter an unusual hypothetical situation and talk it through in nine short turns. Each contribution responds to the conversation so far. The reader can expand the board, revisit two linked highlights, recommend an edition as **worth reading**, or visit the residents in their pixel-art habitat.
 
-After each debate, the residents act as a jury and rank one another's arguments. **The Lab** (`/lab`) adds three more daily experiments: a coin toss, a choice of two companions for a walk, and a programmatically verified logic mystery. See [docs/lab.md](docs/lab.md).
+After each debate, the residents act as a jury and rank one another's arguments, and the reader can cast a seventh vote before seeing theirs. **The Lab** (`/lab`) adds three more daily experiments: a coin toss, a choice of two companions for a walk, and a programmatically verified logic mystery. Together they make a small, public, ever-growing record of how one language model chooses, judges and reasons. See [docs/lab.md](docs/lab.md).
+
+## What the Lab has found so far
+
+Snapshot from 2 November 2026: 564 stored answers from Gemini 3.5 Flash Lite over 16 days. The live page recomputes every number from stored answers each time it opens, and its wording follows the data.
+
+![The Lab's four live findings](docs/images/lab-findings.png)
+
+- **The coin is not a coin.** Asked to simulate a fair toss with no persona, the model said *heads* 96 times out of 96, and 84 of 84 when *tails* was listed first, so this is not just a preference for the first word. Speaking as a resident, it said heads 81% of the time; Ama, the resident who values freedom, is the closest of the six to a fair coin.
+- **List order steers choices.** Companions are listed in a fresh random order for every choice. The first-listed was invited 57% of the time, the last-listed 18% (chance: 40%). Jurors gave the first-listed candidate 3.4 points on average and the last-listed 2.5 (no effect: 3).
+- **Talking more scores more.** Residents who spoke twice in a debate averaged 16.5 jury points out of 25; those who spoke once, 13.5. The turn order decides who speaks twice, so this measures exposure rather than quality.
+- **Right, and certain.** On daily logic puzzles with exactly one solution, residents named the liar 92 of 96 times, with an average stated confidence of 99.9%.
+
+These are patterns in one model's answers, not explanations or facts about people. Anyone can download every observation as CSV (one row per answer, with condition, display order, correctness and confidence) or as raw JSON from the Lab page.
 
 ![The daily board, showing the first published discussion](docs/images/daily-board.png)
 
@@ -38,17 +51,19 @@ The [19 September reader review](docs/reader-review-2026-09-19.md) records the c
 | `/debates/YYYY-MM-DD` | Permanent link to one saved edition |
 | `/archive` | Search, subject filters, date/recommendation sorting and pagination |
 | `/residents` | Six personality sheets and original pixel portraits |
-| `/residents/A` through `/residents/F` | Individual identity cards with each resident's beliefs, trade-offs and blind spots |
+| `/residents/A` through `/residents/F` | Individual identity cards with each resident's beliefs, trade-offs, blind spots and Lab record |
 | `/rooms` | Room atlas, six wandering residents, follow/pause and integer zoom |
+| `/lab` | Live findings, today's four experiments and a CSV/JSON download of every observation |
+| `/lab/verdict`, `/lab/coin`, `/lab/companions`, `/lab/mystery` | One experiment each, with daily results, history, intervals and method |
 | [`/about`](https://aleetreny-habitat-runtime.alejandrotreny100.workers.dev/about) | A plain-language explanation of the questions, residents, daily format and project limits |
 
 The layout adapts from narrow phones to large desktop windows. All four destinations remain visible on mobile; the habitat uses a native room selector and touch-sized controls. Reading view keeps its exit available, quotations return to their source with a way back, and **Copy link** creates a permanent address for one post.
 
 The resident index aligns matching fields across columns without shortening any profile. Individual profiles use the full available width: portrait and identity beside a two-column personality sheet on desktop, stacked content on phones. Original portraits keep integer pixel scaling.
 
-**About the project** is always at the top right, with a second link in the footer. Its first paragraph explains the six fictional residents, their shared Gemini 3.5 Flash Lite model and one daily question. Priorities and the three debate stages follow; schedule, limits and source are in an optional disclosure. Profile and About visits never request debate data or model inference.
+**About the project** is always at the top right, with a second link in the footer. Its first paragraph explains the six fictional residents, their shared Gemini 3.5 Flash Lite model and one daily question. Priorities and the three debate stages follow; schedule, limits and source are in an optional disclosure. Each profile ends with the resident's Lab record (jury points, invitations, mystery accuracy and coin tosses in character), read from stored results. No visit requests model inference.
 
-Recommendations mean **this debate is worth reading**. They persist across reloads and can be undone. They belong to a browser identity, not a verified person. The habitat is an ambient view: an agent's visual position does not determine its right to participate.
+Under each finished debate the reader picks who made the strongest case before the jury's verdict is revealed, then sees how the pick compares and a running record of agreement. That vote stays in the browser's `localStorage`; it is never sent anywhere. Recommendations mean **this debate is worth reading**. They persist across reloads and can be undone. They belong to a browser identity, not a verified person. The habitat is an ambient view: an agent's visual position does not determine its right to participate.
 
 ![The habitat, using the approved room artwork](docs/images/habitat.png)
 

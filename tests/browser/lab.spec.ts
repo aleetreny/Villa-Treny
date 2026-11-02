@@ -10,7 +10,7 @@ test('the Lab overview links all four experiments and only reads stored results'
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'The Lab' }).click();
   await expect(page).toHaveURL(/\/lab$/);
   await expect(page.getByRole('heading', { level: 1, name: 'The Lab' })).toBeVisible();
-  for (const title of ['The Verdict', 'The Coin', 'The Two Who Come', 'The Villa Liar']) await expect(page.getByRole('heading', { level: 2, name: title })).toBeVisible();
+  for (const title of ['The Verdict', 'The Coin', 'The Two Who Come', 'The Villa Liar']) await expect(page.getByRole('heading', { level: 3, name: title })).toBeVisible();
   await expect(page.locator('.lab-tile').filter({ hasText: 'The Coin' })).toContainText(/Heads \d · Tails \d/);
   await page.getByRole('link', { name: 'The Coin', exact: true }).first().click();
   await expect(page.getByRole('heading', { level: 1, name: 'The Coin' })).toBeVisible();
@@ -91,6 +91,10 @@ test('the verdict closes each debate, with ballots and honest states for history
   await page.goto('/');
   const section = page.locator('#verdict');
   await expect(section.getByRole('heading', { name: 'The Verdict' })).toBeVisible();
+  // A finished jury waits for the reader's own vote, or an explicit skip.
+  await expect(section.locator('.lab-reader-options button')).toHaveCount(6);
+  await expect(section.locator('.lab-standings')).toHaveCount(0);
+  await section.getByRole('button', { name: 'Skip to the jury’s verdict' }).click();
   await expect(section.locator('.lab-standings li')).toHaveCount(6);
   await section.getByText('How each resident ranked the others').click();
   await expect(section.locator('.lab-table tbody tr')).toHaveCount(6);
@@ -99,6 +103,53 @@ test('the verdict closes each debate, with ballots and honest states for history
   await expect(page.locator('#verdict')).toContainText('No jury recorded for this debate.');
   await page.goto('/lab/verdict?date=2026-10-03');
   await expect(page.locator('.lab-notice')).toContainText('not completed');
+});
+
+test('the overview leads with cumulative findings recomputed from stored answers, and exports them', async ({ page }) => {
+  const { methods, history } = await labRoutes(page);
+  await page.goto('/lab');
+  await expect(page.getByRole('heading', { level: 2, name: 'What the Lab has found so far' })).toBeVisible();
+  await expect(page.locator('.lab-finding')).toHaveCount(4);
+  const neutral = history.coin.flatMap(r => r.units).filter(u => u.condition === 'neutral' && u.status === 'accepted');
+  const heads = neutral.filter(u => (u.output as { result: string }).result === 'heads').length;
+  await expect(page.locator('.lab-finding').first()).toContainText(`said heads ${heads} of ${neutral.length} times`);
+  await expect(page.locator('.lab-finding').nth(2)).toContainText(/points for a second turn/);
+  const accepted = Object.values(history).flat().reduce((n, r) => n + r.units.filter(u => u.status === 'accepted').length, 0);
+  await expect(page.locator('.lab-findings-meta')).toContainText(`${accepted.toLocaleString('en-GB')} model answers over 21 days`);
+  const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Download CSV' }).click()]);
+  expect(download.suggestedFilename()).toMatch(/^villa-treny-lab-\d{4}-\d{2}-\d{2}\.csv$/);
+  const csv = await (await import('node:fs/promises')).readFile(await download.path(), 'utf8');
+  expect(csv.split('\r\n')[0]).toBe('date,experiment,protocol,model,condition,unit,resident,status,attempts,answer,shown_order,correct,confidence,jury_points,note');
+  expect(csv.split('\r\n').filter(Boolean).length - 1).toBe(Object.values(history).flat().reduce((n, r) => n + r.units.filter(u => u.status !== 'pending').length, 0));
+  expect(methods.every(m => m === 'GET')).toBe(true);
+});
+
+test('a resident profile shows that resident’s Lab record', async ({ page }) => {
+  await labRoutes(page);
+  await page.goto('/residents/B');
+  const record = page.locator('.lab-record');
+  await expect(record.getByRole('heading', { level: 2, name: 'In the Lab' })).toBeVisible();
+  await expect(record.locator('.lab-record-stats > div')).toHaveCount(5);
+  // 21 days × 5 other choosers: 105 chances to be invited.
+  await expect(record).toContainText('of 105 chances');
+  await expect(record.locator('.lab-meter')).toHaveCount(4);
+});
+
+test('the reader votes as a seventh juror, sees the comparison and can change their mind', async ({ page }) => {
+  await labRoutes(page);
+  await page.goto('/');
+  const section = page.locator('#verdict');
+  await section.getByRole('button', { name: 'Cato' }).click();
+  await expect(section.getByRole('heading', { name: 'Your vote: Cato' })).toBeVisible();
+  await expect(section.locator('.lab-reader-result')).toHaveText(/(You and the jury agree: Cato|The jury ranked Cato (1st|2nd|3rd|4th|5th|6th) with \d+ points)/);
+  await expect(section.locator('.lab-standings li.is-reader-pick')).toContainText('Cato');
+  await page.reload();
+  await expect(page.locator('#verdict').getByRole('heading', { name: 'Your vote: Cato' })).toBeVisible();
+  await expect(page.locator('#verdict .lab-standings li')).toHaveCount(6);
+  await page.locator('#verdict').getByRole('button', { name: 'Change my vote' }).click();
+  await expect(page.locator('#verdict .lab-reader-options button')).toHaveCount(6);
+  await expect(page.locator('#verdict .lab-standings li')).toHaveCount(6);
+  expect(await page.evaluate(() => localStorage.getItem('villa-treny:reader-votes'))).toBe('{}');
 });
 
 test('pending and empty days are labelled rather than filled in', async ({ page }) => {
@@ -120,7 +171,7 @@ test('an empty Lab says nothing has been recorded', async ({ page }) => {
 for (const width of [320, 390, 768]) test(`Lab pages fit a ${width}px screen without horizontal scrolling`, async ({ page }) => {
   await page.setViewportSize({ width, height: 800 });
   await labRoutes(page);
-  for (const path of ['/lab', '/lab/coin', '/lab/companions', '/lab/mystery', '/lab/verdict', '/']) {
+  for (const path of ['/lab', '/lab/coin', '/lab/companions', '/lab/mystery', '/lab/verdict', '/', '/residents/A']) {
     await page.goto(path);
     await expect(page.locator('main h1').first()).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), path).toBe(true);

@@ -4,6 +4,7 @@ import { coinDay, decisions, predictions } from '../../lib/lab/aggregate';
 import { puzzleSchema, verdictResultSchema, type LabDay, type LabOverview } from '../../lib/lab/contracts';
 import { Portrait } from '../desk/habitat/Portrait';
 import { CoinPage, CoinRow } from './Coin';
+import { FindingsBoard } from './Findings';
 import { CompanionsPage } from './Companions';
 import { MysteryPage } from './Mystery';
 import { VerdictPage } from './Verdict';
@@ -32,8 +33,10 @@ function Overview({ overview, error, retry }: { overview: LabOverview | null; er
     </LabHeader>
     {error ? <ErrorNotice message={error} retry={retry}/> : null}
     {overview && !overview.schedule.enabled ? <p className="lab-notice" role="status">The daily Lab schedule is paused. Saved results remain available.</p> : null}
-    <div className="lab-grid">{EXPERIMENTS.map(e => <article key={e.id} className="lab-tile" aria-labelledby={'tile-' + e.id}>
-      <h2 id={'tile-' + e.id}><a href={e.href}>{e.title}</a></h2>
+    <FindingsBoard/>
+    <h2 className="lab-section-title" id="lab-today">Today in the Lab{overview ? <span className="lab-small-link">{dateLabel(overview.schedule.today)}</span> : null}</h2>
+    <div className="lab-grid" aria-labelledby="lab-today">{EXPERIMENTS.map(e => <article key={e.id} className="lab-tile" aria-labelledby={'tile-' + e.id}>
+      <h3 id={'tile-' + e.id}><a href={e.href}>{e.title}</a></h3>
       <p className="lab-question-small">{e.question}</p>
       {overview ? <Today day={overview.today[e.id]}/> : <p className="lab-loading" role="status">Loading today…</p>}
       <a className="lab-tile-link" href={e.href}>{e.id === 'mystery' ? 'Play today’s mystery' : 'See the results'} →</a>

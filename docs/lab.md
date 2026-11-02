@@ -32,6 +32,21 @@ Protocol strings are stored with every run. Since 20 October 2026 the current pr
 
 The first two production days showed that list position dominated the choices: in the companion experiment the first two listed candidates were chosen 67% and 75% of the time and the last two 8%. Protocol v1 rotated one fixed sequence, which balanced slots over five days but always kept the same residents next to each other, so the top two slots could only ever contain five of the ten possible pairs; pair frequencies would partly reflect that adjacency. v2 lists candidates in an independent seeded random order per chooser, day and experiment (all ten pairs reachable). The coin added the reversed condition because the neutral condition returned heads 12 of 12 times with heads always listed first. Prompt wording is unchanged; v1 runs stay as recorded and are not regenerated. Pages pool v1 and v2 only for measures that condition on the stored order or use identical prompts, and say so.
 
+## Findings, records and the dataset
+
+The overview opens with **What the Lab has found so far**: four cards computed in the browser by `labFindings` (`src/lib/lab/findings.ts`) from the complete public histories, restricted to the model of the most recent run so that models are never pooled. Each card reuses the aggregation above and picks its title from the numbers (for example “Heads, every time” only while every plain answer is heads), so a pattern that fades is described as fading.
+
+- **Coin:** plain heads-first answers, the tails-first condition on the days both were asked, and persona answers, kept as separate rows. Each square is one answer up to 300 answers, then one percent.
+- **Position:** companion selection rate by display slot (chance 40%) and average jury points by display slot (no effect: 3).
+- **Talking more:** average jury points for residents who spoke twice versus once. This is exposure, decided by the rotating turn order.
+- **Mystery:** accuracy against 1 in 6, with mean stated confidence and its gap to accuracy.
+
+Each resident profile ends with **In the Lab** (`residentRecord`): average jury points and place among the six, invitations received against 40%, the resident they invite most, mystery accuracy with stated confidence, and heads in character against 50%.
+
+**Download.** The overview builds two files locally from the same histories: a CSV (`observationRows`/`toCsv`) with one row per recorded unit (pending units excluded) and the columns `date, experiment, protocol, model, condition, unit, resident, status, attempts, answer, shown_order, correct, confidence, jury_points, note`, and the raw public runs as JSON. Rankings are written `C>F>D>E>B`, companion choices `A+F`; `jury_points` is the points the unit's resident received that day; text that a spreadsheet would read as a formula is prefixed with an apostrophe. Nothing is uploaded.
+
+**The reader's vote.** Under every finished debate the reader can pick who made the strongest case. When a verdict exists it stays hidden until the reader votes or chooses to skip; then the panel marks the pick, compares it with the jury and, from two votes on, shows the reader's agreement record. Votes live in `localStorage` (`villa-treny:reader-votes`), are validated on read and are never sent to the server, so they are not part of any Lab statistic.
+
 ## Scheduling and request budget
 
 The Lab lives in the forum's existing `DebateForum` Durable Object (`villa-treny-daily-v1`), so one alarm and one provider ledger govern every request. New SQLite tables: `lab_config`, `lab_runs`, `lab_attempts`. No binding, class, migration or instance name changed.
@@ -56,7 +71,7 @@ The Lab is **disabled by default** and requires both the forum and the Lab to be
 
 ## Tests
 
-`src/lib/lab/lab.test.ts` checks Wilson intervals and exact binomial tests against known values, Borda totals and every tie-break rule on 4,000 random juries, joint winners, ballot and companion validation, three years of puzzles (unique solutions, rendered text matching formal truth sets, culprit balance), and the aggregation denominators. `workers/habitat-runtime/test/lab.test.ts` runs the Durable Object with mocked Gemini: inert public reads, default-disabled state, a full day (jury first, fair interleaving, byte-identical neutral coin prompts), debate priority, invalid coin answers recorded without retry, ballot retries, crash recovery without new requests, the shared quota and debate reserve, honest verdict availability, and window closure. `tests/browser/lab.spec.ts` drives the pages with synthetic fixtures (tests only): navigation, GET-only traffic, date navigation, keyboard network inspection, the mystery reveal and its local persistence, the verdict under debates, pending and empty states, reduced motion, and 320/390/768 px layouts.
+`src/lib/lab/lab.test.ts` checks Wilson intervals and exact binomial tests against known values, Borda totals and every tie-break rule on 4,000 random juries, joint winners, ballot and companion validation, three years of puzzles (unique solutions, rendered text matching formal truth sets, culprit balance), and the aggregation denominators. `workers/habitat-runtime/test/lab.test.ts` runs the Durable Object with mocked Gemini: inert public reads, default-disabled state, a full day (jury first, fair interleaving, byte-identical neutral coin prompts), debate priority, invalid coin answers recorded without retry, ballot retries, crash recovery without new requests, the shared quota and debate reserve, honest verdict availability, and window closure. `src/lib/lab/findings.test.ts` checks the findings' model stratification and condition separation, resident records, CSV escaping and the reader-vote storage. `tests/browser/lab.spec.ts` drives the pages with synthetic fixtures (tests only): navigation, GET-only traffic, date navigation, keyboard network inspection, the mystery reveal and its local persistence, the verdict under debates with the reader's vote and skip, the findings and CSV download, a resident's Lab record, pending and empty states, reduced motion, and 320/390/768 px layouts.
 
 ## Limits
 
